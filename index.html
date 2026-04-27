@@ -1,267 +1,222 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Escondido Pet Care</title>
-  <meta name="description" content="Calm, reliable dog walking, dog sitting, and boarding in Escondido and nearby North County." />
+  <title>San Diego Palm Protection</title>
+  <meta name="description" content="Palm health and preventative palm protection services in North County San Diego. Free assessments. Treatments starting at $200." />
+
   <style>
-    :root{
-      --bg:#f8fafc;
-      --text:#0f172a;
-      --muted:#475569;
-      --line:#e2e8f0;
-      --card:#ffffff;
-      --accent:#111827;
-      --soft:#f1f5f9;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #1f2a1f;
+      background: #f8f6ef;
+      line-height: 1.6;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-      color:var(--text);
-      background:#fff;
-      line-height:1.5;
+
+    header {
+      background: #245b36;
+      color: white;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
-    a{text-decoration:none;color:inherit}
-    .container{max-width:1120px;margin:0 auto;padding:0 20px}
-    header{
-      position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);
-      backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
     }
-    .nav{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
-    .brand-title{font-weight:700;font-size:1.08rem}
-    .brand-sub{font-size:.78rem;color:#64748b;margin-top:2px}
-    .nav-links{display:flex;gap:22px;color:#475569;font-size:.95rem}
-    .nav-links a:hover{color:var(--text)}
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:13px 22px;border-radius:999px;border:1px solid var(--accent);
-      background:var(--accent);color:#fff;font-weight:600;transition:.2s ease;
+
+    header a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      background: #d99a00;
+      padding: 10px 16px;
+      border-radius: 8px;
     }
-    .btn:hover{transform:translateY(-1px);opacity:.95}
-    .btn-outline{
-      background:#fff;color:var(--accent);border:1px solid #cbd5e1;
+
+    .hero {
+      padding: 70px 24px;
+      text-align: center;
+      background: linear-gradient(rgba(36,91,54,.88), rgba(36,91,54,.88)), url('brochure.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
     }
-    .hero{
-      background:
-        radial-gradient(circle at top left, rgba(226,232,240,.8), transparent 30%),
-        radial-gradient(circle at bottom right, rgba(241,245,249,1), transparent 35%);
-      padding:72px 0 64px;
+
+    .hero h2 {
+      font-size: 44px;
+      line-height: 1.1;
+      margin-bottom: 16px;
     }
-    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}
-    .badge{
-      display:inline-block;padding:8px 12px;border-radius:999px;
-      background:#f8fafc;border:1px solid var(--line);font-size:.75rem;font-weight:700;
-      letter-spacing:.03em;color:#334155;
+
+    .hero p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: 0 auto 24px;
     }
-    h1{
-      font-size:clamp(2.4rem,6vw,4.3rem);line-height:1.03;letter-spacing:-.03em;
-      margin:16px 0 0;font-weight:700;
+
+    .button {
+      display: inline-block;
+      background: #d99a00;
+      color: #111;
+      padding: 15px 24px;
+      border-radius: 10px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 18px;
     }
-    .lead{font-size:1.12rem;color:var(--muted);max-width:640px;margin-top:18px}
-    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
-    .highlights{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
-    .highlight{
-      display:flex;align-items:center;gap:10px;padding:14px 16px;border-radius:18px;
-      background:#fff;border:1px solid var(--line);box-shadow:0 8px 20px rgba(15,23,42,.04);
-      font-size:.95rem;color:#334155;
+
+    section {
+      padding: 55px 24px;
+      max-width: 1050px;
+      margin: auto;
     }
-    .hero-card{
-      background:#fff;border:1px solid var(--line);border-radius:30px;padding:18px;
-      box-shadow:0 24px 60px rgba(15,23,42,.09);
+
+    .warning {
+      background: #fff3d2;
+      border-left: 6px solid #d99a00;
+      padding: 24px;
+      border-radius: 10px;
     }
-    .hero-image{
-      width:100%;height:320px;border-radius:22px;border:1px dashed #cbd5e1;background:
-      linear-gradient(135deg,#f8fafc,#e2e8f0);
-      display:grid;place-items:center;text-align:center;color:#64748b;padding:24px
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
     }
-    section{padding:72px 0}
-    .section-muted{background:var(--bg)}
-    .section-title{font-size:2rem;line-height:1.1;letter-spacing:-.03em;margin:0 0 10px;font-weight:700}
-    .section-intro{max-width:760px;color:var(--muted);margin-bottom:28px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .card{
-      background:var(--card);border:1px solid var(--line);border-radius:28px;padding:26px;
-      box-shadow:0 10px 25px rgba(15,23,42,.04)
+
+    .card {
+      background: white;
+      padding: 24px;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.08);
     }
-    .card h3{margin:14px 0 0;font-size:1.2rem}
-    .card p{margin:10px 0 0;color:var(--muted)}
-    .icon{
-      width:48px;height:48px;border-radius:16px;background:var(--soft);display:grid;place-items:center;
-      font-size:22px
+
+    .card h3 {
+      margin-top: 0;
+      color: #245b36;
     }
-    .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:start}
-    .contact-card{
-      background:#fff;border:1px solid var(--line);border-radius:30px;padding:28px;
-      box-shadow:0 18px 45px rgba(15,23,42,.06);
+
+    .price {
+      background: #245b36;
+      color: white;
+      text-align: center;
+      border-radius: 16px;
+      padding: 35px 24px;
     }
-    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    input, textarea{
-      width:100%;padding:14px 16px;border-radius:18px;border:1px solid #cbd5e1;
-      font:inherit;color:var(--text);background:#fff
+
+    .price h2 {
+      font-size: 34px;
+      margin: 0 0 10px;
     }
-    textarea{min-height:140px;resize:vertical}
-    .full{grid-column:1/-1}
-    .small{font-size:.9rem;color:var(--muted)}
-    footer{padding:26px 0 34px;border-top:1px solid var(--line);color:#64748b;font-size:.92rem}
-    .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-    .phone-line{font-size:1.06rem;font-weight:600;margin-top:18px}
-    .list{display:grid;gap:14px}
-    @media (max-width: 900px){
-      .hero-grid,.grid-3,.contact-grid{grid-template-columns:1fr}
-      .nav-links{display:none}
+
+    .areas {
+      text-align: center;
     }
-    @media (max-width: 640px){
-      .highlights,.form-grid{grid-template-columns:1fr}
-      .hero{padding-top:48px}
+
+    footer {
+      background: #1f2a1f;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer a {
+      color: #f2b705;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    @media (max-width: 650px) {
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
-    <div class="container nav">
-      <div>
-        <div class="brand-title">Escondido Pet Care</div>
-        <div class="brand-sub">Dog walking • sitting • boarding</div>
-      </div>
-      <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#why">Why Us</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <a class="btn" href="#contact">Request Availability</a>
-    </div>
+    <h1>San Diego Palm Protection</h1>
+    <a href="tel:2624923135">Call/Text: 262-492-3135</a>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="badge">Local • Trusted • Limited Availability</span>
-        <h1>Calm, reliable pet care in Escondido.</h1>
-        <p class="lead">
-          A more personal alternative to app-based services from John at Escondido Pet Care.
-          Focused on your dog’s comfort, routine, safety, and overall well-being—whether it’s a walk,
-          sitting at home, or boarding.
-        </p>
-        <div class="hero-actions">
-          <a class="btn" href="tel:6192122756">Call or Text Now</a>
-          <a class="btn btn-outline" href="#contact">Request Availability</a>
-        </div>
-        <div class="highlights">
-          <div class="highlight">✓ Serving Escondido & nearby areas</div>
-          <div class="highlight">✓ Limited client availability</div>
-          <div class="highlight">✓ Direct, simple booking</div>
-          <div class="highlight">✓ Focused, attentive care</div>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="hero-image">
-          <div>
-            <div style="font-size:38px">🐶</div>
-            <div style="font-weight:700;margin-top:8px">Temporary hero image placeholder</div>
-            <div style="margin-top:8px;font-size:.95rem">Swap in a real photo of John with a dog, then later replace with your girlfriend’s photo for the strongest trust signal.</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="hero">
+    <h2>Protect Your Palm Trees Before It’s Too Late</h2>
+    <p>Preventative palm health and protection services for high-value palms across North County San Diego.</p>
+    <p><strong>Free 10–15 minute on-site assessment</strong></p>
+    <a class="button" href="tel:2624923135">Call or Text for a Free Assessment</a>
+  </div>
 
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">Services</h2>
-      <p class="section-intro">
-        A focused, selective local service for pet owners who value comfort, routine, and clear communication.
+  <section>
+    <div class="warning">
+      <h2>South American Palm Weevil Is a Growing Concern in San Diego</h2>
+      <p>
+        The South American palm weevil has been damaging Canary Island palms and other high-value palms across the region. Once visible damage appears, recovery can be difficult or impossible. Early prevention and monitoring are key.
       </p>
-      <div class="grid-3">
-        <div class="card">
-          <div class="icon">🐾</div>
-          <h3>Dog Walking</h3>
-          <p>Consistent, reliable walks that support your dog’s routine, energy levels, and daily well-being.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🏡</div>
-          <h3>Dog Sitting</h3>
-          <p>In-home care that keeps your dog comfortable, relaxed, and in a familiar environment while you are away.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🌙</div>
-          <h3>Boarding</h3>
-          <p>Safe, calm overnight stays with attentive supervision and a focus on comfort, structure, and routine.</p>
-        </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Palm Protection Services</h2>
+    <p>
+      We focus on palm health, protection, and preventative care. Each property is assessed individually based on tree size, condition, number of palms, and desired level of protection.
+    </p>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Free Assessment</h3>
+        <p>Quick on-site walk-through to evaluate your palms and explain protection options.</p>
+      </div>
+
+      <div class="card">
+        <h3>Preventative Treatment</h3>
+        <p>Soil-based treatment options designed to help protect valuable palms before damage occurs.</p>
+      </div>
+
+      <div class="card">
+        <h3>Health & Nutrient Support</h3>
+        <p>Nutrient support and general palm health recommendations to help keep trees strong and resilient.</p>
+      </div>
+
+      <div class="card">
+        <h3>Ongoing Care Options</h3>
+        <p>Follow-up treatment and monitoring options available for homeowners who want continued protection.</p>
       </div>
     </div>
   </section>
 
-  <section id="why" class="section-muted">
-    <div class="container">
-      <h2 class="section-title">Why choose John and Escondido Pet Care</h2>
-      <p class="section-intro">
-        This is built as a premium side business, not a volume-driven operation. That means fewer clients,
-        more attention, and a calmer experience for both owners and dogs.
-      </p>
-      <div class="grid-3">
-        <div class="card">
-          <div class="icon">⏰</div>
-          <h3>Routine-focused care</h3>
-          <p>Dogs thrive on consistency. Walks, visits, and stays are structured around your dog’s normal routine to reduce stress and help keep them balanced.</p>
-        </div>
-        <div class="card">
-          <div class="icon">🛡️</div>
-          <h3>Safety and attention first</h3>
-          <p>Every visit prioritizes awareness, control, and a calm environment so your dog stays safe and comfortable at all times.</p>
-        </div>
-        <div class="card">
-          <div class="icon">❤️</div>
-          <h3>More personal than apps</h3>
-          <p>Direct communication and fewer clients means more attention, better care, and a stronger relationship with both owner and dog.</p>
-        </div>
-      </div>
-    </div>
+  <section class="price">
+    <h2>Treatments Starting at $200</h2>
+    <p>Final pricing depends on the number of palms, tree size, access, and level of protection selected.</p>
+    <a class="button" href="tel:2624923135">Book a Free Assessment</a>
   </section>
 
-  <section id="contact">
-    <div class="container contact-grid">
-      <div>
-        <h2 class="section-title">Request availability</h2>
-        <p class="section-intro" style="margin-bottom:18px">
-          Reach out directly to check availability with John. Client spots are intentionally limited to maintain quality care.
-        </p>
-        <div class="list small">
-          <div><strong>Service area:</strong> Escondido and nearby North County</div>
-          <div><strong>Pricing:</strong> Based on service, schedule, and fit</div>
-          <div><strong>Best contact method:</strong> Call or text</div>
-        </div>
-        <div class="phone-line">Call/Text: <a href="tel:6192122756">619-212-2756</a></div>
-      </div>
-
-      <div class="contact-card">
-        <form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
-          <div class="form-grid">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="tel" name="phone" placeholder="Phone number" required />
-            <input class="full" type="email" name="email" placeholder="Email" required />
-            <input class="full" type="text" name="service" placeholder="Service needed" />
-            <textarea class="full" name="message" placeholder="Tell us about your dog, your dates, or the kind of help you need"></textarea>
-          </div>
-          <input type="hidden" name="_subject" value="New Escondido Pet Care inquiry" />
-          <input type="hidden" name="_captcha" value="false" />
-          <div class="hero-actions" style="margin-top:18px">
-            <button class="btn" type="submit">Submit Request</button>
-            <a class="btn btn-outline" href="tel:6192122756">Call/Text Instead</a>
-          </div>
-          <p class="small" style="margin-top:14px">Replace <strong>YOUR-EMAIL-HERE</strong> in the form code with the email address you want lead requests sent to.</p>
-        </form>
-      </div>
-    </div>
+  <section class="areas">
+    <h2>Serving North County San Diego</h2>
+    <p>
+      Poway • Rancho Santa Fe • Rancho Peñasquitos • Carmel Valley • Del Mar • Escondido • Surrounding Areas
+    </p>
   </section>
 
   <footer>
-    <div class="container footer-inner">
-      <div>© 2026 Escondido Pet Care • John</div>
-      <div><a href="#services">Services</a> · <a href="#why">Why Us</a> · <a href="#contact">Contact</a></div>
-    </div>
+    <p><strong>San Diego Palm Protection</strong></p>
+    <p>Call or Text: <a href="tel:2624923135">262-492-3135</a></p>
+    <p>Locally operated in North County San Diego</p>
+    <p>Free on-site palm assessment</p>
   </footer>
+
 </body>
 </html>
