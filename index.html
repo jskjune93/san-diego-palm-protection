@@ -31,26 +31,27 @@
       font-size: 22px;
     }
 
-    header a {
+    header a, .button {
       color: white;
       text-decoration: none;
       font-weight: bold;
       background: #d99a00;
-      padding: 10px 16px;
+      padding: 12px 18px;
       border-radius: 8px;
+      display: inline-block;
     }
 
     .hero {
-      padding: 70px 24px;
+      padding: 80px 24px;
       text-align: center;
-      background: linear-gradient(rgba(36,91,54,.88), rgba(36,91,54,.88)), url('brochure.jpg');
+      background: linear-gradient(rgba(36,91,54,.80), rgba(36,91,54,.80)), url('yard2.jpg');
       background-size: cover;
       background-position: center;
       color: white;
     }
 
     .hero h2 {
-      font-size: 44px;
+      font-size: 46px;
       line-height: 1.1;
       margin-bottom: 16px;
     }
@@ -59,17 +60,6 @@
       font-size: 20px;
       max-width: 760px;
       margin: 0 auto 24px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #d99a00;
-      color: #111;
-      padding: 15px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 18px;
     }
 
     section {
@@ -83,6 +73,21 @@
       border-left: 6px solid #d99a00;
       padding: 24px;
       border-radius: 10px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.12);
     }
 
     .cards {
@@ -104,17 +109,26 @@
       color: #245b36;
     }
 
-    .price {
+    .price, .contact {
       background: #245b36;
       color: white;
       text-align: center;
       border-radius: 16px;
-      padding: 35px 24px;
+      padding: 38px 24px;
     }
 
-    .price h2 {
+    .price h2, .contact h2 {
       font-size: 34px;
       margin: 0 0 10px;
+    }
+
+    .contact a {
+      margin: 8px;
+    }
+
+    .email-button {
+      background: white;
+      color: #245b36;
     }
 
     .areas {
@@ -170,6 +184,19 @@
   </section>
 
   <section>
+    <h2>Local Palm Protection Work</h2>
+    <p>
+      We provide on-site palm assessments and preventative treatment options for homeowners who want to protect valuable palms before damage occurs.
+    </p>
+
+    <div class="gallery">
+      <img src="treatment.jpg" alt="Palm treatment service in North County San Diego">
+      <img src="treatment1.jpg" alt="Canary Island palm protection service">
+      <img src="yard2.jpg" alt="Palm trees in North County San Diego yard">
+    </div>
+  </section>
+
+  <section>
     <h2>Palm Protection Services</h2>
     <p>
       We focus on palm health, protection, and preventative care. Each property is assessed individually based on tree size, condition, number of palms, and desired level of protection.
@@ -201,7 +228,19 @@
   <section class="price">
     <h2>Treatments Starting at $200</h2>
     <p>Final pricing depends on the number of palms, tree size, access, and level of protection selected.</p>
-    <a class="button" href="tel:2624923135">Book a Free Assessment</a>
+    <a class="button" href="tel:2624923135">Call/Text to Book</a>
+  </section>
+
+  <section class="contact">
+    <h2>Request a Free Palm Assessment</h2>
+    <p>Send a quick inquiry or call/text directly. Please include your city, number of palms, and a few photos if possible.</p>
+
+    <a class="button" href="tel:2624923135">Call/Text: 262-492-3135</a>
+
+    <a class="button email-button"
+       href="mailto:jskjune93@gmail.com?subject=Free%20Palm%20Assessment%20Request&body=Hi%2C%20I%27d%20like%20to%20request%20a%20free%20palm%20assessment.%0A%0AName%3A%0ACity%3A%0ANumber%20of%20palms%3A%0APreferred%20appointment%20time%3A%0AAdditional%20details%3A">
+       Email an Inquiry
+    </a>
   </section>
 
   <section class="areas">
@@ -214,8 +253,8 @@
   <footer>
     <p><strong>San Diego Palm Protection</strong></p>
     <p>Call or Text: <a href="tel:2624923135">262-492-3135</a></p>
+    <p>Email: <a href="mailto:YOUR_EMAIL_HERE@gmail.com">YOUR_EMAIL_HERE@gmail.com</a></p>
     <p>Locally operated in North County San Diego</p>
-    <p>Free on-site palm assessment</p>
   </footer>
 
 </body>
