@@ -23,7 +23,6 @@
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 12px;
     }
 
     header h1 {
@@ -109,7 +108,7 @@
       color: #245b36;
     }
 
-    .price {
+    .price, .contact {
       background: #245b36;
       color: white;
       text-align: center;
@@ -117,9 +116,22 @@
       padding: 38px 24px;
     }
 
-    .price h2 {
+    .price h2, .contact h2 {
       font-size: 34px;
       margin: 0 0 10px;
+    }
+
+    .contact-buttons {
+      margin-top: 20px;
+    }
+
+    .contact-buttons a {
+      margin: 8px;
+    }
+
+    .email-button {
+      background: white;
+      color: #245b36;
     }
 
     .brochure {
@@ -193,65 +205,71 @@
     </p>
 
     <div class="gallery">
-      <img src="treatment.jpg" alt="Palm treatment service in North County San Diego">
-      <img src="treatment1.jpg" alt="Canary Island palm protection service">
-      <img src="yard2.jpg" alt="Palm trees in North County San Diego yard">
+      <img src="treatment.jpg" alt="Palm treatment service">
+      <img src="treatment1.jpg" alt="Palm protection work">
+      <img src="yard2.jpg" alt="Palm trees yard">
     </div>
   </section>
 
   <section>
     <h2>What We Offer</h2>
-    <p>
-      We focus on preventative palm protection. Each property is assessed individually based on palm size, condition, number of palms, access, and desired level of protection.
-    </p>
-
     <div class="cards">
       <div class="card">
         <h3>Free Assessment</h3>
-        <p>Quick on-site walk-through to evaluate your palms and explain available protection options.</p>
+        <p>Quick on-site walk-through to evaluate your palms and explain protection options.</p>
       </div>
 
       <div class="card">
         <h3>Preventative Soil Treatment</h3>
-        <p>Basic preventative treatment designed to help protect valuable palms before damage occurs.</p>
+        <p>Basic protection to help prevent damage before it starts.</p>
       </div>
 
       <div class="card">
-        <h3>Soil Treatment + Exterior Spray</h3>
-        <p>A stronger protection option for homeowners who want a more aggressive preventative approach.</p>
+        <h3>Soil + Exterior Treatment</h3>
+        <p>Stronger option for homeowners who want more aggressive protection.</p>
       </div>
 
       <div class="card">
         <h3>Ongoing Monitoring</h3>
-        <p>Follow-up visits available for homeowners who want continued monitoring and protection.</p>
+        <p>Optional follow-ups to maintain protection over time.</p>
       </div>
     </div>
   </section>
 
   <section class="price">
     <h2>Treatments Starting at $200</h2>
-    <p>Final pricing depends on the number of palms, tree size, access, and level of protection selected.</p>
-    <a class="button" href="mailto:YOUR_EMAIL_HERE@gmail.com?subject=Free%20Palm%20Assessment%20Request&body=Hi%2C%20I%27d%20like%20to%20request%20a%20free%20palm%20assessment.%0A%0AName%3A%0ACity%3A%0ANumber%20of%20palms%3A%0APreferred%20appointment%20time%3A%0AAdditional%20details%3A">Request by Email</a>
+    <p>Final pricing depends on number of palms, size, access, and level of protection.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Request a Free Palm Assessment</h2>
+    <p>Call/text for fastest response, or send an email request.</p>
+
+    <div class="contact-buttons">
+      <a class="button" href="tel:2624923135">Call/Text: 262-492-3135</a>
+
+      <a class="button email-button"
+         href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Assessment%20Request&body=Hi%2C%20I%27d%20like%20a%20free%20assessment.%0A%0ACity%3A%0ANumber%20of%20palms%3A%0APreferred%20time%3A">
+         Email Request (Optional)
+      </a>
+    </div>
   </section>
 
   <section class="brochure">
-    <h2>Our Current Palm Protection Flyer</h2>
-    <p>
-      This is the local flyer being distributed to homeowners in North County San Diego.
-    </p>
-    <img src="brochure.jpg" alt="San Diego Palm Protection flyer">
+    <h2>Our Current Flyer</h2>
+    <img src="brochure.jpg" alt="Palm protection flyer">
   </section>
 
   <section class="areas">
     <h2>Serving North County San Diego</h2>
     <p>
-      Poway • Rancho Santa Fe • Rancho Peñasquitos • Carmel Valley • Del Mar • Escondido • Surrounding Areas
+      Poway • Rancho Santa Fe • Rancho Peñasquitos • Carmel Valley • Del Mar • Escondido
     </p>
   </section>
 
   <footer>
     <p><strong>San Diego Palm Protection</strong></p>
-    <p>Call or Text: <a href="tel:2624923135">262-492-3135</a></p>
+    <p>Call/Text: <a href="tel:2624923135">262-492-3135</a></p>
     <p>Email: <a href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a></p>
     <p>Locally operated in North County San Diego</p>
   </footer>
