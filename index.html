@@ -1,278 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>San Diego Palm Protection</title>
-  <meta name="description" content="Preventative palm protection services in North County San Diego. Free assessments. Treatments starting at $200." />
+import "./App.css";
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #1f2a1f;
-      background: #f8f6ef;
-      line-height: 1.6;
-    }
+export default function App() {
+  return (
+    <div className="page">
+      <header className="hero">
+        <nav className="nav">
+          <div className="brand">San Diego Palm Protection</div>
+          <a className="phone" href="tel:2624923135">Call/Text: 262-492-3135</a>
+        </nav>
 
-    header {
-      background: #245b36;
-      color: white;
-      padding: 18px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+        <div className="heroContent">
+          <p className="eyebrow">South American Palm Weevil Prevention</p>
+          <h1>Protect Your Canary Island Palms Before It’s Too Late</h1>
+          <p className="subhead">
+            Preventative palm protection services for homeowners in Escondido,
+            Poway, Rancho Santa Fe, Carmel Valley, Del Mar, and North County San Diego.
+          </p>
 
-    header h1 {
-      margin: 0;
-      font-size: 22px;
-    }
+          <div className="heroButtons">
+            <a className="primaryBtn" href="tel:2624923135">Call/Text for Free Assessment</a>
+            <a className="secondaryBtn" href="mailto:sandiegopalmprotection@gmail.com">
+              Email Request
+            </a>
+          </div>
 
-    header a, .button {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      background: #d99a00;
-      padding: 12px 18px;
-      border-radius: 8px;
-      display: inline-block;
-    }
+          <p className="trustLine">
+            Free 10–15 minute on-site assessment • Treatments starting at $200
+          </p>
+        </div>
+      </header>
 
-    .hero {
-      padding: 85px 24px;
-      text-align: center;
-      background: linear-gradient(rgba(36,91,54,.82), rgba(36,91,54,.82)), url('yard2.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
-    }
+      <main>
+        <section className="alertSection">
+          <div>
+            <h2>South American Palm Weevil Is Spreading in San Diego County</h2>
+            <p>
+              The South American palm weevil can severely damage Canary Island date palms
+              and other high-value palms. By the time obvious crown collapse or major
+              visible damage appears, recovery may be difficult or impossible.
+            </p>
+            <p>
+              Our service focuses on prevention, early monitoring, and homeowner education
+              so you can protect valuable palms before the problem becomes expensive.
+            </p>
+          </div>
+        </section>
 
-    .hero h2 {
-      font-size: 46px;
-      line-height: 1.1;
-      margin-bottom: 16px;
-    }
+        <section className="cardsSection">
+          <h2>What We Offer</h2>
 
-    .hero p {
-      font-size: 20px;
-      max-width: 760px;
-      margin: 0 auto 24px;
-    }
+          <div className="cards">
+            <div className="card">
+              <h3>Free Palm Assessment</h3>
+              <p>
+                Quick on-site walk-through to evaluate your palms, discuss risk, and explain
+                protection options.
+              </p>
+            </div>
 
-    section {
-      padding: 55px 24px;
-      max-width: 1050px;
-      margin: auto;
-    }
+            <div className="card">
+              <h3>Preventative Soil Treatment</h3>
+              <p>
+                Entry-level protection option designed for homeowners who want basic
+                preventative care before visible damage appears.
+              </p>
+            </div>
 
-    .warning {
-      background: #fff3d2;
-      border-left: 6px solid #d99a00;
-      padding: 24px;
-      border-radius: 10px;
-    }
+            <div className="card">
+              <h3>Soil + Exterior Treatment</h3>
+              <p>
+                More aggressive protection option for high-value palms, larger properties,
+                and homeowners who want stronger prevention.
+              </p>
+            </div>
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 25px;
-    }
+            <div className="card">
+              <h3>Ongoing Monitoring</h3>
+              <p>
+                Optional follow-up visits to check palm condition, monitor new signs of risk,
+                and maintain a prevention schedule.
+              </p>
+            </div>
+          </div>
+        </section>
 
-    .gallery img {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0,0,0,.12);
-    }
+        <section className="signsSection">
+          <h2>Signs Your Palm May Be at Risk</h2>
+          <ul>
+            <li>Drooping, thinning, or collapsing crown</li>
+            <li>Fronds suddenly dying near the top of the palm</li>
+            <li>Visible holes, damage, or decay near the crown</li>
+            <li>Nearby Canary Island palms showing decline or removal</li>
+            <li>High-value palms in areas where SAPW damage has been reported</li>
+          </ul>
+        </section>
 
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-    }
+        <section className="pricingSection">
+          <h2>Treatments Starting at $200</h2>
+          <p>
+            Final pricing depends on number of palms, palm size, access, property layout,
+            and level of protection requested.
+          </p>
 
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 14px;
-      box-shadow: 0 4px 14px rgba(0,0,0,.08);
-    }
+          <div className="pricingGrid">
+            <div className="priceCard">
+              <h3>Basic Prevention</h3>
+              <p className="price">Starting at $200</p>
+              <p>Good for simple preventative soil treatment on smaller residential jobs.</p>
+            </div>
 
-    .card h3 {
-      margin-top: 0;
-      color: #245b36;
-    }
+            <div className="priceCard featured">
+              <h3>Enhanced Protection</h3>
+              <p className="price">Custom Quote</p>
+              <p>Best for larger palms, premium properties, and homeowners wanting stronger coverage.</p>
+            </div>
+          </div>
+        </section>
 
-    .price, .contact {
-      background: #245b36;
-      color: white;
-      text-align: center;
-      border-radius: 16px;
-      padding: 38px 24px;
-    }
+        <section className="whySection">
+          <h2>Why Homeowners Call Us</h2>
+          <div className="whyGrid">
+            <p><strong>Local focus:</strong> We serve North County communities where palms are a major part of the landscape.</p>
+            <p><strong>Prevention-first:</strong> The goal is to act before visible decline becomes expensive.</p>
+            <p><strong>Simple process:</strong> Call or text, schedule a quick assessment, then choose the right option.</p>
+            <p><strong>High-value palms:</strong> Canary Island date palms can be expensive to remove, replace, or lose.</p>
+          </div>
+        </section>
 
-    .price h2, .contact h2 {
-      font-size: 34px;
-      margin: 0 0 10px;
-    }
+        <section className="serviceArea">
+          <h2>Serving North County San Diego</h2>
+          <p>
+            Escondido • Poway • Rancho Santa Fe • Rancho Peñasquitos • Carmel Valley •
+            Del Mar • San Marcos • Encinitas • Carlsbad • Rancho Bernardo
+          </p>
+        </section>
 
-    .contact-buttons {
-      margin-top: 20px;
-    }
+        <section className="cta">
+          <h2>Request a Free Palm Assessment</h2>
+          <p>
+            Send a photo of your palm or call/text to schedule a quick on-site visit.
+          </p>
 
-    .contact-buttons a {
-      margin: 8px;
-    }
+          <div className="heroButtons">
+            <a className="primaryBtn" href="tel:2624923135">Call/Text: 262-492-3135</a>
+            <a className="secondaryBtn" href="mailto:sandiegopalmprotection@gmail.com">
+              sandiegopalmprotection@gmail.com
+            </a>
+          </div>
+        </section>
+      </main>
 
-    .email-button {
-      background: white;
-      color: #245b36;
-    }
-
-    .brochure {
-      text-align: center;
-    }
-
-    .brochure img {
-      width: 100%;
-      max-width: 800px;
-      border-radius: 12px;
-      box-shadow: 0 4px 14px rgba(0,0,0,.14);
-      margin-top: 20px;
-    }
-
-    .areas {
-      text-align: center;
-    }
-
-    footer {
-      background: #1f2a1f;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    footer a {
-      color: #f2b705;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    @media (max-width: 650px) {
-      .hero h2 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <h1>San Diego Palm Protection</h1>
-    <a href="tel:2624923135">Call/Text: 262-492-3135</a>
-  </header>
-
-  <div class="hero">
-    <h2>Protect Your Palm Trees Before It’s Too Late</h2>
-    <p>Preventative palm protection services for high-value palms across North County San Diego.</p>
-    <p><strong>Free 10–15 minute on-site assessment</strong></p>
-    <a class="button" href="tel:2624923135">Book a Free Assessment</a>
-  </div>
-
-  <section>
-    <div class="warning">
-      <h2>South American Palm Weevil Is a Growing Concern in San Diego</h2>
-      <p>
-        The South American palm weevil has been damaging Canary Island palms and other high-value palms across the region. Once visible damage appears, recovery can be difficult or impossible. Early prevention and monitoring are key.
-      </p>
+      <footer>
+        <strong>San Diego Palm Protection</strong>
+        <p>Call/Text: 262-492-3135</p>
+        <p>Email: sandiegopalmprotection@gmail.com</p>
+        <p>Locally operated in North County San Diego</p>
+      </footer>
     </div>
-  </section>
-
-  <section>
-    <h2>Local Palm Protection Work</h2>
-    <p>
-      We provide on-site palm assessments and preventative treatment options for homeowners who want to protect valuable palms before damage occurs.
-    </p>
-
-    <div class="gallery">
-      <img src="treatment.jpg" alt="Palm treatment service">
-      <img src="treatment1.jpg" alt="Palm protection work">
-      <img src="yard2.jpg" alt="Palm trees yard">
-    </div>
-  </section>
-
-  <section>
-    <h2>What We Offer</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Free Assessment</h3>
-        <p>Quick on-site walk-through to evaluate your palms and explain protection options.</p>
-      </div>
-
-      <div class="card">
-        <h3>Preventative Soil Treatment</h3>
-        <p>Basic protection to help prevent damage before it starts.</p>
-      </div>
-
-      <div class="card">
-        <h3>Soil + Exterior Treatment</h3>
-        <p>Stronger option for homeowners who want more aggressive protection.</p>
-      </div>
-
-      <div class="card">
-        <h3>Ongoing Monitoring</h3>
-        <p>Optional follow-ups to maintain protection over time.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="price">
-    <h2>Treatments Starting at $200</h2>
-    <p>Final pricing depends on number of palms, size, access, and level of protection.</p>
-  </section>
-
-  <section class="contact">
-    <h2>Request a Free Palm Assessment</h2>
-    <p>Call/text for fastest response, or send an email request.</p>
-
-    <div class="contact-buttons">
-      <a class="button" href="tel:2624923135">Call/Text: 262-492-3135</a>
-
-      <a class="button email-button"
-         href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Assessment%20Request&body=Hi%2C%20I%27d%20like%20a%20free%20assessment.%0A%0ACity%3A%0ANumber%20of%20palms%3A%0APreferred%20time%3A">
-         Email Request (Optional)
-      </a>
-    </div>
-  </section>
-
-  <section class="brochure">
-    <h2>Our Current Flyer</h2>
-    <img src="brochure.jpg" alt="Palm protection flyer">
-  </section>
-
-  <section class="areas">
-    <h2>Serving North County San Diego</h2>
-    <p>
-      Poway • Rancho Santa Fe • Rancho Peñasquitos • Carmel Valley • Del Mar • Escondido
-    </p>
-  </section>
-
-  <footer>
-    <p><strong>San Diego Palm Protection</strong></p>
-    <p>Call/Text: <a href="tel:2624923135">262-492-3135</a></p>
-    <p>Email: <a href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a></p>
-    <p>Locally operated in North County San Diego</p>
-  </footer>
-
-</body>
-</html>
+  );
+}
