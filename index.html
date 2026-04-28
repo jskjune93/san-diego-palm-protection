@@ -1,480 +1,117 @@
+import "./App.css";
+
 export default function App() {
   return (
-    <>
-      <style>{`
-        * { box-sizing: border-box; }
-
-        body {
-          margin: 0;
-          font-family: Arial, Helvetica, sans-serif;
-          background: #fff7e6;
-          color: #111;
-        }
-
-        .page {
-          width: 100%;
-          overflow-x: hidden;
-        }
-
-        .topBar {
-          background: #f6b21a;
-          color: #000;
-          padding: 12px 6%;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          font-weight: 900;
-          border-bottom: 5px solid #006b2f;
-        }
-
-        .topBar a {
-          color: #000;
-          text-decoration: none;
-        }
-
-        .hero {
-          background: #fff;
-          padding: 42px 6% 55px;
-          border-bottom: 8px solid #f6b21a;
-        }
-
-        .heroGrid {
-          display: grid;
-          grid-template-columns: 1.05fr .95fr;
-          gap: 36px;
-          align-items: center;
-          max-width: 1200px;
-          margin: auto;
-        }
-
-        .eyebrow {
-          display: inline-block;
-          background: #f6b21a;
-          color: #000;
-          font-weight: 900;
-          padding: 10px 16px;
-          border-radius: 10px;
-          margin-bottom: 16px;
-        }
-
-        h1 {
-          font-size: clamp(3rem, 7vw, 6rem);
-          line-height: .9;
-          margin: 0;
-          font-weight: 1000;
-          letter-spacing: -2px;
-          text-transform: uppercase;
-        }
-
-        .green {
-          color: #006b2f;
-        }
-
-        .subhead {
-          font-size: 1.35rem;
-          line-height: 1.45;
-          font-weight: 800;
-          max-width: 720px;
-          margin: 22px 0;
-        }
-
-        .heroButtons {
-          display: flex;
-          gap: 14px;
-          flex-wrap: wrap;
-          margin-top: 24px;
-        }
-
-        .primaryBtn,
-        .secondaryBtn {
-          padding: 15px 22px;
-          border-radius: 10px;
-          font-weight: 900;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 1.05rem;
-        }
-
-        .primaryBtn {
-          background: #f6b21a;
-          color: #000;
-          border: 3px solid #000;
-        }
-
-        .secondaryBtn {
-          background: #006b2f;
-          color: #fff;
-          border: 3px solid #006b2f;
-        }
-
-        .heroImage {
-          width: 100%;
-          border-radius: 18px;
-          border: 6px solid #006b2f;
-          box-shadow: 0 12px 30px rgba(0,0,0,.2);
-        }
-
-        .section {
-          padding: 60px 6%;
-        }
-
-        .darkGreen {
-          background: #006b2f;
-          color: white;
-        }
-
-        .gold {
-          background: #f6b21a;
-          color: #000;
-        }
-
-        .white {
-          background: #fff;
-        }
-
-        .container {
-          max-width: 1200px;
-          margin: auto;
-        }
-
-        h2 {
-          font-size: clamp(2rem, 4vw, 3.5rem);
-          line-height: 1;
-          margin: 0 0 24px;
-          text-transform: uppercase;
-          font-weight: 1000;
-        }
-
-        h3 {
-          margin: 0 0 10px;
-          font-size: 1.35rem;
-          font-weight: 1000;
-        }
-
-        p, li {
-          font-size: 1.08rem;
-          line-height: 1.6;
-        }
-
-        .cards {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          gap: 22px;
-        }
-
-        .card {
-          background: white;
-          color: #111;
-          padding: 26px;
-          border-radius: 16px;
-          border: 4px solid #f6b21a;
-          box-shadow: 0 8px 20px rgba(0,0,0,.12);
-        }
-
-        .card.greenCard {
-          background: #006b2f;
-          color: white;
-          border-color: #f6b21a;
-        }
-
-        .photoGrid {
-          display: grid;
-          grid-template-columns: 1.3fr .85fr .85fr;
-          gap: 18px;
-          margin-top: 30px;
-        }
-
-        .photoGrid img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 16px;
-          border: 5px solid #f6b21a;
-          box-shadow: 0 8px 20px rgba(0,0,0,.18);
-        }
-
-        .photoGrid .large {
-          grid-row: span 2;
-          min-height: 460px;
-        }
-
-        .flyerWrap {
-          display: grid;
-          grid-template-columns: .95fr 1.05fr;
-          gap: 34px;
-          align-items: center;
-        }
-
-        .flyer {
-          width: 100%;
-          border-radius: 12px;
-          border: 5px solid #f6b21a;
-          box-shadow: 0 10px 24px rgba(0,0,0,.18);
-        }
-
-        .priceBox {
-          background: #006b2f;
-          color: white;
-          padding: 28px;
-          border-radius: 18px;
-          border: 5px solid #f6b21a;
-        }
-
-        .price {
-          font-size: 3rem;
-          color: #f6b21a;
-          font-weight: 1000;
-          margin: 8px 0;
-        }
-
-        .warning {
-          background: #fff;
-          color: #111;
-          padding: 24px;
-          border-left: 12px solid #f6b21a;
-          border-radius: 12px;
-          font-weight: 800;
-        }
-
-        .serviceArea {
-          font-size: 1.25rem;
-          font-weight: 900;
-        }
-
-        .cta {
-          text-align: center;
-          background: #006b2f;
-          color: white;
-          padding: 65px 6%;
-          border-top: 8px solid #f6b21a;
-          border-bottom: 8px solid #f6b21a;
-        }
-
-        .cta h2 {
-          color: white;
-        }
-
-        footer {
-          background: #111;
-          color: white;
-          text-align: center;
-          padding: 32px 6%;
-        }
-
-        footer a {
-          color: #f6b21a;
-        }
-
-        @media (max-width: 900px) {
-          .topBar {
-            flex-direction: column;
-            gap: 8px;
-            text-align: center;
-          }
-
-          .heroGrid,
-          .flyerWrap {
-            grid-template-columns: 1fr;
-          }
-
-          .cards {
-            grid-template-columns: 1fr;
-          }
-
-          .photoGrid {
-            grid-template-columns: 1fr;
-          }
-
-          .photoGrid .large {
-            min-height: auto;
-          }
-
-          h1 {
-            font-size: 3.4rem;
-          }
-
-          .primaryBtn,
-          .secondaryBtn {
-            width: 100%;
-            text-align: center;
-          }
-        }
-      `}</style>
-
-      <div className="page">
-        <div className="topBar">
-          <div>San Diego Palm Protection</div>
-          <a href="tel:2624923135">Call/Text: 262-492-3135</a>
+    <div className="page">
+      <header className="topnav">
+        <div className="logo">
+          <span>SAN DIEGO</span>
+          <strong>PALM PROTECTION 🌴</strong>
         </div>
 
-        <header className="hero">
-          <div className="heroGrid">
-            <div>
-              <div className="eyebrow">South American Palm Weevil Prevention</div>
-              <h1>
-                Protect Your <span className="green">Palm Trees</span> Before It’s Too Late!
-              </h1>
-              <p className="subhead">
-                Preventative treatment services to help protect high-value Canary Island palms
-                across Escondido, Poway, Rancho Santa Fe, and North County San Diego.
-              </p>
-              <div className="heroButtons">
-                <a className="primaryBtn" href="tel:2624923135">Call/Text for Free Assessment</a>
-                <a className="secondaryBtn" href="mailto:sandiegopalmprotection@gmail.com">Email Us</a>
-              </div>
+        <nav>
+          <a href="#services">Services</a>
+          <a href="#why">Why It Matters</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a className="navCall" href="tel:2624923135">📞 262-492-3135</a>
+      </header>
+
+      <section className="hero">
+        <div className="heroOverlay">
+          <div className="heroText">
+            <h1>
+              PROTECT YOUR <span>PALM TREES</span> BEFORE IT’S TOO LATE!
+            </h1>
+
+            <div className="alertBox">
+              🪲 The South American Palm Weevil is killing Canary Island Palms across San Diego
             </div>
 
-            <img className="heroImage" src="/yard2.jpg" alt="North County San Diego palm landscape" />
-          </div>
-        </header>
-
-        <section className="section darkGreen">
-          <div className="container">
-            <h2>The South American Palm Weevil Is Killing Palms Across San Diego</h2>
-            <p>
-              The South American Palm Weevil is a serious threat to Canary Island palms.
-              Once obvious damage starts, it may already be too late. Early prevention is
-              the best way to protect expensive, mature palms before irreversible decline.
+            <p className="starting">
+              Preventative treatments starting at <strong>$200</strong>
             </p>
 
-            <div className="cards">
-              <div className="card">
-                <h3>Dead Palms Are Expensive</h3>
-                <p>Removal and replacement can cost thousands of dollars per palm.</p>
-              </div>
-
-              <div className="card">
-                <h3>Early Treatment Is Critical</h3>
-                <p>Preventative treatment is designed to protect palms before visible damage occurs.</p>
-              </div>
-
-              <div className="card">
-                <h3>Local North County Service</h3>
-                <p>Focused on Escondido, Poway, Rancho Santa Fe, and surrounding communities.</p>
-              </div>
+            <div className="buttons">
+              <a href="tel:2624923135">📞 CALL OR TEXT 262-492-3135</a>
+              <a href="mailto:sandiegopalmprotection@gmail.com">✉ EMAIL US</a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="section white">
-          <div className="container flyerWrap">
-            <img className="flyer" src="/brochure.jpg" alt="San Diego Palm Protection flyer" />
+      <section className="stats">
+        <div>🛡️ Dead palms can cost <strong>$5,000–$20,000+</strong> to remove and replace.</div>
+        <div>⚠️ Early treatment is critical. Once damage starts, it is often irreversible.</div>
+        <div>🌴 Local North County San Diego service.</div>
+      </section>
 
-            <div>
-              <h2>Free Palm Assessment</h2>
-              <p>
-                Send photos or schedule a quick visit. We’ll look at your palms, discuss risk,
-                and explain prevention options.
-              </p>
+      <section id="services" className="services">
+        <h2>PALM PROTECTION SERVICES</h2>
 
-              <div className="priceBox">
-                <h3>Preventative Treatments Starting At</h3>
-                <div className="price">$200</div>
-                <p>
-                  Final pricing depends on number of palms, access, palm size, and the level of
-                  treatment requested.
-                </p>
-              </div>
-            </div>
+        <div className="serviceGrid">
+          <div className="serviceCard">
+            <img src="/yard2.jpg" alt="Palm assessment" />
+            <h3>FREE PALM ASSESSMENT</h3>
+            <p>Quick on-site evaluation of your palms and property to assess risk.</p>
           </div>
-        </section>
 
-        <section className="section gold">
-          <div className="container">
-            <h2>Palm Protection Services</h2>
-
-            <div className="cards">
-              <div className="card">
-                <h3>Preventative Soil Treatment</h3>
-                <p>
-                  Basic prevention option for homeowners who want to protect palms before
-                  visible damage occurs.
-                </p>
-              </div>
-
-              <div className="card greenCard">
-                <h3>Enhanced Protection</h3>
-                <p>
-                  More aggressive option for high-value palms, larger properties, or homeowners
-                  who want stronger prevention.
-                </p>
-              </div>
-
-              <div className="card">
-                <h3>Ongoing Monitoring</h3>
-                <p>
-                  Follow-up visits available to monitor palm condition and maintain a prevention schedule.
-                </p>
-              </div>
-            </div>
+          <div className="serviceCard">
+            <img src="/treatment.jpg" alt="Preventative soil treatment" />
+            <h3>PREVENTATIVE SOIL TREATMENT</h3>
+            <p>Entry-level protection to help stop problems before visible damage appears.</p>
           </div>
-        </section>
 
-        <section className="section white">
-          <div className="container">
-            <h2>Real Local Palm Protection</h2>
-            <p>
-              We focus on protecting high-value palms that define the look of North County homes,
-              estates, and landscapes.
-            </p>
-
-            <div className="photoGrid">
-              <img className="large" src="/yard2.jpg" alt="Large palm landscape in San Diego County" />
-              <img src="/treatment1.jpg" alt="Palm treatment service" />
-              <img src="/treatment.jpg" alt="Palm treatment near mature palm" />
-            </div>
+          <div className="serviceCard">
+            <img src="/treatment1.jpg" alt="Soil and exterior treatment" />
+            <h3>SOIL + EXTERIOR TREATMENT</h3>
+            <p>Stronger protection for high-value palms and premium properties.</p>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section className="section darkGreen">
-          <div className="container">
-            <h2>Signs Your Palm May Be At Risk</h2>
+      <section id="why" className="why">
+        <div>
+          <img className="flyer" src="/brochure.jpg" alt="San Diego Palm Protection flyer" />
+        </div>
 
-            <div className="warning">
-              Early treatment is critical. Once crown damage starts, recovery may be difficult or impossible.
-            </div>
-
-            <ul>
-              <li>Drooping, thinning, or collapsing crown</li>
-              <li>Fronds suddenly dying near the top of the palm</li>
-              <li>Visible holes, decay, or damage near the crown</li>
-              <li>Nearby Canary Island palms showing decline or removal</li>
-              <li>High-value palms in areas where SAPW damage has been reported</li>
-            </ul>
-          </div>
-        </section>
-
-        <section className="section white">
-          <div className="container">
-            <h2>Serving North County San Diego</h2>
-            <p className="serviceArea">
-              Escondido • Poway • Rancho Santa Fe • Rancho Peñasquitos • Carmel Valley •
-              Del Mar • San Marcos • Encinitas • Carlsbad • Rancho Bernardo
-            </p>
-          </div>
-        </section>
-
-        <section className="cta">
-          <h2>Call or Text for a Free Assessment</h2>
+        <div>
+          <h2>WHY IT MATTERS</h2>
           <p>
-            Send a photo of your palm or request a quick on-site visit.
+            The South American Palm Weevil can destroy mature Canary Island palms before many
+            homeowners realize there is a serious problem.
           </p>
 
-          <div className="heroButtons" style={{ justifyContent: "center" }}>
-            <a className="primaryBtn" href="tel:2624923135">262-492-3135</a>
-            <a className="secondaryBtn" href="mailto:sandiegopalmprotection@gmail.com">
-              sandiegopalmprotection@gmail.com
-            </a>
-          </div>
-        </section>
+          <ul>
+            <li>Prevention is far cheaper than removal and replacement.</li>
+            <li>Mature palms can be worth thousands of dollars.</li>
+            <li>Once the crown collapses, it may be too late.</li>
+            <li>Protect your property value and the beauty of your landscape.</li>
+          </ul>
+        </div>
+      </section>
 
-        <footer>
-          <strong>San Diego Palm Protection</strong>
-          <p>Call/Text: <a href="tel:2624923135">262-492-3135</a></p>
-          <p>Email: <a href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a></p>
-          <p>Local North County San Diego Service</p>
-        </footer>
-      </div>
-    </>
+      <section id="contact" className="cta">
+        <h2>SCHEDULE YOUR FREE PALM ASSESSMENT TODAY!</h2>
+        <p>
+          Call or text <strong>262-492-3135</strong> or email{" "}
+          <strong>sandiegopalmprotection@gmail.com</strong>
+        </p>
+      </section>
+
+      <section className="areas">
+        <h2>SERVING NORTH COUNTY SAN DIEGO</h2>
+        <p>
+          Escondido • Poway • Rancho Santa Fe • Rancho Peñasquitos • Carmel Valley •
+          Del Mar • San Marcos • Encinitas • Carlsbad • Rancho Bernardo
+        </p>
+      </section>
+
+      <footer>
+        <strong>SAN DIEGO PALM PROTECTION 🌴</strong>
+        <p>262-492-3135 | sandiegopalmprotection@gmail.com</p>
+      </footer>
+    </div>
   );
 }
