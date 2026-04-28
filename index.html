@@ -1,382 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>San Diego Palm Protection</title>
-  <style>
-    * { box-sizing: border-box; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>San Diego Palm Protection</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #fff;
-      color: #0b2d13;
-    }
+<style>
+* { box-sizing: border-box; }
 
-    .topnav {
-      background: #063b16;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 6%;
-      border-bottom: 5px solid #ffb31a;
-    }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #0b2d13;
+}
 
-    .logo {
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 1;
-    }
+.topnav {
+  background: #063b16;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 6%;
+  border-bottom: 5px solid #ffb31a;
+}
 
-    .logo span {
-      color: #ffb31a;
-      display: block;
-      font-size: 18px;
-    }
+.logo {
+  font-weight: 900;
+  font-size: 22px;
+}
 
-    .call {
-      background: #ffb31a;
-      color: #000;
-      padding: 14px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 900;
-    }
+.logo span {
+  color: #ffb31a;
+  display: block;
+}
 
-    .hero {
-      min-height: 600px;
-      background:
-        linear-gradient(90deg, rgba(0,0,0,.78), rgba(0,0,0,.15)),
-        url("public/yard2.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      padding: 60px 6%;
-      color: white;
-    }
+.call {
+  background: #ffb31a;
+  color: black;
+  padding: 14px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+}
 
-    .heroContent {
-      max-width: 720px;
-    }
+.hero {
+  min-height: 600px;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.75), rgba(0,0,0,.2)),
+    url("./yard2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 60px 6%;
+  color: white;
+}
 
-    h1 {
-      font-size: clamp(46px, 8vw, 92px);
-      line-height: .9;
-      margin: 0;
-      text-transform: uppercase;
-      font-weight: 1000;
-    }
+.heroContent {
+  max-width: 700px;
+}
 
-    h1 span {
-      color: #ffb31a;
-      display: block;
-    }
+h1 {
+  font-size: clamp(48px, 8vw, 90px);
+  line-height: .9;
+  margin: 0;
+  text-transform: uppercase;
+}
 
-    .alertBox {
-      background: #ffb31a;
-      color: #000;
-      padding: 18px 22px;
-      border-radius: 10px;
-      font-size: 22px;
-      font-weight: 900;
-      margin: 28px 0;
-    }
+h1 span {
+  color: #ffb31a;
+  display: block;
+}
 
-    .starting {
-      font-size: 26px;
-      font-weight: 900;
-    }
+.alertBox {
+  background: #ffb31a;
+  color: black;
+  padding: 18px;
+  margin: 24px 0;
+  font-weight: 900;
+  border-radius: 10px;
+}
 
-    .starting strong {
-      color: #ffb31a;
-      font-size: 44px;
-    }
+.starting {
+  font-size: 26px;
+  font-weight: 900;
+}
 
-    .buttons {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-    }
+.starting strong {
+  color: #ffb31a;
+  font-size: 40px;
+}
 
-    .buttons a {
-      background: #ffb31a;
-      color: #000;
-      padding: 15px 22px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 900;
-      border: 3px solid #ffb31a;
-    }
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
-    .buttons a.email {
-      background: transparent;
-      color: white;
-    }
+.buttons a {
+  background: #ffb31a;
+  padding: 14px 18px;
+  text-decoration: none;
+  font-weight: 900;
+  border-radius: 8px;
+  color: black;
+}
 
-    .stats {
-      background: #063b16;
-      color: white;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
-      padding: 30px 6%;
-      font-size: 19px;
-      font-weight: 800;
-    }
+.buttons a.email {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
 
-    .stats strong {
-      color: #ffb31a;
-    }
+.stats {
+  background: #063b16;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  padding: 25px 6%;
+  font-weight: 800;
+}
 
-    section {
-      padding: 60px 6%;
-    }
+section {
+  padding: 60px 6%;
+}
 
-    h2 {
-      text-align: center;
-      font-size: clamp(34px, 5vw, 52px);
-      margin: 0 0 35px;
-      text-transform: uppercase;
-      font-weight: 1000;
-    }
+h2 {
+  text-align: center;
+  font-size: 42px;
+}
 
-    .services {
-      background: white;
-    }
+.serviceGrid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .serviceGrid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      max-width: 1200px;
-      margin: auto;
-      text-align: center;
-    }
+.serviceCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
-    .serviceCard img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 4px solid #ffb31a;
-    }
+.why {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  background: #fff4d8;
+}
 
-    .serviceCard h3 {
-      color: #063b16;
-      font-size: 24px;
-      margin-bottom: 8px;
-    }
+.flyer {
+  width: 100%;
+  border-radius: 10px;
+}
 
-    .serviceCard p {
-      font-size: 17px;
-      line-height: 1.5;
-    }
+.cta {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
 
-    .why {
-      background: #fff4d8;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: center;
-    }
+footer {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
 
-    .flyer {
-      width: 100%;
-      border: 5px solid #ffb31a;
-      box-shadow: 0 10px 30px rgba(0,0,0,.2);
-    }
-
-    .why h2 {
-      text-align: left;
-    }
-
-    .why p,
-    .why li {
-      font-size: 19px;
-      line-height: 1.6;
-    }
-
-    .cta {
-      background: #063b16;
-      color: white;
-      text-align: center;
-      border-top: 6px solid #ffb31a;
-      border-bottom: 6px solid #ffb31a;
-    }
-
-    .cta p {
-      font-size: 24px;
-      font-weight: 800;
-    }
-
-    .cta strong {
-      color: #ffb31a;
-    }
-
-    .areas {
-      background: white;
-      text-align: center;
-    }
-
-    .areas p {
-      max-width: 950px;
-      margin: auto;
-      font-size: 19px;
-      line-height: 1.7;
-      font-weight: 700;
-    }
-
-    footer {
-      background: #063b16;
-      color: white;
-      text-align: center;
-      padding: 30px 6%;
-      font-size: 18px;
-    }
-
-    footer strong {
-      color: #ffb31a;
-      font-size: 24px;
-    }
-
-    @media (max-width: 900px) {
-      .topnav {
-        flex-direction: column;
-        gap: 14px;
-        text-align: center;
-      }
-
-      .call {
-        width: 100%;
-      }
-
-      .stats,
-      .serviceGrid,
-      .why {
-        grid-template-columns: 1fr;
-      }
-
-      .hero {
-        min-height: 650px;
-      }
-
-      .buttons a {
-        width: 100%;
-        text-align: center;
-      }
-
-      .why h2 {
-        text-align: center;
-      }
-    }
-  </style>
+@media(max-width:900px){
+  .stats, .serviceGrid, .why {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header class="topnav">
-    <div class="logo">
-      SAN DIEGO
-      <span>PALM PROTECTION 🌴</span>
-    </div>
-    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
-  </header>
 
-  <section class="hero">
-    <div class="heroContent">
-      <h1>
-        Protect Your
-        <span>Palm Trees</span>
-        Before It’s Too Late!
-      </h1>
-
-      <div class="alertBox">
-        🪲 The South American Palm Weevil is killing Canary Island Palms across San Diego
-      </div>
-
-      <p class="starting">
-        Preventative treatments starting at <strong>$200</strong>
-      </p>
-
-      <div class="buttons">
-        <a href="tel:2624923135">📞 CALL OR TEXT 262-492-3135</a>
-        <a class="email" href="mailto:sandiegopalmprotection@gmail.com">✉ EMAIL US</a>
-      </div>
-    </div>
-  </section>
-
-  <div class="stats">
-    <div>🛡️ Dead palms can cost <strong>$5,000–$20,000+</strong> to remove and replace.</div>
-    <div>⚠️ Early treatment is critical. Once damage starts, it is often irreversible.</div>
-    <div>🌴 Local North County San Diego service.</div>
+<header class="topnav">
+  <div class="logo">
+    SAN DIEGO
+    <span>PALM PROTECTION 🌴</span>
   </div>
+  <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+</header>
 
-  <section class="services">
-    <h2>Palm Protection Services</h2>
+<section class="hero">
+  <div class="heroContent">
+    <h1>Protect Your <span>Palm Trees</span> Before It’s Too Late!</h1>
 
-    <div class="serviceGrid">
-      <div class="serviceCard">
-        <img src="public/yard2.jpg" alt="Palm assessment">
-        <h3>FREE PALM ASSESSMENT</h3>
-        <p>Quick on-site evaluation of your palms and property to assess risk.</p>
-      </div>
-
-      <div class="serviceCard">
-        <img src="public/treatment.jpg" alt="Preventative soil treatment">
-        <h3>PREVENTATIVE SOIL TREATMENT</h3>
-        <p>Entry-level protection to help stop problems before visible damage appears.</p>
-      </div>
-
-      <div class="serviceCard">
-        <img src="public/treatment1.jpg" alt="Soil and exterior treatment">
-        <h3>SOIL + EXTERIOR TREATMENT</h3>
-        <p>Stronger protection for high-value palms and premium properties.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="why">
-    <div>
-      <img class="flyer" src="public/brochure.jpg" alt="San Diego Palm Protection flyer">
+    <div class="alertBox">
+      South American Palm Weevil is killing Canary Island palms across San Diego
     </div>
 
-    <div>
-      <h2>Why It Matters</h2>
-      <p>
-        The South American Palm Weevil can destroy mature Canary Island palms before many
-        homeowners realize there is a serious problem.
-      </p>
+    <p class="starting">Treatments starting at <strong>$200</strong></p>
 
-      <ul>
-        <li>Prevention is far cheaper than removal and replacement.</li>
-        <li>Mature palms can be worth thousands of dollars.</li>
-        <li>Once the crown collapses, it may be too late.</li>
-        <li>Protect your property value and the beauty of your landscape.</li>
-      </ul>
+    <div class="buttons">
+      <a href="tel:2624923135">Call Now</a>
+      <a class="email" href="mailto:sandiegopalmprotection@gmail.com">Email</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="cta">
-    <h2>Schedule Your Free Palm Assessment Today!</h2>
-    <p>
-      Call or text <strong>262-492-3135</strong> or email
-      <strong>sandiegopalmprotection@gmail.com</strong>
-    </p>
-  </section>
+<div class="stats">
+  <div>Dead palms can cost $5k–$20k+</div>
+  <div>Early treatment is critical</div>
+  <div>North County local service</div>
+</div>
 
-  <section class="areas">
-    <h2>Serving North County San Diego</h2>
-    <p>
-      Escondido • Poway • Rancho Santa Fe • Rancho Peñasquitos • Carmel Valley •
-      Del Mar • San Marcos • Encinitas • Carlsbad • Rancho Bernardo
-    </p>
-  </section>
+<section>
+  <h2>Services</h2>
 
-  <footer>
-    <strong>San Diego Palm Protection 🌴</strong>
-    <p>262-492-3135 | sandiegopalmprotection@gmail.com</p>
-  </footer>
+  <div class="serviceGrid">
+    <div class="serviceCard">
+      <img src="./yard2.jpg">
+      <p>Free Palm Assessment</p>
+    </div>
+
+    <div class="serviceCard">
+      <img src="./treatment.jpg">
+      <p>Preventative Soil Treatment</p>
+    </div>
+
+    <div class="serviceCard">
+      <img src="./treatment1.jpg">
+      <p>Enhanced Protection</p>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <img class="flyer" src="./brochure.jpg">
+
+  <div>
+    <h2>Why It Matters</h2>
+    <p>Prevention is far cheaper than removal. Protect your property value.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Call or Text 262-492-3135</h2>
+  <p>sandiegopalmprotection@gmail.com</p>
+</section>
+
+<footer>
+  San Diego Palm Protection
+</footer>
+
 </body>
 </html>
