@@ -276,21 +276,82 @@ footer {
   </div>
 </section>
 
-<section class="why">
-  <img class="flyer" src="./brochure.png">
+<style>
+.why {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 50px 20px;
+  background-color: #e6dcc3; /* matches your site */
+}
 
-  <div>
+.flyer {
+  width: 550px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.why-content {
+  max-width: 520px;
+  text-align: left;
+}
+
+.why-content h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #0b3d1a;
+}
+
+.why-content p {
+  font-size: 20px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  color: #0b3d1a;
+}
+
+.service-areas-title {
+  margin-top: 40px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 768px) {
+  .why {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .why-content {
+    text-align: center;
+  }
+
+  .why-content h2 {
+    font-size: 32px;
+  }
+
+  .why-content p {
+    font-size: 18px;
+  }
+}
+</style>
+
+
+<section class="why">
+  <img class="flyer" src="./brochure.png" alt="Palm Protection Flyer">
+
+  <div class="why-content">
     <h2>Services</h2>
 
-    <p><strong>Palm Health Treatment</strong> - Starting at $200</p>
-    <p>Basic preventative treatment to keep palms healthy and protected</p>
+    <p><strong>Palm Health Treatment</strong> – Starting at $200</p>
+    <p>Basic preventative treatment to keep palms healthy and protected.</p>
 
     <p><strong>Advanced Protection</strong></p>
-    <p>Enhanced treatment options available</p> 
+    <p>Enhanced treatment options available depending on tree size and condition.</p>
 
-    <h2>Service Areas</h2>
-    <p>Serving North County San Diego:</p> 
-    <p>Poway, Encinitas, Rancho Santa Fe, and surrounding areas</p>
+    <h2 class="service-areas-title">Service Areas</h2>
+    <p>Serving North County San Diego:</p>
+    <p>Poway, Encinitas, Rancho Santa Fe, and surrounding areas.</p>
   </div>
 </section>
 
