@@ -15,7 +15,6 @@ body {
   color: #0b2d13;
 }
 
-/* NAV */
 .topnav {
   background: #063b16;
   color: white;
@@ -45,7 +44,6 @@ body {
   font-weight: 900;
 }
 
-/* HERO FIXED */
 .hero {
   min-height: 640px;
   background:
@@ -76,6 +74,11 @@ body {
   margin-bottom: 18px;
 }
 
+.highlight {
+  color: #ffb31a;
+  font-weight: 900;
+}
+
 .cta-button {
   display: inline-block;
   background: #ffb31a;
@@ -92,7 +95,6 @@ body {
   font-weight: 700;
 }
 
-/* BAR */
 .bottom-bar {
   display: flex;
   justify-content: space-between;
@@ -111,7 +113,6 @@ body {
   font-size: 22px;
 }
 
-/* SECTION */
 section {
   padding: 60px 6%;
 }
@@ -121,7 +122,6 @@ h2 {
   font-size: 42px;
 }
 
-/* IMAGE GRID */
 .serviceGrid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -137,10 +137,11 @@ h2 {
   object-position: center;
   border-radius: 10px;
 }
+
 .treatment-photo {
   object-position: 5% center;
-} 
-/* FLYER SECTION */
+}
+
 .why {
   display: flex;
   align-items: center;
@@ -158,8 +159,8 @@ h2 {
 
 .why-content {
   max-width: 520px;
-  text-align: left
-  padding-top:20px;
+  text-align: left;
+  padding-top: 20px;
 }
 
 .why-content h2 {
@@ -172,11 +173,16 @@ h2 {
   margin-bottom: 16px;
 }
 
+.service-note {
+  font-weight: 700;
+  color: #2f4f2f;
+  margin-top: 10px;
+}
+
 .service-areas-title {
   margin-top: 36px;
 }
 
-/* CTA */
 .cta {
   background: #063b16;
   color: white;
@@ -188,11 +194,6 @@ h2 {
   color: #ffb31a;
 }
 
-  .highlight {
-  color: #ffb31a;
-  font-weight: 900;
-}
-/* FOOTER */
 footer {
   background: #063b16;
   color: white;
@@ -200,8 +201,13 @@ footer {
   padding: 25px;
 }
 
-/* MOBILE */
 @media(max-width: 900px){
+  .topnav {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+  }
+
   .serviceGrid {
     grid-template-columns: 1fr;
   }
@@ -218,6 +224,7 @@ footer {
   .bottom-bar {
     flex-direction: column;
     gap: 15px;
+    padding: 22px 25px;
   }
 }
 </style>
@@ -233,7 +240,6 @@ footer {
   <a class="call" href="tel:2624923135">📞 262-492-3135</a>
 </header>
 
-<!-- HERO FIXED -->
 <section class="hero">
   <div class="hero-content">
     <h1>Palm <span class="highlight">Health & Protection</span> Services in San Diego</h1>
@@ -245,11 +251,11 @@ footer {
 
     <p>
       Preventative treatment, monitoring, and protection for valuable palm trees —
-      including protection against South American Palm Weevil (SAPW).
+      including protection against South American Palm Weevil.
     </p>
 
     <a class="cta-button" href="tel:2624923135">
-      Call or Text 262-492-3135 for a Free Palm Assessment
+      Call or Text for a Free Palm Assessment
     </a>
 
     <p class="local-note">
@@ -268,27 +274,39 @@ footer {
   <h2>Why Palm Protection Matters in San Diego</h2>
 
   <div class="serviceGrid">
-    <div class="serviceCard"><img src="./yard1.jpg"></div>
-    <div class="serviceCard"><img class="treatment-photo" src="./treatment.jpg"></div>
-    <div class="serviceCard"><img src="./yard3.jpg"></div>
+    <div class="serviceCard"><img src="./yard1.jpg" alt="Healthy palm trees in San Diego yard"></div>
+    <div class="serviceCard"><img class="treatment-photo" src="./treatment.jpg" alt="Palm treatment service"></div>
+    <div class="serviceCard"><img src="./yard3.jpg" alt="Palm landscape in North County San Diego"></div>
   </div>
 </section>
 
 <section class="why">
-  <img class="flyer" src="./brochure.png">
+  <img class="flyer" src="./brochure.png" alt="San Diego Palm Protection brochure">
 
   <div class="why-content">
     <h2>Services</h2>
 
     <p><strong>Preventative Palm Treatment</strong> – Starting at $200</p>
-    <p>Preventative treatment and monitoring designed to help keep palms healthy, protected, and looking their best.</p>
+
+    <p class="service-note">
+      Free assessment before treatment. I’ll take a look first and recommend the right option for your palms.
+    </p>
+
+    <p>
+      Preventative treatment and monitoring designed to help keep palms healthy, protected, and looking their best.
+    </p>
 
     <p><strong>Enhanced Palm Protection</strong></p>
-    <p>Additional treatment options available for larger palms or elevated risk concerns.</p>
+
+    <p>
+      Additional treatment options available for larger palms, high-value palms, or elevated pest-risk concerns.
+    </p>
 
     <h2 class="service-areas-title">Service Areas</h2>
-    <p>Serving North County San Diego:</p>
-    <p>Poway, Escondido, and surrounding areas.</p>
+
+    <p>
+      Serving Poway, Escondido, and surrounding North County areas.
+    </p>
   </div>
 </section>
 
@@ -302,7 +320,9 @@ footer {
     </a>
   </p>
 
-  <p>Local owner-operated palm protection service focused on preventative care and long-term palm health.</p>
+  <p>
+    Local owner-operated palm protection service focused on preventative care and long-term palm health.
+  </p>
 </section>
 
 <footer>
