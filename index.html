@@ -134,10 +134,12 @@ h2 {
   width: 100%;
   height: 220px;
   object-fit: cover;
-  object-position: left center;
+  object-position: center;
   border-radius: 10px;
 }
-
+.treatment-photo {
+  object-position: left center;
+} 
 /* FLYER SECTION */
 .why {
   display: flex;
@@ -267,7 +269,7 @@ footer {
 
   <div class="serviceGrid">
     <div class="serviceCard"><img src="./yard1.jpg"></div>
-    <div class="serviceCard"><img src="./treatment.jpg"></div>
+    <div class="serviceCard"><img class="treatment-photo" src="./treatment.jpg"></div>
     <div class="serviceCard"><img src="./yard3.jpg"></div>
   </div>
 </section>
