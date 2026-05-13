@@ -14,6 +14,7 @@ body {
   background: #fff;
   color: #0b2d13;
 }
+
 .topnav {
   background: #063b16;
   color: white;
@@ -52,6 +53,7 @@ body {
   display: flex;
   align-items: center;
 }
+
 .hero {
   min-height: 640px;
   background:
@@ -59,6 +61,7 @@ body {
     url("./background.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   padding: 80px 6%;
@@ -86,7 +89,7 @@ body {
   color: #ffb31a;
   font-weight: 900;
 }
-  
+
 .cta-button {
   display: inline-block;
   background: #ffb31a;
@@ -97,6 +100,7 @@ body {
   font-weight: 900;
   margin-top: 12px;
 }
+
 .google-button {
   display: inline-block;
   background: white;
@@ -114,6 +118,7 @@ body {
   background: #ffb31a;
   color: black;
 }
+
 .local-note {
   margin-top: 15px;
   font-weight: 700;
@@ -176,7 +181,7 @@ h2 {
 }
 
 .flyer {
-  width: 550px;
+  width: 500px;
   max-width: 100%;
   border-radius: 10px;
 }
@@ -207,6 +212,63 @@ h2 {
   margin-top: 36px;
 }
 
+/* NEW ASSESSMENT FORM */
+
+.assessment-form-section {
+  background: #f4f0e2;
+  padding: 70px 6%;
+}
+
+.assessment-form-container {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.assessment-form-container h2 {
+  margin-bottom: 20px;
+}
+
+.assessment-text {
+  font-size: 20px;
+  margin-bottom: 35px;
+  line-height: 1.5;
+}
+
+.assessment-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.assessment-form-container input,
+.assessment-form-container textarea {
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid #d3c7a6;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.assessment-form-container textarea {
+  resize: vertical;
+}
+
+.assessment-form-container button {
+  background: #ffb31a;
+  color: black;
+  border: none;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.assessment-form-container button:hover {
+  opacity: 0.92;
+}
+
 .cta {
   background: #063b16;
   color: white;
@@ -226,10 +288,17 @@ footer {
 }
 
 @media(max-width: 900px){
+
   .topnav {
     flex-direction: column;
     gap: 14px;
     text-align: center;
+    height: auto;
+    padding: 20px 5%;
+  }
+
+  .logo img {
+    height: 110px;
   }
 
   .serviceGrid {
@@ -250,6 +319,10 @@ footer {
     gap: 15px;
     padding: 22px 25px;
   }
+
+  .google-button {
+    margin-left: 0;
+  }
 }
 </style>
 </head>
@@ -257,17 +330,21 @@ footer {
 <body>
 
 <header class="topnav">
- <div class="logo">
-  <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
- </div>
+  <div class="logo">
+    <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
+  </div>
+
   <a class="call" href="tel:2624923135">
-  📞 262-492-3135
-</a>
+    📞 262-492-3135
+  </a>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <h1>Palm <span class="highlight">Health & Protection</span> Services in San Diego</h1>
+
+    <h1>
+      Palm <span class="highlight">Health & Protection</span> Services in San Diego
+    </h1>
 
     <p>
       Keep your palms <strong>healthy, green, and protected year-round</strong>
@@ -282,41 +359,71 @@ footer {
     <a class="cta-button" href="tel:2624923135">
       Call or Text for a Free Palm Assessment
     </a>
-    <a class="google-button" 
-   href="https://www.google.com/search?sca_esv=7aca6fc7736590bb&authuser=1&sxsrf=ANbL-n5tbn0P579Z2wxNpT1iGSQOzJVjJQ%3A1778529527875&q=San%20Diego%20Palm%20Health%20%26%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMSqFJyYp-CSmZqerxCQmJOr4JGamFOSoaCmEFCUX5KaXJKZnwcAyuKLVk4AAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwi14ezlgrKUAxUEEEQIHVHkHo0QrMcEegQIJxAC" 
-   target="_blank">
-   ⭐ Find Us on Google
+
+    <a class="google-button"
+       href="https://www.google.com/search?sca_esv=7aca6fc7736590bb&authuser=1&sxsrf=ANbL-n5tbn0P579Z2wxNpT1iGSQOzJVjJQ%3A1778529527875&q=San%20Diego%20Palm%20Health%20%26%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMSqFJyYp-CSmZqerxCQmJOr4JGamFOSoaCmEFCUX5KaXJKZnwcAyuKLVk4AAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwi14ezlgrKUAxUEEEQIHVHkHo0QrMcEegQIJxAC"
+       target="_blank">
+
+      ⭐ Find Us on Google
     </a>
 
-<p class="local-note">
-      Local North County homeowner providing service to the community.
+    <p class="local-note">
+      Local owner-operated palm protection service focused on preventative care and long-term palm health.
     </p>
+
   </div>
 </section>
 
 <div class="bottom-bar">
-  <div><strong>$5,000–$20,000+</strong>Dead Palm Removal</div>
-  <div><strong>Preventative Care</strong>Protect Valuable Palms</div>
-  <div><strong>North County</strong>San Diego Service</div>
+  <div>
+    <strong>$5,000–$20,000+</strong>
+    Dead Palm Removal
+  </div>
+
+  <div>
+    <strong>Preventative Care</strong>
+    Protect Valuable Palms
+  </div>
+
+  <div>
+    <strong>North County</strong>
+    San Diego Service
+  </div>
 </div>
 
 <section>
+
   <h2>Why Palm Protection Matters in San Diego</h2>
 
   <div class="serviceGrid">
-    <div class="serviceCard"><img src="./yard1.jpg" alt="Healthy palm trees in San Diego yard"></div>
-    <div class="serviceCard"><img class="treatment-photo" src="./treatment.jpg" alt="Palm treatment service"></div>
-    <div class="serviceCard"><img src="./yard3.jpg" alt="Palm landscape in North County San Diego"></div>
+
+    <div class="serviceCard">
+      <img src="./yard1.jpg" alt="Healthy palm trees in San Diego yard">
+    </div>
+
+    <div class="serviceCard">
+      <img class="treatment-photo" src="./treatment.jpg" alt="Palm treatment service">
+    </div>
+
+    <div class="serviceCard">
+      <img src="./yard3.jpg" alt="Palm landscape in North County San Diego">
+    </div>
+
   </div>
+
 </section>
 
 <section class="why">
+
   <img class="flyer" src="./brochure.png" alt="San Diego Palm Protection brochure">
 
   <div class="why-content">
+
     <h2>Services</h2>
 
-    <p><strong>Preventative Palm Treatment</strong> – Starting at $200</p>
+    <p>
+      <strong>Preventative Palm Treatment</strong> – Starting at $200
+    </p>
 
     <p class="service-note">
       Free assessment before treatment. I’ll take a look first and recommend the right option for your palms.
@@ -326,7 +433,9 @@ footer {
       Preventative treatment and monitoring designed to help keep palms healthy, protected, and looking their best.
     </p>
 
-    <p><strong>Enhanced Palm Protection</strong></p>
+    <p>
+      <strong>Enhanced Palm Protection</strong>
+    </p>
 
     <p>
       Additional treatment options available for larger palms, high-value palms, or elevated pest-risk concerns.
@@ -337,10 +446,49 @@ footer {
     <p>
       Serving Old Poway, Lake Poway, Historic Escondido, South Escondido, Lake Hodges, and Via Rancho Parkway estate neighborhoods.
     </p>
+
   </div>
+
+</section>
+
+<!-- NEW FORM SECTION -->
+
+<section class="assessment-form-section">
+
+  <div class="assessment-form-container">
+
+    <h2>Request a Free Palm Assessment</h2>
+
+    <p class="assessment-text">
+      Send a few details about your palms and I’ll reach out with recommendations or next steps.
+    </p>
+
+    <form action="https://formsubmit.co/sandiegopalmprotection@gmail.com" method="POST">
+
+      <input type="hidden" name="_subject" value="New Palm Assessment Request">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="text" name="phone" placeholder="Phone Number">
+
+      <input type="text" name="location" placeholder="Neighborhood or Area">
+
+      <input type="text" name="palms" placeholder="Number of Palms">
+
+      <textarea name="message" rows="5" placeholder="Tell me about your palms or concerns"></textarea>
+
+      <button type="submit">
+        Request Assessment
+      </button>
+
+    </form>
+
+  </div>
+
 </section>
 
 <section class="cta">
+
   <h2>Call or Text 262-492-3135</h2>
 
   <p>
@@ -353,6 +501,7 @@ footer {
   <p>
     Local owner-operated palm protection service focused on preventative care and long-term palm health.
   </p>
+
 </section>
 
 <footer>
@@ -361,3 +510,4 @@ footer {
 
 </body>
 </html>
+
