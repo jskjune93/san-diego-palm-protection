@@ -22,14 +22,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 5%;
-  height: 115px;
+  min-height: 115px;
   border-bottom: 4px solid #ffb31a;
-  overflow: hidden;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
 }
 
 .logo img {
@@ -38,16 +32,27 @@ body {
   display: block;
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
 .call {
   background: #ffb31a;
-  color: black;
+  color: black !important;
   padding: 14px 24px;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 900;
   font-size: 18px;
-  display: flex;
-  align-items: center;
 }
 
 .hero {
@@ -57,16 +62,13 @@ body {
     url("./background.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   padding: 80px 6%;
   color: white;
 }
 
-.hero-content {
-  max-width: 800px;
-}
+.hero-content { max-width: 800px; }
 
 .hero h1 {
   font-size: clamp(42px, 6vw, 72px);
@@ -86,10 +88,9 @@ body {
   font-weight: 900;
 }
 
-.cta-button {
+.cta-button,
+.google-button {
   display: inline-block;
-  background: #ffb31a;
-  color: black;
   padding: 16px 26px;
   border-radius: 8px;
   text-decoration: none;
@@ -97,15 +98,14 @@ body {
   margin-top: 12px;
 }
 
+.cta-button {
+  background: #ffb31a;
+  color: black;
+}
+
 .google-button {
-  display: inline-block;
   background: white;
   color: #063b16;
-  padding: 14px 24px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 900;
-  margin-top: 14px;
   margin-left: 12px;
   border: 2px solid #ffb31a;
 }
@@ -115,10 +115,6 @@ body {
   color: black;
 }
 
-  .middle-image {
-  filter: brightness(1.12) contrast(0.98);
-}
-  
 .local-note {
   margin-top: 15px;
   font-weight: 700;
@@ -133,18 +129,14 @@ body {
   color: white;
 }
 
-.bottom-bar div {
-  flex: 1;
-}
+.bottom-bar div { flex: 1; }
 
 .bottom-bar strong {
   display: block;
   font-size: 22px;
 }
 
-section {
-  padding: 60px 6%;
-}
+section { padding: 60px 6%; }
 
 h2 {
   text-align: center;
@@ -167,9 +159,7 @@ h2 {
   border-radius: 10px;
 }
 
-.treatment-photo {
-  object-position: 5% center;
-}
+.treatment-photo { object-position: 5% center; }
 
 .why {
   display: flex;
@@ -208,11 +198,7 @@ h2 {
   margin-top: 10px;
 }
 
-.service-areas-title {
-  margin-top: 36px;
-}
-
-/* ASSESSMENT FORM */
+.service-areas-title { margin-top: 36px; }
 
 .assessment-form-section {
   background: #f4f0e2;
@@ -225,60 +211,10 @@ h2 {
   text-align: center;
 }
 
-.assessment-form-container h2 {
-  margin-bottom: 20px;
-}
-
 .assessment-text {
   font-size: 20px;
   margin-bottom: 35px;
   line-height: 1.5;
-}
-
-.assessment-form-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-}
-
-.assessment-form-container input,
-.assessment-form-container textarea {
-  padding: 16px;
-  border-radius: 8px;
-  border: 2px solid #d3c7a6;
-  font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.assessment-form-container textarea {
-  resize: vertical;
-}
-
-.upload-label {
-  text-align: left;
-  font-weight: 900;
-  color: #063b16;
-  margin-bottom: -10px;
-}
-
-.assessment-form-container input[type="file"] {
-  background: white;
-  cursor: pointer;
-}
-
-.assessment-form-container button {
-  background: #ffb31a;
-  color: black;
-  border: none;
-  padding: 18px;
-  border-radius: 8px;
-  font-size: 18px;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.assessment-form-container button:hover {
-  opacity: 0.92;
 }
 
 .cta {
@@ -288,9 +224,7 @@ h2 {
   padding: 40px;
 }
 
-.cta a {
-  color: #ffb31a;
-}
+.cta a { color: #ffb31a; }
 
 footer {
   background: #063b16;
@@ -300,7 +234,6 @@ footer {
 }
 
 @media(max-width: 900px){
-
   .topnav {
     flex-direction: column;
     gap: 14px;
@@ -309,22 +242,20 @@ footer {
     padding: 20px 5%;
   }
 
-  .logo img {
-    height: 110px;
+  .logo img { height: 110px; }
+
+  .nav-links {
+    justify-content: center;
   }
 
-  .serviceGrid {
-    grid-template-columns: 1fr;
-  }
+  .serviceGrid { grid-template-columns: 1fr; }
 
   .why {
     flex-direction: column;
     text-align: center;
   }
 
-  .why-content {
-    text-align: center;
-  }
+  .why-content { text-align: center; }
 
   .bottom-bar {
     flex-direction: column;
@@ -332,9 +263,7 @@ footer {
     padding: 22px 25px;
   }
 
-  .google-button {
-    margin-left: 0;
-  }
+  .google-button { margin-left: 0; }
 }
 </style>
 </head>
@@ -346,9 +275,10 @@ footer {
     <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
   </div>
 
-  <a class="call" href="tel:2624923135">
-    📞 262-492-3135
-  </a>
+  <div class="nav-links">
+    <a href="./sapw.html">SAPW Evidence</a>
+    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+  </div>
 </header>
 
 <section class="hero">
@@ -375,7 +305,6 @@ footer {
     <a class="google-button"
        href="https://www.google.com/search?sca_esv=7aca6fc7736590bb&authuser=1&sxsrf=ANbL-n5tbn0P579Z2wxNpT1iGSQOzJVjJQ%3A1778529527875&q=San%20Diego%20Palm%20Health%20%26%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMSqFJyYp-CSmZqerxCQmJOr4JGamFOSoaCmEFCUX5KaXJKZnwcAyuKLVk4AAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwi14ezlgrKUAxUEEEQIHVHkHo0QrMcEegQIJxAC"
        target="_blank">
-
       ⭐ Find Us on Google
     </a>
 
@@ -387,28 +316,15 @@ footer {
 </section>
 
 <div class="bottom-bar">
-  <div>
-    <strong>$5,000–$20,000+</strong>
-    Dead Palm Removal
-  </div>
-
-  <div>
-    <strong>Preventative Care</strong>
-    Protect Valuable Palms
-  </div>
-
-  <div>
-    <strong>North County</strong>
-    San Diego Service
-  </div>
+  <div><strong>$5,000–$20,000+</strong>Dead Palm Removal</div>
+  <div><strong>Preventative Care</strong>Protect Valuable Palms</div>
+  <div><strong>North County</strong>San Diego Service</div>
 </div>
 
 <section>
-
   <h2>Why Palm Protection Matters in San Diego</h2>
 
   <div class="serviceGrid">
-
     <div class="serviceCard">
       <img src="./huntington1.jpg" alt="Healthy palm trees in San Diego yard">
     </div>
@@ -420,9 +336,7 @@ footer {
     <div class="serviceCard">
       <img src="./huntington2.jpg" alt="Palm landscape in North County San Diego"> 
     </div>
-
   </div>
-
 </section>
 
 <section class="why">
@@ -433,9 +347,7 @@ footer {
 
     <h2>Services</h2>
 
-    <p>
-      <strong>Preventative Palm Treatment</strong> – Starting at $200
-    </p>
+    <p><strong>Preventative Palm Treatment</strong> – Starting at $200</p>
 
     <p class="service-note">
       Free assessment before treatment. I’ll take a look first and recommend the right option for your palms.
@@ -445,9 +357,7 @@ footer {
       Preventative treatment and monitoring designed to help keep palms healthy, protected, and looking their best.
     </p>
 
-    <p>
-      <strong>Enhanced Palm Protection</strong>
-    </p>
+    <p><strong>Enhanced Palm Protection</strong></p>
 
     <p>
       Additional treatment options available for larger palms, high-value palms, or elevated pest-risk concerns.
@@ -464,7 +374,6 @@ footer {
 </section>
 
 <section class="assessment-form-section">
-
   <div class="assessment-form-container">
 
     <h2>Free Online Palm Assessment</h2>
@@ -475,15 +384,13 @@ footer {
 
     <a class="cta-button"
        href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
-
        📧 Send Palm Photos
     </a>
 
   </div>
-
 </section>
-<section class="cta">
 
+<section class="cta">
   <h2>Call or Text 262-492-3135</h2>
 
   <p>
@@ -496,7 +403,6 @@ footer {
   <p>
     Local owner-operated palm protection service focused on preventative care and long-term palm health.
   </p>
-
 </section>
 
 <footer>
