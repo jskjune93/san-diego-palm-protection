@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Palm Journal | San Diego Palm Protection</title>
+<meta name="description" content="A local North County San Diego palm care journal showing preventative palm treatment, palm health monitoring, and owner-operated palm protection in action.">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #0b2d13;
+}
+
+.topnav {
+  background: #063b16;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  min-height: 115px;
+  border-bottom: 4px solid #ffb31a;
+}
+
+.logo img {
+  height: 145px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-weight: 900;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.nav-separator {
+  color: #ffb31a;
+  font-weight: 900;
+}
+
+.call {
+  background: #ffb31a;
+  color: black !important;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+    url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 95px 6%;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  margin: 0 0 18px;
+  font-weight: 900;
+}
+
+.hero p {
+  font-size: 24px;
+  max-width: 900px;
+  margin: auto;
+  line-height: 1.45;
+}
+
+.highlight { color: #ffb31a; }
+
+section { padding: 60px 6%; }
+
+.intro {
+  max-width: 950px;
+  margin: auto;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 38px;
+  margin-bottom: 16px;
+}
+
+.intro p {
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.journal-grid {
+  max-width: 1200px;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.journal-card {
+  background: #f4f0e2;
+  border-radius: 12px;
+  overflow: hidden;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.journal-card img {
+  width: 100%;
+  height: 285px;
+  object-fit: cover;
+  display: block;
+}
+
+.journal-card-content {
+  padding: 20px;
+}
+
+.journal-card h3 {
+  margin: 0 0 10px;
+  color: #063b16;
+  font-size: 23px;
+}
+
+.journal-card p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.note {
+  max-width: 950px;
+  margin: 50px auto 0;
+  background: #e6dcc3;
+  padding: 28px;
+  border-radius: 12px;
+  font-size: 19px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.assessment-cta {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 60px 6%;
+}
+
+.assessment-cta h2 {
+  font-size: 36px;
+  margin: 0 0 18px;
+}
+
+.assessment-cta p {
+  font-size: 22px;
+  line-height: 1.45;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #ffb31a;
+  color: black;
+  padding: 18px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  min-width: 260px;
+  text-align: center;
+}
+
+.secondary-button {
+  display: inline-block;
+  background: white;
+  color: #063b16;
+  padding: 18px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.phone-line {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffb31a;
+}
+
+.email-line {
+  margin-top: 32px;
+  font-size: 22px;
+}
+
+.email-line a { color: #ffb31a; }
+
+footer {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media(max-width: 900px){
+  .topnav {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    height: auto;
+    padding: 20px 5%;
+  }
+
+  .logo img { height: 110px; }
+
+  .nav-links { justify-content: center; }
+
+  .journal-grid { grid-template-columns: 1fr; }
+
+  .journal-card img { height: 320px; }
+
+  .assessment-cta h2 { font-size: 30px; }
+
+  .assessment-cta p { font-size: 20px; }
+
+  .button-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topnav">
+  <div class="logo">
+    <a href="./index.html">
+      <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="./index.html">Home</a>
+    <span class="nav-separator">|</span>
+    <a href="./sapw.html">SAPW Education</a>
+    <span class="nav-separator">|</span>
+    <a href="./palm-journal.html">Palm Journal</a>
+    <span class="nav-separator">|</span>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">Contact</a>
+    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Palm <span class="highlight">Journal</span></h1>
+  <p>
+    Local palm protection in action — the palms we care for, the treatments we apply, and the health signs we monitor here in North County San Diego.
+  </p>
+</section>
+
+<section>
+  <div class="intro">
+    <h2>Our Local Palm Care Story</h2>
+
+    <p>
+      We live here too. This journal shows real examples of preventative palm care, treatment, monitoring,
+      and seasonal observations from our own local palms and surrounding North County neighborhoods.
+    </p>
+
+    <p>
+      The goal is simple: show homeowners what proactive palm protection looks like before a valuable palm is visibly declining.
+    </p>
+  </div>
+
+  <div class="journal-grid">
+
+    <div class="journal-card">
+      <img src="./journal1.jpg" alt="Local Canary Island date palm being monitored for health">
+      <div class="journal-card-content">
+        <h3>Local Palms We Care For</h3>
+        <p>
+          Photos and notes from our own North County palms, including crown condition, color, irrigation observations,
+          and signs we watch over time.
+        </p>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <img src="./journal2.jpg" alt="Preventative palm soil drench treatment in North County San Diego">
+      <div class="journal-card-content">
+        <h3>Preventative Treatment</h3>
+        <p>
+          Examples of preventative soil drench and exterior treatment work used as part of a broader palm health and protection program.
+        </p>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <img src="./journal3.jpg" alt="Palm crown inspection and health monitoring">
+      <div class="journal-card-content">
+        <h3>What We Look For</h3>
+        <p>
+          Crown thinning, abnormal browning, irrigation stress, nutrient issues, trunk damage, pests, and other signs that deserve a closer look.
+        </p>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <img src="./journal4.jpg" alt="Healthy palm landscape in North County San Diego">
+      <div class="journal-card-content">
+        <h3>Seasonal Updates</h3>
+        <p>
+          Palm health changes through the year. This space can be updated with new photos, new observations, and repeat monitoring over time.
+        </p>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <img src="./journal5.jpg" alt="South American Palm Weevil monitoring in local neighborhood">
+      <div class="journal-card-content">
+        <h3>Local Risk Awareness</h3>
+        <p>
+          We track visible palm decline patterns around Escondido, Poway, Lake Hodges, Rancho Santa Fe, and nearby North County areas.
+        </p>
+      </div>
+    </div>
+
+    <div class="journal-card">
+      <img src="./journal6.jpg" alt="Owner-operated palm protection service in San Diego">
+      <div class="journal-card-content">
+        <h3>Owner-Operated Care</h3>
+        <p>
+          This is a local, hands-on service. The same prevention mindset used on our own palms is the mindset brought to customer properties.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="note">
+    Add your own photos to GitHub using the file names journal1.jpg, journal2.jpg, journal3.jpg,
+    journal4.jpg, journal5.jpg, and journal6.jpg. You can replace the captions later as the journal becomes more specific.
+  </div>
+</section>
+
+<section class="assessment-cta" id="contact">
+  <h2>Want a Free First Look?</h2>
+
+  <p>
+    Text or email photos of your palms. Include a full photo, crown photo if visible, trunk photo,
+    and any brown, thinning, wet, damaged, or unusual areas.
+  </p>
+
+  <div class="button-row">
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+      📧 Send Palm Photos
+    </a>
+
+    <a class="secondary-button" href="./index.html">
+      Back to Home
+    </a>
+  </div>
+
+  <p class="phone-line">
+    📞 Call or Text 262-492-3135
+  </p>
+
+  <p class="email-line">
+    <strong>Email:</strong>
+    <a href="mailto:sandiegopalmprotection@gmail.com">
+      sandiegopalmprotection@gmail.com
+    </a>
+  </p>
+</section>
+
+<footer>
+  San Diego Palm Health & Protection Services
+</footer>
+
+</body>
+</html>
