@@ -4,7 +4,6 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>SAPW Evidence | San Diego Palm Protection</title>
-<meta name="description" content="Examples of suspected South American Palm Weevil activity and palm decline in Escondido, Poway, and North County San Diego.">
 
 <style>
 * { box-sizing: border-box; }
@@ -89,7 +88,7 @@ section {
 }
 
 .intro {
-  max-width: 930px;
+  max-width: 950px;
   margin: auto;
   text-align: center;
 }
@@ -105,19 +104,20 @@ section {
 }
 
 .resource-button {
-  display:inline-block;
-  background:#ffb31a;
-  color:black;
-  padding:16px 26px;
-  border-radius:8px;
-  text-decoration:none;
-  font-weight:900;
-  font-size:18px;
+  display: inline-block;
+  background: #ffb31a;
+  color: black;
+  padding: 16px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+  margin-top: 26px;
 }
 
 .gallery {
   max-width: 1200px;
-  margin: 40px auto 0;
+  margin: 45px auto 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
@@ -128,6 +128,7 @@ section {
   border-radius: 12px;
   overflow: hidden;
   border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
 .evidence-card img {
@@ -145,40 +146,8 @@ section {
   text-align: center;
 }
 
-.signs-section {
-  background: #f4f0e2;
-}
-
-.signs-grid {
-  max-width: 1100px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.sign-card {
-  background: white;
-  border-radius: 12px;
-  padding: 24px;
-  border-bottom: 5px solid #ffb31a;
-}
-
-.sign-card strong {
-  display: block;
-  font-size: 21px;
-  margin-bottom: 10px;
-  color: #063b16;
-}
-
-.sign-card p {
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
 .note {
-  max-width: 900px;
+  max-width: 950px;
   margin: 50px auto 0;
   background: #e6dcc3;
   padding: 28px;
@@ -188,46 +157,72 @@ section {
   text-align: center;
 }
 
-.button-row {
+.assessment-cta {
+  background: #063b16;
+  color: white;
   text-align: center;
-  margin-top: 36px;
+  padding: 60px 6%;
+}
+
+.assessment-cta h2 {
+  font-size: 36px;
+  margin: 0 0 18px;
+}
+
+.assessment-cta p {
+  font-size: 22px;
+  line-height: 1.45;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 25px;
 }
 
 .cta-button {
   display: inline-block;
   background: #ffb31a;
   color: black;
-  padding: 16px 26px;
-  border-radius: 8px;
+  padding: 18px 32px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 900;
-  margin: 8px;
+  font-size: 20px;
+  min-width: 260px;
+  text-align: center;
 }
 
 .secondary-button {
   display: inline-block;
-  background: #063b16;
-  color: white;
-  padding: 16px 26px;
-  border-radius: 8px;
+  background: white;
+  color: #063b16;
+  padding: 18px 32px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 900;
-  margin: 8px;
-}
-
-.cta {
-  background: #063b16;
-  color: white;
-  text-align: center;
-  padding: 45px 6%;
-}
-
-.cta p {
   font-size: 20px;
-  line-height: 1.5;
+  min-width: 220px;
+  text-align: center;
 }
 
-.cta a {
+.phone-line {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffb31a;
+}
+
+.email-line {
+  margin-top: 32px;
+  font-size: 22px;
+}
+
+.email-line a {
   color: #ffb31a;
 }
 
@@ -263,8 +258,23 @@ footer {
     height: 320px;
   }
 
-  .signs-grid {
-    grid-template-columns: 1fr;
+  .assessment-cta h2 {
+    font-size: 30px;
+  }
+
+  .assessment-cta p {
+    font-size: 20px;
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 360px;
   }
 }
 </style>
@@ -274,12 +284,13 @@ footer {
 
 <header class="topnav">
   <div class="logo">
-    <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
+    <a href="./index.html">
+      <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
+    </a>
   </div>
 
   <div class="nav-links">
     <a href="./index.html">Home</a>
-    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">Send Photos</a>
     <a class="call" href="tel:2624923135">📞 262-492-3135</a>
   </div>
 </header>
@@ -287,69 +298,66 @@ footer {
 <section class="hero">
   <h1>SAPW <span class="highlight">Evidence</span></h1>
   <p>
-    Examples of suspected South American Palm Weevil activity and palm decline seen around North County San Diego.
+    Local examples of suspected South American Palm Weevil activity and palm decline in the San Diego area.
   </p>
 </section>
 
 <section>
-
   <div class="intro">
-    <h2>South American Palm Weevil Activity in Escondido & Poway</h2>
+    <h2>South American Palm Weevil Activity in Escondido, Poway & North County</h2>
+
     <p>
-      These photos are examples of suspected South American Palm Weevil activity observed locally.
-      This page is meant to help homeowners recognize what palm decline can look like before a valuable palm is lost.
-      Once serious crown damage is obvious, decline can move quickly.
+      These photos show examples of suspected South American Palm Weevil activity and serious palm decline observed around the area.
+      This page is educational and meant to help homeowners recognize warning signs before a valuable palm is lost.
     </p>
 
     <p>
-      Not every struggling palm has SAPW, but visible thinning, crown collapse, sudden browning, holes, oozing, unusual odor,
-      or heavy decline should be taken seriously — especially on high-value palms.
+      Not every declining palm has South American Palm Weevil, but visible crown thinning, collapse, trunk damage,
+      abnormal browning, wet areas, or sudden decline are all reasons to take a closer look.
     </p>
 
-    <div style="text-align:center; margin-top:30px;">
-      <a
-        class="resource-button"
-        href="https://ucanr.edu/site/south-american-palm-weevil/publications-links"
-        target="_blank">
-        📚 UCANR SAPW Resources & Publications
-      </a>
-    </div>
+    <a
+      class="resource-button"
+      href="https://ucanr.edu/site/south-american-palm-weevil/publications-links"
+      target="_blank">
+      📚 UCANR SAPW Resources & Publications
+    </a>
   </div>
 
   <div class="gallery">
 
     <div class="evidence-card">
-      <img src="./evidence.jpg" alt="Suspected South American Palm Weevil activity example in North County San Diego">
+      <img src="./evidence.jpg" alt="Suspected SAPW palm decline exhibit 1">
       <p>Exhibit 1</p>
     </div>
 
     <div class="evidence-card">
-      <img src="./evidence1.jpg" alt="Suspected SAPW palm decline example in Escondido or Poway">
+      <img src="./evidence1.jpg" alt="Suspected SAPW palm decline exhibit 2">
       <p>Exhibit 2</p>
     </div>
 
     <div class="evidence-card">
-      <img src="./evidence2.jpg" alt="Palm crown decline potentially associated with South American Palm Weevil activity">
+      <img src="./evidence2.jpg" alt="Suspected SAPW palm decline exhibit 3">
       <p>Exhibit 3</p>
     </div>
 
     <div class="evidence-card">
-      <img src="./evidence3.png" alt="Local palm decline example possibly associated with SAPW activity">
+      <img src="./evidence3.png" alt="Suspected SAPW palm decline exhibit 4">
       <p>Exhibit 4</p>
     </div>
 
     <div class="evidence-card">
-      <img src="./evidence4.jpg" alt="Damaged palm example in North County San Diego">
+      <img src="./evidence4.jpg" alt="Suspected SAPW palm decline exhibit 5">
       <p>Exhibit 5</p>
     </div>
 
     <div class="evidence-card">
-      <img src="./evidence5.jpg" alt="Possible South American Palm Weevil palm damage example">
+      <img src="./evidence5.jpg" alt="Suspected SAPW palm decline exhibit 6">
       <p>Exhibit 6</p>
     </div>
 
     <div class="evidence-card">
-      <img src="./evidence6.jpg" alt="Palm decline example near Escondido and Poway service area">
+      <img src="./evidence6.jpg" alt="Suspected SAPW palm decline exhibit 7">
       <p>Exhibit 7</p>
     </div>
 
@@ -357,46 +365,12 @@ footer {
 
   <div class="note">
     Not every declining palm has South American Palm Weevil. Irrigation issues, disease, nutrient problems,
-    transplant stress, drought stress, or poor pruning can also cause stress and decline. A proper assessment looks at the whole palm, site conditions, crown,
-    trunk, irrigation, and surrounding pest pressure.
-  </div>
-
-  <div class="button-row">
-    <a class="secondary-button" href="./index.html">Back to Home</a>
-    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
-      Send Palm Photos
-    </a>
-  </div>
-
-</section>
-
-<section class="signs-section">
-  <div class="intro">
-    <h2>Warning Signs Worth Checking</h2>
-    <p>
-      These symptoms do not prove SAPW by themselves, but they are worth investigating early.
-    </p>
-  </div>
-
-  <div class="signs-grid">
-    <div class="sign-card">
-      <strong>Crown Thinning</strong>
-      <p>A shrinking, uneven, or hollow-looking crown can be an early visual concern.</p>
-    </div>
-
-    <div class="sign-card">
-      <strong>Sudden Browning</strong>
-      <p>Rapid browning, drooping, or collapse near the center of the palm should not be ignored.</p>
-    </div>
-
-    <div class="sign-card">
-      <strong>Trunk or Crown Damage</strong>
-      <p>Holes, wet-looking areas, frass, odor, or unusual damage can justify a closer assessment.</p>
-    </div>
+    poor pruning, or other pests can also cause stress and decline. A proper assessment looks at the whole palm,
+    including the crown, trunk, irrigation, site conditions, and surrounding pest pressure.
   </div>
 </section>
 
-<section class="cta">
+<section class="assessment-cta">
   <h2>Concerned About Your Palm?</h2>
 
   <p>
@@ -409,12 +383,16 @@ footer {
       📧 Send Palm Photos
     </a>
 
-    <a class="secondary-button" href="tel:2624923135">
-      📞 Call or Text 262-492-3135
+    <a class="secondary-button" href="./index.html">
+      Back to Home
     </a>
   </div>
 
-  <p>
+  <p class="phone-line">
+    📞 Call or Text 262-492-3135
+  </p>
+
+  <p class="email-line">
     <strong>Email:</strong>
     <a href="mailto:sandiegopalmprotection@gmail.com">
       sandiegopalmprotection@gmail.com
@@ -428,3 +406,4 @@ footer {
 
 </body>
 </html>
+
