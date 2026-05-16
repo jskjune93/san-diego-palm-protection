@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>San Diego Palm Protection</title>
+<title>San Diego Palm Protection | Palm Health & Protection Services</title>
+<meta name="description" content="Palm health and protection services in North County San Diego. Preventative palm treatment, SAPW risk monitoring, and free palm photo assessments.">
 
 <style>
 * { box-sizing: border-box; }
@@ -68,7 +69,7 @@ body {
   color: white;
 }
 
-.hero-content { max-width: 800px; }
+.hero-content { max-width: 850px; }
 
 .hero h1 {
   font-size: clamp(42px, 6vw, 72px);
@@ -89,7 +90,8 @@ body {
 }
 
 .cta-button,
-.google-button {
+.google-button,
+.secondary-button {
   display: inline-block;
   padding: 16px 26px;
   border-radius: 8px;
@@ -101,6 +103,12 @@ body {
 .cta-button {
   background: #ffb31a;
   color: black;
+}
+
+.secondary-button {
+  background: #063b16;
+  color: white;
+  border: 2px solid #ffb31a;
 }
 
 .google-button {
@@ -143,6 +151,14 @@ h2 {
   font-size: 42px;
 }
 
+.section-subtitle {
+  max-width: 850px;
+  margin: -15px auto 35px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
 .serviceGrid {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -161,6 +177,39 @@ h2 {
 
 .treatment-photo { object-position: 5% center; }
 
+.trust-section {
+  background: #f4f0e2;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.trust-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px 18px;
+  text-align: center;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.trust-card strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #063b16;
+}
+
+.trust-card p {
+  margin: 0;
+  line-height: 1.45;
+}
+
 .why {
   display: flex;
   align-items: center;
@@ -177,7 +226,7 @@ h2 {
 }
 
 .why-content {
-  max-width: 520px;
+  max-width: 560px;
   text-align: left;
   padding-top: 20px;
 }
@@ -198,6 +247,16 @@ h2 {
   margin-top: 10px;
 }
 
+.service-list {
+  padding-left: 22px;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.service-list li {
+  margin-bottom: 8px;
+}
+
 .service-areas-title { margin-top: 36px; }
 
 .assessment-form-section {
@@ -206,14 +265,14 @@ h2 {
 }
 
 .assessment-form-container {
-  max-width: 700px;
+  max-width: 760px;
   margin: auto;
   text-align: center;
 }
 
 .assessment-text {
   font-size: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 28px;
   line-height: 1.5;
 }
 
@@ -233,6 +292,12 @@ footer {
   padding: 25px;
 }
 
+@media(max-width: 1100px){
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media(max-width: 900px){
   .topnav {
     flex-direction: column;
@@ -250,12 +315,20 @@ footer {
 
   .serviceGrid { grid-template-columns: 1fr; }
 
+  .trust-grid { grid-template-columns: 1fr; }
+
   .why {
     flex-direction: column;
     text-align: center;
   }
 
   .why-content { text-align: center; }
+
+  .service-list {
+    text-align: left;
+    max-width: 420px;
+    margin: auto;
+  }
 
   .bottom-bar {
     flex-direction: column;
@@ -277,6 +350,7 @@ footer {
 
   <div class="nav-links">
     <a href="./sapw.html">SAPW Evidence</a>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">Send Photos</a>
     <a class="call" href="tel:2624923135">📞 262-492-3135</a>
   </div>
 </header>
@@ -309,7 +383,7 @@ footer {
     </a>
 
     <p class="local-note">
-      Local owner-operated palm protection service focused on preventative care and long-term palm health.
+      Text or email photos of your palm for a free first look. Local owner-operated palm protection service focused on preventative care and long-term palm health.
     </p>
 
   </div>
@@ -323,6 +397,11 @@ footer {
 
 <section>
   <h2>Why Palm Protection Matters in San Diego</h2>
+
+  <p class="section-subtitle">
+    Valuable palms can decline from pest pressure, irrigation problems, nutrient issues, poor pruning, and disease.
+    Early attention is usually easier and less expensive than waiting until a palm is visibly collapsing.
+  </p>
 
   <div class="serviceGrid">
     <div class="serviceCard">
@@ -339,6 +418,41 @@ footer {
   </div>
 </section>
 
+<section class="trust-section">
+  <h2>Why Homeowners Choose San Diego Palm Protection</h2>
+
+  <p class="section-subtitle">
+    A simple, local, palm-focused service for homeowners who want to protect the look and value of their landscape.
+  </p>
+
+  <div class="trust-grid">
+    <div class="trust-card">
+      <strong>Palm-Focused Care</strong>
+      <p>Focused on palm health, prevention, and protection — not just general yard work.</p>
+    </div>
+
+    <div class="trust-card">
+      <strong>Free Photo Assessment</strong>
+      <p>Text or email photos first so we can quickly evaluate visible concerns.</p>
+    </div>
+
+    <div class="trust-card">
+      <strong>SAPW Awareness</strong>
+      <p>Local monitoring for South American Palm Weevil risk and visible decline patterns.</p>
+    </div>
+
+    <div class="trust-card">
+      <strong>Owner-Operated</strong>
+      <p>Direct communication with a local North County homeowner, not a call center.</p>
+    </div>
+
+    <div class="trust-card">
+      <strong>Prevention Mindset</strong>
+      <p>Designed to help protect valuable palms before removal becomes the only option.</p>
+    </div>
+  </div>
+</section>
+
 <section class="why">
 
   <img class="flyer" src="./brochure.png" alt="San Diego Palm Protection brochure">
@@ -347,26 +461,34 @@ footer {
 
     <h2>Services</h2>
 
-    <p><strong>Preventative Palm Treatment</strong> – Starting at $200</p>
+    <p><strong>Basic Palm Health Protection</strong> – Starting at $200</p>
+
+    <ul class="service-list">
+      <li>Visual palm health assessment</li>
+      <li>Preventative soil drench treatment</li>
+      <li>General pest, stress, and decline monitoring</li>
+    </ul>
 
     <p class="service-note">
       Free assessment before treatment. I’ll take a look first and recommend the right option for your palms.
     </p>
 
-    <p>
-      Preventative treatment and monitoring designed to help keep palms healthy, protected, and looking their best.
-    </p>
-
     <p><strong>Enhanced Palm Protection</strong></p>
 
+    <ul class="service-list">
+      <li>Soil drench plus exterior treatment options</li>
+      <li>Support for larger, higher-value, or higher-risk palms</li>
+      <li>SAPW-focused protection and local risk awareness</li>
+    </ul>
+
     <p>
-      Additional treatment options available for larger palms, high-value palms, or elevated pest-risk concerns.
+      Treatment recommendations depend on palm type, size, condition, access, irrigation, and visible risk factors.
     </p>
 
     <h2 class="service-areas-title">Service Areas</h2>
 
     <p>
-      Serving Old Poway, Lake Poway, Historic Escondido, South Escondido, Lake Hodges, and Via Rancho Parkway estate neighborhoods.
+      Serving Old Poway, Lake Poway, Historic Escondido, South Escondido, Lake Hodges, Via Rancho Parkway estate neighborhoods, and nearby North County communities.
     </p>
 
   </div>
@@ -379,7 +501,8 @@ footer {
     <h2>Free Online Palm Assessment</h2>
 
     <p class="assessment-text">
-      Email photos of your palms for a free assessment and treatment recommendation.
+      Text or email photos of your palms for a free assessment and treatment recommendation.
+      Include a full photo of the palm, a close-up of the crown if visible, and any areas that look brown, thinning, wet, damaged, or unusual.
     </p>
 
     <a class="cta-button"
@@ -387,11 +510,19 @@ footer {
        📧 Send Palm Photos
     </a>
 
+    <a class="secondary-button" href="tel:2624923135">
+      📞 Call or Text 262-492-3135
+    </a>
+
   </div>
 </section>
 
 <section class="cta">
   <h2>Call or Text 262-492-3135</h2>
+
+  <p>
+    Concerned about a palm? Text photos for a free first look.
+  </p>
 
   <p>
     <strong>Email:</strong>
