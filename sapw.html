@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SAPW Education | San Diego Palm Protection</title>
+<meta name="description" content="Local South American Palm Weevil education, evidence, and palm decline examples in North County San Diego.">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #0b2d13;
+}
+
+.topnav {
+  background: #063b16;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  min-height: 115px;
+  border-bottom: 4px solid #ffb31a;
+}
+
+.logo img {
+  height: 145px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-weight: 900;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.nav-separator {
+  color: #ffb31a;
+  font-weight: 900;
+}
+
+.call {
+  background: #ffb31a;
+  color: black !important;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 90px 6%;
+  color: white;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 68px);
+  margin: 0 0 18px;
+  font-weight: 900;
+}
+
+.hero p {
+  font-size: 24px;
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.45;
+}
+
+.highlight { color: #ffb31a; }
+
+section { padding: 60px 6%; }
+
+.intro {
+  max-width: 950px;
+  margin: auto;
+  text-align: center;
+}
+
+.intro h2 {
+  font-size: 38px;
+  margin-bottom: 16px;
+}
+
+.intro p {
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.resource-button {
+  display: inline-block;
+  background: #ffb31a;
+  color: black;
+  padding: 16px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+  margin-top: 26px;
+}
+
+.gallery {
+  max-width: 1200px;
+  margin: 45px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.evidence-card {
+  background: #f4f0e2;
+  border-radius: 12px;
+  overflow: hidden;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.evidence-card img {
+  width: 100%;
+  height: 285px;
+  object-fit: cover;
+  display: block;
+}
+
+.evidence-card p {
+  padding: 16px;
+  margin: 0;
+  font-weight: 900;
+  color: #063b16;
+  text-align: center;
+}
+
+.note {
+  max-width: 950px;
+  margin: 50px auto 0;
+  background: #e6dcc3;
+  padding: 28px;
+  border-radius: 12px;
+  font-size: 19px;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.assessment-cta {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 60px 6%;
+}
+
+.assessment-cta h2 {
+  font-size: 36px;
+  margin: 0 0 18px;
+}
+
+.assessment-cta p {
+  font-size: 22px;
+  line-height: 1.45;
+  max-width: 1100px;
+  margin: 0 auto 32px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #ffb31a;
+  color: black;
+  padding: 18px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  min-width: 260px;
+  text-align: center;
+}
+
+.secondary-button {
+  display: inline-block;
+  background: white;
+  color: #063b16;
+  padding: 18px 32px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 20px;
+  min-width: 220px;
+  text-align: center;
+}
+
+.phone-line {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffb31a;
+}
+
+.email-line {
+  margin-top: 32px;
+  font-size: 22px;
+}
+
+.email-line a { color: #ffb31a; }
+
+footer {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media(max-width: 900px){
+  .topnav {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    height: auto;
+    padding: 20px 5%;
+  }
+
+  .logo img { height: 110px; }
+
+  .nav-links { justify-content: center; }
+
+  .gallery { grid-template-columns: 1fr; }
+
+  .evidence-card img { height: 320px; }
+
+  .assessment-cta h2 { font-size: 30px; }
+
+  .assessment-cta p { font-size: 20px; }
+
+  .button-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 360px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topnav">
+  <div class="logo">
+    <a href="./index.html">
+      <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="./index.html">Home</a>
+    <span class="nav-separator">|</span>
+    <a href="./sapw.html">SAPW Education</a>
+    <span class="nav-separator">|</span>
+    <a href="./palm-journal.html">Palm Journal</a>
+    <span class="nav-separator">|</span>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">Contact</a>
+    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>SAPW <span class="highlight">Education</span></h1>
+  <p>
+    Local examples of suspected South American Palm Weevil activity and palm decline in the San Diego area.
+  </p>
+</section>
+
+<section>
+  <div class="intro">
+    <h2>South American Palm Weevil Activity in Escondido, Poway & North County</h2>
+
+    <p>
+      These photos show examples of suspected South American Palm Weevil activity and serious palm decline observed around the area.
+      This page is educational and meant to help homeowners recognize warning signs before a valuable palm is lost.
+    </p>
+
+    <p>
+      Not every declining palm has South American Palm Weevil, but visible crown thinning, collapse, trunk damage,
+      abnormal browning, wet areas, or sudden decline are all reasons to take a closer look.
+    </p>
+
+    <a
+      class="resource-button"
+      href="https://ucanr.edu/site/south-american-palm-weevil/publications-links"
+      target="_blank">
+      📚 UCANR SAPW Resources & Publications
+    </a>
+  </div>
+
+  <div class="gallery">
+
+    <div class="evidence-card">
+      <img src="./evidence.jpg" alt="Suspected SAPW palm decline exhibit 1">
+      <p>Exhibit 1</p>
+    </div>
+
+    <div class="evidence-card">
+      <img src="./evidence1.jpg" alt="Suspected SAPW palm decline exhibit 2">
+      <p>Exhibit 2</p>
+    </div>
+
+    <div class="evidence-card">
+      <img src="./evidence2.jpg" alt="Suspected SAPW palm decline exhibit 3">
+      <p>Exhibit 3</p>
+    </div>
+
+    <div class="evidence-card">
+      <img src="./evidence3.png" alt="Suspected SAPW palm decline exhibit 4">
+      <p>Exhibit 4</p>
+    </div>
+
+    <div class="evidence-card">
+      <img src="./evidence4.jpg" alt="Suspected SAPW palm decline exhibit 5">
+      <p>Exhibit 5</p>
+    </div>
+
+    <div class="evidence-card">
+      <img src="./evidence5.jpg" alt="Suspected SAPW palm decline exhibit 6">
+      <p>Exhibit 6</p>
+    </div>
+
+    <div class="evidence-card">
+      <img src="./evidence6.jpg" alt="Suspected SAPW palm decline exhibit 7">
+      <p>Exhibit 7</p>
+    </div>
+
+  </div>
+
+  <div class="note">
+    Not every declining palm has South American Palm Weevil. Irrigation issues, disease, nutrient problems,
+    poor pruning, or other pests can also cause stress and decline. A proper assessment looks at the whole palm,
+    including the crown, trunk, irrigation, site conditions, and surrounding pest pressure.
+  </div>
+</section>
+
+<section class="assessment-cta" id="contact">
+  <h2>Concerned About Your Palm?</h2>
+
+  <p>
+    Text or email photos for a free first look. Include a full photo of the palm, the crown if visible,
+    the trunk, and any areas that look brown, thinning, wet, damaged, or unusual.
+  </p>
+
+  <div class="button-row">
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+      📧 Send Palm Photos
+    </a>
+
+    <a class="secondary-button" href="./index.html">
+      Back to Home
+    </a>
+  </div>
+
+  <p class="phone-line">
+    📞 Call or Text 262-492-3135
+  </p>
+
+  <p class="email-line">
+    <strong>Email:</strong>
+    <a href="mailto:sandiegopalmprotection@gmail.com">
+      sandiegopalmprotection@gmail.com
+    </a>
+  </p>
+</section>
+
+<footer>
+  San Diego Palm Health & Protection Services
+</footer>
+
+</body>
+</html>
