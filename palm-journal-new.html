@@ -461,6 +461,18 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .side-by-side {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+}
+
+.side-by-side img {
+  width: 50%;
+  height: 400px; /* adjust if needed */
+  object-fit: cover;
+  border-radius: 8px;
+}
   .entry-photo img {
     height: 330px;
   }
@@ -654,9 +666,21 @@ footer {
 
 <section class="journal-entry">
   <div class="entry-card">
-    <div class="entry-hero">
-      <img src="./exhibit_11a.jpg" alt="Multiple mature Canary Island Date Palms showing severe decline during a local assessment">
+
+    <div class="entry-hero side-by-side">
+      <img 
+        src="./exhibit_8.jpg" 
+        alt="Suspected palm weevil larva collected during a local assessment"
+      >
+
+      <img 
+        src="./exhibit_8a.JPG" 
+        alt="Reference image of Rhynchophorus cruentatus larvae for comparison"
+      >
     </div>
+
+  </div>
+</section>
 
     <div class="entry-content">
       <span class="entry-label">Field Observation</span>
