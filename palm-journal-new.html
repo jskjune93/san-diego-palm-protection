@@ -253,6 +253,20 @@ section {
   display: block;
 }
 
+.entry-hero.side-by-side {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+}
+
+.entry-hero.side-by-side img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
 .entry-content {
   padding: 42px;
 }
@@ -461,18 +475,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
- .side-by-side {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-}
-
-.side-by-side img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-}
   .entry-photo img {
     height: 330px;
   }
@@ -678,10 +680,6 @@ footer {
         alt="Reference image of Rhynchophorus cruentatus larvae for comparison"
       >
     </div>
-
-  </div>
-</section>
-
     <div class="entry-content">
       <span class="entry-label">Field Observation</span>
 
