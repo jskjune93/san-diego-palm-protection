@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Palm Journal | San Diego Palm Protection</title>
-<meta name="description" content="Local North County San Diego palm care in action. See the palms we care for ourselves, what we monitor, and why preventative palm protection matters.">
+<meta name="description" content="Local North County San Diego palm care in action. Field observations, palm health assessments, SAPW concerns, and preventative palm protection notes.">
 
 <style>
 * { box-sizing: border-box; }
@@ -232,15 +232,119 @@ section {
   line-height: 1.48;
 }
 
-.note {
-  max-width: 950px;
-  margin: 42px auto 0;
-  background: #e6dcc3;
-  padding: 28px;
-  border-radius: 12px;
+.journal-entry {
+  background: #fff;
+}
+
+.entry-card {
+  max-width: 1150px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.10);
+  border-bottom: 6px solid #ffb31a;
+}
+
+.entry-hero img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.entry-content {
+  padding: 42px;
+}
+
+.entry-label {
+  display: inline-block;
+  background: #f4f0e2;
+  color: #063b16;
+  font-weight: 900;
+  padding: 8px 13px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.entry-content h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+  color: #063b16;
+}
+
+.entry-date {
+  font-weight: 900;
+  color: #7a5a00;
+  margin-bottom: 24px;
+}
+
+.entry-content p {
+  font-size: 20px;
+  line-height: 1.58;
+  margin: 0 0 18px;
+}
+
+.entry-content h3 {
+  font-size: 28px;
+  margin: 34px 0 14px;
+  color: #063b16;
+}
+
+.entry-content ul {
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+.entry-content li {
   font-size: 19px;
-  line-height: 1.55;
-  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.entry-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 34px 0;
+}
+
+.entry-photo {
+  background: #f4f0e2;
+  border-radius: 12px;
+  overflow: hidden;
+  border-bottom: 4px solid #ffb31a;
+}
+
+.entry-photo img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  display: block;
+}
+
+.entry-photo p {
+  font-size: 16px;
+  line-height: 1.42;
+  margin: 0;
+  padding: 14px;
+}
+
+.entry-note {
+  background: #f4f0e2;
+  border-left: 6px solid #ffb31a;
+  padding: 22px;
+  border-radius: 10px;
+  margin-top: 28px;
+}
+
+.entry-note p {
+  margin: 0;
+  font-weight: 700;
 }
 
 .assessment-cta {
@@ -341,6 +445,26 @@ footer {
     height: 340px;
   }
 
+  .entry-hero img {
+    height: 360px;
+  }
+
+  .entry-content {
+    padding: 28px;
+  }
+
+  .entry-content h2 {
+    font-size: 32px;
+  }
+
+  .entry-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-photo img {
+    height: 330px;
+  }
+
   .assessment-cta h2 { font-size: 30px; }
 
   .assessment-cta p { font-size: 20px; }
@@ -391,7 +515,6 @@ footer {
     <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
       Send Palm Photos
     </a>
-
   </div>
 </section>
 
@@ -527,8 +650,108 @@ footer {
       </div>
     </div>
   </div>
+</section>
 
-  <div class="note">
+<section class="journal-entry">
+  <div class="entry-card">
+    <div class="entry-hero">
+      <img src="./exhibit_9.jpg" alt="Multiple mature Canary Island Date Palms showing severe decline during a local assessment">
+    </div>
+
+    <div class="entry-content">
+      <span class="entry-label">Field Observation</span>
+
+      <h2>Recent CIDP Assessment – Elevated Risk Environment</h2>
+
+      <p class="entry-date">North County San Diego | May 2026</p>
+
+      <p>
+        This week, San Diego Palm Protection completed a local palm health assessment involving multiple mature
+        Canary Island Date Palms (CIDPs) exhibiting advanced decline.
+      </p>
+
+      <p>
+        During the visit, several CIDPs displayed severe canopy loss and significant crown deterioration. In addition,
+        a palm-boring larval specimen had reportedly been collected on-site, raising concern for possible South American
+        Palm Weevil (SAPW) activity.
+      </p>
+
+      <p>
+        While every palm and property are different, the overall conditions observed were highly concerning and appeared
+        consistent with advanced decline potentially associated with SAPW-related damage.
+      </p>
+
+      <div class="entry-photo-grid">
+        <div class="entry-photo">
+          <img src="./exhibit_5.jpg" alt="Canary Island Date Palm with severe crown deterioration and canopy collapse">
+          <p>
+            Severe canopy loss and crown deterioration can indicate advanced decline in mature Canary Island Date Palms.
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./exhibit_8.jpg" alt="Palm-boring larval specimen reportedly collected near declining Canary Island Date Palms">
+          <p>
+            A palm-boring larval specimen was reportedly collected on-site near declining CIDPs during the assessment.
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./exhibit_7.jpg" alt="Healthy Canary Island Date Palms near declining palms in a high-risk setting">
+          <p>
+            Healthy-appearing CIDPs located near declining specimens may warrant closer monitoring and proactive protection.
+          </p>
+        </div>
+      </div>
+
+      <h3>Why Nearby Healthy Palms Matter</h3>
+
+      <p>
+        One of the most notable observations during this assessment was that several healthy CIDPs remained in close
+        proximity to the declining palms. That type of setting can create an elevated-risk environment, especially when
+        mature palms are close together and there is concern for pest activity nearby.
+      </p>
+
+      <p>
+        This raises an important question many homeowners face:
+      </p>
+
+      <p>
+        <strong>Should healthy palms simply be monitored — or proactively protected?</strong>
+      </p>
+
+      <p>
+        One challenge with SAPW-related decline is that symptoms may not become obvious until substantial internal damage
+        has already occurred. By the time upper crown decline or canopy collapse becomes visible, treatment options may
+        be more limited.
+      </p>
+
+      <h3>Signs Homeowners May Wish to Watch For</h3>
+
+      <ul>
+        <li>Crown thinning or noticeable canopy changes</li>
+        <li>Missing upper fronds or loss of crown fullness</li>
+        <li>Spear discoloration, distortion, or decline</li>
+        <li>Sudden browning or rapid canopy collapse</li>
+        <li>Unusual trunk damage, wet areas, holes, or frass-like material</li>
+      </ul>
+
+      <div class="entry-note">
+        <p>
+          The goal of an assessment is not to create alarm, but to better understand what may be occurring and identify
+          opportunities to protect healthy palms while options remain.
+        </p>
+      </div>
+
+      <p>
+        If you have concerns about a Canary Island Date Palm on your property, early assessment may help identify concerns
+        before decline becomes advanced.
+      </p>
+
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+        Request a Palm Assessment
+      </a>
+    </div>
   </div>
 </section>
 
