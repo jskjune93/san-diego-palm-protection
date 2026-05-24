@@ -176,17 +176,24 @@ h2 {
 .serviceGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1200px;
-  margin: auto;
+  gap: 12px; /* tighter spacing */
+  max-width: 1450px; /* allows larger photos */
+  margin: 20px auto 0;
+  align-items: stretch;
+}
+
+.serviceCard {
+  overflow: hidden;
+  border-radius: 12px;
 }
 
 .serviceCard img {
   width: 100%;
-  height: 340px;
-  object-fit: contain;
+  height: 440px; /* bigger photos */
+  object-fit: cover; /* fills space better */
   object-position: center;
-  border-radius: 10px;
+  border-radius: 12px;
+  display: block;
 }
 
 .treatment-photo { object-position: 5% center; }
