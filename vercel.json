@@ -2,14 +2,70 @@
   "redirects": [
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "southamericanpalmweevil.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "southamericanpalmweevil.com"
+        }
+      ],
       "destination": "https://www.sandiegopalmprotection.com/sapw.html",
       "permanent": true
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "www.southamericanpalmweevil.com" }],
+      "has": [
+        {
+          "type": "host",
+          "value": "www.southamericanpalmweevil.com"
+        }
+      ],
       "destination": "https://www.sandiegopalmprotection.com/sapw.html",
+      "permanent": true
+    },
+
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "sandiegopalmhealth.com"
+        }
+      ],
+      "destination": "https://www.sandiegopalmprotection.com",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sandiegopalmhealth.com"
+        }
+      ],
+      "destination": "https://www.sandiegopalmprotection.com",
+      "permanent": true
+    },
+
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "sandiegopalmcare.com"
+        }
+      ],
+      "destination": "https://www.sandiegopalmprotection.com",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.sandiegopalmcare.com"
+        }
+      ],
+      "destination": "https://www.sandiegopalmprotection.com",
       "permanent": true
     }
   ]
