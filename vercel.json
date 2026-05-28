@@ -1,0 +1,26 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "southamericanpalmweevil.com"
+        }
+      ],
+      "destination": "https://www.sandiegopalmprotection.com/sapw.html",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.southamericanpalmweevil.com"
+        }
+      ],
+      "destination": "https://www.sandiegopalmprotection.com/sapw.html",
+      "permanent": true
+    }
+  ]
+}
