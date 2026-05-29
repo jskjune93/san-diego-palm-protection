@@ -1,1 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Palm Sourcing & Planting | San Diego Palm Protection</title>
+<meta name="description" content="Premium palm sourcing and planting guidance in North County San Diego. Help selecting, sourcing, placing, and coordinating installation for statement palms and specimen landscapes.">
 
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #0b2d13;
+}
+
+.topnav {
+  background: #063b16;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  min-height: 115px;
+  border-bottom: 4px solid #ffb31a;
+}
+
+.logo img {
+  height: 145px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-weight: 900;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.nav-separator {
+  color: #ffb31a;
+  font-weight: 900;
+}
+
+.call {
+  background: #ffb31a;
+  color: black !important;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.hero {
+  min-height: 610px;
+  background:
+    linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+    url("./huntington2.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px 6%;
+  color: white;
+}
+
+.hero-content { max-width: 900px; }
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.0;
+  margin: 0 0 25px;
+  font-weight: 900;
+}
+
+.hero p {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.highlight {
+  color: #ffb31a;
+  font-weight: 900;
+}
+
+.cta-button,
+.secondary-hero-button,
+.secondary-button {
+  display: inline-block;
+  padding: 16px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  margin-top: 12px;
+}
+
+.cta-button {
+  background: #ffb31a;
+  color: black;
+}
+
+.secondary-hero-button {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
+}
+
+.secondary-button {
+  background: #063b16;
+  color: white;
+  border: 2px solid #ffb31a;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.local-note {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 22px 60px;
+  background: #06451f;
+  color: white;
+}
+
+.bottom-bar div { flex: 1; }
+
+.bottom-bar strong {
+  display: block;
+  font-size: 22px;
+}
+
+section { padding: 60px 6%; }
+
+h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-top: 0;
+}
+
+.section-subtitle {
+  max-width: 900px;
+  margin: -15px auto 35px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.intro-section {
+  background: #fff;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 34px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+
+.text-card {
+  background: #f4f0e2;
+  border-radius: 14px;
+  padding: 34px;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.text-card h2 {
+  text-align: left;
+  font-size: 36px;
+}
+
+.text-card p,
+.text-card li {
+  font-size: 19px;
+  line-height: 1.55;
+}
+
+.feature-photo {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.process-section {
+  background: #f4f0e2;
+}
+
+.process-grid,
+.palm-grid,
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.process-card,
+.palm-card,
+.fit-card {
+  background: white;
+  border-radius: 12px;
+  padding: 26px 22px;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.process-card strong,
+.palm-card strong,
+.fit-card strong {
+  display: block;
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #063b16;
+}
+
+.process-card p,
+.palm-card p,
+.fit-card p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.specimen-section {
+  background: white;
+}
+
+.palm-card ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.callout-section {
+  background: #e6dcc3;
+}
+
+.callout-box {
+  max-width: 980px;
+  margin: auto;
+  background: white;
+  border-radius: 14px;
+  padding: 36px;
+  text-align: center;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.callout-box h2 {
+  margin-bottom: 16px;
+}
+
+.callout-box p {
+  font-size: 20px;
+  line-height: 1.55;
+}
+
+.assessment-form-section {
+  background: #f4f0e2;
+  padding: 70px 6%;
+}
+
+.assessment-form-container {
+  max-width: 760px;
+  margin: auto;
+  text-align: center;
+}
+
+.assessment-text {
+  font-size: 20px;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.cta {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.cta a { color: #ffb31a; }
+
+footer {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media(max-width: 1000px){
+  .two-column,
+  .process-grid,
+  .palm-grid,
+  .fit-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 900px){
+  .topnav {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    height: auto;
+    padding: 20px 5%;
+  }
+
+  .logo img { height: 110px; }
+
+  .nav-links { justify-content: center; }
+
+  .bottom-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 22px 25px;
+  }
+
+  .feature-photo { height: 340px; }
+}
+</style>
+<meta name="google-site-verification" content="j22OLD5tPSCDJbZptb41c_NojwR6N0oC3p0H2yoK0Ck" />
+</head>
+
+<body>
+
+<header class="topnav">
+  <div class="logo">
+    <a href="./index.html">
+      <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="./index.html">Home</a>
+    <span class="nav-separator">|</span>
+    <a href="./index.html#services">Services</a>
+    <span class="nav-separator">|</span>
+    <a href="./sapw.html">Local SAPW</a>
+    <span class="nav-separator">|</span>
+    <a href="./palm-journal-new.html">Palm Journal</a>
+    <span class="nav-separator">|</span>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Premium Palm Sourcing Inquiry">Contact</a>
+    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      Premium <span class="highlight">Palm Sourcing & Planting</span> in San Diego
+    </h1>
+
+    <p>
+      Add long-term character, shade, and resort-style presence with the right palm in the right location.
+    </p>
+
+    <p>
+      San Diego Palm Protection helps homeowners think through premium palm selection, sourcing, placement, planting coordination, and aftercare planning.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="cta-button" href="tel:2624923135">Call or Text About a Palm Project</a>
+      <a class="secondary-hero-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Premium Palm Sourcing Inquiry">Email Palm Project Photos</a>
+    </div>
+
+    <p class="local-note">
+      Focused on North County San Diego, including Escondido, Poway, Rancho Santa Fe, Lake Hodges, and nearby estate communities.
+    </p>
+  </div>
+</section>
+
+<div class="bottom-bar">
+  <div><strong>Source</strong>Premium Palms</div>
+  <div><strong>Place</strong>Right Palm, Right Spot</div>
+  <div><strong>Protect</strong>Aftercare & Long-Term Health</div>
+</div>
+
+<section class="intro-section">
+  <div class="two-column">
+    <div class="text-card">
+      <h2>Statement Palms Should Be Chosen Carefully</h2>
+      <p>
+        A palm can become the defining feature of a property. The wrong palm can outgrow its space, look out of place, struggle in the wrong exposure, or create expensive problems later.
+      </p>
+      <p>
+        This service is for homeowners who want guidance before adding a major palm or specimen plant — especially when the goal is a cleaner, more mature, more premium San Diego landscape.
+      </p>
+      <ul>
+        <li>Property walk-through and placement ideas</li>
+        <li>Species recommendations for your sun, soil, slope, and design goals</li>
+        <li>Sourcing guidance for quality palms and specimen plants</li>
+        <li>Planting coordination and aftercare recommendations</li>
+      </ul>
+    </div>
+
+    <img class="feature-photo" src="./huntington1.jpg" alt="Premium palms in a landscaped setting">
+  </div>
+</section>
+
+<section class="process-section">
+  <h2>How the Process Works</h2>
+  <p class="section-subtitle">
+    Simple, practical support from early idea to long-term palm health.
+  </p>
+
+  <div class="process-grid">
+    <div class="process-card">
+      <strong>1. Property Review</strong>
+      <p>We look at the space, sun exposure, irrigation, access, slope, existing palms, and the overall landscape style you want to build toward.</p>
+    </div>
+
+    <div class="process-card">
+      <strong>2. Palm Recommendations</strong>
+      <p>You get practical options based on size, growth rate, appearance, budget, maintenance, and long-term fit for the property.</p>
+    </div>
+
+    <div class="process-card">
+      <strong>3. Sourcing & Coordination</strong>
+      <p>We can help identify quality nursery options, think through transport and access, and coordinate planting support when needed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="specimen-section">
+  <h2>Premium Palm Ideas for San Diego Properties</h2>
+  <p class="section-subtitle">
+    The right choice depends on your property, but these are examples of palms that can create a stronger, more intentional landscape.
+  </p>
+
+  <div class="palm-grid">
+    <div class="palm-card">
+      <strong>Bismarck Palm</strong>
+      <p>Large silver-blue fan palm with major visual impact. Best for open spaces where it has room to become a true statement specimen.</p>
+      <ul>
+        <li>Bold silver color</li>
+        <li>Strong estate presence</li>
+        <li>Needs space to mature</li>
+      </ul>
+    </div>
+
+    <div class="palm-card">
+      <strong>Canary Island Date Palm</strong>
+      <p>A classic San Diego estate palm. Mature CIDPs can be extremely valuable landscape assets, but they need serious long-term care.</p>
+      <ul>
+        <li>Iconic local look</li>
+        <li>High replacement/removal cost</li>
+        <li>Strong candidate for protection plans</li>
+      </ul>
+    </div>
+
+    <div class="palm-card">
+      <strong>Blue Hesper Palm</strong>
+      <p>A tough, attractive blue fan palm option for dry Southern California landscapes and properties that want a more distinctive look.</p>
+      <ul>
+        <li>Blue-gray foliage</li>
+        <li>Drought-tolerant character</li>
+        <li>Good desert/Mediterranean fit</li>
+      </ul>
+    </div>
+
+    <div class="palm-card">
+      <strong>Mediterranean Fan Palm</strong>
+      <p>A smaller, clumping palm that can work well where a giant specimen would overpower the space.</p>
+      <ul>
+        <li>Manageable scale</li>
+        <li>Architectural clumping form</li>
+        <li>Useful near walls, entries, and courtyards</li>
+      </ul>
+    </div>
+
+    <div class="palm-card">
+      <strong>Tropical Accent Palms</strong>
+      <p>Some properties can support more tropical-looking palms in protected microclimates, especially near patios, pools, or sheltered areas.</p>
+      <ul>
+        <li>Resort-style feel</li>
+        <li>Best with smart placement</li>
+        <li>May need more water/protection</li>
+      </ul>
+    </div>
+
+    <div class="palm-card">
+      <strong>Cycads & Specimen Plants</strong>
+      <p>Cycads are not palms, but they pair beautifully with premium palms and can add a sculptural, living-heirloom feel to a property.</p>
+      <ul>
+        <li>Slow-growing and architectural</li>
+        <li>Excellent container or specimen plants</li>
+        <li>Strong fit for collector-style gardens</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="callout-section">
+  <div class="callout-box">
+    <h2>This Is Not a Generic Landscaping Service</h2>
+    <p>
+      The goal is palm-focused guidance: helping you choose palms that fit your property, then protecting those palms after they are planted. That means thinking about aesthetics, growth habit, access, irrigation, maintenance, and long-term health before money is spent.
+    </p>
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Premium Palm Sourcing Inquiry">Start With Photos of Your Space</a>
+  </div>
+</section>
+
+<section class="specimen-section">
+  <h2>Best Fit Projects</h2>
+  <p class="section-subtitle">
+    This service is especially useful when the palm will be a visible part of the property’s long-term identity.
+  </p>
+
+  <div class="fit-grid">
+    <div class="fit-card">
+      <strong>Front Yard Statement Palms</strong>
+      <p>For homeowners who want curb appeal and a stronger first impression without choosing the wrong species or size.</p>
+    </div>
+
+    <div class="fit-card">
+      <strong>Pool & Patio Palms</strong>
+      <p>For resort-style outdoor spaces where palm selection, litter, shade, scale, and roots matter.</p>
+    </div>
+
+    <div class="fit-card">
+      <strong>Estate & Long-Term Specimens</strong>
+      <p>For properties where palms are treated as long-term landscape assets, not disposable decoration.</p>
+    </div>
+  </div>
+</section>
+
+<section class="assessment-form-section" id="contact">
+  <div class="assessment-form-container">
+    <h2>Talk Through a Palm Project</h2>
+
+    <p class="assessment-text">
+      Send photos of your property, the area you want to improve, and any palms you are considering. Include rough dimensions, sun exposure, irrigation notes, and whether you want a bold specimen, a tropical feel, screening, or a more polished estate look.
+    </p>
+
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Premium Palm Sourcing Inquiry">📧 Send Project Photos</a>
+    <a class="secondary-button" href="tel:2624923135">📞 Call or Text 262-492-3135</a>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Call or Text 262-492-3135</h2>
+  <p>Interested in adding a premium palm or improving an existing palm landscape? Send photos for a first look.</p>
+  <p><strong>Email:</strong> <a href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a></p>
+  <p>San Diego Palm Protection — palm health, protection, sourcing, planting guidance, and long-term palm stewardship.</p>
+</section>
+
+<footer>
+  San Diego Palm Health & Protection Services
+</footer>
+
+</body>
+</html>
