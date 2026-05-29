@@ -1,1 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Specimen Palms & Cycads | San Diego Palm Protection</title>
+<meta name="description" content="Specimen palms and cycads for North County San Diego landscapes. Guidance on statement palms, rare cycads, premium landscape character, and long-term palm health.">
 
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #0b2d13;
+}
+
+.topnav {
+  background: #063b16;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  min-height: 115px;
+  border-bottom: 4px solid #ffb31a;
+}
+
+.logo img {
+  height: 145px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-weight: 900;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.nav-separator {
+  color: #ffb31a;
+  font-weight: 900;
+}
+
+.call {
+  background: #ffb31a;
+  color: black !important;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.hero {
+  min-height: 620px;
+  background:
+    linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
+    url("./huntington1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 80px 6%;
+  color: white;
+}
+
+.hero-content { max-width: 920px; }
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 1.0;
+  margin: 0 0 25px;
+  font-weight: 900;
+}
+
+.hero p {
+  font-size: 22px;
+  line-height: 1.45;
+  margin-bottom: 18px;
+}
+
+.highlight {
+  color: #ffb31a;
+  font-weight: 900;
+}
+
+.cta-button,
+.secondary-hero-button,
+.secondary-button {
+  display: inline-block;
+  padding: 16px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  margin-top: 12px;
+}
+
+.cta-button {
+  background: #ffb31a;
+  color: black;
+}
+
+.secondary-hero-button {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
+}
+
+.secondary-hero-button:hover {
+  background: #ffb31a;
+  color: black;
+}
+
+.secondary-button {
+  background: #063b16;
+  color: white;
+  border: 2px solid #ffb31a;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.local-note {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 22px 60px;
+  background: #06451f;
+  color: white;
+}
+
+.bottom-bar div { flex: 1; }
+
+.bottom-bar strong {
+  display: block;
+  font-size: 22px;
+}
+
+section { padding: 60px 6%; }
+
+h2 {
+  text-align: center;
+  font-size: 42px;
+  margin-top: 0;
+}
+
+.section-subtitle {
+  max-width: 900px;
+  margin: -15px auto 35px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.intro-section {
+  background: #fff;
+}
+
+.intro-wrap {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.intro-copy p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.intro-card {
+  background: #f4f0e2;
+  border-radius: 14px;
+  padding: 28px;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.intro-card strong {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #063b16;
+}
+
+.intro-card p {
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.specimen-section {
+  background: #f4f0e2;
+}
+
+.specimen-grid {
+  max-width: 1200px;
+  margin: 25px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.specimen-card {
+  background: white;
+  border-radius: 14px;
+  padding: 26px 22px;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.specimen-card h3 {
+  font-size: 24px;
+  margin: 0 0 12px;
+  color: #063b16;
+}
+
+.specimen-card p {
+  font-size: 18px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.feature-section {
+  background: #fff;
+}
+
+.feature-list {
+  max-width: 1050px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.feature-item {
+  border-left: 6px solid #ffb31a;
+  background: #f8f6ef;
+  padding: 22px;
+  border-radius: 10px;
+}
+
+.feature-item h3 {
+  margin: 0 0 8px;
+  font-size: 23px;
+  color: #063b16;
+}
+
+.feature-item p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.design-section {
+  background: #e6dcc3;
+}
+
+.design-wrap {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 38px;
+  align-items: center;
+}
+
+.design-wrap img {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.14);
+}
+
+.design-copy h2 {
+  text-align: left;
+}
+
+.design-copy p {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.service-list {
+  padding-left: 22px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.service-list li { margin-bottom: 8px; }
+
+.related-section {
+  background: #fff;
+}
+
+.related-grid {
+  max-width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.related-card {
+  background: #f4f0e2;
+  border-radius: 14px;
+  padding: 28px;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.related-card h3 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.related-card p {
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.assessment-form-section {
+  background: #f4f0e2;
+  padding: 70px 6%;
+}
+
+.assessment-form-container {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.assessment-text {
+  font-size: 20px;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+
+.cta {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+.cta a { color: #ffb31a; }
+
+footer {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media(max-width: 1000px){
+  .specimen-grid,
+  .feature-list,
+  .related-grid,
+  .intro-wrap,
+  .design-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .design-copy h2 { text-align: center; }
+}
+
+@media(max-width: 900px){
+  .topnav {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    height: auto;
+    padding: 20px 5%;
+  }
+
+  .logo img { height: 110px; }
+
+  .nav-links { justify-content: center; }
+
+  .bottom-bar {
+    flex-direction: column;
+    gap: 15px;
+    padding: 22px 25px;
+  }
+}
+</style>
+<meta name="google-site-verification" content="j22OLD5tPSCDJbZptb41c_NojwR6N0oC3p0H2yoK0Ck" />
+</head>
+
+<body>
+
+<header class="topnav">
+  <div class="logo">
+    <a href="./index.html">
+      <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="./index.html">Home</a>
+    <span class="nav-separator">|</span>
+    <a href="./palm-sourcing-installation.html">Sourcing & Planting</a>
+    <span class="nav-separator">|</span>
+    <a href="./sapw.html">Local SAPW</a>
+    <span class="nav-separator">|</span>
+    <a href="./palm-journal-new.html">Palm Journal</a>
+    <span class="nav-separator">|</span>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Specimen Palm or Cycad Inquiry">Contact</a>
+    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      Specimen <span class="highlight">Palms & Cycads</span> for San Diego Properties
+    </h1>
+
+    <p>
+      Statement palms, rare-looking specimens, and architectural cycads can change the entire feel of a landscape.
+    </p>
+
+    <p>
+      San Diego Palm Protection helps homeowners think through premium palm and cycad options, long-term placement, and ongoing care for valuable landscape specimens.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Specimen Palm or Cycad Inquiry">
+        Ask About Specimen Plants
+      </a>
+
+      <a class="secondary-hero-button" href="./palm-sourcing-installation.html">
+        Palm Sourcing & Planting
+      </a>
+    </div>
+
+    <p class="local-note">
+      Serving North County San Diego homeowners interested in stronger curb appeal, estate landscape character, and healthier long-term palms.
+    </p>
+  </div>
+</section>
+
+<div class="bottom-bar">
+  <div><strong>Statement Plants</strong>Palms with Presence</div>
+  <div><strong>Long-Term Value</strong>Plant Once, Grow for Years</div>
+  <div><strong>Premium Guidance</strong>Selection, Placement & Care</div>
+</div>
+
+<section class="intro-section">
+  <div class="intro-wrap">
+    <div class="intro-copy">
+      <h2>More Than Ordinary Landscaping</h2>
+      <p>
+        Some plants are not just background greenery. A mature Canary Island Date Palm, silver Bismarck, blue hesper palm, or sculptural cycad can become the visual anchor of an entire property.
+      </p>
+      <p>
+        The goal is not to collect random plants. The goal is to choose specimens that fit the property, climate, architecture, irrigation, exposure, and the level of maintenance the homeowner actually wants.
+      </p>
+    </div>
+
+    <div class="intro-card">
+      <strong>Specimen mindset</strong>
+      <p>
+        The best palm and cycad choices are made with a long horizon: mature size, sun exposure, root space, drainage, visual balance, maintenance needs, and how the plant will look years from now.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="specimen-section">
+  <h2>Specimen Categories</h2>
+  <p class="section-subtitle">
+    Different properties call for different plants. The right choice depends on whether the goal is shade, symmetry, tropical character, silver-blue color, Mediterranean form, or a rare collector look.
+  </p>
+
+  <div class="specimen-grid">
+    <div class="specimen-card">
+      <h3>Statement Palms</h3>
+      <p>
+        Large or dramatic palms used as visual anchors near entries, driveways, lawns, pools, patios, and estate landscapes.
+      </p>
+    </div>
+
+    <div class="specimen-card">
+      <h3>Silver & Blue Palms</h3>
+      <p>
+        Bismarck palms, blue hesper palms, and other silver-toned specimens can create a premium, sculptural look in Southern California landscapes.
+      </p>
+    </div>
+
+    <div class="specimen-card">
+      <h3>Cycads</h3>
+      <p>
+        Slow-growing, architectural, prehistoric-looking plants that pair well with palms, stone, decomposed granite, and high-end drought-tolerant designs.
+      </p>
+    </div>
+
+    <div class="specimen-card">
+      <h3>Canary Island Date Palms</h3>
+      <p>
+        Classic San Diego estate palms with major visual impact, but they require intelligent protection, monitoring, pruning awareness, and SAPW risk consideration.
+      </p>
+    </div>
+
+    <div class="specimen-card">
+      <h3>Tropical Accent Palms</h3>
+      <p>
+        Smaller or more tropical palms can soften patios, pool areas, courtyards, side yards, and garden rooms when selected for the right exposure.
+      </p>
+    </div>
+
+    <div class="specimen-card">
+      <h3>Container Specimens</h3>
+      <p>
+        Some palms and many cycads can be grown in containers for patios, courtyards, entry areas, and long-term private collections.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section">
+  <h2>Plants Worth Considering</h2>
+  <p class="section-subtitle">
+    These are examples of the kinds of specimens that can create a stronger, more intentional landscape. Availability, price, and suitability vary by property.
+  </p>
+
+  <div class="feature-list">
+    <div class="feature-item">
+      <h3>Bismarck Palm</h3>
+      <p>Big silver-blue fan palm with a clean, architectural look. Strong choice for open sunny areas where there is room for mature scale.</p>
+    </div>
+
+    <div class="feature-item">
+      <h3>Canary Island Date Palm</h3>
+      <p>Classic high-value San Diego palm. Beautiful when healthy, but worth monitoring carefully due to pest, pruning, nutrient, and decline risks.</p>
+    </div>
+
+    <div class="feature-item">
+      <h3>Blue Hesper Palm</h3>
+      <p>Southwestern silver-blue fan palm with strong drought-tolerant character. Useful where a refined desert/Mediterranean feel is desired.</p>
+    </div>
+
+    <div class="feature-item">
+      <h3>Chilean Wine Palm</h3>
+      <p>Slow, massive, and long-lived. A true long-horizon specimen for homeowners thinking in decades, not seasons.</p>
+    </div>
+
+    <div class="feature-item">
+      <h3>Encephalartos & Dioon Cycads</h3>
+      <p>Collector-grade cycads can provide a prehistoric, sculptural look. Many are slow-growing and best approached as long-term specimens.</p>
+    </div>
+
+    <div class="feature-item">
+      <h3>Mediterranean Fan Palm</h3>
+      <p>Tough, compact, and versatile. Can work well as a structural accent in drier, more formal, or Mediterranean-style landscapes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="design-section">
+  <div class="design-wrap">
+    <img src="./huntington2.jpg" alt="Specimen palm landscape inspiration">
+
+    <div class="design-copy">
+      <h2>Selection, Placement & Long-Term Care</h2>
+      <p>
+        A valuable specimen plant should not be chosen only because it looks good at the nursery. It should be matched to the property and cared for with a long-term plan.
+      </p>
+
+      <ul class="service-list">
+        <li>Property fit, mature size, and placement guidance</li>
+        <li>Sun, wind, slope, drainage, and irrigation considerations</li>
+        <li>Premium palm and cycad sourcing support</li>
+        <li>Post-planting care, protection, and monitoring recommendations</li>
+        <li>Health observations for existing high-value palms</li>
+      </ul>
+
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Specimen Plant Consultation">
+        Discuss a Specimen Plant Plan
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="related-section">
+  <h2>Related Services</h2>
+  <p class="section-subtitle">
+    Specimen plants work best when selection, planting, and long-term health are considered together.
+  </p>
+
+  <div class="related-grid">
+    <div class="related-card">
+      <h3>Palm Sourcing & Planting</h3>
+      <p>
+        Help selecting, sourcing, placing, and coordinating installation for premium palms and specimen landscapes.
+      </p>
+      <a class="secondary-button" href="./palm-sourcing-installation.html">View Sourcing & Planting</a>
+    </div>
+
+    <div class="related-card">
+      <h3>Palm Health & Protection</h3>
+      <p>
+        Preventative treatment, monitoring, SAPW awareness, and long-term care for existing valuable palms.
+      </p>
+      <a class="secondary-button" href="./index.html#contact">Request Assessment</a>
+    </div>
+  </div>
+</section>
+
+<section class="assessment-form-section" id="contact">
+  <div class="assessment-form-container">
+    <h2>Ask About Specimen Palms or Cycads</h2>
+
+    <p class="assessment-text">
+      Send photos of your property, existing palms, or the type of look you want. I can help think through options for statement palms, cycads, placement, and long-term care.
+    </p>
+
+    <a class="cta-button"
+       href="mailto:sandiegopalmprotection@gmail.com?subject=Specimen Palm or Cycad Inquiry">
+       📧 Send Photos or Questions
+    </a>
+
+    <a class="secondary-button" href="tel:2624923135">
+      📞 Call or Text 262-492-3135
+    </a>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Call or Text 262-492-3135</h2>
+
+  <p>
+    Interested in statement palms, cycads, or protecting existing high-value palms? Reach out for a free first look.
+  </p>
+
+  <p>
+    <strong>Email:</strong>
+    <a href="mailto:sandiegopalmprotection@gmail.com">
+      sandiegopalmprotection@gmail.com
+    </a>
+  </p>
+
+  <p>
+    San Diego Palm Protection — palm health, protection, sourcing, and specimen guidance for North County properties.
+  </p>
+</section>
+
+<footer>
+  San Diego Palm Health & Protection Services
+</footer>
+
+</body>
+</html>
