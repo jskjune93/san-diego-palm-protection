@@ -66,7 +66,7 @@ body {
   min-height: 600px;
   background:
     linear-gradient(rgba(0,0,0,0.62), rgba(0,0,0,0.62)),
-    url("./background.jpg");
+    url("./recovery-hero.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -118,8 +118,8 @@ body {
 }
 
 .secondary-button {
-  background: #063b16;
-  color: white;
+  background: white;
+  color: #063b16;
   border: 2px solid #ffb31a;
 }
 
@@ -182,28 +182,45 @@ h2 {
   margin-bottom: 0;
 }
 
-.serviceCard h3 {
-  margin: 12px 0 8px;
-  font-size: 22px;
+.recovery-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1200px;
+  margin: 30px auto 0;
 }
 
-.serviceCard p {
-  padding: 0 12px 18px;
+.recovery-photo-card {
+  background: #f4f0e2;
+  border-radius: 14px;
+  overflow: hidden;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+}
+
+.recovery-photo-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+}
+
+.recovery-photo-card h3 {
+  margin: 18px 18px 8px;
+  font-size: 23px;
+  color: #063b16;
+}
+
+.recovery-photo-card p {
+  margin: 0;
+  padding: 0 18px 22px;
+  font-size: 17px;
   line-height: 1.5;
 }
-  
+
 .band {
   background: #f4f0e2;
 }
-
-.dark-band {
-  background: #063b16;
-  color: white;
-  text-align: center;
-}
-
-.dark-band h2,
-.dark-band p { color: white; }
 
 .split {
   display: flex;
@@ -290,14 +307,17 @@ h2 {
   margin: 8px 0;
 }
 
-.email-line a {
+.email-line a,
+.assessment-cta a {
   color: #ffb31a;
 }
 
-.secondary-button {
-  background: white;
+.assessment-cta .cta-button {
+  color: black;
+}
+
+.assessment-cta .secondary-button {
   color: #063b16;
-  border: 2px solid #ffb31a;
 }
 
 footer {
@@ -306,10 +326,12 @@ footer {
   text-align: center;
   padding: 0 25px 22px;
 }
+
 @media(max-width: 1000px){
   .problem-grid,
   .process-grid,
-  .service-grid {
+  .service-grid,
+  .recovery-photo-grid {
     grid-template-columns: 1fr;
   }
 
@@ -348,15 +370,15 @@ footer {
 
   <nav class="nav-links" aria-label="Main navigation">
     <a href="./index.html">Home</a>
-<span class="nav-separator">|</span>
-<a href="./index.html#services">Services</a>
-<span class="nav-separator">|</span>
-<a href="./sapw.html">Local SAPW</a>
-<span class="nav-separator">|</span>
-<a href="./palm-journal-new.html">Palm Journal</a>
-<span class="nav-separator">|</span>
-<a href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">Contact</a>
-<a class="call" href="tel:2624923135">📞 262-492-3135</a>
+    <span class="nav-separator">|</span>
+    <a href="./index.html#services">Services</a>
+    <span class="nav-separator">|</span>
+    <a href="./sapw.html">Local SAPW</a>
+    <span class="nav-separator">|</span>
+    <a href="./palm-journal-new.html">Palm Journal</a>
+    <span class="nav-separator">|</span>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">Contact</a>
+    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
   </nav>
 </header>
 
@@ -372,46 +394,6 @@ footer {
       San Diego Palm Protection helps homeowners identify visible palm stress, improve growing conditions, and build practical recovery plans for valuable palms.
     </p>
 
-<section>
-  <h2>Palm Recovery</h2>
-
-  <p class="section-subtitle">
-    [your recovery text]
-  </p>
-</section>
-
-<!-- PASTE #2 RIGHT HERE -->
-
-<section class="serviceGrid">
-
-  <div class="serviceCard">
-    <img src="./RSF4.jpg" alt="CIDP nutrient stress">
-    <h3>Nutrient & Irrigation Stress</h3>
-    <p>
-      Yellowing, thinning, and discoloration can sometimes point to nutrient imbalance, irrigation issues, or root stress.
-    </p>
-  </div>
-
-  <div class="serviceCard">
-    <img src="./RSF2.jpg" alt="Overtrimmed palm">
-    <h3>Pruning Stress</h3>
-    <p>
-      Overtrimming may weaken palms over time and contribute to reduced vigor and recovery.
-    </p>
-  </div>
-
-  <div class="serviceCard">
-    <img src="./king stress.jpg" alt="King palm decline">
-    <h3>Visible Signs of Decline</h3>
-    <p>
-      Brown fronds, thinning canopy, and changes in growth may warrant closer evaluation.
-    </p>
-  </div>
-
-</section>
-
-<section class="assessment-cta">
-    
     <div class="hero-buttons">
       <a class="cta-button" href="tel:2624923135">Call or Text for a Free Palm Assessment</a>
       <a class="secondary-hero-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm Recovery Assessment">Send Palm Photos</a>
@@ -420,6 +402,39 @@ footer {
 </section>
 
 <section>
+  <h2>Palm Recovery Starts With Observation</h2>
+  <p class="section-subtitle">
+    Mature and specimen palms are often major visual centerpieces of a San Diego property. Long-term health, monitoring, and early attention can help protect their beauty and value.
+  </p>
+
+  <div class="recovery-photo-grid">
+    <div class="recovery-photo-card">
+      <img src="./nutrient-cidp.jpg" alt="Canary Island date palm showing nutrient or irrigation stress">
+      <h3>Nutrient & Irrigation Stress</h3>
+      <p>
+        Yellowing, thinning, and discoloration can sometimes point to nutrient imbalance, irrigation issues, or root stress.
+      </p>
+    </div>
+
+    <div class="recovery-photo-card">
+      <img src="./overtrimmed-cidp.jpg" alt="Overtrimmed Canary Island date palm">
+      <h3>Pruning Stress</h3>
+      <p>
+        Overtrimming may weaken palms over time and contribute to reduced vigor and recovery.
+      </p>
+    </div>
+
+    <div class="recovery-photo-card">
+      <img src="./king-stress.jpg" alt="King palm showing brown fronds and visible decline">
+      <h3>Visible Signs of Decline</h3>
+      <p>
+        Brown fronds, thinning canopy, and changes in growth may warrant closer evaluation.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="band">
   <h2>Common Signs Your Palm May Need Help</h2>
   <p class="section-subtitle">
     Palms can decline slowly before the problem becomes obvious. Early assessment can help determine whether the issue is nutrition, irrigation, pruning stress, pest pressure, or general site conditions.
@@ -458,7 +473,7 @@ footer {
   </div>
 </section>
 
-<section class="band">
+<section>
   <div class="split">
     <div class="split-text">
       <h2>Recovery Starts With Diagnosis</h2>
@@ -475,12 +490,12 @@ footer {
     </div>
 
     <div class="split-image">
-      <img src="./lake poway.jpg" alt="Healthy palm landscape used as reference for palm recovery and care">
+      <img src="./lake-poway.jpg" alt="Healthy palm landscape used as reference for palm recovery and care">
     </div>
   </div>
 </section>
 
-<section>
+<section class="band">
   <h2>Palm Recovery Services</h2>
   <p class="section-subtitle">
     The goal is to improve the palm’s growing conditions and reduce avoidable stress before the decline becomes expensive or irreversible.
@@ -522,7 +537,7 @@ footer {
   </div>
 </section>
 
-<section class="band">
+<section>
   <h2>Best Fit Palms for Recovery Attention</h2>
   <p class="section-subtitle">
     This service is especially useful for high-value, visible, or emotionally important palms that define the look of a property.
