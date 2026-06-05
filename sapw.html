@@ -54,9 +54,14 @@ Local • Owner-Operated • Palm Health & Protection
 }
 
 .nav-links a {
-  color: white;
+.nav-links a {
+  color: #063b16;
   text-decoration: none;
   font-weight: 900;
+}
+
+.nav-links a:hover {
+  color: #ffb31a;
 }
 
 .nav-separator {
@@ -298,11 +303,16 @@ footer {
 
 @media(max-width: 900px){
   .topnav {
-    flex-direction: column;
-    gap: 14px;
-    text-align: center;
-    height: auto;
-    padding: 20px 5%;
+ .topnav {
+  background: #063b16;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  min-height: 115px;
+  border-bottom: 4px solid #ffb31a;
+}
   }
 
   .logo img { height: 110px; }
