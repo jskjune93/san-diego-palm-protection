@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Quarterly Palm Care Plans | San Diego Palm Protection</title>
 <meta name="description" content="Owner-performed quarterly palm care plans in North County San Diego. Palm fertilization, SAPW preventative treatment, monitoring, watering-in, sourcing, and specimen palm guidance.">
-  <link rel="canonical" href="https://www.sandiegopalmprotection.com/" /> 
-
+<link rel="canonical" href="https://www.sandiegopalmprotection.com/" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -118,11 +117,11 @@ body {
 .secondary-hero-button {
   background: white;
   color: #063b16;
-  margin-left: 12px;
   border: 2px solid #ffb31a;
 }
 
-.secondary-hero-button:hover {
+.secondary-hero-button:hover,
+.secondary-button:hover {
   background: #ffb31a;
   color: black;
 }
@@ -133,7 +132,7 @@ body {
   border: 2px solid #ffb31a;
 }
 
-  .hero-buttons {
+.hero-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -180,8 +179,8 @@ h2 {
 .serviceGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px; /* tighter spacing */
-  max-width: 1450px; /* allows larger photos */
+  gap: 12px;
+  max-width: 1450px;
   margin: 20px auto 0;
   align-items: stretch;
 }
@@ -193,8 +192,8 @@ h2 {
 
 .serviceCard img {
   width: 100%;
-  height: 440px; /* bigger photos */
-  object-fit: cover; /* fills space better */
+  height: 440px;
+  object-fit: cover;
   object-position: center;
   border-radius: 12px;
   display: block;
@@ -205,6 +204,116 @@ h2 {
 .trust-section {
   background: #f4f0e2;
 }
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 18px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.trust-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px 18px;
+  text-align: center;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.trust-icon {
+  font-size: 2rem;
+  color: #d8a117;
+  margin-bottom: 15px;
+}
+
+.trust-card strong {
+  display: block;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #033b2f;
+}
+
+.trust-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.service-overview-section {
+  background: #fff;
+}
+
+.expanded-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 1250px;
+  margin: 25px auto 0;
+}
+
+.expanded-service-card {
+  background: #f4f0e2;
+  border-radius: 14px;
+  padding: 30px 22px 26px;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.expanded-service-card h3 {
+  margin: 0 0 12px;
+  font-size: 23px;
+  color: #063b16;
+}
+
+.expanded-service-card p {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+
+.expanded-service-card a {
+  color: #063b16;
+  font-weight: 900;
+  text-decoration: underline;
+}
+
+.featured-service {
+  border: 3px solid #d8a117;
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.12),
+    0 0 0 4px rgba(216,161,23,0.12);
+  position: relative;
+  transform: translateY(-8px);
+  overflow: hidden;
+}
+
+.featured-service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #d8a117;
+}
+
+.service-note {
+  font-weight: 700;
+  color: #2f4f2f;
+  margin-top: 10px;
+}
+
+.service-list {
+  padding-left: 22px;
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+.service-list li {
+  margin-bottom: 8px;
+}
+
 .learn-more-section {
   text-align: center;
   padding: 50px 6%;
@@ -237,182 +346,6 @@ h2 {
   background: #d8a117;
   color: black;
 }
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.trust-card {
-  background: white;
-  border-radius: 12px;
-  padding: 24px 18px;
-  text-align: center;
-  border-bottom: 5px solid #ffb31a;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-}
-
-.trust-card strong {
-  display: block;
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: #063b16;
-}
-
-.trust-card p {
-  margin: 0;
-  line-height: 1.45;
-}
-
-.journal-preview {
-  background: #fff;
-}
-.trust-icon {
-  font-size: 2rem;
-  color: #d8a117; /* your gold */
-  margin-bottom: 15px;
-}
-
-.trust-card {
-  text-align: center;
-}
-
-.trust-card strong {
-  display: block;
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #033b2f;
-}
-
-.trust-card p {
-  line-height: 1.6;
-}
-
-.journal-card {
-  max-width: 980px;
-  margin: auto;
-  background: #f4f0e2;
-  border-radius: 14px;
-  padding: 34px;
-  border-bottom: 6px solid #ffb31a;
-  text-align: center;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-}
-
-.journal-card p {
-  font-size: 20px;
-  line-height: 1.55;
-}
-
-.why {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 45px;
-  background: #e6dcc3;
-  padding: 50px 20px;
-}
-
-.flyer {
-  width: 620px;
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-.why-content {
-  max-width: 560px;
-  text-align: left;
-  padding-top: 20px;
-}
-
-.why-content h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.why-content p {
-  font-size: 20px;
-  margin-bottom: 16px;
-}
-
-.service-note {
-  font-weight: 700;
-  color: #2f4f2f;
-  margin-top: 10px;
-}
-
-.service-list {
-  padding-left: 22px;
-  font-size: 18px;
-  line-height: 1.55;
-}
-
-.service-list li {
-  margin-bottom: 8px;
-}
-
-.service-areas-title { margin-top: 36px; }
-
-
-.service-overview-section {
-  background: #fff;
-}
-
-.featured-service {
-  border: 3px solid #d8a117;
-  box-shadow:
-    0 10px 28px rgba(0,0,0,0.12),
-    0 0 0 4px rgba(216,161,23,0.12);
-  position: relative;
-  transform: translateY(-8px);
-  overflow: hidden;
-}
-
-.featured-service::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 6px;
-  background: #d8a117;
-}
-
-.expanded-service-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
-  max-width: 1250px;
-  margin: 25px auto 0;
-}
-
-.expanded-service-card {
-  background: #f4f0e2;
-  border-radius: 14px;
-  padding: 26px 22px;
-  border-bottom: 6px solid #ffb31a;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-}
-
-.expanded-service-card h3 {
-  margin: 0 0 12px;
-  font-size: 23px;
-  color: #063b16;
-}
-
-.expanded-service-card p {
-  font-size: 17px;
-  line-height: 1.5;
-  margin: 0 0 14px;
-}
-
-.expanded-service-card a {
-  color: #063b16;
-  font-weight: 900;
-  text-decoration: underline;
-}
 
 .brand-positioning-section {
   background: #063b16;
@@ -420,10 +353,7 @@ h2 {
   text-align: center;
 }
 
-.brand-positioning-section h2 {
-  color: white;
-}
-
+.brand-positioning-section h2,
 .brand-positioning-section .section-subtitle {
   color: white;
 }
@@ -455,22 +385,25 @@ h2 {
   line-height: 1.45;
 }
 
-@media(max-width: 1100px){
-  .expanded-service-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .brand-pillars {
-    grid-template-columns: 1fr;
-  }
+.journal-preview {
+  background: #fff;
 }
 
-@media(max-width: 700px){
-  .expanded-service-grid {
-    grid-template-columns: 1fr;
-  }
+.journal-card {
+  max-width: 980px;
+  margin: auto;
+  background: #f4f0e2;
+  border-radius: 14px;
+  padding: 34px;
+  border-bottom: 6px solid #ffb31a;
+  text-align: center;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
 }
 
+.journal-card p {
+  font-size: 20px;
+  line-height: 1.55;
+}
 
 .assessment-cta {
   background: #063b16;
@@ -519,59 +452,6 @@ h2 {
   border: 2px solid #ffb31a;
 }
 
-.assessment-cta .secondary-button:hover {
-  background: #ffb31a;
-  color: black;
-}
-
-.assessment-form-section {
-  background: #063b16;
-  color: white;
-  padding: 60px 6% 20px;
-}
-.assessment-form-section h2 {
-  color: white;
-}
-
-.assessment-text {
-  color: white;
-}
-
-.assessment-form-container p {
-  color: white;
-}
-
-.assessment-form-container a {
-  color: #ffb31a;
-}
-
-.assessment-form-container {
-  max-width: 760px;
-  margin: auto;
-  text-align: center;
-}
-
-.assessment-text {
-  font-size: 20px;
-  margin-bottom: 28px;
-  line-height: 1.5;
-}
-
-.cta {
-  background: #063b16;
-  color: white;
-  text-align: center;
-  padding: 28px 6% 22px;
-}
-
-.cta p {
-  margin: 8px 0;
-  font-size: 18px;
-  line-height: 1.45;
-}
-
-.cta a { color: #ffb31a; }
-
 footer {
   background: #063b16;
   color: white;
@@ -580,6 +460,14 @@ footer {
 }
 
 @media(max-width: 1100px){
+  .expanded-service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .brand-pillars {
+    grid-template-columns: 1fr;
+  }
+
   .trust-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -600,21 +488,10 @@ footer {
     justify-content: center;
   }
 
-  .serviceGrid { grid-template-columns: 1fr; }
-
-  .trust-grid { grid-template-columns: 1fr; }
-
-  .why {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .why-content { text-align: center; }
-
-  .service-list {
-    text-align: left;
-    max-width: 420px;
-    margin: auto;
+  .serviceGrid,
+  .trust-grid,
+  .expanded-service-grid {
+    grid-template-columns: 1fr;
   }
 
   .bottom-bar {
@@ -623,8 +500,10 @@ footer {
     padding: 22px 25px;
   }
 
-  .secondary-hero-button {
-    margin-left: 0;
+  .service-list {
+    text-align: left;
+    max-width: 420px;
+    margin: auto;
   }
 }
 </style>
@@ -656,41 +535,26 @@ footer {
 
 <section class="hero">
   <div class="hero-content">
+    <h1><span class="highlight">Protect the Palms</span> That Define Your Property</h1>
 
-    <h1>
-       <span class="highlight">Protect the Palms</span> That Define Your Property
-    </h1>
-
-    <p>
-      Specialized quarterly stewardship for mature San Diego palms.
-    </p>
+    <p>Specialized quarterly stewardship for mature San Diego palms.</p>
 
     <p>
-      Mature palms aren’t easily replaced.
-      We provide quarterly palm care designed to protect the health, beauty, and long-term value of your property’s most iconic landscape features 
-    </p> 
-
-    <p>Peace of mind, knowing your palms are being cared for year-round</p>
-
-<div class="hero-buttons">
-
-  <a class="cta-button" href="tel:2624923135">
-    Get a Professional Opinion
-  </a>
-
-  <a class="secondary-hero-button"
-     href="https://www.google.com/search?sca_esv=cc38e1736fb87508&authuser=1&sxsrf=ANbL-n6XkuvKFkF0QjuYZvdNFw-Tj-WB9g%3A1779334056337&q=San%20Diego%20Palm%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMQqGZyYp-CSmZqerxCQmJOrEFCUX5KaXJKZnwcANfU0IEUAAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwjGofXyt8mUAxUrKEQIHceDJjIQrMcEegQIEBAC"
-     target="_blank"
-     rel="noopener noreferrer">
-     ⭐ Recent Work & Updates
-  </a>
-
-</div>
-
-    <p class="local-note">
-      Questions? Text or email us
+      Mature palms aren’t easily replaced. We provide quarterly palm care designed to protect the health, beauty, and long-term value of your property’s most iconic landscape features.
     </p>
 
+    <p>Peace of mind, knowing your palms are being cared for year-round.</p>
+
+    <div class="hero-buttons">
+      <a class="cta-button" href="tel:2624923135">Get a Professional Opinion</a>
+
+      <a class="secondary-hero-button"
+         href="https://www.google.com/search?sca_esv=cc38e1736fb87508&authuser=1&sxsrf=ANbL-n6XkuvKFkF0QjuYZvdNFw-Tj-WB9g%3A1779334056337&q=San%20Diego%20Palm%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMQqGZyYp-CSmZqerxCQmJOrEFCUX5KaXJKZnwcANfU0IEUAAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwjGofXyt8mUAxUrKEQIHceDJjIQrMcEegQIEBAC"
+         target="_blank"
+         rel="noopener noreferrer">⭐ Recent Work & Updates</a>
+    </div>
+
+    <p class="local-note">Questions? Text or email us.</p>
   </div>
 </section>
 
@@ -702,199 +566,126 @@ footer {
 
 <section>
   <h2>Palm Health for Long-Term Landscape Value</h2>
-
   <p class="section-subtitle">
-   San Diego Palm Protection helps homeowners preserve valuable palms through recurring quarterly care, preventative treatment, proper fertilization, and long-term palm stewardship.
+    San Diego Palm Protection helps homeowners preserve valuable palms through recurring quarterly care, preventative treatment, proper fertilization, and long-term palm stewardship.
   </p>
 
   <div class="serviceGrid">
     <div class="serviceCard">
       <img src="./Green Valley.jpg" alt="Healthy palm trees in San Diego yard">
     </div>
-
     <div class="serviceCard">
       <img class="treatment-photo" src="./treatment.jpg" alt="Palm treatment service">
     </div>
-
     <div class="serviceCard">
-      <img src="./lake poway_1.jpg" alt="Palm landscape in North County San Diego"> 
+      <img src="./lake poway_1.jpg" alt="Palm landscape in North County San Diego">
     </div>
   </div>
 </section>
 
 <section class="trust-section">
   <h2>Why Homeowners Trust San Diego Palm Protection</h2>
-
   <p class="section-subtitle">
-   Specialized quarterly care designed to protect mature palms and preserve the beauty and value of your landscape.</p>
+    Specialized quarterly care designed to protect mature palms and preserve the beauty and value of your landscape.
+  </p>
 
-<div class="trust-grid">
-
-  <div class="trust-card">
-    <div class="trust-icon">
-      <i class="fas fa-seedling"></i>
+  <div class="trust-grid">
+    <div class="trust-card">
+      <div class="trust-icon"><i class="fas fa-seedling"></i></div>
+      <strong>Specialized Palm Care</strong>
+      <p>Focused exclusively on mature palms — not general landscaping.</p>
     </div>
-    <strong>Specialized Palm Care</strong>
-    <p>Focused exclusively on mature palms — not general landscaping.</p>
-  </div>
 
-  <div class="trust-card">
-    <div class="trust-icon">
-      <i class="fas fa-shield-alt"></i>
+    <div class="trust-card">
+      <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
+      <strong>Protect Valuable Palm Assets</strong>
+      <p>Helping preserve the health, beauty, and long-term value of mature palms.</p>
     </div>
-    <strong>Protect Valuable Palm Assets</strong>
-    <p>Helping preserve the health, beauty, and long-term value of mature palms.</p>
-  </div>
 
-  <div class="trust-card">
-    <div class="trust-icon">
-      <i class="fas fa-calendar-check"></i>
+    <div class="trust-card">
+      <div class="trust-icon"><i class="fas fa-calendar-check"></i></div>
+      <strong>Consistent Quarterly Care</strong>
+      <p>Scheduled fertilization, preventative treatment when appropriate, and ongoing monitoring.</p>
     </div>
-    <strong>Consistent Quarterly Care</strong>
-    <p>Scheduled fertilization, preventative treatment when appropriate, and ongoing monitoring.</p>
-  </div>
 
-  <div class="trust-card">
-    <div class="trust-icon">
-      <i class="fas fa-user-check"></i>
+    <div class="trust-card">
+      <div class="trust-icon"><i class="fas fa-user-check"></i></div>
+      <strong>Owner-Performed Service</strong>
+      <p>Every treatment is personally performed by the owner — no rotating crews.</p>
     </div>
-    <strong>Owner-Performed Service</strong>
-    <p>Every treatment is personally performed by the owner — no rotating crews.</p>
-  </div>
 
-  <div class="trust-card">
-    <div class="trust-icon">
-      <i class="fas fa-leaf"></i>
+    <div class="trust-card">
+      <div class="trust-icon"><i class="fas fa-leaf"></i></div>
+      <strong>Peace of Mind</strong>
+      <p>Consistent care so you can feel confident your palms are being looked after year-round.</p>
     </div>
-    <strong>Peace of Mind</strong>
-    <p>Simple, convenient care so you can feel confident your palms are being looked after year-round.</p>
   </div>
-
-</div>
 </section>
 
 <section class="service-overview-section" id="services">
   <h2>Palm Care Services</h2>
-
   <p class="section-subtitle">
     Specialized care for mature palms — helping homeowners protect valuable landscape assets, preserve curb appeal, and keep signature palms healthy year-round.
   </p>
 
   <div class="expanded-service-grid">
-
     <div class="expanded-service-card featured-service">
       <h3>Quarterly Palm Care Plan</h3>
-
       <p>
         <strong>Typical investment: $350–$500 per quarterly visit</strong><br>
         <em>Based on palm size and treatment needs</em>
       </p>
-
-      <p>
-        Four scheduled visits per year, including:
-      </p>
-
+      <p>Four scheduled visits per year, including:</p>
       <ul class="service-list">
         <li>Professional palm fertilization</li>
         <li>Preventative treatment when appropriate</li>
         <li>Watering-in after treatment</li>
         <li>Health monitoring & recommendations</li>
       </ul>
-
-      <p class="service-note">
-        Best for mature palms and homeowners who want consistent, worry-free care.
-      </p>
-
+      <p class="service-note">Best for mature palms and homeowners who want consistent, worry-free care.</p>
       <a href="#contact">Get a Professional Opinion</a>
     </div>
 
     <div class="expanded-service-card">
       <h3>One-Time Palm Assessment & Treatment</h3>
-
-      <p>
-        <strong>Starting at $750 per visit</strong>
-      </p>
-
-      <p>
-        A single professional visit for visible decline concerns, seasonal palm care, preventative treatment when appropriate, or homeowners wanting an initial palm health opinion.
-      </p>
-
-      <p class="service-note">
-        Ideal for first-time customers or homeowners who want to understand the condition of their palms before enrolling in quarterly care.
-      </p>
-
+      <p><strong>Starting at $750 per visit</strong></p>
+      <p>A single professional visit for visible decline concerns, seasonal palm care, preventative treatment when appropriate, or homeowners wanting an initial palm health opinion.</p>
+      <p class="service-note">Ideal for first-time customers or homeowners who want to understand the condition of their palms before enrolling in quarterly care.</p>
       <a href="#contact">Ask About a One-Time Visit</a>
     </div>
 
     <div class="expanded-service-card">
       <h3>Palm Sourcing & Logistics</h3>
-
-      <p>
-        Guidance for homeowners adding statement palms such as Bismarck palms, Canary Island Date Palms, King palms, and other premium specimens.
-      </p>
-
-      <p>
-        Support may include placement recommendations, sourcing options, logistics, and long-term growth considerations.
-      </p>
-
-      <p class="service-note">
-        Ideal for homeowners investing in long-term landscape character.
-      </p>
-
-      <a href="./palm-sourcing-installation.html">
-        Explore Sourcing & Logistics
-      </a>
+      <p>Guidance for homeowners adding statement palms such as Bismarck palms, Canary Island Date Palms, King palms, and other premium specimens.</p>
+      <p>Support may include placement recommendations, sourcing options, logistics, and long-term growth considerations.</p>
+      <p class="service-note">Ideal for homeowners investing in long-term landscape character.</p>
+      <a href="./palm-sourcing-installation.html">Explore Sourcing & Logistics</a>
     </div>
 
     <div class="expanded-service-card">
       <h3>Specialty Palm Growing</h3>
-
-      <p>
-        We grow select premium palms and cycads ourselves, focusing on quality over quantity. The emphasis is distinctive specimen plants chosen for long-term beauty, architectural character, and San Diego landscape value.
-      </p>
-
-         <p class="service-note">
-        Availability varies seasonally
-        </p>  
-
-      <a href="./specimen-palms-cycads.html">
-        View Specimen Palms
-      </a>
+      <p>We grow select premium palms and cycads ourselves, focusing on quality over quantity. The emphasis is distinctive specimen plants chosen for long-term beauty, architectural character, and San Diego landscape value.</p>
+      <p class="service-note">Availability varies seasonally.</p>
+      <a href="./specimen-palms-cycads.html">View Specimen Palms</a>
     </div>
-<section class="learn-more-section">
-  <h2>Learn More About Mature Palm Care</h2>
-
-  <div class="learn-more-links">
-
-    <a href="./canary-island-date-palm-care-san-diego.html">
-      Canary Island Date Palm Care
-    </a>
-
-    <a href="./quarterly-palm-care-san-diego.html">
-      Quarterly Palm Care
-    </a>
-
-    <a href="./sapw.html">
-      South American Palm Weevil Protection
-    </a>
-
-    <a href="./palm-care-escondido.html">
-      Palm Care in Escondido
-    </a>
-
-    <a href="./palm-care-poway.html">
-      Palm Care in Poway
-    </a>
-
   </div>
 </section>
+
+<section class="learn-more-section">
+  <h2>Learn More About Mature Palm Care</h2>
+  <div class="learn-more-links">
+    <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>
+    <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>
+    <a href="./sapw.html">South American Palm Weevil Protection</a>
+    <a href="./palm-care-escondido.html">Palm Care in Escondido</a>
+    <a href="./palm-care-poway.html">Palm Care in Poway</a>
+  </div>
+</section>
+
 <section class="brand-positioning-section">
   <h2>Long-Term Palm Stewardship</h2>
-
   <p class="section-subtitle">
-    San Diego Palm Protection is intentionally focused: a small, owner-operated client roster for homeowners who want their mature palms consistently protected, monitored, and cared for over the long term.
-    By keeping the roster intentionally limited, every property receives direct owner attention and consistent care year-round.
-
+    San Diego Palm Protection is intentionally focused: a small, owner-operated client roster for homeowners who want their mature palms consistently protected, monitored, and cared for over the long term. By keeping the roster intentionally limited, every property receives direct owner attention and consistent care year-round.
   </p>
 
   <div class="brand-pillars">
@@ -919,8 +710,7 @@ footer {
   <div class="journal-card">
     <h2>Palm Journal</h2>
     <p>
-      Follow local palm protection in action: photos from our own North County palms,
-      seasonal observations, treatment, and field notes.
+      Follow local palm protection in action: photos from our own North County palms, seasonal observations, treatment, and field notes.
     </p>
     <a class="cta-button" href="./palm-journal-new.html">View the Palm Journal</a>
   </div>
@@ -928,30 +718,18 @@ footer {
 
 <section class="assessment-cta" id="contact">
   <h2>Have a Palm Concern?</h2>
-
-  <p>
-    Text or email a few photos of your palm or yard — happy to take a look.
-  </p>
+  <p>Text or email a few photos of your palm or yard — happy to take a look.</p>
 
   <div class="button-row">
-    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
-      📧 Send a Few Palm Photos
-    </a>
-
-    <a class="secondary-button" href="#services">
-      View Services
-    </a>
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">📧 Send a Few Palm Photos</a>
+    <a class="secondary-button" href="#services">View Services</a>
   </div>
 
-  <p class="phone-line">
-    📞 Call or Text 262-492-3135
-  </p>
+  <p class="phone-line">📞 Call or Text 262-492-3135</p>
 
   <p class="email-line">
     <strong>Email:</strong>
-    <a href="mailto:sandiegopalmprotection@gmail.com">
-      sandiegopalmprotection@gmail.com
-    </a>
+    <a href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a>
   </p>
 </section>
 
