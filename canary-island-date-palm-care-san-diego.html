@@ -4,21 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>
-Canary Island Date Palm Care in San Diego | CIDP Health & Protection
-</title>
+<title>Canary Island Date Palm Care in San Diego | CIDP Health & Protection</title>
 
-<meta name="description"
-content="Professional Canary Island Date Palm care in San Diego. Quarterly palm care, fertilization, SAPW awareness, monitoring, and mature palm stewardship for CIDPs." />
+<meta name="description" content="Canary Island Date Palm care in San Diego. Owner-performed quarterly palm care, fertilization, SAPW awareness, monitoring, watering-in, and mature CIDP stewardship." />
 
 <link rel="canonical" href="https://www.sandiegopalmprotection.com/canary-island-date-palm-care-san-diego.html" />
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -34,28 +28,32 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 5%;
+  min-height: 115px;
   border-bottom: 4px solid #ffb31a;
 }
 
 .logo img {
-  height: 120px;
+  height: 150px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 10px;
+  flex-wrap: wrap;
   font-weight: 900;
+  font-size: 17px;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-weight: 900;
 }
 
-.nav-separator {
-  color: #ffb31a;
-}
+.nav-separator { color: #ffb31a; }
 
 .call {
   background: #ffb31a;
@@ -66,62 +64,123 @@ body {
 }
 
 .hero {
+  min-height: 620px;
   background:
-  linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
-  url("./background.jpg");
+    linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)),
+    url("./background.jpg");
   background-size: cover;
   background-position: center;
   color: white;
+  display: flex;
+  align-items: center;
   padding: 90px 6%;
 }
 
-.hero-content {
-  max-width: 850px;
-}
+.hero-content { max-width: 900px; }
 
 .hero h1 {
-  font-size: clamp(40px, 6vw, 68px);
-  margin-bottom: 20px;
-  line-height: 1.05;
+  font-size: clamp(42px, 6vw, 72px);
+  margin: 0 0 24px;
+  line-height: 1.02;
+  font-weight: 900;
 }
 
-.highlight {
-  color: #ffb31a;
-}
+.highlight { color: #ffb31a; }
 
 .hero p {
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 18px;
 }
 
-section {
-  padding: 70px 6%;
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
 }
 
-.content-section {
-  max-width: 1050px;
-  margin: auto;
+.cta-button,
+.secondary-button {
+  display: inline-block;
+  padding: 16px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
 }
+
+.cta-button {
+  background: #ffb31a;
+  color: black;
+}
+
+.secondary-button {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
+}
+
+.secondary-button:hover {
+  background: #ffb31a;
+  color: black;
+}
+
+section { padding: 70px 6%; }
 
 h2 {
-  font-size: 40px;
+  font-size: clamp(32px, 4vw, 44px);
   text-align: center;
-  margin-bottom: 22px;
+  margin: 0 0 24px;
+  color: #063b16;
+}
+
+h3 {
+  color: #063b16;
+  margin-top: 0;
+}
+
+.content-wrap {
+  max-width: 1120px;
+  margin: auto;
 }
 
 .lead {
   text-align: center;
-  font-size: 22px;
-  line-height: 1.6;
-  max-width: 850px;
-  margin: auto auto 40px;
+  font-size: 21px;
+  line-height: 1.65;
+  max-width: 920px;
+  margin: 0 auto 38px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  align-items: center;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.two-column p {
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+.image-card img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.14);
 }
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 24px;
-  margin-top: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1180px;
+  margin: 40px auto 0;
 }
 
 .card {
@@ -129,37 +188,78 @@ h2 {
   border-radius: 14px;
   padding: 28px;
   border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
 }
 
-.card h3 {
-  margin-top: 0;
-  color: #063b16;
+.card-icon {
+  color: #d8a117;
+  font-size: 2rem;
+  margin-bottom: 14px;
+}
+
+.card p,
+.card li {
+  font-size: 17px;
+  line-height: 1.6;
 }
 
 .card ul {
   padding-left: 20px;
-  line-height: 1.8;
+  margin-bottom: 0;
 }
 
-.cta-section {
+.feature-section {
+  background: #f8f6ef;
+}
+
+.dark-section {
   background: #063b16;
   color: white;
   text-align: center;
 }
 
-.cta-section h2 {
+.dark-section h2,
+.dark-section p {
   color: white;
 }
 
-.cta-button {
-  display: inline-block;
-  background: #ffb31a;
-  color: black;
-  text-decoration: none;
-  font-weight: 900;
-  padding: 16px 28px;
-  border-radius: 10px;
-  margin-top: 15px;
+.service-box {
+  background: white;
+  border: 3px solid #d8a117;
+  border-radius: 16px;
+  padding: 34px;
+  max-width: 960px;
+  margin: 36px auto 0;
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.12),
+    0 0 0 4px rgba(216,161,23,0.12);
+}
+
+.service-box p,
+.service-box li {
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.service-box ul {
+  columns: 2;
+  padding-left: 24px;
+}
+
+.photo-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 1300px;
+  margin: 35px auto 0;
+}
+
+.photo-strip img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
 }
 
 .related-links {
@@ -171,17 +271,34 @@ h2 {
 }
 
 .related-links a {
+  background: white;
   border: 2px solid #ffb31a;
   padding: 14px 20px;
   border-radius: 999px;
   text-decoration: none;
   color: #063b16;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .related-links a:hover {
   background: #ffb31a;
   color: black;
+}
+
+.cta-section {
+  background: #063b16;
+  color: white;
+  text-align: center;
+}
+
+.cta-section h2,
+.cta-section p { color: white; }
+
+.cta-section p {
+  font-size: 21px;
+  line-height: 1.55;
+  max-width: 820px;
+  margin: 0 auto 18px;
 }
 
 footer {
@@ -191,19 +308,36 @@ footer {
   padding: 25px;
 }
 
-@media(max-width:900px){
-  .card-grid{
-    grid-template-columns:1fr;
+@media(max-width: 1000px){
+  .card-grid,
+  .photo-strip {
+    grid-template-columns: 1fr;
   }
 
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .service-box ul {
+    columns: 1;
+  }
+
+  .image-card img,
+  .photo-strip img {
+    height: 320px;
+  }
+}
+
+@media(max-width: 900px){
   .topnav{
     flex-direction:column;
     gap:15px;
     text-align:center;
   }
 
+  .logo img { height: 125px; }
+
   .nav-links{
-    flex-wrap:wrap;
     justify-content:center;
   }
 }
@@ -219,7 +353,7 @@ footer {
     </a>
   </div>
 
-  <nav class="nav-links">
+  <nav class="nav-links" aria-label="Main navigation">
     <a href="./index.html">Home</a>
     <span class="nav-separator">|</span>
     <a href="./index.html#services">Services</a>
@@ -228,101 +362,222 @@ footer {
     <span class="nav-separator">|</span>
     <a href="./palm-journal-new.html">Palm Journal</a>
     <span class="nav-separator">|</span>
-    <a href="mailto:sandiegopalmprotection@gmail.com">Contact</a>
-    <a class="call" href="tel:2624923135">
-      📞 262-492-3135
-    </a>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Canary Palm Question">Contact</a>
+    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-
     <h1>
-      <span class="highlight">Canary Island Date Palm Care</span>
+      <span class="highlight">Canary Island Date Palm Care</span><br>
       in San Diego
     </h1>
 
     <p>
-      Helping homeowners protect mature Canary Island Date Palms through quarterly care, fertilization, monitoring, and preventative treatment when appropriate.
+      Owner-performed care for mature Canary Island Date Palms — including quarterly fertilization, monitoring, watering-in, and preventative treatment when appropriate.
     </p>
 
     <p>
-      Mature Canary Island Date Palms are one of the defining landscape features of Southern California — but they are increasingly vulnerable to decline, nutrient stress, and South American Palm Weevil concerns.
+      Mature CIDPs are iconic, valuable, and difficult to replace. Our goal is to help homeowners protect the palm assets that define their property.
     </p>
 
+    <div class="hero-buttons">
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Canary Palm Question">
+        Get a Professional Opinion
+      </a>
+      <a class="secondary-button" href="./index.html#services">
+        View Quarterly Care Plans
+      </a>
+    </div>
   </div>
 </section>
 
-<section class="content-section">
-  <h2>Why Canary Island Date Palms Matter</h2>
+<section>
+  <div class="content-wrap">
+    <h2>Why Canary Island Date Palms Matter</h2>
 
-  <p class="lead">
-    Canary Island Date Palms (CIDPs) are among the most iconic and valuable palms found throughout San Diego. Mature specimens contribute beauty, character, shade, and long-term landscape value to exceptional properties — but they are not easily replaced.
-  </p>
+    <p class="lead">
+      Canary Island Date Palms, often called CIDPs, are among the most recognizable mature palms in San Diego landscapes. They add scale, permanence, character, and curb appeal — especially on older properties, estate landscapes, and homes where mature palms frame the entire setting.
+    </p>
 
-  <div class="card-grid">
+    <div class="two-column">
+      <div>
+        <p>
+          A mature Canary Island Date Palm can represent decades of growth. Once a large palm begins to decline, replacement is not simple, fast, or inexpensive. That is why proactive care matters.
+        </p>
+        <p>
+          San Diego Palm Protection focuses on helping homeowners preserve these signature palms through consistent care, nutrition, monitoring, and awareness of local palm health threats including South American Palm Weevil concerns.
+        </p>
+      </div>
 
-    <div class="card">
-      <h3>Common CIDP Concerns</h3>
-
-      <ul>
-        <li>Declining or thinning canopy</li>
-        <li>Yellowing or nutrient deficiencies</li>
-        <li>Stunted or abnormal fronds</li>
-        <li>Spear concerns</li>
-        <li>South American Palm Weevil risk</li>
-      </ul>
+      <div class="image-card">
+        <img src="./Green Valley.jpg" alt="Mature Canary Island Date Palms in a San Diego landscape">
+      </div>
     </div>
+  </div>
+</section>
 
-    <div class="card">
-      <h3>How Quarterly Care Helps</h3>
+<section class="feature-section">
+  <div class="content-wrap">
+    <h2>Common Canary Island Date Palm Concerns</h2>
 
+    <p class="lead">
+      Many serious palm issues begin subtly. Consistent observation helps homeowners notice changes before decline becomes advanced.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-seedling"></i></div>
+        <h3>Canopy Decline</h3>
+        <p>Thinning crowns, shrinking canopies, brown fronds, and reduced new growth can indicate stress, nutrient problems, or other health concerns.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-triangle-exclamation"></i></div>
+        <h3>Spear & Crown Issues</h3>
+        <p>Abnormal center growth, stunted spear leaves, or a collapsing crown should be taken seriously, especially in mature Canary Island Date Palms.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>SAPW Awareness</h3>
+        <p>South American Palm Weevil is a major concern for Canary Island Date Palms in Southern California. Prevention and monitoring matter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="content-wrap">
+    <h2>Signs Your CIDP May Need Attention</h2>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>Visible Symptoms</h3>
+        <ul>
+          <li>Declining or thinning canopy</li>
+          <li>Yellowing or nutrient-related discoloration</li>
+          <li>Stunted or distorted new fronds</li>
+          <li>Unusual crown appearance</li>
+          <li>Sudden decline compared with nearby palms</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Property-Level Concerns</h3>
+        <ul>
+          <li>Mature palms that define the front landscape</li>
+          <li>Canary palms near other declining CIDPs</li>
+          <li>High-value palms on estate or historic properties</li>
+          <li>Palms receiving inconsistent water or fertilization</li>
+          <li>Homeowners wanting preventative care before problems worsen</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>When to Act</h3>
+        <p>If a mature Canary Island Date Palm starts looking different, it is better to document symptoms early. Photos over time, monitoring, and professional care can help guide next steps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="feature-section">
+  <div class="content-wrap">
+    <h2>Quarterly Care for Mature Canary Palms</h2>
+
+    <p class="lead">
+      Our quarterly palm care plans are designed for homeowners who want their mature palms consistently protected, monitored, and cared for year-round.
+    </p>
+
+    <div class="service-box">
+      <h3>What Quarterly CIDP Care May Include</h3>
       <ul>
         <li>Professional palm fertilization</li>
         <li>Preventative treatment when appropriate</li>
-        <li>Monitoring over time</li>
         <li>Watering-in after treatment</li>
-        <li>Recommendations for long-term palm health</li>
+        <li>Palm health monitoring</li>
+        <li>Recommendations for long-term care</li>
+        <li>Owner-performed service</li>
       </ul>
+      <p>
+        Typical investment for quarterly palm care is $350–$500 per visit, depending on palm size and treatment needs. One-time palm assessment and treatment visits start at $750.
+      </p>
+      <a class="cta-button" href="./index.html#services">View Palm Care Services</a>
     </div>
-
   </div>
 </section>
 
-<section class="content-section">
-  <h2>Local Canary Island Date Palm Care in North County</h2>
+<section>
+  <div class="content-wrap">
+    <h2>Local CIDP Care in North County San Diego</h2>
 
-  <p class="lead">
-    We regularly observe mature Canary Island Date Palms throughout North County communities including Escondido, Poway, Rancho Santa Fe, and surrounding areas where mature specimen palms contribute heavily to landscape character and curb appeal.
-  </p>
+    <p class="lead">
+      We regularly observe mature Canary Island Date Palms throughout Escondido, Poway, Rancho Santa Fe, Olivenhain, Encinitas, and surrounding North County communities. In many of these landscapes, mature palms are not background plants — they are central visual assets.
+    </p>
 
-  <div class="related-links">
-    <a href="./index.html#services">
-      Quarterly Palm Care
-    </a>
+    <p class="lead">
+      From historic neighborhoods with decades-old palms to larger properties where specimen palms frame the entire landscape, consistent care helps protect the character and long-term value these palms provide.
+    </p>
 
-    <a href="./sapw.html">
-      South American Palm Weevil Information
-    </a>
+    <div class="photo-strip">
+      <img src="./Green Valley.jpg" alt="Healthy mature palms in a San Diego residential landscape">
+      <img src="./treatment.jpg" alt="Owner-performed palm treatment in San Diego">
+      <img src="./lake poway_1.jpg" alt="North County San Diego palm landscape">
+    </div>
+  </div>
+</section>
 
-    <a href="./palm-journal-new.html">
-      Palm Journal
-    </a>
+<section class="dark-section">
+  <div class="content-wrap">
+    <h2>South American Palm Weevil Awareness</h2>
+
+    <p class="lead">
+      Canary Island Date Palms are especially important to monitor because they are a known target of South American Palm Weevil. By the time major symptoms are obvious, intervention can become more difficult.
+    </p>
+
+    <p class="lead">
+      Preventative care, local awareness, and regular observation are part of a long-term strategy for homeowners who want to protect mature palms before serious decline becomes visible.
+    </p>
+
+    <a class="cta-button" href="./sapw.html">Learn About Local SAPW Concerns</a>
+  </div>
+</section>
+
+<section>
+  <div class="content-wrap">
+    <h2>Related Palm Care Resources</h2>
+
+    <p class="lead">
+      Learn more about mature palm care, local field observations, and San Diego Palm Protection services.
+    </p>
+
+    <div class="related-links">
+      <a href="./index.html#services">Quarterly Palm Care Plans</a>
+      <a href="./sapw.html">South American Palm Weevil Information</a>
+      <a href="./palm-journal-new.html">Palm Journal</a>
+      <a href="./palm-care-escondido.html">Palm Care in Escondido</a>
+      <a href="./palm-care-poway.html">Palm Care in Poway</a>
+    </div>
   </div>
 </section>
 
 <section class="cta-section">
-  <h2>Concerned About a Canary Palm?</h2>
+  <h2>Concerned About a Canary Island Date Palm?</h2>
 
   <p>
-    Text or email a few photos — happy to take a look.
+    Text or email a few photos of your palm, crown, trunk, and surrounding landscape. We are happy to take a look and provide a professional opinion.
   </p>
 
-  <a class="cta-button"
-     href="mailto:sandiegopalmprotection@gmail.com?subject=Canary Palm Question">
-     Get a Professional Opinion
-  </a>
+  <div class="hero-buttons" style="justify-content:center;">
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Canary Palm Question">
+      Send a Few Palm Photos
+    </a>
+    <a class="secondary-button" href="tel:2624923135">
+      Call or Text 262-492-3135
+    </a>
+  </div>
 </section>
 
 <footer>
