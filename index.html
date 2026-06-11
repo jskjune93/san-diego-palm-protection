@@ -9,7 +9,1080 @@
 
 <style>
 * { box-sizing: border-box; }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Palm Journal | San Diego Palm Protection</title>
+<meta name="description" content="Local North County San Diego palm care in action. Field observations, palm health assessments, SAPW concerns, and preventative palm protection notes.">
 
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #0b2d13;
+}
+
+.topnav {
+  background: #063b16;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  min-height: 115px;
+  border-bottom: 4px solid #ffb31a;
+}
+
+.logo img {
+  height: 145px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-weight: 900;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.nav-separator {
+  color: #ffb31a;
+  font-weight: 900;
+}
+
+.call {
+  background: #ffb31a;
+  color: black !important;
+  padding: 14px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.hero {
+  min-height: 640px;
+  background:
+    linear-gradient(rgba(0,0,0,0.56), rgba(0,0,0,0.56)),
+    url("./journal-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 90px 6%;
+  color: white;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 6vw, 74px);
+  line-height: 1.0;
+  margin: 0 0 22px;
+  font-weight: 900;
+}
+
+.hero p {
+  font-size: 24px;
+  line-height: 1.45;
+  margin: 0 0 18px;
+}
+
+.highlight { color: #ffb31a; }
+
+.cta-button,
+.secondary-button {
+  display: inline-block;
+  padding: 16px 26px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+  margin-top: 14px;
+}
+
+.cta-button {
+  background: #ffb31a;
+  color: black;
+}
+
+.secondary-button {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
+  margin-left: 12px;
+}
+
+section {
+  padding: 65px 6%;
+}
+
+.section-wrap {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.intro {
+  text-align: center;
+  max-width: 950px;
+  margin: auto;
+}
+
+.intro h2 {
+  font-size: 40px;
+  margin: 0 0 16px;
+}
+
+.intro p {
+  font-size: 21px;
+  line-height: 1.55;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.story-grid.reverse {
+  grid-template-columns: 0.9fr 1.1fr;
+}
+
+.story-image img {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+}
+
+.story-content h2 {
+  font-size: 38px;
+  margin: 0 0 18px;
+  color: #063b16;
+}
+
+.story-content p {
+  font-size: 20px;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+  display: grid;
+  gap: 10px;
+}
+
+.checklist li {
+  background: #f4f0e2;
+  padding: 13px 16px;
+  border-left: 5px solid #ffb31a;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.photo-band {
+  background: #f4f0e2;
+}
+
+.photo-grid {
+  max-width: 1200px;
+  margin: 36px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.photo-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card div {
+  padding: 18px;
+}
+
+.photo-card h3 {
+  margin: 0 0 9px;
+  color: #063b16;
+  font-size: 22px;
+}
+
+.photo-card p {
+  margin: 0;
+  font-size: 17px;
+  line-height: 1.48;
+}
+
+.journal-entry {
+  background: #fff;
+  scroll-margin-top: 140px;
+}
+
+#grand-ave-cidp,
+#las-palmas-cidp {
+  scroll-margin-top: 120px;
+}
+
+.entry-card {
+  max-width: 1150px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.10);
+  border-bottom: 6px solid #ffb31a;
+}
+
+.entry-hero img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  object-position: center 42%;
+  display: block;
+}
+
+  .healthy-hero img {
+  width: 100%;
+  max-height: 760px;
+  object-fit: contain;
+  display: block;
+  background: #f4f0e2;
+  padding: 22px 22px 0 22px;
+}
+
+.entry-hero.side-by-side {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+}
+
+.entry-hero.side-by-side img {
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  display: block;
+}
+
+.entry-content {
+  padding: 42px;
+}
+
+.entry-label {
+  display: inline-block;
+  background: #f4f0e2;
+  color: #063b16;
+  font-weight: 900;
+  padding: 8px 13px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.entry-content h2 {
+  font-size: 42px;
+  line-height: 1.1;
+  margin: 0 0 12px;
+  color: #063b16;
+}
+
+.entry-date {
+  font-weight: 900;
+  color: #7a5a00;
+  margin-bottom: 24px;
+}
+
+.entry-content p {
+  font-size: 20px;
+  line-height: 1.58;
+  margin: 0 0 18px;
+}
+
+.entry-content h3 {
+  font-size: 28px;
+  margin: 34px 0 14px;
+  color: #063b16;
+}
+
+.entry-content ul {
+  margin: 18px 0 0;
+  padding-left: 22px;
+}
+
+.entry-content li {
+  font-size: 19px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+.entry-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 34px 0;
+}
+
+.single-photo-grid {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 520px;
+}
+
+.entry-photo {
+  background: #f4f0e2;
+  border-radius: 12px;
+  overflow: hidden;
+  border-bottom: 4px solid #ffb31a;
+}
+
+.entry-photo img {
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+  display: block;
+}
+
+.entry-photo p {
+  font-size: 16px;
+  line-height: 1.42;
+  margin: 0;
+  padding: 14px;
+}
+
+.entry-note {
+  background: #f4f0e2;
+  border-left: 6px solid #ffb31a;
+  padding: 22px;
+  border-radius: 10px;
+  margin-top: 28px;
+}
+
+.entry-note p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.assessment-cta {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 60px 6%;
+}
+
+.assessment-cta h2 {
+  font-size: 36px;
+  margin: 0 0 18px;
+}
+
+.assessment-cta p {
+  font-size: 22px;
+  line-height: 1.45;
+  max-width: 1000px;
+  margin: 0 auto 30px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.assessment-cta .secondary-button {
+  margin-left: 0;
+}
+
+.phone-line {
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffb31a;
+}
+
+.email-line {
+  margin-top: 28px;
+  font-size: 22px;
+}
+
+.email-line a { color: #ffb31a; }
+
+footer {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+@media(max-width: 900px){
+  .topnav {
+    flex-direction: column;
+    gap: 14px;
+    text-align: center;
+    height: auto;
+    padding: 20px 5%;
+  }
+
+  .logo img { height: 110px; }
+
+  .nav-links { justify-content: center; }
+
+  .hero {
+    min-height: 560px;
+    text-align: center;
+    background-position: center;
+  }
+
+  .hero p { font-size: 21px; }
+
+  .secondary-button {
+    margin-left: 0;
+  }
+
+  .story-grid,
+  .story-grid.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .story-grid.reverse .story-image {
+    order: -1;
+  }
+
+  .story-image img {
+    height: 360px;
+  }
+
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .photo-card img {
+    height: 340px;
+  }
+
+  .entry-hero img {
+    height: 360px;
+  }
+
+  .entry-content {
+    padding: 28px;
+  }
+
+  .entry-content h2 {
+    font-size: 32px;
+  }
+
+  .entry-photo-grid,
+  .single-photo-grid {
+    grid-template-columns: 1fr;
+    max-width: none;
+  }
+
+  .entry-photo img {
+    height: 330px;
+  }
+
+  .assessment-cta h2 { font-size: 30px; }
+
+  .assessment-cta p { font-size: 20px; }
+
+  .button-row {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .cta-button,
+  .secondary-button {
+    width: 100%;
+    max-width: 370px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topnav">
+  <div class="logo">
+    <a href="./index.html">
+      <img src="./logo.png" alt="San Diego Palm Health & Protection Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="./index.html">Home</a>
+    <span class="nav-separator">|</span>
+    <a href="./index.html#services">Services</a>
+    <span class="nav-separator">|</span>
+    <a href="./sapw.html">Local SAPW</a>
+    <span class="nav-separator">|</span>
+    <a href="./palm-journal-new.html">Palm Journal</a>
+    <span class="nav-separator">|</span>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">Contact</a>
+    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+  </nav>
+</header>
+
+<section class="journal-entry" id="las-palmas-cidp">
+  <div class="entry-card">
+
+    <div class="entry-hero">
+      <img 
+        src="./laspalmas.jpg" 
+        alt="Healthy mature Canary Island Date Palms at Las Palmas in Old Escondido"
+      >
+    </div>
+
+    <div class="entry-content">
+      <span class="entry-label">Local Field Notes</span>
+
+      <h2>A Reminder of What Healthy Canary Palms Can Still Look Like in Old Escondido</h2>
+
+      <p class="entry-date">Old Escondido | June 2026</p>
+
+      <p>
+        Driving through Old Escondido recently, I found myself stopping to admire a stand of exceptionally mature and healthy 
+        Canary Island Date Palms (<em>Phoenix canariensis</em>) on the Las Palmas property just around the corner from home.
+      </p>
+
+      <p>
+        In a time when many Southern California communities are increasingly losing mature palms to South American Palm Weevil pressure, 
+        seeing large specimens like these still thriving is worth recognizing.
+      </p>
+
+      <p>
+        These palms have clearly become part of the character of the property and neighborhood itself. Mature Canary Island Date Palms 
+        are not just landscaping — they are living landmarks that take decades to reach this scale and visual presence.
+      </p>
+
+      <p>
+        One thing that stands out in healthy mature Canary palms is the overall fullness of the canopy, strong color, balanced frond 
+        structure, and visible vigor in the crown. While no palm is immune to stressors, trees like these serve as a reminder of what 
+        proactive care and long-term stewardship can preserve.
+      </p>
+
+      <p>
+        I reached out to the property ownership simply to recognize what appears to be a beautiful stand of palms and to encourage 
+        continued attention to their health. In areas like Old Escondido, preserving mature specimens matters — once a palm of this age 
+        is lost, it cannot realistically be replaced within a generation.
+      </p>
+
+      <p>
+        With South American Palm Weevil continuing to spread through San Diego County, monitoring and proactive management of mature 
+        Canary Island Date Palms is becoming increasingly important, particularly for properties where palms contribute significantly 
+        to the overall appearance and value of the landscape.
+      </p>
+
+      <p>
+        These Las Palmas palms are a nice reminder that many iconic Canary palms in our community are still standing strong.
+      </p>
+
+      <div class="entry-note">
+        <p>
+          Healthy mature palms are decades in the making. Stewardship today helps preserve the character and value of properties for years to come.
+        </p>
+      </div>
+
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+        Request a Palm Assessment
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="journal-entry">
+  <div class="entry-card">
+
+    <div class="entry-hero">
+      <img 
+        src="./grand2.jpg" 
+        alt="Grand Avenue in Old Escondido near Manzanita Roasting Company"
+      >
+    </div>
+
+    <div class="entry-content">
+      <span class="entry-label">Local Field Notes</span>
+
+      <h2>What’s Happening to the Canary Palms on Grand Avenue?</h2>
+
+      <p class="entry-date">Old Escondido | June 2026</p>
+
+      <p>
+        Escondido is the heart of North County San Diego's rich history and culture, and Grand Avenue is the heart of Old Escondido. Over the last several years, the city and local businesses have worked hard to bring new life back to this historic corridor — from new coffee shops and restaurants to revitalized storefronts and community gathering spaces. The Grand Avenue Vision Project is the City of Escondido's initiative to preserve and breathe new energy into the heart of Escondido. 
+      </p>
+
+      <p>
+        While walking Grand Avenue this week, I noticed something concerning happening quietly in plain sight: some of the mature Canary Island Date Palms (<em>Phoenix canariensis</em>) that help define the character of this historic street appear to be in serious decline.
+      </p>
+
+      <p>
+        These palms are not just landscaping. Many of the iconic specimens standing across Escondido and North County today were planted 50–100+ years ago, and have become part of the visual identity of many communities, estates, and historic areas. 
+      </p>
+
+      <div class="entry-photo-grid">
+
+        <div class="entry-photo">
+          <img src="./grand1.jpg" alt="Healthy and declining Canary palms across the street from one another on Grand Avenue">
+          <p>
+            Two mature Canary palms - one still healthy, full, and iconic, while the other nearby appears to be in severe decline. These are right across the street from the following photo ->
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./grand.jpg" alt="Declining Canary Island Date Palm on Grand Avenue in Old Escondido">
+          <p>
+            A declining Canary Island Date Palm on Grand Avenue, showing how quickly a mature palm can become part of a larger neighborhood concern. Across the street from the two trees in before photo
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./grand2.jpg" alt="Grand Avenue revitalization in Old Escondido">
+          <p>
+            Grand Avenue continues to see new investment and local energy — making the condition of its Canary Island Palms especially valuable. 
+          </p>
+        </div>
+
+      </div>
+
+      <p>
+        In many parts of San Diego County, South American Palm Weevil (SAPW) has become an increasing concern for Canary Island Date Palms. While not every declining palm is necessarily related to SAPW, awareness and early observation are becoming more important as mature palms continue to be lost throughout the region.
+      </p>
+
+      <p>
+        Unfortunately, by the time major symptoms become obvious, intervention can become much more difficult. Once a mature Canary palm reaches advanced decline, recovery may no longer be possible — meaning the loss of decades of growth and part of the historic character that makes places like Grand Avenue special.
+      </p>
+
+      <p>
+        These two palms pictured above are located directly across the street from one another on Grand Avenue. Seeing that contrast in person was a reminder that this issue is very real. <a href="#grand-ave-cidp">Read the related field note from Escondido’s historic district</a>.
+      </p>
+
+      <h3>Why This Matters for Old Escondido</h3>
+
+      <p>
+        Whether you own a historic home, manage a commercial property, belong to a church, or simply care about the character of Old Escondido, now is a good time to pay attention to the condition of mature Canary palms.
+      </p>
+
+      <div class="entry-note">
+        <p>
+          Early observation matters. Monitoring matters. Awareness matters. Protect your assets.
+        </p>
+      </div>
+
+      <p>
+        If you’ve noticed changes in a Canary palm in Escondido or elsewhere in North County, feel free to reach out with questions or send photos. I’m always happy to take a look and help point people in the right direction.
+      </p>
+
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+        Request a Palm Assessment
+      </a>
+
+    </div>
+  </div>
+</section>
+
+      
+<section class="journal-entry">
+  <div class="entry-card">
+
+    <div class="entry-hero">
+      <img 
+        src="./grape1.jpg" 
+        alt="Healthy Canary Island Date Palm in Old Escondido"
+      >
+    </div>
+
+    <div class="entry-content" id="grand-ave-cidp">
+      <span class="entry-label">Local Field Notes</span>
+      <h2>A Walk Through Escondido’s Historic District</h2>
+
+      <p class="entry-date">Old Escondido | June 2026</p>
+
+      <p>
+        I like to walk through my neighborhood, and tonight while walking through Escondido’s historic district, I had a good conversation with a local resident about Canary Island Date Palms and the growing concern around South American Palm Weevil activity in North County.
+      </p>
+
+      <p>
+        His comment stuck with me:
+      </p>
+
+      <p>
+        <strong>“It’s only a matter of time with these weevils.”</strong>
+      </p>
+
+      <p>
+        We talked about a nearby palm that had recently been removed. According to him, multiple adult weevils were reportedly found after the palm was cut down — a reminder that serious internal palm damage may not always be obvious from the outside until the decline is already advanced.
+      </p>
+
+      <p>
+        On the same walk, the contrast was clear: beautiful, healthy Canary Island Date Palms still anchoring historic properties, and other palms already showing severe decline or loss.
+      </p>
+
+      <div class="entry-photo-grid">
+
+        <div class="entry-photo">
+          <img src="./grape1.jpg" alt="Healthy Canary Island Date Palm in Escondido Historic District">
+          <p>
+            Healthy, mature Canary Island Date Palms remain one of the defining landscape features of Escondido’s historic neighborhoods.
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./grape2.jpg" alt="Palm stump from a recently removed Canary Island Date Palm">
+          <p>
+            A recently removed palm stump discussed during the walk. Adult weevils were reportedly found after removal.
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./grape4.jpg" alt="Dead Canary Island Date Palms in Escondido Historic District">
+          <p>
+            Nearby dead palms show the other side of the issue: once advanced decline is visible, options may be much more limited.
+          </p>
+        </div>
+
+      </div>
+
+      <h3>Why These Local Observations Matter</h3>
+
+      <p>
+        Palm health is often about catching small changes early. Crown thinning, sudden browning, weak spear growth, trunk damage, or unexplained decline can all be worth a closer look — especially when valuable specimen palms are located near known palm losses.
+      </p>
+
+      <p>
+        Escondido’s historic district has some incredible homes with incredible palms. The goal is to keep the properties and palms attractive for years to come.
+      </p>
+
+      <div class="entry-note">
+        <p>
+          Local observation, early monitoring, and preventative care can make a meaningful difference before visible decline becomes severe.
+        </p>
+      </div>
+
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+        Request a Palm Assessment
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="journal-entry">
+  <div class="entry-card">
+
+    <div class="entry-hero">
+    <img 
+    src="./RSF3.jpg" 
+    alt="Healthy Canary Island Date Palm in Rancho Santa Fe"
+    >
+    </div>
+    
+    <div class="entry-content">
+      <span class="entry-label">Field Notes</span>
+
+      <h2>Palm Walk: Rancho Santa Fe Observations</h2>
+
+      <p class="entry-date">Rancho Santa Fe | May 2026</p>
+
+      <p>
+        This week, San Diego Palm Protection spent time walking parts of Rancho Santa Fe observing mature Canary Island Date Palms (CIDPs), palm health conditions, local SAPW awareness efforts, and maintenance practices.
+      </p>
+
+      <p>
+        While many palms appeared healthy and well-maintained, several observations stood out as reminders that prevention, monitoring, and proper care matter long before visible decline becomes severe.
+      </p>
+
+      <div class="entry-photo-grid">
+
+        <div class="entry-photo">
+          <img src="./RSF4.jpg" alt="CIDP showing possible decline in Rancho Santa Fe">
+          <p>
+            Not every palm observed appeared equally healthy. Compared to the healy CIDP on the right, the left is showing as trunk only after significant canopy loss. Significant changes in canopy structure may be worth monitoring more closely
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./RSF1.jpg" alt="UC monitoring trap for South American Palm Weevil">
+          <p>
+            UC monitoring traps continue to appear throughout North County, reflecting ongoing awareness and monitoring efforts related to South American Palm Weevil (SAPW).
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./RSF2.jpg" alt="Over-trimmed palm in Rancho Santa Fe">
+          <p>
+            Over-trimming, sometimes called a “hurricane cut,” may leave palms stressed over time. Not only is the SAPW attracted to stressed CIDP's, maintaining fuller canopies is often just healthier for the tree.
+          </p>
+        </div>
+
+      </div>
+
+      <h3>What Homeowners May Wish To Watch For</h3>
+
+      <ul>
+        <li>Crown thinning or uneven canopy structure</li>
+        <li>Weak or distorted spear growth</li>
+        <li>Sudden browning or missing upper fronds</li>
+        <li>Signs of irrigation or nutrient stress</li>
+        <li>Over-trimming or improper maintenance practices</li>
+      </ul>
+
+      <div class="entry-note">
+        <p>
+          Healthy palms are often the result of consistency over time. Early observation and preventative care may help avoid more expensive problems later.
+        </p>
+      </div>
+
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+        Request a Palm Assessment
+      </a>
+
+    </div>
+  </div>
+</section>
+
+  <section class="journal-entry">
+  <div class="entry-card">
+
+<div class="entry-hero side-by-side healthy-hero">
+
+  <img 
+    src="./healthy.jpg" 
+    alt="Healthy Canary Island Date Palm with full crown structure"
+  >
+
+  <img 
+    src="./RSF2.jpg" 
+    alt="Over-trimmed Canary Island Date Palm with sparse crown"
+  >
+
+</div>
+
+    <div class="entry-content">
+      <span class="entry-label">Palm Health Notes</span>
+
+      <h2>What Healthy Palm Growth Looks Like</h2>
+
+      <p class="entry-date">North County San Diego | May 2026</p>
+
+      <p>
+      Healthy palms are often recognized by overall structure before anything else. A mature Canary Island Date Palm (CIDP) will typically show strong crown fullness, balanced canopy shape, and consistent frond development.
+      </p>
+
+      <p>
+      The comparison above shows two very different canopy styles — one fuller and more balanced, the other heavily trimmed with a much more limited canopy.
+      </p>
+
+     <h3>Healthy Canopy vs. Heavy Trimming</h3>
+
+      <p>
+      Healthy CIDPs are often recognized by strong crown fullness and balanced structure.
+      </p>
+
+      <p>
+      In contrast, aggressive trimming — sometimes called a “hurricane cut” — may leave palms looking sparse and reduce the fuller, natural appearance many homeowners value. Preserving healthy green fronds is often part of maintaining a more balanced canopy over time.
+      </p>
+      <h3>Why Canopy Fullness Matters</h3>
+
+      <p>
+      Palm health is not only about pests or visible decline. Irrigation, nutrition, trimming practices, and long-term care all influence how a palm looks and performs over time.
+      </p>
+
+      <h3>What Homeowners May Wish To Watch For</h3>
+
+      <ul>
+        <li>Strong crown fullness and balanced canopy structure</li>
+        <li>Consistent green color and healthy new spear growth</li>
+        <li>Sudden thinning, yellowing, browning, or uneven growth</li>
+        <li>Over-trimming or repeated removal of healthy green fronds</li>
+        <li>Irrigation stress, nutrient issues, pests, or other signs of decline</li>
+      </ul>
+
+     <div class="entry-note">
+  <p>
+    Palm protection is not just reacting to problems — it is preserving healthy, attractive palms through observation and long-term care.
+  </p>
+</div>
+
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+        Request a Palm Assessment
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="journal-entry">
+  <div class="entry-card">
+
+    <div class="entry-hero side-by-side">
+      <img 
+        src="./exhibit_8.jpg" 
+        alt="Suspected palm weevil larva collected during a local assessment"
+      >
+
+      <img 
+        src="./exhibit_8a.JPG" 
+        alt="Reference image of Rhynchophorus cruentatus larvae for comparison"
+      >
+    </div>
+    <div class="entry-content">
+      <span class="entry-label">Field Observation</span>
+
+      <h2>CIDP Assessment: Local Palm Health Concerns</h2>
+
+      <p class="entry-date">Old Escondido | May 2026</p>
+
+      <p>
+        This week, San Diego Palm Protection completed a local palm health assessment involving multiple mature
+        Canary Island Date Palms (CIDPs) exhibiting advanced decline.
+      </p>
+
+      <p>
+        During the visit, several CIDPs displayed severe canopy loss and significant crown deterioration. In addition,
+        a palm-boring larval specimen had reportedly been collected on-site, raising concern for possible South American
+        Palm Weevil (SAPW) activity.
+      </p>
+
+      <p>
+        While every palm and property are different, the overall conditions observed suggested substantial palm health concerns that warrant closer attention.
+      </p>
+
+      <div class="entry-photo-grid">
+        <div class="entry-photo">
+          <img src="./exhibit_5.jpg" alt="Canary Island Date Palm with severe crown deterioration and canopy collapse">
+          <p>
+            Severe canopy loss and crown deterioration can indicate advanced decline in mature Canary Island Date Palms.
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./exhibit_8.jpg" alt="Palm-boring larval specimen reportedly collected near declining Canary Island Date Palms">
+          <p>
+            A palm-boring larval specimen was reportedly collected on-site near declining CIDPs during the assessment.
+          </p>
+        </div>
+
+        <div class="entry-photo">
+          <img src="./exhibit_1.jpg" alt="Healthy Canary Island Date Palms near declining palms in a high-risk setting">
+          <p>
+            Healthy-appearing CIDPs located near declining specimens may warrant closer monitoring and proactive protection.
+          </p>
+        </div>
+      </div>
+
+      <h3>Why Nearby Healthy Palms Matter</h3>
+
+      <p>
+        One of the most notable observations during this assessment was that several healthy CIDPs remained in close
+        proximity to the declining palms. That type of setting can create an elevated-risk environment, especially when
+        mature palms are close together and there is concern for pest activity nearby.
+      </p>
+
+      <p>
+        This raises an important question many homeowners face:
+      </p>
+
+      <p>
+        <strong>Should healthy palms simply be monitored — or proactively protected?</strong>
+      </p>
+
+      <p>
+        One challenge with SAPW-related decline is that symptoms may not become obvious until substantial internal damage
+        has already occurred. By the time upper crown decline or canopy collapse becomes visible, treatment options may
+        be more limited.
+      </p>
+
+      <h3>Signs Homeowners May Wish to Watch For</h3>
+
+      <ul>
+        <li>Crown thinning or noticeable canopy changes</li>
+        <li>Missing upper fronds or loss of crown fullness</li>
+        <li>Spear discoloration, distortion, or decline</li>
+        <li>Sudden browning or rapid canopy collapse</li>
+        <li>Unusual trunk damage, wet areas, holes, or frass-like material</li>
+      </ul>
+
+      <div class="entry-note">
+        <p>
+          The goal of an assessment is to better understand what may be occurring and identify
+          opportunities to protect healthy palms while options remain.
+        </p>
+      </div>
+
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+        Request a Palm Assessment
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="assessment-cta" id="contact">
+  <h2>Want a Free First Look?</h2>
+
+  <p>
+    Text or email photos of your palms. Include a full photo, crown photo if visible, trunk photo,
+    and any brown, thinning, wet, damaged, or unusual areas.
+  </p>
+
+  <div class="button-row">
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">
+      📧 Send Palm Photos
+    </a>
+
+    <a class="secondary-button" href="./index.html">
+      Back to Home
+    </a>
+  </div>
+
+  <p class="phone-line">
+    📞 Call or Text 262-492-3135
+  </p>
+
+  <p class="email-line">
+    <strong>Email:</strong>
+    <a href="mailto:sandiegopalmprotection@gmail.com">
+      sandiegopalmprotection@gmail.com
+    </a>
+  </p>
+</section>
+
+<footer>
+  San Diego Palm Protection | Quarterly Palm Health, Protection, Sourcing & Specialty Specimen Guidance
+</footer>
+</body>
+</html>
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -589,11 +1662,11 @@ footer {
     </h1>
 
     <p>
-      We help busy homeowners keep mature palms green, healthy, and protected through consistent, owner-performed palm care.
+      We help busy homeowners keep protect their mature palm trees. Your palms are an asset to your landscape - we keep them green, healthy, and protected so you don't have to worry about it.
     </p>
 
     <p>
-      Professional palm fertilization, preventative treatment when appropriate, watering-in, and health monitoring — without the time, guesswork, or maintenance burden.
+      Professional palm fertilization, preventative treatments, watering-in, and health monitoring. Protect your time, protect your assets. 
     </p>
 
 <div class="hero-buttons">
