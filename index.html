@@ -506,6 +506,93 @@ footer {
     margin: auto;
   }
 }
+
+
+/* Light-touch conversion additions */
+.nav-cta {
+  background: #ffb31a;
+  color: black !important;
+  padding: 12px 18px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.quick-assessment-strip {
+  background: #f8f6ef;
+  border-top: 1px solid #e6dcc3;
+  border-bottom: 1px solid #e6dcc3;
+  padding: 34px 6%;
+  text-align: center;
+}
+.quick-assessment-strip h2 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 4vw, 38px);
+  color: #063b16;
+}
+.quick-assessment-strip p {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.quick-assessment-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.quick-assessment-actions a {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+}
+.quick-assessment-actions .primary-action {
+  background: #ffb31a;
+  color: black;
+}
+.quick-assessment-actions .secondary-action {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
+}
+.mobile-sticky-contact {
+  display: none;
+}
+@media(max-width: 900px){
+  body { padding-bottom: 74px; }
+  .nav-cta { display: inline-block; margin-top: 6px; }
+  .mobile-sticky-contact {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #063b16;
+    border-top: 3px solid #ffb31a;
+    box-shadow: 0 -4px 14px rgba(0,0,0,0.18);
+  }
+  .mobile-sticky-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    text-align: center;
+    padding: 14px 8px;
+    font-size: 14px;
+    border-right: 1px solid rgba(255,255,255,0.18);
+  }
+  .mobile-sticky-contact a:last-child {
+    border-right: none;
+    background: #ffb31a;
+    color: black;
+  }
+}
+
 </style>
 <meta name="google-site-verification" content="j22OLD5tPSCDJbZptb41c_NojwR6N0oC3p0H2yoK0Ck" />
 </head>
@@ -528,8 +615,9 @@ footer {
     <span class="nav-separator">|</span>
     <a href="./palm-journal-new.html">Palm Journal</a>
     <span class="nav-separator">|</span>
-    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">Contact</a>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Request Palm Assessment">Contact</a>
     <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
   </nav>
 </header>
 
@@ -546,7 +634,7 @@ footer {
     <p>Peace of mind, knowing your palms are being cared for year-round.</p>
 
     <div class="hero-buttons">
-      <a class="cta-button" href="tel:2624923135">Get a Professional Opinion</a>
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Palm Assessment</a>
 
       <a class="secondary-hero-button"
          href="https://www.google.com/search?sca_esv=cc38e1736fb87508&authuser=1&sxsrf=ANbL-n6XkuvKFkF0QjuYZvdNFw-Tj-WB9g%3A1779334056337&q=San%20Diego%20Palm%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMQqGZyYp-CSmZqerxCQmJOrEFCUX5KaXJKZnwcANfU0IEUAAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwjGofXyt8mUAxUrKEQIHceDJjIQrMcEegQIEBAC"
@@ -557,6 +645,16 @@ footer {
     <p class="local-note">Questions? Text or email us.</p>
   </div>
 </section>
+
+<section class="quick-assessment-strip">
+  <h2>Concerned About a Mature Palm?</h2>
+  <p>Send a few photos for a first look, or request a palm assessment for Canary Island Date Palms, SAPW concerns, nutrient decline, and quarterly palm stewardship.</p>
+  <div class="quick-assessment-actions">
+    <a class="primary-action" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Palm Assessment</a>
+    <a class="secondary-action" href="sms:2624923135">Text Palm Photos</a>
+  </div>
+</section>
+
 
 <div class="bottom-bar">
   <div><strong>Owner-Performed Service</strong>Every treatment personally handled</div>
@@ -643,7 +741,7 @@ footer {
         <li>Health monitoring & recommendations</li>
       </ul>
       <p class="service-note">Best for mature palms and homeowners who want consistent, worry-free care.</p>
-      <a href="#contact">Get a Professional Opinion</a>
+      <a href="#contact">Request Palm Assessment</a>
     </div>
 
     <div class="expanded-service-card">
@@ -721,7 +819,7 @@ footer {
   <p>Text or email a few photos of your palm or yard — happy to take a look.</p>
 
   <div class="button-row">
-    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Free Palm Assessment">📧 Send a Few Palm Photos</a>
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Request Palm Assessment">📧 Send a Few Palm Photos</a>
     <a class="secondary-button" href="#services">View Services</a>
   </div>
 
@@ -736,6 +834,13 @@ footer {
 <footer>
   San Diego Palm Protection | Quarterly Palm Care, Sourcing & Specialty Specimen Guidance
 </footer>
+
+
+<div class="mobile-sticky-contact" aria-label="Quick contact options">
+  <a href="sms:2624923135">Text Photos</a>
+  <a href="tel:2624923135">Call</a>
+  <a href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Assessment</a>
+</div>
 
 </body>
 </html>
