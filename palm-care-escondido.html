@@ -305,6 +305,93 @@ footer {
     padding: 75px 6%;
   }
 }
+
+
+/* Light-touch conversion additions */
+.nav-cta {
+  background: #ffb31a;
+  color: black !important;
+  padding: 12px 18px;
+  border-radius: 9px;
+  text-decoration: none;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.quick-assessment-strip {
+  background: #f8f6ef;
+  border-top: 1px solid #e6dcc3;
+  border-bottom: 1px solid #e6dcc3;
+  padding: 34px 6%;
+  text-align: center;
+}
+.quick-assessment-strip h2 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 4vw, 38px);
+  color: #063b16;
+}
+.quick-assessment-strip p {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.quick-assessment-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+.quick-assessment-actions a {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+}
+.quick-assessment-actions .primary-action {
+  background: #ffb31a;
+  color: black;
+}
+.quick-assessment-actions .secondary-action {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
+}
+.mobile-sticky-contact {
+  display: none;
+}
+@media(max-width: 900px){
+  body { padding-bottom: 74px; }
+  .nav-cta { display: inline-block; margin-top: 6px; }
+  .mobile-sticky-contact {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #063b16;
+    border-top: 3px solid #ffb31a;
+    box-shadow: 0 -4px 14px rgba(0,0,0,0.18);
+  }
+  .mobile-sticky-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    text-align: center;
+    padding: 14px 8px;
+    font-size: 14px;
+    border-right: 1px solid rgba(255,255,255,0.18);
+  }
+  .mobile-sticky-contact a:last-child {
+    border-right: none;
+    background: #ffb31a;
+    color: black;
+  }
+}
+
 </style>
 </head>
 
@@ -328,6 +415,7 @@ footer {
     <span class="nav-separator">|</span>
     <a href="mailto:sandiegopalmprotection@gmail.com">Contact</a>
     <a class="call" href="tel:2624923135">📞 262-492-3135</a>
+    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
   </nav>
 </header>
 
@@ -344,6 +432,16 @@ footer {
     </p>
   </div>
 </section>
+
+<section class="quick-assessment-strip">
+  <h2>Concerned About a Mature Palm?</h2>
+  <p>Send a few photos for a first look, or request a palm assessment for Canary Island Date Palms, SAPW concerns, nutrient decline, and quarterly palm stewardship.</p>
+  <div class="quick-assessment-actions">
+    <a class="primary-action" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Palm Assessment</a>
+    <a class="secondary-action" href="sms:2624923135">Text Palm Photos</a>
+  </div>
+</section>
+
 
 <section class="content-section">
   <h2>Protecting Escondido’s Mature Palm Character</h2>
@@ -492,7 +590,7 @@ footer {
   </p>
 
   <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido Palm Care Question">
-    Get a Professional Opinion
+    Request Palm Assessment
   </a>
 
   <p style="margin-top:22px;">
@@ -503,6 +601,13 @@ footer {
 <footer>
   San Diego Palm Protection | Palm Care in Escondido, CA
 </footer>
+
+
+<div class="mobile-sticky-contact" aria-label="Quick contact options">
+  <a href="sms:2624923135">Text Photos</a>
+  <a href="tel:2624923135">Call</a>
+  <a href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Assessment</a>
+</div>
 
 </body>
 </html>
