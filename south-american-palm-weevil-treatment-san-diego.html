@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,8 +94,17 @@ body {
 }
 
 .cta-button { background: #ffb31a; color: black; }
-.secondary-button { background: white; color: #063b16; border: 2px solid #ffb31a; margin-left: 10px; }
-.secondary-button:hover { background: #ffb31a; color: black; }
+.secondary-button {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
+  margin-left: 10px;
+}
+
+.secondary-button:hover {
+  background: #ffb31a;
+  color: black;
+}
 
 section { padding: 70px 6%; }
 
@@ -151,7 +161,9 @@ h2 {
   line-height: 1.6;
 }
 
-.card ul { padding-left: 20px; }
+.card ul {
+  padding-left: 20px;
+}
 
 .image-band {
   background: #f8f6ef;
@@ -163,15 +175,32 @@ h2 {
   gap: 16px;
   max-width: 1300px;
   margin: 0 auto;
+  align-items: stretch;
 }
 
-.image-grid img {
+.image-card {
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.image-card img {
   width: 100%;
   height: 360px;
   object-fit: cover;
-  border-radius: 14px;
   display: block;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.image-card p {
+  margin: 0;
+  padding: 18px;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #063b16;
+  background: white;
+  font-weight: 600;
 }
 
 .info-panel {
@@ -201,7 +230,10 @@ h2 {
   background: white;
 }
 
-.related-links a:hover { background: #ffb31a; color: black; }
+.related-links a:hover {
+  background: #ffb31a;
+  color: black;
+}
 
 .cta-section {
   background: #063b16;
@@ -210,7 +242,13 @@ h2 {
 }
 
 .cta-section h2 { color: white; }
-.cta-section p { font-size: 20px; line-height: 1.6; max-width: 880px; margin: 0 auto 18px; }
+
+.cta-section p {
+  font-size: 20px;
+  line-height: 1.6;
+  max-width: 880px;
+  margin: 0 auto 18px;
+}
 
 footer {
   background: #063b16;
@@ -221,107 +259,34 @@ footer {
 
 @media(max-width: 1000px){
   .card-grid,
-  .image-grid { grid-template-columns: 1fr; }
-  .image-grid img { height: 320px; }
-}
-
-@media(max-width: 900px){
-  .topnav { flex-direction: column; gap: 15px; text-align: center; }
-  .nav-links { justify-content: center; }
-  .secondary-button { margin-left: 0; }
-}
-
-
-/* Light-touch conversion additions */
-.nav-cta {
-  background: #ffb31a;
-  color: black !important;
-  padding: 12px 18px;
-  border-radius: 9px;
-  text-decoration: none;
-  font-weight: 900;
-  white-space: nowrap;
-}
-.quick-assessment-strip {
-  background: #f8f6ef;
-  border-top: 1px solid #e6dcc3;
-  border-bottom: 1px solid #e6dcc3;
-  padding: 34px 6%;
-  text-align: center;
-}
-.quick-assessment-strip h2 {
-  margin: 0 0 10px;
-  font-size: clamp(28px, 4vw, 38px);
-  color: #063b16;
-}
-.quick-assessment-strip p {
-  max-width: 900px;
-  margin: 0 auto 16px;
-  font-size: 20px;
-  line-height: 1.5;
-}
-.quick-assessment-actions {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-.quick-assessment-actions a {
-  display: inline-block;
-  padding: 14px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 900;
-}
-.quick-assessment-actions .primary-action {
-  background: #ffb31a;
-  color: black;
-}
-.quick-assessment-actions .secondary-action {
-  background: white;
-  color: #063b16;
-  border: 2px solid #ffb31a;
-}
-.mobile-sticky-contact {
-  display: none;
-}
-@media(max-width: 900px){
-  body { padding-bottom: 74px; }
-  .nav-cta { display: inline-block; margin-top: 6px; }
-  .mobile-sticky-contact {
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background: #063b16;
-    border-top: 3px solid #ffb31a;
-    box-shadow: 0 -4px 14px rgba(0,0,0,0.18);
+  .image-grid {
+    grid-template-columns: 1fr;
   }
-  .mobile-sticky-contact a {
-    color: white;
-    text-decoration: none;
-    font-weight: 900;
+
+  .image-card img {
+    height: 320px;
+  }
+}
+
+@media(max-width: 900px){
+  .topnav {
+    flex-direction: column;
+    gap: 15px;
     text-align: center;
-    padding: 14px 8px;
-    font-size: 14px;
-    border-right: 1px solid rgba(255,255,255,0.18);
   }
-  .mobile-sticky-contact a:last-child {
-    border-right: none;
-    background: #ffb31a;
-    color: black;
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .secondary-button {
+    margin-left: 0;
   }
 }
-
 </style>
 </head>
 
 <body>
-
 <header class="topnav">
   <div class="logo">
     <a href="./index.html">
@@ -409,11 +374,33 @@ footer {
 
 <section class="image-band">
   <div class="image-grid">
-    <img src="./Green Valley.jpg" alt="Mature palms in a San Diego landscape">
-    <img src="./treatment.jpg" alt="Owner-performed palm treatment service in San Diego">
-    <img src="./lake poway_1.jpg" alt="North County San Diego palm landscape">
+
+    <div class="image-card">
+      <img src="./Green Valley.jpg" alt="Mature Canary Island Date Palms in San Diego">
+      <p>
+        Mature Canary Island Date Palms can represent decades of growth and significant landscape value.
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="./treatment.jpg" alt="Palm decline in an otherwise healthy San Diego landscape">
+      <p>
+        Even otherwise healthy, well-maintained properties can experience palm decline that deserves attention.
+      </p>
+    </div>
+
+    <div class="image-card">
+      <img src="./lake poway_1.jpg" alt="Protected mature palms in North County San Diego">
+      <p>
+        Long-term stewardship helps preserve the health and appearance of mature palms.
+      </p>
+    </div>
+
   </div>
 </section>
+
+</body>
+</html>
 
 <section class="content-section">
   <h2>Signs a Palm May Need Attention</h2>
