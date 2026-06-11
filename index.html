@@ -328,10 +328,26 @@ h2 {
 .service-overview-section {
   background: #fff;
 }
+<style>
 .featured-service {
   border: 3px solid #d8a117;
-  transform: scale(1.02);
+  box-shadow:
+    0 10px 28px rgba(0,0,0,0.12),
+    0 0 0 4px rgba(216,161,23,0.12);
+  position: relative;
+  transform: translateY(-8px);
+  overflow: hidden;
 }
+.featured-service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #d8a117;
+}
+</style>
 .expanded-service-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
