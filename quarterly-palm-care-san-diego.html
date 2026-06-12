@@ -49,7 +49,57 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
 .cta-section { background: #063b16; color: white; text-align: center; }
 .cta-section h2 { color: white; }
 .cta-section p { font-size: 20px; line-height: 1.5; }
-footer { background: #063b16; color: white; text-align: center; padding: 25px; }
+.assessment-cta {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 70px 6%;
+}
+
+.assessment-cta h2 {
+  color: white;
+  font-size: 40px;
+  margin: 0 0 18px;
+}
+
+.assessment-cta p {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 850px;
+  margin: 0 auto 18px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.secondary-button {
+  display: inline-block;
+  background: white;
+  color: #063b16;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 16px 28px;
+  border-radius: 10px;
+  border: 2px solid #ffb31a;
+}
+
+.secondary-button:hover {
+  background: #ffb31a;
+  color: black;
+}
+
+.assessment-cta a {
+  color: #ffb31a;
+}
+
+.assessment-cta .cta-button {
+  color: black;
+}footer { background: #063b16; color: white; text-align: center; padding: 25px; }
 @media(max-width: 1000px){ .card-grid, .image-row, .steps { grid-template-columns: 1fr; } .image-row img { height: 300px; } .topnav { flex-direction: column; gap: 15px; text-align: center; } .nav-links { justify-content: center; } .secondary-button { margin-left: 0; } }
 
 
