@@ -28,6 +28,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 5%;
+  min-height: 115px;
   border-bottom: 4px solid #ffb31a;
 }
 
@@ -49,6 +50,7 @@ body {
 .nav-links a {
   color: white;
   text-decoration: none;
+  font-weight: 900;
 }
 
 .nav-separator { color: #ffb31a; }
@@ -66,9 +68,6 @@ body {
 
 .hero {
   min-height: 560px;
-  background:
-    linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
-    url("./background.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -120,25 +119,27 @@ body {
 .cta-button,
 .primary-action {
   background: #ffb31a;
-  color: black;
+  color: black !important;
 }
 
 .secondary-button,
 .secondary-action {
   background: white;
-  color: #063b16;
+  color: #063b16 !important;
   border: 2px solid #ffb31a;
 }
 
 .secondary-button:hover,
-.secondary-action:hover {
+.secondary-action:hover,
+.related-links a:hover {
   background: #ffb31a;
-  color: black;
+  color: black !important;
 }
 
 section { padding: 70px 6%; }
 
-.content-section {
+.content-section,
+.content-wrap {
   max-width: 1120px;
   margin: auto;
 }
@@ -152,6 +153,7 @@ h2 {
 
 h3 {
   color: #063b16;
+  margin-top: 0;
 }
 
 .lead {
@@ -159,7 +161,7 @@ h3 {
   font-size: 21px;
   line-height: 1.65;
   max-width: 920px;
-  margin: 0 auto 28px;
+  margin: 0 auto 38px;
 }
 
 .quick-assessment-strip {
@@ -182,12 +184,49 @@ h3 {
   line-height: 1.5;
 }
 
+.feature-section,
 .local-section,
-.observation-section {
+.observation-section,
+.cidp-gallery-section {
   background: #f8f6ef;
 }
 
-.image-grid {
+.observation-section,
+.local-examples-section {
+  border-top: 1px solid #e6dcc3;
+  border-bottom: 1px solid #e6dcc3;
+}
+
+.full-width-copy {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.full-width-copy p,
+.two-column p {
+  font-size: 19px;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.intro-lead {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 34px;
+  align-items: center;
+  max-width: 1180px;
+  margin: auto;
+}
+
+.image-grid,
+.photo-strip,
+.cidp-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 18px;
@@ -202,12 +241,18 @@ h3 {
   background: #f4f0e2;
 }
 
-.image-card img {
+.image-card img,
+.photo-strip img,
+.cidp-gallery img {
   width: 100%;
   height: 340px;
   object-fit: cover;
+  border-radius: 14px;
   display: block;
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
 }
+
+.image-card img { border-radius: 0; box-shadow: none; }
 
 .image-card p {
   padding: 16px 18px;
@@ -219,9 +264,14 @@ h3 {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-top: 35px;
+}
+
+.card-grid.three-card-grid,
+.card-grid:has(.card:nth-child(3)) {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
@@ -233,75 +283,59 @@ h3 {
 }
 
 .card h3 {
-  margin-top: 0;
   font-size: 24px;
+  margin-top: 0;
+}
+
+.card-icon {
+  color: #d8a117;
+  font-size: 2rem;
+  margin-bottom: 14px;
 }
 
 .card p,
-.card li {
+.card li,
+.service-box p,
+.service-box li,
+.service-item {
   font-size: 18px;
   line-height: 1.6;
 }
 
-.card ul { padding-left: 22px; }
+.card ul,
+.service-box ul { padding-left: 22px; }
 
-.observation-box {
+.service-box {
   background: white;
   border: 3px solid #d8a117;
   border-radius: 16px;
   padding: 34px;
-  max-width: 1000px;
-  margin: 34px auto 0;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  max-width: 960px;
+  margin: 36px auto 0;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12), 0 0 0 4px rgba(216,161,23,0.12);
 }
 
-.observation-box p,
-.observation-box li {
-  font-size: 18px;
-  line-height: 1.7;
-}
+.service-box ul { columns: 2; }
 
-.journal-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-  margin-top: 28px;
-}
-
-.journal-card {
-  background: #f4f0e2;
-  border-radius: 14px;
-  padding: 24px;
-  border-bottom: 6px solid #ffb31a;
-  text-decoration: none;
-  color: #063b16;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
-}
-
-.journal-card strong {
-  display: block;
-  font-size: 20px;
-  margin-bottom: 9px;
-}
-
-.journal-card span {
-  display: block;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.journal-card:hover {
-  background: #ffb31a;
-  color: black;
-}
-
-.service-highlight {
+.service-highlight,
+.dark-section,
+.cta-section,
+.assessment-cta {
   background: #063b16;
   color: white;
+  text-align: center;
 }
 
 .service-highlight h2,
-.service-highlight .lead { color: white; }
+.service-highlight .lead,
+.dark-section h2,
+.dark-section p,
+.cta-section h2,
+.cta-section p,
+.assessment-cta h2,
+.assessment-cta p {
+  color: white;
+}
 
 .service-list {
   max-width: 900px;
@@ -316,8 +350,7 @@ h3 {
   border: 1px solid rgba(255,179,26,.7);
   border-radius: 12px;
   padding: 22px;
-  font-size: 17px;
-  line-height: 1.5;
+  text-align: left;
 }
 
 .service-item strong {
@@ -345,21 +378,12 @@ h3 {
   background: white;
 }
 
-.related-links a:hover {
-  background: #ffb31a;
-  color: black;
-}
-
 .assessment-cta {
-  background: #063b16;
-  color: white;
-  text-align: center;
   padding: 70px 6%;
 }
 
 .assessment-cta h2 {
-  color: white;
-  font-size: 40px;
+  font-size: clamp(32px, 4vw, 42px);
   margin: 0 0 18px;
 }
 
@@ -371,7 +395,8 @@ h3 {
 }
 
 .assessment-cta a { color: #ffb31a; }
-.assessment-cta .cta-button { color: black; }
+.assessment-cta .cta-button { color: black !important; }
+.assessment-cta .secondary-button { color: #063b16 !important; }
 
 footer {
   background: #063b16;
@@ -384,11 +409,21 @@ footer {
 
 @media(max-width: 1000px){
   .image-grid,
+  .photo-strip,
+  .cidp-gallery,
   .card-grid,
+  .card-grid.three-card-grid,
+  .card-grid:has(.card:nth-child(3)),
   .service-list,
-  .journal-list {
+  .two-column {
     grid-template-columns: 1fr;
   }
+
+  .image-card img,
+  .photo-strip img,
+  .cidp-gallery img { height: 300px; }
+
+  .service-box ul { columns: 1; }
 }
 
 @media(max-width: 900px){
@@ -400,11 +435,10 @@ footer {
     text-align: center;
   }
 
-  .logo img { height: 130px; }
+  .logo img { height: 120px; }
   .nav-links { justify-content: center; }
-  .hero { padding: 75px 6%; }
-  .hero-buttons { justify-content: center; }
-  .image-card img { height: 290px; }
+  .nav-cta { display: inline-block; margin-top: 6px; }
+  .hero { min-height: 520px; padding: 75px 6%; }
 
   .mobile-sticky-contact {
     position: fixed;
