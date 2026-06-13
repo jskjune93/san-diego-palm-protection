@@ -68,6 +68,9 @@ body {
 
 .hero {
   min-height: 560px;
+  background:
+    linear-gradient(rgba(0,0,0,.58), rgba(0,0,0,.58)),
+    url("./lake poway_1.jpg");
   background-size: cover;
   background-position: center;
   color: white;
@@ -264,14 +267,13 @@ h3 {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
   margin-top: 35px;
 }
 
-.card-grid.three-card-grid,
-.card-grid:has(.card:nth-child(3)) {
-  grid-template-columns: repeat(3, 1fr);
+.card-grid.three-card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .card {
@@ -398,6 +400,62 @@ h3 {
 .assessment-cta .cta-button { color: black !important; }
 .assessment-cta .secondary-button { color: #063b16 !important; }
 
+
+/* Observation / journal link cards */
+.observation-box {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  padding: 34px;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+}
+
+.observation-box p {
+  font-size: 19px;
+  line-height: 1.75;
+  margin: 0 0 22px;
+  color: #0b2d13;
+}
+
+.journal-links,
+.journal-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.journal-card {
+  display: block;
+  background: #f4f0e2;
+  border: 2px solid #ffb31a;
+  border-radius: 14px;
+  padding: 20px;
+  text-decoration: none;
+  color: #063b16;
+  transition: transform .18s ease, background .18s ease;
+}
+
+.journal-card:hover {
+  background: #ffb31a;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.journal-card strong {
+  display: block;
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.journal-card span {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 footer {
   background: #063b16;
   color: white;
@@ -413,7 +471,6 @@ footer {
   .cidp-gallery,
   .card-grid,
   .card-grid.three-card-grid,
-  .card-grid:has(.card:nth-child(3)),
   .service-list,
   .two-column {
     grid-template-columns: 1fr;
