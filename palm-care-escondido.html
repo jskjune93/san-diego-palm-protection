@@ -6,10 +6,9 @@
 
 <title>Palm Care in Escondido | Mature Palm Protection & CIDP Care</title>
 
-<meta name="description" content="Palm care in Escondido for mature palms, Canary Island Date Palms, palm fertilization, SAPW awareness, monitoring, and quarterly palm care plans.">
+<meta name="description" content="Palm care in Escondido for mature Canary Island Date Palms, palm fertilization, SAPW awareness, monitoring, and quarterly palm care plans for valuable mature palms.">
 
 <link rel="canonical" href="https://www.sandiegopalmprotection.com/palm-care-escondido.html" />
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -52,16 +51,17 @@ body {
   text-decoration: none;
 }
 
-.nav-separator {
-  color: #ffb31a;
-}
+.nav-separator { color: #ffb31a; }
 
-.call {
+.call,
+.nav-cta {
   background: #ffb31a;
   color: black !important;
-  padding: 14px 22px;
-  border-radius: 8px;
+  padding: 12px 18px;
+  border-radius: 9px;
   font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .hero {
@@ -77,9 +77,7 @@ body {
   padding: 90px 6%;
 }
 
-.hero-content {
-  max-width: 900px;
-}
+.hero-content { max-width: 940px; }
 
 .hero h1 {
   font-size: clamp(40px, 6vw, 68px);
@@ -88,9 +86,7 @@ body {
   font-weight: 900;
 }
 
-.highlight {
-  color: #ffb31a;
-}
+.highlight { color: #ffb31a; }
 
 .hero p {
   font-size: 22px;
@@ -98,9 +94,49 @@ body {
   margin-bottom: 18px;
 }
 
-section {
-  padding: 70px 6%;
+.hero-buttons,
+.button-row,
+.quick-assessment-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
 }
+
+.hero-buttons { justify-content: flex-start; }
+
+.cta-button,
+.secondary-button,
+.primary-action,
+.secondary-action {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 16px 28px;
+  border-radius: 10px;
+}
+
+.cta-button,
+.primary-action {
+  background: #ffb31a;
+  color: black;
+}
+
+.secondary-button,
+.secondary-action {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
+}
+
+.secondary-button:hover,
+.secondary-action:hover {
+  background: #ffb31a;
+  color: black;
+}
+
+section { padding: 70px 6%; }
 
 .content-section {
   max-width: 1120px;
@@ -108,9 +144,13 @@ section {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: clamp(32px, 4vw, 42px);
   text-align: center;
   margin: 0 0 22px;
+  color: #063b16;
+}
+
+h3 {
   color: #063b16;
 }
 
@@ -118,8 +158,33 @@ h2 {
   text-align: center;
   font-size: 21px;
   line-height: 1.65;
+  max-width: 920px;
+  margin: 0 auto 28px;
+}
+
+.quick-assessment-strip {
+  background: #f8f6ef;
+  border-top: 1px solid #e6dcc3;
+  border-bottom: 1px solid #e6dcc3;
+  padding: 34px 6%;
+  text-align: center;
+}
+
+.quick-assessment-strip h2 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.quick-assessment-strip p {
   max-width: 900px;
-  margin: 0 auto 38px;
+  margin: 0 auto 16px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.local-section,
+.observation-section {
+  background: #f8f6ef;
 }
 
 .image-grid {
@@ -139,7 +204,7 @@ h2 {
 
 .image-card img {
   width: 100%;
-  height: 360px;
+  height: 340px;
   object-fit: cover;
   display: block;
 }
@@ -169,7 +234,6 @@ h2 {
 
 .card h3 {
   margin-top: 0;
-  color: #063b16;
   font-size: 24px;
 }
 
@@ -179,12 +243,56 @@ h2 {
   line-height: 1.6;
 }
 
-.card ul {
-  padding-left: 22px;
+.card ul { padding-left: 22px; }
+
+.observation-box {
+  background: white;
+  border: 3px solid #d8a117;
+  border-radius: 16px;
+  padding: 34px;
+  max-width: 1000px;
+  margin: 34px auto 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
-.local-section {
-  background: #f8f6ef;
+.observation-box p,
+.observation-box li {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.journal-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.journal-card {
+  background: #f4f0e2;
+  border-radius: 14px;
+  padding: 24px;
+  border-bottom: 6px solid #ffb31a;
+  text-decoration: none;
+  color: #063b16;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.journal-card strong {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 9px;
+}
+
+.journal-card span {
+  display: block;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.journal-card:hover {
+  background: #ffb31a;
+  color: black;
 }
 
 .service-highlight {
@@ -192,13 +300,8 @@ h2 {
   color: white;
 }
 
-.service-highlight h2 {
-  color: white;
-}
-
-.service-highlight .lead {
-  color: white;
-}
+.service-highlight h2,
+.service-highlight .lead { color: white; }
 
 .service-list {
   max-width: 900px;
@@ -213,6 +316,8 @@ h2 {
   border: 1px solid rgba(255,179,26,.7);
   border-radius: 12px;
   padding: 22px;
+  font-size: 17px;
+  line-height: 1.5;
 }
 
 .service-item strong {
@@ -245,31 +350,6 @@ h2 {
   color: black;
 }
 
-.cta-section {
-  background: #063b16;
-  color: white;
-  text-align: center;
-}
-
-.cta-section h2 {
-  color: white;
-}
-
-.cta-section p {
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.cta-button {
-  display: inline-block;
-  background: #ffb31a;
-  color: black;
-  text-decoration: none;
-  font-weight: 900;
-  padding: 16px 28px;
-  border-radius: 10px;
-  margin-top: 15px;
-}
 .assessment-cta {
   background: #063b16;
   color: white;
@@ -290,37 +370,9 @@ h2 {
   margin: 0 auto 18px;
 }
 
-.button-row {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin: 25px 0;
-}
+.assessment-cta a { color: #ffb31a; }
+.assessment-cta .cta-button { color: black; }
 
-.secondary-button {
-  display: inline-block;
-  background: white;
-  color: #063b16;
-  text-decoration: none;
-  font-weight: 900;
-  padding: 16px 28px;
-  border-radius: 10px;
-  border: 2px solid #ffb31a;
-}
-
-.secondary-button:hover {
-  background: #ffb31a;
-  color: black;
-}
-
-.assessment-cta a {
-  color: #ffb31a;
-}
-
-.assessment-cta .cta-button {
-  color: black;
-}
 footer {
   background: #063b16;
   color: white;
@@ -328,92 +380,32 @@ footer {
   padding: 25px;
 }
 
+.mobile-sticky-contact { display: none; }
+
 @media(max-width: 1000px){
   .image-grid,
   .card-grid,
-  .service-list {
+  .service-list,
+  .journal-list {
     grid-template-columns: 1fr;
   }
 }
 
 @media(max-width: 900px){
+  body { padding-bottom: 74px; }
+
   .topnav {
     flex-direction: column;
     gap: 15px;
     text-align: center;
   }
 
-  .logo img {
-    height: 130px;
-  }
+  .logo img { height: 130px; }
+  .nav-links { justify-content: center; }
+  .hero { padding: 75px 6%; }
+  .hero-buttons { justify-content: center; }
+  .image-card img { height: 290px; }
 
-  .nav-links {
-    justify-content: center;
-  }
-
-  .hero {
-    padding: 75px 6%;
-  }
-}
-
-
-/* Light-touch conversion additions */
-.nav-cta {
-  background: #ffb31a;
-  color: black !important;
-  padding: 12px 18px;
-  border-radius: 9px;
-  text-decoration: none;
-  font-weight: 900;
-  white-space: nowrap;
-}
-.quick-assessment-strip {
-  background: #f8f6ef;
-  border-top: 1px solid #e6dcc3;
-  border-bottom: 1px solid #e6dcc3;
-  padding: 34px 6%;
-  text-align: center;
-}
-.quick-assessment-strip h2 {
-  margin: 0 0 10px;
-  font-size: clamp(28px, 4vw, 38px);
-  color: #063b16;
-}
-.quick-assessment-strip p {
-  max-width: 900px;
-  margin: 0 auto 16px;
-  font-size: 20px;
-  line-height: 1.5;
-}
-.quick-assessment-actions {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 12px;
-}
-.quick-assessment-actions a {
-  display: inline-block;
-  padding: 14px 22px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 900;
-}
-.quick-assessment-actions .primary-action {
-  background: #ffb31a;
-  color: black;
-}
-.quick-assessment-actions .secondary-action {
-  background: white;
-  color: #063b16;
-  border: 2px solid #ffb31a;
-}
-.mobile-sticky-contact {
-  display: none;
-}
-@media(max-width: 900px){
-  body { padding-bottom: 74px; }
-  .nav-cta { display: inline-block; margin-top: 6px; }
   .mobile-sticky-contact {
     position: fixed;
     left: 0;
@@ -426,6 +418,7 @@ footer {
     border-top: 3px solid #ffb31a;
     box-shadow: 0 -4px 14px rgba(0,0,0,0.18);
   }
+
   .mobile-sticky-contact a {
     color: white;
     text-decoration: none;
@@ -435,13 +428,13 @@ footer {
     font-size: 14px;
     border-right: 1px solid rgba(255,255,255,0.18);
   }
+
   .mobile-sticky-contact a:last-child {
     border-right: none;
     background: #ffb31a;
     color: black;
   }
 }
-
 </style>
 </head>
 
@@ -474,12 +467,17 @@ footer {
     <h1><span class="highlight">Palm Care in Escondido</span> for Mature Palms</h1>
 
     <p>
-      Specialized palm care for mature Canary Island Date Palms, specimen palms, and valuable landscape palms throughout Escondido and nearby North County communities.
+      Specialized palm care for mature Canary Island Date Palms, specimen palms, and valuable landscape palms throughout Escondido, Old Escondido, Grand Avenue, South Escondido, and nearby North County communities.
     </p>
 
     <p>
       San Diego Palm Protection helps homeowners protect mature palms through quarterly fertilization, monitoring, watering-in, and preventative treatment when appropriate.
     </p>
+
+    <div class="hero-buttons">
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Palm Assessment</a>
+      <a class="secondary-button" href="./palm-journal-new.html">View Local Palm Journal</a>
+    </div>
   </div>
 </section>
 
@@ -492,12 +490,11 @@ footer {
   </div>
 </section>
 
-
 <section class="content-section">
   <h2>Protecting Escondido’s Mature Palm Character</h2>
 
   <p class="lead">
-    Escondido has some of North County’s most distinctive mature palms — from Old Escondido and Grand Avenue to hillside properties, established neighborhoods, and larger residential lots. These palms are not just landscaping; they contribute to curb appeal, property character, and long-term landscape value.
+    Escondido has some of North County’s most distinctive mature palms — from Old Escondido and Grand Avenue to hillside properties, established neighborhoods, churches, apartment communities, and larger residential lots. These palms are not just landscaping; they contribute to curb appeal, property character, and long-term landscape value.
   </p>
 
   <p class="lead">
@@ -506,18 +503,51 @@ footer {
 
   <div class="image-grid">
     <div class="image-card">
-      <img src="./CIDP.jpg" alt="Mature palms and landscape in Escondido and North County San Diego">
-      <p>Mature palms are a defining feature of many North County properties.</p>
+      <img src="./old_escondido-mature-cidp.jpg" alt="Mature Canary Island Date Palms in Old Escondido">
+      <p>Old Escondido contains many mature palms that contribute to the historic neighborhood character.</p>
     </div>
 
     <div class="image-card">
-      <img src="./mature-CIDP-Escondido-estate.jpg" alt="Owner-performed palm care and treatment in San Diego">
-      <p>Owner-performed care focused on fertilization, monitoring, and preventative protection.</p>
+      <img src="./mature-CIDP-Escondido-estate.jpg" alt="Mature Canary Island Date Palm on an Escondido estate property">
+      <p>Large established palms often serve as major visual assets on Escondido residential properties.</p>
     </div>
 
     <div class="image-card">
-      <img src="./landscape-CIDP-Escondido.jpg" alt="Mature palm landscape in North County San Diego">
-      <p>Quarterly care helps preserve long-term landscape value and curb appeal.</p>
+      <img src="./sunset-old_escondido-mature-cidp.jpg" alt="Mature palm landscape in Old Escondido at sunset">
+      <p>Quarterly palm care helps preserve the long-term presence and curb appeal of mature landscapes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="observation-section">
+  <div class="content-section">
+    <h2>What We’ve Observed Around Escondido</h2>
+
+    <div class="observation-box">
+      <p>
+        Around Old Escondido, Grand Avenue, Felicita, and surrounding neighborhoods, mature Canary Island Date Palms remain some of the most recognizable and valuable landscape features in the area. Many are healthy, full, and impressive — but others show signs of thinning crowns, nutrient stress, deferred maintenance, or advanced decline.
+      </p>
+
+      <p>
+        That local contrast is exactly why consistent observation matters. A healthy mature CIDP can anchor a property for decades, while a declining one can quickly become costly, highly visible, and difficult to replace. The Palm Journal documents real local examples so homeowners can better understand what healthy, stressed, and declining palms may look like in the field.
+      </p>
+
+      <div class="journal-list">
+        <a class="journal-card" href="./palm-journal-new.html#old-escondido-cidp">
+          <strong>Old Escondido Mature CIDPs</strong>
+          <span>Local observations of mature Canary Island Date Palms near historic Escondido neighborhoods.</span>
+        </a>
+
+        <a class="journal-card" href="./palm-journal-new.html#grand-ave-cidp">
+          <strong>Grand Avenue Palm Observations</strong>
+          <span>Healthy and declining CIDP examples seen along one of Escondido’s most visible corridors.</span>
+        </a>
+
+        <a class="journal-card" href="./palm-journal-new.html#las-palmas-cidp">
+          <strong>Las Palmas Mature Palms</strong>
+          <span>Field notes and photos showing healthy mature palms close to Old Escondido.</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -574,12 +604,14 @@ footer {
         <li>Watering-in after treatment</li>
         <li>Health monitoring and recommendations</li>
       </ul>
+      <a class="cta-button" href="./quarterly-palm-care-san-diego.html">View Quarterly Palm Care</a>
     </div>
 
     <div class="card">
       <h3>One-Time Assessment & Treatment</h3>
       <p><strong>Starting at $750 per visit</strong></p>
       <p>A single professional visit for homeowners with visible decline concerns, seasonal palm care needs, or questions about whether quarterly care makes sense.</p>
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">Request Assessment</a>
     </div>
   </div>
 </section>
@@ -620,7 +652,7 @@ footer {
   <h2>Related Palm Care Resources</h2>
 
   <p class="lead">
-    Learn more about mature palm care, Canary Island Date Palms, and South American Palm Weevil concerns in San Diego.
+    Learn more about mature palm care, Canary Island Date Palms, South American Palm Weevil concerns, and local field observations in San Diego County.
   </p>
 
   <div class="related-links">
@@ -629,6 +661,7 @@ footer {
     <a href="./south-american-palm-weevil-treatment-san-diego.html">SAPW Treatment</a>
     <a href="./sapw.html">Local SAPW Information</a>
     <a href="./palm-journal-new.html">Palm Journal</a>
+    <a href="./palm-care-poway.html">Palm Care in Poway</a>
   </div>
 </section>
 
@@ -640,13 +673,11 @@ footer {
   </p>
 
   <div class="button-row">
-    <a class="cta-button"
-       href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">
       📧 Send Palm Photos
     </a>
 
-    <a class="secondary-button"
-       href="./index.html#services">
+    <a class="secondary-button" href="./index.html#services">
       View Services
     </a>
   </div>
@@ -662,6 +693,7 @@ footer {
     </a>
   </p>
 </section>
+
 <footer>
   San Diego Palm Protection | Quarterly Palm Care, Sourcing & Specialty Specimen Guidance
 </footer>
@@ -669,7 +701,8 @@ footer {
 <div class="mobile-sticky-contact" aria-label="Quick contact options">
   <a href="sms:2624923135">Text Photos</a>
   <a href="tel:2624923135">Call</a>
-  <a href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">
-    Assessment
-  </a>
+  <a href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">Assessment</a>
 </div>
+
+</body>
+</html>
