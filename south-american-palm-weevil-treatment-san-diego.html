@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <title>South American Palm Weevil Treatment San Diego | Palm Protection</title>
-<meta name="description" content="South American Palm Weevil awareness and preventative palm protection in San Diego. Owner-performed care for Canary Island Date Palms, mature palms, and vulnerable landscape assets." />
+<meta name="description" content="South American Palm Weevil treatment awareness and preventative palm protection in San Diego. Owner-performed care for Canary Island Date Palms, mature palms, quarterly monitoring, and vulnerable landscape assets." />
 <link rel="canonical" href="https://www.sandiegopalmprotection.com/south-american-palm-weevil-treatment-san-diego.html" />
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -31,7 +30,11 @@ body {
   border-bottom: 4px solid #ffb31a;
 }
 
-.logo img { height: 120px; width: auto; display: block; }
+.logo img {
+  height: 120px;
+  width: auto;
+  display: block;
+}
 
 .nav-links {
   display: flex;
@@ -42,19 +45,34 @@ body {
   font-size: 17px;
 }
 
-.nav-links a { color: white; text-decoration: none; }
-.nav-separator { color: #ffb31a; }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
 
-.call {
+.nav-separator {
+  color: #ffb31a;
+}
+
+.call,
+.nav-cta {
   background: #ffb31a;
   color: black !important;
   padding: 14px 22px;
   border-radius: 8px;
   font-weight: 900;
+  text-decoration: none;
+}
+
+.nav-cta {
+  padding: 12px 18px;
+  border-radius: 9px;
+  white-space: nowrap;
 }
 
 .hero {
-  min-height: 600px;
+  min-height: 560px;
   background:
     linear-gradient(rgba(0,0,0,.62), rgba(0,0,0,.62)),
     url("./background.jpg");
@@ -66,7 +84,9 @@ body {
   padding: 90px 6%;
 }
 
-.hero-content { max-width: 900px; }
+.hero-content {
+  max-width: 900px;
+}
 
 .hero h1 {
   font-size: clamp(40px, 6vw, 68px);
@@ -75,7 +95,9 @@ body {
   font-weight: 900;
 }
 
-.highlight { color: #ffb31a; }
+.highlight {
+  color: #ffb31a;
+}
 
 .hero p {
   font-size: 22px;
@@ -93,7 +115,11 @@ body {
   margin-top: 12px;
 }
 
-.cta-button { background: #ffb31a; color: black; }
+.cta-button {
+  background: #ffb31a;
+  color: black;
+}
+
 .secondary-button {
   background: white;
   color: #063b16;
@@ -106,7 +132,9 @@ body {
   color: black;
 }
 
-section { padding: 70px 6%; }
+section {
+  padding: 70px 6%;
+}
 
 .content-section {
   max-width: 1120px;
@@ -114,7 +142,7 @@ section { padding: 70px 6%; }
 }
 
 h2 {
-  font-size: 40px;
+  font-size: clamp(32px, 5vw, 44px);
   text-align: center;
   margin: 0 0 22px;
   color: #063b16;
@@ -124,8 +152,55 @@ h2 {
   text-align: center;
   font-size: 21px;
   line-height: 1.65;
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto 38px;
+}
+
+.quick-assessment-strip {
+  background: #f8f6ef;
+  border-top: 1px solid #e6dcc3;
+  border-bottom: 1px solid #e6dcc3;
+  padding: 34px 6%;
+  text-align: center;
+}
+
+.quick-assessment-strip h2 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.quick-assessment-strip p {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.quick-assessment-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.quick-assessment-actions a {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.primary-action {
+  background: #ffb31a;
+  color: black;
+}
+
+.secondary-action {
+  background: white;
+  color: #063b16;
+  border: 2px solid #ffb31a;
 }
 
 .card-grid {
@@ -165,6 +240,7 @@ h2 {
   padding-left: 20px;
 }
 
+.local-section,
 .image-band {
   background: #f8f6ef;
 }
@@ -174,7 +250,7 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
   max-width: 1300px;
-  margin: 0 auto;
+  margin: 35px auto 0;
   align-items: stretch;
 }
 
@@ -200,17 +276,44 @@ h2 {
   line-height: 1.5;
   color: #063b16;
   background: white;
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.info-panel {
+.info-panel,
+.assessment-cta {
   background: #063b16;
   color: white;
   text-align: center;
 }
 
-.info-panel h2 { color: white; }
-.info-panel .lead { color: white; }
+.info-panel h2,
+.info-panel .lead,
+.assessment-cta h2,
+.assessment-cta p {
+  color: white;
+}
+
+.service-list {
+  max-width: 900px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 18px;
+}
+
+.service-item {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,179,26,.7);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.service-item strong {
+  color: #ffb31a;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+}
 
 .related-links {
   display: flex;
@@ -235,19 +338,36 @@ h2 {
   color: black;
 }
 
-.cta-section {
-  background: #063b16;
-  color: white;
-  text-align: center;
+.assessment-cta {
+  padding: 70px 6%;
 }
 
-.cta-section h2 { color: white; }
+.assessment-cta h2 {
+  font-size: 40px;
+  margin: 0 0 18px;
+}
 
-.cta-section p {
+.assessment-cta p {
   font-size: 20px;
-  line-height: 1.6;
-  max-width: 880px;
+  line-height: 1.5;
+  max-width: 850px;
   margin: 0 auto 18px;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.assessment-cta a {
+  color: #ffb31a;
+}
+
+.assessment-cta .cta-button {
+  color: black;
 }
 
 footer {
@@ -257,9 +377,14 @@ footer {
   padding: 25px;
 }
 
+.mobile-sticky-contact {
+  display: none;
+}
+
 @media(max-width: 1000px){
   .card-grid,
-  .image-grid {
+  .image-grid,
+  .service-list {
     grid-template-columns: 1fr;
   }
 
@@ -269,18 +394,64 @@ footer {
 }
 
 @media(max-width: 900px){
+  body {
+    padding-bottom: 74px;
+  }
+
   .topnav {
     flex-direction: column;
     gap: 15px;
     text-align: center;
   }
 
+  .logo img {
+    height: 130px;
+  }
+
   .nav-links {
     justify-content: center;
   }
 
+  .hero {
+    padding: 75px 6%;
+  }
+
   .secondary-button {
     margin-left: 0;
+  }
+
+  .nav-cta {
+    display: inline-block;
+    margin-top: 6px;
+  }
+
+  .mobile-sticky-contact {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #063b16;
+    border-top: 3px solid #ffb31a;
+    box-shadow: 0 -4px 14px rgba(0,0,0,0.18);
+  }
+
+  .mobile-sticky-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    text-align: center;
+    padding: 14px 8px;
+    font-size: 14px;
+    border-right: 1px solid rgba(255,255,255,0.18);
+  }
+
+  .mobile-sticky-contact a:last-child {
+    border-right: none;
+    background: #ffb31a;
+    color: black;
   }
 }
 </style>
@@ -303,7 +474,7 @@ footer {
     <span class="nav-separator">|</span>
     <a href="./palm-journal-new.html">Palm Journal</a>
     <span class="nav-separator">|</span>
-    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm Weevil Question">Contact</a>
+    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Weevil%20Question">Contact</a>
     <a class="call" href="tel:2624923135">📞 262-492-3135</a>
     <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
   </nav>
@@ -320,10 +491,10 @@ footer {
     </p>
 
     <p>
-      The best time to think about palm protection is before a mature palm is in obvious decline. We help homeowners protect valuable palm assets through monitoring, fertilization, and preventative treatment when appropriate.
+      The best time to think about palm protection is before a mature palm is in obvious decline. We help homeowners protect valuable palm assets through monitoring, fertilization, watering-in, and preventative treatment when appropriate.
     </p>
 
-    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm Weevil Concern">Request Palm Assessment</a>
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Weevil%20Concern">Request Palm Assessment</a>
     <a class="secondary-button" href="./sapw.html">Read Local SAPW Information</a>
   </div>
 </section>
@@ -336,7 +507,6 @@ footer {
     <a class="secondary-action" href="sms:2624923135">Text Palm Photos</a>
   </div>
 </section>
-
 
 <section class="content-section">
   <h2>Why South American Palm Weevil Matters</h2>
@@ -373,29 +543,29 @@ footer {
 </section>
 
 <section class="image-band">
-  <div class="image-grid">
+  <div class="content-section">
+    <h2>Protecting Valuable Palm Assets</h2>
 
-    <div class="image-card">
-      <img src="./Green Valley.jpg" alt="Mature Canary Island Date Palms in San Diego">
-      <p>
-        Mature Canary Island Date Palms can represent decades of growth and significant landscape value.
-      </p>
+    <p class="lead">
+      Mature Canary Island Date Palms can represent decades of growth and significant landscape value. The goal is not just emergency response — it is long-term stewardship before decline becomes severe.
+    </p>
+
+    <div class="image-grid">
+      <div class="image-card">
+        <img src="./Green Valley.jpg" alt="Mature Canary Island Date Palms in San Diego">
+        <p>Mature Canary Island Date Palms can represent decades of growth and significant landscape value.</p>
+      </div>
+
+      <div class="image-card">
+        <img src="./treatment.jpg" alt="Owner-performed palm treatment and protection service in San Diego">
+        <p>Owner-performed care focused on fertilization, monitoring, watering-in, and prevention when appropriate.</p>
+      </div>
+
+      <div class="image-card">
+        <img src="./lake poway_1.jpg" alt="Protected mature palms in North County San Diego">
+        <p>Long-term stewardship helps preserve the health and appearance of mature palms across North County.</p>
+      </div>
     </div>
-
-    <div class="image-card">
-      <img src="./treatment.jpg" alt="Palm decline in an otherwise healthy San Diego landscape">
-      <p>
-        Even otherwise healthy, well-maintained properties can experience palm decline that deserves attention.
-      </p>
-    </div>
-
-    <div class="image-card">
-      <img src="./lake poway_1.jpg" alt="Protected mature palms in North County San Diego">
-      <p>
-        Long-term stewardship helps preserve the health and appearance of mature palms.
-      </p>
-    </div>
-
   </div>
 </section>
 
@@ -440,40 +610,77 @@ footer {
 </section>
 
 <section class="info-panel">
-  <h2>Protection Works Best as a Plan</h2>
+  <div class="content-section">
+    <h2>Protection Works Best as a Plan</h2>
 
-  <p class="lead">
-    A one-time treatment can be useful for some situations, but mature palm protection is strongest when it is consistent. Our quarterly palm care plans are designed for homeowners who want vulnerable palms monitored, fed, watered-in, and treated preventatively when appropriate.
-  </p>
+    <p class="lead">
+      A one-time treatment can be useful in some situations, but mature palm protection is strongest when it is consistent. Our quarterly palm care plans are designed for homeowners who want vulnerable palms monitored, fed, watered-in, and treated preventatively when appropriate.
+    </p>
 
-  <a class="cta-button" href="./quarterly-palm-care-san-diego.html">View Quarterly Palm Care</a>
+    <div class="service-list">
+      <div class="service-item">
+        <strong>Assess</strong>
+        Review palm condition, visible symptoms, species, size, and local risk context.
+      </div>
+
+      <div class="service-item">
+        <strong>Feed & Water-In</strong>
+        Support mature palms with professional palm nutrition and proper watering-in after treatment.
+      </div>
+
+      <div class="service-item">
+        <strong>Protect</strong>
+        Use preventative treatment when appropriate for vulnerable Canary Island Date Palms.
+      </div>
+
+      <div class="service-item">
+        <strong>Monitor</strong>
+        Track visible changes over time instead of waiting for obvious decline.
+      </div>
+    </div>
+
+    <a class="cta-button" href="./quarterly-palm-care-san-diego.html">View Quarterly Palm Care</a>
+  </div>
 </section>
 
-<section class="content-section">
-  <h2>Local SAPW Awareness in North County San Diego</h2>
+<section class="local-section">
+  <div class="content-section">
+    <h2>Local SAPW Awareness in North County San Diego</h2>
 
-  <p class="lead">
-    San Diego Palm Protection focuses on mature palms in communities such as Escondido, Poway, Rancho Santa Fe, Olivenhain, Encinitas, and surrounding North County areas. We built this page for homeowners searching for palm weevil treatment, palm protection, and Canary Island Date Palm care in San Diego.
-  </p>
+    <p class="lead">
+      San Diego Palm Protection focuses on mature palms in communities such as Escondido, Poway, Rancho Santa Fe, Olivenhain, Encinitas, and surrounding North County areas. This page supports homeowners searching for palm weevil treatment, palm protection, and Canary Island Date Palm care in San Diego.
+    </p>
 
-  <div class="related-links">
-    <a href="./sapw.html">Local SAPW Information</a>
-    <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>
-    <a href="./index.html#services">Palm Care Services</a>
-    <a href="./palm-journal-new.html">Palm Journal</a>
+    <p class="lead">
+      For more local context, explore our field observations and Palm Journal posts documenting mature Canary palms, healthy specimens, and concerning decline around Escondido and North County.
+    </p>
+
+    <div class="related-links">
+      <a href="./sapw.html">Local SAPW Information</a>
+      <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>
+      <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>
+      <a href="./palm-care-escondido.html">Palm Care in Escondido</a>
+      <a href="./palm-care-poway.html">Palm Care in Poway</a>
+      <a href="./palm-journal-new.html">Palm Journal</a>
+    </div>
   </div>
 </section>
 
 <section class="assessment-cta" id="contact">
-  <h2>Suffering From Weevil Decline?</h2>
-  <p>Text or email a few photos of your palm or yard — let's get started right away.</p>
+  <h2>Concerned About Weevil Decline?</h2>
+
+  <p>
+    Text or email a few photos of your palm or property — let's talk through what you are seeing and whether preventative care or quarterly stewardship makes sense.
+  </p>
 
   <div class="button-row">
-    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Request Palm Assessment">📧 Send a Few Palm Photos</a>
-    <a class="secondary-button" href="#services">View Services</a>
+    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">📧 Send Palm Photos</a>
+    <a class="secondary-button" href="./index.html#services">View Services</a>
   </div>
 
-  <p class="phone-line">📞 Call or Text 262-492-3135</p>
+  <p class="phone-line">
+    📞 Call or Text <strong>262-492-3135</strong>
+  </p>
 
   <p class="email-line">
     <strong>Email:</strong>
@@ -485,7 +692,6 @@ footer {
   San Diego Palm Protection | Quarterly Palm Care, Sourcing & Specialty Specimen Guidance
 </footer>
 
-
 <div class="mobile-sticky-contact" aria-label="Quick contact options">
   <a href="sms:2624923135">Text Photos</a>
   <a href="tel:2624923135">Call</a>
@@ -494,4 +700,3 @@ footer {
 
 </body>
 </html>
-
