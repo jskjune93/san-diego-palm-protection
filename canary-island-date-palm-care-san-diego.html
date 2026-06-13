@@ -391,37 +391,63 @@ footer {
     justify-content:center;
   } 
   
+```css
+/* CIDP history section */
+.cidp-history-section {
+  max-width: 1180px;
+}
+
+.full-width-copy {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.full-width-copy p {
+  font-size: 19px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+  color: #0b2d13;
+}
+
+.intro-lead {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 30px;
+}
 .cidp-gallery-section {
   background: #f8f6ef;
 }
 
 .cidp-gallery {
-  columns: 3 280px;
-  column-gap: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
   margin-top: 35px;
 }
 
 .cidp-gallery img {
   width: 100%;
-  margin-bottom: 14px;
+  height: 320px;
+  object-fit: cover;
   border-radius: 14px;
   display: block;
   box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-  break-inside: avoid;
   transition: transform .2s ease;
 }
 
 .cidp-gallery img:hover {
-  transform: scale(1.01);
+  transform: scale(1.015);
 }
 
-@media(max-width:900px){
+@media(max-width: 900px) {
   .cidp-gallery {
-    columns: 1;
-}
+    grid-template-columns: 1fr;
+  }
 
-
-/* Light-touch conversion additions */
+  .cidp-gallery img {
+    height: 280px;
+  }
+  
 .nav-cta {
   background: #ffb31a;
   color: black !important;
