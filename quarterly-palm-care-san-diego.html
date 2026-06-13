@@ -37,6 +37,33 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
 .price-card:before { content:""; position:absolute; top:0; left:0; width:100%; height:6px; background:#d8a117; }
 .image-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; max-width: 1300px; margin: 20px auto 0; }
 .image-row img { width: 100%; height: 360px; object-fit: cover; border-radius: 14px; display: block; }
+
+.image-card {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,.12);
+  background: #f4f0e2;
+}
+
+.image-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-card p {
+  padding: 16px 18px;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 700;
+  color: #063b16;
+}
+
+.local-section {
+  background: #f8f6ef;
+}
+
 .dark-section { background: #063b16; color: white; text-align: center; }
 .dark-section h2 { color: white; }
 .dark-section .lead { color: white; }
@@ -256,12 +283,55 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
 </section>
 
 <section>
-  <h2>Palm Care in Practice</h2>
-  <p class="lead">Quarterly care is about more than a single treatment. It creates a rhythm of fertilization, observation, preventative support, and follow-up so your palms are not ignored until something looks obviously wrong.</p>
-  <div class="image-row">
-    <img src="./Green Valley.jpg" alt="Healthy mature palms in a San Diego landscape">
-    <img src="./treatment.jpg" alt="Owner-performed palm treatment service in San Diego">
-    <img src="./lake poway_1.jpg" alt="Mature palms in North County San Diego">
+  <div class="content-section">
+    <h2>Palm Care in Practice</h2>
+    <p class="lead">Quarterly care is about more than a single treatment. It creates a rhythm of fertilization, observation, preventative support, and follow-up so mature palms are not ignored until something looks obviously wrong.</p>
+
+    <div class="image-row">
+      <div class="image-card">
+        <img src="./Green Valley.jpg" alt="Healthy mature Canary Island Date Palms in North County San Diego">
+        <p>Consistent care helps preserve the mature palms that define estate, hillside, and established residential landscapes.</p>
+      </div>
+
+      <div class="image-card">
+        <img src="./treatment.jpg" alt="Owner-performed palm treatment service in San Diego">
+        <p>Owner-performed service means the same person is observing, treating, watering-in, and tracking the palm over time.</p>
+      </div>
+
+      <div class="image-card">
+        <img src="./lake poway_1.jpg" alt="Mature palms in Poway and North County San Diego">
+        <p>Quarterly stewardship is built for homeowners who want palm health handled consistently, before decline becomes severe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="local-section">
+  <div class="content-section">
+    <h2>Where Quarterly Care Fits</h2>
+    <p class="lead">
+      This page explains the recurring care model. For palm-specific or location-specific concerns, these related pages help homeowners understand how quarterly care applies to mature Canary Island Date Palms, South American Palm Weevil risk, and local North County properties.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>For Canary Island Date Palms</h3>
+        <p>Mature CIDPs are iconic, valuable, and difficult to replace. Quarterly care supports fertilization, monitoring, and preventative protection when appropriate.</p>
+        <a class="cta-button" href="./canary-island-date-palm-care-san-diego.html">View CIDP Care</a>
+      </div>
+
+      <div class="card">
+        <h3>For SAPW Awareness</h3>
+        <p>South American Palm Weevil is a major concern for mature Canary palms in Southern California. Monitoring and prevention are part of a long-term care strategy.</p>
+        <a class="cta-button" href="./sapw.html">Learn About Local SAPW</a>
+      </div>
+
+      <div class="card">
+        <h3>For Local Properties</h3>
+        <p>Escondido and Poway each have mature palm landscapes where heat, irrigation, and visible decline concerns make consistent care especially important.</p>
+        <a class="cta-button" href="./palm-care-escondido.html">Escondido Palm Care</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -281,16 +351,18 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
   <p class="lead">We serve homeowners in San Diego and North County communities including Escondido, Poway, Rancho Santa Fe, Olivenhain, Encinitas, and surrounding areas where mature palms define property character and long-term landscape value.</p>
   <div class="related-links">
     <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>
-    <a href="./sapw.html">South American Palm Weevil Protection</a>
+    <a href="./sapw.html">Local SAPW Information</a>
+    <a href="./south-american-palm-weevil-treatment-san-diego.html">SAPW Treatment</a>
+    <a href="./palm-care-escondido.html">Palm Care in Escondido</a>
+    <a href="./palm-care-poway.html">Palm Care in Poway</a>
     <a href="./palm-journal-new.html">Palm Journal</a>
-    <a href="./index.html#services">All Services</a>
   </div>
 </section>
 <section class="assessment-cta" id="contact">
-  <h2>Want Peace of Mind?</h2>
+  <h2>Want Quarterly Palm Care?</h2>
 
   <p>
-    Text or email a few photos of your palm or property — let's talk.
+    Text or email a few photos of your palm or property — let's talk through what you're seeing and whether quarterly care makes sense.
   </p>
 
   <div class="button-row">
@@ -326,3 +398,7 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
   <a href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">
     Assessment
   </a>
+  </a>
+</div>
+</body>
+</html>
