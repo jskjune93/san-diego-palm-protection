@@ -389,7 +389,35 @@ footer {
 
   .nav-links{
     justify-content:center;
-  }
+  } 
+  
+.cidp-gallery-section {
+  background: #f8f6ef;
+}
+
+.cidp-gallery {
+  columns: 3 280px;
+  column-gap: 14px;
+  margin-top: 35px;
+}
+
+.cidp-gallery img {
+  width: 100%;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  display: block;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  break-inside: avoid;
+  transition: transform .2s ease;
+}
+
+.cidp-gallery img:hover {
+  transform: scale(1.01);
+}
+
+@media(max-width:900px){
+  .cidp-gallery {
+    columns: 1;
 }
 
 
