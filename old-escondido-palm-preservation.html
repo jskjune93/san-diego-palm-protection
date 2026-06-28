@@ -1,194 +1,616 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Old Escondido Palm Preservation Initiative | San Diego Palm Protection</title>
-  <meta name="description" content="A neighbor-led effort by San Diego Palm Protection to document mature Canary Island Date Palms, raise South American Palm Weevil awareness, and support palm preservation in Old Escondido." />
-  <link rel="canonical" href="https://sandiegopalmprotection.com/old-escondido-palm-preservation.html" />
-  <style>
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Arial, Helvetica, sans-serif; color: #233229; background: #f6f3ec; line-height: 1.6; }
-    a { color: #245f3a; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .topnav { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 16px 6vw; background: rgba(246, 243, 236, 0.96); border-bottom: 1px solid rgba(35, 50, 41, 0.12); backdrop-filter: blur(8px); }
-    .logo { font-weight: 700; letter-spacing: 0; color: #1f3327; }
-    .nav-links { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; font-size: 0.94rem; }
-    .nav-links a { color: #27372d; font-weight: 600; }
-    .hero { padding: 70px 6vw 44px; background: #e8efe4; border-bottom: 1px solid rgba(35, 50, 41, 0.12); }
-    .hero-inner { max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 420px); gap: 44px; align-items: center; }
-    .eyebrow { margin: 0 0 12px; color: #58705f; font-size: 0.84rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
-    h1, h2, h3 { line-height: 1.14; color: #1f3327; letter-spacing: 0; }
-    h1 { margin: 0 0 20px; max-width: 760px; font-size: clamp(2.35rem, 6vw, 4.85rem); }
-    .subtitle { margin: 0 0 28px; max-width: 760px; font-size: 1.18rem; color: #33483a; }
-    .button-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-    .cta-button, .secondary-button { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 12px 18px; border-radius: 6px; font-weight: 700; text-decoration: none; border: 1px solid #245f3a; }
-    .cta-button { color: #fff; background: #245f3a; }
-    .secondary-button { color: #245f3a; background: transparent; }
-    .flyer-panel { background: #fff; border: 1px solid rgba(35, 50, 41, 0.13); border-radius: 8px; padding: 14px; box-shadow: 0 20px 45px rgba(35, 50, 41, 0.13); }
-    .flyer-panel img, .flyer-section img { display: block; width: 100%; height: auto; border-radius: 5px; }
-    .flyer-caption { margin: 12px 2px 0; color: #5d6b60; font-size: 0.92rem; }
-    main { max-width: 1120px; margin: 0 auto; padding: 54px 6vw 70px; }
-    .content-section { margin: 0 0 48px; }
-    .content-section h2 { margin: 0 0 16px; font-size: clamp(1.75rem, 3.4vw, 2.55rem); }
-    .content-section p { margin: 0 0 16px; max-width: 900px; color: #34493b; font-size: 1.03rem; }
-    .split-section { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 360px); gap: 34px; align-items: start; }
-    .info-card, .note-card, .warning-card { background: #fff; border: 1px solid rgba(35, 50, 41, 0.12); border-radius: 8px; padding: 22px; }
-    .info-card h3, .note-card h3, .warning-card h3 { margin: 0 0 10px; font-size: 1.18rem; }
-    .info-card p, .note-card p, .warning-card p { margin: 0; font-size: 0.98rem; }
-    .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 20px; }
-    .warning-card { min-height: 140px; }
-    .bullet-list { margin: 18px 0 0; padding-left: 22px; color: #34493b; }
-    .bullet-list li { margin: 0 0 9px; }
-    .link-list { display: grid; gap: 10px; margin-top: 18px; }
-    .link-list a { display: block; padding: 13px 15px; border: 1px solid rgba(36, 95, 58, 0.22); border-radius: 6px; background: #fff; font-weight: 700; }
-    .flyer-section { background: #fff; border: 1px solid rgba(35, 50, 41, 0.12); border-radius: 8px; padding: 22px; }
-    .flyer-section .flyer-image-link { display: block; max-width: 720px; margin-top: 20px; }
-    .disclaimer { padding: 22px; border-left: 4px solid #245f3a; background: #eef3ea; color: #314438; }
-    .assessment-cta { margin-top: 34px; padding: 28px; background: #1f3327; color: #fff; border-radius: 8px; }
-    .assessment-cta h2, .assessment-cta p { color: #fff; }
-    footer { padding: 34px 6vw 86px; background: #1f3327; color: #eef3ea; }
-    footer .footer-inner { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 18px; align-items: center; }
-    footer a { color: #eef3ea; font-weight: 700; }
-    .mobile-sticky-contact { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: none; grid-template-columns: 1fr 1fr; background: #1f3327; border-top: 1px solid rgba(255, 255, 255, 0.18); }
-    .mobile-sticky-contact a { display: flex; align-items: center; justify-content: center; min-height: 56px; color: #fff; font-weight: 700; text-decoration: none; }
-    .mobile-sticky-contact a + a { border-left: 1px solid rgba(255, 255, 255, 0.18); }
-    @media (max-width: 860px) { .topnav { align-items: flex-start; flex-direction: column; gap: 10px; } .nav-links { gap: 12px; } .hero-inner, .split-section { grid-template-columns: 1fr; } .card-grid { grid-template-columns: 1fr; } .hero { padding-top: 42px; } main { padding-top: 40px; } .mobile-sticky-contact { display: grid; } }
-  </style>
-</head>
-<body>
-  <header class="topnav">
-    <a class="logo" href="./index.html">San Diego Palm Protection</a>
-    <nav class="nav-links" aria-label="Primary navigation">
-      <a href="./index.html">Home</a>
-      <a href="./palm-journal-new.html">Palm Journal</a>
-      <a href="./sapw.html">Palm Weevil</a>
-      <a href="./palm-care-escondido.html">Escondido</a>
-      <a href="mailto:sandiegopalmprotection@gmail.com">Contact</a>
-    </nav>
-  </header>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <section class="hero">
-    <div class="hero-inner">
-      <div>
-        <p class="eyebrow">Old Escondido Palm Preservation</p>
-        <h1>Old Escondido Palm Preservation Initiative</h1>
-        <p class="subtitle">A neighbor-led effort to document, protect, and raise awareness around the mature Canary Island Date Palms that help define Old Escondido's historic landscape.</p>
-        <div class="button-row" aria-label="Initiative links">
-          <a class="cta-button" href="./palm-journal-new.html">View the Palm Journal</a>
-          <a class="secondary-button" href="./sapw.html">Learn About South American Palm Weevil</a>
-          <a class="secondary-button" href="mailto:sandiegopalmprotection@gmail.com">Contact San Diego Palm Protection</a>
-        </div>
+<title>Old Escondido Palm Preservation Initiative | San Diego Palm Protection</title>
+
+<meta name="description" content="A neighbor-led effort by San Diego Palm Protection to document mature Canary Island Date Palms, raise South American Palm Weevil awareness, and support palm preservation in Old Escondido." />
+
+<link rel="canonical" href="https://www.sandiegopalmprotection.com/old-escondido-palm-preservation.html" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0b2d13;
+  background: #fff;
+  line-height: 1.6;
+}
+
+a { color: #063b16; }
+
+.topnav {
+  background: #063b16;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  min-height: 115px;
+  border-bottom: 4px solid #ffb31a;
+}
+
+.logo img {
+  height: 120px;
+  width: auto;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.nav-separator { color: #ffb31a; }
+
+.call,
+.nav-cta {
+  background: #ffb31a;
+  color: black !important;
+  padding: 12px 18px;
+  border-radius: 9px;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.hero {
+  background:
+    linear-gradient(rgba(0,0,0,.64), rgba(0,0,0,.64)),
+    url("./old-escondido-declining-cidp-crown-context-01.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 6%;
+}
+
+.hero-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+  gap: 42px;
+  align-items: center;
+}
+
+.hero-content { max-width: 820px; }
+
+.eyebrow {
+  margin: 0 0 10px;
+  color: #ffb31a;
+  font-weight: 900;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.presented-by {
+  margin: 0 0 16px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 800;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 6vw, 68px);
+  margin: 0 0 22px;
+  line-height: 1.05;
+  font-weight: 900;
+  color: white;
+}
+
+.highlight { color: #ffb31a; }
+
+.hero p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.hero-buttons,
+.button-row,
+.quick-assessment-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.hero-buttons { justify-content: flex-start; }
+
+.cta-button,
+.secondary-button,
+.primary-action,
+.secondary-action {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 16px 28px;
+  border-radius: 10px;
+}
+
+.cta-button,
+.primary-action {
+  background: #ffb31a;
+  color: black !important;
+}
+
+.secondary-button,
+.secondary-action {
+  background: white;
+  color: #063b16 !important;
+  border: 2px solid #ffb31a;
+}
+
+.secondary-button:hover,
+.secondary-action:hover,
+.related-links a:hover,
+.link-list a:hover {
+  background: #ffb31a;
+  color: black !important;
+}
+
+.flyer-panel {
+  background: white;
+  border: 4px solid #ffb31a;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.28);
+}
+
+.flyer-panel img,
+.flyer-section img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.flyer-caption {
+  margin: 12px 2px 0;
+  color: #063b16;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+section { padding: 70px 6%; }
+
+.content-section,
+.content-wrap {
+  max-width: 1120px;
+  margin: auto;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 42px);
+  text-align: center;
+  margin: 0 0 22px;
+  color: #063b16;
+  line-height: 1.15;
+}
+
+h3 {
+  color: #063b16;
+  margin-top: 0;
+}
+
+.lead {
+  text-align: center;
+  font-size: 21px;
+  line-height: 1.65;
+  max-width: 920px;
+  margin: 0 auto 38px;
+}
+
+.quick-assessment-strip,
+.local-section,
+.observation-section {
+  background: #f8f6ef;
+}
+
+.quick-assessment-strip {
+  border-top: 1px solid #e6dcc3;
+  border-bottom: 1px solid #e6dcc3;
+  padding: 34px 6%;
+  text-align: center;
+}
+
+.quick-assessment-strip h2 {
+  margin: 0 0 10px;
+  font-size: clamp(28px, 4vw, 38px);
+}
+
+.quick-assessment-strip p {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  gap: 34px;
+  align-items: start;
+}
+
+.info-card,
+.note-card,
+.warning-card,
+.observation-box {
+  background: #f4f0e2;
+  border-radius: 14px;
+  padding: 28px;
+  border-bottom: 6px solid #ffb31a;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.07);
+}
+
+.info-card p,
+.note-card p,
+.warning-card p,
+.observation-box p {
+  font-size: 18px;
+  line-height: 1.65;
+  margin: 0 0 16px;
+}
+
+.observation-box p:last-child,
+.info-card p:last-child,
+.note-card p:last-child,
+.warning-card p:last-child { margin-bottom: 0; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 35px;
+}
+
+.warning-card h3 {
+  font-size: 23px;
+  margin-bottom: 10px;
+}
+
+.bullet-list {
+  max-width: 920px;
+  margin: 18px auto 0;
+  padding-left: 28px;
+  font-size: 19px;
+  line-height: 1.65;
+}
+
+.bullet-list li { margin: 0 0 8px; }
+
+.link-list,
+.related-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 35px;
+}
+
+.link-list a,
+.related-links a {
+  border: 2px solid #ffb31a;
+  padding: 14px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #063b16;
+  font-weight: 800;
+  background: white;
+}
+
+.flyer-section {
+  background: #f8f6ef;
+  border-top: 1px solid #e6dcc3;
+  border-bottom: 1px solid #e6dcc3;
+}
+
+.flyer-section .flyer-image-link {
+  display: block;
+  max-width: 720px;
+  margin: 26px auto 0;
+}
+
+.disclaimer {
+  background: #f8f6ef;
+}
+
+.disclaimer .observation-box {
+  border-bottom-color: #063b16;
+}
+
+.assessment-cta {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 70px 6%;
+}
+
+.assessment-cta h2,
+.assessment-cta p {
+  color: white;
+}
+
+.assessment-cta h2 {
+  font-size: clamp(32px, 4vw, 42px);
+  margin: 0 0 18px;
+}
+
+.assessment-cta p {
+  font-size: 20px;
+  line-height: 1.5;
+  max-width: 850px;
+  margin: 0 auto 18px;
+}
+
+.assessment-cta .secondary-button { color: #063b16 !important; }
+
+footer {
+  background: #063b16;
+  color: white;
+  text-align: center;
+  padding: 25px;
+}
+
+footer a {
+  color: white;
+  font-weight: 900;
+}
+
+.mobile-sticky-contact { display: none; }
+
+@media(max-width: 1000px){
+  .hero-inner,
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 900px){
+  body { padding-bottom: 74px; }
+
+  .topnav {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .logo img { height: 120px; }
+  .nav-links { justify-content: center; }
+  .nav-cta { display: inline-block; margin-top: 6px; }
+  .hero { padding: 60px 6%; }
+  .hero p { font-size: 20px; }
+  section { padding: 56px 6%; }
+
+  .mobile-sticky-contact {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #063b16;
+    border-top: 3px solid #ffb31a;
+    box-shadow: 0 -4px 14px rgba(0,0,0,0.18);
+  }
+
+  .mobile-sticky-contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    text-align: center;
+    padding: 14px 8px;
+    font-size: 14px;
+    border-right: 1px solid rgba(255,255,255,0.18);
+  }
+
+  .mobile-sticky-contact a:last-child {
+    border-right: none;
+    background: #ffb31a;
+    color: black;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="topnav">
+  <div class="logo">
+    <a href="./index.html">
+      <img src="./logo.png" alt="San Diego Palm Protection Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links" aria-label="Main navigation">
+    <a href="./index.html">Home</a>
+    <span class="nav-separator">|</span>
+    <a href="./index.html#services">Services</a>
+    <span class="nav-separator">|</span>
+    <a href="./sapw.html">Local SAPW</a>
+    <span class="nav-separator">|</span>
+    <a href="./palm-journal-new.html">Palm Journal</a>
+    <span class="nav-separator">|</span>
+    <a href="mailto:sandiegopalmprotection@gmail.com">Contact</a>
+    <a class="call" href="tel:2624923135">262-492-3135</a>
+    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="eyebrow">San Diego Palm Protection Presents</p>
+      <p class="presented-by">A neighborhood documentation and palm preservation effort by San Diego Palm Protection.</p>
+      <h1><span class="highlight">Old Escondido Palm Preservation</span> Initiative</h1>
+      <p>A neighbor-led effort to document, protect, and raise awareness around the mature Canary Island Date Palms that help define Old Escondido's historic landscape.</p>
+      <div class="hero-buttons" aria-label="Initiative links">
+        <a class="cta-button" href="./palm-journal-new.html">View Field Notes in the Palm Journal</a>
+        <a class="secondary-button" href="./sapw.html">Learn About Local SAPW</a>
       </div>
-      <aside class="flyer-panel" aria-label="Old Escondido Palm Preservation Initiative flyer">
-        <a href="./images/old-escondido-palm-preservation-initiative-flyer-june-2026.png" target="_blank" rel="noopener noreferrer">
-          <img src="./images/old-escondido-palm-preservation-initiative-flyer-june-2026.png" alt="Old Escondido Palm Preservation Initiative flyer showing mature Canary Island Date Palms, South American Palm Weevil observations, homeowner warning signs, and San Diego Palm Protection contact information." />
-        </a>
-        <p class="flyer-caption">Click the flyer to open the full-size June 2026 notice.</p>
-      </aside>
     </div>
+
+    <aside class="flyer-panel" aria-label="Old Escondido Palm Preservation Initiative flyer">
+      <a href="./images/old-escondido-palm-preservation-initiative-flyer-june-2026.png" target="_blank" rel="noopener noreferrer">
+        <img src="./images/old-escondido-palm-preservation-initiative-flyer-june-2026.png" alt="Old Escondido Palm Preservation Initiative flyer showing mature Canary Island Date Palms, South American Palm Weevil observations, homeowner warning signs, and San Diego Palm Protection contact information." />
+      </a>
+      <p class="flyer-caption">Click the flyer to open the full-size June 2026 notice.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="quick-assessment-strip">
+  <h2>Preserving Old Escondido's Mature Palm Character</h2>
+  <p>This page is part of San Diego Palm Protection's local field documentation work, focused on mature Canary Island Date Palms, neighborhood context, and calm SAPW-aware homeowner education.</p>
+  <div class="quick-assessment-actions">
+    <a class="primary-action" href="mailto:sandiegopalmprotection@gmail.com?subject=Old%20Escondido%20Palm%20Concern">Document a Mature Palm Concern</a>
+    <a class="secondary-action" href="./palm-care-escondido.html">Palm Care in Escondido</a>
+  </div>
+</section>
+
+<main>
+  <section class="content-section split-section">
+    <div>
+      <h2>Why This Initiative Exists</h2>
+      <p class="lead">Old Escondido contains mature Canary Island Date Palms that are part of the neighborhood's established visual character. These palms are slow-growing, expensive to replace, and often visible from streets, alleys, long driveways, and historic residential properties.</p>
+      <p class="lead">In June 2026, multiple adult South American Palm Weevils were recovered from a mature Canary Island Date Palm in Old Escondido. San Diego Palm Protection is documenting local palm conditions, confirmed observations, and neighborhood palm context to help establish a photographic baseline for residents.</p>
+      <p class="lead">This is an educational, neighbor-led documentation effort. It is intended to help property owners understand what to watch for, preserve mature palms when practical, and avoid assuming that every declining palm has the same cause.</p>
+    </div>
+    <aside class="info-card">
+      <h3>Local and Educational</h3>
+      <p>This initiative is not an official City of Escondido program. It is a preservation-focused effort by San Diego Palm Protection to document mature palms and support informed homeowner awareness.</p>
+    </aside>
   </section>
 
-  <main>
-    <section class="content-section split-section">
-      <div>
-        <h2>Why This Initiative Exists</h2>
-        <p>Old Escondido contains mature Canary Island Date Palms that are part of the neighborhood's established visual character. These palms are slow-growing, expensive to replace, and often visible from streets, alleys, long driveways, and historic residential properties.</p>
-        <p>In June 2026, multiple adult South American Palm Weevils were recovered from a mature Canary Island Date Palm in Old Escondido. San Diego Palm Protection is documenting local palm conditions, confirmed observations, and neighborhood palm context to help establish a photographic baseline for residents.</p>
-        <p>This is an educational, neighbor-led documentation effort. It is intended to help property owners understand what to watch for, preserve mature palms when practical, and avoid assuming that every declining palm has the same cause.</p>
-      </div>
-      <aside class="info-card">
-        <h3>Local and Educational</h3>
-        <p>This initiative is not an official City of Escondido program. It is a preservation-focused effort by San Diego Palm Protection to document mature palms and support informed homeowner awareness.</p>
-      </aside>
-    </section>
-
-    <section class="content-section">
+  <section class="observation-section">
+    <div class="content-section">
       <h2>Documenting Old Escondido's Mature Palms</h2>
-      <p>Field documentation helps compare current palm condition, neighborhood context, and visible changes over time. Photos by themselves are not a diagnosis, but they can help homeowners recognize when a closer inspection may be warranted.</p>
+      <p class="lead">Field documentation helps compare current palm condition, neighborhood context, and visible changes over time. Photos by themselves are not a diagnosis, but they can help homeowners recognize when a closer inspection may be warranted.</p>
       <ul class="bullet-list">
         <li>Mature Canary Island Date Palms in neighborhood context</li>
         <li>Signs of crown thinning, distorted growth, or progressive canopy loss</li>
         <li>Confirmed South American Palm Weevil observations</li>
-        <li>Nearby palms that may help establish baseline conditions</li>
+        <li>Nearby palms that may help establish baseline conditions without implying those palms are affected</li>
         <li>Educational photo comparisons for homeowners</li>
       </ul>
       <div class="link-list" aria-label="Palm Journal links">
-        <a href="./palm-journal-new.html#old-escondido-adult-sapw-declining-cidp">Adult South American Palm Weevil Observation on a Declining Old Escondido CIDP</a>
-        <a href="./palm-journal-new.html#old-escondido-historic-canary-island-date-palm">Historic Canary Island Date Palm Context in Old Escondido</a>
+        <a href="./palm-journal-new.html#old-escondido-adult-sapw-declining-cidp">Adult SAPW Observation in Old Escondido</a>
+        <a href="./palm-journal-new.html#old-escondido-historic-canary-island-date-palm">Historic Canary Island Date Palm Context</a>
         <a href="./palm-journal-new.html#old-escondido-palm-weevils">Old Escondido Palm Weevil Field Note</a>
-        <a href="./palm-journal-new.html#old-escondido-cidp-collection">Old Escondido Canary Island Date Palm Collection</a>
+        <a href="./palm-journal-new.html#old-escondido-cidp-collection">Old Escondido CIDP Collection</a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="content-section">
-      <h2>What Homeowners Should Watch For</h2>
-      <p>Several palm health problems can look similar from the ground. Visible decline does not confirm South American Palm Weevil activity, but these changes can justify closer observation, photo documentation, or a palm health assessment.</p>
-      <div class="card-grid">
-        <article class="warning-card"><h3>Browning Near the Crown</h3><p>Browning or dying fronds near the center crown can be a reason to document changes and watch progression.</p></article>
-        <article class="warning-card"><h3>Crown Thinning</h3><p>Loss of symmetry, thinning, or an uneven canopy may indicate stress that deserves closer review.</p></article>
-        <article class="warning-card"><h3>Distorted New Growth</h3><p>Collapsed, missing, or distorted new growth can be a serious warning sign in mature palms.</p></article>
-        <article class="warning-card"><h3>Sudden Decline</h3><p>A sudden unexplained change in a previously stable palm should be photographed and monitored carefully.</p></article>
-        <article class="warning-card"><h3>Progressive Canopy Loss</h3><p>Repeated loss of canopy density over time can help establish whether decline is accelerating.</p></article>
-        <article class="warning-card"><h3>Unusual Insect Activity</h3><p>Large beetles or unusual insect activity near the crown should be noted without assuming the full cause of decline.</p></article>
-      </div>
-    </section>
+  <section class="content-section">
+    <h2>What Homeowners Should Watch For</h2>
+    <p class="lead">Several palm health problems can look similar from the ground. Visible decline does not confirm South American Palm Weevil activity, and nearby palms are not automatically affected simply because SAPW activity was documented elsewhere. These changes can justify closer observation, photo documentation, or a palm health assessment.</p>
+    <div class="card-grid">
+      <article class="warning-card"><h3>Browning Near the Crown</h3><p>Browning or dying fronds near the center crown can be a reason to document changes and watch progression.</p></article>
+      <article class="warning-card"><h3>Crown Thinning</h3><p>Loss of symmetry, thinning, or an uneven canopy may indicate stress that deserves closer review.</p></article>
+      <article class="warning-card"><h3>Distorted New Growth</h3><p>Collapsed, missing, or distorted new growth can be a serious warning sign in mature palms.</p></article>
+      <article class="warning-card"><h3>Sudden Decline</h3><p>A sudden unexplained change in a previously stable palm should be photographed and monitored carefully.</p></article>
+      <article class="warning-card"><h3>Progressive Canopy Loss</h3><p>Repeated loss of canopy density over time can help establish whether decline is accelerating.</p></article>
+      <article class="warning-card"><h3>Unusual Insect Activity</h3><p>Large beetles or unusual insect activity near the crown should be noted without assuming the full cause of decline.</p></article>
+    </div>
+  </section>
 
-    <section class="content-section split-section">
+  <section class="local-section">
+    <div class="content-section split-section">
       <div>
         <h2>Why These Palms Matter</h2>
-        <p>Mature Canary Island Date Palms cannot quickly be replaced. When a long-established palm is lost, the neighborhood loses more than a single tree. It loses height, structure, shade, identity, and part of the historic landscape character that makes Old Escondido recognizable.</p>
-        <p>Preserving these palms starts with awareness: knowing where mature palms are, what healthy crowns look like, which changes deserve attention, and when a property owner may want a closer inspection.</p>
+        <p class="lead">Mature Canary Island Date Palms cannot quickly be replaced. When a long-established palm is lost, the neighborhood loses more than a single tree. It loses height, structure, shade, identity, and part of the historic landscape character that makes Old Escondido recognizable.</p>
+        <p class="lead">Preserving these palms starts with awareness: knowing where mature palms are, what healthy crowns look like, which changes deserve attention, and when a property owner may want a closer inspection.</p>
       </div>
       <aside class="note-card">
         <h3>Preservation First</h3>
         <p>The initiative is built around documentation, homeowner awareness, and early observation. Pesticide treatment is not presented as the default answer for every palm concern.</p>
       </aside>
-    </section>
+    </div>
+  </section>
 
-    <section class="content-section flyer-section">
+  <section class="flyer-section">
+    <div class="content-section">
       <h2>Old Escondido Palm Preservation Notice</h2>
-      <p>This June 2026 baseline notice was created to help residents understand why local palm documentation is underway and which signs may warrant attention. The flyer is educational and does not diagnose any individual palm from photos alone.</p>
+      <p class="lead">This June 2026 baseline notice was created to help residents understand why local palm documentation is underway and which signs may warrant attention. The flyer is educational and does not diagnose any individual palm from photos alone.</p>
       <a class="flyer-image-link" href="./images/old-escondido-palm-preservation-initiative-flyer-june-2026.png" target="_blank" rel="noopener noreferrer">
         <img src="./images/old-escondido-palm-preservation-initiative-flyer-june-2026.png" alt="Old Escondido Palm Preservation Initiative flyer showing mature Canary Island Date Palms, South American Palm Weevil observations, homeowner warning signs, and San Diego Palm Protection contact information." />
       </a>
-      <p class="flyer-caption"><a href="./images/old-escondido-palm-preservation-initiative-flyer-june-2026.png" target="_blank" rel="noopener noreferrer">View the full-size flyer</a></p>
-    </section>
-
-    <section class="content-section">
-      <h2>Have a Mature Palm in Old Escondido?</h2>
-      <p>Residents with mature Canary Island Date Palms or concerning palm decline are welcome to reach out. San Diego Palm Protection is especially interested in documenting mature palms, unusual decline, and confirmed local South American Palm Weevil observations.</p>
-      <p>Helpful details include the nearest cross streets, palm species if known, approximate age or size, recent photos, and whether the palm has changed quickly or gradually.</p>
-      <div class="button-row">
-        <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com">Contact San Diego Palm Protection</a>
-        <a class="secondary-button" href="./palm-care-escondido.html">Palm Care in Escondido</a>
-      </div>
-    </section>
-
-    <section class="content-section disclaimer">
-      <p>This initiative is for educational and awareness purposes. It does not constitute a diagnosis of any individual palm. San Diego Palm Protection is not affiliated with the City of Escondido or any official municipal program.</p>
-    </section>
-
-    <section class="assessment-cta">
-      <h2>Old Escondido Palm Documentation and Assessment</h2>
-      <p>For mature palms, visible decline, or neighborhood documentation, San Diego Palm Protection can help property owners understand what is visible, what may need monitoring, and when a more detailed palm health review makes sense.</p>
-      <div class="button-row">
-        <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com">Email Photos or Questions</a>
-        <a class="secondary-button" href="./sapw.html">Read About South American Palm Weevil</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-      <span>San Diego Palm Protection</span>
-      <span><a href="./palm-journal-new.html">Palm Journal</a> | <a href="./sapw.html">Palm Weevil</a> | <a href="mailto:sandiegopalmprotection@gmail.com">Contact</a></span>
+      <p class="lead"><a href="./images/old-escondido-palm-preservation-initiative-flyer-june-2026.png" target="_blank" rel="noopener noreferrer">View the full-size flyer</a></p>
     </div>
-  </footer>
+  </section>
 
-  <div class="mobile-sticky-contact" aria-label="Quick contact links">
-    <a href="tel:6197347956">Call</a>
-    <a href="sms:6197347956">Text Photos</a>
-  </div>
+  <section class="content-section">
+    <h2>Have a Mature Palm in Old Escondido?</h2>
+    <p class="lead">Residents with mature Canary Island Date Palms or concerning palm decline are welcome to reach out. San Diego Palm Protection is especially interested in documenting mature palms, unusual decline, and confirmed local South American Palm Weevil observations.</p>
+    <p class="lead">Helpful details include the nearest cross streets, palm species if known, approximate age or size, recent photos, and whether the palm has changed quickly or gradually.</p>
+    <div class="button-row">
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Old%20Escondido%20Palm%20Concern">Document a Mature Palm Concern</a>
+      <a class="secondary-button" href="./quarterly-palm-care-san-diego.html">SAPW-Aware Ongoing Care</a>
+    </div>
+  </section>
+
+  <section class="observation-section">
+    <div class="content-section">
+      <h2>Related San Diego Palm Protection Resources</h2>
+      <p class="lead">Continue through the main San Diego Palm Protection site for local field notes, SAPW education, Canary Island Date Palm care, and Escondido palm stewardship.</p>
+      <div class="related-links">
+        <a href="./palm-journal-new.html">Palm Journal</a>
+        <a href="./sapw.html">Local SAPW Information</a>
+        <a href="./south-american-palm-weevil-treatment-san-diego.html">SAPW-Aware Palm Care</a>
+        <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>
+        <a href="./palm-care-escondido.html">Palm Care in Escondido</a>
+        <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="disclaimer">
+    <div class="content-section observation-box">
+      <h2>Educational Disclaimer</h2>
+      <p>This initiative is for educational and awareness purposes. It does not constitute a diagnosis of any individual palm.</p>
+      <p>San Diego Palm Protection is not affiliated with the City of Escondido or any official municipal program.</p>
+      <p>Declining palms can decline for more than one reason. This page does not mean every declining palm has South American Palm Weevil activity, and nearby palms are not automatically affected simply because SAPW activity was documented elsewhere in Old Escondido.</p>
+    </div>
+  </section>
+
+  <section class="assessment-cta">
+    <h2>Old Escondido Palm Documentation and Assessment</h2>
+    <p>For mature palms, visible decline, or neighborhood documentation, San Diego Palm Protection can help property owners understand what is visible, what may need monitoring, and when a more detailed palm health review makes sense.</p>
+    <div class="button-row">
+      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request a Palm Assessment</a>
+      <a class="secondary-button" href="./sapw.html">Learn About SAPW-Aware Palm Care</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p><strong>San Diego Palm Protection</strong></p>
+  <p><a href="./index.html">Home</a> | <a href="./palm-journal-new.html">Palm Journal</a> | <a href="./sapw.html">Local SAPW</a> | <a href="mailto:sandiegopalmprotection@gmail.com">Contact</a></p>
+</footer>
+
+<div class="mobile-sticky-contact" aria-label="Quick contact links">
+  <a href="sms:2624923135">Text Photos</a>
+  <a href="tel:2624923135">Call</a>
+  <a href="mailto:sandiegopalmprotection@gmail.com">Email</a>
+</div>
 </body>
 </html>
