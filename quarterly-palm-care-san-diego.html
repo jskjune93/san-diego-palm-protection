@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Quarterly Palm Care in San Diego | Palm Fertilization & Protection</title>
-<meta name="description" content="Quarterly palm care plans in San Diego for mature palms. Owner-performed fertilization, preventative treatment when appropriate, watering-in, monitoring, and long-term palm stewardship." />
+<title>Quarterly Palm Care | San Diego Palm Protection</title>
+<meta name="description" content="Quarterly palm care in San Diego for mature palms, including owner-performed fertilization, SAPW-aware monitoring, watering-in, and stewardship." />
 <link rel="canonical" href="https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
@@ -216,6 +216,54 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
 }
 
 </style>
+
+<!-- SEO structured data -->
+<script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@id":  "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html#service",
+                       "@type":  "Service",
+                       "provider":  {
+                                        "@id":  "https://www.sandiegopalmprotection.com/#business"
+                                    },
+                       "url":  "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html",
+                       "name":  "Quarterly Palm Care",
+                       "description":  "Recurring quarterly palm care with fertilization, monitoring, watering-in, SAPW-aware recommendations, and seasonal palm stewardship.",
+                       "areaServed":  [
+                                          "San Diego County",
+                                          "North County San Diego",
+                                          "Escondido",
+                                          "Poway",
+                                          "Rancho Santa Fe"
+                                      ],
+                       "serviceType":  "Quarterly Palm Care"
+                   },
+                   {
+                       "itemListElement":  [
+                                               {
+                                                   "position":  1,
+                                                   "name":  "Home",
+                                                   "item":  "https://www.sandiegopalmprotection.com/",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  2,
+                                                   "name":  [
+                                                                "Quarterly Palm Care",
+                                                                "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html"
+                                                            ],
+                                                   "item":  null,
+                                                   "@type":  "ListItem"
+                                               }
+                                           ],
+                       "@id":  "#breadcrumb",
+                       "@type":  "BreadcrumbList"
+                   }
+               ]
+}
+</script>
 </head>
 <body>
 <header class="topnav">
@@ -228,9 +276,9 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
     <a href="./palm-faq-san-diego.html">FAQ</a><span class="nav-separator">|</span>
     <a href="./sapw.html">Local SAPW</a><span class="nav-separator">|</span>
     <a href="./palm-journal-new.html">Palm Journal</a><span class="nav-separator">|</span>
-    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Quarterly Palm Care Question">Contact</a>
-    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
-    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
+    <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com?subject=Quarterly Palm Care Question">Contact</a>
+    <a data-cta="call" class="call" href="tel:2624923135">📞 262-492-3135</a>
+    <a data-cta="photo-email" class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
   </nav>
 </header>
 
@@ -239,7 +287,7 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
     <h1><span class="highlight">Quarterly Palm Care</span> in San Diego</h1>
     <p>Owner-performed quarterly care for mature palms — helping homeowners protect valuable landscape assets through fertilization, preventative treatment when appropriate, watering-in, and ongoing monitoring.</p>
     <p>Mature palms are not easily replaced. A consistent care plan helps reduce guesswork and gives homeowners peace of mind year-round.</p>
-    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Quarterly Palm Care Plan">Plan Questions?</a>
+    <a data-cta="contact" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Quarterly Palm Care Plan">Plan Questions?</a>
     <a class="secondary-button" href="./canary-island-date-palm-care-san-diego.html">Canary Palm Care</a>
   </div>
 </section>
@@ -248,8 +296,8 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
   <h2>Concerned About a Mature Palm?</h2>
   <p>Text or email photos of your palm for a first look. Quarterly care starts with understanding the palm, the site, and whether the concern is routine maintenance, stress, or visible decline.</p>
   <div class="quick-assessment-actions">
-    <a class="primary-action" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Email Palm Photos</a>
-    <a class="secondary-action" href="sms:2624923135">Text Palm Photos</a>
+    <a data-cta="photo-email" class="primary-action" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Email Palm Photos</a>
+    <a data-cta="text" class="secondary-action" href="sms:2624923135">Text Palm Photos</a>
   </div>
 </section>
 
@@ -292,17 +340,17 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
 
     <div class="image-row">
       <div class="image-card">
-        <img src="./Green Valley_Poway_Mature-Specimen-CIDP.jpg" alt="Healthy mature Canary Island Date Palms in North County San Diego">
+        <img decoding="async" loading="lazy" src="./Green Valley_Poway_Mature-Specimen-CIDP.jpg" alt="Healthy mature Canary Island Date Palms in North County San Diego">
         <p>Consistent care helps preserve the mature palms that define estate, hillside, and established residential landscapes.</p>
       </div>
 
       <div class="image-card">
-        <img src="./treatment.jpg" alt="Owner-performed palm treatment service in San Diego">
+        <img decoding="async" loading="lazy" src="./treatment.jpg" alt="Owner-performed palm treatment service in San Diego">
         <p>Owner-performed service means the same person is observing, treating, watering-in, and tracking the palm over time.</p>
       </div>
 
       <div class="image-card">
-        <img src="./lake poway_1.jpg" alt="Mature palms in Poway and North County San Diego">
+        <img decoding="async" loading="lazy" src="./lake poway_1.jpg" alt="Mature palms in Poway and North County San Diego">
         <p>Quarterly stewardship is built for homeowners who want palm health handled consistently, before decline becomes severe.</p>
       </div>
     </div>
@@ -375,7 +423,7 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
   </p>
 
   <div class="button-row">
-    <a class="cta-button"
+    <a data-cta="photo-email" class="cta-button"
        href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">
       📧 Send Palm Photos
     </a>
@@ -392,23 +440,29 @@ h2 { text-align: center; font-size: clamp(32px, 5vw, 44px); margin: 0 0 24px; co
 
   <p class="email-line">
     <strong>Email:</strong>
-    <a href="mailto:sandiegopalmprotection@gmail.com">
+    <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com">
       sandiegopalmprotection@gmail.com
     </a>
   </p>
 </section>
 <footer>
   <p><strong>San Diego Palm Protection</strong> | Owner-performed palm care, documentation, and mature palm stewardship</p>
-  <p><a href="./index.html" style="color: white; font-weight: 700;">Home</a> | <a href="./index.html#services" style="color: white; font-weight: 700;">Services</a> | <a href="./palm-stewardship-plans.html" style="color: white; font-weight: 700;">Stewardship</a> | <a href="./palm-faq-san-diego.html" style="color: white; font-weight: 700;">Palm FAQ</a> | <a href="./sapw.html" style="color: white; font-weight: 700;">Local SAPW</a> | <a href="./palm-journal-new.html" style="color: white; font-weight: 700;">Palm Journal</a> | <a href="mailto:sandiegopalmprotection@gmail.com" style="color: white; font-weight: 700;">Contact</a></p>
+  <p><a href="./index.html" style="color: white; font-weight: 700;">Home</a> | <a href="./index.html#services" style="color: white; font-weight: 700;">Services</a> | <a href="./palm-stewardship-plans.html" style="color: white; font-weight: 700;">Stewardship</a> | <a href="./palm-faq-san-diego.html" style="color: white; font-weight: 700;">Palm FAQ</a> | <a href="./sapw.html" style="color: white; font-weight: 700;">Local SAPW</a> | <a href="./palm-journal-new.html" style="color: white; font-weight: 700;">Palm Journal</a> | <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com" style="color: white; font-weight: 700;">Contact</a></p>
   <p><a href="https://www.google.com/search?sca_esv=cc38e1736fb87508&authuser=1&sxsrf=ANbL-n6XkuvKFkF0QjuYZvdNFw-Tj-WB9g%3A1779334056337&q=San%20Diego%20Palm%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMQqGZyYp-CSmZqerxCQmJOrEFCUX5KaXJKZnwcANfU0IEUAAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwjGofXyt8mUAxUrKEQIHceDJjIQrMcEegQIEBAC" target="_blank" rel="noopener noreferrer" style="color: white; font-weight: 900;">View San Diego Palm Protection on Google</a></p>
 </footer>
 
 <div class="mobile-sticky-contact" aria-label="Quick contact options">
-  <a href="sms:2624923135">Text Photos</a>
-  <a href="tel:2624923135">Call</a>
-  <a href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">
+  <a data-cta="text" href="sms:2624923135">Text Photos</a>
+  <a data-cta="call" href="tel:2624923135">Call</a>
+  <a data-cta="photo-email" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">
     Assessment
   </a>
 </div>
+
+
+<!-- SDPP analytics placeholder: install GA4/GTM here before deploy when a real measurement ID is available. Do not add test IDs. -->
+<script>
+  window.sdppAnalyticsReady = window.sdppAnalyticsReady || false;
+</script>
 </body>
 </html>

@@ -480,6 +480,54 @@ footer {
   }
 }
 </style>
+
+<!-- SEO structured data -->
+<script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "@id":  "https://www.sandiegopalmprotection.com/palm-care-escondido.html#service",
+                       "@type":  "Service",
+                       "provider":  {
+                                        "@id":  "https://www.sandiegopalmprotection.com/#business"
+                                    },
+                       "url":  "https://www.sandiegopalmprotection.com/palm-care-escondido.html",
+                       "name":  "Palm Care in Escondido",
+                       "description":  "Mature palm care, Canary Island date palm monitoring, SAPW-aware recommendations, and quarterly palm stewardship in Escondido.",
+                       "areaServed":  [
+                                          "San Diego County",
+                                          "North County San Diego",
+                                          "Escondido",
+                                          "Poway",
+                                          "Rancho Santa Fe"
+                                      ],
+                       "serviceType":  "Palm Care in Escondido"
+                   },
+                   {
+                       "itemListElement":  [
+                                               {
+                                                   "position":  1,
+                                                   "name":  "Home",
+                                                   "item":  "https://www.sandiegopalmprotection.com/",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  2,
+                                                   "name":  [
+                                                                "Palm Care in Escondido",
+                                                                "https://www.sandiegopalmprotection.com/palm-care-escondido.html"
+                                                            ],
+                                                   "item":  null,
+                                                   "@type":  "ListItem"
+                                               }
+                                           ],
+                       "@id":  "#breadcrumb",
+                       "@type":  "BreadcrumbList"
+                   }
+               ]
+}
+</script>
 </head>
 
 <body>
@@ -504,9 +552,9 @@ footer {
     <span class="nav-separator">|</span>
     <a href="./palm-journal-new.html">Palm Journal</a>
     <span class="nav-separator">|</span>
-    <a href="mailto:sandiegopalmprotection@gmail.com">Contact</a>
-    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
-    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
+    <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com">Contact</a>
+    <a data-cta="call" class="call" href="tel:2624923135">📞 262-492-3135</a>
+    <a data-cta="photo-email" class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
   </nav>
 </header>
 
@@ -533,8 +581,8 @@ footer {
   <p>Text or email photos of your palm for a first look. In Escondido, useful context includes the neighborhood, crown changes, irrigation history, and whether decline appeared suddenly or gradually.</p>
 
   <div class="quick-assessment-actions">
-    <a class="primary-action" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Email Palm Photos</a>
-    <a class="secondary-action" href="sms:2624923135">Text Palm Photos</a>
+    <a data-cta="photo-email" class="primary-action" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Email Palm Photos</a>
+    <a data-cta="text" class="secondary-action" href="sms:2624923135">Text Palm Photos</a>
   </div>
 </section>
 
@@ -551,17 +599,17 @@ footer {
 
   <div class="image-grid">
     <div class="image-card">
-      <img src="./old_escondido-mature-cidp.jpg" alt="Mature Canary Island Date Palms in Old Escondido">
+      <img decoding="async" loading="lazy" src="./old_escondido-mature-cidp.jpg" alt="Mature Canary Island Date Palms in Old Escondido">
       <p>Old Escondido contains many mature palms that contribute to the historic neighborhood character.</p>
     </div>
 
     <div class="image-card">
-      <img src="./mature-CIDP-Escondido-estate.jpg" alt="Mature Canary Island Date Palm on an Escondido estate property">
+      <img decoding="async" loading="lazy" src="./mature-CIDP-Escondido-estate.jpg" alt="Mature Canary Island Date Palm on an Escondido estate property">
       <p>Large established palms often serve as major visual assets on Escondido residential properties.</p>
     </div>
 
     <div class="image-card">
-      <img src="./sunset-old_escondido-mature-cidp.jpg" alt="Mature palm landscape in Old Escondido at sunset">
+      <img decoding="async" loading="lazy" src="./sunset-old_escondido-mature-cidp.jpg" alt="Mature palm landscape in Old Escondido at sunset">
       <p>Quarterly palm care helps preserve the long-term presence and curb appeal of mature landscapes.</p>
     </div>
   </div>
@@ -669,7 +717,7 @@ footer {
       <h3>One-Time Assessment & Treatment</h3>
       <p><strong>Starting at $750 per visit</strong></p>
       <p>A single professional visit for homeowners with visible decline concerns, seasonal palm care needs, or questions about whether quarterly care makes sense.</p>
-      <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">Request Assessment</a>
+      <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">Request Assessment</a>
     </div>
   </div>
 </section>
@@ -737,7 +785,7 @@ footer {
   </p>
 
   <div class="button-row">
-    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">
+    <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">
       📧 Send Palm Photos
     </a>
 
@@ -752,7 +800,7 @@ footer {
 
   <p class="email-line">
     <strong>Email:</strong>
-    <a href="mailto:sandiegopalmprotection@gmail.com">
+    <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com">
       sandiegopalmprotection@gmail.com
     </a>
   </p>
@@ -760,15 +808,21 @@ footer {
 
 <footer>
   <p><strong>San Diego Palm Protection</strong> | Owner-performed palm care, documentation, and mature palm stewardship</p>
-  <p><a href="./index.html" style="color: white; font-weight: 700;">Home</a> | <a href="./index.html#services" style="color: white; font-weight: 700;">Services</a> | <a href="./palm-stewardship-plans.html" style="color: white; font-weight: 700;">Stewardship</a> | <a href="./palm-faq-san-diego.html" style="color: white; font-weight: 700;">Palm FAQ</a> | <a href="./sapw.html" style="color: white; font-weight: 700;">Local SAPW</a> | <a href="./palm-journal-new.html" style="color: white; font-weight: 700;">Palm Journal</a> | <a href="mailto:sandiegopalmprotection@gmail.com" style="color: white; font-weight: 700;">Contact</a></p>
+  <p><a href="./index.html" style="color: white; font-weight: 700;">Home</a> | <a href="./index.html#services" style="color: white; font-weight: 700;">Services</a> | <a href="./palm-stewardship-plans.html" style="color: white; font-weight: 700;">Stewardship</a> | <a href="./palm-faq-san-diego.html" style="color: white; font-weight: 700;">Palm FAQ</a> | <a href="./sapw.html" style="color: white; font-weight: 700;">Local SAPW</a> | <a href="./palm-journal-new.html" style="color: white; font-weight: 700;">Palm Journal</a> | <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com" style="color: white; font-weight: 700;">Contact</a></p>
   <p><a href="https://www.google.com/search?sca_esv=cc38e1736fb87508&authuser=1&sxsrf=ANbL-n6XkuvKFkF0QjuYZvdNFw-Tj-WB9g%3A1779334056337&q=San%20Diego%20Palm%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMQqGZyYp-CSmZqerxCQmJOrEFCUX5KaXJKZnwcANfU0IEUAAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwjGofXyt8mUAxUrKEQIHceDJjIQrMcEegQIEBAC" target="_blank" rel="noopener noreferrer" style="color: white; font-weight: 900;">View San Diego Palm Protection on Google</a></p>
 </footer>
 
 <div class="mobile-sticky-contact" aria-label="Quick contact options">
-  <a href="sms:2624923135">Text Photos</a>
-  <a href="tel:2624923135">Call</a>
-  <a href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">Assessment</a>
+  <a data-cta="text" href="sms:2624923135">Text Photos</a>
+  <a data-cta="call" href="tel:2624923135">Call</a>
+  <a data-cta="photo-email" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">Assessment</a>
 </div>
 
+
+
+<!-- SDPP analytics placeholder: install GA4/GTM here before deploy when a real measurement ID is available. Do not add test IDs. -->
+<script>
+  window.sdppAnalyticsReady = window.sdppAnalyticsReady || false;
+</script>
 </body>
 </html>

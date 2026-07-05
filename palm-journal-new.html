@@ -636,6 +636,46 @@ footer {
 }
 
 </style>
+
+<!-- SEO structured data -->
+<script type="application/ld+json">
+{
+    "@context":  "https://schema.org",
+    "@graph":  [
+                   {
+                       "name":  "Palm Journal",
+                       "@id":  "https://www.sandiegopalmprotection.com/palm-journal-new.html#blog",
+                       "description":  "Field notes and local observations from San Diego Palm Protection.",
+                       "publisher":  {
+                                         "@id":  "https://www.sandiegopalmprotection.com/#business"
+                                     },
+                       "@type":  "Blog",
+                       "url":  "https://www.sandiegopalmprotection.com/palm-journal-new.html"
+                   },
+                   {
+                       "itemListElement":  [
+                                               {
+                                                   "position":  1,
+                                                   "name":  "Home",
+                                                   "item":  "https://www.sandiegopalmprotection.com/",
+                                                   "@type":  "ListItem"
+                                               },
+                                               {
+                                                   "position":  2,
+                                                   "name":  [
+                                                                "Palm Journal",
+                                                                "https://www.sandiegopalmprotection.com/palm-journal-new.html"
+                                                            ],
+                                                   "item":  null,
+                                                   "@type":  "ListItem"
+                                               }
+                                           ],
+                       "@id":  "#breadcrumb",
+                       "@type":  "BreadcrumbList"
+                   }
+               ]
+}
+</script>
 </head>
 
 <body>
@@ -660,9 +700,9 @@ footer {
     <span class="nav-separator">|</span>
     <a href="./palm-journal-new.html">Palm Journal</a>
     <span class="nav-separator">|</span>
-    <a href="mailto:sandiegopalmprotection@gmail.com?subject=Request Palm Assessment">Contact</a>
-    <a class="call" href="tel:2624923135">📞 262-492-3135</a>
-    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
+    <a data-cta="photo-email" href="mailto:sandiegopalmprotection@gmail.com?subject=Request Palm Assessment">Contact</a>
+    <a data-cta="call" class="call" href="tel:2624923135">📞 262-492-3135</a>
+    <a data-cta="photo-email" class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
   </nav>
 </header>
 <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Palm Journal</h1>
@@ -718,7 +758,7 @@ footer {
 <section class="journal-entry" id="old-escondido-albert-h-beach-house-palms">
   <div class="entry-card">
     <div class="entry-hero tall-hero">
-      <img
+      <img decoding="async" loading="lazy"
         src="./images/old-escondido-albert-h-beach-house-canary-island-date-palms-golden-hour-01.jpg"
         alt="Albert H. Beach House in Old Escondido framed by mature Canary Island date palms at golden hour"
       >
@@ -752,7 +792,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero tall-hero">
-      <img
+      <img decoding="async" loading="lazy"
         src="./images/old-escondido-felicita-contrast.jpg"
         alt="Mature Canary Island Date Palm beside a severely declining Canary Island Date Palm in Old Escondido, Escondido California."
         style="object-position: center 45%;"
@@ -788,7 +828,7 @@ footer {
 
       <div class="entry-photo-grid">
         <div class="entry-photo">
-          <img
+          <img decoding="async" loading="lazy"
             src="./images/old-escondido-felicita-contrast.jpg"
             alt="Mature Canary Island Date Palm beside a severely declining Canary Island Date Palm in Old Escondido, Escondido California."
           >
@@ -798,7 +838,7 @@ footer {
         </div>
 
         <div class="entry-photo">
-          <img
+          <img decoding="async" loading="lazy"
             src="./images/old-escondido-cidp-severe-crown-loss.jpg"
             alt="Severely declining Canary Island Date Palm near the Historic District in Old Escondido."
           >
@@ -808,7 +848,7 @@ footer {
         </div>
 
         <div class="entry-photo">
-          <img
+          <img decoding="async" loading="lazy"
             src="./images/multiple-cidp-11th-ave-old-escondido.jpg"
             alt="Multiple mature Canary Island Date Palms along a street in Old Escondido, California."
           >
@@ -839,7 +879,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero tall-hero">
-      <img
+      <img decoding="async" loading="lazy"
         src="./old-escondido-declining-cidp-crown-context-01.jpg"
         alt="Declining mature Canary Island Date Palm in Old Escondido with visible crown disruption and residential property context"
         style="object-position: center 45%;"
@@ -871,7 +911,7 @@ footer {
 
       <div class="entry-photo-grid">
         <div class="entry-photo">
-          <img
+          <img decoding="async" loading="lazy"
             src="./old-escondido-nearby-cidp-context-02.jpg"
             alt="Mature Canary Island Date Palm visible above an Old Escondido residential roofline near other mature palms"
           >
@@ -881,7 +921,7 @@ footer {
         </div>
 
         <div class="entry-photo">
-          <img
+          <img decoding="async" loading="lazy"
             src="./old-escondido-nearby-mature-cidp-street-context-01.jpg"
             alt="Mature Canary Island Date Palm near an Old Escondido street with residential and utility corridor context"
           >
@@ -900,6 +940,10 @@ footer {
       <p>
         Treatment decisions depend on palm condition, species, timing, site conditions, and the pattern of symptoms. No treatment outcome can be guaranteed, especially once decline is advanced. The most useful first step is often documentation: clear photos over time, context from nearby palms, and a closer look before assuming a cause.
       </p>
+      <p>
+        Related services: <a href="./sapw.html">Local SAPW Information</a>, <a href="./south-american-palm-weevil-treatment-san-diego.html">SAPW Treatment Planning</a>, and <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>.
+      </p>
+
 
     </div>
   </div>
@@ -908,7 +952,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero tall-hero">
-      <img
+      <img decoding="async" loading="lazy"
         src="./old-historic-canary-island-date-palm-sandiego.jpg"
         alt="Mature historic Canary Island Date Palm in Old Escondido near other mature palms"
         style="object-position: center 45%;"
@@ -961,6 +1005,10 @@ footer {
       <p>
         This palm is also located just down the street from a stressed mature Canary Island Date Palm where I personally recovered and documented multiple adult South American Palm Weevils during local monitoring. That confirmed nearby activity is documented in the Palm Journal entry below.
       </p>
+      <p>
+        Related services: <a href="./palm-care-escondido.html">Palm Care in Escondido</a>, <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>, and <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>.
+      </p>
+
 
     </div>
   </div>
@@ -969,7 +1017,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero">
-      <img
+      <img decoding="async" loading="lazy"
         src="./old-escondido-multiple-south-american-palm-weevil-sapw-canary-island-date-palm-cidp.jpg"
         alt="Multiple adult palm weevils recovered during Canary Island Date Palm monitoring in Old Escondido"
         style="object-fit: contain; background:#f4f0e2; padding:18px;"
@@ -1014,7 +1062,7 @@ footer {
       <div class="entry-photo-grid">
 
         <div class="entry-photo">
-          <img
+          <img decoding="async" loading="lazy"
             src="./old-escondido-south-american-palm-weevil-sapw-canary-island-date-palm-cidp_closeup.jpg"
             alt="Closeup side profile of adult palm weevil recovered in Old Escondido"
             style="object-fit: contain; background:#f4f0e2;"
@@ -1025,7 +1073,7 @@ footer {
         </div>
 
         <div class="entry-photo">
-          <img
+          <img decoding="async" loading="lazy"
             src="./old-escondido-topview-south-american-palm-weevil-sapw-canary-island-date-palm-cidp.jpg"
             alt="Top view of adult palm weevil recovered in Old Escondido"
             style="object-fit: contain; background:#f4f0e2;"
@@ -1036,7 +1084,7 @@ footer {
         </div>
 
         <div class="entry-photo">
-          <img
+          <img decoding="async" loading="lazy"
             src="./multiple-south-american-palm-weevil-sapw-canary-island-date-palm-old_escondido.jpg"
             alt="Multiple adult palm weevils recovered in Old Escondido"
             style="object-fit: contain; background:#f4f0e2;"
@@ -1079,7 +1127,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero">
-      <img
+      <img decoding="async" loading="lazy"
         src="./two-statement-cidp-mansion-poway.jpg"
         alt="Statement Canary Island Date Palms near Old Winery Road in Poway"
       >
@@ -1102,17 +1150,17 @@ footer {
 
       <div class="journal-photo-grid">
         <figure>
-          <img src="./mature_healthy_cidp_poway_mansion.jpg" alt="Healthy mature Canary Island Date Palm in a Poway estate landscape">
+          <img decoding="async" loading="lazy" src="./mature_healthy_cidp_poway_mansion.jpg" alt="Healthy mature Canary Island Date Palm in a Poway estate landscape">
           <figcaption>A healthy mature Canary Island Date Palm anchoring a well-maintained Poway landscape.</figcaption>
         </figure>
 
         <figure>
-          <img src="./cidp-palms-poway.jpg" alt="Multiple mature palms in front of a Poway estate property">
+          <img decoding="async" loading="lazy" src="./cidp-palms-poway.jpg" alt="Multiple mature palms in front of a Poway estate property">
           <figcaption>Multiple mature palms creating a classic North County estate feel.</figcaption>
         </figure>
 
         <figure>
-          <img src="./silver_luxury_poway.jpg" alt="Silver-blue specimen palms in front of a luxury Poway home">
+          <img decoding="async" loading="lazy" src="./silver_luxury_poway.jpg" alt="Silver-blue specimen palms in front of a luxury Poway home">
           <figcaption>Silver-blue specimen palms adding architectural structure and visual impact.</figcaption>
         </figure>
       </div>
@@ -1129,17 +1177,17 @@ footer {
 
       <div class="journal-photo-grid">
         <figure>
-          <img src="./mansion_healthy_cidp_poway_three.jpg" alt="Healthy mature Canary Island Date Palms at a Poway estate">
+          <img decoding="async" loading="lazy" src="./mansion_healthy_cidp_poway_three.jpg" alt="Healthy mature Canary Island Date Palms at a Poway estate">
           <figcaption>Healthy mature palms helping define the front elevation of a Poway home.</figcaption>
         </figure>
 
         <figure>
-          <img src="./majestic_cidp_poway_mansion.jpg" alt="Large mature Canary Island Date Palm in a Poway estate landscape">
+          <img decoding="async" loading="lazy" src="./majestic_cidp_poway_mansion.jpg" alt="Large mature Canary Island Date Palm in a Poway estate landscape">
           <figcaption>A mature CIDP used as a true statement palm.</figcaption>
         </figure>
 
         <figure>
-          <img src="./blue-hesper-canary-island-date-palm-poway.jpg" alt="Blue hesper palm and Canary Island Date Palm in Poway landscape">
+          <img decoding="async" loading="lazy" src="./blue-hesper-canary-island-date-palm-poway.jpg" alt="Blue hesper palm and Canary Island Date Palm in Poway landscape">
           <figcaption>Premium palm combinations can give a property a more intentional, mature look.</figcaption>
         </figure>
       </div>
@@ -1156,17 +1204,17 @@ footer {
 
       <div class="journal-photo-grid">
         <figure>
-          <img src="./early-south-american-palm-weevil-cidp-poway.jpg" alt="Canary Island Date Palm in Poway showing signs of decline">
+          <img decoding="async" loading="lazy" src="./early-south-american-palm-weevil-cidp-poway.jpg" alt="Canary Island Date Palm in Poway showing signs of decline">
           <figcaption>A mature CIDP showing concerning canopy decline in Poway.</figcaption>
         </figure>
 
         <figure>
-          <img src="./dead-cidp-sapw-healthy-cidp-poway.jpg" alt="Dead Canary Island Date Palm near healthy palms in Poway">
+          <img decoding="async" loading="lazy" src="./dead-cidp-sapw-healthy-cidp-poway.jpg" alt="Dead Canary Island Date Palm near healthy palms in Poway">
           <figcaption>The contrast between healthy palms and advanced decline was visible in the same neighborhood.</figcaption>
         </figure>
 
         <figure>
-          <img src="./several-healthy-cidp-poway-and-one-dead-cidp.jpg" alt="Several healthy Canary Island Date Palms and one dead palm in Poway">
+          <img decoding="async" loading="lazy" src="./several-healthy-cidp-poway-and-one-dead-cidp.jpg" alt="Several healthy Canary Island Date Palms and one dead palm in Poway">
           <figcaption>Healthy mature palms nearby make the loss of a statement CIDP even more noticeable.</figcaption>
         </figure>
       </div>
@@ -1201,7 +1249,7 @@ footer {
   <div class="entry-card">
     
 <div class="entry-hero">
-  <img 
+  <img decoding="async" loading="lazy" 
     src="./las-palmas_Old-Escondido_mature-cidp.jpg"
     alt="Healthy mature Canary Island Date Palms at Las Palmas in Old Escondido"
   >
@@ -1256,6 +1304,10 @@ footer {
           Healthy mature palms are decades in the making. Stewardship today helps preserve the character and value of properties for years to come.
         </p>
       </div>
+      <p>
+        Related services: <a href="./palm-care-escondido.html">Palm Care in Escondido</a>, <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>, and <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>.
+      </p>
+
 
     </div>
   </div>
@@ -1265,7 +1317,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero">
-      <img 
+      <img decoding="async" loading="lazy" 
         src="./sunset-old_escondido-mature-cidp.jpg" 
         alt="Mature Canary Island Date Palm rising above Old Escondido rooftops at sunset"
       >
@@ -1292,21 +1344,21 @@ footer {
 
       <div class="entry-photo-grid">
         <div class="entry-photo">
-          <img src="./beautiful-old_escondido-cidp.jpg" alt="Large mature Canary Island Date Palm in Old Escondido with clear blue sky">
+          <img decoding="async" loading="lazy" src="./beautiful-old_escondido-cidp.jpg" alt="Large mature Canary Island Date Palm in Old Escondido with clear blue sky">
           <p>
             Mature Canary Island Date Palms help define the skyline and character of Old Escondido.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./historic_escondido-cidp.jpg" alt="Mature Canary Island Date Palm near historic Escondido homes">
+          <img decoding="async" loading="lazy" src="./historic_escondido-cidp.jpg" alt="Mature Canary Island Date Palm near historic Escondido homes">
           <p>
             Many of these palms stand near historic homes, older streets, and long-established neighborhood landscapes.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./Las Palmas_Appartments_Healthy-CIDP.jpg" alt="Mature Canary Island Date Palms near Las Palmas apartments in Old Escondido">
+          <img decoding="async" loading="lazy" src="./Las Palmas_Appartments_Healthy-CIDP.jpg" alt="Mature Canary Island Date Palms near Las Palmas apartments in Old Escondido">
           <p>
             Apartment communities and older properties often rely on mature palms for identity and curb appeal.
           </p>
@@ -1325,21 +1377,21 @@ footer {
 
       <div class="entry-photo-grid">
         <div class="entry-photo">
-          <img src="./Felicita_CIDP_healthy.jpg" alt="Healthy mature Canary Island Date Palms at Felicita Villas in Escondido">
+          <img decoding="async" loading="lazy" src="./Felicita_CIDP_healthy.jpg" alt="Healthy mature Canary Island Date Palms at Felicita Villas in Escondido">
           <p>
             Felicita Villas is one example of how powerful mature CIDPs can be in a property landscape.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./Felicita_CIDP.jpg" alt="Mature Canary Island Date Palms at Felicita Villas with dramatic sky">
+          <img decoding="async" loading="lazy" src="./Felicita_CIDP.jpg" alt="Mature Canary Island Date Palms at Felicita Villas with dramatic sky">
           <p>
             These are not small ornamental plants. They are landmark trees that shape first impressions.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./mature-cidp-estate.jpg" alt="Large healthy Canary Island Date Palm on an Old Escondido residential property">
+          <img decoding="async" loading="lazy" src="./mature-cidp-estate.jpg" alt="Large healthy Canary Island Date Palm on an Old Escondido residential property">
           <p>
             On residential properties, mature Canary palms can become one of the most valuable visual assets in the yard.
           </p>
@@ -1362,21 +1414,21 @@ footer {
 
       <div class="entry-photo-grid">
         <div class="entry-photo">
-          <img src="./mature-cidp-old_escondido.jpg" alt="Mature Canary Island Date Palms on a residential street in Old Escondido">
+          <img decoding="async" loading="lazy" src="./mature-cidp-old_escondido.jpg" alt="Mature Canary Island Date Palms on a residential street in Old Escondido">
           <p>
             The strength of Old Escondido’s palm landscape is how many mature specimens appear across everyday streets.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./older-cidp-old_escondido.jpg" alt="Older Canary Island Date Palm in Old Escondido neighborhood landscape">
+          <img decoding="async" loading="lazy" src="./older-cidp-old_escondido.jpg" alt="Older Canary Island Date Palm in Old Escondido neighborhood landscape">
           <p>
             Older CIDPs are decades in the making and cannot realistically be replaced within a generation.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./old_escondido-mature-cidp.jpg" alt="Mature Canary Island Date Palm above Juniper Village in Old Escondido">
+          <img decoding="async" loading="lazy" src="./old_escondido-mature-cidp.jpg" alt="Mature Canary Island Date Palm above Juniper Village in Old Escondido">
           <p>
             These palms are part of the neighborhood’s identity — visible above homes, courtyards, and community buildings.
           </p>
@@ -1406,6 +1458,10 @@ footer {
       <p>
         If you have a mature Canary Island Date Palm in Escondido or elsewhere in North County and have noticed changes in the crown, color, spear growth, or overall canopy structure, feel free to send photos or request a palm assessment.
       </p>
+      <p>
+        Related services: <a href="./palm-care-escondido.html">Palm Care in Escondido</a>, <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>, and <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>.
+      </p>
+
 
     </div>
   </div>
@@ -1414,7 +1470,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero"> 
-      <img 
+      <img decoding="async" loading="lazy" 
         src="./grand2.jpg" 
         alt="Grand Avenue in Old Escondido near Manzanita Roasting Company"
       >
@@ -1442,21 +1498,21 @@ footer {
       <div class="entry-photo-grid">
 
         <div class="entry-photo">
-          <img src="./grand1.jpg" alt="Healthy and declining Canary palms across the street from one another on Grand Avenue">
+          <img decoding="async" loading="lazy" src="./grand1.jpg" alt="Healthy and declining Canary palms across the street from one another on Grand Avenue">
           <p>
             Two mature Canary palms - one still healthy, full, and iconic, while the other nearby appears to be in severe decline. These are right across the street from the following photo ->
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./grand.jpg" alt="Declining Canary Island Date Palm on Grand Avenue in Old Escondido">
+          <img decoding="async" loading="lazy" src="./grand.jpg" alt="Declining Canary Island Date Palm on Grand Avenue in Old Escondido">
           <p>
             A declining Canary Island Date Palm on Grand Avenue, showing how quickly a mature palm can become part of a larger neighborhood concern. Across the street from the two trees in before photo
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./grand2.jpg" alt="Grand Avenue revitalization in Old Escondido">
+          <img decoding="async" loading="lazy" src="./grand2.jpg" alt="Grand Avenue revitalization in Old Escondido">
           <p>
             Grand Avenue continues to see new investment and local energy — making the condition of its Canary Island Palms especially valuable. 
           </p>
@@ -1493,6 +1549,10 @@ footer {
       <p>
         If you’ve noticed changes in a Canary palm in Escondido or elsewhere in North County, feel free to reach out with questions or send photos. I’m always happy to take a look and help point people in the right direction.
       </p>
+      <p>
+        Related services: <a href="./palm-care-escondido.html">Palm Care in Escondido</a>, <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>, and <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>.
+      </p>
+
 
     </div>
   </div>
@@ -1503,7 +1563,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero">
-      <img 
+      <img decoding="async" loading="lazy" 
         src="./grape1.jpg" 
         alt="Healthy Canary Island Date Palm in Old Escondido"
       >
@@ -1538,21 +1598,21 @@ footer {
       <div class="entry-photo-grid">
 
         <div class="entry-photo">
-          <img src="./grape1.jpg" alt="Healthy Canary Island Date Palm in Escondido Historic District">
+          <img decoding="async" loading="lazy" src="./grape1.jpg" alt="Healthy Canary Island Date Palm in Escondido Historic District">
           <p>
             Healthy, mature Canary Island Date Palms remain one of the defining landscape features of Escondido’s historic neighborhoods.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./grape2.jpg" alt="Palm stump from a recently removed Canary Island Date Palm">
+          <img decoding="async" loading="lazy" src="./grape2.jpg" alt="Palm stump from a recently removed Canary Island Date Palm">
           <p>
             A recently removed palm stump discussed during the walk. Adult weevils were reportedly found after removal.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./grape4.jpg" alt="Dead Canary Island Date Palms in Escondido Historic District">
+          <img decoding="async" loading="lazy" src="./grape4.jpg" alt="Dead Canary Island Date Palms in Escondido Historic District">
           <p>
             Nearby dead palms show the other side of the issue: once advanced decline is visible, options may be much more limited.
           </p>
@@ -1575,6 +1635,10 @@ footer {
           Local observation, early monitoring, and preventative care can make a meaningful difference before visible decline becomes severe.
         </p>
       </div>
+      <p>
+        Related services: <a href="./palm-care-escondido.html">Palm Care in Escondido</a>, <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>, and <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>.
+      </p>
+
 
     </div>
   </div>
@@ -1584,7 +1648,7 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero">
-    <img 
+    <img decoding="async" loading="lazy" 
     src="./RSF3.jpg" 
     alt="Healthy Canary Island Date Palm in Rancho Santa Fe"
     >
@@ -1608,21 +1672,21 @@ footer {
       <div class="entry-photo-grid">
 
         <div class="entry-photo">
-          <img src="./RSF4.jpg" alt="CIDP showing possible decline in Rancho Santa Fe">
+          <img decoding="async" loading="lazy" src="./RSF4.jpg" alt="CIDP showing possible decline in Rancho Santa Fe">
           <p>
             Not every palm observed appeared equally healthy. Compared to the healy CIDP on the right, the left is showing as trunk only after significant canopy loss. Significant changes in canopy structure may be worth monitoring more closely
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./RSF1.jpg" alt="UC monitoring trap for South American Palm Weevil">
+          <img decoding="async" loading="lazy" src="./RSF1.jpg" alt="UC monitoring trap for South American Palm Weevil">
           <p>
             UC monitoring traps continue to appear throughout North County, reflecting ongoing awareness and monitoring efforts related to South American Palm Weevil (SAPW).
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./RSF2.jpg" alt="Over-trimmed palm in Rancho Santa Fe">
+          <img decoding="async" loading="lazy" src="./RSF2.jpg" alt="Over-trimmed palm in Rancho Santa Fe">
           <p>
             Over-trimming, sometimes called a “hurricane cut,” may leave palms stressed over time. Not only is the SAPW attracted to stressed CIDP's, maintaining fuller canopies is often just healthier for the tree.
           </p>
@@ -1645,6 +1709,10 @@ footer {
           Healthy palms are often the result of consistency over time. Early observation and preventative care may help avoid more expensive problems later.
         </p>
       </div>
+      <p>
+        Related services: <a href="./palm-care-rancho-santa-fe.html">Palm Care in Rancho Santa Fe</a>, <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>, and <a href="./palm-stewardship-plans.html">Palm Stewardship Plans</a>.
+      </p>
+
 
     </div>
   </div>
@@ -1655,12 +1723,12 @@ footer {
 
 <div class="entry-hero side-by-side healthy-hero">
 
-  <img 
+  <img decoding="async" loading="lazy" 
     src="./healthy.jpg" 
     alt="Healthy Canary Island Date Palm with full crown structure"
   >
 
-  <img 
+  <img decoding="async" loading="lazy" 
     src="./RSF2.jpg" 
     alt="Over-trimmed Canary Island Date Palm with sparse crown"
   >
@@ -1713,6 +1781,10 @@ footer {
   </p>
 </div>
 
+      <p>
+        For ongoing care context, see <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>, <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>, and <a href="./palm-care-rancho-santa-fe.html">Palm Care in Rancho Santa Fe</a>.
+      </p>
+
     </div>
   </div>
 </section>
@@ -1721,12 +1793,12 @@ footer {
   <div class="entry-card">
 
     <div class="entry-hero side-by-side">
-      <img 
+      <img decoding="async" loading="lazy" 
         src="./exhibit_8.jpg" 
         alt="Suspected palm weevil larva collected during a local assessment"
       >
 
-      <img 
+      <img decoding="async" loading="lazy" 
         src="./exhibit_8a.JPG" 
         alt="Reference image of Rhynchophorus cruentatus larvae for comparison"
       >
@@ -1755,21 +1827,21 @@ footer {
 
       <div class="entry-photo-grid">
         <div class="entry-photo">
-          <img src="./exhibit_5.jpg" alt="Canary Island Date Palm with severe crown deterioration and canopy collapse">
+          <img decoding="async" loading="lazy" src="./exhibit_5.jpg" alt="Canary Island Date Palm with severe crown deterioration and canopy collapse">
           <p>
             Severe canopy loss and crown deterioration can indicate advanced decline in mature Canary Island Date Palms.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./exhibit_8.jpg" alt="Palm-boring larval specimen reportedly collected near declining Canary Island Date Palms">
+          <img decoding="async" loading="lazy" src="./exhibit_8.jpg" alt="Palm-boring larval specimen reportedly collected near declining Canary Island Date Palms">
           <p>
             A palm-boring larval specimen was reportedly collected on-site near declining CIDPs during the assessment.
           </p>
         </div>
 
         <div class="entry-photo">
-          <img src="./exhibit_1.jpg" alt="Healthy Canary Island Date Palms near declining palms in a high-risk setting">
+          <img decoding="async" loading="lazy" src="./exhibit_1.jpg" alt="Healthy Canary Island Date Palms near declining palms in a high-risk setting">
           <p>
             Healthy-appearing CIDPs located near declining specimens may warrant closer monitoring and proactive protection.
           </p>
@@ -1814,6 +1886,10 @@ footer {
           opportunities to protect healthy palms while options remain.
         </p>
       </div>
+      <p>
+        Related services: <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>, <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>, and <a href="./palm-faq-san-diego.html">Palm Care FAQ</a>.
+      </p>
+
     </div>
   </div>
 </section>
@@ -1839,7 +1915,7 @@ footer {
   <p>Text or email a few photos of your palm or yard.</p>
 
   <div class="button-row">
-    <a class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Request Palm Assessment">📧 Send a Few Palm Photos</a>
+    <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Request Palm Assessment">📧 Send a Few Palm Photos</a>
     <a class="secondary-button" href="./index.html#services">
   View Services
 </a>
@@ -1849,22 +1925,28 @@ footer {
 
   <p class="email-line">
     <strong>Email:</strong>
-    <a href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a>
+    <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a>
   </p>
 </section>
 
 <footer>
   <p><strong>San Diego Palm Protection</strong> | Owner-performed palm care, documentation, and mature palm stewardship</p>
-  <p><a href="./index.html" style="color: white; font-weight: 700;">Home</a> | <a href="./index.html#services" style="color: white; font-weight: 700;">Services</a> | <a href="./palm-stewardship-plans.html" style="color: white; font-weight: 700;">Stewardship</a> | <a href="./palm-faq-san-diego.html" style="color: white; font-weight: 700;">Palm FAQ</a> | <a href="./sapw.html" style="color: white; font-weight: 700;">Local SAPW</a> | <a href="./palm-journal-new.html" style="color: white; font-weight: 700;">Palm Journal</a> | <a href="mailto:sandiegopalmprotection@gmail.com" style="color: white; font-weight: 700;">Contact</a></p>
+  <p><a href="./index.html" style="color: white; font-weight: 700;">Home</a> | <a href="./index.html#services" style="color: white; font-weight: 700;">Services</a> | <a href="./palm-stewardship-plans.html" style="color: white; font-weight: 700;">Stewardship</a> | <a href="./palm-faq-san-diego.html" style="color: white; font-weight: 700;">Palm FAQ</a> | <a href="./sapw.html" style="color: white; font-weight: 700;">Local SAPW</a> | <a href="./palm-journal-new.html" style="color: white; font-weight: 700;">Palm Journal</a> | <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com" style="color: white; font-weight: 700;">Contact</a></p>
   <p><a href="https://www.google.com/search?sca_esv=cc38e1736fb87508&authuser=1&sxsrf=ANbL-n6XkuvKFkF0QjuYZvdNFw-Tj-WB9g%3A1779334056337&q=San%20Diego%20Palm%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMQqGZyYp-CSmZqerxCQmJOrEFCUX5KaXJKZnwcANfU0IEUAAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwjGofXyt8mUAxUrKEQIHceDJjIQrMcEegQIEBAC" target="_blank" rel="noopener noreferrer" style="color: white; font-weight: 900;">View San Diego Palm Protection on Google</a></p>
 </footer>
 
 
 <div class="mobile-sticky-contact" aria-label="Quick contact options">
-  <a href="sms:2624923135">Text Photos</a>
-  <a href="tel:2624923135">Call</a>
-  <a href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Assessment</a>
+  <a data-cta="text" href="sms:2624923135">Text Photos</a>
+  <a data-cta="call" href="tel:2624923135">Call</a>
+  <a data-cta="photo-email" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Assessment</a>
 </div>
 
+
+
+<!-- SDPP analytics placeholder: install GA4/GTM here before deploy when a real measurement ID is available. Do not add test IDs. -->
+<script>
+  window.sdppAnalyticsReady = window.sdppAnalyticsReady || false;
+</script>
 </body>
 </html>
