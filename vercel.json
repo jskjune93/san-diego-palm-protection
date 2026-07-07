@@ -31,7 +31,7 @@
           "value": "sandiegopalmhealth.com"
         }
       ],
-      "destination": "https://www.sandiegopalmprotection.com",
+      "destination": "https://www.sandiegopalmprotection.com/palm-faq-san-diego.html",
       "permanent": true
     },
     {
@@ -42,7 +42,7 @@
           "value": "www.sandiegopalmhealth.com"
         }
       ],
-      "destination": "https://www.sandiegopalmprotection.com",
+      "destination": "https://www.sandiegopalmprotection.com/palm-faq-san-diego.html",
       "permanent": true
     },
 
@@ -54,7 +54,7 @@
           "value": "sandiegopalmcare.com"
         }
       ],
-      "destination": "https://www.sandiegopalmprotection.com",
+      "destination": "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html",
       "permanent": true
     },
     {
@@ -65,7 +65,7 @@
           "value": "www.sandiegopalmcare.com"
         }
       ],
-      "destination": "https://www.sandiegopalmprotection.com",
+      "destination": "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html",
       "permanent": true
     }
   ]
