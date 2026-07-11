@@ -30,27 +30,27 @@ RULES = [
     Rule(
         "booking_or_quote_for_disabled_field_service",
         re.compile(
-            r"\b(schedule|book|appointment|request\s+(?:a\s+)?(?:quote|assessment|service|visit)|ask\s+about|plan\s+questions)\b"
+            r"\b(schedule|book|appointment|request\s+(?:a\s+)?(?:quote|photographic condition review|service|visit)|ask\s+about|plan\s+questions)\b"
             r".{0,90}\b(treatment|pesticide|sapw|weevil|palm\s+care|quarterly|removal|installation|planting|pruning|property\s+visit|stewardship\s+visit)\b",
             re.I,
         ),
-        "Prelicense mode cannot solicit booking, quotes, assessments, or visits for unavailable field services.",
+        "Prelicense mode cannot solicit booking, quotes, photographic condition reviews, or visits for unavailable field services.",
     ),
     Rule(
         "reverse_booking_or_quote_for_disabled_field_service",
         re.compile(
             r"\b(treatment|pesticide|sapw|weevil|palm\s+care|quarterly|removal|installation|planting|pruning|property\s+visit|stewardship\s+visit)\b"
-            r".{0,90}\b(schedule|book|appointment|request\s+(?:a\s+)?(?:quote|assessment|service|visit)|ask\s+about|plan\s+questions)\b",
+            r".{0,90}\b(schedule|book|appointment|request\s+(?:a\s+)?(?:quote|photographic condition review|service|visit)|ask\s+about|plan\s+questions)\b",
             re.I,
         ),
-        "Prelicense mode cannot solicit booking, quotes, assessments, or visits for unavailable field services.",
+        "Prelicense mode cannot solicit booking, quotes, photographic condition reviews, or visits for unavailable field services.",
     ),
     Rule(
         "price_for_disabled_field_service",
         re.compile(
             r"(\$\s*\d|starting\s+at|typical\s+investment|price(?:s|d|range|ing)?)"
-            r".{0,120}\b(treatment|visit|quarterly|care\s+plan|assessment|removal|installation|planting|pruning)\b"
-            r"|\b(treatment|visit|quarterly|care\s+plan|assessment|removal|installation|planting|pruning)\b.{0,120}"
+            r".{0,120}\b(treatment|visit|quarterly|care\s+plan|photographic condition review|removal|installation|planting|pruning)\b"
+            r"|\b(treatment|visit|quarterly|care\s+plan|photographic condition review|removal|installation|planting|pruning)\b.{0,120}"
             r"(\$\s*\d|starting\s+at|typical\s+investment|price(?:s|d|range|ing)?)",
             re.I,
         ),
@@ -103,11 +103,39 @@ RULES = [
     ),
 ]
 
+ALWAYS_BLOCK_RULES = [
+    Rule(
+        "monitoring_as_commercial_service",
+        re.compile(r"\b(palm\s+monitoring|monitoring)\s+services?\s+(?:available|offered|provided|for\s+hire)\b|\bprofessional\s+(?:palm\s+)?monitoring\b", re.I),
+        "Prelicense mode cannot present palm monitoring as a current commercial SDPP service.",
+    ),
+    Rule(
+        "professional_inspection_solicitation",
+        re.compile(r"\b(schedule|book|request)\b.{0,80}\bprofessional\s+(?:palm\s+)?inspection\b|\bprofessional\s+(?:palm\s+)?inspection\b.{0,80}\b(schedule|book|request)\b", re.I),
+        "Prelicense mode cannot solicit professional inspections by SDPP.",
+    ),
+    Rule(
+        "photo_based_treatment_recommendation",
+        re.compile(r"\b(send|text|email|submit)\b.{0,80}\bphotos?\b.{0,100}\b(treatment|pesticide|chemical|insecticide)\s+recommendation\b", re.I),
+        "Photo submission cannot be offered in exchange for treatment or pesticide recommendations.",
+    ),
+    Rule(
+        "contingent_future_treatment_offer",
+        re.compile(r"\b(treatment|sapw|pesticide|weevil)\b.{0,80}\b(waitlist|reserve|prebook|pre-book|deposit|coming\s+soon|after\s+licens(?:e|ing)|pending\s+licens(?:e|ing)|future\s+treatment)\b|\b(waitlist|reserve|prebook|pre-book|deposit|coming\s+soon|after\s+licens(?:e|ing)|pending\s+licens(?:e|ing)|future\s+treatment)\b.{0,80}\b(treatment|sapw|pesticide|weevil)\b", re.I),
+        "Prelicense mode cannot solicit future, contingent, waitlisted, reserved, or post-licensing treatment work.",
+    ),
+    Rule(
+        "site_specific_pesticide_prescription",
+        re.compile(r"\b(prescribe|prescription|site-specific|specific)\b.{0,80}\b(pesticide|chemical|insecticide|treatment|Safari|dinotefuran|imidacloprid|bifenthrin)\b|\b(pesticide|chemical|insecticide|treatment|Safari|dinotefuran|imidacloprid|bifenthrin)\b.{0,80}\b(prescribe|prescription|site-specific)\b", re.I),
+        "Prelicense mode cannot provide site-specific pesticide prescriptions or recommendations.",
+    ),
+]
+
 
 ALLOW_PATTERNS = [
     re.compile(r"not currently offered", re.I),
     re.compile(r"appropriately licensed|licensed provider|licensed tree contractor|qualified arborist|pest-control business", re.I),
-    re.compile(r"education(?:al)?|documentation|field note|photographic|visible-condition|not a diagnosis|photos alone|historical", re.I),
+    re.compile(r"education(?:al)?|documentation|field note|photographic|visible-condition|not a definitive diagnosis|not establish a diagnosis|photos alone|historical", re.I),
     re.compile(r"does not perform|not perform|not provide|not offered|not currently", re.I),
     re.compile(r"according to|reportedly|had recently been removed|was cut down", re.I),
     re.compile(r"not a substitute for formal arboricultural consulting|municipal determinations|laboratory testing", re.I),
@@ -142,6 +170,9 @@ def validate_text(text: str, rel: str) -> list[str]:
         compact = " ".join(line.strip().split())
         if not compact or "PRELICENSE_ALLOW" in compact:
             continue
+        for rule in ALWAYS_BLOCK_RULES:
+            if rule.pattern.search(compact):
+                diagnostics.append(f"{rel}:{line_no}: {rule.name}: {rule.reason} :: {compact[:220]}")
         if is_allowed(compact):
             continue
         for rule in RULES:
@@ -176,6 +207,17 @@ def run_self_tests() -> int:
         "palm installation offer": ("We install specimen palms and planting upgrades.", False),
         "licensed and insured": ("San Diego Palm Protection is licensed and insured for palm treatment.", False),
         "prelicense notice": (STATUS_NOTICE + " Pesticide application and removal services are not currently offered.", True),
+        "monitoring service": ("Palm monitoring services available for San Diego homeowners.", False),
+        "professional inspection": ("Schedule a professional inspection for your Canary Island date palm.", False),
+        "photos for treatment recommendation": ("Send photos for a treatment recommendation.", False),
+        "sapw waitlist": ("Join the SAPW treatment waitlist.", False),
+        "reserve after licensing": ("Reserve treatment after licensing is complete.", False),
+        "site specific prescription": ("We can prescribe a site-specific pesticide treatment for this palm.", False),
+        "historical visible record": ("This historical record documents visible changes over time.", True),
+        "no photo diagnosis": ("Photographs do not establish a diagnosis.", True),
+        "licensed provider evaluation": ("Contact an appropriately licensed provider for an in-person evaluation.", True),
+        "educational monitoring techniques": ("This educational page explains general monitoring techniques for palms.", True),
+        "educational pesticide labels": ("This educational page discusses pesticide labels and application methods generally.", True),
     }
     failed = []
     for name, (text, should_pass) in fixtures.items():

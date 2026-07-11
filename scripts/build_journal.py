@@ -1,4 +1,4 @@
-﻿from __future__ import annotations
+from __future__ import annotations
 
 from html import escape
 from pathlib import Path
@@ -150,10 +150,10 @@ def header(relative_root: str = "./") -> str:
   <nav aria-label="Primary navigation">
     <a href="{relative_root}index.html">Home</a>
     <a href="{relative_root}palm-care-escondido.html">Escondido</a>
-    <a href="{relative_root}palm-stewardship-plans.html">Stewardship Plans</a>
+    <a href="{relative_root}palm-stewardship-plans.html">Stewardship Resources</a>
     <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
     <a class="call" href="tel:2624923135">&#9742; 262-492-3135</a>
-    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Photo First Look</a>
+    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Photo Review</a>
   </nav>
 </header>'''
 
@@ -252,7 +252,7 @@ def render_index(entries: list[dict]) -> None:
     <h2>Have a Mature Palm Concern?</h2>
     <p>Send a few clear photos and the palm location context. SDPP can help organize visible-condition observations before you decide whether monitoring, preservation research, or referral to an appropriately licensed provider makes sense.</p>
     <p>Prelicense status: SDPP currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
-    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational first look</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
+    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational photo review</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
 {footer('./')}
@@ -303,7 +303,7 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     <h2>Need Help Reading Palm Changes?</h2>
     <p>SDPP reviews mature palm observations with a preservation-first documentation approach and avoids unsupported diagnosis from a single public image.</p>
     <p>Prelicense status: SDPP currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
-    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational first look</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
+    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational photo review</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
 {footer('../')}

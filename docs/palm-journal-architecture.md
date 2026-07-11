@@ -1,4 +1,4 @@
-﻿# Palm Journal Architecture
+# Palm Journal Architecture
 
 The Palm Journal has been refactored from a single continuously expanding page into a static library plus individual article pages.
 
@@ -62,7 +62,7 @@ It should not edit generated article pages directly as the source of truth.
 
 ## Retained resource cards
 
-The old callout sections for the Old Escondido initiative, CIDP risk checklist, removal planning, and contact/assessment actions were not migrated as journal articles. Their destinations remain available through the library navigation, related links, site navigation, or assessment call to action.
+The old callout sections for the Old Escondido initiative, CIDP risk checklist, removal planning, and contact/photographic condition review actions were not migrated as journal articles. Their destinations remain available through the library navigation, related links, site navigation, or photographic condition review call to action.
 
 ## Redirect note
 
