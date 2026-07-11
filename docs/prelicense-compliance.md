@@ -31,7 +31,22 @@ The site also must not offer professional inspections, pest diagnoses, pesticide
 
 The source of truth is `site-config/business_status.json`.
 
-Passing an individual exam or completing one business prerequisite must not automatically change the website status. QAL issuance alone is not enough. Any future transition requires an explicit owner-controlled update after the QAL is issued, the Pest Control Business License is issued, financial responsibility is active and accepted, San Diego County registration is completed, and operating prerequisites have been confirmed.
+Passing an individual exam or completing one business prerequisite must not automatically change the website status. QAL issuance alone is not enough. Any future transition requires an explicit owner-controlled update after these fields are true:
+
+- `qal_issued_and_active`
+- `pest_control_business_license_issued_and_active`
+- `financial_responsibility_active`
+- `workers_compensation_requirement_addressed`
+- `county_registration_current`
+- `equipment_registered_and_ready`
+- `reporting_system_ready`
+- `storage_transport_ppe_systems_ready`
+- `label_sds_notice_consent_emergency_systems_ready`
+- `owner_activation_approved`
+
+The permanent requirement `job_application_preflight_required` must remain true. It means every future application requires a separate site, product, label, permit, notice, consent, PPE, weather, emergency, and recordkeeping preflight before work. This website validator does not implement that job-management system; it only prevents the public site from activating regulated-service claims without the policy gate.
+
+`workers_compensation_requirement_addressed` means compliant coverage is active when required, or a legitimate no-employees status has been explicitly verified. Lack of a workers' compensation policy is not automatic compliance.
 
 ## Validator
 
@@ -43,6 +58,8 @@ python scripts/validate_prelicense_compliance.py --self-test
 ```
 
 The validator reads `site-config/business_status.json`, scans public HTML, generated Palm Journal pages, `journal-data/journal_entries.json`, and Palm Journal source article fragments. It blocks transactional patterns involving treatment offers, pricing, booking, quotes, unavailable field services, monitoring-as-service, professional inspection solicitations, photo-based treatment recommendations, contingent treatment offers, false credential claims, and disabled Offer/Service structured data.
+
+It also validates the activation contract. Regulated-service flags fail if any required readiness field is false, owner activation is absent, or the permanent job/application preflight requirement is disabled. QAL issuance by itself is explicitly insufficient.
 
 The validator supports narrow allowlisting with `PRELICENSE_ALLOW` only for context that cannot be reliably inferred and has been owner-reviewed. Prefer clearer public copy over allowlisting.
 

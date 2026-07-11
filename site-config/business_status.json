@@ -6,5 +6,16 @@
   "tree_palm_contracting_enabled": false,
   "commercial_field_services_enabled": false,
   "documentation_and_education_enabled": true,
-  "owner_review_required": true
+  "owner_review_required": true,
+  "qal_issued_and_active": false,
+  "pest_control_business_license_issued_and_active": false,
+  "financial_responsibility_active": false,
+  "workers_compensation_requirement_addressed": false,
+  "county_registration_current": false,
+  "equipment_registered_and_ready": false,
+  "reporting_system_ready": false,
+  "storage_transport_ppe_systems_ready": false,
+  "label_sds_notice_consent_emergency_systems_ready": false,
+  "job_application_preflight_required": true,
+  "owner_activation_approved": false
 }

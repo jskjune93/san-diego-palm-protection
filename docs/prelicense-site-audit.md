@@ -46,3 +46,13 @@ After California and San Diego County licensing research clarified the operating
 | Palm Journal source/generated pages | article CTAs | Generated pages used "first look" and "diagnosis" phrasing. | E/B | CTA language could imply a service; diagnosis references are generally disclaimers. | Builder now uses educational photo review and "unsupported diagnosis" language. | Journal architecture preserved. |
 
 No contingent treatment solicitation, waitlist, deposit, prebooking, future-treatment offer, site-specific pesticide prescription, or SDPP professional-inspection offer remains in public files.
+
+## Commercial Activation Contract Alignment
+
+The website business-status configuration was aligned to the finalized SDPP Machine prerequisite names. Current prelicense status keeps all completed-readiness fields false and keeps `job_application_preflight_required` true as a permanent policy requirement.
+
+| File | Location | Existing wording or description | Classification | Risk/reason | Action taken | Final disposition |
+|---|---:|---|---|---|---|---|
+| `site-config/business_status.json` | activation fields | Earlier config described prerequisites in prose but did not expose the SDPP Machine field names. | E | Future website activation could drift from SDPP Machine policy. | Added explicit readiness fields for QAL, PCB license, financial responsibility, workers' comp status, county registration, equipment, reporting, storage/transport/PPE, labels/SDS/notice/consent/emergency systems, job preflight, and owner activation. | All readiness fields remain false except the permanent job-preflight requirement, which is true. |
+| `scripts/validate_prelicense_compliance.py` | config validation | Validator checked public copy but did not fail closed on incomplete commercial activation fields. | E | Regulated service flags could be enabled before readiness was complete. | Added activation-contract validation and self-test fixtures. | Regulated-service activation fails unless every prerequisite and owner approval is true. |
+| `docs/prelicense-compliance.md` | future activation section | Workers' compensation and job-by-job preflight semantics were not explicit. | E | Could imply lack of a policy is compliance or that website validation replaces job preflight. | Documented workers' comp semantics and separate site/product/label/permit/notice/PPE/weather/record preflight requirement. | Documented. |

@@ -18,6 +18,27 @@ STATUS_NOTICE = (
     "photographic condition records, and educational resources."
 )
 
+REGULATED_SERVICE_FLAGS = (
+    "pesticide_services_enabled",
+    "tree_palm_contracting_enabled",
+    "commercial_field_services_enabled",
+)
+
+READINESS_FIELDS = (
+    "qal_issued_and_active",
+    "pest_control_business_license_issued_and_active",
+    "financial_responsibility_active",
+    "workers_compensation_requirement_addressed",
+    "county_registration_current",
+    "equipment_registered_and_ready",
+    "reporting_system_ready",
+    "storage_transport_ppe_systems_ready",
+    "label_sds_notice_consent_emergency_systems_ready",
+    "owner_activation_approved",
+)
+
+PERMANENT_REQUIREMENTS = ("job_application_preflight_required",)
+
 
 @dataclass(frozen=True)
 class Rule:
@@ -184,14 +205,42 @@ def validate_text(text: str, rel: str) -> list[str]:
 def validate_repository(root: Path = ROOT) -> list[str]:
     config = load_config(root)
     mode = config.get("mode")
+    diagnostics = validate_config(config)
     if mode != "prelicense":
-        return []
-    diagnostics: list[str] = []
-    if config.get("pesticide_services_enabled") or config.get("tree_palm_contracting_enabled") or config.get("commercial_field_services_enabled"):
-        diagnostics.append("site-config/business_status.json: prelicense mode cannot enable pesticide, contracting, or commercial field services")
+        return diagnostics
     for path in iter_scan_files(root):
         rel = path.relative_to(root).as_posix()
         diagnostics.extend(validate_text(path.read_text(encoding="utf-8-sig", errors="replace"), rel))
+    return diagnostics
+
+
+def validate_config(config: dict, rel: str = "site-config/business_status.json") -> list[str]:
+    diagnostics: list[str] = []
+    for field in REGULATED_SERVICE_FLAGS:
+        if field not in config:
+            diagnostics.append(f"{rel}: missing regulated service flag: {field}")
+    for field in READINESS_FIELDS:
+        if field not in config:
+            diagnostics.append(f"{rel}: missing activation prerequisite: {field}")
+    for field in PERMANENT_REQUIREMENTS:
+        if field not in config:
+            diagnostics.append(f"{rel}: missing permanent activation requirement: {field}")
+        elif config.get(field) is not True:
+            diagnostics.append(f"{rel}: permanent job/application preflight requirement must remain true: {field}")
+
+    regulated_enabled = any(config.get(field) is True for field in REGULATED_SERVICE_FLAGS)
+    if config.get("mode") == "prelicense" and regulated_enabled:
+        diagnostics.append(f"{rel}: prelicense mode cannot enable pesticide, contracting, or commercial field services")
+    if regulated_enabled:
+        for field in READINESS_FIELDS:
+            if config.get(field) is not True:
+                diagnostics.append(f"{rel}: regulated services enabled before prerequisite is complete: {field}")
+        if config.get("owner_activation_approved") is not True:
+            diagnostics.append(f"{rel}: regulated services enabled without explicit owner activation approval")
+    if config.get("qal_issued_and_active") is True and regulated_enabled:
+        incomplete = [field for field in READINESS_FIELDS if config.get(field) is not True]
+        if incomplete:
+            diagnostics.append(f"{rel}: QAL issuance alone is not sufficient activation; incomplete prerequisites: {', '.join(incomplete)}")
     return diagnostics
 
 
@@ -218,10 +267,41 @@ def run_self_tests() -> int:
         "licensed provider evaluation": ("Contact an appropriately licensed provider for an in-person evaluation.", True),
         "educational monitoring techniques": ("This educational page explains general monitoring techniques for palms.", True),
         "educational pesticide labels": ("This educational page discusses pesticide labels and application methods generally.", True),
+        "structured data service claim": ('{"@context":"https://schema.org","@type":"Service","serviceType":"SAPW treatment"}', False),
     }
     failed = []
     for name, (text, should_pass) in fixtures.items():
         passed = not validate_text(text, f"fixture:{name}")
+        if passed != should_pass:
+            failed.append(f"{name}: expected {should_pass}, got {passed}")
+    base_config = {
+        "mode": "prelicense",
+        "pesticide_services_enabled": False,
+        "tree_palm_contracting_enabled": False,
+        "commercial_field_services_enabled": False,
+        "qal_issued_and_active": False,
+        "pest_control_business_license_issued_and_active": False,
+        "financial_responsibility_active": False,
+        "workers_compensation_requirement_addressed": False,
+        "county_registration_current": False,
+        "equipment_registered_and_ready": False,
+        "reporting_system_ready": False,
+        "storage_transport_ppe_systems_ready": False,
+        "label_sds_notice_consent_emergency_systems_ready": False,
+        "job_application_preflight_required": True,
+        "owner_activation_approved": False,
+    }
+    config_fixtures = {
+        "public prelicense config": (base_config, True),
+        "workers compensation unresolved blocks activation": ({**base_config, "mode": "commercial", "pesticide_services_enabled": True, "workers_compensation_requirement_addressed": False, "owner_activation_approved": True}, False),
+        "operating systems missing blocks activation": ({**base_config, "mode": "commercial", "pesticide_services_enabled": True, "qal_issued_and_active": True, "pest_control_business_license_issued_and_active": True, "financial_responsibility_active": True, "workers_compensation_requirement_addressed": True, "county_registration_current": True, "equipment_registered_and_ready": False, "reporting_system_ready": False, "storage_transport_ppe_systems_ready": False, "label_sds_notice_consent_emergency_systems_ready": False, "owner_activation_approved": True}, False),
+        "job preflight disabled blocks activation": ({**base_config, "job_application_preflight_required": False}, False),
+        "owner activation absent blocks activation": ({key: value for key, value in base_config.items() if key != "owner_activation_approved"}, False),
+        "qal alone does not activate": ({**base_config, "mode": "commercial", "pesticide_services_enabled": True, "qal_issued_and_active": True}, False),
+        "all prerequisites allow commercial flags": ({**base_config, "mode": "commercial", "pesticide_services_enabled": True, "qal_issued_and_active": True, "pest_control_business_license_issued_and_active": True, "financial_responsibility_active": True, "workers_compensation_requirement_addressed": True, "county_registration_current": True, "equipment_registered_and_ready": True, "reporting_system_ready": True, "storage_transport_ppe_systems_ready": True, "label_sds_notice_consent_emergency_systems_ready": True, "owner_activation_approved": True}, True),
+    }
+    for name, (config, should_pass) in config_fixtures.items():
+        passed = not validate_config(config, f"fixture:{name}")
         if passed != should_pass:
             failed.append(f"{name}: expected {should_pass}, got {passed}")
     if failed:
@@ -230,7 +310,7 @@ def run_self_tests() -> int:
             print(f" - {item}")
         return 1
     print("PRELICENSE_SELF_TEST_OK")
-    print(f"fixtures_checked={len(fixtures)}")
+    print(f"fixtures_checked={len(fixtures) + len(config_fixtures)}")
     return 0
 
 
