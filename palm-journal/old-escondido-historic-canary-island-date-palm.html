@@ -63,8 +63,9 @@
     .article-shell { background: #fff; border: 1px solid #e2d8c6; border-radius: 6px; padding: clamp(20px, 4vw, 42px); }
     .article-meta { color: #5f5a50; font-weight: 700; }
     .entry-card { display: grid; gap: 24px; }
-    .entry-hero img, .entry-hero.side-by-side img, .gallery-grid img { width: 100%; border-radius: 4px; object-fit: cover; }
-    .entry-hero.side-by-side, .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .entry-card > *, .entry-content, .entry-hero, .entry-photo { min-width: 0; max-width: 100%; }
+    .entry-hero img, .entry-hero.side-by-side img, .gallery-grid img, .entry-photo-grid img { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px; object-fit: cover; }
+    .entry-hero.side-by-side, .gallery-grid, .entry-photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
     .entry-hero img { max-height: 560px; }
     .image-caption { color: #5f5a50; font-size: .94rem; }
     .breadcrumb { margin-bottom: 24px; font-size: .94rem; }
@@ -124,7 +125,7 @@
       
 
       <p>
-        This mature Canary Island Date Palm rises above an Old Escondido street with the kind of presence that only comes from decades of growth. Based on its height, trunk development, and established canopy, this palm is likely many decades old ? possibly in the range of 60 to 100 years, depending on its original planting conditions and history.
+        This mature Canary Island Date Palm rises above an Old Escondido street with the kind of presence that only comes from decades of growth. Based on its height, trunk development, and established canopy, this palm is likely many decades old, possibly in the range of 60 to 100 years, depending on its original planting conditions and history.
       </p>
 
       <p>
@@ -145,7 +146,7 @@
 
       <div class="entry-note">
         <p>
-          Mature Canary Island Date Palms are long-term landscape assets. In historic neighborhoods like Old Escondido, they help preserve the community?s character, history, and sense of place.
+          Mature Canary Island Date Palms are long-term landscape assets. In historic neighborhoods like Old Escondido, they help preserve the community's character, history, and sense of place.
         </p>
       </div>
 
@@ -180,6 +181,7 @@
   <section class="assessment-cta" id="contact">
     <h2>Need Help Reading Palm Changes?</h2>
     <p>SDPP reviews mature palm observations with a preservation-first documentation approach and avoids unsupported diagnosis from a single public image.</p>
+    <p>Prelicense status: San Diego Palm Protection currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
     <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational photo review</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>

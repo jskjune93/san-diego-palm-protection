@@ -142,8 +142,9 @@
     .article-shell { background: #fff; border: 1px solid #e2d8c6; border-radius: 6px; padding: clamp(20px, 4vw, 42px); }
     .article-meta { color: #5f5a50; font-weight: 700; }
     .entry-card { display: grid; gap: 24px; }
-    .entry-hero img, .entry-hero.side-by-side img, .gallery-grid img { width: 100%; border-radius: 4px; object-fit: cover; }
-    .entry-hero.side-by-side, .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .entry-card > *, .entry-content, .entry-hero, .entry-photo { min-width: 0; max-width: 100%; }
+    .entry-hero img, .entry-hero.side-by-side img, .gallery-grid img, .entry-photo-grid img { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px; object-fit: cover; }
+    .entry-hero.side-by-side, .gallery-grid, .entry-photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
     .entry-hero img { max-height: 560px; }
     .image-caption { color: #5f5a50; font-size: .94rem; }
     .breadcrumb { margin-bottom: 24px; font-size: .94rem; }

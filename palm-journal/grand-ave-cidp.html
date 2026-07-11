@@ -63,8 +63,9 @@
     .article-shell { background: #fff; border: 1px solid #e2d8c6; border-radius: 6px; padding: clamp(20px, 4vw, 42px); }
     .article-meta { color: #5f5a50; font-weight: 700; }
     .entry-card { display: grid; gap: 24px; }
-    .entry-hero img, .entry-hero.side-by-side img, .gallery-grid img { width: 100%; border-radius: 4px; object-fit: cover; }
-    .entry-hero.side-by-side, .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .entry-card > *, .entry-content, .entry-hero, .entry-photo { min-width: 0; max-width: 100%; }
+    .entry-hero img, .entry-hero.side-by-side img, .gallery-grid img, .entry-photo-grid img { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px; object-fit: cover; }
+    .entry-hero.side-by-side, .gallery-grid, .entry-photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
     .entry-hero img { max-height: 560px; }
     .image-caption { color: #5f5a50; font-size: .94rem; }
     .breadcrumb { margin-bottom: 24px; font-size: .94rem; }
@@ -122,7 +123,7 @@
       
 
       <p>
-        I like to walk through my neighborhood, and tonight while walking through Escondido?s historic district, I had a good conversation with a local resident about Canary Island Date Palms and the growing concern around South American Palm Weevil activity in North County.
+        I like to walk through my neighborhood, and tonight while walking through Escondido's historic district, I had a good conversation with a local resident about Canary Island Date Palms and the growing concern around South American Palm Weevil activity in North County.
       </p>
 
       <p>
@@ -130,11 +131,11 @@
       </p>
 
       <p>
-        <strong>?It?s only a matter of time with these weevils.?</strong>
+        <strong>"It's only a matter of time with these weevils."</strong>
       </p>
 
       <p>
-        We talked about a nearby palm that had recently been removed. According to him, multiple adult weevils were reportedly found after the palm was cut down ? a reminder that serious internal palm damage may not always be obvious from the outside until the decline is already advanced.
+        We talked about a nearby palm that had recently been removed. According to him, multiple adult weevils were reportedly found after the palm was cut down - a reminder that serious internal palm damage may not always be obvious from the outside until the decline is already advanced.
       </p>
 
       <p>
@@ -146,7 +147,7 @@
         <div class="entry-photo">
           <img decoding="async" loading="lazy" src="../grape1.jpg" alt="Healthy Canary Island Date Palm in Escondido Historic District">
           <p>
-            Healthy, mature Canary Island Date Palms remain one of the defining landscape features of Escondido?s historic neighborhoods.
+            Healthy, mature Canary Island Date Palms remain one of the defining landscape features of Escondido's historic neighborhoods.
           </p>
         </div>
 
@@ -169,11 +170,11 @@
       <h3>Why These Local Observations Matter</h3>
 
       <p>
-        Palm health is often about catching small changes early. Crown thinning, sudden browning, weak spear growth, trunk damage, or unexplained decline can all be worth a closer look ? especially when valuable specimen palms are located near known palm losses.
+        Palm health is often about catching small changes early. Crown thinning, sudden browning, weak spear growth, trunk damage, or unexplained decline can all be worth a closer look, especially when valuable specimen palms are located near known palm losses.
       </p>
 
       <p>
-        Escondido?s historic district has some incredible homes with incredible palms. The goal is to keep the properties and palms attractive for years to come.
+        Escondido's historic district has some incredible homes with incredible palms. The goal is to keep the properties and palms attractive for years to come.
       </p>
 
       <div class="entry-note">
@@ -199,6 +200,7 @@
   <section class="assessment-cta" id="contact">
     <h2>Need Help Reading Palm Changes?</h2>
     <p>SDPP reviews mature palm observations with a preservation-first documentation approach and avoids unsupported diagnosis from a single public image.</p>
+    <p>Prelicense status: San Diego Palm Protection currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
     <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational photo review</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
