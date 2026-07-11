@@ -77,48 +77,29 @@ footer a { color: white; }
 <!-- SEO structured data -->
 <script type="application/ld+json">
 {
-    "@context":  "https://schema.org",
-    "@graph":  [
-                   {
-                       "@id":  "https://www.sandiegopalmprotection.com/palm-stewardship-plans.html#service",
-                       "@type":  "Service",
-                       "provider":  {
-                                        "@id":  "https://www.sandiegopalmprotection.com/#business"
-                                    },
-                       "url":  "https://www.sandiegopalmprotection.com/palm-stewardship-plans.html",
-                       "name":  "Palm Stewardship Plans",
-                       "description":  "Documented palm stewardship visits, quarterly care planning, SAPW-aware recommendations, and long-term mature palm management.",
-                       "areaServed":  [
-                                          "San Diego County",
-                                          "North County San Diego",
-                                          "Escondido",
-                                          "Poway",
-                                          "Rancho Santa Fe"
-                                      ],
-                       "serviceType":  "Palm Stewardship Plans"
-                   },
-                   {
-                       "itemListElement":  [
-                                               {
-                                                   "position":  1,
-                                                   "name":  "Home",
-                                                   "item":  "https://www.sandiegopalmprotection.com/",
-                                                   "@type":  "ListItem"
-                                               },
-                                               {
-                                                   "position":  2,
-                                                   "name":  [
-                                                                "Palm Stewardship Plans",
-                                                                "https://www.sandiegopalmprotection.com/palm-stewardship-plans.html"
-                                                            ],
-                                                   "item":  null,
-                                                   "@type":  "ListItem"
-                                               }
-                                           ],
-                       "@id":  "#breadcrumb",
-                       "@type":  "BreadcrumbList"
-                   }
-               ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "itemListElement": [
+        {
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.sandiegopalmprotection.com/",
+          "@type": "ListItem"
+        },
+        {
+          "position": 2,
+          "name": [
+            "Palm Stewardship Plans",
+            "https://www.sandiegopalmprotection.com/palm-stewardship-plans.html"
+          ],
+          "@type": "ListItem"
+        }
+      ],
+      "@id": "#breadcrumb",
+      "@type": "BreadcrumbList"
+    }
+  ]
 }
 </script>
 </head>
@@ -134,7 +115,7 @@ footer a { color: white; }
     <a href="./palm-journal-new.html">Palm Journal</a><span class="nav-separator">|</span>
     <a data-cta="photo-email" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Stewardship%20Visit">Contact</a>
     <a data-cta="call" class="call" href="tel:2624923135">262-492-3135</a>
-    <a data-cta="photo-email" class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Stewardship%20Visit">Schedule Visit</a>
+    <a data-cta="photo-email" class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Stewardship%20Visit">Photo First Look</a>
   </nav>
 </header>
 
@@ -143,9 +124,14 @@ footer a { color: white; }
     <h1><span class="highlight">Palm Stewardship Plans</span></h1>
     <p>San Diego Palm Protection helps property owners preserve mature palms through documented inspections, SAPW-aware protection, quarterly care, and long-term palm stewardship.</p>
     <p>Built for mature Canary Island date palms, estate properties, HOAs, historic properties, churches, apartments, and high-value landscapes where palms are worth tracking over time.</p>
-    <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Stewardship%20Visit">Schedule a Palm Stewardship Visit</a>
+    <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Stewardship%20Visit">Send Palm Photos for Review</a>
     <a class="secondary-button" href="./quarterly-palm-care-san-diego.html">View Quarterly Care</a>
   </div>
+</section>
+
+<section class="quick-assessment-strip prelicense-status">
+  <h2>Current SDPP Scope</h2>
+  <p>San Diego Palm Protection currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
 </section>
 
 <section>
@@ -173,12 +159,12 @@ footer a { color: white; }
 
 <section>
   <div class="content-section">
-    <h2>Stewardship Offers</h2>
+    <h2>Stewardship Resource Paths</h2>
     <p class="lead">These plans are designed to help owners make calm, practical decisions about mature palms without assuming a diagnosis from photos alone or promising recovery outcomes.</p>
     <div class="offer-grid">
       <div class="offer-card">
         <h3>Palm Stewardship Visit</h3>
-        <p>A one-time property visit for owners who want a clear first step before committing to ongoing care.</p>
+        <p>A one-time photo review for owners who want a clear first step before committing to ongoing care.</p>
         <ul>
           <li>Palm inspection</li>
           <li>Photo documentation</li>
@@ -186,7 +172,7 @@ footer a { color: white; }
           <li>Treatment recommendations when appropriate</li>
           <li>Follow-up plan</li>
         </ul>
-        <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Stewardship%20Visit">Schedule a Palm Stewardship Visit</a>
+        <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Stewardship%20Visit">Send Palm Photos for Review</a>
       </div>
       <div class="offer-card">
         <h3>Quarterly Palm Stewardship Plan</h3>
@@ -194,7 +180,7 @@ footer a { color: white; }
         <ul>
           <li>Recurring quarterly visits</li>
           <li>Fertilization when appropriate</li>
-          <li>Preventative protection treatment when warranted</li>
+          <li>Referral discussion when warranted</li>
           <li>Monitoring and photo documentation</li>
           <li>Seasonal recommendations</li>
           <li>Designed for mature Canary Island date palms and other valuable palms</li>
@@ -208,7 +194,7 @@ footer a { color: white; }
           <li>Palm inventory</li>
           <li>Condition documentation</li>
           <li>Priority risk list</li>
-          <li>Treatment schedule</li>
+          <li>Referral timing notes</li>
           <li>Replacement planning</li>
           <li>Designed for HOAs, property managers, estates, churches, apartments, and historic properties</li>
         </ul>
@@ -227,7 +213,7 @@ footer a { color: white; }
       <div class="offer-card"><h3>Photo Documentation</h3><p>Document full-palm views, crown condition, trunk/base context, and visible changes that may be useful for future comparison.</p></div>
       <div class="offer-card"><h3>Palm-by-Palm Notes</h3><p>Organize observations for individual palms so owners can understand which trees need monitoring, care, or follow-up.</p></div>
       <div class="offer-card"><h3>SAPW-Aware Recommendations</h3><p>Provide conservative care recommendations for mature Canary Island date palms and other valuable palms where local SAPW awareness matters.</p></div>
-      <div class="offer-card"><h3>Prioritized Concerns</h3><p>Identify visible concerns that may deserve closer attention, follow-up photos, treatment discussion, or removal/replacement planning.</p></div>
+      <div class="offer-card"><h3>Prioritized Concerns</h3><p>Identify visible concerns that may deserve closer attention, follow-up photos, referral discussion, or removal/replacement planning.</p></div>
       <div class="offer-card"><h3>Recurring Planning Option</h3><p>When appropriate, turn the first visit into an optional quarterly stewardship plan for continued observation and care.</p></div>
     </div>
   </div>
@@ -252,7 +238,7 @@ footer a { color: white; }
     <div class="process-grid">
       <div class="process-card"><strong>Preserve Character</strong><p>Support mature palms that shape entrances, courtyards, historic streets, and estate landscapes.</p></div>
       <div class="process-card"><strong>Track Change</strong><p>Use photos and notes to understand whether visible changes are stable, progressing, or worth a closer look.</p></div>
-      <div class="process-card"><strong>Plan Ahead</strong><p>Separate care, monitoring, treatment discussion, and replacement planning into a calmer sequence.</p></div>
+      <div class="process-card"><strong>Plan Ahead</strong><p>Separate care, monitoring, referral discussion, and replacement planning into a calmer sequence.</p></div>
       <div class="process-card"><strong>Stay Conservative</strong><p>Keep recommendations grounded in observations without diagnosing from photos alone or promising outcomes.</p></div>
     </div>
   </div>
@@ -268,13 +254,13 @@ footer a { color: white; }
     <p class="lead">These pages provide more detail on South American palm weevil awareness, Canary Island date palm care, field observations, and ongoing care options.</p>
     <div class="related-links">
       <a href="./sapw.html">Local SAPW Information</a>
-      <a href="./south-american-palm-weevil-treatment-san-diego.html">SAPW Treatment Planning</a>
+      <a href="./south-american-palm-weevil-treatment-san-diego.html">SAPW Treatment Education</a>
       <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>
       <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>
       <a href="./palm-journal-new.html">Palm Journal</a>
       <a href="./palm-faq-san-diego.html">Palm Care FAQ</a>
-      <a href="./palm-removal-coordination.html">Palm Removal Coordination</a>
-      <a href="./palm-sourcing-installation.html">Palm Sourcing & Installation</a>
+      <a href="./palm-removal-coordination.html">Palm Removal Decision Planning</a>
+      <a href="./palm-sourcing-installation.html">Palm Sourcing & Installation Education</a>
       <a href="./specimen-palms-cycads.html">Specimen Palms & Cycads</a>
     </div>
   </div>
@@ -289,14 +275,14 @@ footer a { color: white; }
   <a class="secondary-button" href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>
 </section>
 <section class="assessment-cta" id="contact">
-  <h2>Schedule a Palm Stewardship Visit</h2>
+  <h2>Send Palm Photos for Review</h2>
   <p>Send photos of the full palm, crown, trunk/base, city or neighborhood, and what changed. SDPP can help determine whether a one-time visit, quarterly stewardship plan, or broader property palm management approach makes sense.</p>
   <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Stewardship%20Visit">Email Palm Photos</a>
   <a data-cta="text" class="secondary-button" href="sms:2624923135">Text Palm Photos</a>
 </section>
 
 <footer>
-  <p><strong>San Diego Palm Protection</strong> | Owner-performed palm care, documentation, and mature palm stewardship</p>
+  <p><strong>San Diego Palm Protection</strong> | Palm documentation, educational resources, and mature palm stewardship</p>
   <p><a href="./index.html" style="color: white; font-weight: 700;">Home</a> | <a href="./index.html#services" style="color: white; font-weight: 700;">Services</a> | <a href="./palm-stewardship-plans.html" style="color: white; font-weight: 700;">Stewardship</a> | <a href="./palm-faq-san-diego.html" style="color: white; font-weight: 700;">Palm FAQ</a> | <a href="./sapw.html" style="color: white; font-weight: 700;">Local SAPW</a> | <a href="./palm-journal-new.html" style="color: white; font-weight: 700;">Palm Journal</a> | <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com" style="color: white; font-weight: 700;">Contact</a></p>
   <p><a href="https://www.google.com/search?sca_esv=cc38e1736fb87508&authuser=1&sxsrf=ANbL-n6XkuvKFkF0QjuYZvdNFw-Tj-WB9g%3A1779334056337&q=San%20Diego%20Palm%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMQqGZyYp-CSmZqerxCQmJOrEFCUX5KaXJKZnwcANfU0IEUAAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwjGofXyt8mUAxUrKEQIHceDJjIQrMcEegQIEBAC" target="_blank" rel="noopener noreferrer" style="color: white; font-weight: 900;">View San Diego Palm Protection on Google</a></p>
 </footer>

@@ -484,48 +484,29 @@ footer {
 <!-- SEO structured data -->
 <script type="application/ld+json">
 {
-    "@context":  "https://schema.org",
-    "@graph":  [
-                   {
-                       "@id":  "https://www.sandiegopalmprotection.com/palm-care-escondido.html#service",
-                       "@type":  "Service",
-                       "provider":  {
-                                        "@id":  "https://www.sandiegopalmprotection.com/#business"
-                                    },
-                       "url":  "https://www.sandiegopalmprotection.com/palm-care-escondido.html",
-                       "name":  "Palm Care in Escondido",
-                       "description":  "Mature palm care, Canary Island date palm monitoring, SAPW-aware recommendations, and quarterly palm stewardship in Escondido.",
-                       "areaServed":  [
-                                          "San Diego County",
-                                          "North County San Diego",
-                                          "Escondido",
-                                          "Poway",
-                                          "Rancho Santa Fe"
-                                      ],
-                       "serviceType":  "Palm Care in Escondido"
-                   },
-                   {
-                       "itemListElement":  [
-                                               {
-                                                   "position":  1,
-                                                   "name":  "Home",
-                                                   "item":  "https://www.sandiegopalmprotection.com/",
-                                                   "@type":  "ListItem"
-                                               },
-                                               {
-                                                   "position":  2,
-                                                   "name":  [
-                                                                "Palm Care in Escondido",
-                                                                "https://www.sandiegopalmprotection.com/palm-care-escondido.html"
-                                                            ],
-                                                   "item":  null,
-                                                   "@type":  "ListItem"
-                                               }
-                                           ],
-                       "@id":  "#breadcrumb",
-                       "@type":  "BreadcrumbList"
-                   }
-               ]
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "itemListElement": [
+        {
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.sandiegopalmprotection.com/",
+          "@type": "ListItem"
+        },
+        {
+          "position": 2,
+          "name": [
+            "Palm Care in Escondido",
+            "https://www.sandiegopalmprotection.com/palm-care-escondido.html"
+          ],
+          "@type": "ListItem"
+        }
+      ],
+      "@id": "#breadcrumb",
+      "@type": "BreadcrumbList"
+    }
+  ]
 }
 </script>
 </head>
@@ -554,7 +535,7 @@ footer {
     <span class="nav-separator">|</span>
     <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com">Contact</a>
     <a data-cta="call" class="call" href="tel:2624923135">📞 262-492-3135</a>
-    <a data-cta="photo-email" class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
+    <a data-cta="photo-email" class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Photo First Look</a>
   </nav>
 </header>
 
@@ -567,13 +548,18 @@ footer {
     </p>
 
     <p>
-      San Diego Palm Protection helps homeowners protect mature palms through quarterly fertilization, monitoring, watering-in, and preventative treatment when appropriate.
+      San Diego Palm Protection helps homeowners protect mature palms through quarterly fertilization, monitoring, watering-in, and referral discussion when appropriate.
     </p>
 
     <div class="hero-buttons">
       <a class="cta-button" href="./palm-journal-new.html">View Local Palm Journal</a>
     </div>
   </div>
+</section>
+
+<section class="quick-assessment-strip prelicense-status">
+  <h2>Current SDPP Scope</h2>
+  <p>San Diego Palm Protection currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
 </section>
 
 <section class="quick-assessment-strip">
@@ -702,12 +688,11 @@ footer {
   <div class="card-grid">
     <div class="card">
       <h3>Quarterly Palm Care Plan</h3>
-      <p><strong>Typical investment: $350–$500 per quarterly visit</strong></p>
-      <p>Four scheduled visits per year for mature palms, based on palm size and treatment needs.</p>
+      <p>A quarterly documentation rhythm for mature palms, based on palm size and treatment needs.</p>
       <ul>
         <li>Professional palm fertilization</li>
-        <li>Preventative treatment when appropriate</li>
-        <li>Watering-in after treatment</li>
+        <li>Referral discussion when appropriate</li>
+        <li>Watering and site-context notes</li>
         <li>Health monitoring and recommendations</li>
       </ul>
       <a class="cta-button" href="./quarterly-palm-care-san-diego.html">View Quarterly Palm Care</a>
@@ -715,9 +700,8 @@ footer {
 
     <div class="card">
       <h3>One-Time Assessment & Treatment</h3>
-      <p><strong>Starting at $750 per visit</strong></p>
       <p>A single professional visit for homeowners with visible decline concerns, seasonal palm care needs, or questions about whether quarterly care makes sense.</p>
-      <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">Request Assessment</a>
+      <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Escondido%20Palm%20Assessment">Photo First Look</a>
     </div>
   </div>
 </section>
@@ -732,7 +716,7 @@ footer {
 
     <div class="service-list">
       <div class="service-item">
-        <strong>Owner-Performed Service</strong>
+        <strong>Owner-Led Documentation</strong>
         Every treatment is personally handled, with no rotating crews.
       </div>
 
@@ -743,7 +727,7 @@ footer {
 
       <div class="service-item">
         <strong>Quarterly Protection</strong>
-        Scheduled care designed to support health, monitoring, and prevention.
+        Regular documentation designed to support monitoring and informed next-step questions.
       </div>
 
       <div class="service-item">
@@ -771,7 +755,7 @@ footer {
     <a href="./sapw.html">Local SAPW</a>
     <a href="./palm-care-poway.html">Palm Care in Poway</a>
     <a href="./palm-care-rancho-santa-fe.html">Palm Care in Rancho Santa Fe</a>
-    <a href="./palm-sourcing-installation.html">Palm Sourcing & Planting</a>
+    <a href="./palm-sourcing-installation.html">Palm Sourcing & Installation Education</a>
     <a href="./specimen-palms-cycads.html">Palms & Cycads</a>
      <a href="./index.html">San Diego Palm Protection</a>
   </div>
@@ -790,7 +774,7 @@ footer {
     </a>
 
     <a class="secondary-button" href="./index.html#services">
-      View Services
+      View Resources
     </a>
   </div>
 
@@ -807,7 +791,7 @@ footer {
 </section>
 
 <footer>
-  <p><strong>San Diego Palm Protection</strong> | Owner-performed palm care, documentation, and mature palm stewardship</p>
+  <p><strong>San Diego Palm Protection</strong> | Palm documentation, educational resources, and mature palm stewardship</p>
   <p><a href="./index.html" style="color: white; font-weight: 700;">Home</a> | <a href="./index.html#services" style="color: white; font-weight: 700;">Services</a> | <a href="./palm-stewardship-plans.html" style="color: white; font-weight: 700;">Stewardship</a> | <a href="./palm-faq-san-diego.html" style="color: white; font-weight: 700;">Palm FAQ</a> | <a href="./sapw.html" style="color: white; font-weight: 700;">Local SAPW</a> | <a href="./palm-journal-new.html" style="color: white; font-weight: 700;">Palm Journal</a> | <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com" style="color: white; font-weight: 700;">Contact</a></p>
   <p><a href="https://www.google.com/search?sca_esv=cc38e1736fb87508&authuser=1&sxsrf=ANbL-n6XkuvKFkF0QjuYZvdNFw-Tj-WB9g%3A1779334056337&q=San%20Diego%20Palm%20Protection&stick=H4sIAAAAAAAAAONgU1I1qEg0ME01TkpMNDUwMjRKTUmxMqhIM0s1tEhONTJLSjZNM04xWMQqGZyYp-CSmZqerxCQmJOrEFCUX5KaXJKZnwcANfU0IEUAAAA&mat=Cch7DPJk7pjj&ved=2ahUKEwjGofXyt8mUAxUrKEQIHceDJjIQrMcEegQIEBAC" target="_blank" rel="noopener noreferrer" style="color: white; font-weight: 900;">View San Diego Palm Protection on Google</a></p>
 </footer>

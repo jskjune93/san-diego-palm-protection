@@ -4,6 +4,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 import json
 import re
+import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
@@ -231,6 +232,19 @@ def main() -> int:
         robots = ROBOTS.read_text(encoding="utf-8-sig")
         if "Sitemap:" not in robots:
             errors.append("robots.txt missing Sitemap directive")
+
+    prelicense = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "validate_prelicense_compliance.py")],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if prelicense.stdout.strip():
+        print(prelicense.stdout.strip())
+    if prelicense.stderr.strip():
+        print(prelicense.stderr.strip())
+    if prelicense.returncode != 0:
+        errors.append("prelicense compliance validator failed")
 
     print("VALIDATION_OK" if not errors else "VALIDATION_FAILED")
     print(f"html_files_checked={len(html_files)}")

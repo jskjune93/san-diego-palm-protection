@@ -153,7 +153,7 @@ def header(relative_root: str = "./") -> str:
     <a href="{relative_root}palm-stewardship-plans.html">Stewardship Plans</a>
     <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
     <a class="call" href="tel:2624923135">&#9742; 262-492-3135</a>
-    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request Assessment</a>
+    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Photo First Look</a>
   </nav>
 </header>'''
 
@@ -162,6 +162,7 @@ def footer(relative_root: str = "./") -> str:
     return f'''<footer>
   <div class="inner">
     <p><strong>San Diego Palm Protection</strong> documents, monitors, and supports preservation-focused care for mature palms across San Diego County.</p>
+    <p>Prelicense status: SDPP currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
     <p><a href="{relative_root}index.html">Home</a> | <a href="{relative_root}palm-journal-new.html">Palm Journal</a> | <a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a></p>
   </div>
 </footer>'''
@@ -249,8 +250,9 @@ def render_index(entries: list[dict]) -> None:
 
   <section class="assessment-cta" id="contact">
     <h2>Have a Mature Palm Concern?</h2>
-    <p>Send a few clear photos and the palm location context. SDPP can help organize observations before care, monitoring, or preservation decisions.</p>
-    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request a palm assessment</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
+    <p>Send a few clear photos and the palm location context. SDPP can help organize visible-condition observations before you decide whether monitoring, preservation research, or referral to an appropriately licensed provider makes sense.</p>
+    <p>Prelicense status: SDPP currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
+    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational first look</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
 {footer('./')}
@@ -299,8 +301,9 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
   </article>
   <section class="assessment-cta" id="contact">
     <h2>Need Help Reading Palm Changes?</h2>
-    <p>SDPP reviews mature palm observations with a preservation-first approach and avoids unsupported diagnosis from a single public image.</p>
-    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Request%20Palm%20Assessment">Request a palm assessment</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
+    <p>SDPP reviews mature palm observations with a preservation-first documentation approach and avoids unsupported diagnosis from a single public image.</p>
+    <p>Prelicense status: SDPP currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
+    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational first look</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
 {footer('../')}

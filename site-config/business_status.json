@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "mode": "prelicense",
+  "explanation": "Prelicense mode limits the public website to palm documentation, educational resources, photographic condition records, and referrals to appropriately licensed providers. Any future transition requires an explicit owner-controlled configuration update after applicable business licenses, registrations, insurance or financial-responsibility requirements, and operating prerequisites are confirmed.",
+  "pesticide_services_enabled": false,
+  "tree_palm_contracting_enabled": false,
+  "commercial_field_services_enabled": false,
+  "documentation_and_education_enabled": true,
+  "owner_review_required": true
+}
