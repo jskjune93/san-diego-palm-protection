@@ -162,7 +162,6 @@ def footer(relative_root: str = "./") -> str:
     return f'''<footer>
   <div class="inner">
     <p><strong>San Diego Palm Protection</strong> documents, monitors, and supports preservation-focused care for mature palms across San Diego County.</p>
-    <p>Prelicense status: SDPP currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
     <p><a href="{relative_root}index.html">Home</a> | <a href="{relative_root}palm-journal-new.html">Palm Journal</a> | <a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a></p>
   </div>
 </footer>'''
@@ -193,7 +192,7 @@ def json_ld_article(entry: dict) -> str:
 
 
 def render_index(entries: list[dict]) -> None:
-    published = [e for e in entries if e.get("status") == "published"]
+    published = [e for e in entries if e.get("status") == "published" and e.get("public", True) is not False]
     featured = next(e for e in published if e["slug"] == "classic-old-escondido-canary-island-date-palm")
     cards = []
     for entry in published:
@@ -202,7 +201,7 @@ def render_index(entries: list[dict]) -> None:
         if entry.get("page"):
             action = f'<a class="read-link" href="{article_href(entry)}">Read the field note</a>'
         else:
-            action = '<span class="date-location">Legacy library reference; editorial review required before individual article migration.</span>'
+            action = ''
         cards.append(f'''      <article class="journal-card" id="{card_id}" data-slug="{escape(entry['slug'])}" data-page="{str(entry.get('page')).lower()}">
         <img src="{escape(img)}" alt="{escape(entry['primary_image_alt'])}" loading="lazy" decoding="async">
         <div class="journal-card-content">
@@ -251,7 +250,6 @@ def render_index(entries: list[dict]) -> None:
   <section class="assessment-cta" id="contact">
     <h2>Have a Mature Palm Concern?</h2>
     <p>Send a few clear photos and the palm location context. SDPP can help organize visible-condition observations before you decide whether monitoring, preservation research, or referral to an appropriately licensed provider makes sense.</p>
-    <p>Prelicense status: SDPP currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
     <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational photo review</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
@@ -302,7 +300,6 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
   <section class="assessment-cta" id="contact">
     <h2>Need Help Reading Palm Changes?</h2>
     <p>SDPP reviews mature palm observations with a preservation-first documentation approach and avoids unsupported diagnosis from a single public image.</p>
-    <p>Prelicense status: SDPP currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
     <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational photo review</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>

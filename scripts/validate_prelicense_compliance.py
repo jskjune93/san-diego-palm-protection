@@ -153,6 +153,31 @@ ALWAYS_BLOCK_RULES = [
 ]
 
 
+
+FORBIDDEN_PUBLIC_PHRASES = (
+    "every treatment is personally performed",
+    "professional palm fertilization",
+    "apply professional palm nutrition",
+    "limited client roster",
+    "quarterly care clients",
+    "first-time customers",
+    "enrolling in quarterly care",
+    "we serve homeowners",
+    "care handled consistently",
+    "looked after year-round",
+    "one-time palm photo review & treatment",
+    "single professional visit",
+    "approved production draft",
+    "editorial review required",
+    "approval required",
+    "production draft",
+    "unpublished",
+    "internal note",
+    "machine status",
+    "fingerprint",
+    "approval gate",
+)
+
 ALLOW_PATTERNS = [
     re.compile(r"not currently offered", re.I),
     re.compile(r"appropriately licensed|licensed provider|licensed tree contractor|qualified arborist|pest-control business", re.I),
@@ -191,6 +216,10 @@ def validate_text(text: str, rel: str) -> list[str]:
         compact = " ".join(line.strip().split())
         if not compact or "PRELICENSE_ALLOW" in compact:
             continue
+        lower = compact.lower()
+        for phrase in FORBIDDEN_PUBLIC_PHRASES:
+            if phrase in lower:
+                diagnostics.append(f"{rel}:{line_no}: forbidden_public_phrase: Public prelicense content cannot contain this current-service or internal workflow phrase: {phrase} :: {compact[:220]}")
         for rule in ALWAYS_BLOCK_RULES:
             if rule.pattern.search(compact):
                 diagnostics.append(f"{rel}:{line_no}: {rule.name}: {rule.reason} :: {compact[:220]}")
@@ -210,7 +239,22 @@ def validate_repository(root: Path = ROOT) -> list[str]:
         return diagnostics
     for path in iter_scan_files(root):
         rel = path.relative_to(root).as_posix()
-        diagnostics.extend(validate_text(path.read_text(encoding="utf-8-sig", errors="replace"), rel))
+        text = path.read_text(encoding="utf-8-sig", errors="replace")
+        diagnostics.extend(validate_text(text, rel))
+        if path.suffix.lower() == ".html":
+            notice_count = text.count(STATUS_NOTICE)
+            if notice_count > 1:
+                diagnostics.append(f"{rel}: duplicate_prelicense_scope: prelicense scope notice appears {notice_count} times")
+    index_path = root / "palm-journal-new.html"
+    if index_path.exists():
+        index_text = index_path.read_text(encoding="utf-8-sig", errors="replace")
+        try:
+            entries = json.loads((root / "journal-data" / "journal_entries.json").read_text(encoding="utf-8"))
+            for entry in entries:
+                if entry.get("public", True) is False and (entry.get("slug", "") in index_text or entry.get("legacy_anchor", "") in index_text):
+                    diagnostics.append(f"palm-journal-new.html: held journal record is publicly rendered: {entry.get('slug')}")
+        except (OSError, json.JSONDecodeError) as exc:
+            diagnostics.append(f"journal-data/journal_entries.json: unable to verify held records: {exc}")
     return diagnostics
 
 
@@ -267,6 +311,13 @@ def run_self_tests() -> int:
         "licensed provider evaluation": ("Contact an appropriately licensed provider for an in-person evaluation.", True),
         "educational monitoring techniques": ("This educational page explains general monitoring techniques for palms.", True),
         "educational pesticide labels": ("This educational page discusses pesticide labels and application methods generally.", True),
+        "limited client roster": ("San Diego Palm Protection intentionally maintains a limited client roster.", False),
+        "quarterly care clients": ("Our quarterly care clients receive direct attention.", False),
+        "first time customers": ("Ideal for first-time customers enrolling in quarterly care.", False),
+        "professional fertilization": ("Professional palm fertilization is included.", False),
+        "apply nutrition": ("Apply professional palm nutrition to support growth.", False),
+        "treatment personally performed": ("Every treatment is personally performed by the owner.", False),
+        "internal editorial phrase": ("Legacy library reference; editorial review required before individual article migration.", False),
         "structured data service claim": ('{"@context":"https://schema.org","@type":"Service","serviceType":"SAPW treatment"}', False),
     }
     failed = []

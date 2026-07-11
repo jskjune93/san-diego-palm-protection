@@ -194,9 +194,9 @@ def main() -> int:
         errors.append("draft status text appears in journal index")
     for entry in entries:
         slug = entry["slug"]
-        if entry.get("status") == "draft":
-            if slug in index_text:
-                errors.append(f"draft article exposed in index: {slug}")
+        if entry.get("status") == "draft" or entry.get("public", True) is False:
+            if slug in index_text or entry.get("legacy_anchor", "") in ids_by_page[INDEX.resolve()]:
+                errors.append(f"held or draft article exposed in index: {slug}")
             continue
         if entry["legacy_anchor"] not in ids_by_page[INDEX.resolve()]:
             errors.append(f"legacy anchor not preserved on index: {entry['legacy_anchor']}")

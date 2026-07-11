@@ -300,10 +300,10 @@
     "location": "Old Escondido",
     "category": "Palm Health and Stewardship",
     "topic": "Legacy Las Palmas note",
-    "excerpt": "Legacy library reference retained for anchor compatibility. A future Las Palmas article should be added only from an approved production draft.",
+    "excerpt": "Held Las Palmas reference retained for future owner review and source continuity.",
     "page": false,
     "substantial": false,
-    "review": "legacy card only; requires editorial review before an individual page",
+    "review": "held source record; not public",
     "related": [
       "old-escondido-cidp-collection"
     ],
@@ -312,7 +312,8 @@
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal-new.html#las-palmas-cidp",
     "primary_image": "./las-palmas_Old-Escondido_mature-cidp.jpg",
     "primary_image_alt": "Healthy mature Canary Island Date Palms at Las Palmas in Old Escondido",
-    "gallery_images": []
+    "gallery_images": [],
+    "public": false
   },
   {
     "slug": "old-escondido-cidp-collection",

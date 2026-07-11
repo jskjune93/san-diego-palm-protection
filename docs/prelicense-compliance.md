@@ -78,3 +78,11 @@ python scripts/validate_site.py
 ```
 
 `scripts/validate_site.py` also runs the prelicense validator, so normal validation fails if the site drifts back into unavailable service offers.
+
+## Public Copy Cleanup Notes
+
+Public pages should describe current SDPP activity as documentation, photographic records, educational photo review, preservation decision planning, removal decision planning, contractor questions, referrals to licensed providers, Palm Journal field notes, Old Escondido preservation work, and CIDP checklist education.
+
+Until the business-status configuration is intentionally activated, avoid copy that presents SDPP as currently enrolling clients, performing treatments, providing professional field care, offering quarterly care packages, selling removal or installation coordination, or providing site-specific pesticide or treatment recommendations.
+
+Palm Journal entries with `public: false` or `page: false` may remain in the manifest as source records, but they must not render in the public Journal index or generate public article pages. Generated article pages should contain one prelicense scope notice only.
