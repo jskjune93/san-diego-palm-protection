@@ -1,5 +1,29 @@
 [
   {
+    "slug": "las-palmas-no-reply-then-the-saws",
+    "title": "No Reply. Then the Saws.",
+    "date": "2026-07-13",
+    "date_label": "Old Escondido | July 13, 2026",
+    "location": "Old Escondido",
+    "category": "Documented Loss",
+    "topic": "Las Palmas Canary Island date palm removal",
+    "excerpt": "A documented Las Palmas palm-loss chronology in Old Escondido.",
+    "page": true,
+    "substantial": true,
+    "review": "final owner-approved publication artifact",
+    "related": [
+      "monitoring-mature-cidp-after-palm-weevil-activity",
+      "old-escondido-cidp-collection"
+    ],
+    "legacy_anchor": "las-palmas-documented-loss",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/las-palmas-no-reply-then-the-saws.html",
+    "primary_image": "./images/las-palmas/01-property-context-laspalmas-escondido-cidp.jpg",
+    "primary_image_alt": "Las Palmas apartment frontage in Old Escondido with mature Canary Island date palms and property signage",
+    "gallery_images": [],
+    "classification": "Documented Loss"
+  },
+  {
     "slug": "classic-old-escondido-canary-island-date-palm",
     "title": "Classic Old Escondido Canary Island Date Palm",
     "date": "2025-11-01",

@@ -202,7 +202,7 @@ def iter_scan_files(root: Path = ROOT) -> list[Path]:
         if not directory.exists():
             continue
         for pattern in PUBLIC_PATTERNS:
-            files.update(path for path in directory.glob(pattern) if path.is_file())
+            files.update(path for path in directory.rglob(pattern) if path.is_file())
     return sorted(files)
 
 

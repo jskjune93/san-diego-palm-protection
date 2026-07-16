@@ -109,7 +109,7 @@ def normalize_rel(path: Path) -> str:
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
-    html_files = sorted(ROOT.glob("*.html")) + sorted((ROOT / "palm-journal").glob("*.html"))
+    html_files = sorted(ROOT.glob("*.html")) + sorted((ROOT / "palm-journal").glob("**/*.html"))
     pages: dict[Path, tuple[str, PageParser]] = {}
     ids_by_page: dict[Path, set[str]] = {}
 
@@ -219,6 +219,8 @@ def main() -> int:
         locs = [node.text or "" for node in sitemap_root.iter() if node.tag.endswith("loc")]
         if f"{BASE_URL}/palm-journal-new.html" not in locs:
             errors.append("sitemap missing Palm Journal index")
+        if f"{BASE_URL}/palm-journal/documented-loss/" not in locs:
+            errors.append("sitemap missing Documented Loss page")
         for entry in entries:
             if entry.get("status") == "published" and entry.get("page"):
                 if entry["canonical_url"] not in locs:
