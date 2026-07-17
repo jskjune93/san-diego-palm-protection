@@ -14,6 +14,7 @@ MANIFEST = ROOT / "journal-data" / "journal_entries.json"
 INDEX = ROOT / "palm-journal-new.html"
 SITEMAP = ROOT / "sitemap.xml"
 ROBOTS = ROOT / "robots.txt"
+RECORDS_PAGE = ROOT / "palm-records-monitoring-verification.html"
 
 SKIP_SCHEMES = ("http://", "https://", "mailto:", "tel:", "sms:", "data:")
 ENCODING_ARTIFACTS = ["â€", "â€™", "â€œ", "â€�", "Â", "�"]
@@ -221,6 +222,8 @@ def main() -> int:
             errors.append("sitemap missing Palm Journal index")
         if f"{BASE_URL}/palm-journal/documented-loss/" not in locs:
             errors.append("sitemap missing Documented Loss page")
+        if f"{BASE_URL}/palm-records-monitoring-verification.html" not in locs:
+            errors.append("sitemap missing Records & Monitoring page")
         for entry in entries:
             if entry.get("status") == "published" and entry.get("page"):
                 if entry["canonical_url"] not in locs:
@@ -234,6 +237,44 @@ def main() -> int:
         robots = ROBOTS.read_text(encoding="utf-8-sig")
         if "Sitemap:" not in robots:
             errors.append("robots.txt missing Sitemap directive")
+
+    homepage_text, homepage_parser = pages[(ROOT / "index.html").resolve()]
+    if "Records &amp; Monitoring" not in homepage_text:
+        errors.append("homepage missing Records & Monitoring positioning")
+    if not RECORDS_PAGE.exists():
+        errors.append("Records & Monitoring service page is missing")
+    elif "./palm-records-monitoring-verification.html" not in homepage_text:
+        errors.append("homepage does not link to Records & Monitoring service page")
+    required_current_scope = "Documentation, monitoring, reporting, sourcing, and coordination are available now."
+    required_future_scope = "Regulated pesticide and treatment services are not currently offered."
+    records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""
+    if required_current_scope not in homepage_text or required_current_scope not in records_text:
+        errors.append("current non-regulated services are not clearly identified as available")
+    if required_future_scope not in records_text:
+        errors.append("future regulated treatment is not clearly identified as unavailable")
+    if re.search(r'href="[^"]*(?:request|schedule|book)[^"]*treatment', homepage_text + records_text, re.I):
+        errors.append("active treatment CTA found in current-service pages")
+    for required_path in (
+        "palm-removal-coordination.html",
+        "specimen-palms-cycads.html",
+        "palm-sourcing-installation.html",
+        "palm-journal-new.html",
+        "palm-journal/documented-loss/",
+    ):
+        if required_path not in homepage_text + records_text:
+            errors.append(f"preserved service or editorial destination is not reachable from updated pages: {required_path}")
+    homepage_canonicals = homepage_parser.canonicals
+    if homepage_canonicals != [f"{BASE_URL}/"]:
+        errors.append(f"homepage canonical must normalize / and /index.html to {BASE_URL}/")
+    unsupported_claims = (
+        "SDPP is an ISA Certified Arborist",
+        "SDPP is a licensed pest-control business",
+        "SDPP certifies contractor performance",
+        "official urban forest management plan partner",
+    )
+    for claim in unsupported_claims:
+        if claim.lower() in (homepage_text + records_text).lower():
+            errors.append(f"unsupported qualification claim found: {claim}")
 
     prelicense = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "validate_prelicense_compliance.py")],

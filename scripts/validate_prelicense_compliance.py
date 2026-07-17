@@ -14,8 +14,7 @@ PUBLIC_PATTERNS = ("*.html", "*.json")
 PUBLIC_DIRS = [ROOT, ROOT / "palm-journal", ROOT / "journal-data", ROOT / "journal-data" / "articles"]
 
 STATUS_NOTICE = (
-    "San Diego Palm Protection currently focuses on palm documentation, "
-    "photographic condition records, and educational resources."
+    "Documentation, monitoring, reporting, sourcing, and coordination are available now."
 )
 
 REGULATED_SERVICE_FLAGS = (
@@ -126,11 +125,6 @@ RULES = [
 
 ALWAYS_BLOCK_RULES = [
     Rule(
-        "monitoring_as_commercial_service",
-        re.compile(r"\b(palm\s+monitoring|monitoring)\s+services?\s+(?:available|offered|provided|for\s+hire)\b|\bprofessional\s+(?:palm\s+)?monitoring\b", re.I),
-        "Prelicense mode cannot present palm monitoring as a current commercial SDPP service.",
-    ),
-    Rule(
         "professional_inspection_solicitation",
         re.compile(r"\b(schedule|book|request)\b.{0,80}\bprofessional\s+(?:palm\s+)?inspection\b|\bprofessional\s+(?:palm\s+)?inspection\b.{0,80}\b(schedule|book|request)\b", re.I),
         "Prelicense mode cannot solicit professional inspections by SDPP.",
@@ -142,7 +136,7 @@ ALWAYS_BLOCK_RULES = [
     ),
     Rule(
         "contingent_future_treatment_offer",
-        re.compile(r"\b(treatment|sapw|pesticide|weevil)\b.{0,80}\b(waitlist|reserve|prebook|pre-book|deposit|coming\s+soon|after\s+licens(?:e|ing)|pending\s+licens(?:e|ing)|future\s+treatment)\b|\b(waitlist|reserve|prebook|pre-book|deposit|coming\s+soon|after\s+licens(?:e|ing)|pending\s+licens(?:e|ing)|future\s+treatment)\b.{0,80}\b(treatment|sapw|pesticide|weevil)\b", re.I),
+        re.compile(r"\b(treatment|sapw|pesticide|weevil)\b.{0,80}\b(waitlist|reserve|prebook|pre-book|deposit|priority\s+access|book\s+after\s+licens(?:e|ing))\b|\b(waitlist|reserve|prebook|pre-book|deposit|priority\s+access|book\s+after\s+licens(?:e|ing))\b.{0,80}\b(treatment|sapw|pesticide|weevil)\b", re.I),
         "Prelicense mode cannot solicit future, contingent, waitlisted, reserved, or post-licensing treatment work.",
     ),
     Rule(
@@ -300,7 +294,9 @@ def run_self_tests() -> int:
         "palm installation offer": ("We install specimen palms and planting upgrades.", False),
         "licensed and insured": ("San Diego Palm Protection is licensed and insured for palm treatment.", False),
         "prelicense notice": (STATUS_NOTICE + " Pesticide application and removal services are not currently offered.", True),
-        "monitoring service": ("Palm monitoring services available for San Diego homeowners.", False),
+        "monitoring service": ("Palm monitoring services available for San Diego homeowners.", True),
+        "documentation visit": ("Request a palm documentation visit to establish a dated visible-condition baseline.", True),
+        "work verification boundary": ("Work verification records apparent completion and does not certify technical correctness.", True),
         "professional inspection": ("Schedule a professional inspection for your Canary Island date palm.", False),
         "photos for treatment recommendation": ("Send photos for a treatment recommendation.", False),
         "sapw waitlist": ("Join the SAPW treatment waitlist.", False),

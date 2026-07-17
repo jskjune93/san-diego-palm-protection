@@ -3,9 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Palm Care & Stewardship | San Diego Palm Protection</title>
-<meta name="description" content="Owner-operated palm care, SAPW-aware stewardship, mature Canary Island date palm protection, removal planning, and palm replacement guidance in San Diego County." />
+<title>San Diego Palm Records, Monitoring &amp; Protection | SDPP</title>
+<meta name="description" content="Palm inventories, condition baselines, recurring monitoring, reports, work verification, removal documentation, sourcing, and future licensed protection services for San Diego properties." />
 <link rel="canonical" href="https://www.sandiegopalmprotection.com/" />
+<meta property="og:title" content="San Diego Palm Records, Monitoring &amp; Protection | SDPP">
+<meta property="og:description" content="Palm records, recurring monitoring, reports, work verification, removal documentation, sourcing, and future licensed protection services.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.sandiegopalmprotection.com/">
+<meta property="og:image" content="https://www.sandiegopalmprotection.com/background.jpg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -144,6 +149,42 @@ body {
   margin-top: 15px;
   font-weight: 700;
 }
+
+.availability-note {
+  max-width: 820px;
+  padding: 12px 16px;
+  border-left: 4px solid #ffb31a;
+  background: rgba(6,59,22,0.78);
+  font-size: 16px !important;
+}
+
+.records-overview { background: #f4f0e2; }
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1280px;
+  margin: 28px auto 0;
+}
+.records-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.records-card h3 { margin-top: 0; font-size: 24px; }
+.records-card p { line-height: 1.55; }
+.records-card .availability-badge {
+  display: inline-block;
+  background: #ffb31a;
+  color: black;
+  border-radius: 999px;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: 900;
+}
+.records-overview .overview-action { text-align: center; margin-top: 30px; }
 
 .bottom-bar {
   display: flex;
@@ -548,7 +589,8 @@ footer {
 @media(max-width: 1100px){
   .decision-grid,
   .approach-grid,
-  .expanded-service-grid {
+  .expanded-service-grid,
+  .records-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -581,6 +623,10 @@ footer {
   .decision-grid,
   .approach-grid,
   .expanded-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .records-grid {
     grid-template-columns: 1fr;
   }
 
@@ -732,7 +778,7 @@ html {
   "@graph": [
     {
       "url": "https://www.sandiegopalmprotection.com/",
-      "description": "Owner-operated palm stewardship, SAPW-aware palm care, and mature Canary Island date palm services in San Diego County.",
+      "description": "Palm inventories, dated condition baselines, recurring photographic monitoring, reports, work verification, removal documentation, sourcing guidance, and education in San Diego County. Regulated treatment services are not currently offered.",
       "@type": "LocalBusiness",
       "telephone": "+1-262-492-3135",
       "image": "https://www.sandiegopalmprotection.com/background.jpg",
@@ -775,6 +821,8 @@ html {
     <span class="nav-separator">|</span>
     <a href="./index.html#services">Services</a>
     <span class="nav-separator">|</span>
+    <a href="./palm-records-monitoring-verification.html">Records &amp; Monitoring</a>
+    <span class="nav-separator">|</span>
     <a href="./palm-stewardship-plans.html">Stewardship</a>
     <span class="nav-separator">|</span>
     <a href="./palm-faq-san-diego.html">FAQ</a>
@@ -786,32 +834,45 @@ html {
     <a data-cta="photo-email" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm Photos for Educational Photo Review">Contact</a>
     <a data-cta="call" class="call" href="tel:2624923135">📞 262-492-3135</a>
    <a data-cta="contact" class="nav-cta" href="#schedule-visit">
-  Photo Review
+  Discuss Your Property
   </a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <h1><span class="highlight">Palm Decisions & Stewardship</span> for Mature San Diego Palms</h1>
+    <h1><span class="highlight">Palm Records. Monitoring. Protection. Response.</span></h1>
 
-    <p>San Diego Palm Protection helps property owners organize photographs, visible-condition observations, site context, and preservation questions for the mature palms that define San Diego properties.</p>
+    <p>San Diego Palm Protection helps homeowners, HOAs, property managers, and organizations document the palms they manage, establish condition baselines, track change over time, verify completed work, coordinate response, and protect valuable landscape assets.</p>
 
-    <p>Preserve when practical. Coordinate removal when necessary. Replace thoughtfully.</p>
-
-    <p class="local-note">SDPP is preservation-minded, but practical: document first, preserve when possible, then use qualified outside providers when regulated field work is needed.</p>
+    <p class="availability-note">Available today: palm documentation, recurring monitoring, written reports, sourcing guidance, and coordination. Regulated treatment remains unavailable while licensing and required approvals are completed.</p>
 
     <div class="hero-buttons">
-      <a class="cta-button" href="./cidp-risk-checklist.html">Use the Free CIDP Checklist</a>
-      <a class="secondary-hero-button" href="#decision-hub">Find the Right Next Step</a>
+      <a class="cta-button" href="./palm-records-monitoring-verification.html#request">Request a Palm Documentation Visit</a>
+      <a class="secondary-hero-button" href="#records-monitoring">Explore Services</a>
     </div>
   </div>
 </section>
 
 <section class="quick-assessment-strip prelicense-status">
   <h2>Current SDPP Scope</h2>
-  <p>San Diego Palm Protection currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
-</section><section class="decision-section" id="decision-hub">
+  <p>Documentation, monitoring, reporting, sourcing, and coordination are available now. Pesticide application, regulated pest-control treatment, palm pruning, removal, and installation are not currently offered.</p>
+</section>
+<section class="records-overview" id="records-monitoring">
+  <h2>One Property. One Portfolio. A Record That Holds Together.</h2>
+  <p class="section-subtitle">Start with a dated baseline, return to the same palms and views, and preserve what changed, what outside work was supplied, and what happened next.</p>
+  <div class="records-grid">
+    <article class="records-card"><h3>Palm Inventory &amp; Condition Baseline</h3><p>A numbered starting record with property references, standardized photographs, visible-condition observations, priority categories, and a useful follow-up interval.</p></article>
+    <article class="records-card"><h3>Recurring Palm Monitoring</h3><p>Quarterly, semiannual, or annual repeat documentation with side-by-side comparisons, notable changes, updated priorities, and questions for qualified providers.</p></article>
+    <article class="records-card"><h3>Reports &amp; Property Records</h3><p>Organized palm-by-palm histories, dated photographic reports, removal and replacement records, supplied contractor documents, and next-step summaries.</p></article>
+    <article class="records-card"><h3>Work &amp; Outcome Verification</h3><p>Pre-work and post-work photographs, a client-supplied scope, observable completion notes, unresolved discrepancies, and an updated palm history.</p><small>Observable documentation only—not certification of technical correctness, code compliance, or contractor performance.</small></article>
+    <article class="records-card"><h3>Removal, Loss &amp; Response</h3><p>Document decline or loss, preserve correspondence and decision history, organize contractor questions, and record removal, replacement, and outcome.</p></article>
+    <article class="records-card"><h3>Specimen Palms &amp; Landscape Continuity</h3><p>Specimen guidance, sourcing support, logistics coordination, replacement concepts, and a record that can follow a distinctive palm from installation forward.</p></article>
+    <article class="records-card"><span class="availability-badge">COMING SOON — PENDING LICENSING</span><h3>Treatment &amp; Preventative Protection</h3><p>Regulated pesticide and treatment services are not currently offered. SDPP is completing the licensing and operational requirements needed to offer them properly.</p></article>
+  </div>
+  <div class="overview-action"><a class="cta-button" href="./palm-records-monitoring-verification.html">Explore Records &amp; Monitoring</a></div>
+</section>
+<section class="decision-section" id="decision-hub">
   <h2>Start With the Palm Decision</h2>
   <p class="section-subtitle">
     Mature palms do not all need the same next step. Some need documentation. Some need monitoring. Some may be preservation candidates. Others may be headed toward removal or replacement planning. SDPP helps property owners organize the decision before acting too quickly.
@@ -832,8 +893,8 @@ html {
 
     <div class="decision-card">
       <h3>I want ongoing palm documentation</h3>
-      <p>For properties with valuable palms, SDPP provides owner-led photographic documentation, seasonal documentation guidance, and preservation-minded decision support.</p>
-      <a href="./quarterly-palm-care-san-diego.html">Explore Palm Care</a>
+      <p>For properties with valuable palms, SDPP provides recurring photographic monitoring, consistent identifiers, written updates, and change-over-time comparisons.</p>
+      <a href="./palm-records-monitoring-verification.html">Explore Records &amp; Monitoring</a>
     </div>
 
     <div class="decision-card">

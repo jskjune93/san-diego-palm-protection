@@ -13,7 +13,7 @@ The current boundary is intentionally narrow: observation, photography, historic
 - Palm Journal articles and historical field notes.
 - Palm photography, neighborhood records, and visible-condition documentation.
 - Educational South American palm weevil information.
-- Non-diagnostic photographic observations.
+- Non-diagnostic photographic observations, palm inventories, dated condition baselines, recurring photographic monitoring, written reports, and change-over-time comparisons.
 - Owner-submitted photos for educational photographic context, without diagnosis or site-specific treatment recommendations.
 - Historical comparison and ongoing photographic records.
 - Recommendations to contact an appropriately licensed pest-control business, qualified arborist, or licensed tree contractor.
@@ -25,7 +25,7 @@ While `mode` is `prelicense`, the public site must not advertise, solicit, quote
 
 The site also must not claim SDPP is licensed, certified, insured, credentialed, or authorized unless those credentials are explicitly verified and configured.
 
-The site also must not offer professional inspections, pest diagnoses, pesticide consultations, site-specific pesticide prescriptions, treatment recommendations, future or contingent treatment appointments, treatment waitlists, deposits, or "book after licensing" language.
+The site also must not offer professional inspections, pest diagnoses, pesticide consultations, site-specific pesticide prescriptions, treatment recommendations, future or contingent treatment appointments, treatment waitlists, deposits, or "book after licensing" language. Current records, monitoring, and verification services must remain limited to observable conditions, supplied documents, and apparent completion within SDPP's qualifications.
 
 ## Configuration
 
@@ -83,6 +83,6 @@ python scripts/validate_site.py
 
 Public pages should describe current SDPP activity as documentation, photographic records, educational photo review, preservation decision planning, removal decision planning, contractor questions, referrals to licensed providers, Palm Journal field notes, Old Escondido preservation work, and CIDP checklist education.
 
-Until the business-status configuration is intentionally activated, avoid copy that presents SDPP as currently enrolling clients, performing treatments, providing professional field care, offering quarterly care packages, selling removal or installation coordination, or providing site-specific pesticide or treatment recommendations.
+Until the regulated-service configuration is intentionally activated, avoid copy that presents SDPP as performing treatments, providing professional pesticide or arboricultural care, selling removal or installation work, or providing site-specific pesticide or treatment recommendations. Non-regulated documentation visits, condition baselines, recurring photographic monitoring, reports, sourcing guidance, and owner-side work records are permitted when their limits are stated clearly.
 
 Palm Journal entries with `public: false` or `page: false` may remain in the manifest as source records, but they must not render in the public Journal index or generate public article pages. Generated article pages should contain one prelicense scope notice only.
