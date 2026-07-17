@@ -3,9 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Palm Care & Stewardship | San Diego Palm Protection</title>
-<meta name="description" content="Owner-operated palm care, SAPW-aware stewardship, mature Canary Island date palm protection, removal planning, and palm replacement guidance in San Diego County." />
+<title>San Diego Palm Records, Monitoring &amp; Protection | SDPP</title>
+<meta name="description" content="Palm inventories, condition baselines, recurring monitoring, reports, work verification, removal documentation, sourcing, and future licensed protection services for San Diego properties." />
 <link rel="canonical" href="https://www.sandiegopalmprotection.com/" />
+<meta property="og:title" content="San Diego Palm Records, Monitoring &amp; Protection | SDPP">
+<meta property="og:description" content="Palm records, recurring monitoring, reports, work verification, removal documentation, sourcing, and future licensed protection services.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.sandiegopalmprotection.com/">
+<meta property="og:image" content="https://www.sandiegopalmprotection.com/background.jpg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -144,6 +149,42 @@ body {
   margin-top: 15px;
   font-weight: 700;
 }
+
+.availability-note {
+  max-width: 820px;
+  padding: 12px 16px;
+  border-left: 4px solid #ffb31a;
+  background: rgba(6,59,22,0.78);
+  font-size: 16px !important;
+}
+
+.records-overview { background: #f4f0e2; }
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1280px;
+  margin: 28px auto 0;
+}
+.records-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  border-bottom: 5px solid #ffb31a;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+.records-card h3 { margin-top: 0; font-size: 24px; }
+.records-card p { line-height: 1.55; }
+.records-card .availability-badge {
+  display: inline-block;
+  background: #ffb31a;
+  color: black;
+  border-radius: 999px;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: 900;
+}
+.records-overview .overview-action { text-align: center; margin-top: 30px; }
 
 .bottom-bar {
   display: flex;
@@ -548,7 +589,8 @@ footer {
 @media(max-width: 1100px){
   .decision-grid,
   .approach-grid,
-  .expanded-service-grid {
+  .expanded-service-grid,
+  .records-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -581,6 +623,10 @@ footer {
   .decision-grid,
   .approach-grid,
   .expanded-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .records-grid {
     grid-template-columns: 1fr;
   }
 
@@ -732,7 +778,7 @@ html {
   "@graph": [
     {
       "url": "https://www.sandiegopalmprotection.com/",
-      "description": "Owner-operated palm stewardship, SAPW-aware palm care, and mature Canary Island date palm services in San Diego County.",
+      "description": "Palm inventories, dated condition baselines, recurring photographic monitoring, reports, work verification, removal documentation, sourcing guidance, and education in San Diego County. Regulated treatment services are not currently offered.",
       "@type": "LocalBusiness",
       "telephone": "+1-262-492-3135",
       "image": "https://www.sandiegopalmprotection.com/background.jpg",
@@ -775,6 +821,8 @@ html {
     <span class="nav-separator">|</span>
     <a href="./index.html#services">Services</a>
     <span class="nav-separator">|</span>
+    <a href="./palm-records-monitoring-verification.html">Records &amp; Monitoring</a>
+    <span class="nav-separator">|</span>
     <a href="./palm-stewardship-plans.html">Stewardship</a>
     <span class="nav-separator">|</span>
     <a href="./palm-faq-san-diego.html">FAQ</a>
@@ -785,112 +833,38 @@ html {
     <span class="nav-separator">|</span>
     <a data-cta="photo-email" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm Photos for Educational Photo Review">Contact</a>
     <a data-cta="call" class="call" href="tel:2624923135">📞 262-492-3135</a>
-   <a data-cta="contact" class="nav-cta" href="#schedule-visit">
-  Photo Review
+   <a data-cta="contact" class="nav-cta" href="./palm-records-monitoring-verification.html#request">
+  Discuss Your Property
   </a>
   </nav>
 </header>
 
 <section class="hero">
   <div class="hero-content">
-    <h1><span class="highlight">Palm Decisions & Stewardship</span> for Mature San Diego Palms</h1>
+    <h1><span class="highlight">Palm Records. Monitoring. Protection. Response.</span></h1>
 
-    <p>San Diego Palm Protection helps property owners organize photographs, visible-condition observations, site context, and preservation questions for the mature palms that define San Diego properties.</p>
+    <p>San Diego Palm Protection helps homeowners, HOAs, property managers, and organizations document the palms they manage, establish condition baselines, track change over time, verify completed work, coordinate response, and protect valuable landscape assets.</p>
 
-    <p>Preserve when practical. Coordinate removal when necessary. Replace thoughtfully.</p>
-
-    <p class="local-note">SDPP is preservation-minded, but practical: document first, preserve when possible, then use qualified outside providers when regulated field work is needed.</p>
+    <p class="availability-note">Documentation, monitoring, reporting, sourcing, and coordination are available now. Regulated treatment remains unavailable while licensing and required approvals are completed.</p>
 
     <div class="hero-buttons">
-      <a class="cta-button" href="./cidp-risk-checklist.html">Use the Free CIDP Checklist</a>
-      <a class="secondary-hero-button" href="#decision-hub">Find the Right Next Step</a>
+      <a class="cta-button" href="./palm-records-monitoring-verification.html#request">Request a Palm Documentation Visit</a>
+      <a class="secondary-hero-button" href="#services">Explore Services</a>
     </div>
   </div>
 </section>
 
-<section class="quick-assessment-strip prelicense-status">
-  <h2>Current SDPP Scope</h2>
-  <p>San Diego Palm Protection currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
-</section><section class="decision-section" id="decision-hub">
-  <h2>Start With the Palm Decision</h2>
-  <p class="section-subtitle">
-    Mature palms do not all need the same next step. Some need documentation. Some need monitoring. Some may be preservation candidates. Others may be headed toward removal or replacement planning. SDPP helps property owners organize the decision before acting too quickly.
-  </p>
-
-  <div class="decision-grid">
-    <div class="decision-card">
-      <h3>I'm worried about a Canary Island date palm</h3>
-      <p>Use SDPP's free checklist to document crown changes, stress signs, and possible SAPW warning signs before assuming a diagnosis.</p>
-      <a href="./cidp-risk-checklist.html">Use the CIDP Risk Checklist</a>
-    </div>
-
-    <div class="decision-card">
-      <h3>I think it could be South American palm weevil</h3>
-      <p>Learn what SAPW is, why mature Canary Island date palms are a concern in Southern California, and what signs deserve closer attention.</p>
-      <a href="./sapw.html">Learn About SAPW</a>
-    </div>
-
-    <div class="decision-card">
-      <h3>I want ongoing palm documentation</h3>
-      <p>For properties with valuable palms, SDPP provides owner-led photographic documentation, seasonal documentation guidance, and preservation-minded decision support.</p>
-      <a href="./quarterly-palm-care-san-diego.html">Explore Palm Care</a>
-    </div>
-
-    <div class="decision-card">
-      <h3>I may need removal or replacement planning</h3>
-      <p>When a mature palm may no longer be practical to preserve, SDPP helps organize documentation, contractor questions, removal decision planning, and thoughtful replacement planning.</p>
-      <a href="./palm-removal-coordination.html">Removal & Replacement Planning</a>
-    </div>
+<section class="records-overview" id="services">
+  <h2>Three Services. One Palm Lifecycle.</h2>
+  <p class="section-subtitle">From the first baseline to protection decisions, contractor response, documented loss, and replacement planning, SDPP keeps the record and the next step connected.</p>
+  <div class="records-grid">
+    <article class="records-card"><h3>Monitoring &amp; Documentation</h3><p>Palm inventories, photographic condition baselines, recurring monitoring, change-over-time comparisons, written reports, contractor work verification, and documented-loss records.</p><a href="./palm-records-monitoring-verification.html#monitoring">See monitoring and documentation</a></article>
+    <article class="records-card"><span class="availability-badge">TREATMENT PENDING LICENSING</span><h3>Protection &amp; Treatment</h3><p>Risk documentation, SAPW education, questions for qualified providers, and future licensed treatment and recovery support. Regulated treatment is not currently offered.</p><a href="./sapw.html">Review palm risk and SAPW information</a></article>
+    <article class="records-card"><h3>Response, Removal &amp; Replacement</h3><p>Urgent decline documentation, contractor coordination, before-and-after records, removal history, replacement planning, specimen sourcing, and landscape continuity.</p><a href="./palm-removal-coordination.html">Explore response and removal planning</a></article>
   </div>
+  <p class="section-subtitle" style="margin-top:32px">Built for homeowners, HOAs and property managers, commercial and institutional properties, and public or urban-forestry partners that need palm-specific records without another layer of bureaucracy.</p>
+  <div class="overview-action"><a class="cta-button" href="./palm-records-monitoring-verification.html">Explore the Service Model</a></div>
 </section>
-
-<section class="assessment-cta stewardship-home-cta">
-  <h2>Palm Stewardship for Mature Palms</h2>
-  <p>For mature Canary Island date palms, estate landscapes, HOAs, and historic properties, SDPP provides documented palm stewardship resources, quarterly documentation guidance, and preservation-planning education while regulated field services remain inactive.</p>
-  <div class="button-row">
-    <a class="cta-button" href="./palm-stewardship-plans.html">View Palm Stewardship Resources</a>
-  </div>
-</section>
-<section class="checklist-feature-section">
-  <div class="checklist-feature-box">
-    <h2>Free Canary Island Date Palm Risk Checklist</h2>
-    <p>Not every declining palm has South American palm weevil - but mature Canary Island date palms deserve careful documentation when the crown begins to change. Use SDPP's free checklist to organize what you are seeing, what photos to take, and whether the next step may be monitoring, preservation planning, removal decision planning, or replacement planning.</p>
-    <a class="cta-button" href="./cidp-risk-checklist.html">Use the Free Checklist</a>
-  </div>
-</section>
-<section class="assessment-cta schedule-visit-section" id="schedule-visit">
-  <h2>Send Palm Photos for Review</h2>
-  <p>Click below to send palm photos for an educational photo review. The email option opens a pre-filled message so you are notified directly at sandiegopalmprotection@gmail.com.</p>
-
-  <div class="button-row">
-    <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20Photo%20Review&body=Hi%20San%20Diego%20Palm%20Protection%2C%0A%0AI%20would%20like%20to%20send%20palm%20photos%20for%20an%20educational%20photo%20review.%0A%0AName%3A%0AProperty%20address%20/%20city%3A%0APhone%3A%0APreferred%20days%20or%20times%3A%0APalm%20concern%20/%20notes%3A%0A">📅 Email Palm Photos</a>
-    <a data-cta="text" class="secondary-button" href="sms:2624923135?&body=Hi%20San%20Diego%20Palm%20Protection%2C%20I%20would%20like%20to%20send%20palm%20photos%20for%20an%20educational%20photo%20review.">💬 Text Palm Photos</a>
-    <a data-cta="call" class="secondary-button" href="tel:2624923135">📞 Call 262-492-3135</a>
-  </div>
-
-  <p class="phone-line">Call or Text 262-492-3135</p>
-
-  <p class="email-line">
-    <strong>Email:</strong>
-    <a data-cta="contact" href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a>
-  </p>
-</section>
-<div class="bottom-bar">
-  <div><strong>Owner-Led Documentation</strong>Photo records personally reviewed</div>
-  <div><strong>Quarterly Documentation</strong>A seasonal recordkeeping rhythm</div>
-  <div><strong>SAPW-Aware</strong>Educational awareness for vulnerable palms</div>
-</div>
-
-  <section class="exclusive-care-strip">
-  <div class="exclusive-care-content">
-    <h3>Owner-Led Palm Documentation</h3>
-
-    <p>
-      San Diego Palm Protection keeps documentation local and owner-led, with a focus on clear photographs, site context, visible changes, and useful questions for property owners.
-    </p>
-  </div>
-</section>
-
 <section>
   <h2>Palm Health for Long-Term Landscape Value</h2>
   <p class="section-subtitle">
@@ -910,189 +884,6 @@ html {
   </div>
 </section>
 
-<section class="trust-section">
-  <h2>Why Homeowners Trust San Diego Palm Protection</h2>
-  <p class="section-subtitle">
-    Palm-focused documentation and educational resources designed to support thoughtful decisions about mature palms.
-  </p>
-
-  <div class="trust-grid">
-    <div class="trust-card">
-      <div class="trust-icon"><i class="fas fa-seedling"></i></div>
-      <strong>Palm-Focused Documentation</strong>
-      <p>Focused exclusively on mature palms — not general landscaping.</p>
-    </div>
-
-    <div class="trust-card">
-      <div class="trust-icon"><i class="fas fa-shield-alt"></i></div>
-      <strong>Preserve Valuable Palm Context</strong>
-      <p>Helping owners preserve records, context, and decision history around mature palms.</p>
-    </div>
-
-    <div class="trust-card">
-      <div class="trust-icon"><i class="fas fa-calendar-check"></i></div>
-      <strong>Seasonal Documentation Guidance</strong>
-      <p>Seasonal photo records, site-context notes, and educational monitoring reminders.</p>
-    </div>
-
-    <div class="trust-card">
-      <div class="trust-icon"><i class="fas fa-user-check"></i></div>
-      <strong>Owner-Led Documentation</strong>
-      <p>Photo records and educational notes are owner-led and locally grounded.</p>
-    </div>
-
-    <div class="trust-card">
-      <div class="trust-icon"><i class="fas fa-leaf"></i></div>
-      <strong>Preservation-Minded Decisions</strong>
-      <p>Clear records so property owners can make calmer decisions before visible changes become advanced.</p>
-    </div>
-  </div>
-</section>
-
-<section class="approach-section">
-  <h2>The SDPP Approach</h2>
-  <p class="section-subtitle">
-    Palm decisions are clearer when the process starts with observation and ends with a thoughtful plan.
-  </p>
-
-  <div class="approach-grid">
-    <div class="approach-card">
-      <span class="approach-step">1</span>
-      <h3>Document</h3>
-      <p>Start with clear photos, visible condition notes, crown changes, and surrounding site context.</p>
-    </div>
-
-    <div class="approach-card">
-      <span class="approach-step">2</span>
-      <h3>Understand</h3>
-      <p>Consider the palm species, stress signs, SAPW awareness, neighborhood context, and whether the change is new or worsening.</p>
-    </div>
-
-    <div class="approach-card">
-      <span class="approach-step">3</span>
-      <h3>Decide</h3>
-      <p>The next step may be monitoring, preservation planning, removal decision planning, or replacement planning.</p>
-    </div>
-
-    <div class="approach-card">
-      <span class="approach-step">4</span>
-      <h3>Steward</h3>
-      <p>For valuable palms and mature landscapes, SDPP helps property owners think beyond a single photo and preserve long-term palm context.</p>
-    </div>
-  </div>
-</section>
-<section class="service-overview-section" id="services">
-  <h2>Resources for Mature Palm Decisions</h2>
-  <p class="section-subtitle">
-    Palm stewardship, documentation, SAPW awareness, removal decision planning, sourcing education, replacement planning, and local field notes for mature San Diego palms.
-  </p>
-
-  <div class="expanded-service-grid">
-    <div class="expanded-service-card featured-service">
-      <h3>Quarterly Palm Care Education</h3>
-      <p>
-        <strong>Educational quarterly documentation rhythm</strong><br>
-        <em>Focused on visible-condition records and referral questions</em>
-      </p>
-      <p>A quarterly documentation rhythm, including:</p>
-      <ul class="service-list">
-        <li>General nutrition and soil-care questions for future providers</li>
-        <li>Questions for appropriately licensed providers when appropriate</li>
-        <li>Watering and site-context notes</li>
-        <li>Visible-condition records and general next-step questions</li>
-      </ul>
-      <p class="service-note">Best for mature palms where owners want consistent records without guessing from memory.</p>
-      <a href="#schedule-visit">Palm Photos for Educational Photo Review</a>
-    </div>
-
-    <div class="expanded-service-card">
-      <h3>Educational Palm Photo Review</h3>
-      <p>An educational photo review for visible decline concerns, seasonal palm questions, and organizing what may deserve referral to an appropriately licensed provider.</p>
-      <p class="service-note">Useful for property owners who want to organize photographs, visible-condition observations, site context, and questions before deciding on next steps.</p>
-      <a href="#schedule-visit">Send Photos for Review</a>
-    </div>
-
-    <div class="expanded-service-card">
-      <h3>Palm Sourcing & Logistics</h3>
-      <p>Guidance for homeowners adding statement palms such as Bismarck palms, Canary Island Date Palms, King palms, and other premium specimens.</p>
-      <p>Educational support may include placement considerations, sourcing questions, logistics questions, and long-term growth considerations.</p>
-      <p class="service-note">Useful for owners researching long-term landscape character.</p>
-      <a href="./palm-sourcing-installation.html">Explore Sourcing Education</a>
-    </div>
-    <div class="expanded-service-card">
-      <h3>Free CIDP Risk Checklist</h3>
-      <p>A homeowner checklist for documenting crown decline, stress signs, and possible SAPW warning signs in mature Canary Island date palms.</p>
-      <p class="service-note">A practical starting point before assuming a diagnosis.</p>
-      <a href="./cidp-risk-checklist.html">View Checklist</a>
-    </div>
-
-
-    <div class="expanded-service-card">
-      <h3>Removal Decision Planning</h3>
-      <p>When a mature palm may need to come down, SDPP helps property owners document the palm, organize contractor questions, compare next steps, and plan replacement palms or landscape upgrades.</p>
-      <p class="service-note">Practical homeowner-side planning when preservation is no longer realistic.</p>
-      <a href="./palm-removal-coordination.html">Removal Planning</a>
-    </div>
-
-    <div class="expanded-service-card">
-      <h3>Specialty Palm Growing</h3>
-      <p>SDPP documents and studies select premium palms and cycads, with emphasis on distinctive specimen plants, long-term beauty, architectural character, and San Diego landscape value.</p>
-      <p class="service-note">Educational examples vary seasonally.</p>
-      <a href="./specimen-palms-cycads.html">View Specimen Palms</a>
-    </div>
-  </div>
-</section>
-
-<section class="learn-more-section">
-  <h2>Learn More About Mature Palm Decisions</h2>
-  <div class="learn-more-links">
-    <a href="./palm-stewardship-plans.html">Palm Stewardship Resources</a>
-    <a href="./cidp-risk-checklist.html">Free CIDP Risk Checklist</a>
-    <a href="./palm-faq-san-diego.html">Palm Care FAQ</a>
-    <a href="./canary-island-date-palm-care-san-diego.html">Canary Island Date Palm Care</a>
-    <a href="./quarterly-palm-care-san-diego.html">Quarterly Palm Care</a>
-    <a href="./south-american-palm-weevil-treatment-san-diego.html">South American Palm Weevil Treatment</a>
-    <a href="./palm-care-escondido.html">Palm Care in Escondido</a>
-    <a href="./palm-care-poway.html">Palm Care in Poway</a>
-    <a href="./palm-care-rancho-santa-fe.html">Palm Care in Rancho Santa Fe</a>
-    <a href="./palm-removal-coordination.html">Removal Decision Planning</a>
-    <a href="./palm-sourcing-installation.html">Palm Sourcing & Installation Education</a>
-    <a href="./specimen-palms-cycads.html">Palms & Cycads</a>
-  </div>
-</section>
-
-
-<section class="journal-preview">
-  <div class="journal-card">
-    <h2>Old Escondido Palm Preservation Initiative</h2>
-    <p>San Diego Palm Protection is documenting mature Canary Island Date Palms and local South American Palm Weevil observations in Old Escondido as part of a neighborhood awareness and preservation effort.</p>
-    <a class="cta-button" href="./old-escondido-palm-preservation.html">Learn About the Initiative</a>
-  </div>
-</section>
-<section class="brand-positioning-section">
-  <h2>Long-Term Palm Stewardship</h2>
-  <p class="section-subtitle">
-    San Diego Palm Protection is intentionally focused: owner-led documentation, local Palm Journal field records, SAPW-aware educational resources, and preservation-minded decision support for mature palms.
-  </p>
-
-  <div class="brand-pillars">
-    <div class="brand-pillar">
-      <strong>Document</strong>
-      <p>SAPW awareness, photographic documentation, and early monitoring before removal becomes the only option.</p>
-    </div>
-
-    <div class="brand-pillar">
-      <strong>Compare</strong>
-      <p>Quarterly documentation, visible-condition notes, and seasonal context for mature palms worth tracking over time.</p>
-    </div>
-
-    <div class="brand-pillar">
-      <strong>Plan</strong>
-      <p>Sourcing education, specimen palm examples, and replacement-planning questions for owners thinking long term.</p>
-    </div>
-  </div>
-</section>
-
 <section class="journal-preview">
   <div class="journal-card">
     <h2>Palm Journal</h2>
@@ -1104,12 +895,12 @@ html {
 </section>
 
 <section class="assessment-cta" id="contact">
-  <h2>Text or Email Photos for a Photo Review</h2>
-  <p>Send the full palm, crown close-up, trunk/base, and a few notes about your city or neighborhood. Photos are a starting point, not a diagnosis.</p>
+  <h2>Discuss Your Palms</h2>
+  <p>Start a property baseline, ask about recurring monitoring, document outside work or a loss, or discuss sourcing and replacement planning. Photographs support the record; they do not establish a diagnosis.</p>
 
   <div class="button-row">
-    <a data-cta="photo-email" class="cta-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm Photos for Educational Photo Review">📧 Send a Few Palm Photos</a>
-    <a class="secondary-button" href="./index.html#services">View Resources</a>
+    <a class="cta-button" href="./palm-records-monitoring-verification.html#request">Request a Documentation Visit</a>
+    <a data-cta="photo-email" class="secondary-button" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Property%20Records%20Inquiry">Email SDPP</a>
   </div>
 
   <p class="phone-line">📞 Call or Text 262-492-3135</p>
@@ -1132,7 +923,7 @@ html {
 <div class="mobile-sticky-contact" aria-label="Quick contact options">
   <a data-cta="text" href="sms:2624923135">Text Photos</a>
   <a data-cta="call" href="tel:2624923135">Call</a>
- <a href="#schedule-visit">Photos</a>
+ <a href="./palm-records-monitoring-verification.html#request">Request</a>
 </div>
 
 

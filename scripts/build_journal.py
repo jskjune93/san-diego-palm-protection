@@ -174,6 +174,7 @@ def header(relative_root: str = "./") -> str:
   <nav aria-label="Primary navigation">
     <a href="{relative_root}index.html">Home</a>
     <a href="{relative_root}palm-care-escondido.html">Escondido</a>
+    <a href="{relative_root}palm-records-monitoring-verification.html">Records &amp; Monitoring</a>
     <a href="{relative_root}palm-stewardship-plans.html">Stewardship Resources</a>
     <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
     <a class="call" href="tel:2624923135">&#9742; 262-492-3135</a>

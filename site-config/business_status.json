@@ -1,11 +1,12 @@
 {
   "schema_version": 1,
   "mode": "prelicense",
-  "explanation": "Prelicense mode limits the public website to palm documentation, educational resources, photographic condition records, historical comparison, visible-condition observations, and referrals to appropriately licensed providers. Passing an exam or receiving a QAL alone must not activate services. Any future transition requires an explicit owner-controlled configuration update after the QAL is issued, the Pest Control Business License is issued, financial responsibility is active and accepted, San Diego County registration is completed, and operating prerequisites are confirmed.",
+  "explanation": "Prelicense mode permits non-regulated palm inventories, dated condition baselines, photographic records, recurring visible-condition monitoring, written reports, work and outcome documentation, sourcing guidance, coordination, education, and referrals. It does not activate pesticide, pest-control, diagnosis, treatment, pruning, removal, installation, or other regulated field services. Passing an exam or receiving a QAL alone must not activate regulated services. Any future transition requires an explicit owner-controlled configuration update after the QAL is issued, the Pest Control Business License is issued, financial responsibility is active and accepted, San Diego County registration is completed, and operating prerequisites are confirmed.",
   "pesticide_services_enabled": false,
   "tree_palm_contracting_enabled": false,
   "commercial_field_services_enabled": false,
   "documentation_and_education_enabled": true,
+  "records_monitoring_reporting_enabled": true,
   "owner_review_required": true,
   "qal_issued_and_active": false,
   "pest_control_business_license_issued_and_active": false,
