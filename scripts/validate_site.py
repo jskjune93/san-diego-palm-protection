@@ -262,6 +262,10 @@ def main() -> int:
             'name="public_use_permission"',
             "Nothing is published automatically",
             "The report is not delivered until you send it",
+            "does not upload or store photographs",
+            "configured email application",
+            "Observation and chronology:",
+            "identifiable private-property details remain private",
             "Review status: needs_review",
         ):
             if required_fragment not in report_text:
@@ -270,6 +274,8 @@ def main() -> int:
             errors.append("Report a Palm implies direct upload without a supported backend")
         if "public_use_permission') ? 'yes' : 'no'" not in report_text:
             errors.append("optional public-use permission is not kept separate")
+        if "Not provided" in report_text:
+            errors.append("Report a Palm handoff should omit empty optional fields")
     if "./report-a-palm.html" not in homepage_text:
         errors.append("homepage does not link to Report a Palm")
     old_escondido_text = (ROOT / "old-escondido-palm-preservation.html").read_text(encoding="utf-8-sig")
