@@ -15,6 +15,7 @@ INDEX = ROOT / "palm-journal-new.html"
 SITEMAP = ROOT / "sitemap.xml"
 ROBOTS = ROOT / "robots.txt"
 RECORDS_PAGE = ROOT / "palm-records-monitoring-verification.html"
+REPORT_PAGE = ROOT / "report-a-palm.html"
 
 SKIP_SCHEMES = ("http://", "https://", "mailto:", "tel:", "sms:", "data:")
 ENCODING_ARTIFACTS = ["â€", "â€™", "â€œ", "â€�", "Â", "�"]
@@ -224,6 +225,8 @@ def main() -> int:
             errors.append("sitemap missing Documented Loss page")
         if f"{BASE_URL}/palm-records-monitoring-verification.html" not in locs:
             errors.append("sitemap missing Records & Monitoring page")
+        if f"{BASE_URL}/report-a-palm.html" not in locs:
+            errors.append("sitemap missing Report a Palm page")
         for entry in entries:
             if entry.get("status") == "published" and entry.get("page"):
                 if entry["canonical_url"] not in locs:
@@ -248,6 +251,42 @@ def main() -> int:
     required_current_scope = "Documentation, monitoring, reporting, sourcing, and coordination are available now."
     required_future_scope = "Regulated pesticide and treatment services are not currently offered."
     records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""
+    report_text = REPORT_PAGE.read_text(encoding="utf-8-sig") if REPORT_PAGE.exists() else ""
+    if not REPORT_PAGE.exists():
+        errors.append("Report a Palm page is missing")
+    else:
+        for required_fragment in (
+            'id="observation-form"',
+            'name="contact_permission" required',
+            'name="private_retention_permission" required',
+            'name="public_use_permission"',
+            "Nothing is published automatically",
+            "The report is not delivered until you send it",
+            "does not upload or store photographs",
+            "configured email application",
+            "Observation and chronology:",
+            "identifiable private-property details remain private",
+            "Review status: needs_review",
+        ):
+            if required_fragment not in report_text:
+                errors.append(f"Report a Palm page missing safeguard or field: {required_fragment}")
+        if 'type="file"' in report_text:
+            errors.append("Report a Palm implies direct upload without a supported backend")
+        if "public_use_permission') ? 'yes' : 'no'" not in report_text:
+            errors.append("optional public-use permission is not kept separate")
+        if "Not provided" in report_text:
+            errors.append("Report a Palm handoff should omit empty optional fields")
+    if "./report-a-palm.html" not in homepage_text:
+        errors.append("homepage does not link to Report a Palm")
+    old_escondido_text = (ROOT / "old-escondido-palm-preservation.html").read_text(encoding="utf-8-sig")
+    if "./report-a-palm.html" not in old_escondido_text:
+        errors.append("Old Escondido initiative does not link to Report a Palm")
+    if "Share a palm observation or dated photograph." not in index_text:
+        errors.append("Palm Journal is missing contribution language")
+    article_pages = sorted((ROOT / "palm-journal").glob("*.html"))
+    for article in article_pages:
+        if "Share a palm observation or dated photograph." not in article.read_text(encoding="utf-8-sig"):
+            errors.append(f"journal article missing standardized contribution footer: {article.name}")
     if required_current_scope not in homepage_text or required_current_scope not in records_text:
         errors.append("current non-regulated services are not clearly identified as available")
     if required_future_scope not in records_text:

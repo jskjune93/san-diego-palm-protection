@@ -177,6 +177,7 @@ def header(relative_root: str = "./") -> str:
     <a href="{relative_root}palm-records-monitoring-verification.html">Records &amp; Monitoring</a>
     <a href="{relative_root}palm-stewardship-plans.html">Stewardship Resources</a>
     <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
+    <a href="{relative_root}report-a-palm.html">Report a Palm</a>
     <a class="call" href="tel:2624923135">&#9742; 262-492-3135</a>
     <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Photo Review</a>
   </nav>
@@ -187,7 +188,7 @@ def footer(relative_root: str = "./") -> str:
     return f'''<footer>
   <div class="inner">
     <p><strong>San Diego Palm Protection</strong> documents, monitors, and supports preservation-focused care for mature palms across San Diego County.</p>
-    <p><a href="{relative_root}index.html">Home</a> | <a href="{relative_root}palm-journal-new.html">Palm Journal</a> | <a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a></p>
+    <p><a href="{relative_root}index.html">Home</a> | <a href="{relative_root}palm-journal-new.html">Palm Journal</a> | <a href="{relative_root}report-a-palm.html">Report a Palm</a> | <a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a></p>
   </div>
 </footer>'''
 
@@ -271,7 +272,7 @@ def render_index(entries: list[dict]) -> None:
   <div class="hero-inner">
     <span class="eyebrow">Palm Journal Library</span>
     <h1>Field Notes on Mature Palms in San Diego County</h1>
-    <p class="lede">A local library of documented palm observations, preservation notes, South American palm weevil documentation, and mature landscape records from San Diego Palm Protection.</p>
+    <p class="lede">A local library of documented palm observations, preservation notes, South American palm weevil documentation, and mature landscape records from San Diego Palm Protection. <a href="./report-a-palm.html">Share a palm observation or dated photograph.</a> Nothing is published automatically.</p>
   </div>
 </section>
 <main>
@@ -302,9 +303,9 @@ def render_index(entries: list[dict]) -> None:
   </section>
 
   <section class="assessment-cta" id="contact">
-    <h2>Have a Mature Palm Concern?</h2>
-    <p>Send a few clear photos and the palm location context. SDPP can help organize visible-condition observations before you decide whether monitoring, preservation research, or referral to an appropriately licensed provider makes sense.</p>
-    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational photo review</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
+    <h2>Seen Something Worth Recording?</h2>
+    <p>Share a palm observation or dated photograph for private review. Contributions may inform future field records, but they are never published automatically.</p>
+    <p><a href="./report-a-palm.html">Report a palm</a> or <a href="./palm-records-monitoring-verification.html#request">request private help with your own palm</a>.</p>
   </section>
 </main>
 {footer('./')}
@@ -549,10 +550,10 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     </section>
   </article>
   <section class="assessment-cta" id="contact">
-    <h2>Need Help Reading Palm Changes?</h2>
-    <p>SDPP reviews mature palm observations with a preservation-first documentation approach and avoids unsupported diagnosis from a single public image.</p>
+    <h2>Seen something similar?</h2>
+    <p><a href="../report-a-palm.html">Share a palm observation or dated photograph.</a> Submissions are reviewed privately and are not published automatically.</p>
     <p>Prelicense status: San Diego Palm Protection currently focuses on palm documentation, photographic condition records, and educational resources. Pesticide application, pest-control treatment, palm pruning, removal, and installation services are not currently offered.</p>
-    <p><a href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Send photos for an educational photo review</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
+    <p><a href="../palm-records-monitoring-verification.html#request">Request private help with your own palm</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
 {footer('../')}

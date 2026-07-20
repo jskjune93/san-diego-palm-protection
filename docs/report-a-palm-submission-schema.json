@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.sandiegopalmprotection.com/schemas/report-a-palm-submission.json",
+  "title": "Report a Palm submission",
+  "type": "object",
+  "required": ["name", "email", "city", "general_location", "relationship", "category", "description", "contact_permission", "private_retention_permission"],
+  "properties": {
+    "name": {"type": "string"}, "email": {"type": "string", "format": "email"}, "phone": {"type": ["string", "null"]},
+    "city": {"type": "string"}, "neighborhood": {"type": ["string", "null"]}, "general_location": {"type": "string"},
+    "relationship": {"type": "string"}, "category": {"type": "string"}, "species": {"type": ["string", "null"]},
+    "observed_date": {"type": ["string", "null"], "format": "date"}, "description": {"type": "string"}, "photo_method": {"type": ["string", "null"]},
+    "contact_permission": {"const": true}, "private_retention_permission": {"const": true},
+    "public_use_permission": {"type": "boolean", "default": false},
+    "review_status": {"type": "string", "enum": ["needs_review", "needs_enrichment", "accepted", "declined"], "default": "needs_review"},
+    "publication_status": {"type": "string", "enum": ["not_authorized", "permission_requested", "authorized", "published"], "default": "not_authorized"},
+    "source": {"type": "string", "default": "website_email_handoff"}
+  },
+  "allOf": [{"if": {"properties": {"publication_status": {"const": "authorized"}}}, "then": {"properties": {"public_use_permission": {"const": true}}}}]
+}
