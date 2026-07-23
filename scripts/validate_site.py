@@ -248,7 +248,9 @@ def main() -> int:
         errors.append("Records & Monitoring service page is missing")
     elif "./palm-records-monitoring-verification.html" not in homepage_text:
         errors.append("homepage does not link to Records & Monitoring service page")
-    required_current_scope = "Documentation, monitoring, reporting, sourcing, and coordination are available now."
+    business_status = json.loads((ROOT / "site-config" / "business_status.json").read_text(encoding="utf-8"))
+    commercial_mode = business_status.get("mode") == "commercial"
+    required_current_scope = "California licensed · DPR Category B qualified · Insured" if commercial_mode else "Documentation, monitoring, reporting, sourcing, and coordination are available now."
     required_future_scope = "Regulated pesticide and treatment services are not currently offered."
     records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""
     report_text = REPORT_PAGE.read_text(encoding="utf-8-sig") if REPORT_PAGE.exists() else ""
@@ -288,11 +290,18 @@ def main() -> int:
         if "Share a palm observation or dated photograph." not in article.read_text(encoding="utf-8-sig"):
             errors.append(f"journal article missing standardized contribution footer: {article.name}")
     if required_current_scope not in homepage_text or required_current_scope not in records_text:
-        errors.append("current non-regulated services are not clearly identified as available")
-    if required_future_scope not in records_text:
-        errors.append("future regulated treatment is not clearly identified as unavailable")
-    if re.search(r'href="[^"]*(?:request|schedule|book)[^"]*treatment', homepage_text + records_text, re.I):
-        errors.append("active treatment CTA found in current-service pages")
+        errors.append("current license/service status is not consistently identified")
+    if commercial_mode:
+        if "Schedule a Palm Assessment" not in homepage_text or "Schedule a Palm Assessment" not in records_text:
+            errors.append("commercial homepage and service page must expose the assessment CTA")
+        for obsolete in ("prelicense", "pending licensing", "treatment services are not currently offered"):
+            if obsolete in (homepage_text + records_text).lower():
+                errors.append(f"commercial pages retain obsolete status language: {obsolete}")
+    else:
+        if required_future_scope not in records_text:
+            errors.append("future regulated treatment is not clearly identified as unavailable")
+        if re.search(r'href="[^"]*(?:request|schedule|book)[^"]*treatment', homepage_text + records_text, re.I):
+            errors.append("active treatment CTA found in current-service pages")
     for required_path in (
         "palm-removal-coordination.html",
         "specimen-palms-cycads.html",
