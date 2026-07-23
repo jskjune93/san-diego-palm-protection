@@ -5,12 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Licensed Palm Protection for North County San Diego | SDPP</title>
 <meta name="description" content="California-licensed palm treatment, monitoring, and documentation for valuable landscape palms across North County San Diego." />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta name="theme-color" content="#063b16" />
 <link rel="canonical" href="https://www.sandiegopalmprotection.com/" />
 <meta property="og:title" content="Licensed Palm Protection for North County San Diego | SDPP">
 <meta property="og:description" content="Professional treatment, monitoring, and documentation for valuable landscape palms.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.sandiegopalmprotection.com/">
 <meta property="og:image" content="https://www.sandiegopalmprotection.com/background.jpg">
+<meta property="og:image:alt" content="Mature Canary Island date palms in a North County San Diego landscape">
+<meta property="og:site_name" content="San Diego Palm Protection">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Licensed Palm Protection for North County San Diego">
+<meta name="twitter:description" content="Professional treatment, monitoring, and documentation for valuable landscape palms.">
+<meta name="twitter:image" content="https://www.sandiegopalmprotection.com/background.jpg">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -21,6 +29,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
   color: #0b2d13;
+  overflow-x: hidden;
 }
 
 .topnav {
@@ -35,7 +44,7 @@ body {
 }
 
 .logo img {
-  height: 175px;
+  height: 145px;
   width: auto;
   display: block;
 }
@@ -46,7 +55,7 @@ body {
   gap: 10px;
   flex-wrap: wrap;
   font-weight: 900;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .nav-links a {
@@ -67,11 +76,11 @@ body {
   border-radius: 10px;
   text-decoration: none;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .hero {
-  min-height: 640px;
+  min-height: 610px;
   background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url("./background.jpg");
@@ -86,8 +95,8 @@ body {
 .hero-content { max-width: 850px; }
 
 .hero h1 {
-  font-size: clamp(42px, 6vw, 72px);
-  line-height: 1.0;
+  font-size: clamp(42px, 5.5vw, 66px);
+  line-height: 1.03;
   margin: 0 0 25px;
   font-weight: 900;
 }
@@ -146,8 +155,10 @@ body {
 }
 
 .local-note {
-  margin-top: 15px;
+  margin: 17px 0 0;
   font-weight: 700;
+  font-size: 16px !important;
+  color: #fff;
 }
 
 .availability-note {
@@ -172,7 +183,12 @@ body {
   padding: 25px;
   border-bottom: 5px solid #ffb31a;
   box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  transition: transform .18s ease, box-shadow .18s ease;
 }
+.records-card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(6,59,22,.12); }
+.records-card a { margin-top: auto; font-weight: 800; color: #075c28; }
 .records-card h3 { margin-top: 0; font-size: 24px; }
 .records-card p { line-height: 1.55; }
 .records-card .availability-badge {
@@ -616,6 +632,7 @@ footer {
 
   .nav-links {
     justify-content: center;
+    width: 100%;
   }
 
   .serviceGrid,
@@ -641,6 +658,47 @@ footer {
     max-width: 420px;
     margin: auto;
   }
+}
+
+@media(max-width: 600px){
+  .topnav { padding: 16px 18px 20px; gap: 10px; }
+  .logo img { height: 104px; }
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    font-size: 14px;
+  }
+  .nav-links > a:not(.call):not(.nav-cta) {
+    padding: 7px 4px;
+    border: 1px solid rgba(255,255,255,.12);
+    border-radius: 6px;
+  }
+  .nav-separator { display: none; }
+  .call,
+  .nav-cta {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+  .hero {
+    min-height: auto;
+    padding: 48px 22px 52px;
+    background-position: 58% center;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 11vw, 46px);
+    line-height: 1.03;
+    overflow-wrap: anywhere;
+  }
+  .hero p { font-size: 19px; }
+  .availability-note { width: 100%; }
+  .hero-buttons { display: grid; grid-template-columns: 1fr; }
+  .hero-buttons a { width: 100%; text-align: center; margin-top: 0; }
+  .local-note { font-size: 15px !important; }
+  section { padding: 44px 20px; }
+  h2 { font-size: 32px; line-height: 1.12; }
 }
 
 
@@ -792,6 +850,16 @@ html {
       ],
       "@id": "https://www.sandiegopalmprotection.com/#business",
       "email": "sandiegopalmprotection@gmail.com"
+      ,"logo": "https://www.sandiegopalmprotection.com/logo.png"
+      ,"hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Palm protection services",
+        "itemListElement": [
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Palm Assessment, Monitoring and Documentation","areaServed":"North County San Diego"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Licensed Palm Protection and Treatment","areaServed":"North County San Diego"}},
+          {"@type":"Offer","itemOffered":{"@type":"Service","name":"Palm Response, Removal Coordination and Replacement Planning","areaServed":"North County San Diego"}}
+        ]
+      }
     },
     {
       "publisher": {
@@ -834,7 +902,7 @@ html {
     <a href="./report-a-palm.html">Report a Palm</a>
     <a data-cta="call" class="call" href="tel:2624923135">📞 262-492-3135</a>
    <a data-cta="contact" class="nav-cta" href="./palm-records-monitoring-verification.html#request">
-  Discuss Your Property
+  Schedule an Assessment
   </a>
   </nav>
 </header>
@@ -851,6 +919,7 @@ html {
       <a class="cta-button" href="./palm-records-monitoring-verification.html#request">Schedule a Palm Assessment</a>
       <a class="secondary-hero-button" href="#services">Explore Services</a>
     </div>
+    <p class="local-note">Serving Escondido, Poway, Rancho Santa Fe, and communities across North County San Diego.</p>
   </div>
 </section>
 
