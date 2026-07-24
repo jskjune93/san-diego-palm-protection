@@ -6,7 +6,7 @@ import json
 import re
 import xml.etree.ElementTree as ET
 
-from business_credentials import footer_line
+from site_components import header as global_header, footer as global_footer
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.sandiegopalmprotection.com"
@@ -99,15 +99,9 @@ def shared_head(title: str, description: str, canonical: str, og_image: str, ext
 
 
 def styles(relative_root: str = "./") -> str:
-    logo = f"{relative_root}logo.png"
-    return f'''  <style>
-    body {{ margin: 0; font-family: Arial, sans-serif; color: #202020; background: #f7f4ee; line-height: 1.62; }}
-    header {{ background: #1f3b2c; color: #fff; padding: 18px 6vw; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }}
-    .brand {{ display: flex; align-items: center; gap: 14px; color: #fff; text-decoration: none; font-weight: 700; }}
-    .brand img {{ width: 54px; height: 54px; object-fit: contain; }}
-    nav {{ display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }}
-    nav a {{ color: #fff; text-decoration: none; font-size: 0.95rem; }}
-    .nav-cta, .call {{ background: #d7b46a; color: #1f3b2c; padding: 10px 14px; border-radius: 4px; font-weight: 700; }}
+    return f'''  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
+  <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
+  <style>
     .hero {{ background: #efe7d8; padding: 56px 6vw 42px; }}
     .hero-inner, main, footer .inner {{ max-width: 1120px; margin: 0 auto; }}
     .eyebrow, .entry-label, .category-label {{ color: #6f5b2e; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: .78rem; }}
@@ -161,39 +155,16 @@ def styles(relative_root: str = "./") -> str:
     .assessment-cta {{ background: #1f3b2c; color: #fff; padding: 28px; border-radius: 6px; margin-top: 34px; }}
     .assessment-cta h2 {{ color: #fff; }}
     .assessment-cta a {{ color: #fff; font-weight: 700; }}
-    footer {{ background: #14271e; color: #fff; padding: 28px 6vw; }}
-    footer a {{ color: #fff; }}
-    @media (max-width: 760px) {{ .featured {{ grid-template-columns: 1fr; }} header {{ align-items: flex-start; }} }}
+    @media (max-width: 760px) {{ .featured {{ grid-template-columns: 1fr; }} }}
   </style>'''
 
 
 def header(relative_root: str = "./") -> str:
-    return f'''<header>
-  <a class="brand" href="{relative_root}index.html">
-    <img src="{relative_root}logo.png" alt="San Diego Palm Health & Protection Logo">
-    <span>San Diego Palm Protection</span>
-  </a>
-  <nav aria-label="Primary navigation">
-    <a href="{relative_root}index.html">Home</a>
-    <a href="{relative_root}palm-care-escondido.html">Escondido</a>
-    <a href="{relative_root}palm-records-monitoring-verification.html">Records &amp; Monitoring</a>
-    <a href="{relative_root}palm-stewardship-plans.html">Stewardship Resources</a>
-    <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
-    <a href="{relative_root}report-a-palm.html">Report a Palm</a>
-    <a class="call" href="tel:2624923135">&#9742; 262-492-3135</a>
-    <a class="nav-cta" href="mailto:sandiegopalmprotection@gmail.com?subject=Palm%20Photos%20for%20Educational%20First%20Look">Photo Review</a>
-  </nav>
-</header>'''
+    return global_header(relative_root)
 
 
 def footer(relative_root: str = "./") -> str:
-    return f'''<footer>
-  <div class="inner">
-    <p><strong>San Diego Palm Protection</strong> documents, monitors, and supports preservation-focused care for mature palms across San Diego County.</p>
-    <p>{footer_line()}.</p>
-    <p><a href="{relative_root}index.html">Home</a> | <a href="{relative_root}palm-journal-new.html">Palm Journal</a> | <a href="{relative_root}report-a-palm.html">Report a Palm</a> | <a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a></p>
-  </div>
-</footer>'''
+    return global_footer(relative_root)
 
 
 def json_ld_index(entries: list[dict]) -> str:
@@ -278,7 +249,7 @@ def render_index(entries: list[dict]) -> None:
     <p class="lede">A local library of documented palm observations, preservation notes, South American palm weevil documentation, and mature landscape records from San Diego Palm Protection. <a href="./report-a-palm.html">Share a palm observation or dated photograph.</a> Nothing is published automatically.</p>
   </div>
 </section>
-<main>
+<main id="main">
   <section class="featured" aria-labelledby="featured-entry">
     <div>
       <span class="category-label">Featured Entry</span>
@@ -339,7 +310,7 @@ def _render_legacy_documented_loss_page() -> None:
     <p class="lede">Mature palms define properties, corners, streets, and old neighborhoods. Then, sometimes, they are gone. Documented Loss records significant palms that have died, declined beyond practical recovery, or been removed, separating confirmed outcomes from observations and unknowns.</p>
   </div>
 </section>
-<main>
+<main id="main">
   <section class="article-shell" aria-labelledby="what-qualifies">
     <h2 id="what-qualifies">What Qualifies</h2>
     <p>A palm is included here only when death, removal, or irreversible structural loss has been documented. Palms still under observation remain classified as ongoing field records until their outcome is known.</p>
@@ -511,7 +482,7 @@ def render_documented_loss_page() -> None:
 {shared_head(title, description, DOCUMENTED_LOSS_URL, f'{BASE_URL}/images/las-palmas/01-property-context-laspalmas-escondido-cidp.jpg', json_ld_documented_loss(), 'website')}
 {styles('../../')}</head><body><!-- {GENERATED_NOTE} -->{header('../../')}
 <section class="hero"><div class="hero-inner"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> / <a href="../../palm-journal-new.html">Palm Journal</a> / Documented Loss</nav><span class="eyebrow">Palm Journal Section</span><h1>Documented Loss</h1><p class="lede">Confirmed palm removals and losses, presented with a clear boundary between documented observation and attribution.</p></div></section>
-<main><section class="article-shell"><h2>Published records</h2>{cards}</section></main>{footer('../../')}</body></html>'''
+<main id="main"><section class="article-shell"><h2>Published records</h2>{cards}</section></main>{footer('../../')}</body></html>'''
     (DOCUMENTED_LOSS_DIR / "index.html").write_text(page, encoding="utf-8")
 
 
@@ -542,7 +513,7 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     <p class="lede">{escape(entry['excerpt'])}</p>
   </div>
 </section>
-<main>
+<main id="main">
   <article class="article-shell" id="{escape(entry['legacy_anchor'])}">
 {content}
     <section aria-labelledby="related-field-notes">
@@ -600,6 +571,18 @@ def update_sitemap(entries: list[dict]) -> None:
 
     existing_locs = set(urls_by_loc)
     existing_locs.add(DOCUMENTED_LOSS_URL)
+    core_manifest = ROOT / "site-config" / "core_routes.json"
+    if core_manifest.exists():
+        for filename in json.loads(core_manifest.read_text(encoding="utf-8")):
+            loc = f"{BASE_URL}/" if filename == "index.html" else f"{BASE_URL}/{filename}"
+            if loc in existing_locs:
+                continue
+            url = ET.SubElement(root_el, url_tag)
+            ET.SubElement(url, loc_tag).text = loc
+            ET.SubElement(url, lastmod_tag).text = MODIFIED_DATE
+            ET.SubElement(url, changefreq_tag).text = "monthly"
+            ET.SubElement(url, priority_tag).text = "0.80"
+            existing_locs.add(loc)
     for entry in entries:
         if not (entry.get("status") == "published" and entry.get("page")):
             continue

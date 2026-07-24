@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "allowed_product_types": [
+    "anonymized_sample_assessment",
+    "sample_inventory",
+    "condition_baseline_excerpt",
+    "monitoring_timeline",
+    "sanitized_case_study",
+    "written_report_excerpt",
+    "managed_property_example",
+    "website_proof_excerpt"
+  ],
+  "required_manifest_fields": [
+    "schema_version",
+    "artifact_id",
+    "product_type",
+    "artifact_version",
+    "artifact_fingerprint",
+    "approved_fingerprint",
+    "status",
+    "publication_approval",
+    "privacy",
+    "publication_target",
+    "privacy_scan_passed",
+    "content"
+  ],
+  "allowed_privacy": ["sanitized", "public"],
+  "forbidden_keys": [
+    "client_name",
+    "address",
+    "email",
+    "phone",
+    "gate_code",
+    "access_instructions",
+    "private_notes",
+    "source_report_path"
+  ]
+}

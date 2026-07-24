@@ -2,15 +2,23 @@
 
 - Preserve the three service pillars: Monitoring & Documentation; Protection & Treatment; Response, Removal & Replacement.
 - Treat `site-config/business_status.json` as the only source of truth for licensing, qualification, insurance, and service availability.
-- Use `scripts/business_credentials.py` and `scripts/sync_business_credentials.py`; do not duplicate credential wording manually.
-- Keep the Pest Control Business License, DPR Qualified Applicator License, insurance, and job-specific authorization conceptually separate.
-- Never imply that insurance or licensing guarantees an outcome.
-- Preserve diagnostic and certainty boundaries: observed, possible, consistent with, presumed, and confirmed only when supportable.
-- Preserve the Machine/website boundary. Publish only approved, sanitized proof exports; never add private client data.
-- Use the approved UFMP wording without implying endorsement: “San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.”
-- Do not create duplicate navigation or styling systems.
-- Do not add a route without a clear role.
-- Preserve valuable URLs, analytics, forms, redirects, Palm Journal, Documented Loss, sitemap, and robots behavior.
-- Update Journal sources and generators rather than hand-editing generated pages.
-- Render user-facing changes at 360×800, 390×844, 768×1024, 1366×768, and 1920×1080.
-- Fix root causes and report every changed route and source file.
+- Use `scripts/business_credentials.py` and `scripts/sync_business_credentials.py`; never duplicate credential wording manually.
+- Do not conflate an examination, individual qualification, Pest Control Business License, job-specific regulated-work authorization, or applicable insurance.
+- Never imply that insurance, qualification, licensing, assessment, treatment, monitoring, or contractor work guarantees an outcome.
+- Generate core pages with `scripts/build_core_pages.py`; generate Journal pages with `scripts/build_journal.py`. Do not hand-edit generated HTML.
+- Keep one global navigation and design system in `scripts/site_components.py`, `site-assets/site.css`, and `site-assets/site.js`.
+- Every public route must have a named commercial, conversion, trust, evidence, or educational purpose in `docs/route-inventory.md`.
+- Preserve valuable URLs, canonical URLs, analytics integration, forms, conversion events, redirects, Palm Journal, Documented Loss, sitemap, and robots behavior.
+- Preserve diagnostic and certainty boundaries: use observed, reported, possible, consistent with, or presumed unless confirmation is supported.
+- Contractor-work verification may document visible completion and supplied records. It must not imply certification of concealed work, workmanship, safety, code compliance, licensing, efficacy, or outcome outside an explicit qualified scope.
+- Publish proof only through the approved Machine export boundary in `proof-data/`. Never copy private client reports or records into the website.
+- A sanitized derivative needs separate current public approval even when its private source artifact was approved.
+- Do not publish client identity, address, contact or access details, private notes, local file paths, unapproved media, or stale-fingerprint exports.
+- Preserve this exact UFMP wording: “San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.”
+- Do not imply City endorsement, partnership, selection, approval, or adoption.
+- New routes require a clear role, canonical metadata, sitemap entry, shared navigation, responsive rendering, and automated validation.
+- Preserve progressive enhancement: conversion links and forms must remain usable without JavaScript and must not claim that opening an email app sent a message.
+- Maintain skip navigation, keyboard focus, 48px touch targets, mobile menu state/Escape handling, reduced motion, anchor offset, and horizontal-overflow protection.
+- Render every final route at 360×800, 390×844, 768×1024, 1366×768, and 1920×1080 before release.
+- Fix source generators and shared components rather than layering page-specific overrides.
+- Do not push, merge, deploy, or change production hosting without explicit authorization.
