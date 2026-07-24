@@ -23,7 +23,7 @@ The generated files include a comment naming `scripts/build_journal.py`. Do not 
 5. Run `python scripts/validate_site.py`.
 6. Review the generated diff before committing.
 
-Prelicense mode is currently active for the public website. Every Palm Journal build must also pass `python scripts/validate_prelicense_compliance.py`; `scripts/validate_site.py` runs that compliance check too. Keep Journal copy educational, documentary, and non-diagnostic. Do not add treatment booking, pricing, or unavailable field-service claims to article fragments or generated templates.
+Commercial mode is currently active under the owner-authorized business-status configuration. Every Palm Journal build must still pass `python scripts/validate_prelicense_compliance.py`; the historical validator now acts as a fail-closed activation and claims gate, and `scripts/validate_site.py` runs it automatically. Keep Journal copy documentary and non-diagnostic, and preserve licensing, scope, certainty, and outcome boundaries.
 
 Draft entries must remain `status: draft`; the build and validation workflow prevents draft records from appearing publicly.
 

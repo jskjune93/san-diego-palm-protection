@@ -6,6 +6,8 @@ import json
 import re
 import xml.etree.ElementTree as ET
 
+from business_credentials import footer_line
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.sandiegopalmprotection.com"
 MANIFEST = ROOT / "journal-data" / "journal_entries.json"
@@ -188,6 +190,7 @@ def footer(relative_root: str = "./") -> str:
     return f'''<footer>
   <div class="inner">
     <p><strong>San Diego Palm Protection</strong> documents, monitors, and supports preservation-focused care for mature palms across San Diego County.</p>
+    <p>{footer_line()}.</p>
     <p><a href="{relative_root}index.html">Home</a> | <a href="{relative_root}palm-journal-new.html">Palm Journal</a> | <a href="{relative_root}report-a-palm.html">Report a Palm</a> | <a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a></p>
   </div>
 </footer>'''
@@ -552,7 +555,6 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
   <section class="assessment-cta" id="contact">
     <h2>Seen something similar?</h2>
     <p><a href="../report-a-palm.html">Share a palm observation or dated photograph.</a> Submissions are reviewed privately and are not published automatically.</p>
-    <p>California licensed · DPR Category B qualified · Insured.</p>
     <p><a href="../palm-records-monitoring-verification.html#request">Schedule a palm assessment</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>

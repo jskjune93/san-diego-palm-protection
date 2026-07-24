@@ -8,6 +8,8 @@ import subprocess
 import sys
 import xml.etree.ElementTree as ET
 
+from business_credentials import public_credentials
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.sandiegopalmprotection.com"
 MANIFEST = ROOT / "journal-data" / "journal_entries.json"
@@ -250,7 +252,9 @@ def main() -> int:
         errors.append("homepage does not link to Records & Monitoring service page")
     business_status = json.loads((ROOT / "site-config" / "business_status.json").read_text(encoding="utf-8"))
     commercial_mode = business_status.get("mode") == "commercial"
-    required_current_scope = "California licensed · DPR Category B qualified · Insured" if commercial_mode else "Documentation, monitoring, reporting, sourcing, and coordination are available now."
+    credentials = public_credentials() if commercial_mode else {}
+    required_current_scope = credentials.get("exact_status", "Documentation, monitoring, reporting, sourcing, and coordination are available now.")
+    required_qualified_insured_scope = credentials.get("service_summary", "")
     required_future_scope = "Regulated pesticide and treatment services are not currently offered."
     records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""
     report_text = REPORT_PAGE.read_text(encoding="utf-8-sig") if REPORT_PAGE.exists() else ""
@@ -292,6 +296,43 @@ def main() -> int:
     if required_current_scope not in homepage_text or required_current_scope not in records_text:
         errors.append("current license/service status is not consistently identified")
     if commercial_mode:
+        for path in (
+            ROOT / "index.html",
+            RECORDS_PAGE,
+            REPORT_PAGE,
+            ROOT / "palm-stewardship-plans.html",
+            ROOT / "quarterly-palm-care-san-diego.html",
+            ROOT / "sapw.html",
+            ROOT / "south-american-palm-weevil-treatment-san-diego.html",
+            ROOT / "palm-removal-coordination.html",
+        ):
+            page_text = path.read_text(encoding="utf-8-sig")
+            if required_qualified_insured_scope not in page_text or required_current_scope not in page_text:
+                errors.append(f"{normalize_rel(path)}: missing centralized qualified/insured status")
+            if "BUSINESS_CREDENTIALS:START" not in page_text:
+                errors.append(f"{normalize_rel(path)}: missing reusable business credential block")
+        for path in (ROOT / "index.html", RECORDS_PAGE):
+            _, parser = read_html(path)
+            structured_text = "\n".join(parser.json_ld_blocks)
+            if credentials["status_label"] not in structured_text:
+                errors.append(f"{normalize_rel(path)}: structured data missing qualified/insured service status")
+        for path, (page_text, _) in pages.items():
+            lowered = page_text.lower()
+            for obsolete in (
+                "pending licensing",
+                "awaiting licensing",
+                "awaiting qualification",
+                "still awaiting qualification",
+                "treatment services are not currently offered",
+            ):
+                if obsolete in lowered:
+                    errors.append(f"{normalize_rel(path)}: obsolete commercial-status wording remains: {obsolete}")
+            for drifted in (
+                "California licensed · DPR Category B qualified · Insured",
+                "Licensed · Qualified · Insured",
+            ):
+                if drifted.lower() in lowered:
+                    errors.append(f"{normalize_rel(path)}: drifted credential wording remains: {drifted}")
         if "Schedule a Palm Assessment" not in homepage_text or "Schedule a Palm Assessment" not in records_text:
             errors.append("commercial homepage and service page must expose the assessment CTA")
         for obsolete in ("prelicense", "pending licensing", "treatment services are not currently offered"):
@@ -323,6 +364,32 @@ def main() -> int:
     for claim in unsupported_claims:
         if claim.lower() in (homepage_text + records_text).lower():
             errors.append(f"unsupported qualification claim found: {claim}")
+
+    credential_sync = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "sync_business_credentials.py"), "--check"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if credential_sync.stdout.strip():
+        print(credential_sync.stdout.strip())
+    if credential_sync.stderr.strip():
+        print(credential_sync.stderr.strip())
+    if credential_sync.returncode != 0:
+        errors.append("business credential synchronization check failed")
+
+    credential_validation = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "validate_business_credentials.py")],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if credential_validation.stdout.strip():
+        print(credential_validation.stdout.strip())
+    if credential_validation.stderr.strip():
+        print(credential_validation.stderr.strip())
+    if credential_validation.returncode != 0:
+        errors.append("business credential validation failed")
 
     prelicense = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "validate_prelicense_compliance.py")],

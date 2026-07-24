@@ -1,6 +1,6 @@
 # Prelicense Website Compliance Safeguard
 
-This repository uses a conservative internal prelicense mode for the public San Diego Palm Protection website. It is a business-operating safeguard, not legal advice and not a substitute for agency confirmation.
+The public website is currently in owner-authorized commercial mode. This document preserves the fail-closed prelicense behavior used if the status configuration returns to `prelicense`; it is a business-operating safeguard, not legal advice and not a substitute for agency confirmation. Current public credential policy is documented in `docs/business-credentials.md`.
 
 ## Purpose
 

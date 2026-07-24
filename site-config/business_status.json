@@ -18,5 +18,12 @@
   "storage_transport_ppe_systems_ready": true,
   "label_sds_notice_consent_emergency_systems_ready": true,
   "job_application_preflight_required": true,
-  "owner_activation_approved": true
+  "owner_activation_approved": true,
+  "public_credentials": {
+    "status_label": "Qualified and insured",
+    "service_summary": "Qualified and insured palm protection, assessment, monitoring, and documentation services.",
+    "exact_status": "California Pest Control Business License active · DPR Qualified Applicator License, Category B, active · Insured",
+    "scope_note": "Licensing, qualification, and insurance describe current business status; they do not guarantee outcomes. Regulated work remains subject to the product label, site conditions, licensing scope, and job-specific preflight.",
+    "effective_date": "2026-07-22"
+  }
 }
