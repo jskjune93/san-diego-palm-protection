@@ -127,62 +127,7 @@
   </script>
   <link rel="stylesheet" href="./site-assets/site.css">
   <link rel="stylesheet" href="./site-assets/credentials.css">
-  <style>
-    .hero { background: #efe7d8; padding: 56px 6vw 42px; }
-    .hero-inner, main, footer .inner { max-width: 1120px; margin: 0 auto; }
-    .eyebrow, .entry-label, .category-label { color: #6f5b2e; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: .78rem; }
-    h1 { font-size: clamp(2rem, 5vw, 4.1rem); line-height: 1.05; margin: 14px 0; color: #1f3b2c; }
-    h2 { color: #1f3b2c; font-size: clamp(1.45rem, 3vw, 2.2rem); line-height: 1.15; }
-    h3 { color: #1f3b2c; }
-    .lede { font-size: 1.14rem; max-width: 760px; }
-    main { padding: 42px 6vw 68px; }
-    .journal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }
-    .journal-card { background: #fff; border: 1px solid #e2d8c6; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }
-    .journal-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #e6decf; }
-    .journal-card-content { padding: 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
-    .journal-card h2 { font-size: 1.18rem; margin: 0; }
-    .journal-card p { margin: 0; }
-    .date-location { color: #5f5a50; font-size: .94rem; }
-    .read-link, .cta-button { color: #1f3b2c; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
-    .featured { background: #fff; border: 1px solid #e2d8c6; border-radius: 6px; padding: 22px; margin-bottom: 28px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(240px, .9fr); gap: 24px; align-items: center; }
-    .featured img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 4px; }
-    .article-shell { background: #fff; border: 1px solid #e2d8c6; border-radius: 6px; padding: clamp(20px, 4vw, 42px); }
-    .article-shell figure { margin: 24px 0; max-width: 100%; }
-    .article-shell figure img { display: block; width: 100%; max-width: 100%; height: auto; }
-    .video-feature { margin: 34px 0; padding: clamp(18px, 3vw, 28px); background: #f7f4ee; border: 1px solid #d9c9ac; border-radius: 6px; }
-    .video-feature h2 { margin-top: 0; }
-    .vertical-video-frame { width: min(100%, 380px); aspect-ratio: 9 / 16; margin: 22px auto 14px; background: #111; overflow: hidden; border-radius: 8px; }
-    .vertical-video-frame iframe { display: block; width: 100%; height: 100%; border: 0; }
-    .video-fallback { margin: 0; text-align: center; }
-    .video-fallback a { color: #1f3b2c; font-weight: 700; }
-    .editorial-section { background: #fff; border: 1px solid #d9c9ac; border-left: 6px solid #8c6b2f; border-radius: 6px; padding: clamp(20px, 4vw, 34px); margin: 0 0 30px; }
-    .editorial-section p { max-width: 820px; }
-    .loss-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; margin-top: 20px; }
-    .loss-card { background: #fff; border: 1px solid #e2d8c6; border-radius: 6px; padding: 20px; }
-    .loss-card ul { margin: 10px 0 0; padding-left: 20px; }
-    .loss-record { margin-top: 24px; border-top: 3px solid #8c6b2f; padding-top: 24px; }
-    .loss-record-header { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 12px; }
-    .loss-record-header h3 { margin: 0; font-size: clamp(1.35rem, 2.4vw, 1.8rem); }
-    .loss-record img { width: 100%; height: auto; display: block; border-radius: 4px; }
-    .loss-record figure { margin: 0; }
-    .status-pill { display: inline-block; background: #efe7d8; color: #1f3b2c; padding: 6px 10px; border-radius: 999px; font-size: .82rem; font-weight: 700; margin-right: 8px; }
-    .empty-state { background: #efe7d8; border: 1px dashed #b69b65; border-radius: 6px; padding: 20px; margin-top: 22px; }
-    .article-meta { color: #5f5a50; font-weight: 700; }
-    .entry-card { display: grid; gap: 24px; }
-    .entry-card > *, .entry-content, .entry-hero, .entry-photo { min-width: 0; max-width: 100%; }
-    .entry-hero img, .entry-hero.side-by-side img, .gallery-grid img, .entry-photo-grid img { width: 100%; max-width: 100%; height: auto; display: block; border-radius: 4px; object-fit: cover; }
-    .entry-hero.side-by-side, .gallery-grid, .entry-photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
-    .entry-hero img { max-height: 560px; }
-    .image-caption { color: #5f5a50; font-size: .94rem; }
-    .breadcrumb { margin-bottom: 24px; font-size: .94rem; }
-    .breadcrumb a { color: #1f3b2c; }
-    .related-links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
-    .related-links a { background: #efe7d8; color: #1f3b2c; padding: 10px 12px; border-radius: 4px; text-decoration: none; font-weight: 700; }
-    .assessment-cta { background: #1f3b2c; color: #fff; padding: 28px; border-radius: 6px; margin-top: 34px; }
-    .assessment-cta h2 { color: #fff; }
-    .assessment-cta a { color: #fff; font-weight: 700; }
-    @media (max-width: 760px) { .featured { grid-template-columns: 1fr; } }
-  </style>
+  <link rel="stylesheet" href="./site-assets/journal.css">
 </head>
 <body>
 <!-- Generated by scripts/build_journal.py from journal-data/journal_entries.json. -->

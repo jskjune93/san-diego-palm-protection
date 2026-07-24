@@ -98,7 +98,7 @@ def shared_head(title: str, description: str, canonical: str, og_image: str, ext
     return f'''  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>{escape(title)}</title>\n  <meta name="description" content="{escape(description)}">\n  <link rel="canonical" href="{escape(canonical)}">\n  <meta property="og:title" content="{escape(title)}">\n  <meta property="og:description" content="{escape(description)}">\n  <meta property="og:image" content="{escape(og_image)}">\n  <meta property="og:type" content="{escape(og_type)}">\n{extra_json_ld}'''
 
 
-def styles(relative_root: str = "./") -> str:
+def _legacy_styles_reference(relative_root: str = "./") -> str:
     return f'''  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
   <style>
@@ -157,6 +157,12 @@ def styles(relative_root: str = "./") -> str:
     .assessment-cta a {{ color: #fff; font-weight: 700; }}
     @media (max-width: 760px) {{ .featured {{ grid-template-columns: 1fr; }} }}
   </style>'''
+
+
+def styles(relative_root: str = "./") -> str:
+    return f'''  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
+  <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
+  <link rel="stylesheet" href="{relative_root}site-assets/journal.css">'''
 
 
 def header(relative_root: str = "./") -> str:
