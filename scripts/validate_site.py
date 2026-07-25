@@ -244,8 +244,13 @@ def main() -> int:
             errors.append("robots.txt missing Sitemap directive")
 
     homepage_text, homepage_parser = pages[(ROOT / "index.html").resolve()]
-    if "Records &amp; Monitoring" not in homepage_text:
-        errors.append("homepage missing Records & Monitoring positioning")
+    for required_pillar in (
+        "Assessment, Monitoring &amp; Documentation",
+        "Protection &amp; Treatment",
+        "Decline Response, Removal &amp; Replacement",
+    ):
+        if required_pillar not in homepage_text:
+            errors.append(f"homepage missing three-pillar positioning: {required_pillar}")
     if not RECORDS_PAGE.exists():
         errors.append("Records & Monitoring service page is missing")
     elif "./palm-records-monitoring-verification.html" not in homepage_text:
@@ -333,7 +338,7 @@ def main() -> int:
             ):
                 if drifted.lower() in lowered:
                     errors.append(f"{normalize_rel(path)}: drifted credential wording remains: {drifted}")
-        if "Schedule a Palm Assessment" not in homepage_text or "Schedule a Palm Assessment" not in records_text:
+        if "Request a Palm Assessment" not in homepage_text or "Request a Palm Assessment" not in records_text:
             errors.append("commercial homepage and service page must expose the assessment CTA")
         for obsolete in ("prelicense", "pending licensing", "treatment services are not currently offered"):
             if obsolete in (homepage_text + records_text).lower():

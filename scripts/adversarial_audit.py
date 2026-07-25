@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 UFMP = "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process."
 PRIVATE_TERMS = ("karrie", "gate code", "private-client@", "confidential avenue", "source_report_path")
 ENDORSEMENT = ("city endorsed", "city partner", "official ufmp partner", "approved by the city")
-NAV_LABELS = ("Services", "Residential", "Managed Properties", "Palm Decline", "Palm Journal", "Sample Work", "Request Assessment")
+NAV_LABELS = ("Services", "Residential", "Managed Properties", "Palm Decline", "Palm Journal", "Field Work", "Call or Text", "Request Assessment")
 
 
 class VisibleText(HTMLParser):
@@ -54,7 +54,7 @@ def main() -> int:
     if UFMP not in managed:
         errors.append("managed-property route: exact UFMP wording missing")
     proof = (ROOT / "palm-proof-examples.html").read_text(encoding="utf-8")
-    for phrase in ("separately approved", "sanitized", "No private report", "Awaiting separately approved sanitized export"):
+    for phrase in ("separately approved", "sanitized", "Private client reports", "No unapproved proof bundle can render publicly"):
         if phrase not in proof:
             errors.append(f"proof route: missing boundary phrase {phrase}")
     route_doc = (ROOT / "docs" / "route-inventory.md").read_text(encoding="utf-8")

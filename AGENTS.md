@@ -1,6 +1,9 @@
 # SDPP website guardrails
 
-- Preserve the three service pillars: Monitoring & Documentation; Protection & Treatment; Response, Removal & Replacement.
+- Preserve the three service pillars: Assessment, Monitoring & Documentation; Protection & Treatment; Decline Response, Removal & Replacement.
+- Keep the public identity owner-led, local, and field-service oriented. Lead with mature palm assessment, protection, monitoring, qualified treatment, and decline response—not records consulting or internal proof architecture.
+- The homepage first viewport must use authentic palm imagery, identify Escondido/North County, offer “Request a Palm Assessment” and “Call or Text,” and show the synchronized concise qualified-and-insured block.
+- Use “Field Work” for the public evidence pathway. Show useful approved public observations and example-report structure before technical privacy/export details; never publish an empty proof-slot message as customer-facing evidence.
 - Treat `site-config/business_status.json` as the only source of truth for licensing, qualification, insurance, and service availability.
 - Use `scripts/business_credentials.py` and `scripts/sync_business_credentials.py`; never duplicate credential wording manually.
 - Do not conflate an examination, individual qualification, Pest Control Business License, job-specific regulated-work authorization, or applicable insurance.

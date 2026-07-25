@@ -64,8 +64,9 @@ def header(relative_root: str = "./") -> str:
       <a href="{relative_root}managed-property-palm-services.html">Managed Properties</a>
       <a href="{relative_root}palm-removal-coordination.html">Palm Decline</a>
       <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
-      <a href="{relative_root}palm-proof-examples.html">Sample Work</a>
-      <a class="button button-small" href="{relative_root}palm-records-monitoring-verification.html#request">Request Assessment</a>
+      <a href="{relative_root}palm-proof-examples.html">Field Work</a>
+      <a class="nav-phone" data-conversion="call" href="tel:2624923135">Call or Text</a>
+      <a class="button button-small" href="{relative_root}residential-palm-assessment.html#request">Request Assessment</a>
     </nav>
   </div>
 </header>"""
@@ -77,9 +78,9 @@ def credentials(marker: str) -> str:
 
 def three_pillars(relative_root: str = "./") -> str:
     items = [
-        ("01", "Monitoring & Documentation", "Assessments, photographic baselines, recurring visits, inventories, and written condition reporting.", "palm-records-monitoring-verification.html"),
-        ("02", "Protection & Treatment", "Qualified, insured protection planning and regulated treatment when the site, diagnosis, label, and authorization support it.", "palm-stewardship-plans.html"),
-        ("03", "Response, Removal & Replacement", "Clear records and coordination when a palm declines, urgent contractor work is needed, or replacement planning begins.", "palm-removal-coordination.html"),
+        ("01", "Assessment, Monitoring & Documentation", "On-site palm assessments, photographic condition records, recurring visits, inventories, and clear written findings.", "residential-palm-assessment.html"),
+        ("02", "Protection & Treatment", "Canary Island date palm protection, SAPW-aware risk reduction, and qualified treatment when the site and scope support it.", "palm-stewardship-plans.html"),
+        ("03", "Decline Response, Removal & Replacement", "Practical help when a palm declines, contractor coordination is needed, or the landscape needs a replacement plan.", "palm-removal-coordination.html"),
     ]
     return '<div class="pillar-grid">' + "".join(
         f'<article class="pillar"><span>{n}</span><h3>{escape(t)}</h3><p>{escape(d)}</p><a href="{relative_root}{href}">Explore this service</a></article>'
@@ -87,25 +88,33 @@ def three_pillars(relative_root: str = "./") -> str:
     ) + "</div>"
 
 
-def inquiry(relative_root: str = "./", heading: str = "Start with the palm, property, and decision in front of you.") -> str:
+def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm assessment.") -> str:
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
-  <p>Tell us whether you need a residential assessment, recurring monitoring, a managed-property inventory, treatment planning, or decline response. Email is opened in your device; sending remains under your control.</p></div>
-  <div class="button-row"><a class="button" data-conversion="email-assessment" href="mailto:{EMAIL}?subject=SDPP%20Palm%20Assessment%20Inquiry">Email an inquiry</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or text {PHONE}</a></div>
+  <p>Tell us about the palm, the property, and what has changed. You can also ask about recurring monitoring, managed-property service, qualified treatment, or decline response. Email opens on your device; sending remains under your control.</p></div>
+  <div class="button-row"><a class="button" data-conversion="email-assessment" href="mailto:{EMAIL}?subject=Request%20a%20Palm%20Assessment">Request a Palm Assessment</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
 </section>"""
 
 
 def footer(relative_root: str = "./") -> str:
     return f"""<footer class="site-footer">
   <div class="footer-grid">
-    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Assessment, documentation, monitoring, protection, and response for significant palms across North County San Diego.</p></div>
+    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Owner-led mature palm protection, assessment, monitoring, and response from Old Escondido to communities across North County San Diego.</p></div>
     <div><h2>Services</h2><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring monitoring</a><a href="{relative_root}managed-property-palm-services.html">Managed properties</a></div>
-    <div><h2>Resources</h2><a href="{relative_root}palm-proof-examples.html">Sample work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
+    <div><h2>Resources</h2><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
   {credentials("BUSINESS_CREDENTIALS_FOOTER")}
   <p class="footer-legal">Insurance does not guarantee outcomes. Findings and recommendations are limited by access, available evidence, and the documented scope.</p>
 </footer>
-<script src="{relative_root}site-assets/site.js" defer></script>"""
+<script src="{relative_root}site-assets/site.js" defer></script>
+{mobile_contact(relative_root)}"""
+
+
+def mobile_contact(relative_root: str = "./") -> str:
+    return f"""<aside class="mobile-contact-bar" aria-label="Quick contact">
+  <a data-conversion="call" href="tel:2624923135">Call or Text</a>
+  <a href="{relative_root}residential-palm-assessment.html#request">Request Assessment</a>
+</aside>"""
 
 
 def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
@@ -119,11 +128,11 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
 <body>
 {header(relative_root)}
 <main id="main">
-  <section class="page-hero" style="--hero-image:url('{relative_root}{image}')">
+  <section class="page-hero" style="--hero-image:url('/{image}')">
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>
-    <div class="button-row"><a class="button" href="#request">Discuss your palms</a><a class="text-link" href="{relative_root}palm-proof-examples.html">See the public proof format</a></div></div>
+    <div class="button-row"><a class="button" href="#request">Request a Palm Assessment</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div></div>
   </section>
-  <div class="trust-wrap">{credentials("BUSINESS_CREDENTIALS")}</div>
+  <div class="trust-wrap trust-wrap--compact">{credentials("BUSINESS_CREDENTIALS")}</div>
   {body}
   {inquiry(relative_root)}
 </main>
