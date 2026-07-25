@@ -12,9 +12,9 @@ Current owner-authorized commercial status, effective July 22, 2026:
 
 The public site therefore uses:
 
-- **Plain-language status:** “Qualified and insured”
-- **Service summary:** “Qualified and insured palm protection, assessment, monitoring, and documentation services.”
-- **Exact status:** “California Pest Control Business License active · DPR Qualified Applicator License, Category B, active · Insured”
+- **Plain-language status:** “California licensed, qualified, and insured”
+- **Service summary:** “DPR Qualified Applicator License (QAL), Category B · Insured”
+- **Exact status:** “California Pest Control Business License active · DPR Qualified Applicator License (QAL) #175295, Category B, active · Insured”
 
 The site must not collapse the business license, individual QAL qualification, insurance, and job-specific authorization into one ambiguous claim. It must not imply that insurance guarantees outcomes. Regulated work remains subject to the product label, site conditions, licensing scope, and job-specific preflight.
 
