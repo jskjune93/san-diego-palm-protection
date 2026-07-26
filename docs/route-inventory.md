@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-39 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; three audience/proof routes were added. No route required a redirect because each valuable URL retains a distinct purpose.
+40 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; four audience/proof routes were added. No route required a redirect because each valuable URL retains a distinct purpose.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -43,6 +43,7 @@
 | `/sapw.html` | restructured | SAPW education, risk, and assessment gateway |
 | `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Treatment-specific discovery route into canonical protection pathway |
 | `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |
+| `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
 
 ## Consolidation policy
 
