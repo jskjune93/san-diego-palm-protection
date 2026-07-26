@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from hashlib import sha256
 import json
 import re
 
@@ -34,6 +35,17 @@ def validate(path: Path) -> list[str]:
         errors.append(f"{path.name}: separate public approval is not current")
     if data.get("artifact_fingerprint") != data.get("approved_fingerprint"):
         errors.append(f"{path.name}: approved fingerprint does not match artifact")
+    public_filename = data.get("content", {}).get("public_filename")
+    if public_filename:
+        artifact = ROOT / public_filename
+        if artifact.parent != ROOT or not artifact.is_file():
+            errors.append(f"{path.name}: approved public artifact is missing or outside the public root")
+        else:
+            actual_fingerprint = sha256(artifact.read_bytes()).hexdigest()
+            if actual_fingerprint != data.get("artifact_fingerprint"):
+                errors.append(
+                    f"{path.name}: public artifact bytes do not match the approved fingerprint"
+                )
     if data.get("privacy") not in SCHEMA["allowed_privacy"]:
         errors.append(f"{path.name}: privacy must be sanitized or public")
     if data.get("publication_target") != "website" or data.get("privacy_scan_passed") is not True:
