@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "artifact_id": "old-escondido-mature-palm-documentation-example",
+  "product_type": "website_proof_excerpt",
+  "artifact_version": "1.0.0",
+  "artifact_fingerprint": "d383bb05d8a3241c4e55ad765af94f12669a662b50e3273f7c2b98c3a90379d6",
+  "approved_fingerprint": "d383bb05d8a3241c4e55ad765af94f12669a662b50e3273f7c2b98c3a90379d6",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "content": {
+    "title": "Old Escondido Mature Palm Documentation Example",
+    "public_filename": "old-escondido-mature-palm-documentation-example.pdf",
+    "page_count": 8,
+    "source_basis": "Privacy-reviewed SDPP field material and public-safe factual statements"
+  },
+  "media": [
+    {
+      "filename": "old-home-mature-cidps-golden-hour.jpg",
+      "approved_for_public": true
+    },
+    {
+      "filename": "old-escondido-multiple-cidp-street-pattern.jpg",
+      "approved_for_public": true
+    },
+    {
+      "filename": "healthy-private-yard-cidp.jpg",
+      "approved_for_public": true
+    },
+    {
+      "filename": "las-palmas-documented-loss-crown-context.jpg",
+      "approved_for_public": true
+    }
+  ]
+}

@@ -18,6 +18,8 @@ SITEMAP = ROOT / "sitemap.xml"
 ROBOTS = ROOT / "robots.txt"
 RECORDS_PAGE = ROOT / "palm-records-monitoring-verification.html"
 REPORT_PAGE = ROOT / "report-a-palm.html"
+TREATMENT_PAGE = ROOT / "palm-stewardship-plans.html"
+TREATMENT_ROUTE = "./palm-stewardship-plans.html"
 
 SKIP_SCHEMES = ("http://", "https://", "mailto:", "tel:", "sms:", "data:")
 ENCODING_ARTIFACTS = ["â€", "â€™", "â€œ", "â€�", "Â", "�"]
@@ -253,6 +255,19 @@ def main() -> int:
     ):
         if required_pillar not in homepage_text:
             errors.append(f"homepage missing three-pillar positioning: {required_pillar}")
+    treatment_card = re.search(
+        r'<article class="pillar">(?:(?!</article>).)*Protection &amp; Treatment'
+        r'(?:(?!</article>).)*href="([^"]+)"(?:(?!</article>).)*</article>',
+        homepage_text,
+        re.DOTALL,
+    )
+    if not treatment_card:
+        errors.append("homepage Protection & Treatment service card is missing or has no destination")
+    elif treatment_card.group(1) != TREATMENT_ROUTE:
+        errors.append(
+            "homepage Protection & Treatment service card must resolve to "
+            f"{TREATMENT_ROUTE}, found {treatment_card.group(1)}"
+        )
     if not RECORDS_PAGE.exists():
         errors.append("Records & Monitoring service page is missing")
     elif "./palm-records-monitoring-verification.html" not in homepage_text:
@@ -265,6 +280,59 @@ def main() -> int:
     required_future_scope = "Regulated pesticide and treatment services are not currently offered."
     records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""
     report_text = REPORT_PAGE.read_text(encoding="utf-8-sig") if REPORT_PAGE.exists() else ""
+    treatment_text = TREATMENT_PAGE.read_text(encoding="utf-8-sig") if TREATMENT_PAGE.exists() else ""
+    treatment_lower = treatment_text.lower()
+    if not TREATMENT_PAGE.exists():
+        errors.append("canonical Palm Protection & Treatment page is missing")
+    else:
+        treatment_parser = read_html(TREATMENT_PAGE)[1]
+        if treatment_parser.canonicals != [f"{BASE_URL}/palm-stewardship-plans.html"]:
+            errors.append("Palm Protection & Treatment page canonical is incorrect")
+        treatment_requirements = {
+            "current availability": (
+                ("currently provides", "regulated treatment"),
+                ("treatment is available",),
+            ),
+            "assessment-first scope": (
+                ("assessment", "comes first"),
+                ("assess", "before", "treatment"),
+            ),
+            "authorization and label boundary": (
+                ("authorization", "label", "site", "scope"),
+            ),
+            "written follow-through": (
+                ("written record", "follow-up"),
+                ("service date", "monitoring"),
+            ),
+            "outcome limitation": (
+                ("does not guarantee",),
+                ("no guarantee", "outcome"),
+            ),
+            "separated work and referrals": (
+                ("pruning", "removal", "planting", "laboratory", "tree-risk"),
+            ),
+        }
+        for label, alternatives in treatment_requirements.items():
+            if not any(all(fragment in treatment_lower for fragment in group) for group in alternatives):
+                errors.append(f"Palm Protection & Treatment page missing semantic requirement: {label}")
+    public_treatment_unavailable = (
+        "pesticide application is not currently offered",
+        "treatment is not currently offered",
+        "treatment services are not currently offered",
+        "no treatment services",
+        "treatment unavailable",
+        "documentation and education only",
+        "documentation-only",
+        "treatment coming soon",
+        "not yet licensed",
+    )
+    for path, (page_text, _) in pages.items():
+        lowered = page_text.lower()
+        for phrase in public_treatment_unavailable:
+            if phrase in lowered:
+                errors.append(
+                    f"{normalize_rel(path)}: public treatment-unavailable contradiction remains: {phrase}"
+                )
     if not REPORT_PAGE.exists():
         errors.append("Report a Palm page is missing")
     else:
