@@ -24,11 +24,15 @@ REQUIRED_PUBLIC_FIELDS = (
 
 def load_business_status() -> dict:
     status = json.loads(STATUS_PATH.read_text(encoding="utf-8"))
-    if status.get("mode") != "commercial":
-        raise ValueError("Public credential claims require commercial mode.")
-    missing_active = [field for field in REQUIRED_ACTIVE_FIELDS if status.get(field) is not True]
-    if missing_active:
-        raise ValueError(f"Public credential claims are blocked; inactive fields: {', '.join(missing_active)}")
+    mode = status.get("mode")
+    if mode not in {"prelicense", "commercial"}:
+        raise ValueError("Business status mode must be prelicense or commercial.")
+    if mode == "commercial":
+        missing_active = [field for field in REQUIRED_ACTIVE_FIELDS if status.get(field) is not True]
+        if missing_active:
+            raise ValueError(f"Public credential claims are blocked; inactive fields: {', '.join(missing_active)}")
+    elif any(status.get(field) is True for field in REQUIRED_ACTIVE_FIELDS):
+        raise ValueError("Prelicense status cannot represent license, QAL, insurance, or owner activation as active.")
     credentials = status.get("public_credentials") or {}
     missing_public = [field for field in REQUIRED_PUBLIC_FIELDS if not credentials.get(field)]
     if missing_public:
@@ -44,7 +48,7 @@ def render_credential_block(marker: str = "BUSINESS_CREDENTIALS") -> str:
     credentials = public_credentials()
     return (
         f'<!-- {marker}:START -->\n'
-        '<div class="business-credentials" aria-label="Business qualifications and insurance">\n'
+        '<div class="business-credentials" aria-label="Current business service status">\n'
         f'  <p class="business-credentials__label">{escape(credentials["status_label"])}</p>\n'
         f'  <p class="business-credentials__summary">{escape(credentials["service_summary"])}</p>\n'
         f'  <p class="business-credentials__detail">{escape(credentials["exact_status"])}</p>\n'

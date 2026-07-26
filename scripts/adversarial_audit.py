@@ -63,6 +63,13 @@ def main() -> int:
     screenshot_count = len(list((ROOT / "docs" / "audit-screenshots").glob("*.png")))
     if screenshot_count != len(html) * 5:
         errors.append(f"expected {len(html) * 5} screenshots, found {screenshot_count}")
+    newest_html = max(path.stat().st_mtime for path in html)
+    stale = [
+        path.name for path in (ROOT / "docs" / "audit-screenshots").glob("*.png")
+        if path.stat().st_mtime < newest_html
+    ]
+    if stale:
+        errors.append(f"{len(stale)} audit screenshots predate the current generated HTML")
     print("ADVERSARIAL_AUDIT_OK" if not errors else "ADVERSARIAL_AUDIT_FAILED")
     print(json.dumps({"html_routes": len(html), "screenshots": screenshot_count, "viewports": 5, "errors": errors}, indent=2))
     return 1 if errors else 0

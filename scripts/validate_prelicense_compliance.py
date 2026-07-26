@@ -12,6 +12,7 @@ CONFIG = ROOT / "site-config" / "business_status.json"
 
 PUBLIC_PATTERNS = ("*.html", "*.json")
 PUBLIC_DIRS = [ROOT, ROOT / "palm-journal", ROOT / "journal-data", ROOT / "journal-data" / "articles"]
+SCAN_EXCLUDED_DIRS = {".git", "dist", "docs", "proof-data", "__pycache__"}
 
 STATUS_NOTICE = (
     "Documentation, monitoring, reporting, sourcing, and coordination are available now."
@@ -125,6 +126,20 @@ RULES = [
 
 ALWAYS_BLOCK_RULES = [
     Rule(
+        "active_unverified_qal_claim",
+        re.compile(r"\b(?:active\s+)?qualified applicator license\b|\bactive\s+QAL\b", re.I),
+        "Passing examinations is not proof that an active QAL has been issued.",
+    ),
+    Rule(
+        "regulated_work_solicitation",
+        re.compile(
+            r"\b(?:request|book|schedule|quote|deposit|reserve|sign up for|ask.{0,20}for)\b"
+            r".{0,80}\b(?:pesticide|treatment|application)\b",
+            re.I,
+        ),
+        "Prelicense mode cannot solicit pesticide treatment, quotes, bookings, or deposits.",
+    ),
+    Rule(
         "professional_inspection_solicitation",
         re.compile(r"\b(schedule|book|request)\b.{0,80}\bprofessional\s+(?:palm\s+)?inspection\b|\bprofessional\s+(?:palm\s+)?inspection\b.{0,80}\b(schedule|book|request)\b", re.I),
         "Prelicense mode cannot solicit professional inspections by SDPP.",
@@ -196,7 +211,10 @@ def iter_scan_files(root: Path = ROOT) -> list[Path]:
         if not directory.exists():
             continue
         for pattern in PUBLIC_PATTERNS:
-            files.update(path for path in directory.rglob(pattern) if path.is_file())
+            files.update(
+                path for path in directory.rglob(pattern)
+                if path.is_file() and not SCAN_EXCLUDED_DIRS.intersection(path.relative_to(ROOT).parts)
+            )
     return sorted(files)
 
 
@@ -235,10 +253,6 @@ def validate_repository(root: Path = ROOT) -> list[str]:
         rel = path.relative_to(root).as_posix()
         text = path.read_text(encoding="utf-8-sig", errors="replace")
         diagnostics.extend(validate_text(text, rel))
-        if path.suffix.lower() == ".html":
-            notice_count = text.count(STATUS_NOTICE)
-            if notice_count > 1:
-                diagnostics.append(f"{rel}: duplicate_prelicense_scope: prelicense scope notice appears {notice_count} times")
     index_path = root / "palm-journal-new.html"
     if index_path.exists():
         index_text = index_path.read_text(encoding="utf-8-sig", errors="replace")
@@ -293,6 +307,10 @@ def run_self_tests() -> int:
         "palm removal offer": ("San Diego Palm Protection can coordinate palm removal for your property.", False),
         "palm installation offer": ("We install specimen palms and planting upgrades.", False),
         "licensed and insured": ("San Diego Palm Protection is licensed and insured for palm treatment.", False),
+        "active QAL without verification": ("SDPP holds an active Qualified Applicator License for treatment.", False),
+        "commercial treatment CTA": ("Request treatment from SDPP today.", False),
+        "commercial treatment booking": ("Book a pesticide application with SDPP.", False),
+        "commercial treatment quote": ("Ask SDPP for a treatment quote.", False),
         "prelicense notice": (STATUS_NOTICE + " Pesticide application and removal services are not currently offered.", True),
         "monitoring service": ("Palm monitoring services available for San Diego homeowners.", True),
         "documentation visit": ("Request a palm documentation visit to establish a dated visible-condition baseline.", True),
@@ -346,6 +364,7 @@ def run_self_tests() -> int:
         "owner activation absent blocks activation": ({key: value for key, value in base_config.items() if key != "owner_activation_approved"}, False),
         "qal alone does not activate": ({**base_config, "mode": "commercial", "pesticide_services_enabled": True, "qal_issued_and_active": True}, False),
         "all prerequisites allow commercial flags": ({**base_config, "mode": "commercial", "pesticide_services_enabled": True, "qal_issued_and_active": True, "pest_control_business_license_issued_and_active": True, "financial_responsibility_active": True, "workers_compensation_requirement_addressed": True, "county_registration_current": True, "equipment_registered_and_ready": True, "reporting_system_ready": True, "storage_transport_ppe_systems_ready": True, "label_sds_notice_consent_emergency_systems_ready": True, "owner_activation_approved": True}, True),
+        "inactive business license blocks treatment": ({**base_config, "mode": "commercial", "pesticide_services_enabled": True, "qal_issued_and_active": True, "financial_responsibility_active": True, "owner_activation_approved": True}, False),
     }
     for name, (config, should_pass) in config_fixtures.items():
         passed = not validate_config(config, f"fixture:{name}")

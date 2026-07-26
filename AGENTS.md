@@ -1,13 +1,14 @@
 # SDPP website guardrails
 
 - Preserve the three service pillars: Assessment, Monitoring & Documentation; Protection & Treatment; Decline Response, Removal & Replacement.
-- Keep the public identity owner-led, local, and field-service oriented. Lead with mature palm assessment, protection, monitoring, qualified treatment, and decline response—not records consulting or internal proof architecture.
-- The homepage first viewport must use authentic palm imagery, identify Escondido/North County, offer “Request a Palm Assessment” and “Call or Text,” and show the synchronized concise qualified-and-insured block.
+- Keep the public identity owner-led, local, and field-service oriented. Lead with mature palm documentation, monitoring, protection planning, sourcing, coordination, and decline response—not records consulting or internal proof architecture.
+- The homepage first viewport must use authentic palm imagery, identify Escondido/North County, offer “Request a Palm Assessment” and “Call or Text,” and show the synchronized current-service-scope block.
 - Use “Field Work” for the public evidence pathway. Show useful approved public observations and example-report structure before technical privacy/export details; never publish an empty proof-slot message as customer-facing evidence.
 - Treat `site-config/business_status.json` as the only source of truth for licensing, qualification, insurance, and service availability.
 - Use `scripts/business_credentials.py` and `scripts/sync_business_credentials.py`; never duplicate credential wording manually.
 - Do not conflate an examination, individual qualification, Pest Control Business License, job-specific regulated-work authorization, or applicable insurance.
 - Never imply that insurance, qualification, licensing, assessment, treatment, monitoring, or contractor work guarantees an outcome.
+- In prelicense mode, do not advertise, solicit, quote, book, accept deposits for, or imply current pesticide applications. Do not publish active license, QAL, insurance, or financial-responsibility language unless every supporting status is independently verified and active in `site-config/business_status.json`.
 - Generate core pages with `scripts/build_core_pages.py`; generate Journal pages with `scripts/build_journal.py`. Do not hand-edit generated HTML.
 - Keep one global navigation and design system in `scripts/site_components.py`, `site-assets/site.css`, and `site-assets/site.js`.
 - Every public route must have a named commercial, conversion, trust, evidence, or educational purpose in `docs/route-inventory.md`.

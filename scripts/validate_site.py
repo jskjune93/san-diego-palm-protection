@@ -277,7 +277,7 @@ def main() -> int:
     credentials = public_credentials() if commercial_mode else {}
     required_current_scope = credentials.get("exact_status", "Documentation, monitoring, reporting, sourcing, and coordination are available now.")
     required_qualified_insured_scope = credentials.get("service_summary", "")
-    required_future_scope = "Regulated pesticide and treatment services are not currently offered."
+    required_future_scope = "SDPP is not currently offering pesticide applications."
     records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""
     report_text = REPORT_PAGE.read_text(encoding="utf-8-sig") if REPORT_PAGE.exists() else ""
     treatment_text = TREATMENT_PAGE.read_text(encoding="utf-8-sig") if TREATMENT_PAGE.exists() else ""
@@ -288,30 +288,20 @@ def main() -> int:
         treatment_parser = read_html(TREATMENT_PAGE)[1]
         if treatment_parser.canonicals != [f"{BASE_URL}/palm-stewardship-plans.html"]:
             errors.append("Palm Protection & Treatment page canonical is incorrect")
-        treatment_requirements = {
-            "current availability": (
-                ("currently provides", "regulated treatment"),
-                ("treatment is available",),
-            ),
-            "assessment-first scope": (
-                ("assessment", "comes first"),
-                ("assess", "before", "treatment"),
-            ),
-            "authorization and label boundary": (
-                ("authorization", "label", "site", "scope"),
-            ),
-            "written follow-through": (
-                ("written record", "follow-up"),
-                ("service date", "monitoring"),
-            ),
-            "outcome limitation": (
-                ("does not guarantee",),
-                ("no guarantee", "outcome"),
-            ),
-            "separated work and referrals": (
-                ("pruning", "removal", "planting", "laboratory", "tree-risk"),
-            ),
-        }
+        treatment_requirements = ({
+            "current availability": (("currently provides", "regulated treatment"), ("treatment is available",)),
+            "assessment-first scope": (("assessment", "comes first"), ("assess", "before", "treatment")),
+            "authorization and label boundary": (("authorization", "label", "site", "scope"),),
+            "written follow-through": (("written record", "follow-up"), ("service date", "monitoring")),
+            "outcome limitation": (("does not guarantee",), ("no guarantee", "outcome")),
+            "separated work and referrals": (("pruning", "removal", "planting", "laboratory", "tree-risk"),),
+        } if commercial_mode else {
+            "pesticide service unavailable": (("not currently offering pesticide applications",),),
+            "educational-only scope": (("educational", "documentation context", "appropriately licensed provider"),),
+            "licensed-provider referral": (("appropriately licensed", "provider"),),
+            "no pesticide recommendation": (("individual application guidance", "outside", "current service scope"),),
+            "monitoring and documentation retained": (("documentation", "monitor"),),
+        })
         for label, alternatives in treatment_requirements.items():
             if not any(all(fragment in treatment_lower for fragment in group) for group in alternatives):
                 errors.append(f"Palm Protection & Treatment page missing semantic requirement: {label}")
@@ -326,13 +316,14 @@ def main() -> int:
         "treatment coming soon",
         "not yet licensed",
     )
-    for path, (page_text, _) in pages.items():
-        lowered = page_text.lower()
-        for phrase in public_treatment_unavailable:
-            if phrase in lowered:
-                errors.append(
-                    f"{normalize_rel(path)}: public treatment-unavailable contradiction remains: {phrase}"
-                )
+    if commercial_mode:
+        for path, (page_text, _) in pages.items():
+            lowered = page_text.lower()
+            for phrase in public_treatment_unavailable:
+                if phrase in lowered:
+                    errors.append(
+                        f"{normalize_rel(path)}: public treatment-unavailable contradiction remains: {phrase}"
+                    )
     if not REPORT_PAGE.exists():
         errors.append("Report a Palm page is missing")
     else:
@@ -419,6 +410,15 @@ def main() -> int:
     else:
         if required_future_scope not in records_text:
             errors.append("future regulated treatment is not clearly identified as unavailable")
+        for path, (page_text, parser) in pages.items():
+            lowered = page_text.lower()
+            if re.search(r"\b(?:california licensed|qualified and insured|licensed,\s*qualified|qal\s*#?\d+)\b", lowered):
+                errors.append(f"{normalize_rel(path)}: active-license language appears in prelicense mode")
+            structured_text = "\n".join(parser.json_ld_blocks).lower()
+            if '"@type": "service"' in structured_text or '"servicestatus"' in structured_text:
+                errors.append(f"{normalize_rel(path)}: prelicense structured data implies an active service")
+            if re.search(r"\b(?:request|book|schedule|quote|deposit).{0,60}\b(?:pesticide|treatment)\b", lowered):
+                errors.append(f"{normalize_rel(path)}: prelicense page solicits regulated pesticide work")
         if re.search(r'href="[^"]*(?:request|schedule|book)[^"]*treatment', homepage_text + records_text, re.I):
             errors.append("active treatment CTA found in current-service pages")
     for required_path in (

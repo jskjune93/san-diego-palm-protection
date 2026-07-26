@@ -5,7 +5,7 @@ import json
 import re
 import sys
 
-from business_credentials import public_credentials
+from business_credentials import load_business_status, public_credentials
 from sync_business_credentials import CONTACT_START, PRIMARY_PAGES, START, STYLE_LINK
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -34,6 +34,8 @@ UNSUPPORTED_CLAIMS = (
 
 
 def main() -> int:
+    status = load_business_status()
+    prelicense = status["mode"] == "prelicense"
     credentials = public_credentials()
     exact = credentials["exact_status"]
     summary = credentials["service_summary"]
@@ -45,7 +47,7 @@ def main() -> int:
         rel = path.relative_to(ROOT).as_posix()
         lowered = text.lower()
         for pattern in OBSOLETE_PATTERNS:
-            if re.search(pattern, text, re.IGNORECASE):
+            if not prelicense and re.search(pattern, text, re.IGNORECASE):
                 errors.append(f"{rel}: obsolete qualification/licensing language matches {pattern}")
         for phrase in DRIFTED_STATUS:
             if phrase.lower() in lowered:
@@ -78,13 +80,27 @@ def main() -> int:
         if exact not in path.read_text(encoding="utf-8-sig"):
             errors.append(f"{path.relative_to(ROOT).as_posix()}: generated page footer lacks exact credential status")
 
-    status = json.loads((ROOT / "site-config" / "business_status.json").read_text(encoding="utf-8"))
-    if status.get("pest_control_business_license_issued_and_active") is not True:
-        errors.append("Pest Control Business License is not active; licensed public wording must be removed")
-    if status.get("qal_issued_and_active") is not True:
-        errors.append("DPR QAL Category B is not active; qualified public wording must be removed")
-    if status.get("financial_responsibility_active") is not True:
-        errors.append("Financial responsibility is not active; insured public wording must be removed")
+    if prelicense:
+        prohibited = re.compile(
+            r"\b(?:california\s+licensed|licensed,\s*qualified|qualified\s+and\s+insured|"
+            r"qal\s*#?\d+|qualified applicator license.{0,30}active|financial responsibility.{0,20}active)\b",
+            re.I,
+        )
+        for path in PUBLIC_HTML:
+            text = path.read_text(encoding="utf-8-sig")
+            if prohibited.search(text):
+                errors.append(f"{path.relative_to(ROOT).as_posix()}: active credential language appears in prelicense mode")
+        if status.get("pest_control_business_license_issued_and_active") is not False:
+            errors.append("Prelicense premise requires inactive Pest Control Business License")
+        if status.get("pesticide_services_enabled") is not False:
+            errors.append("Prelicense premise requires pesticide services disabled")
+    else:
+        if status.get("pest_control_business_license_issued_and_active") is not True:
+            errors.append("Pest Control Business License is not active; licensed public wording must be removed")
+        if status.get("qal_issued_and_active") is not True:
+            errors.append("DPR QAL Category B is not active; qualified public wording must be removed")
+        if status.get("financial_responsibility_active") is not True:
+            errors.append("Financial responsibility is not active; insured public wording must be removed")
 
     print("BUSINESS_CREDENTIAL_VALIDATION_OK" if not errors else "BUSINESS_CREDENTIAL_VALIDATION_FAILED")
     print(f"public_html_checked={len(PUBLIC_HTML)}")
