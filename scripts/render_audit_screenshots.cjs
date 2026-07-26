@@ -41,6 +41,7 @@ function screenshotName(route, width, height) {
     for (const route of routes) {
       const relative = path.relative(root, route).replaceAll("\\", "/");
       await page.goto(`${base}/${relative}`, { waitUntil: "networkidle" });
+      await page.evaluate(() => window.scrollTo(0, 0));
       await page.screenshot({
         path: path.join(output, screenshotName(route, width, height)),
         fullPage: false,

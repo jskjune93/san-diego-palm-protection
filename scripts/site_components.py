@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.sandiegopalmprotection.com"
 PHONE = "262-492-3135"
 EMAIL = "sandiegopalmprotection@gmail.com"
+INQUIRY = json.loads((ROOT / "site-config" / "inquiry.json").read_text(encoding="utf-8"))
 
 
 def asset_prefix(relative_root: str) -> str:
@@ -65,7 +66,7 @@ def header(relative_root: str = "./") -> str:
       <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
       <a href="{relative_root}palm-proof-examples.html">Field Work</a>
       <a class="nav-phone" data-conversion="call" href="tel:2624923135">Call or Text</a>
-      <a class="button button-small" href="{relative_root}residential-palm-assessment.html#request">Request Assessment</a>
+      <a class="button button-small" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request Assessment</a>
     </nav>
   </div>
 </header>"""
@@ -90,8 +91,8 @@ def three_pillars(relative_root: str = "./") -> str:
 def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm assessment.") -> str:
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
-  <p>Tell us about the palm, the property, and what has changed. You can also ask about recurring monitoring, managed-property documentation, sourcing, coordination, or decline response. SDPP is not currently offering pesticide applications. Email opens on your device; sending remains under your control.</p></div>
-  <div class="button-row"><a class="button" data-conversion="email-assessment" href="mailto:{EMAIL}?subject=Request%20a%20Palm%20Assessment">Request a Palm Assessment</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
+  <p>Choose the path that fits your property. Single palms and small groups are welcome, as are managed-property and civic documentation inquiries. SDPP is not currently offering pesticide applications.</p></div>
+  <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a><a class="button button-quiet" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Organization Inquiry</a><a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
 </section>"""
 
 
@@ -112,13 +113,14 @@ def footer(relative_root: str = "./") -> str:
 def mobile_contact(relative_root: str = "./") -> str:
     return f"""<aside class="mobile-contact-bar" aria-label="Quick contact">
   <a data-conversion="call" href="tel:2624923135">Call or Text</a>
-  <a href="{relative_root}residential-palm-assessment.html#request">Request Assessment</a>
+  <a data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request Assessment</a>
 </aside>"""
 
 
 def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          lede: str, body: str, image: str = "background.jpg",
          relative_root: str = "./", extra_schema: dict | None = None) -> str:
+    hero_note = '<p class="hero-microcopy">Single palms and small groups welcome · On-site visit · Dated photographs · Written findings · Clear next steps</p>' if filename == "index.html" else ""
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -128,8 +130,8 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
 {header(relative_root)}
 <main id="main">
   <section class="page-hero" style="--hero-image:url('/{image}')">
-    <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>
-    <div class="button-row"><a class="button" href="#request">Request a Palm Assessment</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div></div>
+    <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}
+    <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request a Palm Assessment</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div></div>
   </section>
   <div class="trust-wrap trust-wrap--compact">{credentials("BUSINESS_CREDENTIALS")}</div>
   {body}

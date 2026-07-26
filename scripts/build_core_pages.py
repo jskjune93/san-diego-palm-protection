@@ -4,7 +4,7 @@ from html import escape
 from pathlib import Path
 import json
 
-from site_components import ROOT, BASE_URL, page, three_pillars, credentials
+from site_components import ROOT, BASE_URL, page, three_pillars, credentials, INQUIRY
 
 UFMP_RESOURCE = json.loads((ROOT / "site-config" / "ufmp_resource.json").read_text(encoding="utf-8"))
 
@@ -19,6 +19,50 @@ def cards(items: list[tuple[str, str]], cls: str = "service-grid") -> str:
 
 def process(items: list[tuple[str, str]]) -> str:
     return '<div class="process">' + "".join(f'<div><h3>{escape(h)}</h3><p>{escape(p)}</p></div>' for h, p in items) + "</div>"
+
+
+def inquiry_paths() -> str:
+    explanation = escape(INQUIRY["public_explanation"])
+    return f'''<div class="inquiry-paths">
+<article class="inquiry-panel" id="homeowner-inquiry">
+  <p class="eyebrow">For homeowners</p><h3>Tell us about one palm or a small group.</h3>
+  <p>Use this path for a residential assessment, condition baseline, recurring monitoring, sourcing, or decline-response question.</p>
+  <form data-inquiry-fallback data-conversion="homeowner-inquiry-email-prepared" data-subject="Homeowner palm inquiry" action="mailto:sandiegopalmprotection@gmail.com" method="get">
+    <div class="form-grid">
+      <div><label for="home-name">Name</label><input id="home-name" name="name" autocomplete="name" required></div>
+      <div><label for="home-email">Email</label><input id="home-email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="home-phone">Phone</label><input id="home-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div><label for="home-city">City</label><input id="home-city" name="city" autocomplete="address-level2" required></div>
+      <div><label for="home-species">Palm species, if known</label><input id="home-species" name="palm_species"></div>
+      <div><label for="home-count">Number of palms</label><input id="home-count" name="number_of_palms" inputmode="numeric"></div>
+      <div class="full"><label for="home-concern">What are you seeing or trying to decide?</label><textarea id="home-concern" name="concern" required></textarea></div>
+      <div class="full"><label for="home-timing">Timing or urgency</label><input id="home-timing" name="timing"></div>
+    </div>
+    <p class="form-help">{explanation}</p>
+    <button class="button" type="submit">Prepare Homeowner Inquiry</button>
+    <p class="form-status" data-form-status aria-live="polite"></p>
+  </form>
+</article>
+<article class="inquiry-panel" id="organization-inquiry">
+  <p class="eyebrow">For organizations</p><h3>Scope a managed-property or civic documentation need.</h3>
+  <p>Use this path for an HOA, apartment community, commercial property, institution, consultant, or public stakeholder.</p>
+  <form data-inquiry-fallback data-conversion="organization-inquiry-email-prepared" data-subject="Organization palm inquiry" action="mailto:sandiegopalmprotection@gmail.com" method="get">
+    <div class="form-grid">
+      <div><label for="org-name">Contact name</label><input id="org-name" name="contact_name" autocomplete="name" required></div>
+      <div><label for="org-email">Work email</label><input id="org-email" name="email" type="email" autocomplete="email" required></div>
+      <div><label for="org-phone">Phone</label><input id="org-phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div><label for="org-organization">Organization</label><input id="org-organization" name="organization" autocomplete="organization" required></div>
+      <div><label for="org-property">Property or portfolio type</label><input id="org-property" name="property_type" required></div>
+      <div><label for="org-count">Estimated palm count</label><input id="org-count" name="estimated_palm_count" inputmode="numeric"></div>
+      <div class="full"><label for="org-scope">Needed scope or decision</label><textarea id="org-scope" name="scope" required></textarea></div>
+      <div class="full"><label for="org-timing">Timing or procurement context</label><input id="org-timing" name="timing"></div>
+    </div>
+    <p class="form-help">{explanation}</p>
+    <button class="button" type="submit">Prepare Organization Inquiry</button>
+    <p class="form-status" data-form-status aria-live="polite"></p>
+  </form>
+</article>
+</div>'''
 
 
 def approved_ufmp_resource() -> str:
@@ -76,9 +120,10 @@ PAGES: dict[str, dict] = {
         "description": "Owner-led mature palm documentation, monitoring, protection planning, and decline response in Escondido and North County San Diego.",
         "eyebrow": "Owner-led palm protection · Old Escondido",
         "h1": "Protect Your Mature Palms in North County San Diego",
-        "lede": "On-site assessments, Canary Island date palm documentation, SAPW-aware education, monitoring, and decline response from a local Old Escondido specialist.",
+        "lede": "Get an on-site palm assessment, dated photographs, written findings, and clear next steps from an owner-led Old Escondido specialist.",
         "image": "background.jpg",
         "body": section("Mature palm care", "Document first. Monitor change. Respond when a palm declines.", "SDPP works directly with homeowners and property stakeholders through documentation, monitoring, protection planning, sourcing, coordination, and response.", three_pillars()) +
+        section("Choose your path", "A direct route for your kind of property.", "Start with the information SDPP needs to understand the palm, the property, and the decision.", '<div class="audience-grid"><article class="audience-card"><h3>Homeowners</h3><p>One mature palm or a small group: assessment, dated photographs, written findings, monitoring, sourcing, or decline response.</p><a data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Start a homeowner inquiry</a></article><article class="audience-card"><h3>Organizations</h3><p>HOAs, apartments, commercial properties, institutions, consultants, and public stakeholders needing inventory, monitoring, or reporting.</p><a data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Start an organization inquiry</a></article></div>', "section-tint") +
         section("Local and direct", "Owner-led from Old Escondido.", "You work directly with the local specialist who visits the property, photographs the palms, explains the visible concerns, and prepares the written findings.", '<div class="field-split"><div><h3>One point of contact</h3><p>Site observations, photographs, recommendations, and follow-up stay connected instead of being handed between a sales office and a field crew.</p><p><a href="./old-escondido-palm-preservation.html">About the Old Escondido service area</a></p></div><img src="./beautiful-old_escondido-cidp.jpg" alt="Mature Canary Island date palm in Old Escondido" loading="lazy"></div>') +
         section("Canary Island date palms", "Protection planning informed by documented conditions.", "Mature Canary Island date palms face serious pressures, including South American palm weevil. A documentation visit can establish visible condition and support monitoring, referral, or urgent response questions.", '<div class="field-split field-split--reverse"><img src="./south-american-palm-weevil-cidp-poway.jpg" alt="Canary Island date palm observed in North County San Diego" loading="lazy"><div><h3>Start before the decision becomes urgent</h3><p>SDPP provides SAPW-aware documentation and educational information. SDPP is not currently offering pesticide applications.</p><p><a href="./sapw.html">Learn about SAPW warning signs</a> · <a href="./palm-stewardship-plans.html">Explore protection planning</a></p></div></div>', "section-tint") +
         section("A useful record", "Photographs and written findings support better palm decisions.", "Documentation is part of the field service, not a substitute for it. A baseline and recurring views make visible change easier to understand and communicate.", process([
@@ -86,7 +131,8 @@ PAGES: dict[str, dict] = {
             ("Document", "Create dated photographs and clear written observations."),
             ("Protect or monitor", "Carry out supported work or compare the palm over time."),
             ("Respond", "Coordinate the next responsible step if decline or loss occurs."),
-        ]) + '<p class="section-proof-link"><a href="./palm-proof-examples.html#sample-assessment">View a sanitized sample palm assessment</a></p>') +
+        ]) + '<p class="section-proof-link"><a data-conversion="residential-sample-pdf-view" href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">View a sanitized sample palm assessment <span class="sr-only">(PDF, opens in a new tab)</span></a></p>') +
+        section("Scope and pricing", "Clear scope before work begins.", "Pricing depends on palm count, site conditions, access, travel, service type, requested deliverables, and urgency.", '<p class="note">SDPP confirms the written scope and price after reviewing the property information and requested documentation.</p>') +
         section("Managed properties and public landscapes", "Palm records that support portfolio decisions.", "SDPP provides palm-focused inventories, condition documentation, monitoring, and implementation support for managed properties, institutions, consultants, and public stakeholders.", '<p><a href="./managed-property-palm-services.html">Explore managed-property palm services</a> · <a href="./urban-forest-palm-documentation.html">Explore urban forest palm documentation</a></p>', "section-tint") +
         section("Field work", "See how observations become practical next steps.", "The public Palm Journal and Field Work page show real local palm context, documented observations, and the structure of an example report without exposing private client information.", '<div class="field-links"><a href="./palm-records-monitoring-verification.html">View all palm services</a><a href="./palm-proof-examples.html">View Field Work</a><a href="./palm-journal-new.html">Read the Palm Journal</a><a href="./palm-journal/documented-loss/">Visit Documented Loss</a></div>'),
     },
@@ -126,7 +172,7 @@ PAGES: dict[str, dict] = {
             ("Next action", "Choose monitoring, an appropriately licensed-provider referral, contractor coordination, urgent response, removal planning, or replacement tracking."),
             ("Follow-up", "Add comparable photographs and document visible change, completed work, and unresolved items."),
         ])) +
-        section("Request", "Schedule a Palm Documentation Visit", "Use the inquiry to identify a residential, monitoring, managed-property, sourcing, coordination, or response need. SDPP is not currently offering pesticide applications.", f'{credentials("BUSINESS_CREDENTIALS_CONTACT")}<form class="inquiry-form" action="mailto:sandiegopalmprotection@gmail.com" method="get"><label for="service-request">Service needed</label><select id="service-request" name="subject"><option>Residential Palm Documentation Visit</option><option>Recurring Palm Monitoring</option><option>Managed-property Palm Inventory and Reporting</option><option>Palm sourcing or coordination</option><option>Decline, removal, or replacement coordination</option></select><button class="button" type="submit">Prepare email inquiry</button></form>') +
+        section("Request", "Choose the right inquiry path.", "The website currently prepares an email for you to review and send; it does not claim that the inquiry has been submitted automatically.", f'{credentials("BUSINESS_CREDENTIALS_CONTACT")}{inquiry_paths()}') +
         section("Related decisions", "From evidence to outcome.", "Follow the appropriate path without losing the record.", '<p><a href="./palm-removal-coordination.html">Decline, removal, and replacement</a> · <a href="./palm-sourcing-installation.html">Sourcing and installation</a> · <a href="./specimen-palms-cycads.html">Specimen palms and cycads</a> · <a href="./palm-journal/documented-loss/">Documented Loss</a></p>')
     },
     "quarterly-palm-care-san-diego.html": {

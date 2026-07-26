@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "submission_mode": "email_fallback",
+  "submitted_form_enabled": false,
+  "endpoint": null,
+  "direct_uploads_enabled": false,
+  "verified_lead_conversion_enabled": false,
+  "public_explanation": "Preparing an inquiry opens your email application. Review the message, attach photographs if useful, and send it from there.",
+  "owner_action_required": "Provision and approve a first-party submission endpoint, delivery destination, abuse controls, privacy handling, and secure file storage before enabling direct website submission or photograph uploads."
+}
