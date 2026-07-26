@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from pathlib import Path
 from hashlib import sha256
+from html import escape
 import json
 import re
 
@@ -59,6 +60,45 @@ def validate(path: Path) -> list[str]:
     for media in data.get("media", []):
         if media.get("approved_for_public") is not True:
             errors.append(f"{path.name}: media lacks public-use approval")
+        filename = media.get("filename")
+        expected = media.get("sha256")
+        if filename and expected:
+            candidates = list((ROOT / "images").rglob(filename))
+            if len(candidates) != 1:
+                errors.append(f"{path.name}: approved media must resolve exactly once: {filename}")
+            elif sha256(candidates[0].read_bytes()).hexdigest() != expected:
+                errors.append(f"{path.name}: approved media hash mismatch: {filename}")
+    if path.name == "old-escondido-urban-forest-documentation.json":
+        resource = json.loads((ROOT / "site-config" / "ufmp_resource.json").read_text(encoding="utf-8"))
+        package_fingerprint = "6b000803ddd52b377e3a85365ae4f0072b253d0de100de6809ea04d0099f0386"
+        business_fingerprint = "aee886c262d3a4b2eb7a3dbd407c65b5ddb41f5d5d0b7331c301a501a31ec1e1"
+        if data.get("approved_package_fingerprint") != package_fingerprint:
+            errors.append(f"{path.name}: approved package fingerprint changed")
+        if data.get("business_status_fingerprint") != business_fingerprint:
+            errors.append(f"{path.name}: approved business-status fingerprint changed")
+        if resource.get("approval", {}).get("substantive_copy_locked") is not True:
+            errors.append(f"{path.name}: substantive-copy lock is missing")
+        if resource.get("page_action") != {
+            "label": "Review the documentation method",
+            "href": "./palm-records-monitoring-verification.html",
+            "supporting_copy": "See how stable palm IDs, dated photographs, and evidence boundaries support reviewable records.",
+        }:
+            errors.append(f"{path.name}: approved page action changed")
+        urban_page = ROOT / "urban-forest-palm-documentation.html"
+        if urban_page.is_file():
+            rendered = urban_page.read_text(encoding="utf-8")
+            approved_text = [resource["title"], resource["summary"]]
+            approved_text.extend(item["body"] for item in resource["sections"])
+            approved_text.extend(resource["large_property_civic_capability"])
+            approved_text.append(resource["palm_journal"]["heading"])
+            approved_text.extend(resource["palm_journal"]["paragraphs"])
+            approved_text.extend(item["caption"] for item in resource["media"])
+            approved_text.extend(item["alt"] for item in resource["media"])
+            for text in approved_text:
+                if escape(text) not in rendered:
+                    errors.append(f"{path.name}: approved substantive copy is missing or changed: {text[:54]}")
+        else:
+            errors.append(f"{path.name}: urban-forest integration page is missing")
     return errors
 
 

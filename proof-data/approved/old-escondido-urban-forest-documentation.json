@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "artifact_id": "old-escondido-urban-forest-documentation",
+  "product_type": "website_proof_excerpt",
+  "artifact_version": "1.0.0",
+  "artifact_fingerprint": "c8b899e3e503170db3a8ab0a7d49acc766c677a152e58bf65ed5274a8711c9cf",
+  "approved_fingerprint": "c8b899e3e503170db3a8ab0a7d49acc766c677a152e58bf65ed5274a8711c9cf",
+  "approved_package_fingerprint": "6b000803ddd52b377e3a85365ae4f0072b253d0de100de6809ea04d0099f0386",
+  "business_status_fingerprint": "aee886c262d3a4b2eb7a3dbd407c65b5ddb41f5d5d0b7331c301a501a31ec1e1",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "public",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "content": {
+    "title": "Old Escondido Palm Documentation for Urban-Forest Decisions",
+    "public_filename": "old-escondido-urban-forest-documentation.pdf",
+    "page_count": 7,
+    "source_basis": "Approved limited owner/SDPP photographic record"
+  },
+  "media": [
+    {
+      "filename": "old-escondido-ufmp-01.jpg",
+      "sha256": "3c64b920cbe95a41c552b432c28387e4e57d954fb8c996067a8bb898d9ee660a",
+      "approved_for_public": true
+    },
+    {
+      "filename": "old-escondido-ufmp-02.jpg",
+      "sha256": "7613627589f231722546130ac04faf1f099b0cf93631bf30320d2984821feb6e",
+      "approved_for_public": true
+    },
+    {
+      "filename": "old-escondido-ufmp-03.jpg",
+      "sha256": "96d1343f176359e59646c8ef72f4d615b81816f14e6337c7058a6f66833d9246",
+      "approved_for_public": true
+    },
+    {
+      "filename": "old-escondido-ufmp-04.jpg",
+      "sha256": "8e4c5274835fe76631d84507eed7494e0dcb82342394b3354007a42c553b7ba0",
+      "approved_for_public": true
+    }
+  ]
+}

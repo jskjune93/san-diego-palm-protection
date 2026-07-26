@@ -6,6 +6,8 @@ import json
 
 from site_components import ROOT, BASE_URL, page, three_pillars, credentials
 
+UFMP_RESOURCE = json.loads((ROOT / "site-config" / "ufmp_resource.json").read_text(encoding="utf-8"))
+
 
 def section(eyebrow: str, heading: str, intro: str, content: str, classes: str = "") -> str:
     return f'<section class="section {classes}"><div class="section-intro"><p class="eyebrow">{escape(eyebrow)}</p><h2>{escape(heading)}</h2><p>{escape(intro)}</p></div>{content}</section>'
@@ -17,6 +19,55 @@ def cards(items: list[tuple[str, str]], cls: str = "service-grid") -> str:
 
 def process(items: list[tuple[str, str]]) -> str:
     return '<div class="process">' + "".join(f'<div><h3>{escape(h)}</h3><p>{escape(p)}</p></div>' for h, p in items) + "</div>"
+
+
+def approved_ufmp_resource() -> str:
+    resource = UFMP_RESOURCE
+    sections = "".join(
+        f'<section class="ufmp-copy-block"><h3>{escape(item["heading"])}</h3><p>{escape(item["body"])}</p></section>'
+        for item in resource["sections"]
+    )
+    figures = "".join(
+        f'''<figure>
+  <img src="./images/old-escondido-urban-forest-documentation/{escape(item["filename"])}" alt="{escape(item["alt"])}" loading="lazy" decoding="async">
+  <figcaption>{escape(item["caption"])}</figcaption>
+</figure>'''
+        for item in resource["media"]
+    )
+    capability = "".join(f"<p>{escape(item)}</p>" for item in resource["large_property_civic_capability"])
+    journal = "".join(f"<p>{escape(item)}</p>" for item in resource["palm_journal"]["paragraphs"])
+    return f'''<section class="section ufmp-approved-resource" id="old-escondido-documentation-method" aria-labelledby="old-escondido-documentation-heading">
+  <div class="section-intro">
+    <p class="eyebrow">Approved civic documentation resource</p>
+    <h2 id="old-escondido-documentation-heading">{escape(resource["title"])}</h2>
+    <p>{escape(resource["summary"])}</p>
+    <div class="button-row">
+      <a class="button" href="./{escape(resource["pdf"]["filename"])}" target="_blank" rel="noopener noreferrer">Download the civic documentation packet <span class="sr-only">(PDF, opens in a new tab)</span></a>
+      <a class="sample-request-link" href="{escape(resource["page_action"]["href"])}">{escape(resource["page_action"]["label"])}</a>
+    </div>
+    <p class="note">{escape(resource["page_action"]["supporting_copy"])}</p>
+  </div>
+  <div class="ufmp-copy-grid">{sections}</div>
+  <div class="ufmp-photo-grid">{figures}</div>
+</section>
+<section class="section section-tint" id="large-property-civic-capability">
+  <div class="section-intro"><p class="eyebrow">Large-property and civic documentation capability</p><h2>Records that keep each palm and decision connected.</h2></div>
+  <div class="article-shell">{capability}</div>
+</section>
+<section class="section" id="old-escondido-palm-journal-fragment">
+  <div class="section-intro"><p class="eyebrow">Palm Journal fragment</p><h2>{escape(resource["palm_journal"]["heading"])}</h2></div>
+  <div class="article-shell">{journal}</div>
+</section>
+<section class="section section-tint" aria-labelledby="ufmp-related-resources">
+  <div class="section-intro"><p class="eyebrow">Related resources</p><h2 id="ufmp-related-resources">Continue through the existing documentation pathways.</h2></div>
+  <div class="field-links">
+    <a href="./managed-property-palm-services.html">Managed Properties</a>
+    <a href="./palm-proof-examples.html">Field Work</a>
+    <a href="./palm-journal-new.html">Palm Journal</a>
+    <a href="./palm-journal/documented-loss/">Documented Loss</a>
+    <a href="./palm-proof-examples.html#sample-assessment">Sanitized sample assessment</a>
+  </div>
+</section>'''
 
 
 PAGES: dict[str, dict] = {
@@ -120,12 +171,12 @@ PAGES: dict[str, dict] = {
         ])) +
         section("Observation and escalation", "Visible conditions are not automatically a diagnosis.", "SDPP separates field observations from reported history, suspected causes, laboratory confirmation, structural opinions, and other specialist determinations. Priority findings are communicated through the agreed contact and reporting method.", '<p class="note">SDPP is not currently offering pesticide applications. Pruning, removal, planting, formal tree-risk opinions, engineering conclusions, laboratory diagnosis, and code determinations remain outside SDPP’s direct scope unless explicitly supported by an appropriately licensed provider.</p>') +
         section("Verification boundary", "Contractor-work verification records evidence; it does not certify the unknowable.", "SDPP can document visible completion, dates, supplied records, and discrepancies within an agreed scope.", '<p class="note"><strong>Limitations:</strong> verification does not certify concealed work, workmanship, structural safety, legal or code compliance, pesticide efficacy, contractor licensing, or outcomes unless a separately qualified party and explicit scope support that conclusion.</p>', "section-tint") +
-        section("Municipal and urban-forest support", "Palm-focused field records for broader programs.", "Specialized palm documentation can support portfolio management and urban-forest implementation without claiming to prepare a complete municipal plan.", '<p><a href="./urban-forest-palm-documentation.html">Explore Urban Forest Palm Documentation</a> · <a href="./palm-proof-examples.html">View sample work</a> · <a href="./old-escondido-mature-palm-documentation-example.pdf" target="_blank" rel="noopener noreferrer">View the sanitized mature palm documentation example <span class="sr-only">(PDF, opens in a new tab)</span></a></p>') +
+        section("Municipal and urban-forest support", "Palm-focused field records for broader programs.", "Specialized palm documentation can support portfolio management and urban-forest implementation without claiming to prepare a complete municipal plan.", '<p><a href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Review the approved Old Escondido civic documentation resource</a> · <a href="./palm-proof-examples.html">View sample work</a> · <a href="./old-escondido-urban-forest-documentation.pdf" target="_blank" rel="noopener noreferrer">Download the civic documentation packet <span class="sr-only">(PDF, opens in a new tab)</span></a></p>') +
         section("Municipal context", "Accurate participation wording.", "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.", '<p class="note">This statement describes a submission for consideration. It does not state or imply City endorsement, partnership, selection, approval, or adoption.</p>')
     },
     "urban-forest-palm-documentation.html": {
-        "title": "Palm Inventory, Condition Documentation & Urban Forest Support | SDPP",
-        "description": "Palm inventory, condition documentation, monitoring, contractor verification, and urban-forest implementation support for managed properties and public stakeholders in North County San Diego.",
+        "title": UFMP_RESOURCE["metadata"]["title"],
+        "description": UFMP_RESOURCE["metadata"]["description"],
         "eyebrow": "Municipal and managed-property support",
         "h1": "Palm Inventory, Condition Documentation & Urban Forest Support",
         "lede": "Specialized palm-focused field information and records for municipalities, public agencies, historic districts, managed properties, institutions, consultants, and contractors responsible for mature palms.",
@@ -156,7 +207,7 @@ PAGES: dict[str, dict] = {
         ])) +
         section("UFMP and urban-forest implementation support", "Specialized palm information can support a broader program.", "SDPP can provide palm-focused inventory fields, condition documentation, monitoring records, priority information, and implementation follow-through that may support an Urban Forest Management Plan or consultant-led program.", '<p class="note">SDPP does not represent this service as preparation of a complete municipal Urban Forest Management Plan, a formal tree-risk assessment, laboratory diagnosis, structural engineering, or municipal-code determination.</p>', "section-tint") +
         section("Municipal context", "Accurate participation wording.", "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.", '<p class="note">This statement describes a submission for consideration. It does not state or imply City endorsement, partnership, selection, approval, or adoption.</p>') +
-        section("Sample work", "Review sanitized field documentation.", "The public examples show how SDPP separates visible observations, photographs, limitations, and follow-up at residential and broader-area scales. They are example deliverables, not testimonials, diagnoses, formal risk certifications, municipal plans, endorsements, or promises of outcome.", '<p><a href="./old-escondido-mature-palm-documentation-example.pdf" target="_blank" rel="noopener noreferrer">View the mature palm documentation example <span class="sr-only">(PDF, opens in a new tab)</span></a> · <a href="./palm-proof-examples.html#sample-assessment">View the sanitized residential assessment</a> · <a href="./managed-property-palm-services.html">Explore managed-property palm services</a></p><p class="note">The Old Escondido example is a sanitized field-documentation sample. It is not a municipal endorsement or a complete Urban Forest Management Plan deliverable.</p>')
+        approved_ufmp_resource()
     },
     "palm-removal-coordination.html": {
         "title": "Palm Decline, Removal & Replacement Coordination | SDPP",
@@ -220,7 +271,7 @@ PAGES: dict[str, dict] = {
     <p class="sample-assessment-lede">See a sanitized example of broader-area palm documentation prepared to support preservation, monitoring, loss records, and urban-forest implementation.</p>
     <p class="note">This example uses a limited Old Escondido field sample. It is not a complete inventory, municipal plan, formal tree-risk assessment, laboratory report, or City-endorsed document.</p>
     <div class="button-row">
-      <a class="button" href="./old-escondido-mature-palm-documentation-example.pdf" target="_blank" rel="noopener noreferrer">View Civic Documentation Example <span class="sr-only">(PDF, opens in a new tab)</span></a>
+      <a class="button" href="./old-escondido-urban-forest-documentation.pdf" target="_blank" rel="noopener noreferrer">View Civic Documentation Example <span class="sr-only">(PDF, opens in a new tab)</span></a>
       <a class="sample-request-link" href="./urban-forest-palm-documentation.html">Explore urban forest documentation</a>
     </div>
   </div>
@@ -228,7 +279,7 @@ PAGES: dict[str, dict] = {
     <span class="sample-document-type" aria-hidden="true">PDF</span>
     <h3>Old Escondido mature palm documentation</h3>
     <p>Eight-page public example with a repeatable field structure, representative records, monitoring value, decline and loss documentation, implementation uses, and explicit limitations.</p>
-    <a href="./old-escondido-mature-palm-documentation-example.pdf" target="_blank" rel="noopener noreferrer">Open the documentation PDF <span class="sr-only">(opens in a new tab)</span></a>
+    <a href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Review the Urban Forest Documentation pathway</a> · <a href="./old-escondido-urban-forest-documentation.pdf" target="_blank" rel="noopener noreferrer">Open the documentation PDF <span class="sr-only">(opens in a new tab)</span></a>
   </aside>
 </div>
 </section>''' +
@@ -343,12 +394,27 @@ def write_pages() -> None:
             "body": generic_body(filename),
         }
     for filename, data in pages.items():
-        schema = {
-            "@context": "https://schema.org", "@type": "Service",
-            "provider": {"@type": "LocalBusiness", "name": "San Diego Palm Protection", "url": BASE_URL},
-            "name": data["h1"], "areaServed": "North County San Diego",
-            "description": data["description"],
-        }
+        if filename == "urban-forest-palm-documentation.html":
+            schema = {
+                "@context": "https://schema.org", "@type": "Article",
+                "headline": UFMP_RESOURCE["title"],
+                "description": UFMP_RESOURCE["summary"],
+                "url": f"{BASE_URL}/urban-forest-palm-documentation.html#old-escondido-documentation-method",
+                "image": [
+                    f"{BASE_URL}/images/old-escondido-urban-forest-documentation/{item['filename']}"
+                    for item in UFMP_RESOURCE["media"]
+                ],
+                "author": {"@type": "Organization", "name": "San Diego Palm Protection", "url": BASE_URL},
+                "about": UFMP_RESOURCE["metadata"]["about"],
+                "isPartOf": {"@type": "WebPage", "url": f"{BASE_URL}/urban-forest-palm-documentation.html"},
+            }
+        else:
+            schema = {
+                "@context": "https://schema.org", "@type": "Service",
+                "provider": {"@type": "LocalBusiness", "name": "San Diego Palm Protection", "url": BASE_URL},
+                "name": data["h1"], "areaServed": "North County San Diego",
+                "description": data["description"],
+            }
         (ROOT / filename).write_text(page(filename=filename, extra_schema=schema, **data), encoding="utf-8")
     (ROOT / "site-config" / "core_routes.json").write_text(json.dumps(sorted(pages), indent=2) + "\n", encoding="utf-8")
     print(f"Generated {len(pages)} canonical core pages.")

@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "approval": {
+    "status": "approved_for_website_integration",
+    "substantive_copy_locked": true
+  },
+  "title": "Old Escondido Palm Documentation for Urban-Forest Decisions",
+  "summary": "A limited owner/SDPP photographic record showing how stable palm IDs, dated images, visible-condition notes, and loss chronology can support urban-forest and multi-palm decisions.",
+  "sections": [
+    {
+      "heading": "Why this record exists",
+      "body": "Old Escondido's mature Canary Island date palms contribute height, continuity, and a visible sense of place across residential and streetside views. Once a palm changes substantially or is removed, memory alone cannot recover its earlier condition. Dated photographs and stable identifiers preserve a reviewable baseline."
+    },
+    {
+      "heading": "What the sample shows",
+      "body": "The approved sample demonstrates a practical record structure for several palms: one stable ID per palm, repeatable whole-palm and crown views, visible-condition notes kept separate from interpretation, and a chronology for later change, contractor work, removal, loss, or replacement. The same structure can help owners and civic stakeholders compare records without confusing private-property observations with public tree assets."
+    },
+    {
+      "heading": "Owner-property SAPW evidence",
+      "body": "South American palm weevil pressure is documented on John's own Old Escondido property through approved owner photographs of captured adult weevils. That owner-property record is context only: it is not evidence that SAPW caused decline at another photographed location."
+    },
+    {
+      "heading": "What this record does not establish",
+      "body": "This is a limited owner/SDPP photographic record, not a complete property or citywide inventory. It does not diagnose the cause of decline in photographed palms and does not claim City of Escondido endorsement, partnership, selection, approval, adoption, affiliation, or authority."
+    },
+    {
+      "heading": "A documentation pathway",
+      "body": "A useful next step is to define the study boundary, assign stable palm IDs, identify approved photographic viewpoints, and record what is directly visible. Later observations can then be compared against the baseline. This is a documentation method, not a diagnosis or an offer of regulated work."
+    },
+    {
+      "heading": "Current SDPP status",
+      "body": "SDPP is not currently offering pesticide applications. This resource concerns photographic documentation, record structure, and educational context only."
+    }
+  ],
+  "large_property_civic_capability": [
+    "Multi-palm decisions become clearer when every image, observation, work record, and outcome stays attached to the correct palm. This limited Old Escondido sample demonstrates a records method built around stable palm IDs, dated photographic baselines, visible-condition notes, priority context, and change-over-time chronology.",
+    "The method can support an owner, HOA, community property, property manager, contractor team, or civic stakeholder who needs a reviewable record. It can distinguish ownership contexts, preserve approved evidence, and identify what is observed, reported, uncertain, removed, or replaced.",
+    "This material is a limited owner/SDPP photographic record, not a complete inventory, diagnostic assessment, City-endorsed work product, or offer of regulated pesticide services. SDPP is not currently offering pesticide applications."
+  ],
+  "palm_journal": {
+    "heading": "Old Escondido's mature palms deserve a baseline",
+    "paragraphs": [
+      "Old Escondido's mature Canary Island date palms are more than isolated specimens. Their crowns repeat across homes, managed properties, and street views, giving the neighborhood a landscape pattern that cannot be replaced quickly after loss.",
+      "A photographic baseline preserves what was present. Stable palm IDs, dated whole-palm and crown views, and later comparison photographs make visible change easier to review without turning a limited walk into a complete inventory or a photograph into a diagnosis.",
+      "South American palm weevil pressure is documented on John's own Old Escondido property through approved photographs of captured adult weevils. That evidence belongs to the owner's property record. It does not establish SAPW as the cause of decline in another photographed palm.",
+      "The Las Palmas documented-loss chronology shows why records matter: visible change, attempted notification, removal, and the landscape left afterward can remain reviewable even when the cause is uncertain.",
+      "This is independent owner/SDPP civic documentation. No City endorsement or authority is claimed. SDPP is not currently offering pesticide applications."
+    ]
+  },
+  "page_action": {
+    "label": "Review the documentation method",
+    "href": "./palm-records-monitoring-verification.html",
+    "supporting_copy": "See how stable palm IDs, dated photographs, and evidence boundaries support reviewable records."
+  },
+  "pdf": {
+    "filename": "old-escondido-urban-forest-documentation.pdf",
+    "sha256": "c8b899e3e503170db3a8ab0a7d49acc766c677a152e58bf65ed5274a8711c9cf",
+    "page_count": 7
+  },
+  "media": [
+    {
+      "filename": "old-escondido-ufmp-01.jpg",
+      "sha256": "3c64b920cbe95a41c552b432c28387e4e57d954fb8c996067a8bb898d9ee660a",
+      "caption": "Mature Canary Island date palms contribute to Old Escondido's established landscape character.",
+      "alt": "Mature Canary Island date palms in an established Old Escondido residential landscape."
+    },
+    {
+      "filename": "old-escondido-ufmp-02.jpg",
+      "sha256": "7613627589f231722546130ac04faf1f099b0cf93631bf30320d2984821feb6e",
+      "caption": "Several mature palms in one streetside view show why stable palm IDs matter.",
+      "alt": "Old Escondido streetside view with several mature Canary Island date palms."
+    },
+    {
+      "filename": "old-escondido-ufmp-03.jpg",
+      "sha256": "96d1343f176359e59646c8ef72f4d615b81816f14e6337c7058a6f66833d9246",
+      "caption": "Adult South American palm weevils documented in the owner's own property record.",
+      "alt": "Several adult South American palm weevils photographed for the owner's property record."
+    },
+    {
+      "filename": "old-escondido-ufmp-04.jpg",
+      "sha256": "8e4c5274835fe76631d84507eed7494e0dcb82342394b3354007a42c553b7ba0",
+      "caption": "Visible crown change photographed before a documented removal; no cause is assigned.",
+      "alt": "Palm crown with visible change photographed before documented removal."
+    }
+  ],
+  "metadata": {
+    "title": "Old Escondido Palm Documentation for Urban-Forest Decisions | San Diego Palm Protection",
+    "description": "A limited owner/SDPP photographic record showing how stable palm IDs, dated images, visible-condition notes, and loss chronology can support urban-forest and multi-palm decisions.",
+    "canonical_path": "/urban-forest-palm-documentation.html",
+    "structured_data_type": "Article",
+    "about": "Independent Old Escondido palm documentation"
+  }
+}

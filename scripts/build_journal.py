@@ -275,6 +275,13 @@ def render_index(entries: list[dict]) -> None:
     <a class="read-link" href="./palm-journal/documented-loss/">View Documented Loss records</a>
   </section>
 
+  <section class="editorial-section" aria-labelledby="urban-forest-documentation-resource">
+    <span class="category-label">Urban Forest Documentation</span>
+    <h2 id="urban-forest-documentation-resource">Old Escondido Palm Documentation for Urban-Forest Decisions</h2>
+    <p>A limited owner/SDPP photographic record showing how stable palm IDs, dated images, visible-condition notes, and loss chronology can support urban-forest and multi-palm decisions.</p>
+    <a class="read-link" href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Review the approved civic documentation resource</a>
+  </section>
+
   <section aria-labelledby="journal-library">
     <h2 id="journal-library">Palm Journal Entries</h2>
     <div class="journal-grid">
@@ -488,7 +495,7 @@ def render_documented_loss_page() -> None:
 {shared_head(title, description, DOCUMENTED_LOSS_URL, f'{BASE_URL}/images/las-palmas/01-property-context-laspalmas-escondido-cidp.jpg', json_ld_documented_loss(), 'website')}
 {styles('../../')}</head><body><!-- {GENERATED_NOTE} -->{header('../../')}
 <section class="hero"><div class="hero-inner"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="../../index.html">Home</a> / <a href="../../palm-journal-new.html">Palm Journal</a> / Documented Loss</nav><span class="eyebrow">Palm Journal Section</span><h1>Documented Loss</h1><p class="lede">Confirmed palm removals and losses, presented with a clear boundary between documented observation and attribution.</p></div></section>
-<main id="main"><section class="article-shell"><h2>Published records</h2>{cards}</section></main>{footer('../../')}</body></html>'''
+<main id="main"><section class="article-shell"><h2>Published records</h2>{cards}<aside class="related-links" aria-label="Related documentation"><a href="../../urban-forest-palm-documentation.html#old-escondido-documentation-method">Review the Old Escondido urban-forest documentation resource</a><a href="../../palm-journal-new.html">Return to the Palm Journal</a></aside></section></main>{footer('../../')}</body></html>'''
     (DOCUMENTED_LOSS_DIR / "index.html").write_text(page, encoding="utf-8")
 
 
