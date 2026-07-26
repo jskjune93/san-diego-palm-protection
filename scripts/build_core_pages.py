@@ -35,7 +35,7 @@ PAGES: dict[str, dict] = {
             ("Document", "Create dated photographs and clear written observations."),
             ("Protect or monitor", "Carry out supported work or compare the palm over time."),
             ("Respond", "Coordinate the next responsible step if decline or loss occurs."),
-        ])) +
+        ]) + '<p class="section-proof-link"><a href="./palm-proof-examples.html#sample-assessment">View a sanitized sample palm assessment</a></p>') +
         section("Field work", "See how observations become practical next steps.", "The public Palm Journal and Field Work page show real local palm context, documented observations, and the structure of an example report without exposing private client information.", '<div class="field-links"><a href="./palm-records-monitoring-verification.html">View all palm services</a><a href="./palm-proof-examples.html">View Field Work</a><a href="./palm-journal-new.html">Read the Palm Journal</a><a href="./palm-journal/documented-loss/">Visit Documented Loss</a></div>'),
     },
     "residential-palm-assessment.html": {
@@ -49,7 +49,7 @@ PAGES: dict[str, dict] = {
             ("Dated photographic record", "Consistent overview, crown, trunk, ground, and concern-detail views when access safely permits."),
             ("Visible-condition findings", "Observed features are separated from reported information, possible concerns, and confirmed findings."),
             ("Written Palm Condition Report", "A concise record of findings, certainty, limitations, recommendations, and an appropriate monitoring interval."),
-        ])) + section("What it is not", "Useful because its limits are explicit.", "A visual assessment cannot promise tree safety, uncover hidden conditions, replace laboratory confirmation, or guarantee a treatment outcome. Referral is recommended where the question exceeds the documented scope.", '<p class="note">Urgent structural or life-safety concerns may require a qualified arborist, emergency contractor, property authority, or other specialist. Regulated work is offered only when current credentials, authorization, label, site, and scope support it.</p>', "section-tint") +
+        ]) + '<p class="section-proof-link"><a href="./palm-proof-examples.html#sample-assessment">See a sanitized sample report</a></p>') + section("What it is not", "Useful because its limits are explicit.", "A visual assessment cannot promise tree safety, uncover hidden conditions, replace laboratory confirmation, or guarantee a treatment outcome. Referral is recommended where the question exceeds the documented scope.", '<p class="note">Urgent structural or life-safety concerns may require a qualified arborist, emergency contractor, property authority, or other specialist. Regulated work is offered only when current credentials, authorization, label, site, and scope support it.</p>', "section-tint") +
         section("Next step", "From one visit to a monitoring record.", "When change over time matters, the baseline becomes visit one of a recurring monitoring timeline.", process([("Scope", "Identify the decision and palms."), ("Visit", "Observe and photograph accessible conditions."), ("Report", "Receive a dated written record."), ("Revisit", "Compare at a useful interval.")]))
     },
     "palm-records-monitoring-verification.html": {
@@ -121,12 +121,43 @@ PAGES: dict[str, dict] = {
         ]), "section-tint")
     },
     "palm-proof-examples.html": {
-        "title": "Palm Field Work & Example Reporting | SDPP",
-        "description": "See San Diego Palm Protection field observations, Palm Journal examples, and the structure of written palm assessment and monitoring reports.",
+        "title": "Sample Palm Assessment Report | San Diego Palm Protection",
+        "description": "View a sanitized sample palm assessment showing SDPP's photographic baseline, visible-condition observations, written recommendations, limitations, and follow-up guidance.",
         "eyebrow": "Field work and reporting", "h1": "See the palms, observations, and written follow-through.",
         "lede": "Public field examples show how SDPP photographs mature palms, records visible conditions, follows change, and turns an on-site visit into useful next steps.",
         "image": "evidence.jpg",
-        "body": section("From the field", "Local observations, presented with their limits.", "The Palm Journal preserves dated local context and distinguishes what was observed from what was reported or inferred.", '<div class="field-work-grid"><article><img src="./journal-monitoring.jpg" alt="Palm monitoring field photograph" loading="lazy"><h3>Palm Journal</h3><p>Field notes and educational entries connect local palm conditions with practical observation.</p><a href="./palm-journal-new.html">Read the Palm Journal</a></article><article><img src="./images/las-palmas/01-property-context-laspalmas-escondido-cidp.jpg" alt="Canary Island date palms at Las Palmas in Escondido" loading="lazy"><h3>Las Palmas documented observations</h3><p>A public chronology shows how property context, visible change, communication, and outcome can be documented without overstating cause.</p><a href="./palm-journal/las-palmas-no-reply-then-the-saws.html">View the Las Palmas entry</a></article><article><img src="./evidence.jpg" alt="Palm condition documentation example" loading="lazy"><h3>Documented Loss</h3><p>A respectful public record of significant palms that have been confirmed lost.</p><a href="./palm-journal/documented-loss/">Visit Documented Loss</a></article></div>') +
+        "body": '''<section class="section sample-assessment" id="sample-assessment" aria-labelledby="sample-assessment-heading">
+<div class="sample-assessment-grid">
+  <div>
+    <p class="eyebrow">Sample assessment</p>
+    <h2 id="sample-assessment-heading">See what a documented palm assessment looks like.</h2>
+    <p class="sample-assessment-lede">This sanitized field report shows the structure of an SDPP assessment: the purpose and scope of the visit, visible-condition observations, a dated photographic baseline, clearly separated questions and limitations, practical recommendations, and a defined follow-up point.</p>
+    <p class="note">Client-identifying information has been removed. Every assessment is property-specific, and findings are limited by access, visible evidence, site conditions, and the documented scope.</p>
+    <div class="button-row">
+      <a class="button" href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">View sample assessment <span class="sr-only">(PDF, opens in a new tab)</span></a>
+      <a class="sample-request-link" href="./residential-palm-assessment.html#request">Request an assessment</a>
+    </div>
+  </div>
+  <aside class="sample-document-card" aria-label="Sanitized sample palm assessment PDF">
+    <span class="sample-document-type" aria-hidden="true">PDF</span>
+    <h3>Sanitized sample palm assessment</h3>
+    <p>Five-page field report with photographs, observations, limitations, recommendations, and follow-up guidance.</p>
+    <a href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">Open the sample PDF <span class="sr-only">(opens in a new tab)</span></a>
+  </aside>
+</div>
+<div class="sample-includes">
+  <h3>What the report includes</h3>
+  <ul>
+    <li>Dated site and palm baseline</li>
+    <li>Visible-condition observations</li>
+    <li>Photo record and captions</li>
+    <li>Known, unknown, and follow-up items</li>
+    <li>Practical recommendations</li>
+    <li>Monitoring or response interval</li>
+  </ul>
+</div>
+</section>''' +
+        section("From the field", "Local observations, presented with their limits.", "The Palm Journal preserves dated local context and distinguishes what was observed from what was reported or inferred.", '<div class="field-work-grid"><article><img src="./journal-monitoring.jpg" alt="Palm monitoring field photograph" loading="lazy"><h3>Palm Journal</h3><p>Field notes and educational entries connect local palm conditions with practical observation.</p><a href="./palm-journal-new.html">Read the Palm Journal</a></article><article><img src="./images/las-palmas/01-property-context-laspalmas-escondido-cidp.jpg" alt="Canary Island date palms at Las Palmas in Escondido" loading="lazy"><h3>Las Palmas documented observations</h3><p>A public chronology shows how property context, visible change, communication, and outcome can be documented without overstating cause.</p><a href="./palm-journal/las-palmas-no-reply-then-the-saws.html">View the Las Palmas entry</a></article><article><img src="./evidence.jpg" alt="Palm condition documentation example" loading="lazy"><h3>Documented Loss</h3><p>A respectful public record of significant palms that have been confirmed lost.</p><a href="./palm-journal/documented-loss/">Visit Documented Loss</a></article></div>') +
         section("Example deliverable", "What a written palm condition report can contain.", "The exact scope follows the property and question, but a useful report makes the visit understandable after the specialist leaves.", cards([
             ("Assessment purpose", "The palm, property context, concern, available access, and decision prompting the visit."),
             ("Photographic baseline", "Dated overview and detail views that can support later comparison."),
@@ -135,7 +166,7 @@ PAGES: dict[str, dict] = {
             ("Limitations", "What could not be seen, tested, verified, or concluded within the agreed visit."),
             ("Follow-through", "A structure for monitoring, contractor communication, or a later outcome record."),
         ], "proof-grid"), "section-tint") +
-        section("Privacy boundary", "Only approved public material belongs here.", "Private client reports and source records are not copied into website source. A separately approved sanitized export can populate future sample-assessment and monitoring examples only after its public-use and privacy checks pass.", '<p class="note">No unapproved proof bundle can render publicly. The website accepts only an allowlisted, versioned public derivative; private identity, address, contact, access details, and unapproved photographs remain outside this repository.</p>')
+        section("Privacy boundary", "Only approved public material belongs here.", "The sample assessment above is a separately approved sanitized public artifact. Private client reports and source records are not copied into website source, and any future examples must pass the same public-use and privacy checks.", '<p class="note">No unapproved proof bundle can render publicly. The website accepts only an allowlisted, versioned public derivative; private identity, address, contact, access details, and unapproved photographs remain outside this repository.</p>')
     },
     "palm-stewardship-plans.html": {
         "title": "Palm Protection & Treatment | San Diego Palm Protection",
