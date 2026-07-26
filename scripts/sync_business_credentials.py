@@ -18,6 +18,8 @@ CONTACT_END = "<!-- BUSINESS_CREDENTIALS_CONTACT:END -->"
 
 PRIMARY_PAGES = (
     "index.html",
+    "managed-property-palm-services.html",
+    "urban-forest-palm-documentation.html",
     "canary-island-date-palm-care-san-diego.html",
     "old-escondido-palm-preservation.html",
     "palm-care-escondido.html",

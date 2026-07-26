@@ -9,6 +9,7 @@ CORE_ROLES = {
     "index.html": ("restructured", "Commercial orientation and three-pillar gateway"),
     "residential-palm-assessment.html": ("created", "Residential assessment and baseline conversion"),
     "managed-property-palm-services.html": ("created", "Managed-property inventory and reporting conversion"),
+    "urban-forest-palm-documentation.html": ("created", "Municipal, public-agency, institutional, and urban-forest palm documentation support"),
     "palm-proof-examples.html": ("created", "Approved sanitized proof presentation and privacy boundary"),
     "palm-records-monitoring-verification.html": ("restructured", "Canonical service overview and inquiry"),
     "quarterly-palm-care-san-diego.html": ("restructured", "Recurring monitoring pathway; URL preserved"),
@@ -41,7 +42,7 @@ def main() -> None:
     lines = [
         "# Route inventory and disposition",
         "",
-        f"{len(rows)} public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; three audience/proof routes were added. No route required a redirect because each valuable URL retains a distinct purpose.",
+        f"{len(rows)} public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; four audience/proof routes were added. No route required a redirect because each valuable URL retains a distinct purpose.",
         "",
         "| Route | Disposition | Commercial or educational purpose |",
         "|---|---|---|",

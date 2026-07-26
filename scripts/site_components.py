@@ -100,7 +100,7 @@ def footer(relative_root: str = "./") -> str:
     return f"""<footer class="site-footer">
   <div class="footer-grid">
     <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Owner-led mature palm protection, assessment, monitoring, and response from Old Escondido to communities across North County San Diego.</p></div>
-    <div><h2>Services</h2><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring monitoring</a><a href="{relative_root}managed-property-palm-services.html">Managed properties</a></div>
+    <div><h2>Services</h2><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring monitoring</a><a href="{relative_root}managed-property-palm-services.html">Managed properties</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest palm documentation</a></div>
     <div><h2>Resources</h2><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
   {credentials("BUSINESS_CREDENTIALS_FOOTER")}

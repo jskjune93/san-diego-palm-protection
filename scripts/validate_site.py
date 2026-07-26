@@ -229,6 +229,8 @@ def main() -> int:
             errors.append("sitemap missing Records & Monitoring page")
         if f"{BASE_URL}/report-a-palm.html" not in locs:
             errors.append("sitemap missing Report a Palm page")
+        if f"{BASE_URL}/urban-forest-palm-documentation.html" not in locs:
+            errors.append("sitemap missing Urban Forest Palm Documentation page")
         for entry in entries:
             if entry.get("status") == "published" and entry.get("page"):
                 if entry["canonical_url"] not in locs:
@@ -289,6 +291,8 @@ def main() -> int:
             errors.append("Report a Palm handoff should omit empty optional fields")
     if "./report-a-palm.html" not in homepage_text:
         errors.append("homepage does not link to Report a Palm")
+    if "./urban-forest-palm-documentation.html" not in homepage_text:
+        errors.append("homepage does not link to Urban Forest Palm Documentation")
     old_escondido_text = (ROOT / "old-escondido-palm-preservation.html").read_text(encoding="utf-8-sig")
     if "./report-a-palm.html" not in old_escondido_text:
         errors.append("Old Escondido initiative does not link to Report a Palm")
@@ -310,6 +314,7 @@ def main() -> int:
             ROOT / "sapw.html",
             ROOT / "south-american-palm-weevil-treatment-san-diego.html",
             ROOT / "palm-removal-coordination.html",
+            ROOT / "urban-forest-palm-documentation.html",
         ):
             page_text = path.read_text(encoding="utf-8-sig")
             if required_qualified_insured_scope not in page_text or required_current_scope not in page_text:
@@ -354,6 +359,7 @@ def main() -> int:
         "palm-sourcing-installation.html",
         "palm-journal-new.html",
         "palm-journal/documented-loss/",
+        "urban-forest-palm-documentation.html",
     ):
         if required_path not in homepage_text + records_text:
             errors.append(f"preserved service or editorial destination is not reachable from updated pages: {required_path}")

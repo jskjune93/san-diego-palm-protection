@@ -19,6 +19,7 @@
 - Do not publish client identity, address, contact or access details, private notes, local file paths, unapproved media, or stale-fingerprint exports.
 - Preserve this exact UFMP wording: “San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.”
 - Do not imply City endorsement, partnership, selection, approval, or adoption.
+- Keep `/urban-forest-palm-documentation.html` focused on palm inventory, condition documentation, monitoring, contractor verification, and implementation support. Do not claim full UFMP preparation, formal tree-risk assessment, laboratory diagnosis, engineering, municipal-code determinations, government status, or GIS integration beyond contract-defined export fields.
 - New routes require a clear role, canonical metadata, sitemap entry, shared navigation, responsive rendering, and automated validation.
 - Preserve progressive enhancement: conversion links and forms must remain usable without JavaScript and must not claim that opening an email app sent a message.
 - Maintain skip navigation, keyboard focus, 48px touch targets, mobile menu state/Escape handling, reduced motion, anchor offset, and horizontal-overflow protection.
