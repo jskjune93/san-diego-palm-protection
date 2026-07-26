@@ -99,7 +99,8 @@ def shared_head(title: str, description: str, canonical: str, og_image: str, ext
 
 
 def _legacy_styles_reference(relative_root: str = "./") -> str:
-    return f'''  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
+    return f'''  <link rel="icon" href="{relative_root}logo.png" type="image/png">
+  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
   <style>
     .hero {{ background: #efe7d8; padding: 56px 6vw 42px; }}
@@ -160,7 +161,8 @@ def _legacy_styles_reference(relative_root: str = "./") -> str:
 
 
 def styles(relative_root: str = "./") -> str:
-    return f'''  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
+    return f'''  <link rel="icon" href="{relative_root}logo.png" type="image/png">
+  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
   <link rel="stylesheet" href="{relative_root}site-assets/journal.css">'''
 

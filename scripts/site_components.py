@@ -43,6 +43,7 @@ def head(title: str, description: str, path: str, image: str = "background.jpg",
   <meta property="og:description" content="{escape(description)}">
   <meta property="og:image" content="{image_url}">
   <meta property="og:type" content="website">
+  <link rel="icon" href="{relative_root}logo.png" type="image/png">
   <link rel="stylesheet" href="{relative_root}site-assets/site.css">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
   <script type="application/ld+json">{json.dumps(schemas, ensure_ascii=False)}</script>
