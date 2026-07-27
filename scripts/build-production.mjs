@@ -1,4 +1,5 @@
 import { cp, mkdir, readFile, readdir, rm, stat, writeFile } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -65,7 +66,7 @@ async function main() {
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
   const routes = await htmlRoutes();
-  if (routes.length !== 40) throw new Error(`Expected 40 HTML routes, found ${routes.length}`);
+  if (routes.length !== 41) throw new Error(`Expected 41 HTML routes, found ${routes.length}`);
 
   const referenceQueue = [];
   for (const route of routes) {
@@ -95,11 +96,31 @@ async function main() {
     }
   }
 
+  const files = [...copied].map(item => item.split(path.sep).join("/")).sort();
+  const sha256_by_file = {};
+  for (const relative of files) {
+    const bytes = await readFile(path.join(output, relative));
+    sha256_by_file[relative] = createHash("sha256").update(bytes).digest("hex");
+  }
+  const releaseApprovals = JSON.parse(await readFile(path.join(root, "docs", "release-data", "when-sapw-became-local-approval.json"), "utf8"));
+  const sapwApproval = releaseApprovals.release_items?.["palm-journal/when-sapw-became-local.html"];
+  if (!sapwApproval || sapwApproval.approval_fingerprint !== "2204939026f694390763cebe4c2250c9964bd92f6597296fef66b874074fcbba") {
+    throw new Error("Approved SAPW article fingerprint is missing or stale.");
+  }
+  const journalEntries = JSON.parse(await readFile(path.join(root, "journal-data", "journal_entries.json"), "utf8"));
+  const sapwEntry = journalEntries.find(item => item.slug === "when-sapw-became-local");
+  if (!sapwEntry || sapwEntry.date !== sapwApproval.publication_date) {
+    throw new Error("SAPW article date does not match the controlled release date.");
+  }
   const manifest = {
     schema_version: 1,
     generated_from: "allowlisted public routes and referenced assets",
     html_routes: routes.length,
-    files: [...copied].map(item => item.split(path.sep).join("/")).sort(),
+    files,
+    sha256_by_file,
+    approved_release_items: {
+      "palm-journal/when-sapw-became-local.html": sapwApproval,
+    },
   };
   await writeFile(path.join(output, "production-manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
   console.log(`Production output ready: ${routes.length} routes, ${copied.size + 1} files.`);

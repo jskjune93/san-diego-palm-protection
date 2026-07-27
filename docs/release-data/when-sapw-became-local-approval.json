@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "release_items": {
+    "palm-journal/when-sapw-became-local.html": {
+      "source_product": "canonical Palm Journal draft_v3",
+      "approval_fingerprint": "2204939026f694390763cebe4c2250c9964bd92f6597296fef66b874074fcbba",
+      "publication_date": "2026-07-26",
+      "publication_date_policy": "must equal the actual production deployment date",
+      "observation_dates": [
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-26"
+      ],
+      "approved_media_items": 5
+    }
+  }
+}

@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from pathlib import Path
+import hashlib
 import json
+import os
 import re
 import sys
 
@@ -50,6 +52,23 @@ def main() -> int:
     else:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         html_paths = sorted(DIST / item for item in manifest.get("files", []) if item.endswith(".html"))
+        hashes = manifest.get("sha256_by_file", {})
+        for relative in manifest.get("files", []):
+            path = DIST / relative
+            actual = hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None
+            if hashes.get(relative) != actual:
+                errors.append(f"{relative}: production manifest hash mismatch")
+        approved = manifest.get("approved_release_items", {}).get("palm-journal/when-sapw-became-local.html", {})
+        if approved.get("approval_fingerprint") != "2204939026f694390763cebe4c2250c9964bd92f6597296fef66b874074fcbba":
+            errors.append("SAPW article approval fingerprint is missing or stale")
+        if approved.get("observation_dates") != ["2026-06-15", "2026-06-16", "2026-06-26"]:
+            errors.append("SAPW observation dates changed")
+        expected_publication_date = os.environ.get("SDPP_EXPECTED_PUBLICATION_DATE")
+        if expected_publication_date and approved.get("publication_date") != expected_publication_date:
+            errors.append(
+                f"SAPW publication date {approved.get('publication_date')} does not match deployment date "
+                f"{expected_publication_date}"
+            )
 
     for path in html_paths:
         text = path.read_text(encoding="utf-8-sig")

@@ -1,5 +1,31 @@
 [
   {
+    "slug": "when-sapw-became-local",
+    "title": "When SAPW Became Local",
+    "date": "2026-07-26",
+    "date_label": "Old Escondido | June 15–26, 2026",
+    "location": "Old Escondido",
+    "category": "Owner-Documented Field Record",
+    "topic": "Dated local South American palm weevil capture and trunk-observation chronology",
+    "excerpt": "A dated owner record connects captured adult palm weevils on June 15 and 16 with an adult observed on one declining Canary Island date palm trunk on June 26.",
+    "page": true,
+    "substantial": true,
+    "review": "owner-approved production artifact",
+    "related": [
+      "old-escondido-palm-weevils",
+      "old-escondido-adult-sapw-declining-cidp",
+      "monitoring-mature-cidp-after-palm-weevil-activity"
+    ],
+    "legacy_anchor": "when-sapw-became-local",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/when-sapw-became-local.html",
+    "primary_image": "./images/palm-journal/when-sapw-became-local/01-june-15-adult-sapw.jpg",
+    "primary_image_alt": "Adult South American palm weevil photographed from the side after capture in Old Escondido",
+    "gallery_images": [],
+    "classification": "Owner-Documented Field Record",
+    "modified_date": "2026-07-26"
+  },
+  {
     "slug": "old-escondido-mature-cidps-deserve-a-baseline",
     "title": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline",
     "date": "2026-07-19",

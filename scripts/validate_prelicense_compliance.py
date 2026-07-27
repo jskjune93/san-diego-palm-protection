@@ -126,6 +126,11 @@ RULES = [
 
 ALWAYS_BLOCK_RULES = [
     Rule(
+        "business_licensed_claim",
+        re.compile(r"\b(?:SDPP|San Diego Palm Protection|we)\b.{0,40}\b(?:is|are|remain|currently)\s+(?:fully\s+)?licensed\b", re.I),
+        "Do not describe SDPP as licensed without an active, independently verified Pest Control Business License.",
+    ),
+    Rule(
         "active_unverified_qal_claim",
         re.compile(r"\bactive\s+qualified applicator license\b|\bactive\s+QAL\b", re.I),
         "Do not add an active-status claim outside the authoritative credential component.",

@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-40 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; four audience/proof routes were added. No route required a redirect because each valuable URL retains a distinct purpose.
+41 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; four audience/proof routes were added. No route required a redirect because each valuable URL retains a distinct purpose.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -32,6 +32,7 @@
 | `/palm-journal/old-escondido-palm-weevils.html` | preserved / regenerated | Palm Journal evidence: SAPW Documentation |
 | `/palm-journal/poway-old-winery-cidp.html` | preserved / regenerated | Palm Journal evidence: Preservation and Historic Landscapes |
 | `/palm-journal/rancho-santa-fe-palm-walk.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
+| `/palm-journal/when-sapw-became-local.html` | preserved / regenerated | Palm Journal evidence: Owner-Documented Field Record |
 | `/palm-proof-examples.html` | created | Approved sanitized proof presentation and privacy boundary |
 | `/palm-records-monitoring-verification.html` | restructured | Canonical service overview and inquiry |
 | `/palm-removal-coordination.html` | restructured | Decline, removal, documented loss, and replacement pathway |

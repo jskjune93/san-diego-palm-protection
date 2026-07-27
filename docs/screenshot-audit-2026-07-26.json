@@ -1,0 +1,2081 @@
+{
+  "generated_at": "2026-07-26T00:00:00-07:00",
+  "base_url": "http://127.0.0.1:8123",
+  "routes": 41,
+  "viewports": [
+    {
+      "width": 360,
+      "height": 800
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 768,
+      "height": 1024
+    },
+    {
+      "width": 1366,
+      "height": 768
+    },
+    {
+      "width": 1920,
+      "height": 1080
+    }
+  ],
+  "screenshots": 205,
+  "failures": [],
+  "results": [
+    {
+      "route": "canary-island-date-palm-care-san-diego.html",
+      "viewport": "360x800",
+      "file": "360x800__canary-island-date-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Canary Island Date Palm Assessment & Care",
+      "scrollWidth": 345,
+      "title": "Canary Island Date Palm Assessment & Care | San Diego Palm Protection"
+    },
+    {
+      "route": "cidp-risk-checklist.html",
+      "viewport": "360x800",
+      "file": "360x800__cidp-risk-checklist.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Canary Island Date Palm Risk Checklist",
+      "scrollWidth": 345,
+      "title": "Canary Island Date Palm Risk Checklist | San Diego Palm Protection"
+    },
+    {
+      "route": "index.html",
+      "viewport": "360x800",
+      "file": "360x800__index.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Protect Your Mature Palms in North County San Diego",
+      "scrollWidth": 345,
+      "title": "Mature Palm Protection in North County San Diego | SDPP"
+    },
+    {
+      "route": "managed-property-palm-services.html",
+      "viewport": "360x800",
+      "file": "360x800__managed-property-palm-services.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Know every palm. Track every decision.",
+      "scrollWidth": 345,
+      "title": "Managed-property Palm Inventory & Reporting | SDPP"
+    },
+    {
+      "route": "old-escondido-palm-preservation.html",
+      "viewport": "360x800",
+      "file": "360x800__old-escondido-palm-preservation.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Local Protection for Old Escondido's Mature Palms",
+      "scrollWidth": 345,
+      "title": "Old Escondido Mature Palm Protection | SDPP"
+    },
+    {
+      "route": "palm-care-escondido.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-care-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Palm Assessment & Monitoring in Escondido",
+      "scrollWidth": 345,
+      "title": "Palm Assessment & Monitoring in Escondido | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-poway.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-care-poway.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Palm Assessment & Monitoring in Poway",
+      "scrollWidth": 345,
+      "title": "Palm Assessment & Monitoring in Poway | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-rancho-santa-fe.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-care-rancho-santa-fe.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Palm Assessment & Monitoring in Rancho Santa Fe",
+      "scrollWidth": 345,
+      "title": "Palm Assessment & Monitoring in Rancho Santa Fe | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-faq-san-diego.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-faq-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Palm Assessment & Monitoring FAQ",
+      "scrollWidth": 345,
+      "title": "Palm Assessment & Monitoring FAQ | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-journal-new.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal-new.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Field Notes on Mature Palms in San Diego County",
+      "scrollWidth": 345,
+      "title": "SDPP Palm Journal | Field Notes and Palm Documentation"
+    },
+    {
+      "route": "palm-journal/cidp-assessment-local-palm-health-concerns.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_cidp-assessment-local-palm-health-concerns.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "CIDP Visible Condition Record: Local Palm Health Concerns",
+      "scrollWidth": 345,
+      "title": "CIDP Visible Condition Record: Local Palm Health Concerns | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/classic-old-escondido-canary-island-date-palm.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_classic-old-escondido-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Classic Old Escondido Canary Island Date Palm",
+      "scrollWidth": 345,
+      "title": "Classic Old Escondido Canary Island Date Palm | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/documented-loss/index.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_documented-loss_index.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Documented Loss",
+      "scrollWidth": 345,
+      "title": "Documented Loss | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-cidp.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_grand-ave-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "A Walk Through Escondido's Historic District",
+      "scrollWidth": 345,
+      "title": "A Walk Through Escondido's Historic District | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-old-escondido.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_grand-ave-old-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "What's Happening to the Canary Palms on Grand Avenue?",
+      "scrollWidth": 345,
+      "title": "What's Happening to the Canary Palms on Grand Avenue? | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/healthy-palm-growth.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_healthy-palm-growth.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "What Healthy Palm Growth Looks Like",
+      "scrollWidth": 345,
+      "title": "What Healthy Palm Growth Looks Like | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/las-palmas-no-reply-then-the-saws.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_las-palmas-no-reply-then-the-saws.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "No Reply. Then the Saws.",
+      "scrollWidth": 345,
+      "title": "No Reply. Then the Saws. | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_monitoring-mature-cidp-after-palm-weevil-activity.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity",
+      "scrollWidth": 345,
+      "title": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-adult-sapw-declining-cidp.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_old-escondido-adult-sapw-declining-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido",
+      "scrollWidth": 345,
+      "title": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-albert-h-beach-house-palms.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_old-escondido-albert-h-beach-house-palms.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms",
+      "scrollWidth": 345,
+      "title": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-collection.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_old-escondido-cidp-collection.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Old Escondido: A Living Collection of Canary Island Date Palms",
+      "scrollWidth": 345,
+      "title": "Old Escondido: A Living Collection of Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-icons-and-change.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_old-escondido-cidp-icons-and-change.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change",
+      "scrollWidth": 345,
+      "title": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-historic-canary-island-date-palm.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_old-escondido-historic-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks",
+      "scrollWidth": 345,
+      "title": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_old-escondido-mature-cidps-deserve-a-baseline.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline",
+      "scrollWidth": 345,
+      "title": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mexican-fan-palm-curve.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_old-escondido-mexican-fan-palm-curve.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Mexican Fan Palms, Curve, and Character in Old Escondido",
+      "scrollWidth": 345,
+      "title": "Mexican Fan Palms, Curve, and Character in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-palm-weevils.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_old-escondido-palm-weevils.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido",
+      "scrollWidth": 345,
+      "title": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/poway-old-winery-cidp.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_poway-old-winery-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Poway's Statement Canary Island Date Palms Near Old Winery Road",
+      "scrollWidth": 345,
+      "title": "Poway's Statement Canary Island Date Palms Near Old Winery Road | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/rancho-santa-fe-palm-walk.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_rancho-santa-fe-palm-walk.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Palm Walk: Rancho Santa Fe Observations",
+      "scrollWidth": 345,
+      "title": "Palm Walk: Rancho Santa Fe Observations | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/when-sapw-became-local.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-journal_when-sapw-became-local.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "When SAPW Became Local",
+      "scrollWidth": 345,
+      "title": "When SAPW Became Local | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-proof-examples.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-proof-examples.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "See the palms, observations, and written follow-through.",
+      "scrollWidth": 345,
+      "title": "Sample Palm Assessment Report | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-records-monitoring-verification.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-records-monitoring-verification.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Practical help for the full life of a mature palm.",
+      "scrollWidth": 345,
+      "title": "Palm Assessment, Monitoring & Documentation Services | SDPP"
+    },
+    {
+      "route": "palm-removal-coordination.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-removal-coordination.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Decline, Removal & Replacement Coordination",
+      "scrollWidth": 345,
+      "title": "Palm Decline, Removal & Replacement Coordination | SDPP"
+    },
+    {
+      "route": "palm-sourcing-installation.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-sourcing-installation.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Palm Sourcing, Installation & Replacement Planning",
+      "scrollWidth": 345,
+      "title": "Palm Sourcing, Installation & Replacement Planning | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-stewardship-plans.html",
+      "viewport": "360x800",
+      "file": "360x800__palm-stewardship-plans.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Protect a Mature Palm Before the Decision Becomes Urgent",
+      "scrollWidth": 345,
+      "title": "Palm Protection & Treatment | San Diego Palm Protection"
+    },
+    {
+      "route": "quarterly-palm-care-san-diego.html",
+      "viewport": "360x800",
+      "file": "360x800__quarterly-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Recurring Palm Monitoring",
+      "scrollWidth": 345,
+      "title": "Recurring Palm Monitoring | San Diego Palm Protection"
+    },
+    {
+      "route": "report-a-palm.html",
+      "viewport": "360x800",
+      "file": "360x800__report-a-palm.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Report a Palm or Request Review",
+      "scrollWidth": 345,
+      "title": "Report a Palm or Request Review | San Diego Palm Protection"
+    },
+    {
+      "route": "residential-palm-assessment.html",
+      "viewport": "360x800",
+      "file": "360x800__residential-palm-assessment.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Residential Mature Palm Assessment",
+      "scrollWidth": 345,
+      "title": "Residential Mature Palm Assessment | San Diego Palm Protection"
+    },
+    {
+      "route": "sapw.html",
+      "viewport": "360x800",
+      "file": "360x800__sapw.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "South American Palm Weevil: Warning Signs and Next Steps",
+      "scrollWidth": 345,
+      "title": "South American Palm Weevil Assessment in San Diego | SDPP"
+    },
+    {
+      "route": "south-american-palm-weevil-treatment-san-diego.html",
+      "viewport": "360x800",
+      "file": "360x800__south-american-palm-weevil-treatment-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "South American Palm Weevil Protection & Treatment",
+      "scrollWidth": 345,
+      "title": "South American Palm Weevil Protection & Treatment | SDPP"
+    },
+    {
+      "route": "specimen-palms-cycads.html",
+      "viewport": "360x800",
+      "file": "360x800__specimen-palms-cycads.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Specimen Palms & Cycads",
+      "scrollWidth": 345,
+      "title": "Specimen Palms & Cycads | San Diego Palm Protection"
+    },
+    {
+      "route": "urban-forest-palm-documentation.html",
+      "viewport": "360x800",
+      "file": "360x800__urban-forest-palm-documentation.html.png",
+      "broken": 0,
+      "clientWidth": 345,
+      "h1": "Palm Inventory, Condition Documentation & Urban Forest Support",
+      "scrollWidth": 345,
+      "title": "Old Escondido Palm Documentation for Urban-Forest Decisions | San Diego Palm Protection"
+    },
+    {
+      "route": "canary-island-date-palm-care-san-diego.html",
+      "viewport": "390x844",
+      "file": "390x844__canary-island-date-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Canary Island Date Palm Assessment & Care",
+      "scrollWidth": 375,
+      "title": "Canary Island Date Palm Assessment & Care | San Diego Palm Protection"
+    },
+    {
+      "route": "cidp-risk-checklist.html",
+      "viewport": "390x844",
+      "file": "390x844__cidp-risk-checklist.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Canary Island Date Palm Risk Checklist",
+      "scrollWidth": 375,
+      "title": "Canary Island Date Palm Risk Checklist | San Diego Palm Protection"
+    },
+    {
+      "route": "index.html",
+      "viewport": "390x844",
+      "file": "390x844__index.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Protect Your Mature Palms in North County San Diego",
+      "scrollWidth": 375,
+      "title": "Mature Palm Protection in North County San Diego | SDPP"
+    },
+    {
+      "route": "managed-property-palm-services.html",
+      "viewport": "390x844",
+      "file": "390x844__managed-property-palm-services.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Know every palm. Track every decision.",
+      "scrollWidth": 375,
+      "title": "Managed-property Palm Inventory & Reporting | SDPP"
+    },
+    {
+      "route": "old-escondido-palm-preservation.html",
+      "viewport": "390x844",
+      "file": "390x844__old-escondido-palm-preservation.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Local Protection for Old Escondido's Mature Palms",
+      "scrollWidth": 375,
+      "title": "Old Escondido Mature Palm Protection | SDPP"
+    },
+    {
+      "route": "palm-care-escondido.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-care-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Palm Assessment & Monitoring in Escondido",
+      "scrollWidth": 375,
+      "title": "Palm Assessment & Monitoring in Escondido | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-poway.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-care-poway.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Palm Assessment & Monitoring in Poway",
+      "scrollWidth": 375,
+      "title": "Palm Assessment & Monitoring in Poway | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-rancho-santa-fe.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-care-rancho-santa-fe.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Palm Assessment & Monitoring in Rancho Santa Fe",
+      "scrollWidth": 375,
+      "title": "Palm Assessment & Monitoring in Rancho Santa Fe | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-faq-san-diego.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-faq-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Palm Assessment & Monitoring FAQ",
+      "scrollWidth": 375,
+      "title": "Palm Assessment & Monitoring FAQ | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-journal-new.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal-new.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Field Notes on Mature Palms in San Diego County",
+      "scrollWidth": 375,
+      "title": "SDPP Palm Journal | Field Notes and Palm Documentation"
+    },
+    {
+      "route": "palm-journal/cidp-assessment-local-palm-health-concerns.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_cidp-assessment-local-palm-health-concerns.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "CIDP Visible Condition Record: Local Palm Health Concerns",
+      "scrollWidth": 375,
+      "title": "CIDP Visible Condition Record: Local Palm Health Concerns | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/classic-old-escondido-canary-island-date-palm.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_classic-old-escondido-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Classic Old Escondido Canary Island Date Palm",
+      "scrollWidth": 375,
+      "title": "Classic Old Escondido Canary Island Date Palm | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/documented-loss/index.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_documented-loss_index.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Documented Loss",
+      "scrollWidth": 375,
+      "title": "Documented Loss | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-cidp.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_grand-ave-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "A Walk Through Escondido's Historic District",
+      "scrollWidth": 375,
+      "title": "A Walk Through Escondido's Historic District | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-old-escondido.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_grand-ave-old-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "What's Happening to the Canary Palms on Grand Avenue?",
+      "scrollWidth": 375,
+      "title": "What's Happening to the Canary Palms on Grand Avenue? | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/healthy-palm-growth.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_healthy-palm-growth.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "What Healthy Palm Growth Looks Like",
+      "scrollWidth": 375,
+      "title": "What Healthy Palm Growth Looks Like | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/las-palmas-no-reply-then-the-saws.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_las-palmas-no-reply-then-the-saws.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "No Reply. Then the Saws.",
+      "scrollWidth": 375,
+      "title": "No Reply. Then the Saws. | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_monitoring-mature-cidp-after-palm-weevil-activity.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity",
+      "scrollWidth": 375,
+      "title": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-adult-sapw-declining-cidp.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_old-escondido-adult-sapw-declining-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido",
+      "scrollWidth": 375,
+      "title": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-albert-h-beach-house-palms.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_old-escondido-albert-h-beach-house-palms.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms",
+      "scrollWidth": 375,
+      "title": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-collection.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_old-escondido-cidp-collection.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Old Escondido: A Living Collection of Canary Island Date Palms",
+      "scrollWidth": 375,
+      "title": "Old Escondido: A Living Collection of Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-icons-and-change.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_old-escondido-cidp-icons-and-change.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change",
+      "scrollWidth": 375,
+      "title": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-historic-canary-island-date-palm.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_old-escondido-historic-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks",
+      "scrollWidth": 375,
+      "title": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_old-escondido-mature-cidps-deserve-a-baseline.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline",
+      "scrollWidth": 375,
+      "title": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mexican-fan-palm-curve.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_old-escondido-mexican-fan-palm-curve.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Mexican Fan Palms, Curve, and Character in Old Escondido",
+      "scrollWidth": 375,
+      "title": "Mexican Fan Palms, Curve, and Character in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-palm-weevils.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_old-escondido-palm-weevils.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido",
+      "scrollWidth": 375,
+      "title": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/poway-old-winery-cidp.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_poway-old-winery-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Poway's Statement Canary Island Date Palms Near Old Winery Road",
+      "scrollWidth": 375,
+      "title": "Poway's Statement Canary Island Date Palms Near Old Winery Road | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/rancho-santa-fe-palm-walk.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_rancho-santa-fe-palm-walk.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Palm Walk: Rancho Santa Fe Observations",
+      "scrollWidth": 375,
+      "title": "Palm Walk: Rancho Santa Fe Observations | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/when-sapw-became-local.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-journal_when-sapw-became-local.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "When SAPW Became Local",
+      "scrollWidth": 375,
+      "title": "When SAPW Became Local | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-proof-examples.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-proof-examples.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "See the palms, observations, and written follow-through.",
+      "scrollWidth": 375,
+      "title": "Sample Palm Assessment Report | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-records-monitoring-verification.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-records-monitoring-verification.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Practical help for the full life of a mature palm.",
+      "scrollWidth": 375,
+      "title": "Palm Assessment, Monitoring & Documentation Services | SDPP"
+    },
+    {
+      "route": "palm-removal-coordination.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-removal-coordination.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Decline, Removal & Replacement Coordination",
+      "scrollWidth": 375,
+      "title": "Palm Decline, Removal & Replacement Coordination | SDPP"
+    },
+    {
+      "route": "palm-sourcing-installation.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-sourcing-installation.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Palm Sourcing, Installation & Replacement Planning",
+      "scrollWidth": 375,
+      "title": "Palm Sourcing, Installation & Replacement Planning | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-stewardship-plans.html",
+      "viewport": "390x844",
+      "file": "390x844__palm-stewardship-plans.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Protect a Mature Palm Before the Decision Becomes Urgent",
+      "scrollWidth": 375,
+      "title": "Palm Protection & Treatment | San Diego Palm Protection"
+    },
+    {
+      "route": "quarterly-palm-care-san-diego.html",
+      "viewport": "390x844",
+      "file": "390x844__quarterly-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Recurring Palm Monitoring",
+      "scrollWidth": 375,
+      "title": "Recurring Palm Monitoring | San Diego Palm Protection"
+    },
+    {
+      "route": "report-a-palm.html",
+      "viewport": "390x844",
+      "file": "390x844__report-a-palm.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Report a Palm or Request Review",
+      "scrollWidth": 375,
+      "title": "Report a Palm or Request Review | San Diego Palm Protection"
+    },
+    {
+      "route": "residential-palm-assessment.html",
+      "viewport": "390x844",
+      "file": "390x844__residential-palm-assessment.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Residential Mature Palm Assessment",
+      "scrollWidth": 375,
+      "title": "Residential Mature Palm Assessment | San Diego Palm Protection"
+    },
+    {
+      "route": "sapw.html",
+      "viewport": "390x844",
+      "file": "390x844__sapw.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "South American Palm Weevil: Warning Signs and Next Steps",
+      "scrollWidth": 375,
+      "title": "South American Palm Weevil Assessment in San Diego | SDPP"
+    },
+    {
+      "route": "south-american-palm-weevil-treatment-san-diego.html",
+      "viewport": "390x844",
+      "file": "390x844__south-american-palm-weevil-treatment-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "South American Palm Weevil Protection & Treatment",
+      "scrollWidth": 375,
+      "title": "South American Palm Weevil Protection & Treatment | SDPP"
+    },
+    {
+      "route": "specimen-palms-cycads.html",
+      "viewport": "390x844",
+      "file": "390x844__specimen-palms-cycads.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Specimen Palms & Cycads",
+      "scrollWidth": 375,
+      "title": "Specimen Palms & Cycads | San Diego Palm Protection"
+    },
+    {
+      "route": "urban-forest-palm-documentation.html",
+      "viewport": "390x844",
+      "file": "390x844__urban-forest-palm-documentation.html.png",
+      "broken": 0,
+      "clientWidth": 375,
+      "h1": "Palm Inventory, Condition Documentation & Urban Forest Support",
+      "scrollWidth": 375,
+      "title": "Old Escondido Palm Documentation for Urban-Forest Decisions | San Diego Palm Protection"
+    },
+    {
+      "route": "canary-island-date-palm-care-san-diego.html",
+      "viewport": "768x1024",
+      "file": "768x1024__canary-island-date-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Canary Island Date Palm Assessment & Care",
+      "scrollWidth": 753,
+      "title": "Canary Island Date Palm Assessment & Care | San Diego Palm Protection"
+    },
+    {
+      "route": "cidp-risk-checklist.html",
+      "viewport": "768x1024",
+      "file": "768x1024__cidp-risk-checklist.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Canary Island Date Palm Risk Checklist",
+      "scrollWidth": 753,
+      "title": "Canary Island Date Palm Risk Checklist | San Diego Palm Protection"
+    },
+    {
+      "route": "index.html",
+      "viewport": "768x1024",
+      "file": "768x1024__index.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Protect Your Mature Palms in North County San Diego",
+      "scrollWidth": 753,
+      "title": "Mature Palm Protection in North County San Diego | SDPP"
+    },
+    {
+      "route": "managed-property-palm-services.html",
+      "viewport": "768x1024",
+      "file": "768x1024__managed-property-palm-services.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Know every palm. Track every decision.",
+      "scrollWidth": 753,
+      "title": "Managed-property Palm Inventory & Reporting | SDPP"
+    },
+    {
+      "route": "old-escondido-palm-preservation.html",
+      "viewport": "768x1024",
+      "file": "768x1024__old-escondido-palm-preservation.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Local Protection for Old Escondido's Mature Palms",
+      "scrollWidth": 753,
+      "title": "Old Escondido Mature Palm Protection | SDPP"
+    },
+    {
+      "route": "palm-care-escondido.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-care-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Palm Assessment & Monitoring in Escondido",
+      "scrollWidth": 753,
+      "title": "Palm Assessment & Monitoring in Escondido | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-poway.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-care-poway.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Palm Assessment & Monitoring in Poway",
+      "scrollWidth": 753,
+      "title": "Palm Assessment & Monitoring in Poway | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-rancho-santa-fe.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-care-rancho-santa-fe.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Palm Assessment & Monitoring in Rancho Santa Fe",
+      "scrollWidth": 753,
+      "title": "Palm Assessment & Monitoring in Rancho Santa Fe | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-faq-san-diego.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-faq-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Palm Assessment & Monitoring FAQ",
+      "scrollWidth": 753,
+      "title": "Palm Assessment & Monitoring FAQ | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-journal-new.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal-new.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Field Notes on Mature Palms in San Diego County",
+      "scrollWidth": 753,
+      "title": "SDPP Palm Journal | Field Notes and Palm Documentation"
+    },
+    {
+      "route": "palm-journal/cidp-assessment-local-palm-health-concerns.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_cidp-assessment-local-palm-health-concerns.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "CIDP Visible Condition Record: Local Palm Health Concerns",
+      "scrollWidth": 753,
+      "title": "CIDP Visible Condition Record: Local Palm Health Concerns | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/classic-old-escondido-canary-island-date-palm.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_classic-old-escondido-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Classic Old Escondido Canary Island Date Palm",
+      "scrollWidth": 753,
+      "title": "Classic Old Escondido Canary Island Date Palm | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/documented-loss/index.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_documented-loss_index.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Documented Loss",
+      "scrollWidth": 753,
+      "title": "Documented Loss | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-cidp.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_grand-ave-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "A Walk Through Escondido's Historic District",
+      "scrollWidth": 753,
+      "title": "A Walk Through Escondido's Historic District | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-old-escondido.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_grand-ave-old-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "What's Happening to the Canary Palms on Grand Avenue?",
+      "scrollWidth": 753,
+      "title": "What's Happening to the Canary Palms on Grand Avenue? | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/healthy-palm-growth.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_healthy-palm-growth.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "What Healthy Palm Growth Looks Like",
+      "scrollWidth": 753,
+      "title": "What Healthy Palm Growth Looks Like | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/las-palmas-no-reply-then-the-saws.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_las-palmas-no-reply-then-the-saws.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "No Reply. Then the Saws.",
+      "scrollWidth": 753,
+      "title": "No Reply. Then the Saws. | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_monitoring-mature-cidp-after-palm-weevil-activity.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity",
+      "scrollWidth": 753,
+      "title": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-adult-sapw-declining-cidp.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_old-escondido-adult-sapw-declining-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido",
+      "scrollWidth": 753,
+      "title": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-albert-h-beach-house-palms.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_old-escondido-albert-h-beach-house-palms.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms",
+      "scrollWidth": 753,
+      "title": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-collection.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_old-escondido-cidp-collection.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Old Escondido: A Living Collection of Canary Island Date Palms",
+      "scrollWidth": 753,
+      "title": "Old Escondido: A Living Collection of Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-icons-and-change.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_old-escondido-cidp-icons-and-change.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change",
+      "scrollWidth": 753,
+      "title": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-historic-canary-island-date-palm.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_old-escondido-historic-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks",
+      "scrollWidth": 753,
+      "title": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_old-escondido-mature-cidps-deserve-a-baseline.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline",
+      "scrollWidth": 753,
+      "title": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mexican-fan-palm-curve.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_old-escondido-mexican-fan-palm-curve.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Mexican Fan Palms, Curve, and Character in Old Escondido",
+      "scrollWidth": 753,
+      "title": "Mexican Fan Palms, Curve, and Character in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-palm-weevils.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_old-escondido-palm-weevils.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido",
+      "scrollWidth": 753,
+      "title": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/poway-old-winery-cidp.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_poway-old-winery-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Poway's Statement Canary Island Date Palms Near Old Winery Road",
+      "scrollWidth": 753,
+      "title": "Poway's Statement Canary Island Date Palms Near Old Winery Road | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/rancho-santa-fe-palm-walk.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_rancho-santa-fe-palm-walk.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Palm Walk: Rancho Santa Fe Observations",
+      "scrollWidth": 753,
+      "title": "Palm Walk: Rancho Santa Fe Observations | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/when-sapw-became-local.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-journal_when-sapw-became-local.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "When SAPW Became Local",
+      "scrollWidth": 753,
+      "title": "When SAPW Became Local | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-proof-examples.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-proof-examples.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "See the palms, observations, and written follow-through.",
+      "scrollWidth": 753,
+      "title": "Sample Palm Assessment Report | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-records-monitoring-verification.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-records-monitoring-verification.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Practical help for the full life of a mature palm.",
+      "scrollWidth": 753,
+      "title": "Palm Assessment, Monitoring & Documentation Services | SDPP"
+    },
+    {
+      "route": "palm-removal-coordination.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-removal-coordination.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Decline, Removal & Replacement Coordination",
+      "scrollWidth": 753,
+      "title": "Palm Decline, Removal & Replacement Coordination | SDPP"
+    },
+    {
+      "route": "palm-sourcing-installation.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-sourcing-installation.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Palm Sourcing, Installation & Replacement Planning",
+      "scrollWidth": 753,
+      "title": "Palm Sourcing, Installation & Replacement Planning | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-stewardship-plans.html",
+      "viewport": "768x1024",
+      "file": "768x1024__palm-stewardship-plans.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Protect a Mature Palm Before the Decision Becomes Urgent",
+      "scrollWidth": 753,
+      "title": "Palm Protection & Treatment | San Diego Palm Protection"
+    },
+    {
+      "route": "quarterly-palm-care-san-diego.html",
+      "viewport": "768x1024",
+      "file": "768x1024__quarterly-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Recurring Palm Monitoring",
+      "scrollWidth": 753,
+      "title": "Recurring Palm Monitoring | San Diego Palm Protection"
+    },
+    {
+      "route": "report-a-palm.html",
+      "viewport": "768x1024",
+      "file": "768x1024__report-a-palm.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Report a Palm or Request Review",
+      "scrollWidth": 753,
+      "title": "Report a Palm or Request Review | San Diego Palm Protection"
+    },
+    {
+      "route": "residential-palm-assessment.html",
+      "viewport": "768x1024",
+      "file": "768x1024__residential-palm-assessment.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Residential Mature Palm Assessment",
+      "scrollWidth": 753,
+      "title": "Residential Mature Palm Assessment | San Diego Palm Protection"
+    },
+    {
+      "route": "sapw.html",
+      "viewport": "768x1024",
+      "file": "768x1024__sapw.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "South American Palm Weevil: Warning Signs and Next Steps",
+      "scrollWidth": 753,
+      "title": "South American Palm Weevil Assessment in San Diego | SDPP"
+    },
+    {
+      "route": "south-american-palm-weevil-treatment-san-diego.html",
+      "viewport": "768x1024",
+      "file": "768x1024__south-american-palm-weevil-treatment-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "South American Palm Weevil Protection & Treatment",
+      "scrollWidth": 753,
+      "title": "South American Palm Weevil Protection & Treatment | SDPP"
+    },
+    {
+      "route": "specimen-palms-cycads.html",
+      "viewport": "768x1024",
+      "file": "768x1024__specimen-palms-cycads.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Specimen Palms & Cycads",
+      "scrollWidth": 753,
+      "title": "Specimen Palms & Cycads | San Diego Palm Protection"
+    },
+    {
+      "route": "urban-forest-palm-documentation.html",
+      "viewport": "768x1024",
+      "file": "768x1024__urban-forest-palm-documentation.html.png",
+      "broken": 0,
+      "clientWidth": 753,
+      "h1": "Palm Inventory, Condition Documentation & Urban Forest Support",
+      "scrollWidth": 753,
+      "title": "Old Escondido Palm Documentation for Urban-Forest Decisions | San Diego Palm Protection"
+    },
+    {
+      "route": "canary-island-date-palm-care-san-diego.html",
+      "viewport": "1366x768",
+      "file": "1366x768__canary-island-date-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Canary Island Date Palm Assessment & Care",
+      "scrollWidth": 1351,
+      "title": "Canary Island Date Palm Assessment & Care | San Diego Palm Protection"
+    },
+    {
+      "route": "cidp-risk-checklist.html",
+      "viewport": "1366x768",
+      "file": "1366x768__cidp-risk-checklist.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Canary Island Date Palm Risk Checklist",
+      "scrollWidth": 1351,
+      "title": "Canary Island Date Palm Risk Checklist | San Diego Palm Protection"
+    },
+    {
+      "route": "index.html",
+      "viewport": "1366x768",
+      "file": "1366x768__index.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Protect Your Mature Palms in North County San Diego",
+      "scrollWidth": 1351,
+      "title": "Mature Palm Protection in North County San Diego | SDPP"
+    },
+    {
+      "route": "managed-property-palm-services.html",
+      "viewport": "1366x768",
+      "file": "1366x768__managed-property-palm-services.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Know every palm. Track every decision.",
+      "scrollWidth": 1351,
+      "title": "Managed-property Palm Inventory & Reporting | SDPP"
+    },
+    {
+      "route": "old-escondido-palm-preservation.html",
+      "viewport": "1366x768",
+      "file": "1366x768__old-escondido-palm-preservation.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Local Protection for Old Escondido's Mature Palms",
+      "scrollWidth": 1351,
+      "title": "Old Escondido Mature Palm Protection | SDPP"
+    },
+    {
+      "route": "palm-care-escondido.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-care-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Palm Assessment & Monitoring in Escondido",
+      "scrollWidth": 1351,
+      "title": "Palm Assessment & Monitoring in Escondido | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-poway.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-care-poway.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Palm Assessment & Monitoring in Poway",
+      "scrollWidth": 1351,
+      "title": "Palm Assessment & Monitoring in Poway | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-rancho-santa-fe.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-care-rancho-santa-fe.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Palm Assessment & Monitoring in Rancho Santa Fe",
+      "scrollWidth": 1351,
+      "title": "Palm Assessment & Monitoring in Rancho Santa Fe | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-faq-san-diego.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-faq-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Palm Assessment & Monitoring FAQ",
+      "scrollWidth": 1351,
+      "title": "Palm Assessment & Monitoring FAQ | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-journal-new.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal-new.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Field Notes on Mature Palms in San Diego County",
+      "scrollWidth": 1351,
+      "title": "SDPP Palm Journal | Field Notes and Palm Documentation"
+    },
+    {
+      "route": "palm-journal/cidp-assessment-local-palm-health-concerns.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_cidp-assessment-local-palm-health-concerns.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "CIDP Visible Condition Record: Local Palm Health Concerns",
+      "scrollWidth": 1351,
+      "title": "CIDP Visible Condition Record: Local Palm Health Concerns | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/classic-old-escondido-canary-island-date-palm.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_classic-old-escondido-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Classic Old Escondido Canary Island Date Palm",
+      "scrollWidth": 1351,
+      "title": "Classic Old Escondido Canary Island Date Palm | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/documented-loss/index.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_documented-loss_index.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Documented Loss",
+      "scrollWidth": 1351,
+      "title": "Documented Loss | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-cidp.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_grand-ave-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "A Walk Through Escondido's Historic District",
+      "scrollWidth": 1351,
+      "title": "A Walk Through Escondido's Historic District | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-old-escondido.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_grand-ave-old-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "What's Happening to the Canary Palms on Grand Avenue?",
+      "scrollWidth": 1351,
+      "title": "What's Happening to the Canary Palms on Grand Avenue? | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/healthy-palm-growth.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_healthy-palm-growth.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "What Healthy Palm Growth Looks Like",
+      "scrollWidth": 1351,
+      "title": "What Healthy Palm Growth Looks Like | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/las-palmas-no-reply-then-the-saws.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_las-palmas-no-reply-then-the-saws.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "No Reply. Then the Saws.",
+      "scrollWidth": 1351,
+      "title": "No Reply. Then the Saws. | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_monitoring-mature-cidp-after-palm-weevil-activity.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity",
+      "scrollWidth": 1351,
+      "title": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-adult-sapw-declining-cidp.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_old-escondido-adult-sapw-declining-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido",
+      "scrollWidth": 1351,
+      "title": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-albert-h-beach-house-palms.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_old-escondido-albert-h-beach-house-palms.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms",
+      "scrollWidth": 1351,
+      "title": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-collection.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_old-escondido-cidp-collection.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Old Escondido: A Living Collection of Canary Island Date Palms",
+      "scrollWidth": 1351,
+      "title": "Old Escondido: A Living Collection of Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-icons-and-change.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_old-escondido-cidp-icons-and-change.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change",
+      "scrollWidth": 1351,
+      "title": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-historic-canary-island-date-palm.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_old-escondido-historic-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks",
+      "scrollWidth": 1351,
+      "title": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_old-escondido-mature-cidps-deserve-a-baseline.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline",
+      "scrollWidth": 1351,
+      "title": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mexican-fan-palm-curve.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_old-escondido-mexican-fan-palm-curve.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Mexican Fan Palms, Curve, and Character in Old Escondido",
+      "scrollWidth": 1351,
+      "title": "Mexican Fan Palms, Curve, and Character in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-palm-weevils.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_old-escondido-palm-weevils.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido",
+      "scrollWidth": 1351,
+      "title": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/poway-old-winery-cidp.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_poway-old-winery-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Poway's Statement Canary Island Date Palms Near Old Winery Road",
+      "scrollWidth": 1351,
+      "title": "Poway's Statement Canary Island Date Palms Near Old Winery Road | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/rancho-santa-fe-palm-walk.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_rancho-santa-fe-palm-walk.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Palm Walk: Rancho Santa Fe Observations",
+      "scrollWidth": 1351,
+      "title": "Palm Walk: Rancho Santa Fe Observations | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/when-sapw-became-local.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-journal_when-sapw-became-local.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "When SAPW Became Local",
+      "scrollWidth": 1351,
+      "title": "When SAPW Became Local | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-proof-examples.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-proof-examples.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "See the palms, observations, and written follow-through.",
+      "scrollWidth": 1351,
+      "title": "Sample Palm Assessment Report | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-records-monitoring-verification.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-records-monitoring-verification.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Practical help for the full life of a mature palm.",
+      "scrollWidth": 1351,
+      "title": "Palm Assessment, Monitoring & Documentation Services | SDPP"
+    },
+    {
+      "route": "palm-removal-coordination.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-removal-coordination.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Decline, Removal & Replacement Coordination",
+      "scrollWidth": 1351,
+      "title": "Palm Decline, Removal & Replacement Coordination | SDPP"
+    },
+    {
+      "route": "palm-sourcing-installation.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-sourcing-installation.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Palm Sourcing, Installation & Replacement Planning",
+      "scrollWidth": 1351,
+      "title": "Palm Sourcing, Installation & Replacement Planning | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-stewardship-plans.html",
+      "viewport": "1366x768",
+      "file": "1366x768__palm-stewardship-plans.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Protect a Mature Palm Before the Decision Becomes Urgent",
+      "scrollWidth": 1351,
+      "title": "Palm Protection & Treatment | San Diego Palm Protection"
+    },
+    {
+      "route": "quarterly-palm-care-san-diego.html",
+      "viewport": "1366x768",
+      "file": "1366x768__quarterly-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Recurring Palm Monitoring",
+      "scrollWidth": 1351,
+      "title": "Recurring Palm Monitoring | San Diego Palm Protection"
+    },
+    {
+      "route": "report-a-palm.html",
+      "viewport": "1366x768",
+      "file": "1366x768__report-a-palm.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Report a Palm or Request Review",
+      "scrollWidth": 1351,
+      "title": "Report a Palm or Request Review | San Diego Palm Protection"
+    },
+    {
+      "route": "residential-palm-assessment.html",
+      "viewport": "1366x768",
+      "file": "1366x768__residential-palm-assessment.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Residential Mature Palm Assessment",
+      "scrollWidth": 1351,
+      "title": "Residential Mature Palm Assessment | San Diego Palm Protection"
+    },
+    {
+      "route": "sapw.html",
+      "viewport": "1366x768",
+      "file": "1366x768__sapw.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "South American Palm Weevil: Warning Signs and Next Steps",
+      "scrollWidth": 1351,
+      "title": "South American Palm Weevil Assessment in San Diego | SDPP"
+    },
+    {
+      "route": "south-american-palm-weevil-treatment-san-diego.html",
+      "viewport": "1366x768",
+      "file": "1366x768__south-american-palm-weevil-treatment-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "South American Palm Weevil Protection & Treatment",
+      "scrollWidth": 1351,
+      "title": "South American Palm Weevil Protection & Treatment | SDPP"
+    },
+    {
+      "route": "specimen-palms-cycads.html",
+      "viewport": "1366x768",
+      "file": "1366x768__specimen-palms-cycads.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Specimen Palms & Cycads",
+      "scrollWidth": 1351,
+      "title": "Specimen Palms & Cycads | San Diego Palm Protection"
+    },
+    {
+      "route": "urban-forest-palm-documentation.html",
+      "viewport": "1366x768",
+      "file": "1366x768__urban-forest-palm-documentation.html.png",
+      "broken": 0,
+      "clientWidth": 1351,
+      "h1": "Palm Inventory, Condition Documentation & Urban Forest Support",
+      "scrollWidth": 1351,
+      "title": "Old Escondido Palm Documentation for Urban-Forest Decisions | San Diego Palm Protection"
+    },
+    {
+      "route": "canary-island-date-palm-care-san-diego.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__canary-island-date-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Canary Island Date Palm Assessment & Care",
+      "scrollWidth": 1905,
+      "title": "Canary Island Date Palm Assessment & Care | San Diego Palm Protection"
+    },
+    {
+      "route": "cidp-risk-checklist.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__cidp-risk-checklist.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Canary Island Date Palm Risk Checklist",
+      "scrollWidth": 1905,
+      "title": "Canary Island Date Palm Risk Checklist | San Diego Palm Protection"
+    },
+    {
+      "route": "index.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__index.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Protect Your Mature Palms in North County San Diego",
+      "scrollWidth": 1905,
+      "title": "Mature Palm Protection in North County San Diego | SDPP"
+    },
+    {
+      "route": "managed-property-palm-services.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__managed-property-palm-services.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Know every palm. Track every decision.",
+      "scrollWidth": 1905,
+      "title": "Managed-property Palm Inventory & Reporting | SDPP"
+    },
+    {
+      "route": "old-escondido-palm-preservation.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__old-escondido-palm-preservation.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Local Protection for Old Escondido's Mature Palms",
+      "scrollWidth": 1905,
+      "title": "Old Escondido Mature Palm Protection | SDPP"
+    },
+    {
+      "route": "palm-care-escondido.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-care-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Palm Assessment & Monitoring in Escondido",
+      "scrollWidth": 1905,
+      "title": "Palm Assessment & Monitoring in Escondido | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-poway.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-care-poway.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Palm Assessment & Monitoring in Poway",
+      "scrollWidth": 1905,
+      "title": "Palm Assessment & Monitoring in Poway | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-care-rancho-santa-fe.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-care-rancho-santa-fe.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Palm Assessment & Monitoring in Rancho Santa Fe",
+      "scrollWidth": 1905,
+      "title": "Palm Assessment & Monitoring in Rancho Santa Fe | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-faq-san-diego.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-faq-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Palm Assessment & Monitoring FAQ",
+      "scrollWidth": 1905,
+      "title": "Palm Assessment & Monitoring FAQ | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-journal-new.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal-new.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Field Notes on Mature Palms in San Diego County",
+      "scrollWidth": 1905,
+      "title": "SDPP Palm Journal | Field Notes and Palm Documentation"
+    },
+    {
+      "route": "palm-journal/cidp-assessment-local-palm-health-concerns.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_cidp-assessment-local-palm-health-concerns.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "CIDP Visible Condition Record: Local Palm Health Concerns",
+      "scrollWidth": 1905,
+      "title": "CIDP Visible Condition Record: Local Palm Health Concerns | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/classic-old-escondido-canary-island-date-palm.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_classic-old-escondido-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Classic Old Escondido Canary Island Date Palm",
+      "scrollWidth": 1905,
+      "title": "Classic Old Escondido Canary Island Date Palm | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/documented-loss/index.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_documented-loss_index.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Documented Loss",
+      "scrollWidth": 1905,
+      "title": "Documented Loss | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-cidp.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_grand-ave-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "A Walk Through Escondido's Historic District",
+      "scrollWidth": 1905,
+      "title": "A Walk Through Escondido's Historic District | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/grand-ave-old-escondido.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_grand-ave-old-escondido.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "What's Happening to the Canary Palms on Grand Avenue?",
+      "scrollWidth": 1905,
+      "title": "What's Happening to the Canary Palms on Grand Avenue? | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/healthy-palm-growth.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_healthy-palm-growth.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "What Healthy Palm Growth Looks Like",
+      "scrollWidth": 1905,
+      "title": "What Healthy Palm Growth Looks Like | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/las-palmas-no-reply-then-the-saws.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_las-palmas-no-reply-then-the-saws.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "No Reply. Then the Saws.",
+      "scrollWidth": 1905,
+      "title": "No Reply. Then the Saws. | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_monitoring-mature-cidp-after-palm-weevil-activity.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity",
+      "scrollWidth": 1905,
+      "title": "Monitoring a Mature Canary Island Date Palm After Palm Weevil Activity | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-adult-sapw-declining-cidp.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_old-escondido-adult-sapw-declining-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido",
+      "scrollWidth": 1905,
+      "title": "Documenting an Adult South American Palm Weevil on a Declining Canary Island Date Palm in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-albert-h-beach-house-palms.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_old-escondido-albert-h-beach-house-palms.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms",
+      "scrollWidth": 1905,
+      "title": "Albert H. Beach House: Historic Architecture Framed by Mature Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-collection.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_old-escondido-cidp-collection.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Old Escondido: A Living Collection of Canary Island Date Palms",
+      "scrollWidth": 1905,
+      "title": "Old Escondido: A Living Collection of Canary Island Date Palms | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-icons-and-change.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_old-escondido-cidp-icons-and-change.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change",
+      "scrollWidth": 1905,
+      "title": "Old Escondido CIDP Contrast: A Neighborhood of Icons and Change | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-historic-canary-island-date-palm.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_old-escondido-historic-canary-island-date-palm.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks",
+      "scrollWidth": 1905,
+      "title": "Old Escondido's Mature Canary Island Date Palms Are Living Landmarks | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_old-escondido-mature-cidps-deserve-a-baseline.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline",
+      "scrollWidth": 1905,
+      "title": "Old Escondido's Mature Canary Island Date Palms Deserve a Baseline | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-mexican-fan-palm-curve.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_old-escondido-mexican-fan-palm-curve.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Mexican Fan Palms, Curve, and Character in Old Escondido",
+      "scrollWidth": 1905,
+      "title": "Mexican Fan Palms, Curve, and Character in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/old-escondido-palm-weevils.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_old-escondido-palm-weevils.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido",
+      "scrollWidth": 1905,
+      "title": "Multiple Adult Palm Weevils Recovered During CIDP Monitoring in Old Escondido | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/poway-old-winery-cidp.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_poway-old-winery-cidp.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Poway's Statement Canary Island Date Palms Near Old Winery Road",
+      "scrollWidth": 1905,
+      "title": "Poway's Statement Canary Island Date Palms Near Old Winery Road | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/rancho-santa-fe-palm-walk.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_rancho-santa-fe-palm-walk.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Palm Walk: Rancho Santa Fe Observations",
+      "scrollWidth": 1905,
+      "title": "Palm Walk: Rancho Santa Fe Observations | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-journal/when-sapw-became-local.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-journal_when-sapw-became-local.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "When SAPW Became Local",
+      "scrollWidth": 1905,
+      "title": "When SAPW Became Local | SDPP Palm Journal"
+    },
+    {
+      "route": "palm-proof-examples.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-proof-examples.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "See the palms, observations, and written follow-through.",
+      "scrollWidth": 1905,
+      "title": "Sample Palm Assessment Report | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-records-monitoring-verification.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-records-monitoring-verification.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Practical help for the full life of a mature palm.",
+      "scrollWidth": 1905,
+      "title": "Palm Assessment, Monitoring & Documentation Services | SDPP"
+    },
+    {
+      "route": "palm-removal-coordination.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-removal-coordination.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Decline, Removal & Replacement Coordination",
+      "scrollWidth": 1905,
+      "title": "Palm Decline, Removal & Replacement Coordination | SDPP"
+    },
+    {
+      "route": "palm-sourcing-installation.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-sourcing-installation.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Palm Sourcing, Installation & Replacement Planning",
+      "scrollWidth": 1905,
+      "title": "Palm Sourcing, Installation & Replacement Planning | San Diego Palm Protection"
+    },
+    {
+      "route": "palm-stewardship-plans.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__palm-stewardship-plans.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Protect a Mature Palm Before the Decision Becomes Urgent",
+      "scrollWidth": 1905,
+      "title": "Palm Protection & Treatment | San Diego Palm Protection"
+    },
+    {
+      "route": "quarterly-palm-care-san-diego.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__quarterly-palm-care-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Recurring Palm Monitoring",
+      "scrollWidth": 1905,
+      "title": "Recurring Palm Monitoring | San Diego Palm Protection"
+    },
+    {
+      "route": "report-a-palm.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__report-a-palm.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Report a Palm or Request Review",
+      "scrollWidth": 1905,
+      "title": "Report a Palm or Request Review | San Diego Palm Protection"
+    },
+    {
+      "route": "residential-palm-assessment.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__residential-palm-assessment.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Residential Mature Palm Assessment",
+      "scrollWidth": 1905,
+      "title": "Residential Mature Palm Assessment | San Diego Palm Protection"
+    },
+    {
+      "route": "sapw.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__sapw.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "South American Palm Weevil: Warning Signs and Next Steps",
+      "scrollWidth": 1905,
+      "title": "South American Palm Weevil Assessment in San Diego | SDPP"
+    },
+    {
+      "route": "south-american-palm-weevil-treatment-san-diego.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__south-american-palm-weevil-treatment-san-diego.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "South American Palm Weevil Protection & Treatment",
+      "scrollWidth": 1905,
+      "title": "South American Palm Weevil Protection & Treatment | SDPP"
+    },
+    {
+      "route": "specimen-palms-cycads.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__specimen-palms-cycads.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Specimen Palms & Cycads",
+      "scrollWidth": 1905,
+      "title": "Specimen Palms & Cycads | San Diego Palm Protection"
+    },
+    {
+      "route": "urban-forest-palm-documentation.html",
+      "viewport": "1920x1080",
+      "file": "1920x1080__urban-forest-palm-documentation.html.png",
+      "broken": 0,
+      "clientWidth": 1905,
+      "h1": "Palm Inventory, Condition Documentation & Urban Forest Support",
+      "scrollWidth": 1905,
+      "title": "Old Escondido Palm Documentation for Urban-Forest Decisions | San Diego Palm Protection"
+    }
+  ]
+}
