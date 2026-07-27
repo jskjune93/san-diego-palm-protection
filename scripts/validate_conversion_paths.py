@@ -23,7 +23,7 @@ def main() -> int:
     required_services = (
         'id="homeowner-inquiry"',
         'id="organization-inquiry"',
-        "data-inquiry-fallback",
+        "data-inquiry-direct",
     )
     for phrase in required_home:
         if phrase not in pages["home"]:
@@ -37,6 +37,10 @@ def main() -> int:
             errors.append("submitted form enabled without endpoint")
         if CONFIG["submission_mode"] != "first_party":
             errors.append("submitted form enabled outside first_party mode")
+        if not CONFIG.get("verified_lead_conversion_enabled"):
+            errors.append("first-party delivery must enable only the server-confirmed verified-lead boundary")
+        if CONFIG.get("direct_uploads_enabled"):
+            errors.append("direct uploads must remain disabled")
     else:
         if CONFIG.get("endpoint"):
             errors.append("email fallback must not retain an endpoint")
@@ -47,17 +51,22 @@ def main() -> int:
 
     public_text = "\n".join(path.read_text(encoding="utf-8", errors="ignore")
                             for path in [*ROOT.glob("*.html"), ROOT / "site-assets" / "site.js"])
-    if "Nothing has been delivered yet" not in public_text:
-        errors.append("email fallback does not state that the inquiry has not been delivered")
-    if "verified-lead" in public_text or "lead-submitted" in public_text:
-        errors.append("public output contains an unverified submitted-lead conversion")
+    required_direct = (
+        "/api/inquiry",
+        "homeowner-inquiry-delivered",
+        "organization-inquiry-delivered",
+        "Delivery could not be confirmed",
+    )
+    for phrase in required_direct:
+        if phrase not in public_text and phrase not in (ROOT / "api" / "inquiry.mjs").read_text(encoding="utf-8"):
+            errors.append(f"direct inquiry implementation missing: {phrase}")
 
     if errors:
         print("Conversion path validation failed:")
         for error in errors:
             print(f"- {error}")
         return 1
-    print("Conversion path validation passed: homeowner and organization paths present; email fallback remains explicit and cannot fire a verified-lead event.")
+    print("Conversion path validation passed: direct homeowner and organization delivery is first-party; email fallback remains available; verified-lead events require confirmed provider delivery.")
     return 0
 
 

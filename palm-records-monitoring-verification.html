@@ -64,7 +64,9 @@
 <article class="inquiry-panel" id="homeowner-inquiry">
   <p class="eyebrow">For homeowners</p><h3>Request a Palm Assessment</h3>
   <p>Use this path for a residential assessment, condition baseline, recurring monitoring, sourcing, or decline-response question.</p>
-  <form data-inquiry-fallback data-conversion="homeowner-inquiry-email-prepared" data-subject="Homeowner palm inquiry" action="mailto:sandiegopalmprotection@gmail.com" method="get">
+  <form data-inquiry-direct data-inquiry-type="homeowner" data-fallback-conversion="homeowner-inquiry-email-prepared" action="/api/inquiry" method="post">
+    <input type="hidden" name="inquiry_type" value="homeowner">
+    <div class="form-trap" aria-hidden="true"><label for="home-website">Website</label><input id="home-website" name="website" tabindex="-1" autocomplete="off"></div>
     <div class="form-grid">
       <div><label for="home-name">Name</label><input id="home-name" name="name" autocomplete="name" required></div>
       <div><label for="home-email">Email</label><input id="home-email" name="email" type="email" autocomplete="email" required></div>
@@ -78,8 +80,9 @@
     </div>
     <p class="form-help">Photograph uploads are not enabled. SDPP can request photographs during follow-up.</p>
     <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
-    <p class="form-help">Preparing an inquiry opens your email application. Review the message and send it from there; nothing is delivered automatically.</p>
-    <button class="button" type="submit">Prepare Homeowner Inquiry</button>
+    <p class="form-help">Submit securely through this page, or use the email link if direct delivery is unavailable. A success message appears only after SDPP&#x27;s delivery provider confirms receipt.</p>
+    <div data-turnstile-container></div>
+    <button class="button" type="submit">Submit Homeowner Inquiry</button>
     <p><a data-conversion="direct-email-fallback" href="mailto:sandiegopalmprotection@gmail.com?subject=Homeowner%20palm%20inquiry">Prefer email? Send your inquiry directly</a><br><small>Your email application will open. Your inquiry is not sent until you send it.</small></p>
     <p class="form-status" data-form-status aria-live="polite"></p>
   </form>
@@ -87,7 +90,9 @@
 <article class="inquiry-panel" id="organization-inquiry">
   <p class="eyebrow">For organizations</p><h3>Discuss a Property or Palm Portfolio</h3>
   <p>Use this path for an HOA, apartment community, commercial property, institution, consultant, or public stakeholder.</p>
-  <form data-inquiry-fallback data-conversion="organization-inquiry-email-prepared" data-subject="Organization palm inquiry" action="mailto:sandiegopalmprotection@gmail.com" method="get">
+  <form data-inquiry-direct data-inquiry-type="organization" data-fallback-conversion="organization-inquiry-email-prepared" action="/api/inquiry" method="post">
+    <input type="hidden" name="inquiry_type" value="organization">
+    <div class="form-trap" aria-hidden="true"><label for="org-website">Website</label><input id="org-website" name="website" tabindex="-1" autocomplete="off"></div>
     <div class="form-grid">
       <div><label for="org-name">Contact name</label><input id="org-name" name="contact_name" autocomplete="name" required></div>
       <div><label for="org-email">Work email</label><input id="org-email" name="email" type="email" autocomplete="email" required></div>
@@ -102,8 +107,9 @@
     </div>
     <p class="form-help">Supporting-file uploads are not enabled. SDPP can request photographs or records during follow-up.</p>
     <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
-    <p class="form-help">Preparing an inquiry opens your email application. Review the message and send it from there; nothing is delivered automatically.</p>
-    <button class="button" type="submit">Prepare Organization Inquiry</button>
+    <p class="form-help">Submit securely through this page, or use the email link if direct delivery is unavailable. A success message appears only after SDPP&#x27;s delivery provider confirms receipt.</p>
+    <div data-turnstile-container></div>
+    <button class="button" type="submit">Submit Organization Inquiry</button>
     <p><a data-conversion="direct-email-fallback" href="mailto:sandiegopalmprotection@gmail.com?subject=Organization%20palm%20inquiry">Prefer email? Send your inquiry directly</a><br><small>Your email application will open. Your inquiry is not sent until you send it.</small></p>
     <p class="form-status" data-form-status aria-live="polite"></p>
   </form>
