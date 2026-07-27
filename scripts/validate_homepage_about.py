@@ -1,0 +1,100 @@
+#!/usr/bin/env python3
+"""Focused homepage deduplication and About-page safeguards."""
+
+from __future__ import annotations
+
+import re
+import sys
+from pathlib import Path
+
+from business_credentials import load_business_status, public_credentials
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+def visible_text(html: str) -> str:
+    html = re.sub(r"<(script|style)\b.*?</\1>", " ", html, flags=re.I | re.S)
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", html)).strip()
+
+
+def main() -> int:
+    status = load_business_status()
+    public = public_credentials()
+    homepage_html = (ROOT / "index.html").read_text(encoding="utf-8")
+    about_html = (ROOT / "about.html").read_text(encoding="utf-8")
+    home = visible_text(homepage_html)
+    about = visible_text(about_html)
+    errors: list[str] = []
+
+    limits = {
+        public["individual_license"]: 1,
+        public["category"]: 1,
+        "Insured": 2,
+        public["exact_status"]: 1,
+    }
+    for phrase, maximum in limits.items():
+        count = home.lower().count(phrase.lower())
+        if count > maximum:
+            errors.append(f"homepage repeats {phrase!r} {count} times; maximum is {maximum}")
+    descriptive_qualified = len(re.findall(r"\bQualified\b(?!\s+Applicator\s+License)", home))
+    if descriptive_qualified > 1:
+        errors.append(f"homepage repeats descriptive 'Qualified' {descriptive_qualified} times; maximum is 1")
+    if home.count(public["exact_status"]) != 1:
+        errors.append("homepage must contain exactly one authoritative pesticide-application restriction")
+    if "Current service scope:" not in home:
+        errors.append("homepage lacks the clear current-service-scope label")
+    for scoped_fragment in (
+        "Protection planning, SAPW education, monitoring context, and clear referral questions",
+        "Choose the path that fits your property.",
+        "Owner-operated palm assessment, documentation, monitoring, and response from Old Escondido.",
+    ):
+        if scoped_fragment not in home:
+            errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")
+    if 'href="./about.html"' not in homepage_html or "About John and SDPP" not in home:
+        errors.append("homepage owner section does not link to About")
+    if homepage_html.lower().count("<h1") != 1:
+        errors.append("homepage must contain exactly one H1")
+    if "<title>Mature Palm Protection in North County San Diego | SDPP</title>" not in homepage_html:
+        errors.append("homepage title changed unexpectedly")
+
+    for phrase in (
+        "John Krause",
+        public["individual_license"],
+        public["category"],
+        public["insurance"],
+        "not a Pest Control Business License",
+        "based in Old Escondido",
+    ):
+        if phrase.lower() not in about.lower():
+            errors.append(f"About page lacks approved fact or boundary: {phrase}")
+    if about_html.lower().count("<h1") != 1:
+        errors.append("About page must contain exactly one H1")
+    for anchor in ("#homeowner-inquiry", "#organization-inquiry"):
+        if anchor not in about_html:
+            errors.append(f"About page lacks inquiry link: {anchor}")
+    for unsupported in (
+        "ISA Certified Arborist",
+        "TRAQ",
+        "veteran-owned certified",
+        "municipal appointment",
+        "guaranteed outcome",
+        "Pest Control Business License No. 175295",
+    ):
+        if unsupported.lower() in about.lower():
+            errors.append(f"About page contains unsupported claim: {unsupported}")
+    if status["pesticide_services_enabled"] is not False or status["owner_activation_approved"] is not False:
+        errors.append("authoritative treatment status changed unexpectedly")
+
+    if errors:
+        print("HOMEPAGE_ABOUT_VALIDATION_FAILED")
+        for error in errors:
+            print(f" - {error}")
+        return 1
+    print("HOMEPAGE_ABOUT_VALIDATION_OK")
+    print("homepage_full_qal=1 homepage_full_category=1 homepage_insured<=2 homepage_restriction=1")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

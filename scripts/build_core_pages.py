@@ -133,14 +133,14 @@ PAGES: dict[str, dict] = {
     "index.html": {
         "title": "Mature Palm Protection in North County San Diego | SDPP",
         "description": "Owner-led mature palm documentation, monitoring, protection planning, and decline response in Escondido and North County San Diego.",
-        "eyebrow": "Owner-led palm protection · Old Escondido",
+        "eyebrow": "Palm assessment and documentation · Old Escondido",
         "h1": "Protect Your Mature Palms in North County San Diego",
-        "lede": "Get an on-site palm assessment, dated photographs, written findings, and clear next steps from an owner-led Old Escondido specialist.",
+        "lede": "Get an on-site palm assessment, dated photographs, written findings, and clear next steps.",
         "image": "background.jpg",
         "body": section("Mature palm care", "Document first. Monitor change. Respond when a palm declines.", "SDPP works directly with homeowners and property stakeholders through documentation, monitoring, protection planning, sourcing, coordination, and response.", three_pillars()) +
         section("Choose your path", "A direct route for your kind of property.", "Start with the information SDPP needs to understand the palm, the property, and the decision.", '<div class="audience-grid"><article class="audience-card"><h3>Homeowners</h3><p>One mature palm or a small group: assessment, dated photographs, written findings, monitoring, sourcing, or decline response.</p><a data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Start a homeowner inquiry</a></article><article class="audience-card"><h3>Organizations</h3><p>HOAs, apartments, commercial properties, institutions, consultants, and public stakeholders needing inventory, monitoring, or reporting.</p><a data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Start an organization inquiry</a></article></div>', "section-tint") +
-        section("Local and direct", "Owner-led from Old Escondido.", "You work directly with the local specialist who visits the property, photographs the palms, explains the visible concerns, and prepares the written findings.", '<div class="field-split"><div><h3>One point of contact</h3><p>Site observations, photographs, recommendations, and follow-up stay connected instead of being handed between a sales office and a field crew.</p><p><a href="./old-escondido-palm-preservation.html">About the Old Escondido service area</a></p></div><img src="./beautiful-old_escondido-cidp.jpg" alt="Mature Canary Island date palm in Old Escondido" loading="lazy"></div>') +
-        section("Canary Island date palms", "Protection planning informed by documented conditions.", "Mature Canary Island date palms face serious pressures, including South American palm weevil. A documentation visit can establish visible condition and support monitoring, referral, or urgent response questions.", '<div class="field-split field-split--reverse"><img src="./south-american-palm-weevil-cidp-poway.jpg" alt="Canary Island date palm observed in North County San Diego" loading="lazy"><div><h3>Start before the decision becomes urgent</h3><p>SDPP provides SAPW-aware documentation and educational information. SDPP is not currently offering pesticide applications.</p><p><a href="./sapw.html">Learn about SAPW warning signs</a> · <a href="./palm-stewardship-plans.html">Explore protection planning</a></p></div></div>', "section-tint") +
+        section("Local and direct", "Work directly with the owner.", "John Krause handles the field visit, photographs, written findings, and follow-up. There is no handoff between a sales office and the person documenting your palms.", '<div class="field-split"><div><h3>One point of contact</h3><p>Site observations, photographs, recommendations, and follow-up stay connected from the first conversation through the written record.</p><p><a class="button" href="./about.html">About John and SDPP</a></p></div><img src="./beautiful-old_escondido-cidp.jpg" alt="Mature Canary Island date palm in Old Escondido" loading="lazy"></div>') +
+        section("Canary Island date palms", "Protection planning informed by documented conditions.", "Mature Canary Island date palms face serious pressures, including South American palm weevil. A documentation visit can establish visible condition and support monitoring, referral, or urgent response questions.", '<div class="field-split field-split--reverse"><img src="./south-american-palm-weevil-cidp-poway.jpg" alt="Canary Island date palm observed in North County San Diego" loading="lazy"><div><h3>Start before the decision becomes urgent</h3><p>SDPP provides SAPW-aware documentation, monitoring context, and educational information that helps owners prepare clear referral and response questions.</p><p><a href="./sapw.html">Learn about SAPW warning signs</a> · <a href="./palm-stewardship-plans.html">Explore protection planning</a></p></div></div>', "section-tint") +
         section("A useful record", "Photographs and written findings support better palm decisions.", "Documentation is part of the field service, not a substitute for it. A baseline and recurring views make visible change easier to understand and communicate.", process([
             ("Assess", "Look at the palm, property context, access, and immediate concern."),
             ("Document", "Create dated photographs and clear written observations."),
@@ -150,6 +150,28 @@ PAGES: dict[str, dict] = {
         section("Scope and pricing", "Clear scope before work begins.", "Pricing depends on palm count, site conditions, access, travel, service type, requested deliverables, and urgency.", '<p class="note">SDPP confirms the written scope and price after reviewing the property information and requested documentation.</p>') +
         section("Managed properties and public landscapes", "Palm records that support portfolio decisions.", "SDPP provides palm-focused inventories, condition documentation, monitoring, and implementation support for managed properties, institutions, consultants, and public stakeholders.", '<p><a href="./managed-property-palm-services.html">Explore managed-property palm services</a> · <a href="./urban-forest-palm-documentation.html">Explore urban forest palm documentation</a></p>', "section-tint") +
         section("Field work", "See how observations become practical next steps.", "The public Palm Journal and Field Work page show real local palm context, documented observations, and the structure of an example report without exposing private client information.", '<div class="field-links"><a href="./palm-records-monitoring-verification.html">View all palm services</a><a href="./palm-proof-examples.html">View Field Work</a><a href="./palm-journal-new.html">Read the Palm Journal</a><a href="./palm-journal/documented-loss/">Visit Documented Loss</a></div>'),
+    },
+    "about.html": {
+        "title": "About San Diego Palm Protection | Owner-Led Palm Services",
+        "description": "Meet John Krause and learn why San Diego Palm Protection provides owner-led mature palm assessment, documentation, monitoring, and response from Old Escondido.",
+        "eyebrow": "About San Diego Palm Protection",
+        "h1": "Owner-led palm assessment and documentation",
+        "lede": "San Diego Palm Protection is an owner-operated palm assessment, documentation, monitoring, and response business based in Old Escondido.",
+        "image": "beautiful-old_escondido-cidp.jpg",
+        "body": section("Why SDPP exists", "A useful record before the next decision.", "Mature palms are valuable and visually significant, but decline can be difficult to interpret when no dated baseline exists.", cards([
+            ("Document what is visible", "Dated photographs and field observations create a practical reference point."),
+            ("Understand change", "Written findings separate observations, reported history, possible concerns, and supported conclusions."),
+            ("Choose the next step", "The record helps owners communicate with contractors, managers, or other professionals when referral or action is appropriate."),
+        ])) +
+        section("Work directly with the owner", "The same person stays with the work.", "John Krause visits the property, photographs the palms, records visible conditions, prepares written findings, discusses appropriate next steps, and remains the direct point of contact.", '<div class="field-split"><div><h3>From inquiry through follow-up</h3><p>The field visit and written record remain connected. There is no handoff from a sales office to an unknown field representative.</p></div><img src="./journal-monitoring.jpg" alt="Palm condition documentation during an SDPP field visit" loading="lazy"></div>', "section-tint") +
+        section("Qualification boundary", "A clear individual credential.", "John's QAL is an individual qualification. It is not a Pest Control Business License and does not establish business-level pesticide authorization.", '<p class="note">Current service availability continues to follow the authoritative business-status statement shown across relevant service pages.</p>') +
+        section("Local focus", "Based in Old Escondido.", "SDPP focuses on mature palms and Canary Island date palms across North County and selected nearby San Diego communities within the current service-area policy.", '<p><a href="./old-escondido-palm-preservation.html">See the Old Escondido preservation pathway</a></p>', "section-tint") +
+        section("How the work is different", "Documentation is part of the field service.", "Photographs create a baseline, written findings support communication, and recurring monitoring makes change easier to compare over time.", cards([
+            ("Field observations", "Visible conditions are recorded without turning uncertainty into an unsupported diagnosis."),
+            ("Written reporting", "Clients receive a usable record for property decisions and professional referrals."),
+            ("Comparison over time", "Repeat views help distinguish stable appearance from visible change."),
+        ])) +
+        section("Start a conversation", "Choose the inquiry path that fits.", "Homeowners can request an assessment. Managers, HOAs, institutions, and other property stakeholders can discuss a palm portfolio.", '<div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Request a Palm Assessment</a><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Discuss a Property or Palm Portfolio</a></div>', "section-tint"),
     },
     "residential-palm-assessment.html": {
         "title": "Residential Mature Palm Assessment | San Diego Palm Protection",
@@ -163,7 +185,7 @@ PAGES: dict[str, dict] = {
             ("Visible-condition findings", "Observed features are separated from reported information, possible concerns, and confirmed findings."),
             ("Written Palm Condition Report", "A concise record of findings, certainty, limitations, recommendations, and an appropriate monitoring interval."),
         ]) + '<p class="section-proof-link"><a href="./palm-proof-examples.html#sample-assessment">See a sanitized sample report</a></p>') + section("What it is not", "Useful because its limits are explicit.", "A visual assessment cannot promise tree safety, uncover hidden conditions, replace laboratory confirmation, or guarantee an outcome. Referral is recommended where the question exceeds the documented scope.", '<p class="note">Urgent structural or life-safety concerns may require an appropriately licensed tree professional, emergency contractor, property authority, or other specialist. SDPP is not currently offering pesticide applications.</p>', "section-tint") +
-        section("Next step", "From one visit to a monitoring record.", "When change over time matters, the baseline becomes visit one of a recurring monitoring timeline.", process([("Scope", "Identify the decision and palms."), ("Visit", "Observe and photograph accessible conditions."), ("Report", "Receive a dated written record."), ("Revisit", "Compare at a useful interval.")]))
+        section("Next step", "From one visit to a monitoring record.", "When change over time matters, the baseline becomes visit one of a recurring monitoring timeline.", process([("Scope", "Identify the decision and palms."), ("Visit", "Observe and photograph accessible conditions."), ("Report", "Receive a dated written record."), ("Revisit", "Compare at a useful interval.")]) + '<p class="section-proof-link"><a href="./about.html">Learn about John Krause and the owner-led field process</a></p>')
     },
     "palm-records-monitoring-verification.html": {
         "title": "Palm Assessment, Monitoring & Documentation Services | SDPP",
@@ -229,7 +251,7 @@ PAGES: dict[str, dict] = {
             ("Priority summary", "A portfolio view of urgent, near-term, routine, and watch-list items, with responsible next actions."),
             ("Written reporting", "Findings, reported history, uncertainties, limitations, recommendations, and an appropriate review interval."),
             ("Work and outcome history", "Treatment information when supplied or performed within scope, visible contractor completion, removals, losses, and replacements."),
-        ])) +
+        ]) + '<p class="section-proof-link"><a href="./about.html">Learn about John Krause and the owner-led reporting process</a></p>') +
         section("Observation and escalation", "Visible conditions are not automatically a diagnosis.", "SDPP separates field observations from reported history, suspected causes, laboratory confirmation, structural opinions, and other specialist determinations. Priority findings are communicated through the agreed contact and reporting method.", '<p class="note">SDPP is not currently offering pesticide applications. Pruning, removal, planting, formal tree-risk opinions, engineering conclusions, laboratory diagnosis, and code determinations remain outside SDPP’s direct scope unless explicitly supported by an appropriately licensed provider.</p>') +
         section("Verification boundary", "Contractor-work verification records evidence; it does not certify the unknowable.", "SDPP can document visible completion, dates, supplied records, and discrepancies within an agreed scope.", '<p class="note"><strong>Limitations:</strong> verification does not certify concealed work, workmanship, structural safety, legal or code compliance, pesticide efficacy, contractor licensing, or outcomes unless a separately qualified party and explicit scope support that conclusion.</p>', "section-tint") +
         section("Municipal and urban-forest support", "Palm-focused field records for broader programs.", "Specialized palm documentation can support portfolio management and urban-forest implementation without claiming to prepare a complete municipal plan.", '<p><a href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Review the approved Old Escondido civic documentation resource</a> · <a href="./palm-proof-examples.html">View sample work</a> · <a href="./old-escondido-urban-forest-documentation.pdf" target="_blank" rel="noopener noreferrer">Download the civic documentation packet <span class="sr-only">(PDF, opens in a new tab)</span></a></p>') +
@@ -476,7 +498,20 @@ def write_pages() -> None:
                 "name": data["h1"], "areaServed": "North County San Diego",
                 "description": data["description"],
             }
-        (ROOT / filename).write_text(page(filename=filename, extra_schema=schema, **data), encoding="utf-8")
+        if filename == "about.html":
+            schema = {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "John Krause",
+                "jobTitle": "Owner",
+                "worksFor": {
+                    "@type": "Organization",
+                    "name": "San Diego Palm Protection",
+                    "url": BASE_URL,
+                },
+                "url": f"{BASE_URL}/about.html",
+            }
+        (ROOT / filename).write_text(page(filename=filename, extra_schema=schema, publish_extra_schema=filename == "about.html", **data), encoding="utf-8")
     (ROOT / "site-config" / "core_routes.json").write_text(json.dumps(sorted(pages), indent=2) + "\n", encoding="utf-8")
     print(f"Generated {len(pages)} canonical core pages.")
 

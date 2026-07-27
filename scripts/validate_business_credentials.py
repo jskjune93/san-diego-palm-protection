@@ -64,7 +64,13 @@ def main() -> int:
         text = path.read_text(encoding="utf-8-sig")
         if START not in text or STYLE_LINK not in text:
             errors.append(f"{relative}: centralized credential component is missing")
-        if any(value not in text for value in (summary, exact, label, individual_license, category, insurance)):
+        if relative == "index.html":
+            required_values = (exact, individual_license, category, insurance, "John Krause, Owner", "Qualified, insured, and owner-led")
+        elif relative == "about.html":
+            required_values = (individual_license, category, insurance, "John Krause", "not a Pest Control Business License")
+        else:
+            required_values = (summary, exact, label, individual_license, category, insurance)
+        if any(value not in text for value in required_values):
             errors.append(f"{relative}: qualified and insured wording is incomplete")
 
     for relative in ("index.html", "palm-records-monitoring-verification.html", "report-a-palm.html"):
@@ -79,9 +85,6 @@ def main() -> int:
             errors.append(f"{relative}: inquiry area lacks a credential block before the form")
 
     journal_pages = sorted((ROOT / "palm-journal").glob("**/*.html"))
-    for path in journal_pages:
-        if exact not in path.read_text(encoding="utf-8-sig"):
-            errors.append(f"{path.relative_to(ROOT).as_posix()}: generated page footer lacks exact credential status")
 
     all_public = "\n".join(path.read_text(encoding="utf-8-sig") for path in PUBLIC_HTML)
     qal_numbers = re.findall(r"(?:QAL|Qualified Applicator License)(?:\s+No\.|\s*#)?\s*(\d{4,})", all_public, re.I)

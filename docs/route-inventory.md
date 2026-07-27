@@ -1,9 +1,10 @@
 # Route inventory and disposition
 
-41 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; four audience/proof routes were added. No route required a redirect because each valuable URL retains a distinct purpose.
+42 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; five audience, proof, and owner-trust routes were added. No route required a redirect because each valuable URL retains a distinct purpose.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
+| `/about.html` | created | Owner identity, qualifications, field process, and trust |
 | `/canary-island-date-palm-care-san-diego.html` | restructured | Species-specific discovery route |
 | `/cidp-risk-checklist.html` | restructured | Educational observation checklist |
 | `/` | restructured | Commercial orientation and three-pillar gateway |

@@ -5,7 +5,13 @@ import argparse
 import re
 import sys
 
-from business_credentials import footer_line, public_credentials, render_credential_block
+from business_credentials import (
+    footer_line,
+    public_credentials,
+    render_about_credential_block,
+    render_credential_block,
+    render_homepage_credential_block,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 STYLE_LINK = '<link rel="stylesheet" href="./site-assets/credentials.css">'
@@ -18,6 +24,7 @@ CONTACT_END = "<!-- BUSINESS_CREDENTIALS_CONTACT:END -->"
 
 PRIMARY_PAGES = (
     "index.html",
+    "about.html",
     "managed-property-palm-services.html",
     "urban-forest-palm-documentation.html",
     "canary-island-date-palm-care-san-diego.html",
@@ -44,12 +51,12 @@ OLD_STATUS_PATTERNS = (
 )
 
 
-def replace_marked_block(text: str) -> str:
+def replace_marked_block(text: str, block: str = BLOCK) -> str:
     pattern = re.compile(
         rf"{re.escape(START)}.*?{re.escape(END)}",
         re.DOTALL,
     )
-    text = pattern.sub(BLOCK, text)
+    text = pattern.sub(block, text)
     contact_pattern = re.compile(
         rf"{re.escape(CONTACT_START)}.*?{re.escape(CONTACT_END)}",
         re.DOTALL,
@@ -59,7 +66,13 @@ def replace_marked_block(text: str) -> str:
 
 def insert_for_page(path: Path, text: str) -> str:
     if START in text:
-        text = replace_marked_block(text)
+        if path.name == "index.html":
+            page_block = render_homepage_credential_block()
+        elif path.name == "about.html":
+            page_block = render_about_credential_block()
+        else:
+            page_block = BLOCK
+        text = replace_marked_block(text, page_block)
         if path.name == "palm-records-monitoring-verification.html" and CONTACT_START not in text:
             text = text.replace('<form class="inquiry-form"', f'{CONTACT_BLOCK}\n<form class="inquiry-form"', 1)
         if path.name == "report-a-palm.html" and CONTACT_START not in text:

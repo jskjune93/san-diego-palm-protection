@@ -4,7 +4,13 @@ from html import escape
 from pathlib import Path
 import json
 
-from business_credentials import load_business_status, render_credential_block, public_credentials
+from business_credentials import (
+    load_business_status,
+    render_about_credential_block,
+    render_credential_block,
+    render_homepage_credential_block,
+    public_credentials,
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.sandiegopalmprotection.com"
@@ -19,7 +25,7 @@ def asset_prefix(relative_root: str) -> str:
 
 def head(title: str, description: str, path: str, image: str = "background.jpg",
          schema_type: str = "WebPage", extra_schema: dict | None = None,
-         relative_root: str = "./") -> str:
+         relative_root: str = "./", publish_extra_schema: bool = False) -> str:
     canonical = BASE_URL + ("/" if path == "index.html" else f"/{path}")
     image_url = image if image.startswith("http") else f"{BASE_URL}/{image}"
     credential = public_credentials()
@@ -31,7 +37,7 @@ def head(title: str, description: str, path: str, image: str = "background.jpg",
         "url": canonical,
         "isPartOf": {"@type": "WebSite", "name": "San Diego Palm Protection", "url": BASE_URL},
     }]
-    if extra_schema and load_business_status()["mode"] == "commercial":
+    if extra_schema and (load_business_status()["mode"] == "commercial" or publish_extra_schema):
         schemas.append(extra_schema)
     return f"""<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -77,10 +83,18 @@ def credentials(marker: str) -> str:
     return render_credential_block(marker)
 
 
+def homepage_credentials() -> str:
+    return render_homepage_credential_block()
+
+
+def about_credentials() -> str:
+    return render_about_credential_block()
+
+
 def three_pillars(relative_root: str = "./") -> str:
     items = [
         ("01", "Assessment, Monitoring & Documentation", "On-site palm assessments, photographic condition records, recurring visits, inventories, and clear written findings.", "residential-palm-assessment.html"),
-        ("02", "Protection & Treatment", "Protection planning, SAPW education, monitoring context, and referral questions. SDPP is not currently offering pesticide applications.", "palm-stewardship-plans.html"),
+        ("02", "Protection & Treatment", "Protection planning, SAPW education, monitoring context, and clear referral questions based on the documented condition of the palm.", "palm-stewardship-plans.html"),
         ("03", "Decline Response, Removal & Replacement", "Practical help when a palm declines, contractor coordination is needed, or the landscape needs a replacement plan.", "palm-removal-coordination.html"),
     ]
     return '<div class="pillar-grid">' + "".join(
@@ -92,7 +106,7 @@ def three_pillars(relative_root: str = "./") -> str:
 def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm assessment.") -> str:
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
-  <p>Choose the path that fits your property. Single palms and small groups are welcome, as are managed-property and civic documentation inquiries. SDPP is not currently offering pesticide applications.</p></div>
+  <p>Choose the path that fits your property. Single palms and small groups are welcome, as are managed-property and civic documentation inquiries.</p></div>
   <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a><a class="button button-quiet" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Organization Inquiry</a><a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
 </section>"""
 
@@ -100,11 +114,10 @@ def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm a
 def footer(relative_root: str = "./") -> str:
     return f"""<footer class="site-footer">
   <div class="footer-grid">
-    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Owner-led mature palm protection, assessment, monitoring, and response from Old Escondido to communities across North County San Diego.</p></div>
+    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Owner-operated palm assessment, documentation, monitoring, and response from Old Escondido.</p></div>
     <div><h2>Services</h2><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring monitoring</a><a href="{relative_root}managed-property-palm-services.html">Managed properties</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest palm documentation</a></div>
-    <div><h2>Resources</h2><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
+    <div><h2>Resources</h2><a href="{relative_root}about.html">About</a><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
-  {credentials("BUSINESS_CREDENTIALS_FOOTER")}
   <p class="footer-legal">Findings and recommendations are limited by access, available evidence, and the documented scope.</p>
 </footer>
 <script src="{relative_root}site-assets/site.js" defer></script>
@@ -120,10 +133,11 @@ def mobile_contact(relative_root: str = "./") -> str:
 
 def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          lede: str, body: str, image: str = "background.jpg",
-         relative_root: str = "./", extra_schema: dict | None = None) -> str:
+         relative_root: str = "./", extra_schema: dict | None = None,
+         publish_extra_schema: bool = False) -> str:
     public = public_credentials()
     hero_note = '<p class="hero-microcopy">Single palms and small groups welcome · On-site visit · Dated photographs · Written findings · Clear next steps</p>' if filename == "index.html" else ""
-    hero_trust = f'<p class="hero-trust-line">{escape(public["service_summary"])}</p>' if filename == "index.html" else ""
+    hero_trust = '<p class="hero-trust-line">Owner-operated • California QAL, Category B</p>' if filename == "index.html" else ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '
         f'{escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'
@@ -141,7 +155,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     return f"""<!doctype html>
 <html lang="en">
 <head>
-  {head(title, description, filename, image, extra_schema=extra_schema, relative_root=relative_root)}
+  {head(title, description, filename, image, extra_schema=extra_schema, relative_root=relative_root, publish_extra_schema=publish_extra_schema)}
 </head>
 <body>
 {header(relative_root)}
@@ -150,7 +164,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
     <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div></div>
   </section>
-  <div class="trust-wrap trust-wrap--compact">{credentials("BUSINESS_CREDENTIALS")}{organization_trust}</div>
+  <div class="trust-wrap trust-wrap--compact">{homepage_credentials() if filename == "index.html" else about_credentials() if filename == "about.html" else credentials("BUSINESS_CREDENTIALS")}{organization_trust}</div>
   {body}
   {inquiry(relative_root)}
 </main>

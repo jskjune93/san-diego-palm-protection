@@ -17,6 +17,7 @@ DIST = ROOT / "dist"
 BASE = "https://www.sandiegopalmprotection.com"
 PRIMARY = {
     "index.html",
+    "about.html",
     "residential-palm-assessment.html",
     "managed-property-palm-services.html",
     "south-american-palm-weevil-treatment-san-diego.html",

@@ -66,7 +66,7 @@ async function main() {
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
   const routes = await htmlRoutes();
-  if (routes.length !== 41) throw new Error(`Expected 41 HTML routes, found ${routes.length}`);
+  if (routes.length !== 42) throw new Error(`Expected 42 HTML routes, found ${routes.length}`);
 
   const referenceQueue = [];
   for (const route of routes) {
