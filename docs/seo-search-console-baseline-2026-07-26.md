@@ -35,6 +35,8 @@ Four URLs appeared in the older “Discovered — currently not indexed” repor
 
 That report was last updated July 9, before the current reconstruction. Search Console validation was started on July 26 so Google can reassess those materially updated pages. This is a crawl/indexing request, not a guarantee of indexing or ranking.
 
+The newly approved `/palm-journal/when-sapw-became-local.html` article was unknown to Google at inspection time, as expected for a same-day release. An individual indexing request was made after confirming the live URL, canonical sitemap entry, and production validation. Documented Loss, the mature-CIDP monitoring article, Escondido, and Poway pages were already indexed.
+
 ## Search performance baseline
 
 Search Console data was available from June 2 through July 24, 2026. The dataset is small and should not support broad conclusions.
