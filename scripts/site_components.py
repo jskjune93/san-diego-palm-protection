@@ -121,7 +121,23 @@ def mobile_contact(relative_root: str = "./") -> str:
 def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          lede: str, body: str, image: str = "background.jpg",
          relative_root: str = "./", extra_schema: dict | None = None) -> str:
+    public = public_credentials()
     hero_note = '<p class="hero-microcopy">Single palms and small groups welcome · On-site visit · Dated photographs · Written findings · Clear next steps</p>' if filename == "index.html" else ""
+    hero_trust = f'<p class="hero-trust-line">{escape(public["service_summary"])}</p>' if filename == "index.html" else ""
+    residential_trust = (
+        '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '
+        f'{escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'
+        if filename == "residential-palm-assessment.html" else ""
+    )
+    organization_trust = (
+        '<div class="institutional-trust"><strong>Owner-led field work</strong><span>California Qualified Applicator License No. 175295</span>'
+        '<span>Category B — Landscape Maintenance</span><span>Insured</span><span>Structured photographic and written reporting</span></div>'
+        if filename in {"managed-property-palm-services.html", "urban-forest-palm-documentation.html"} else ""
+    )
+    organization_page = filename in {"managed-property-palm-services.html", "urban-forest-palm-documentation.html"}
+    primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'organization-inquiry' if organization_page else 'homeowner-inquiry'}"
+    primary_label = "Discuss a Property or Palm Portfolio" if organization_page else "Request a Palm Assessment"
+    primary_event = "organization-inquiry-initiation" if organization_page else "homeowner-inquiry-initiation"
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -131,10 +147,10 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
 {header(relative_root)}
 <main id="main">
   <section class="page-hero" style="--hero-image:url('/{image}')">
-    <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}
-    <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request a Palm Assessment</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div></div>
+    <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
+    <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div></div>
   </section>
-  <div class="trust-wrap trust-wrap--compact">{credentials("BUSINESS_CREDENTIALS")}</div>
+  <div class="trust-wrap trust-wrap--compact">{credentials("BUSINESS_CREDENTIALS")}{organization_trust}</div>
   {body}
   {inquiry(relative_root)}
 </main>

@@ -40,6 +40,9 @@ def main() -> int:
     exact = credentials["exact_status"]
     summary = credentials["service_summary"]
     label = credentials["status_label"]
+    individual_license = credentials["individual_license"]
+    category = credentials["category"]
+    insurance = credentials["insurance"]
     errors: list[str] = []
 
     for path in PUBLIC_HTML:
@@ -61,7 +64,7 @@ def main() -> int:
         text = path.read_text(encoding="utf-8-sig")
         if START not in text or STYLE_LINK not in text:
             errors.append(f"{relative}: centralized credential component is missing")
-        if summary not in text or exact not in text or label not in text:
+        if any(value not in text for value in (summary, exact, label, individual_license, category, insurance)):
             errors.append(f"{relative}: qualified and insured wording is incomplete")
 
     for relative in ("index.html", "palm-records-monitoring-verification.html", "report-a-palm.html"):
@@ -80,10 +83,22 @@ def main() -> int:
         if exact not in path.read_text(encoding="utf-8-sig"):
             errors.append(f"{path.relative_to(ROOT).as_posix()}: generated page footer lacks exact credential status")
 
+    all_public = "\n".join(path.read_text(encoding="utf-8-sig") for path in PUBLIC_HTML)
+    qal_numbers = re.findall(r"(?:QAL|Qualified Applicator License)(?:\s+No\.|\s*#)?\s*(\d{4,})", all_public, re.I)
+    if not qal_numbers or set(qal_numbers) != {"175295"}:
+        errors.append(f"public QAL number set must be exactly 175295; found {sorted(set(qal_numbers))}")
+    if re.search(r"Pest Control Business License(?:\s+No\.|\s*#)?\s*175295", all_public, re.I):
+        errors.append("QAL No. 175295 is incorrectly represented as a Pest Control Business License")
+    if "Category B — Landscape Maintenance" not in all_public:
+        errors.append("public Category B wording is not Landscape Maintenance")
+    if insurance in all_public and status.get("insurance", {}).get("insured") is not True:
+        errors.append("insured wording appears without authoritative insurance support")
+
     if prelicense:
         prohibited = re.compile(
             r"\b(?:california\s+licensed|licensed,\s*qualified|qualified\s+and\s+insured|"
-            r"qal\s*#?\d+|qualified applicator license.{0,30}active|financial responsibility.{0,20}active)\b",
+            r"pest control business license\s*(?:no\.?|#)\s*175295|"
+            r"qualified applicator license.{0,30}business|financial responsibility.{0,20}active)\b",
             re.I,
         )
         for path in PUBLIC_HTML:
@@ -94,6 +109,10 @@ def main() -> int:
             errors.append("Prelicense premise requires inactive Pest Control Business License")
         if status.get("pesticide_services_enabled") is not False:
             errors.append("Prelicense premise requires pesticide services disabled")
+        if status.get("qal_issued_and_active") is not True:
+            errors.append("Verified individual QAL must remain active")
+        if status.get("financial_responsibility_active") is not True:
+            errors.append("Verified insured status must remain active")
     else:
         if status.get("pest_control_business_license_issued_and_active") is not True:
             errors.append("Pest Control Business License is not active; licensed public wording must be removed")

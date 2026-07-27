@@ -25,26 +25,30 @@ def inquiry_paths() -> str:
     explanation = escape(INQUIRY["public_explanation"])
     return f'''<div class="inquiry-paths">
 <article class="inquiry-panel" id="homeowner-inquiry">
-  <p class="eyebrow">For homeowners</p><h3>Tell us about one palm or a small group.</h3>
+  <p class="eyebrow">For homeowners</p><h3>Request a Palm Assessment</h3>
   <p>Use this path for a residential assessment, condition baseline, recurring monitoring, sourcing, or decline-response question.</p>
   <form data-inquiry-fallback data-conversion="homeowner-inquiry-email-prepared" data-subject="Homeowner palm inquiry" action="mailto:sandiegopalmprotection@gmail.com" method="get">
     <div class="form-grid">
       <div><label for="home-name">Name</label><input id="home-name" name="name" autocomplete="name" required></div>
       <div><label for="home-email">Email</label><input id="home-email" name="email" type="email" autocomplete="email" required></div>
       <div><label for="home-phone">Phone</label><input id="home-phone" name="phone" type="tel" autocomplete="tel"></div>
-      <div><label for="home-city">City</label><input id="home-city" name="city" autocomplete="address-level2" required></div>
-      <div><label for="home-species">Palm species, if known</label><input id="home-species" name="palm_species"></div>
+      <div><label for="home-city">Property city</label><input id="home-city" name="property_city" autocomplete="address-level2" required></div>
+      <div><label for="home-species">Palm type, if known</label><input id="home-species" name="palm_type"></div>
       <div><label for="home-count">Number of palms</label><input id="home-count" name="number_of_palms" inputmode="numeric"></div>
       <div class="full"><label for="home-concern">What are you seeing or trying to decide?</label><textarea id="home-concern" name="concern" required></textarea></div>
-      <div class="full"><label for="home-timing">Timing or urgency</label><input id="home-timing" name="timing"></div>
+      <div><label for="home-contact">Preferred contact method</label><select id="home-contact" name="preferred_contact"><option>Phone</option><option>Text</option><option>Email</option></select></div>
+      <div><label for="home-timing">Timing or urgency</label><input id="home-timing" name="timing"></div>
     </div>
+    <p class="form-help">Photograph uploads are not enabled. SDPP can request photographs during follow-up.</p>
+    <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
     <p class="form-help">{explanation}</p>
     <button class="button" type="submit">Prepare Homeowner Inquiry</button>
+    <p><a data-conversion="direct-email-fallback" href="mailto:sandiegopalmprotection@gmail.com?subject=Homeowner%20palm%20inquiry">Prefer email? Send your inquiry directly</a><br><small>Your email application will open. Your inquiry is not sent until you send it.</small></p>
     <p class="form-status" data-form-status aria-live="polite"></p>
   </form>
 </article>
 <article class="inquiry-panel" id="organization-inquiry">
-  <p class="eyebrow">For organizations</p><h3>Scope a managed-property or civic documentation need.</h3>
+  <p class="eyebrow">For organizations</p><h3>Discuss a Property or Palm Portfolio</h3>
   <p>Use this path for an HOA, apartment community, commercial property, institution, consultant, or public stakeholder.</p>
   <form data-inquiry-fallback data-conversion="organization-inquiry-email-prepared" data-subject="Organization palm inquiry" action="mailto:sandiegopalmprotection@gmail.com" method="get">
     <div class="form-grid">
@@ -52,13 +56,18 @@ def inquiry_paths() -> str:
       <div><label for="org-email">Work email</label><input id="org-email" name="email" type="email" autocomplete="email" required></div>
       <div><label for="org-phone">Phone</label><input id="org-phone" name="phone" type="tel" autocomplete="tel"></div>
       <div><label for="org-organization">Organization</label><input id="org-organization" name="organization" autocomplete="organization" required></div>
-      <div><label for="org-property">Property or portfolio type</label><input id="org-property" name="property_type" required></div>
-      <div><label for="org-count">Estimated palm count</label><input id="org-count" name="estimated_palm_count" inputmode="numeric"></div>
-      <div class="full"><label for="org-scope">Needed scope or decision</label><textarea id="org-scope" name="scope" required></textarea></div>
+      <div><label for="org-role">Role</label><input id="org-role" name="role" required></div>
+      <div><label for="org-property">Property or service area</label><input id="org-property" name="property_or_service_area" required></div>
+      <div><label for="org-count">Approximate number of palms</label><input id="org-count" name="approximate_palm_count" inputmode="numeric"></div>
+      <div><label for="org-contact">Preferred contact method</label><select id="org-contact" name="preferred_contact"><option>Phone</option><option>Text</option><option>Email</option></select></div>
+      <div class="full"><label for="org-scope">Type of support requested</label><textarea id="org-scope" name="support_requested" required></textarea></div>
       <div class="full"><label for="org-timing">Timing or procurement context</label><input id="org-timing" name="timing"></div>
     </div>
+    <p class="form-help">Supporting-file uploads are not enabled. SDPP can request photographs or records during follow-up.</p>
+    <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
     <p class="form-help">{explanation}</p>
     <button class="button" type="submit">Prepare Organization Inquiry</button>
+    <p><a data-conversion="direct-email-fallback" href="mailto:sandiegopalmprotection@gmail.com?subject=Organization%20palm%20inquiry">Prefer email? Send your inquiry directly</a><br><small>Your email application will open. Your inquiry is not sent until you send it.</small></p>
     <p class="form-status" data-form-status aria-live="polite"></p>
   </form>
 </article>

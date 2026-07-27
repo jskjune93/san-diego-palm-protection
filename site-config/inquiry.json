@@ -5,6 +5,13 @@
   "endpoint": null,
   "direct_uploads_enabled": false,
   "verified_lead_conversion_enabled": false,
-  "public_explanation": "Preparing an inquiry opens your email application. Review the message, attach photographs if useful, and send it from there.",
-  "owner_action_required": "Provision and approve a first-party submission endpoint, delivery destination, abuse controls, privacy handling, and secure file storage before enabling direct website submission or photograph uploads."
+  "public_explanation": "Preparing an inquiry opens your email application. Review the message and send it from there; nothing is delivered automatically.",
+  "infrastructure_discovery": {
+    "checked_on": "2026-07-26",
+    "existing_production_environment_variables": [],
+    "approved_delivery_provider_found": false,
+    "turnstile_configuration_found": false,
+    "secure_upload_storage_found": false
+  },
+  "owner_action_required": "Provide approved Resend delivery credentials and Cloudflare Turnstile site and secret keys for the existing san-diego-palm-protection Vercel project. Direct submission and uploads must remain disabled until those controls are configured and validated."
 }

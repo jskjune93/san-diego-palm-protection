@@ -38,9 +38,12 @@ function screenshotName(route, width, height) {
   fs.mkdirSync(output, { recursive: true });
   for (const [width, height] of viewports) {
     const page = await browser.newPage({ viewport: { width, height } });
+    await page.addInitScript(() => { history.scrollRestoration = "manual"; });
     for (const route of routes) {
       const relative = path.relative(root, route).replaceAll("\\", "/");
       await page.goto(`${base}/${relative}`, { waitUntil: "networkidle" });
+      await page.evaluate(() => window.scrollTo(0, 0));
+      await page.waitForTimeout(50);
       await page.evaluate(() => window.scrollTo(0, 0));
       await page.screenshot({
         path: path.join(output, screenshotName(route, width, height)),

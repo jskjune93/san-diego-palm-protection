@@ -12,7 +12,8 @@ NOTICE = "SDPP is not currently offering pesticide applications."
 
 ACTIVE_CREDENTIAL = re.compile(
     r"\b(?:california\s+licensed|qualified\s+and\s+insured|licensed,\s*qualified|"
-    r"qualified applicator license|qal\s*#?\d+|financial responsibility.{0,20}active)\b",
+    r"pest control business license(?:\s+no\.?|\s*#)?\s*175295|"
+    r"qal(?:\s+no\.?|\s*#)?\s*(?!175295\b)\d+|financial responsibility.{0,20}active)\b",
     re.I,
 )
 COMMERCIAL_TREATMENT = re.compile(
@@ -35,6 +36,12 @@ def main() -> int:
         errors.append("Pest Control Business License must be inactive")
     if status.get("pesticide_services_enabled") is not False:
         errors.append("pesticide services must be disabled")
+    if status.get("qal_issued_and_active") is not True:
+        errors.append("verified individual QAL must be active")
+    if status.get("individual_qualification", {}).get("license_number") != "175295":
+        errors.append("verified individual QAL number must be 175295")
+    if status.get("insurance", {}).get("insured") is not True:
+        errors.append("verified insured status must be active")
 
     manifest_path = DIST / "production-manifest.json"
     if not manifest_path.is_file():

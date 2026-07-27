@@ -127,8 +127,8 @@ RULES = [
 ALWAYS_BLOCK_RULES = [
     Rule(
         "active_unverified_qal_claim",
-        re.compile(r"\b(?:active\s+)?qualified applicator license\b|\bactive\s+QAL\b", re.I),
-        "Passing examinations is not proof that an active QAL has been issued.",
+        re.compile(r"\bactive\s+qualified applicator license\b|\bactive\s+QAL\b", re.I),
+        "Do not add an active-status claim outside the authoritative credential component.",
     ),
     Rule(
         "regulated_work_solicitation",
@@ -188,6 +188,7 @@ FORBIDDEN_PUBLIC_PHRASES = (
 )
 
 ALLOW_PATTERNS = [
+    re.compile(r"California Qualified Applicator License No\. 175295|California QAL No\. 175295|Category B (?:—|&mdash;) Landscape Maintenance|\bInsured\b", re.I),
     re.compile(r"not currently offered", re.I),
     re.compile(r"appropriately licensed|licensed provider|licensed tree contractor|qualified arborist|pest-control business", re.I),
     re.compile(r"education(?:al)?|documentation|field note|photographic|visible-condition|not a definitive diagnosis|not establish a diagnosis|photos alone|historical", re.I),
@@ -344,9 +345,9 @@ def run_self_tests() -> int:
         "pesticide_services_enabled": False,
         "tree_palm_contracting_enabled": False,
         "commercial_field_services_enabled": False,
-        "qal_issued_and_active": False,
+        "qal_issued_and_active": True,
         "pest_control_business_license_issued_and_active": False,
-        "financial_responsibility_active": False,
+        "financial_responsibility_active": True,
         "workers_compensation_requirement_addressed": False,
         "county_registration_current": False,
         "equipment_registered_and_ready": False,

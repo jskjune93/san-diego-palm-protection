@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
   "mode": "prelicense",
-  "explanation": "Owner-confirmed prelicense mode. Palm documentation, monitoring, reporting, educational resources, sourcing, and coordination may be offered within their supported scope. SDPP is not currently offering pesticide applications. Passing qualification examinations does not establish that a QAL has been issued, and neither licensing nor financial-responsibility status may be represented as active without independent verification.",
+  "explanation": "John Krause's individual California Qualified Applicator License No. 175295, Category B — Landscape Maintenance, and SDPP's insured status are owner-verified. These facts do not establish an active Pest Control Business License or business-level authorization to offer pesticide applications. Palm documentation, monitoring, reporting, educational resources, sourcing, and coordination may be offered within their supported scope. SDPP is not currently offering pesticide applications.",
   "pesticide_services_enabled": false,
   "tree_palm_contracting_enabled": false,
   "commercial_field_services_enabled": false,
   "documentation_and_education_enabled": true,
   "records_monitoring_reporting_enabled": true,
   "owner_review_required": true,
-  "qal_issued_and_active": false,
+  "qal_issued_and_active": true,
   "pest_control_business_license_issued_and_active": false,
-  "financial_responsibility_active": false,
+  "financial_responsibility_active": true,
   "workers_compensation_requirement_addressed": false,
   "county_registration_current": false,
   "equipment_registered_and_ready": false,
@@ -19,9 +19,29 @@
   "label_sds_notice_consent_emergency_systems_ready": false,
   "job_application_preflight_required": true,
   "owner_activation_approved": false,
+  "owner": {
+    "name": "John Krause",
+    "owner_operated": true,
+    "base": "Old Escondido",
+    "specialization": "Mature palms and Canary Island date palms"
+  },
+  "individual_qualification": {
+    "license_type": "California Qualified Applicator License",
+    "license_number": "175295",
+    "category_code": "B",
+    "category_name": "Landscape Maintenance",
+    "issued_and_active": true
+  },
+  "insurance": {
+    "insured": true,
+    "public_wording": "Insured"
+  },
   "public_credentials": {
-    "status_label": "Current service scope",
-    "service_summary": "Documentation, monitoring, reporting, sourcing, and coordination are available now.",
+    "status_label": "Owner qualification and current service scope",
+    "service_summary": "Owner-operated • California QAL No. 175295 • Category B — Landscape Maintenance • Insured",
+    "individual_license": "California Qualified Applicator License No. 175295",
+    "category": "Category B — Landscape Maintenance",
+    "insurance": "Insured",
     "exact_status": "SDPP is not currently offering pesticide applications.",
     "scope_note": "Educational information about pesticides is general only. Regulated work must be discussed with an appropriately licensed provider.",
     "effective_date": "2026-07-26"

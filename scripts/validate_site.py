@@ -274,8 +274,8 @@ def main() -> int:
         errors.append("homepage does not link to Records & Monitoring service page")
     business_status = json.loads((ROOT / "site-config" / "business_status.json").read_text(encoding="utf-8"))
     commercial_mode = business_status.get("mode") == "commercial"
-    credentials = public_credentials() if commercial_mode else {}
-    required_current_scope = credentials.get("exact_status", "Documentation, monitoring, reporting, sourcing, and coordination are available now.")
+    credentials = public_credentials()
+    required_current_scope = credentials["exact_status"]
     required_qualified_insured_scope = credentials.get("service_summary", "")
     required_future_scope = "SDPP is not currently offering pesticide applications."
     records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""

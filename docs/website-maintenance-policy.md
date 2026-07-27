@@ -19,7 +19,7 @@ This policy is the permanent change-control standard for the public San Diego Pa
 
 ## Claims, trust, reviews, and pricing
 
-- Publish credentials, insurance, licensing, treatment availability, and regulated-work language only when supported by the authoritative business-status configuration.
+- Publish credentials, insurance, licensing, treatment availability, and regulated-work language only when supported by the authoritative business-status configuration. Keep John Krause's individual California QAL No. 175295, Category B — Landscape Maintenance, separate from SDPP's Pest Control Business License and business-level pesticide authorization.
 - Publish reviews only from an owner-approved exact quote and source. Never paraphrase a customer review or expose a private client.
 - Publish owner biography facts, service areas, civic participation, and affiliations only from an approved source record.
 - Publish a price only when its amount, scope, geography, exclusions, and current approval are documented. Otherwise explain the variables that determine scope and price.
