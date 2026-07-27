@@ -1,17 +1,23 @@
 {
   "schema_version": 1,
-  "submission_mode": "email_fallback",
-  "submitted_form_enabled": false,
-  "endpoint": null,
+  "submission_mode": "first_party",
+  "submitted_form_enabled": true,
+  "endpoint": "/api/inquiry",
   "direct_uploads_enabled": false,
-  "verified_lead_conversion_enabled": false,
-  "public_explanation": "Preparing an inquiry opens your email application. Review the message and send it from there; nothing is delivered automatically.",
+  "verified_lead_conversion_enabled": true,
+  "public_explanation": "Submit securely through this page, or use the email link if direct delivery is unavailable. A success message appears only after SDPP's delivery provider confirms receipt.",
   "infrastructure_discovery": {
     "checked_on": "2026-07-26",
-    "existing_production_environment_variables": [],
-    "approved_delivery_provider_found": false,
-    "turnstile_configuration_found": false,
+    "existing_production_environment_variables": [
+      "RESEND_API_KEY",
+      "TURNSTILE_SITE_KEY",
+      "TURNSTILE_SECRET_KEY",
+      "SDPP_INQUIRY_TO_EMAIL",
+      "SDPP_INQUIRY_FROM_EMAIL"
+    ],
+    "approved_delivery_provider_found": true,
+    "turnstile_configuration_found": true,
     "secure_upload_storage_found": false
   },
-  "owner_action_required": "Provide approved Resend delivery credentials and Cloudflare Turnstile site and secret keys for the existing san-diego-palm-protection Vercel project. Direct submission and uploads must remain disabled until those controls are configured and validated."
+  "owner_action_required": "Resend domain verification and the five production environment variables must remain active in the existing san-diego-palm-protection Vercel project. Public uploads remain disabled."
 }
