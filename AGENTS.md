@@ -1,5 +1,6 @@
 # SDPP website guardrails
 
+- Keep public copy in John Krause's plainspoken owner-operator voice. Prefer what John looks at, photographs, writes, compares, or helps the owner decide over abstract frameworks, symmetrical slogans, institutional filler, and repeated service-noun lists.
 - Preserve the three service pillars: Assessment, Monitoring & Documentation; Protection & Treatment; Decline Response, Removal & Replacement.
 - Keep the public identity owner-led, local, and field-service oriented. Lead with mature palm documentation, monitoring, protection planning, sourcing, coordination, and decline response—not records consulting or internal proof architecture.
 - The homepage first viewport must use authentic palm imagery, identify Escondido/North County, offer “Request a Palm Assessment” and “Call or Text,” and show the synchronized current-service-scope block.

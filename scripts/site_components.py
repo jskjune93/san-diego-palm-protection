@@ -93,9 +93,9 @@ def about_credentials() -> str:
 
 def three_pillars(relative_root: str = "./") -> str:
     items = [
-        ("01", "Assessment, Monitoring & Documentation", "On-site palm assessments, photographic condition records, recurring visits, inventories, and clear written findings.", "residential-palm-assessment.html"),
-        ("02", "Protection & Treatment", "Protection planning, SAPW education, monitoring context, and clear referral questions based on the documented condition of the palm.", "palm-stewardship-plans.html"),
-        ("03", "Decline Response, Removal & Replacement", "Practical help when a palm declines, contractor coordination is needed, or the landscape needs a replacement plan.", "palm-removal-coordination.html"),
+        ("01", "Assessment, Monitoring & Documentation", "I visit the property, photograph the palm, write down what I find, and return when comparison over time will help.", "residential-palm-assessment.html"),
+        ("02", "Protection & Treatment", "I help owners recognize concerns early, keep useful history, and prepare informed questions for a properly licensed treatment provider.", "palm-stewardship-plans.html"),
+        ("03", "Decline Response, Removal & Replacement", "When a palm is failing, I help organize the next steps, the contractor handoff, and what comes after removal.", "palm-removal-coordination.html"),
     ]
     return '<div class="pillar-grid">' + "".join(
         f'<article class="pillar"><span>{n}</span><h3>{escape(t)}</h3><p>{escape(d)}</p><a href="{relative_root}{href}">Explore this service</a></article>'
@@ -106,7 +106,7 @@ def three_pillars(relative_root: str = "./") -> str:
 def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm assessment.") -> str:
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
-  <p>Choose the path that fits your property. Single palms and small groups are welcome, as are managed-property and civic documentation inquiries.</p></div>
+  <p>Tell me what you are seeing and what you need to decide. I work with single palms, small groups, and larger managed properties.</p></div>
   <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a><a class="button button-quiet" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Organization Inquiry</a><a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
 </section>"""
 
@@ -114,11 +114,11 @@ def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm a
 def footer(relative_root: str = "./") -> str:
     return f"""<footer class="site-footer">
   <div class="footer-grid">
-    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Owner-operated palm assessment, documentation, monitoring, and response from Old Escondido.</p></div>
+    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>John Krause personally assesses and photographs mature palms from Old Escondido.</p></div>
     <div><h2>Services</h2><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring monitoring</a><a href="{relative_root}managed-property-palm-services.html">Managed properties</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest palm documentation</a></div>
     <div><h2>Resources</h2><a href="{relative_root}about.html">About</a><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
-  <p class="footer-legal">Findings and recommendations are limited by access, available evidence, and the documented scope.</p>
+  <p class="footer-legal">I can report what I can see and verify during the visit. Hidden conditions or questions outside my scope may require another qualified professional. Pesticide applications are not currently offered by SDPP.</p>
 </footer>
 <script src="{relative_root}site-assets/site.js" defer></script>
 {mobile_contact(relative_root)}"""

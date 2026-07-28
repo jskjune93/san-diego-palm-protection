@@ -85,7 +85,7 @@ def render_homepage_credential_block() -> str:
         '<div class="business-credentials business-credentials--homepage" aria-label="Owner qualification and current business service status">\n'
         '  <p class="business-credentials__label">Qualified, insured, and owner-led</p>\n'
         f'  <p class="business-credentials__credential"><strong>{escape(owner)}, Owner</strong><br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
-        f'  <p class="business-credentials__detail"><strong>Current service scope:</strong> Assessment, documentation, monitoring, reporting, sourcing, and coordination are available now. {escape(credentials["exact_status"])}</p>\n'
+        f'  <p class="business-credentials__detail"><strong>Available now:</strong> On-site assessments, dated photographs, written reports, return visits, palm sourcing, and contractor coordination. {escape(credentials["exact_status"])}</p>\n'
         '</div>\n'
         '<!-- BUSINESS_CREDENTIALS:END -->'
     )

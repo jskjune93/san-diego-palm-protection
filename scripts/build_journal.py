@@ -244,7 +244,7 @@ def render_index(entries: list[dict]) -> None:
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-{shared_head('SDPP Palm Journal | Field Notes and Palm Documentation', 'A library of San Diego Palm Protection field notes, mature palm documentation, SAPW observations, and preservation-focused Palm Journal entries.', f'{BASE_URL}/palm-journal-new.html', absolutize(featured['primary_image']), json_ld_index(entries))}
+{shared_head('SDPP Palm Journal | John Krause’s Local Palm Field Notes', 'John Krause’s field notes on mature palms, South American palm weevil activity, Old Escondido landscapes, monitoring, and documented loss.', f'{BASE_URL}/palm-journal-new.html', absolutize(featured['primary_image']), json_ld_index(entries))}
 {styles('./')}
 </head>
 <body>
@@ -254,7 +254,7 @@ def render_index(entries: list[dict]) -> None:
   <div class="hero-inner">
     <span class="eyebrow">Palm Journal Library</span>
     <h1>Field Notes on Mature Palms in San Diego County</h1>
-    <p class="lede">A local library of documented palm observations, preservation notes, South American palm weevil documentation, and mature landscape records from San Diego Palm Protection. <a href="./report-a-palm.html">Share a palm observation or dated photograph.</a> Nothing is published automatically.</p>
+    <p class="lede">These are my field notes on mature palms around Old Escondido and North County: what I photographed, what changed, and what I could or could not conclude. <a href="./report-a-palm.html">Share a palm observation or dated photograph.</a> Nothing is published automatically.</p>
   </div>
 </section>
 <main id="main">
@@ -285,7 +285,7 @@ def render_index(entries: list[dict]) -> None:
   </section>
 
   <section aria-labelledby="journal-library">
-    <h2 id="journal-library">Palm Journal Entries</h2>
+    <h2 id="journal-library">Field notes and local palm stories</h2>
     <div class="journal-grid">
 {chr(10).join(cards)}
     </div>

@@ -42,12 +42,12 @@ def main() -> int:
         errors.append(f"homepage repeats descriptive 'Qualified' {descriptive_qualified} times; maximum is 1")
     if home.count(public["exact_status"]) != 1:
         errors.append("homepage must contain exactly one authoritative pesticide-application restriction")
-    if "Current service scope:" not in home:
-        errors.append("homepage lacks the clear current-service-scope label")
+    if "Available now:" not in home:
+        errors.append("homepage lacks the plain-language service availability label")
     for scoped_fragment in (
-        "Protection planning, SAPW education, monitoring context, and clear referral questions",
-        "Choose the path that fits your property.",
-        "Owner-operated palm assessment, documentation, monitoring, and response from Old Escondido.",
+        "I help owners recognize concerns early",
+        "The visit is shaped by the property and the question",
+        "John Krause personally assesses and photographs mature palms from Old Escondido.",
     ):
         if scoped_fragment not in home:
             errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")
