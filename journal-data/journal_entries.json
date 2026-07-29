@@ -1,5 +1,31 @@
 [
   {
+    "slug": "old-escondido-living-landmarks",
+    "title": "Old Escondido’s Living Landmarks",
+    "date": "2026-07-28",
+    "date_label": "Old Escondido | July 2 and 16, 2026",
+    "location": "Old Escondido",
+    "category": "Preservation and Historic Landscapes",
+    "topic": "Mature palms as part of Old Escondido’s neighborhood landscape",
+    "excerpt": "A dated field walk shows why mature palms are best recorded with the homes, streets, and neighborhood views they help define.",
+    "page": true,
+    "substantial": true,
+    "review": "selected from the ranked Palm Journal ready stack and revised for production",
+    "related": [
+      "old-escondido-mature-cidps-deserve-a-baseline",
+      "old-escondido-historic-canary-island-date-palm",
+      "old-escondido-albert-h-beach-house-palms"
+    ],
+    "legacy_anchor": "old-escondido-living-landmarks",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-living-landmarks.html",
+    "primary_image": "./images/palm-journal/old-escondido-living-landmarks/01-historic-house-and-mature-palms.webp",
+    "primary_image_alt": "Mature Canary Island date palms rising behind a two-story Old Escondido house",
+    "gallery_images": [],
+    "classification": "Preservation and Historic Landscapes",
+    "modified_date": "2026-07-28"
+  },
+  {
     "slug": "when-sapw-became-local",
     "title": "When SAPW Became Local",
     "date": "2026-07-26",
@@ -38,9 +64,9 @@
     "substantial": true,
     "review": "owner-approved publication artifact",
     "related": [
+      "old-escondido-living-landmarks",
       "las-palmas-no-reply-then-the-saws",
-      "classic-old-escondido-canary-island-date-palm",
-      "monitoring-mature-cidp-after-palm-weevil-activity"
+      "classic-old-escondido-canary-island-date-palm"
     ],
     "legacy_anchor": "old-escondido-mature-cidps-deserve-a-baseline",
     "status": "published",
@@ -171,6 +197,7 @@
     "substantial": true,
     "review": "distinct property context",
     "related": [
+      "old-escondido-living-landmarks",
       "old-escondido-historic-canary-island-date-palm",
       "old-escondido-cidp-collection"
     ],
@@ -262,6 +289,7 @@
     "substantial": true,
     "review": "substantial educational/documentary value",
     "related": [
+      "old-escondido-living-landmarks",
       "old-escondido-albert-h-beach-house-palms",
       "old-escondido-cidp-collection"
     ],
