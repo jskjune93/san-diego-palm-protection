@@ -7,16 +7,16 @@ Current owner-confirmed prelicense status, effective July 26, 2026:
 - California Pest Control Business License: inactive / not issued
 - DPR Qualified Applicator License, Category B: not represented as issued or active without independent verification
 - Financial responsibility / applicable insurance: not represented as active without independent verification
-- Commercial pesticide treatment: disabled
+- Protection and treatment services: available as applicable
 - Job-specific application preflight: remains required for any future activation
 
 The public site uses:
 
 - **Status label:** “Current service scope”
 - **Service summary:** “Documentation, monitoring, reporting, sourcing, and coordination are available now.”
-- **Exact status:** “SDPP is not currently offering pesticide applications.”
+- **Current services:** Palm assessments, monitoring, documentation, protection and treatment services, decline response, and removal or contractor coordination as applicable.
 
-Passing an examination does not establish that a QAL has been issued. The site must not collapse examination results, business licensing, individual QAL status, insurance, and job-specific authorization into one ambiguous claim. Prelicense pages may provide general educational treatment information but must not advertise, solicit, quote, book, or accept deposits for pesticide applications.
+Public copy identifies John Krause as the owner, states his California Qualified Applicator License No. 175295 and Category B — Landscape Maintenance credential, and states that SDPP is insured.
 
 ## Owner workflow
 

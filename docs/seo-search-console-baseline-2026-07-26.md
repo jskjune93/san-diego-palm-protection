@@ -63,7 +63,7 @@ Top visible queries were sparse and mostly nonbranded, including local palm trim
 - Physical storefront: none shown
 - Website corrected from the HTTP apex to `https://www.sandiegopalmprotection.com/`
 - Description corrected to the current owner-operated assessment, documentation, monitoring, protection-planning, and decline-response scope.
-- The corrected description identifies John Krause's individual California QAL No. 175295, Category B — Landscape Maintenance, insurance status, and that SDPP is not currently offering pesticide applications.
+- The current description identifies John Krause as owner, California QAL No. 175295, Category B — Landscape Maintenance, SDPP's insured status, and the available palm services.
 
 No category, address, or hours change was made. Those fields can create verification or suspension risk and were not shown to be factually wrong by this review.
 

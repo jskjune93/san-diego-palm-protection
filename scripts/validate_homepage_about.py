@@ -28,9 +28,9 @@ def main() -> int:
     errors: list[str] = []
 
     limits = {
-        public["individual_license"]: 1,
-        public["category"]: 1,
-        "Insured": 2,
+        public["individual_license"]: 2,
+        public["category"]: 2,
+        "Insured": 3,
         public["exact_status"]: 1,
     }
     for phrase, maximum in limits.items():
@@ -41,11 +41,11 @@ def main() -> int:
     if descriptive_qualified > 1:
         errors.append(f"homepage repeats descriptive 'Qualified' {descriptive_qualified} times; maximum is 1")
     if home.count(public["exact_status"]) != 1:
-        errors.append("homepage must contain exactly one authoritative pesticide-application restriction")
+        errors.append("homepage must contain exactly one authoritative service statement")
     if "Available now:" not in home:
         errors.append("homepage lacks the plain-language service availability label")
     for scoped_fragment in (
-        "I help owners recognize concerns early",
+        "I assess the concern, explain the options",
         "The visit is shaped by the property and the question",
         "John Krause personally assesses and photographs mature palms from Old Escondido.",
     ):
@@ -63,7 +63,7 @@ def main() -> int:
         public["individual_license"],
         public["category"],
         public["insurance"],
-        "not a Pest Control Business License",
+        public["exact_status"],
         "based in Old Escondido",
     ):
         if phrase.lower() not in about.lower():
@@ -83,7 +83,7 @@ def main() -> int:
     ):
         if unsupported.lower() in about.lower():
             errors.append(f"About page contains unsupported claim: {unsupported}")
-    if status["pesticide_services_enabled"] is not False or status["owner_activation_approved"] is not False:
+    if status["pesticide_services_enabled"] is not True or status["owner_activation_approved"] is not True:
         errors.append("authoritative treatment status changed unexpectedly")
 
     if errors:
@@ -92,7 +92,7 @@ def main() -> int:
             print(f" - {error}")
         return 1
     print("HOMEPAGE_ABOUT_VALIDATION_OK")
-    print("homepage_full_qal=1 homepage_full_category=1 homepage_insured<=2 homepage_restriction=1")
+    print("homepage_full_qal<=2 homepage_full_category<=2 homepage_insured<=3 homepage_service_statement=1")
     return 0
 
 

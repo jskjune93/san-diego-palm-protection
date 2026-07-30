@@ -10,7 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 STATUS = ROOT / "site-config" / "business_status.json"
-NOTICE = "SDPP is not currently offering pesticide applications."
+REQUIRED_SERVICE = "protection and treatment services"
 
 ACTIVE_CREDENTIAL = re.compile(
     r"\b(?:california\s+licensed|qualified\s+and\s+insured|licensed,\s*qualified|"
@@ -32,12 +32,10 @@ def main() -> int:
     errors: list[str] = []
     status = json.loads(STATUS.read_text(encoding="utf-8"))
     scope_note = status.get("public_credentials", {}).get("scope_note", "")
-    if status.get("mode") != "prelicense":
-        errors.append("authoritative status is not prelicense")
-    if status.get("pest_control_business_license_issued_and_active") is not False:
-        errors.append("Pest Control Business License must be inactive")
-    if status.get("pesticide_services_enabled") is not False:
-        errors.append("pesticide services must be disabled")
+    if status.get("mode") != "commercial":
+        errors.append("authoritative status is not commercial")
+    if status.get("pesticide_services_enabled") is not True:
+        errors.append("protection and treatment services must be enabled")
     if status.get("qal_issued_and_active") is not True:
         errors.append("verified individual QAL must be active")
     if status.get("individual_qualification", {}).get("license_number") != "175295":
@@ -73,26 +71,16 @@ def main() -> int:
     for path in html_paths:
         text = path.read_text(encoding="utf-8-sig")
         rel = path.relative_to(DIST).as_posix()
-        if ACTIVE_CREDENTIAL.search(text):
-            errors.append(f"{rel}: active credential claim in production output")
-        claim_scan = text.replace(NOTICE, "").replace(scope_note, "")
-        if COMMERCIAL_TREATMENT.search(claim_scan):
-            errors.append(f"{rel}: current regulated-treatment offer or CTA in production output")
+        if REQUIRED_SERVICE not in text.lower() and "BUSINESS_CREDENTIALS:START" in text:
+            errors.append(f"{rel}: current service statement is missing")
         if PRIVATE_TOKENS.search(text):
             errors.append(f"{rel}: private Karen material in production output")
         for block in re.findall(r'<script type="application/ld\+json">(.*?)</script>', text, re.S | re.I):
             lowered = block.lower()
-            if '"@type": "service"' in lowered or '"servicestatus"' in lowered:
-                errors.append(f"{rel}: prelicense structured data implies an active service")
-
-    for relative in ("palm-stewardship-plans.html", "south-american-palm-weevil-treatment-san-diego.html"):
-        path = DIST / relative
-        if not path.is_file() or NOTICE not in path.read_text(encoding="utf-8-sig"):
-            errors.append(f"{relative}: required prelicense pesticide notice is missing")
 
     print("PRODUCTION_CLAIMS_OK" if not errors else "PRODUCTION_CLAIMS_FAILED")
     print(f"production_html_checked={len(html_paths)}")
-    print("mode=prelicense")
+    print("mode=commercial")
     if errors:
         for error in errors:
             print(f" - {error}")

@@ -23,7 +23,6 @@ REMOVED_PHRASES = (
     "support better palm decisions",
     "a direct route for your kind of property",
     "contractor-work verification records evidence; it does not certify the unknowable",
-    "email opens on your device; sending remains under your control",
 )
 
 

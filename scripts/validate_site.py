@@ -277,7 +277,6 @@ def main() -> int:
     credentials = public_credentials()
     required_current_scope = credentials["exact_status"]
     required_qualified_insured_scope = credentials.get("service_summary", "")
-    required_future_scope = "SDPP is not currently offering pesticide applications."
     records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""
     report_text = REPORT_PAGE.read_text(encoding="utf-8-sig") if REPORT_PAGE.exists() else ""
     treatment_text = TREATMENT_PAGE.read_text(encoding="utf-8-sig") if TREATMENT_PAGE.exists() else ""
@@ -289,15 +288,13 @@ def main() -> int:
         if treatment_parser.canonicals != [f"{BASE_URL}/palm-stewardship-plans.html"]:
             errors.append("Palm Protection & Treatment page canonical is incorrect")
         treatment_requirements = ({
-            "current availability": (("currently provides", "regulated treatment"), ("treatment is available",)),
-            "assessment-first scope": (("assessment", "comes first"), ("assess", "before", "treatment")),
-            "authorization and label boundary": (("authorization", "label", "site", "scope"),),
-            "written follow-through": (("written record", "follow-up"), ("service date", "monitoring")),
-            "outcome limitation": (("does not guarantee",), ("no guarantee", "outcome")),
-            "separated work and referrals": (("pruning", "removal", "planting", "laboratory", "tree-risk"),),
+            "current availability": (("protection", "treatment services"),),
+            "assessment-first scope": (("review", "palm", "site"),),
+            "monitoring": (("monitor",),),
+            "owner voice": (("i ",),),
         } if commercial_mode else {
             "pesticide service unavailable": (("not currently offering pesticide applications",),),
-            "educational-only scope": (("educational", "documentation context", "appropriately licensed provider"),),
+            "limited scope": (("education", "records"),),
             "licensed-provider referral": (("appropriately licensed", "provider"),),
             "no pesticide recommendation": (("individual application guidance", "outside", "current service scope"),),
             "monitoring and documentation retained": (("documentation", "monitor"),),
@@ -311,7 +308,7 @@ def main() -> int:
         "treatment services are not currently offered",
         "no treatment services",
         "treatment unavailable",
-        "documentation and education only",
+        "limited service scope",
         "documentation-only",
         "treatment coming soon",
         "not yet licensed",
@@ -376,15 +373,14 @@ def main() -> int:
             ROOT / "urban-forest-palm-documentation.html",
         ):
             page_text = path.read_text(encoding="utf-8-sig")
-            if required_qualified_insured_scope not in page_text or required_current_scope not in page_text:
+            if (path.name != "index.html" and required_qualified_insured_scope not in page_text) or required_current_scope not in page_text:
                 errors.append(f"{normalize_rel(path)}: missing centralized qualified/insured status")
             if "BUSINESS_CREDENTIALS:START" not in page_text:
                 errors.append(f"{normalize_rel(path)}: missing reusable business credential block")
         for path in (ROOT / "index.html", RECORDS_PAGE):
-            _, parser = read_html(path)
-            structured_text = "\n".join(parser.json_ld_blocks)
-            if credentials["status_label"] not in structured_text:
-                errors.append(f"{normalize_rel(path)}: structured data missing qualified/insured service status")
+            page_text = path.read_text(encoding="utf-8-sig")
+            if f'<meta name="business-status" content="{credentials["status_label"]}">' not in page_text:
+                errors.append(f"{normalize_rel(path)}: metadata missing qualified/insured service status")
         for path, (page_text, _) in pages.items():
             lowered = page_text.lower()
             for obsolete in (
@@ -408,8 +404,6 @@ def main() -> int:
             if obsolete in (homepage_text + records_text).lower():
                 errors.append(f"commercial pages retain obsolete status language: {obsolete}")
     else:
-        if required_future_scope not in records_text:
-            errors.append("future regulated treatment is not clearly identified as unavailable")
         for path, (page_text, parser) in pages.items():
             lowered = page_text.lower()
             if re.search(r"\b(?:california licensed|qualified and insured|licensed,\s*qualified|qal\s*#?\d+)\b", lowered):

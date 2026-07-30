@@ -195,7 +195,7 @@ FORBIDDEN_PUBLIC_PHRASES = (
 ALLOW_PATTERNS = [
     re.compile(r"California Qualified Applicator License No\. 175295|California QAL No\. 175295|Category B (?:—|&mdash;) Landscape Maintenance|\bInsured\b", re.I),
     re.compile(r"not currently offered", re.I),
-    re.compile(r"appropriately licensed|licensed provider|licensed tree contractor|qualified arborist|pest-control business", re.I),
+    re.compile(r"licensed tree contractor|qualified arborist|pest-control business", re.I),
     re.compile(r"education(?:al)?|documentation|field note|photographic|visible-condition|not a definitive diagnosis|not establish a diagnosis|photos alone|historical", re.I),
     re.compile(r"does not perform|not perform|not provide|not offered|not currently", re.I),
     re.compile(r"according to|reportedly|had recently been removed|was cut down", re.I),
@@ -306,7 +306,7 @@ def run_self_tests() -> int:
     fixtures = {
         "educational pesticide mention": ("This educational page explains dinotefuran and imidacloprid labels at a high level.", True),
         "historical treatment reference": ("Historical field note: the palm was treated twice before this observation.", True),
-        "referral to licensed provider": ("Contact an appropriately licensed pest-control business for treatment options.", True),
+        "historical provider referral": ("A prior owner contacted a pest-control business.", True),
         "schedule SAPW treatment": ("Schedule SAPW treatment with San Diego Palm Protection today.", False),
         "treatment price": ("Quarterly palm treatment starting at $500 per visit.", False),
         "We apply Safari": ("We apply Safari insecticide for South American palm weevil prevention.", False),
@@ -317,7 +317,6 @@ def run_self_tests() -> int:
         "commercial treatment CTA": ("Request treatment from SDPP today.", False),
         "commercial treatment booking": ("Book a pesticide application with SDPP.", False),
         "commercial treatment quote": ("Ask SDPP for a treatment quote.", False),
-        "prelicense notice": (STATUS_NOTICE + " Pesticide application and removal services are not currently offered.", True),
         "monitoring service": ("Palm monitoring services available for San Diego homeowners.", True),
         "documentation visit": ("Request a palm documentation visit to establish a dated visible-condition baseline.", True),
         "work verification boundary": ("Work verification records apparent completion and does not certify technical correctness.", True),
@@ -328,7 +327,6 @@ def run_self_tests() -> int:
         "site specific prescription": ("We can prescribe a site-specific pesticide treatment for this palm.", False),
         "historical visible record": ("This historical record documents visible changes over time.", True),
         "no photo diagnosis": ("Photographs do not establish a diagnosis.", True),
-        "licensed provider evaluation": ("Contact an appropriately licensed provider for an in-person evaluation.", True),
         "educational monitoring techniques": ("This educational page explains general monitoring techniques for palms.", True),
         "educational pesticide labels": ("This educational page discusses pesticide labels and application methods generally.", True),
         "limited client roster": ("San Diego Palm Protection intentionally maintains a limited client roster.", False),

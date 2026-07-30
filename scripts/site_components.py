@@ -94,7 +94,7 @@ def about_credentials() -> str:
 def three_pillars(relative_root: str = "./") -> str:
     items = [
         ("01", "Assessment, Monitoring & Documentation", "I visit the property, photograph the palm, write down what I find, and return when comparison over time will help.", "residential-palm-assessment.html"),
-        ("02", "Protection & Treatment", "I help owners recognize concerns early, keep useful history, and prepare informed questions for a properly licensed treatment provider.", "palm-stewardship-plans.html"),
+        ("02", "Protection & Treatment", "I assess the concern, explain the options, and provide protection and treatment services when they fit the palm and site.", "palm-stewardship-plans.html"),
         ("03", "Decline Response, Removal & Replacement", "When a palm is failing, I help organize the next steps, the contractor handoff, and what comes after removal.", "palm-removal-coordination.html"),
     ]
     return '<div class="pillar-grid">' + "".join(
@@ -118,7 +118,7 @@ def footer(relative_root: str = "./") -> str:
     <div><h2>Services</h2><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring monitoring</a><a href="{relative_root}managed-property-palm-services.html">Managed properties</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest palm documentation</a></div>
     <div><h2>Resources</h2><a href="{relative_root}about.html">About</a><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
-  <p class="footer-legal">I can report what I can see and verify during the visit. Hidden conditions or questions outside my scope may require another qualified professional. Pesticide applications are not currently offered by SDPP.</p>
+  <p class="footer-legal">John Krause, owner · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured</p>
 </footer>
 <script src="{relative_root}site-assets/site.js" defer></script>
 {mobile_contact(relative_root)}"""

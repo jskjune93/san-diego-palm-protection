@@ -67,7 +67,7 @@ def main() -> int:
         if relative == "index.html":
             required_values = (exact, individual_license, category, insurance, "John Krause, Owner", "Qualified, insured, and owner-led")
         elif relative == "about.html":
-            required_values = (individual_license, category, insurance, "John Krause", "not a Pest Control Business License")
+            required_values = (individual_license, category, insurance, "John Krause", exact)
         else:
             required_values = (summary, exact, label, individual_license, category, insurance)
         if any(value not in text for value in required_values):
