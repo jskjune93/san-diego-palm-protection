@@ -400,7 +400,7 @@ PAGES: dict[str, dict] = {
         "description": "SAPW education, visible-condition documentation, monitoring context, and licensed-provider referral information for Canary Island date palms in North County San Diego.",
         "eyebrow": "Protection and treatment",
         "h1": "South American Palm Weevil Protection & Treatment",
-        "lede": "I assess visible palm and property conditions, monitor change, and provide protection and treatment services for South American palm weevil concerns when applicable.",
+        "lede": "I assess visible palm and property conditions, compare what is changing, and provide protection and treatment services for South American palm weevil concerns when applicable.",
         "image": "treatment.jpg",
         "body": section("Documentation before decisions", "A visible-condition record supports better questions.", "The review considers palm species, visible condition, reported history, known pest pressure, access, timing, prior treatment information, and client objectives. Photographs or a single symptom do not establish SAPW or another diagnosis.", cards([
             ("Document", "Establish dated photographs, observations, reported history, and limitations."),

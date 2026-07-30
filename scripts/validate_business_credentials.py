@@ -16,7 +16,7 @@ OBSOLETE_PATTERNS = (
     r"\bawaiting licen[cs]",
     r"\bawaiting qualification",
     r"\bstill awaiting qualification",
-    r"\btreatment services are not currently offered",
+    r"\btreatment services (?:remain )?unavailable",
     r"\bpassed (?:the )?(?:qualification )?(?:exam|examination)\b",
     r"\bprequalification\b",
 )

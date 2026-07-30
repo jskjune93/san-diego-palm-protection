@@ -305,7 +305,7 @@ def main() -> int:
     public_treatment_unavailable = (
         "pesticide application is not currently offered",
         "treatment is not currently offered",
-        "treatment services are not currently offered",
+        "treatment services unavailable",
         "no treatment services",
         "treatment unavailable",
         "limited service scope",
@@ -388,7 +388,7 @@ def main() -> int:
                 "awaiting licensing",
                 "awaiting qualification",
                 "still awaiting qualification",
-                "treatment services are not currently offered",
+                "treatment services unavailable",
             ):
                 if obsolete in lowered:
                     errors.append(f"{normalize_rel(path)}: obsolete commercial-status wording remains: {obsolete}")
@@ -400,7 +400,7 @@ def main() -> int:
                     errors.append(f"{normalize_rel(path)}: drifted credential wording remains: {drifted}")
         if "Request a Palm Assessment" not in homepage_text or "Request a Palm Assessment" not in records_text:
             errors.append("commercial homepage and service page must expose the assessment CTA")
-        for obsolete in ("prelicense", "pending licensing", "treatment services are not currently offered"):
+        for obsolete in ("prelicense", "pending licensing", "treatment services unavailable"):
             if obsolete in (homepage_text + records_text).lower():
                 errors.append(f"commercial pages retain obsolete status language: {obsolete}")
     else:
