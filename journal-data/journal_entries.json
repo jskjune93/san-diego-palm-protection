@@ -1,5 +1,31 @@
 [
   {
+    "slug": "the-palms-that-complete-old-escondidos-historic-homes",
+    "title": "The Palms That Complete Old Escondido’s Historic Homes",
+    "date": "2026-07-29",
+    "date_label": "Old Escondido | July 29, 2026",
+    "location": "Old Escondido",
+    "category": "Historic Homes and Landscapes",
+    "topic": "Property history, architecture, and the age context of mature Canary Island date palms",
+    "excerpt": "The 1896 Albert H. Beach House anchors a photographic walk through the height, symmetry, and permanence mature Canary Island date palms bring to Old Escondido homes.",
+    "page": true,
+    "substantial": true,
+    "review": "property-specific historical feature with source notes and photo-based age limits",
+    "related": [
+      "old-escondido-living-landmarks",
+      "old-escondido-albert-h-beach-house-palms",
+      "old-escondido-historic-canary-island-date-palm"
+    ],
+    "legacy_anchor": "palms-complete-old-escondido-historic-homes",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html",
+    "primary_image": "./images/palm-journal/palms-complete-old-escondido-homes/00-albert-h-beach-house-palms-card.webp",
+    "primary_image_alt": "Albert H. Beach House in Old Escondido framed by two mature Canary Island date palms",
+    "gallery_images": [],
+    "classification": "Historic Homes and Landscapes",
+    "modified_date": "2026-07-29"
+  },
+  {
     "slug": "old-escondido-living-landmarks",
     "title": "Old Escondido’s Living Landmarks",
     "date": "2026-07-28",

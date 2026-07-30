@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-42 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; five audience, proof, and owner-trust routes were added. No route required a redirect because each valuable URL retains a distinct purpose.
+44 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; five audience, proof, and owner-trust routes were added. No route required a redirect because each valuable URL retains a distinct purpose.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -28,11 +28,13 @@
 | `/palm-journal/old-escondido-cidp-collection.html` | preserved / regenerated | Palm Journal evidence: Preservation and Historic Landscapes |
 | `/palm-journal/old-escondido-cidp-icons-and-change.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/old-escondido-historic-canary-island-date-palm.html` | preserved / regenerated | Palm Journal evidence: Preservation and Historic Landscapes |
+| `/palm-journal/old-escondido-living-landmarks.html` | created / generated | Visual field note on palms within Old Escondido property and street views |
 | `/palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html` | preserved / regenerated | Palm Journal evidence: Civic Documentation |
 | `/palm-journal/old-escondido-mexican-fan-palm-curve.html` | preserved / regenerated | Palm Journal evidence: Preservation and Historic Landscapes |
 | `/palm-journal/old-escondido-palm-weevils.html` | preserved / regenerated | Palm Journal evidence: SAPW Documentation |
 | `/palm-journal/poway-old-winery-cidp.html` | preserved / regenerated | Palm Journal evidence: Preservation and Historic Landscapes |
 | `/palm-journal/rancho-santa-fe-palm-walk.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
+| `/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html` | created / generated | Property-specific history, visual analysis, and cautious palm-age context |
 | `/palm-journal/when-sapw-became-local.html` | preserved / regenerated | Palm Journal evidence: Owner-Documented Field Record |
 | `/palm-proof-examples.html` | created | Approved sanitized proof presentation and privacy boundary |
 | `/palm-records-monitoring-verification.html` | restructured | Canonical service overview and inquiry |
