@@ -66,8 +66,6 @@ def main() -> int:
         public["exact_status"],
         "based in Old Escondido",
         "I have my B.S. from the University of Minnesota in environmental science and am also a Navy veteran.",
-        "agronomy and horticulture department",
-        "invasive-plant competition and allelopathy",
         "South American palm weevil activity and palm loss on my own property",
     ):
         if phrase.lower() not in about.lower():
