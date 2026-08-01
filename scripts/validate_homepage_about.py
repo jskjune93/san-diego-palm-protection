@@ -68,8 +68,6 @@ def main() -> int:
         "University of Minnesota",
         "agronomy and horticulture department",
         "invasive-plant competition and allelopathy",
-        "U.S. Navy officer",
-        "earned an MBA",
         "South American palm weevil activity and palm loss on my own property",
     ):
         if phrase.lower() not in about.lower():
