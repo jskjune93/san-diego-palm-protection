@@ -55,6 +55,12 @@ async function htmlRoutes() {
 function localReferences(text) {
   const values = [];
   for (const match of text.matchAll(/(?:src|href|poster)=["']([^"'#]+)["']/gi)) values.push(match[1]);
+  for (const match of text.matchAll(/srcset=["']([^"']+)["']/gi)) {
+    for (const candidate of match[1].split(",")) {
+      const value = candidate.trim().split(/\s+/)[0];
+      if (value) values.push(value);
+    }
+  }
   for (const match of text.matchAll(/url\(["']?([^"')]+)["']?\)/gi)) values.push(match[1]);
   return values.filter(value =>
     !/^(?:https?:|mailto:|tel:|sms:|data:|javascript:)/i.test(value) &&

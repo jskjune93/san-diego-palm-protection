@@ -65,6 +65,12 @@ def main() -> int:
         public["insurance"],
         public["exact_status"],
         "based in Old Escondido",
+        "University of Minnesota",
+        "agronomy and horticulture department",
+        "invasive-plant competition and allelopathy",
+        "U.S. Navy officer",
+        "earned an MBA",
+        "South American palm weevil activity and palm loss on my own property",
     ):
         if phrase.lower() not in about.lower():
             errors.append(f"About page lacks approved fact or boundary: {phrase}")
@@ -73,6 +79,16 @@ def main() -> int:
     for anchor in ("#homeowner-inquiry", "#organization-inquiry"):
         if anchor not in about_html:
             errors.append(f"About page lacks inquiry link: {anchor}")
+    for photo_asset in (
+        "john-krause-palm-640.webp",
+        "john-krause-palm-960.webp",
+        "john-krause-palm-1280.webp",
+        "john-krause-palm-960.jpg",
+    ):
+        if photo_asset not in about_html:
+            errors.append(f"About page lacks responsive John photo asset: {photo_asset}")
+    if "about-john-profile" not in about_html:
+        errors.append("About page lacks the dedicated John profile layout")
     for unsupported in (
         "ISA Certified Arborist",
         "TRAQ",

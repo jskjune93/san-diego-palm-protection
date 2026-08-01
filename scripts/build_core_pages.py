@@ -155,13 +155,21 @@ PAGES: dict[str, dict] = {
         "description": "Meet John Krause, the Old Escondido owner who personally visits, photographs, and reports on mature palms for San Diego Palm Protection.",
         "eyebrow": "About San Diego Palm Protection",
         "h1": "I look at the palm, take the photographs, and write the report.",
-        "lede": "I am John Krause, owner of San Diego Palm Protection. I started this work in Old Escondido because mature palms deserve more than a quick glance and a guess.",
+        "lede": "I am John Krause, owner of San Diego Palm Protection. I started SDPP after confronting South American palm weevil activity and palm loss on my own Old Escondido property.",
         "image": "beautiful-old_escondido-cidp.jpg",
-        "body": section("Why I started SDPP", "Too many owners have no photograph from before the decline.", "Old Escondido is full of mature palms that shape the neighborhood. When one begins to change, memory is not enough. A dated set of photographs can show what was there and how quickly it changed.", cards([
-            ("I visit the property", "I look at the whole palm from the ground and ask what the owner has noticed."),
-            ("I photograph what matters", "I take views of the crown, trunk, base, setting, and any concern I can safely see."),
-            ("I put it in writing", "I explain what I observed, what I cannot confirm, and what I would consider next."),
-        ])) +
+        "body": section("About John", "Local experience shapes how I approach the work.", "SDPP grew from firsthand experience with the threat facing the mature palms that help define Old Escondido and other San Diego communities.", '''<div class="about-john-profile">
+<figure class="about-john-photo">
+  <picture>
+    <source type="image/webp" srcset="./images/about-john/john-krause-palm-640.webp 640w, ./images/about-john/john-krause-palm-960.webp 960w, ./images/about-john/john-krause-palm-1280.webp 1280w" sizes="(max-width: 700px) calc(100vw - 32px), 42vw">
+    <img src="./images/about-john/john-krause-palm-960.jpg" width="960" height="1280" alt="John Krause standing beneath a mature Canary Island date palm at his Old Escondido property" loading="eager" decoding="async" fetchpriority="high">
+  </picture>
+</figure>
+<div class="about-john-copy">
+  <p>I am John Krause, the owner of San Diego Palm Protection and an Old Escondido homeowner. I started SDPP after confronting South American palm weevil activity and palm loss on my own property. That experience made the threat very real to me&mdash;and made me look more closely at how many mature palms across our neighborhoods could be lost without earlier attention.</p>
+  <p>My background is in environmental science. I earned my B.S. from the University of Minnesota, worked in the university's agronomy and horticulture department, and completed undergraduate research involving invasive-plant competition and allelopathy. I later served as a U.S. Navy officer and earned an MBA. Those experiences shape how I approach this work: observe carefully, document what is happening, communicate clearly, and take responsibility for the work performed.</p>
+  <p>Today, I provide owner-led palm assessments, monitoring, protection, and treatment services throughout San Diego County. I built SDPP to give palm owners a knowledgeable local point of contact&mdash;someone who will personally look at the tree, explain what is visible, maintain useful records, and help determine a responsible next step.</p>
+</div>
+</div>''') +
         section("Work directly with the owner", "I stay with the work.", "I answer the inquiry, visit the property, photograph the palms, write the findings, and discuss the next step with you.", '<div class="field-split"><div><h3>Why that matters</h3><p>I do not have to translate another person&#x27;s field notes or guess what happened during the visit. I was there.</p></div><img src="./journal-monitoring.jpg" alt="Palm condition documentation during an SDPP field visit" loading="lazy"></div>', "section-tint") +
         section("Qualification boundary", "A clear individual credential.", "John's QAL is an individual qualification. It is not a Pest Control Business License and does not establish business-level pesticide authorization.", '<p class="note">Current service availability continues to follow the authoritative business-status statement shown across relevant service pages.</p>') +
         section("Local focus", "Old Escondido is home.", "I am based in Old Escondido and focus on mature palms, especially Canary Island date palms, across North County and selected nearby San Diego communities.", '<p><a href="./old-escondido-palm-preservation.html">See my Old Escondido work</a></p>', "section-tint") +
