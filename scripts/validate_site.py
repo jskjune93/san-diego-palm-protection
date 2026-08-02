@@ -399,8 +399,8 @@ def main() -> int:
             ):
                 if drifted.lower() in lowered:
                     errors.append(f"{normalize_rel(path)}: drifted credential wording remains: {drifted}")
-        if "Request a Palm Assessment" not in homepage_text or "Request a Palm Assessment" not in records_text:
-            errors.append("commercial homepage and service page must expose the assessment CTA")
+        if "Residential Palm Assessment" not in homepage_text or 'href="./palm-records-monitoring-verification.html#homeowner-inquiry"' not in homepage_text or "Request a Palm Assessment" not in records_text:
+            errors.append("commercial-first homepage and service page must preserve the secondary residential assessment path")
         for obsolete in ("prelicense", "pending licensing", "treatment services unavailable"):
             if obsolete in (homepage_text + records_text).lower():
                 errors.append(f"commercial pages retain obsolete status language: {obsolete}")

@@ -47,7 +47,7 @@ def main() -> int:
     for scoped_fragment in (
         "Preventive protection, South American palm weevil awareness",
         "The work is shaped by the palms, the property, and the decisions",
-        "John Krause personally assesses and photographs mature palms from Old Escondido.",
+        "Owner-led stewardship for important palms and multi-palm properties.",
     ):
         if scoped_fragment not in home:
             errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")

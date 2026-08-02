@@ -56,7 +56,10 @@ def head(title: str, description: str, path: str, image: str = "background.jpg",
   <!-- SDPP analytics integration point: existing measurement configuration is preserved; no identifier is invented here. -->"""
 
 
-def header(relative_root: str = "./") -> str:
+def header(relative_root: str = "./", residential_primary: bool = False) -> str:
+    action_label = "Request Assessment" if residential_primary else "Property Walkthrough"
+    action_anchor = "homeowner-inquiry" if residential_primary else "organization-inquiry"
+    action_event = "homeowner-inquiry-initiation" if residential_primary else "organization-inquiry-initiation"
     return f"""<a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="nav-shell">
@@ -67,13 +70,13 @@ def header(relative_root: str = "./") -> str:
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav"><span class="sr-only">Open navigation</span><span aria-hidden="true"></span></button>
     <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
       <a href="{relative_root}palm-records-monitoring-verification.html">Services</a>
-      <a href="{relative_root}residential-palm-assessment.html">Residential</a>
       <a href="{relative_root}managed-property-palm-services.html">Commercial &amp; Managed</a>
+      <a href="{relative_root}residential-palm-assessment.html">Residential</a>
       <a href="{relative_root}palm-removal-coordination.html">Palm Decline</a>
       <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
       <a href="{relative_root}palm-proof-examples.html">Field Work</a>
       <a class="nav-phone" data-conversion="call" href="tel:2624923135">Call or Text</a>
-      <a class="button button-small" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request Assessment</a>
+      <a class="button button-small" data-conversion="{action_event}" href="{relative_root}palm-records-monitoring-verification.html#{action_anchor}">{action_label}</a>
     </nav>
   </div>
 </header>"""
@@ -109,31 +112,39 @@ def three_pillars(relative_root: str = "./") -> str:
     return stewardship_functions(relative_root)
 
 
-def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm assessment.") -> str:
+def inquiry(relative_root: str = "./", residential_primary: bool = False) -> str:
+    heading = "Request an on-site palm assessment." if residential_primary else "Discuss a property or palm stewardship plan."
+    primary = f'<a class="button" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a>'
+    secondary = f'<a class="button button-quiet" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a>'
+    if residential_primary:
+        primary, secondary = secondary.replace("button button-quiet", "button"), primary.replace('class="button"', 'class="button button-quiet"')
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
   <p>Tell me what you are seeing and what you need to decide. I work with single palms, small groups, and larger managed properties.</p></div>
-  <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a><a class="button button-quiet" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a><a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
+  <div class="button-row">{primary}{secondary}<a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
 </section>"""
 
 
-def footer(relative_root: str = "./") -> str:
+def footer(relative_root: str = "./", residential_primary: bool = False) -> str:
     return f"""<footer class="site-footer">
   <div class="footer-grid">
-    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>John Krause personally assesses and photographs mature palms from Old Escondido.</p></div>
-    <div><h2>Services</h2><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring monitoring</a><a href="{relative_root}managed-property-palm-services.html">Managed properties</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest palm documentation</a></div>
+    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Owner-led stewardship for important palms and multi-palm properties.</p></div>
+    <div><h2>Services</h2><a href="{relative_root}managed-property-palm-services.html">Commercial &amp; managed properties</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring stewardship</a><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest palm documentation</a></div>
     <div><h2>Resources</h2><a href="{relative_root}about.html">About</a><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
   <p class="footer-legal">John Krause, owner · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured</p>
 </footer>
 <script src="{relative_root}site-assets/site.js" defer></script>
-{mobile_contact(relative_root)}"""
+{mobile_contact(relative_root, residential_primary)}"""
 
 
-def mobile_contact(relative_root: str = "./") -> str:
+def mobile_contact(relative_root: str = "./", residential_primary: bool = False) -> str:
+    action_label = "Request Assessment" if residential_primary else "Property Walkthrough"
+    action_anchor = "homeowner-inquiry" if residential_primary else "organization-inquiry"
+    action_event = "homeowner-inquiry-initiation" if residential_primary else "organization-inquiry-initiation"
     return f"""<aside class="mobile-contact-bar" aria-label="Quick contact">
   <a data-conversion="call" href="tel:2624923135">Call or Text</a>
-  <a data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request Assessment</a>
+  <a data-conversion="{action_event}" href="{relative_root}palm-records-monitoring-verification.html#{action_anchor}">{action_label}</a>
 </aside>"""
 
 
@@ -154,27 +165,32 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         '<span>Category B — Landscape Maintenance</span><span>Insured</span><span>Structured photographic and written reporting</span></div>'
         if filename in {"managed-property-palm-services.html", "urban-forest-palm-documentation.html"} else ""
     )
-    organization_page = filename in {"managed-property-palm-services.html", "urban-forest-palm-documentation.html"}
-    primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'organization-inquiry' if organization_page else 'homeowner-inquiry'}"
-    primary_label = "Request a Property Walkthrough" if organization_page else "Request a Palm Assessment"
-    primary_event = "organization-inquiry-initiation" if organization_page else "homeowner-inquiry-initiation"
+    residential_page = filename == "residential-palm-assessment.html"
+    organization_page = not residential_page
+    primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'homeowner-inquiry' if residential_page else 'organization-inquiry'}"
+    primary_label = "Request a Palm Assessment" if residential_page else "Request a Property Walkthrough"
+    primary_event = "homeowner-inquiry-initiation" if residential_page else "organization-inquiry-initiation"
+    secondary_action = (
+        f'<a class="button button-quiet" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Residential Palm Assessment</a>'
+        if filename == "index.html" else f'<a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a>'
+    )
     return f"""<!doctype html>
 <html lang="en">
 <head>
   {head(title, description, filename, image, extra_schema=extra_schema, relative_root=relative_root, publish_extra_schema=publish_extra_schema)}
 </head>
 <body>
-{header(relative_root)}
+{header(relative_root, residential_page)}
 <main id="main">
   <section class="page-hero" style="--hero-image:url('/{image}')">
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
-    <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a><a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div></div>
+    <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div>
   </section>
   <div class="trust-wrap trust-wrap--compact">{homepage_credentials() if filename == "index.html" else about_credentials() if filename == "about.html" else credentials("BUSINESS_CREDENTIALS")}{organization_trust}</div>
   {body}
-  {inquiry(relative_root)}
+  {inquiry(relative_root, residential_page)}
 </main>
-{footer(relative_root)}
+{footer(relative_root, residential_page)}
 </body>
 </html>
 """

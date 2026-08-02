@@ -132,6 +132,14 @@ async function main() {
       if (!deployable.includes(phrase)) throw new Error(`Operational-status requirement missing in ${relative}: ${phrase}`);
     }
   }
+  const homepage = await readFile(path.join(output, "index.html"), "utf8");
+  if (homepage.indexOf("Commercial &amp; Managed</a>") > homepage.indexOf(">Residential</a>")) {
+    throw new Error("Commercial navigation must precede Residential on the homepage.");
+  }
+  const homepageHero = homepage.match(/<section class="page-hero"[\s\S]*?<\/section>/)?.[0] || "";
+  if (homepageHero.indexOf("Request a Property Walkthrough") < 0 || homepageHero.indexOf("Request a Property Walkthrough") > homepageHero.indexOf("Residential Palm Assessment")) {
+    throw new Error("Homepage hero must lead with the commercial walkthrough before the residential assessment.");
+  }
 
   const files = [...copied].map(item => item.split(path.sep).join("/")).sort();
   const sha256_by_file = {};

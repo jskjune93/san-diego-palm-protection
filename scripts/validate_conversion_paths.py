@@ -39,7 +39,7 @@ def main() -> int:
         text = path.read_text(encoding="utf-8-sig")
         for href, label in re.findall(r'<a\b[^>]*href="([^"]+)"[^>]*>(.*?)</a>', text, re.I | re.S):
             visible_label = re.sub(r"<[^>]+>", "", label).strip()
-            if visible_label == "Request a Property Walkthrough" and not href.endswith("#organization-inquiry"):
+            if visible_label in {"Request a Property Walkthrough", "Property Walkthrough"} and not href.endswith("#organization-inquiry"):
                 errors.append(f"{path.relative_to(ROOT).as_posix()}: commercial walkthrough CTA misses organization inquiry anchor")
             if visible_label in {"Request Assessment", "Request a Palm Assessment"} and not href.endswith("#homeowner-inquiry"):
                 errors.append(f"{path.relative_to(ROOT).as_posix()}: residential assessment CTA misses homeowner inquiry anchor")

@@ -138,7 +138,7 @@ PAGES: dict[str, dict] = {
         "title": "Mature Palm Protection in North County San Diego | SDPP",
         "description": "Commercial palm care and managed-property palm protection, assessments, recurring treatment, monitoring, and documentation in San Diego.",
         "eyebrow": "Palm assessment and documentation · Old Escondido",
-        "h1": "Protect Your Mature Palms in North County San Diego",
+        "h1": "Palm Stewardship for Valuable Properties in North County San Diego",
         "lede": "Specialized palm protection for estates, multifamily communities, senior-living campuses, hospitality properties, HOAs, commercial grounds, and homeowners with valuable mature palms.",
         "image": "background.jpg",
         "body": section("Commercial & managed properties", "Start with a property walkthrough.", "For an HOA, apartment community, senior-living property, hotel, club, school, church, campus, commercial site, historic property, or large estate, I can evaluate the palms as a portfolio and build a practical stewardship plan for their health, protection, appearance, documentation, and long-term management.", '<p>Depending on the property, that can include recurring visits, fertilization, preventive treatment, condition tracking, budgeting priorities, and coordination of pruning, removal, or replacement.</p><div class="button-row"><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a><a class="button button-secondary" href="./managed-property-palm-services.html">View Commercial &amp; Managed Services</a></div>', "section-tint") +
@@ -200,12 +200,12 @@ PAGES: dict[str, dict] = {
         section("If the palm needs watching", "The first visit becomes the comparison point.", "When I return, I try to repeat the same views. That makes it easier to see whether the crown, trunk, or surrounding conditions have changed.", process([("Before the visit", "Tell me what changed and send any older photographs you have."), ("At the property", "I observe and photograph the areas I can access safely."), ("Afterward", "You receive the dated report and a recommended time for another look, if one is useful.")]) + '<p class="section-proof-link"><a href="./about.html">Learn more about John Krause</a></p>')
     },
     "palm-records-monitoring-verification.html": {
-        "title": "Palm Assessment, Monitoring & Documentation Services | SDPP",
-        "description": "Palm condition baselines, written reporting, recurring monitoring, managed-property inventories, contractor-work verification, protection, and decline response.",
-        "eyebrow": "Palm assessment and ongoing care", "h1": "Start with a careful look at the palm.",
-        "lede": "I can assess one palm, return to compare it over time, organize a larger property, or help when a palm begins to fail.",
+        "title": "Palm Stewardship Services for Properties and Owners | SDPP",
+        "description": "Owner-led palm stewardship, portfolio planning, recurring health care, treatment, monitoring, documentation, and decline response in San Diego.",
+        "eyebrow": "Owner-led palm stewardship", "h1": "Stewardship for one important palm or an entire property.",
+        "lede": "Start with the property and the palms under your care. I can build a recurring stewardship plan for a portfolio or provide consistent care for one valuable mature palm.",
         "image": "journal-monitoring.jpg",
-        "body": section("Services", "Three ways I can help.", "The work begins with what you need to know now. It can end with one report or continue through return visits, contractor work, decline, and replacement.", three_pillars()) +
+        "body": section("Services", "Four parts of responsible palm stewardship.", "Health care, protection, documentation, and response stay connected instead of becoming isolated transactions.", three_pillars()) +
         section("Assessment, Monitoring & Documentation", "You receive work you can actually use.", "The photographs and report are part of the service.", cards([
             ("Residential Mature Palm Assessment", "I visit, examine the palm from the ground, take photographs, and write down what I found."),
             ("Palm Condition Baseline", "A dated set of repeatable photographs before a concern becomes harder to reconstruct."),
@@ -221,7 +221,7 @@ PAGES: dict[str, dict] = {
             ("What comes next", "I may recommend monitoring, protection or treatment, contractor work, removal, or replacement."),
         ])) +
         section("Commercial & managed pathway", "Start with a property walkthrough.", "I can evaluate the palms as a portfolio and build a practical stewardship plan for their health, protection, appearance, documentation, and long-term management. The complete inventory, recurring schedule, and proposal are shaped after I understand the property.", '<p><a class="button" data-conversion="organization-inquiry-initiation" href="#organization-inquiry">Request a Property Walkthrough</a> <a href="./managed-property-palm-services.html">View commercial and managed services</a></p>', "section-tint") +
-        section("Request", "Tell me about the palm or property.", "Use the homeowner form for one palm or a small group. Use the organization form for an HOA, apartment property, institution, or commercial site.", f'{credentials("BUSINESS_CREDENTIALS_CONTACT")}{inquiry_paths()}') +
+        section("Request", "Choose the direct inquiry path.", "Managed properties can request a property walkthrough. Homeowners and estate owners can request an assessment for one palm or a small group.", f'{credentials("BUSINESS_CREDENTIALS_CONTACT")}{inquiry_paths()}') +
         section("Related decisions", "When the question changes.", "These pages cover decline, contractor coordination, sourcing, and confirmed loss.", '<p><a href="./palm-removal-coordination.html">Decline, removal, and replacement</a> · <a href="./palm-sourcing-installation.html">Sourcing and installation</a> · <a href="./specimen-palms-cycads.html">Specimen palms and cycads</a> · <a href="./palm-journal/documented-loss/">Documented Loss</a></p>')
     },
     "quarterly-palm-care-san-diego.html": {
