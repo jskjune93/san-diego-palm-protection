@@ -120,8 +120,8 @@ async function main() {
     }
   }
   const requiredByPage = {
-    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Manage multiple palms?", "Request a Palm Portfolio Walkthrough", "Homeowners"],
-    "managed-property-palm-services.html": ["Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "15–20 minutes", "Request a Palm Portfolio Walkthrough"],
+    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Commercial &amp; Managed Properties", "Request a Property Walkthrough", "Residential &amp; Estate Properties"],
+    "managed-property-palm-services.html": ["Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "15–20 minutes", "Request a Property Walkthrough", "certificate of insurance", "W-9"],
     "palm-records-monitoring-verification.html": ["known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
   };

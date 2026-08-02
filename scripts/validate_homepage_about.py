@@ -46,7 +46,7 @@ def main() -> int:
         errors.append("homepage lacks the plain-language service availability label")
     for scoped_fragment in (
         "I assess the concern, explain the options",
-        "The visit is shaped by the property and the question",
+        "The work is shaped by the palms, the property, and the decisions",
         "John Krause personally assesses and photographs mature palms from Old Escondido.",
     ):
         if scoped_fragment not in home:
@@ -66,7 +66,7 @@ def main() -> int:
         public["exact_status"],
         "based in Old Escondido",
         "I have my B.S. from the University of Minnesota in environmental science and am also a Navy veteran.",
-        "South American palm weevil activity and palm loss on my own property",
+        "South American palm weevil activity and palm loss on my own Old Escondido property",
     ):
         if phrase.lower() not in about.lower():
             errors.append(f"About page lacks approved fact or boundary: {phrase}")
@@ -90,7 +90,7 @@ def main() -> int:
         "TRAQ",
         "veteran-owned certified",
         "municipal appointment",
-        "guaranteed outcome",
+        "I guarantee outcomes",
         "Pest Control Business License No. 175295",
     ):
         if unsupported.lower() in about.lower():

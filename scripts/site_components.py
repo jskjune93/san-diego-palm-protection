@@ -68,7 +68,7 @@ def header(relative_root: str = "./") -> str:
     <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
       <a href="{relative_root}palm-records-monitoring-verification.html">Services</a>
       <a href="{relative_root}residential-palm-assessment.html">Residential</a>
-      <a href="{relative_root}managed-property-palm-services.html">Managed Properties</a>
+      <a href="{relative_root}managed-property-palm-services.html">Commercial &amp; Managed</a>
       <a href="{relative_root}palm-removal-coordination.html">Palm Decline</a>
       <a href="{relative_root}palm-journal-new.html">Palm Journal</a>
       <a href="{relative_root}palm-proof-examples.html">Field Work</a>
@@ -107,7 +107,7 @@ def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm a
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
   <p>Tell me what you are seeing and what you need to decide. I work with single palms, small groups, and larger managed properties.</p></div>
-  <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a><a class="button button-quiet" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Palm Portfolio Walkthrough</a><a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
+  <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a><a class="button button-quiet" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a><a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
 </section>"""
 
 
@@ -136,7 +136,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          relative_root: str = "./", extra_schema: dict | None = None,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
-    hero_note = '<p class="hero-microcopy">Single palms and small groups welcome · On-site visit · Dated photographs · Written findings · Clear next steps</p>' if filename == "index.html" else ""
+    hero_note = '<p class="hero-microcopy">Commercial and managed properties · Estates and residences · Owner-led field work · Written records</p>' if filename == "index.html" else ""
     hero_trust = '<p class="hero-trust-line">Owner-operated • California QAL, Category B</p>' if filename == "index.html" else ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '
@@ -150,7 +150,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     )
     organization_page = filename in {"managed-property-palm-services.html", "urban-forest-palm-documentation.html"}
     primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'organization-inquiry' if organization_page else 'homeowner-inquiry'}"
-    primary_label = "Request a Palm Portfolio Walkthrough" if organization_page else "Request a Palm Assessment"
+    primary_label = "Request a Property Walkthrough" if organization_page else "Request a Palm Assessment"
     primary_event = "organization-inquiry-initiation" if organization_page else "homeowner-inquiry-initiation"
     return f"""<!doctype html>
 <html lang="en">

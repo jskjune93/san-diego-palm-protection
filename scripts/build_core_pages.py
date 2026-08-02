@@ -52,7 +52,7 @@ def inquiry_paths() -> str:
   </form>
 </article>
 <article class="inquiry-panel" id="organization-inquiry">
-  <p class="eyebrow">For managed properties</p><h3>Request a Palm Portfolio Walkthrough</h3>
+  <p class="eyebrow">For commercial and managed properties</p><h3>Request a Property Walkthrough</h3>
   <p>Use this path for an HOA, apartment community, senior-living community, hotel, club, school, church, campus, commercial property, institution, or public palm portfolio.</p>
   <form data-inquiry-direct data-inquiry-type="organization" data-fallback-conversion="organization-inquiry-email-prepared" action="/api/inquiry" method="post">
     <input type="hidden" name="inquiry_type" value="organization">
@@ -76,7 +76,7 @@ def inquiry_paths() -> str:
     <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
     <p class="form-help">{explanation}</p>
     <div data-turnstile-container></div>
-    <button class="button" type="submit">Request a Palm Portfolio Walkthrough</button>
+    <button class="button" type="submit">Request a Property Walkthrough</button>
     <p><a data-conversion="direct-email-fallback" href="mailto:sandiegopalmprotection@gmail.com?subject=Managed-property%20palm%20portfolio%20inquiry">Prefer email? Tell me about the palm portfolio</a><br><small>Your email application will open. Your inquiry is not sent until you send it.</small></p>
     <p class="form-status" data-form-status aria-live="polite"></p>
   </form>
@@ -124,7 +124,7 @@ def approved_ufmp_resource() -> str:
 <section class="section section-tint" aria-labelledby="ufmp-related-resources">
   <div class="section-intro"><p class="eyebrow">Related resources</p><h2 id="ufmp-related-resources">Continue through the existing documentation pathways.</h2></div>
   <div class="field-links">
-    <a href="./managed-property-palm-services.html">Managed Properties</a>
+    <a href="./managed-property-palm-services.html">Commercial &amp; Managed</a>
     <a href="./palm-proof-examples.html">Field Work</a>
     <a href="./palm-journal-new.html">Palm Journal</a>
     <a href="./palm-journal/documented-loss/">Documented Loss</a>
@@ -136,14 +136,14 @@ def approved_ufmp_resource() -> str:
 PAGES: dict[str, dict] = {
     "index.html": {
         "title": "Mature Palm Protection in North County San Diego | SDPP",
-        "description": "Owner-operated mature palm protection, managed-property inventories, preventive treatment, recurring monitoring, and stewardship in North County San Diego.",
+        "description": "Commercial palm care and managed-property palm protection, assessments, recurring treatment, monitoring, and documentation in San Diego.",
         "eyebrow": "Palm assessment and documentation · Old Escondido",
         "h1": "Protect Your Mature Palms in North County San Diego",
-        "lede": "I visit the property, examine the palm from the ground, take dated photographs, and give you a written account of what I found and what I would do next.",
+        "lede": "Specialized palm protection for estates, multifamily communities, senior-living campuses, hospitality properties, HOAs, commercial grounds, and homeowners with valuable mature palms.",
         "image": "background.jpg",
-        "body": section("Manage multiple palms?", "Build one clear operating record for the property.", "I inventory, photograph, monitor, and treat mature palms across managed properties. Each palm can receive a stable ID, visible-condition baseline, treatment history, and defined next action.", '<div class="button-row"><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Palm Portfolio Walkthrough</a><a class="button button-secondary" href="./managed-property-palm-services.html">View Managed-Property Services</a></div>', "section-tint") +
+        "body": section("Commercial & managed properties", "Build one clear operating record for the property.", "I inventory, photograph, monitor, and treat mature palms across managed properties. Each palm can receive a stable ID, visible-condition baseline, treatment history, and defined next action.", '<div class="button-row"><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a><a class="button button-secondary" href="./managed-property-palm-services.html">View Commercial &amp; Managed Services</a></div>', "section-tint") +
         section("How I help", "Assessment, protection, and follow-through.", "The work can begin with one palm or a full portfolio and continue through preventive treatment, recurring monitoring, written reporting, decline response, and replacement planning.", three_pillars()) +
-        section("Who I work with", "Managed portfolios and individual palms.", "Recurring stewardship for commercial, institutional, and managed properties is the primary growth path. Residential assessment, treatment, and recurring care remain available for mature and valuable palms.", '<div class="audience-grid audience-grid--2"><article class="audience-card"><h3>Managed properties</h3><p>I work with HOAs, apartments, senior-living communities, hotels, clubs, schools, churches, campuses, estate managers, and public or institutional palm portfolios.</p><a data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Tell me about the palm portfolio</a></article><article class="audience-card"><h3>Homeowners</h3><p>I assess a single mature palm or a small group, take dated photographs, provide treatment when appropriate, and explain the next step.</p><a data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Tell me about your palm</a></article></div>') +
+        section("Who I work with", "Palm protection for valuable properties.", "The work is shaped by the palms, the property, and the decisions that need to be made.", '<div class="audience-grid audience-grid--2"><article class="audience-card"><h3>Commercial &amp; Managed Properties</h3><p>Recurring palm protection, documentation, planning, and coordination for properties with multiple or high-value palms.</p><a data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Discuss a multi-palm property</a></article><article class="audience-card"><h3>Residential &amp; Estate Properties</h3><p>Owner-performed assessment, treatment, and recurring care for homeowners and estate owners protecting important mature palms.</p><a data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Tell me about your palm</a></article></div>') +
         section("Local and direct", "You work with me from the first call.", "The owner handles the property visit, photographs, written findings, and follow-up questions.", '<div class="field-split"><div><h3>No sales-to-field handoff</h3><p>The person you speak with is the person who looks at your palms. That matters when small details and property history need to carry through to the report.</p><p><a class="button" href="./about.html">About John and SDPP</a></p></div><img src="./beautiful-old_escondido-cidp.jpg" alt="Mature Canary Island date palm in Old Escondido" loading="lazy"></div>') +
         section("Canary Island date palms", "I take South American palm weevil seriously.", "I have dealt with South American palm weevil activity on my own Old Escondido property. That firsthand experience is one reason I pay close attention to crown change and to photographs that show when a change began.", '<div class="field-split field-split--reverse"><img src="./south-american-palm-weevil-cidp-poway.jpg" alt="Canary Island date palm observed in North County San Diego" loading="lazy"><div><h3>Do not wait for a guess to become an emergency</h3><p>A photograph cannot diagnose a pest, but it can show whether the crown is changing and help me assess the next step.</p><p><a href="./sapw.html">Learn what I watch for</a> · <a href="./palm-stewardship-plans.html">Read about protection planning</a></p></div></div>', "section-tint") +
         section("What you receive", "Photographs you can use later.", "I photograph the entire palm, its crown, trunk, base, and any concern I can safely see. Those images give us something real to compare during a future visit.", process([
@@ -220,7 +220,7 @@ PAGES: dict[str, dict] = {
             ("Written findings", "I send a dated account of the visit with priorities, uncertainties, and recommendations."),
             ("What comes next", "I may recommend monitoring, protection or treatment, contractor work, removal, or replacement."),
         ])) +
-        section("Managed-property pathway", "Start with a palm portfolio walkthrough.", "For an HOA, apartment community, senior-living property, hotel, club, school, church, campus, commercial site, or institution, I can scope a paid palm inventory, preventive treatment, recurring monitoring, reporting, and stewardship plan.", '<p><a class="button" data-conversion="organization-inquiry-initiation" href="#organization-inquiry">Request a Palm Portfolio Walkthrough</a> <a href="./managed-property-palm-services.html">View managed-property services</a></p>', "section-tint") +
+        section("Commercial & managed pathway", "Start with a property walkthrough.", "For an HOA, apartment community, senior-living property, hotel, club, school, church, campus, commercial site, historic property, or large estate, I can scope a paid palm inventory, preventive treatment, recurring monitoring, reporting, and stewardship plan.", '<p><a class="button" data-conversion="organization-inquiry-initiation" href="#organization-inquiry">Request a Property Walkthrough</a> <a href="./managed-property-palm-services.html">View commercial and managed services</a></p>', "section-tint") +
         section("Request", "Tell me about the palm or property.", "Use the homeowner form for one palm or a small group. Use the organization form for an HOA, apartment property, institution, or commercial site.", f'{credentials("BUSINESS_CREDENTIALS_CONTACT")}{inquiry_paths()}') +
         section("Related decisions", "When the question changes.", "These pages cover decline, contractor coordination, sourcing, and confirmed loss.", '<p><a href="./palm-removal-coordination.html">Decline, removal, and replacement</a> · <a href="./palm-sourcing-installation.html">Sourcing and installation</a> · <a href="./specimen-palms-cycads.html">Specimen palms and cycads</a> · <a href="./palm-journal/documented-loss/">Documented Loss</a></p>')
     },
@@ -242,10 +242,10 @@ PAGES: dict[str, dict] = {
         ]), "section-tint")
     },
     "managed-property-palm-services.html": {
-        "title": "Managed-property Palm Stewardship in North County | SDPP",
-        "description": "Managed-property palm inventories, preventive treatment, recurring monitoring, reporting, and stewardship for HOAs, senior living, commercial and institutional properties.",
-        "eyebrow": "Managed-property palm stewardship", "h1": "Know every palm. Track every decision.",
-        "lede": "I build and maintain palm-portfolio records for HOAs, apartments, senior-living communities, hotels, clubs, schools, churches, campuses, commercial properties, and institutions.",
+        "title": "Commercial & Managed-Property Palm Care San Diego | SDPP",
+        "description": "Commercial palm care, HOA palm care, multi-palm assessments, recurring palm treatment, monitoring, and documentation for managed properties in San Diego.",
+        "eyebrow": "Commercial & managed-property palm stewardship", "h1": "Know every palm. Track every decision.",
+        "lede": "Specialized palm protection for HOAs, multifamily and senior-living communities, hospitality properties, clubs, campuses, commercial grounds, historic properties, and large estates.",
         "image": "Las Palmas_Appartments_Healthy-CIDP.jpg",
         "body": section("Start with the property", "A practical path from walkthrough to annual planning.", "The first conversation is usually 15–20 minutes. A complete inventory or report is paid work, scoped after I understand the property.", process([
             ("1. Property walkthrough", "Confirm palm count, species, access, known concerns, landscape responsibilities, and management objectives."),
@@ -254,23 +254,29 @@ PAGES: dict[str, dict] = {
             ("4. Recurring stewardship", "Schedule monitoring, appropriate treatment, comparable photographs, treatment history, and management reporting."),
             ("5. Response coordination", "Organize contractor questions, removal documentation, access, loss records, sourcing, and replacement planning when required."),
             ("6. Annual planning", "Prepare a concise portfolio summary for operational priorities and budgeting."),
-        ]) + '<p><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Palm Portfolio Walkthrough</a></p>') +
+        ]) + '<p><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a></p>') +
+        section("Properties served", "Built for valuable palms in shared and substantial landscapes.", "A property does not need hundreds of palms to benefit. The common thread is responsibility for multiple palms, high-value specimens, or a landscape where continuity and records matter.", cards([
+            ("Communities and campuses", "HOAs, multifamily communities, senior-living properties, churches, schools, nonprofit campuses, and historic properties."),
+            ("Hospitality and clubs", "Hotels, hospitality grounds, country clubs, private clubs, and properties where mature palms shape the arrival experience."),
+            ("Commercial properties and estates", "Commercial grounds, large estates, and properties with multiple Canary Island date palms or other valuable mature palms."),
+        ])) +
         section("Commercial service levels", "Choose the depth the property actually needs.", "These are flexible service levels, not rigid packages. Scope follows palm count, species, condition, access, treatment requirements, and property priorities.", cards([
             ("Palm Portfolio Baseline", "Numbered inventory, species and location where supportable, dated photographs, visible-condition observations, priority classification, and recommended next actions."),
             ("Protection and Monitoring", "Baseline maintenance, recurring observations, preventive treatment when appropriate, treatment and work history, change-over-time documentation, and escalation triggers."),
             ("Palm Stewardship", "Protection and monitoring, management reporting, contractor interface, decline-response coordination, removal and replacement records, and annual planning."),
         ]), "section-tint") +
-        section("What the client receives", "Palm-by-palm detail and a property summary.", "The exact deliverables are agreed before work begins.", cards([
+        section("What the client receives", "Palm-by-palm detail and a property summary.", "Multi-palm properties receive a customized proposal after the property discussion or walkthrough. The exact deliverables are agreed before work begins.", cards([
             ("Palm register", "Stable IDs, locations, species where supportable, baseline photographs, visible observations, and current status."),
             ("Priority summary", "What needs attention now, what can wait, and who owns the next step."),
             ("Written reporting", "Observed conditions, reported history, uncertainties, recommendations, and scheduled review points."),
             ("Treatment and work history", "Label-compliant SDPP treatment records where applicable, supplied contractor records, removals, losses, and replacements."),
         ])) +
+        section("Owner-level accountability", "One point of contact from walkthrough through follow-up.", "John handles the field review, documentation, proposal, and client communication. A certificate of insurance and W-9 are available for vendor setup.", '<p class="note">SDPP remains a specialized palm company, not a general tree-service or full-service landscape contractor.</p>', "section-tint") +
         section("Representative proof", "See the kind of palm-level record a property manager can use.", "This sanitized Old Escondido example demonstrates a repeatable multi-palm record. It is representative documentation, not a claim of commercial client work or a complete municipal inventory.", '<p><a class="button" href="./old-escondido-mature-palm-documentation-example.pdf" target="_blank" rel="noopener noreferrer">View the representative documentation example <span class="sr-only">(PDF, opens in a new tab)</span></a> <a href="./palm-proof-examples.html">View Field Work</a></p>', "section-tint") +
         section("Observation and response", "Visible conditions guide the next step.", "I separate what I observe from reported history and suspected causes, then explain the response that fits the palm and property.", '<p class="note">I provide protection and treatment services and coordinate removal or contractor work as applicable.</p>') +
         section("Contractor work", "I can photograph what was completed and organize the paperwork.", "I can compare before-and-after views, note dates, and keep the records a contractor provides.", '<p class="note">I cannot verify work hidden from view or certify workmanship, structural safety, code compliance, pesticide efficacy, contractor licensing, or outcomes.</p>', "section-tint") +
         section("Municipal and urban-forest support", "Palm-focused field records for broader programs.", "Specialized palm documentation can support portfolio management and urban-forest implementation without claiming to prepare a complete municipal plan.", '<p><a href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Review the approved Old Escondido civic documentation resource</a> · <a href="./palm-proof-examples.html">View sample work</a> · <a href="./old-escondido-urban-forest-documentation.pdf" target="_blank" rel="noopener noreferrer">Download the civic documentation packet <span class="sr-only">(PDF, opens in a new tab)</span></a></p>') +
-        section("Municipal context", "Accurate participation wording.", "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.", '<p class="note">This statement describes a submission for consideration. It does not state or imply City endorsement, partnership, selection, approval, or adoption.</p><p><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Palm Portfolio Walkthrough</a></p>')
+        section("Municipal context", "Accurate participation wording.", "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.", '<p class="note">This statement describes a submission for consideration. It does not state or imply City endorsement, partnership, selection, approval, or adoption.</p><p><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a></p>')
     },
     "urban-forest-palm-documentation.html": {
         "title": UFMP_RESOURCE["metadata"]["title"],
