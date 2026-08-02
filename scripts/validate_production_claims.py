@@ -10,7 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 STATUS = ROOT / "site-config" / "business_status.json"
-REQUIRED_SERVICE = "protection and treatment services"
+REQUIRED_SERVICE = re.compile(r"protection and (?:pesticide )?treatment services", re.I)
 
 ACTIVE_CREDENTIAL = re.compile(
     r"\b(?:california\s+licensed|qualified\s+and\s+insured|licensed,\s*qualified|"
@@ -71,7 +71,7 @@ def main() -> int:
     for path in html_paths:
         text = path.read_text(encoding="utf-8-sig")
         rel = path.relative_to(DIST).as_posix()
-        if REQUIRED_SERVICE not in text.lower() and "BUSINESS_CREDENTIALS:START" in text:
+        if not REQUIRED_SERVICE.search(text) and "BUSINESS_CREDENTIALS:START" in text:
             errors.append(f"{rel}: current service statement is missing")
         if PRIVATE_TOKENS.search(text):
             errors.append(f"{rel}: private Karen material in production output")

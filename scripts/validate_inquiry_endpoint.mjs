@@ -74,6 +74,7 @@ const providerSuccess = async url => {
     organization: "Example HOA",
     role: "Manager",
     property_or_service_area: "North County",
+    desired_service: "Palm portfolio walkthrough",
     support_requested: "Palm inventory and recurring monitoring.",
   }), res, { fetch: providerSuccess });
   assert.equal(res.statusCode, 200);

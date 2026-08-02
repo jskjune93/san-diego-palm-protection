@@ -464,6 +464,19 @@ def main() -> int:
     if credential_validation.returncode != 0:
         errors.append("business credential validation failed")
 
+    operational_status = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "validate_operational_status.py")],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if operational_status.stdout.strip():
+        print(operational_status.stdout.strip())
+    if operational_status.stderr.strip():
+        print(operational_status.stderr.strip())
+    if operational_status.returncode != 0:
+        errors.append("operational status regression validator failed")
+
     prelicense = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "validate_prelicense_compliance.py")],
         cwd=ROOT,

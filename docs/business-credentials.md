@@ -2,19 +2,21 @@
 
 `site-config/business_status.json` is the authoritative website source for operating status and public wording.
 
-Current owner-confirmed prelicense status, effective July 26, 2026:
+Current owner-confirmed operational status, effective August 2, 2026:
 
-- California Pest Control Business License: inactive / not issued
-- DPR Qualified Applicator License, Category B: not represented as issued or active without independent verification
-- Financial responsibility / applicable insurance: not represented as active without independent verification
-- Protection and treatment services: available as applicable
-- Job-specific application preflight: remains required for any future activation
+- John Krause is the owner.
+- California Qualified Applicator License No. 175295 is active.
+- Category B — Landscape Maintenance.
+- SDPP is insured and provides palm assessment, monitoring, documentation, protection and pesticide treatment services as applicable.
+- Recurring stewardship is available for residential and managed properties.
+- Treatment remains subject to the pesticide label, applicable law, site conditions, agreed scope, and job-specific preflight.
 
 The public site uses:
 
-- **Status label:** “Current service scope”
-- **Service summary:** “Documentation, monitoring, reporting, sourcing, and coordination are available now.”
-- **Current services:** Palm assessments, monitoring, documentation, protection and treatment services, decline response, and removal or contractor coordination as applicable.
+- **Status label:** “Owner-led palm care”
+- **Service summary:** Palm assessment, monitoring, documentation, protection and treatment services, recurring stewardship, decline response, and contractor or removal coordination.
+- **Primary growth path:** Managed-property palm inventories, preventive treatment, recurring monitoring, reporting, and stewardship.
+- **Residential path:** Selective assessment, protection, treatment, and recurring care for mature and valuable palms.
 
 Public copy identifies John Krause as the owner, states his California Qualified Applicator License No. 175295 and Category B — Landscape Maintenance credential, and states that SDPP is insured.
 

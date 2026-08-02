@@ -102,6 +102,36 @@ async function main() {
     }
   }
 
+  const forbiddenOperationalPatterns = [
+    /not currently offering pesticide/i,
+    /pesticide applications? (?:are|is) not currently/i,
+    /pesticide applications? (?:are|is) not offered/i,
+    /appropriately licensed treatment provider/i,
+    /appropriately licensed-provider referral/i,
+    /regulated work must be discussed with/i,
+    /referral[- ]only treatment/i,
+    /production prelicense status/i,
+  ];
+  for (const route of routes) {
+    const relative = path.relative(root, route);
+    const deployable = await readFile(path.join(output, relative), "utf8");
+    for (const pattern of forbiddenOperationalPatterns) {
+      if (pattern.test(deployable)) throw new Error(`Operational-status regression in ${relative}: ${pattern}`);
+    }
+  }
+  const requiredByPage = {
+    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Manage multiple palms?", "Request a Palm Portfolio Walkthrough", "Homeowners"],
+    "managed-property-palm-services.html": ["Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "15–20 minutes", "Request a Palm Portfolio Walkthrough"],
+    "palm-records-monitoring-verification.html": ["known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
+    "palm-stewardship-plans.html": ["Protection and treatment services are available"],
+  };
+  for (const [relative, phrases] of Object.entries(requiredByPage)) {
+    const deployable = await readFile(path.join(output, relative), "utf8");
+    for (const phrase of phrases) {
+      if (!deployable.includes(phrase)) throw new Error(`Operational-status requirement missing in ${relative}: ${phrase}`);
+    }
+  }
+
   const files = [...copied].map(item => item.split(path.sep).join("/")).sort();
   const sha256_by_file = {};
   for (const relative of files) {

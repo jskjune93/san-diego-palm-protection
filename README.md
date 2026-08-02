@@ -4,16 +4,20 @@ Authoritative static source for `https://www.sandiegopalmprotection.com`, deploy
 
 ## Build and validation
 
-The root HTML pages are hand-maintained. Palm Journal pages and the sitemap are generated from `journal-data/`.
+Core HTML pages are generated from `scripts/build_core_pages.py`. Palm Journal pages and the sitemap are generated from `journal-data/`. Vercel deploys only the allowlisted `dist/` output produced by `scripts/build-production.mjs`.
 
 ```powershell
 python scripts/sync_business_credentials.py
+python scripts/build_core_pages.py
 python scripts/build_journal.py
 python scripts/validate_prelicense_compliance.py --self-test
+node scripts/build-production.mjs
+python scripts/validate_operational_status.py
 python scripts/validate_site.py
+python scripts/validate_production_claims.py
 ```
 
-Vercel serves the static repository according to `vercel.json`; there is no package manager or compilation step.
+Vercel runs the production build declared in `vercel.json` and serves `dist/`. The build itself rejects obsolete prelicense language and missing operational/commercial markers before an artifact can deploy.
 
 ## Sources of truth
 

@@ -107,7 +107,7 @@ def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm a
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
   <p>Tell me what you are seeing and what you need to decide. I work with single palms, small groups, and larger managed properties.</p></div>
-  <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a><a class="button button-quiet" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Organization Inquiry</a><a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
+  <div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a><a class="button button-quiet" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Palm Portfolio Walkthrough</a><a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
 </section>"""
 
 
@@ -150,7 +150,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     )
     organization_page = filename in {"managed-property-palm-services.html", "urban-forest-palm-documentation.html"}
     primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'organization-inquiry' if organization_page else 'homeowner-inquiry'}"
-    primary_label = "Discuss a Property or Palm Portfolio" if organization_page else "Request a Palm Assessment"
+    primary_label = "Request a Palm Portfolio Walkthrough" if organization_page else "Request a Palm Assessment"
     primary_event = "organization-inquiry-initiation" if organization_page else "homeowner-inquiry-initiation"
     return f"""<!doctype html>
 <html lang="en">

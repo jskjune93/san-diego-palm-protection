@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "commercial",
-  "explanation": "John Krause is the owner of San Diego Palm Protection and holds California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. SDPP is insured and provides palm assessments, monitoring, documentation, protection and treatment services, decline response, and removal or contractor coordination as applicable.",
+  "explanation": "John Krause is the owner of San Diego Palm Protection and holds California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. SDPP is insured and operational, providing palm assessments, monitoring, documentation, protection and pesticide treatment services, recurring palm stewardship, decline response, contractor and removal coordination, sourcing, and replacement planning as applicable.",
   "pesticide_services_enabled": true,
   "tree_palm_contracting_enabled": false,
   "commercial_field_services_enabled": true,
@@ -36,14 +36,22 @@
     "insured": true,
     "public_wording": "Insured"
   },
+  "operating_scope": {
+    "primary_growth_path": "Recurring palm stewardship for commercial, institutional, and managed properties with meaningful palm portfolios.",
+    "residential_path": "Selective residential assessment, protection, treatment, and recurring care for mature and valuable palms.",
+    "authority_path": "Old Escondido field work, SAPW experience, local documentation, Palm Journal, civic participation, and historical-palm work.",
+    "regulated_work_boundary": "Treatment recommendations and applications remain subject to the pesticide label, applicable law, site conditions, and agreed scope.",
+    "excluded_direct_work": "SDPP does not claim direct performance of pruning, major removal contracting, formal structural tree-risk assessment, engineering, or laboratory diagnosis outside its licenses and operating scope.",
+    "outcome_boundary": "SDPP does not promise diagnosis from photographs, treatment efficacy, palm recovery, or guaranteed outcomes. Not every palm should be treated."
+  },
   "public_credentials": {
     "status_label": "Owner-led palm care",
-    "service_summary": "Palm assessment, monitoring, documentation, protection and treatment, decline response, and removal or contractor coordination.",
+    "service_summary": "Palm assessment, monitoring, documentation, protection and treatment services, recurring stewardship, decline response, and contractor or removal coordination.",
     "individual_license": "California Qualified Applicator License No. 175295",
     "category": "Category B — Landscape Maintenance",
     "insurance": "Insured",
-    "exact_status": "I provide palm assessments, monitoring, documentation, protection and treatment services, decline response, and removal or contractor coordination as applicable.",
-    "scope_note": "Tell me what you are seeing, and I will help you decide what the palm needs next.",
-    "effective_date": "2026-07-29"
+    "exact_status": "I provide palm assessments, monitoring, documentation, protection and pesticide treatment services, recurring stewardship, decline response, and contractor or removal coordination as applicable.",
+    "scope_note": "Treatment recommendations and applications remain subject to the pesticide label, applicable law, site conditions, and agreed scope.",
+    "effective_date": "2026-08-02"
   }
 }

@@ -23,22 +23,28 @@ REQUIRED_PUBLIC_FIELDS = (
     "scope_note",
     "effective_date",
 )
+REQUIRED_SCOPE_FIELDS = (
+    "primary_growth_path",
+    "residential_path",
+    "authority_path",
+    "regulated_work_boundary",
+    "excluded_direct_work",
+    "outcome_boundary",
+)
 
 
 def load_business_status() -> dict:
     status = json.loads(STATUS_PATH.read_text(encoding="utf-8"))
     mode = status.get("mode")
-    if mode not in {"prelicense", "commercial"}:
-        raise ValueError("Business status mode must be prelicense or commercial.")
-    if mode == "commercial":
-        missing_active = [field for field in REQUIRED_COMMERCIAL_FIELDS if status.get(field) is not True]
-        if missing_active:
-            raise ValueError(f"Public credential claims are blocked; inactive fields: {', '.join(missing_active)}")
-    elif status.get("pest_control_business_license_issued_and_active") is not False or status.get("owner_activation_approved") is not False:
-        raise ValueError("Prelicense status cannot represent business-level pesticide authorization or owner activation as active.")
+    if mode != "commercial":
+        raise ValueError("Production business status must remain commercial. Historical prelicense mode is not an available production configuration.")
+    missing_active = [field for field in REQUIRED_COMMERCIAL_FIELDS if status.get(field) is not True]
+    if missing_active:
+        raise ValueError(f"Public credential claims are blocked; inactive fields: {', '.join(missing_active)}")
     qualification = status.get("individual_qualification") or {}
     owner = status.get("owner") or {}
     insurance = status.get("insurance") or {}
+    operating_scope = status.get("operating_scope") or {}
     if (
         qualification.get("license_number") != "175295"
         or qualification.get("category_code") != "B"
@@ -51,6 +57,9 @@ def load_business_status() -> dict:
         raise ValueError("Authoritative owner configuration is incomplete.")
     if insurance.get("insured") is not True or status.get("financial_responsibility_active") is not True:
         raise ValueError("Authoritative insurance configuration is incomplete or inconsistent.")
+    missing_scope = [field for field in REQUIRED_SCOPE_FIELDS if not operating_scope.get(field)]
+    if missing_scope:
+        raise ValueError(f"Authoritative operating scope is incomplete: {', '.join(missing_scope)}")
     credentials = status.get("public_credentials") or {}
     missing_public = [field for field in REQUIRED_PUBLIC_FIELDS if not credentials.get(field)]
     if missing_public:
