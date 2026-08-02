@@ -79,7 +79,6 @@ def render_credential_block(marker: str = "BUSINESS_CREDENTIALS") -> str:
         f'  <p class="business-credentials__label">{escape(credentials["status_label"])}</p>\n'
         f'  <p class="business-credentials__summary">{escape(credentials["service_summary"])}</p>\n'
         f'  <p class="business-credentials__credential">{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br><strong>{escape(credentials["insurance"])}</strong></p>\n'
-        f'  <p class="business-credentials__detail">{escape(credentials["exact_status"])}</p>\n'
         f'  <p class="business-credentials__note">{escape(credentials["scope_note"])}</p>\n'
         '</div>\n'
         f'<!-- {marker}:END -->'
@@ -92,9 +91,9 @@ def render_homepage_credential_block() -> str:
     return (
         '<!-- BUSINESS_CREDENTIALS:START -->\n'
         '<div class="business-credentials business-credentials--homepage" aria-label="Owner qualification and current business service status">\n'
-        '  <p class="business-credentials__label">Qualified, insured, and owner-led</p>\n'
+        f'  <p class="business-credentials__label">{escape(credentials["status_label"])}</p>\n'
         f'  <p class="business-credentials__credential"><strong>{escape(owner)}, Owner</strong><br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
-        f'  <p class="business-credentials__detail"><strong>Available now:</strong> {escape(credentials["exact_status"])}</p>\n'
+        f'  <p class="business-credentials__detail">{escape(credentials["service_summary"])}</p>\n'
         '</div>\n'
         '<!-- BUSINESS_CREDENTIALS:END -->'
     )
@@ -108,7 +107,7 @@ def render_about_credential_block() -> str:
         '<div class="business-credentials business-credentials--about" aria-label="John Krause qualification and insurance">\n'
         '  <p class="business-credentials__label">Qualifications</p>\n'
         f'  <p class="business-credentials__credential"><strong>{escape(owner)}</strong><br>Owner, San Diego Palm Protection<br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
-        f'  <p class="business-credentials__detail">{escape(credentials["exact_status"])}</p>\n'
+        f'  <p class="business-credentials__detail">{escape(credentials["service_summary"])}</p>\n'
         '</div>\n'
         '<!-- BUSINESS_CREDENTIALS:END -->'
     )

@@ -249,12 +249,13 @@ def main() -> int:
 
     homepage_text, homepage_parser = pages[(ROOT / "index.html").resolve()]
     for required_pillar in (
-        "Assessment, Monitoring &amp; Documentation",
+        "Stewardship &amp; Palm Health",
         "Protection &amp; Treatment",
-        "Decline Response, Removal &amp; Replacement",
+        "Documentation &amp; Portfolio Management",
+        "Response, Removal &amp; Renewal",
     ):
         if required_pillar not in homepage_text:
-            errors.append(f"homepage missing three-pillar positioning: {required_pillar}")
+            errors.append(f"homepage missing stewardship-function positioning: {required_pillar}")
     treatment_card = re.search(
         r'<article class="pillar">(?:(?!</article>).)*Protection &amp; Treatment'
         r'(?:(?!</article>).)*href="([^"]+)"(?:(?!</article>).)*</article>',
@@ -358,8 +359,8 @@ def main() -> int:
     for article in article_pages:
         if "Share a palm observation or dated photograph." not in article.read_text(encoding="utf-8-sig"):
             errors.append(f"journal article missing standardized contribution footer: {article.name}")
-    if required_current_scope not in homepage_text or required_current_scope not in records_text:
-        errors.append("current license/service status is not consistently identified")
+    if required_current_scope not in homepage_text or required_qualified_insured_scope not in records_text:
+        errors.append("current stewardship offer and credential summary are not consistently identified")
     if commercial_mode:
         for path in (
             ROOT / "index.html",
@@ -373,7 +374,7 @@ def main() -> int:
             ROOT / "urban-forest-palm-documentation.html",
         ):
             page_text = path.read_text(encoding="utf-8-sig")
-            if (path.name != "index.html" and required_qualified_insured_scope not in page_text) or required_current_scope not in page_text:
+            if required_qualified_insured_scope not in page_text:
                 errors.append(f"{normalize_rel(path)}: missing centralized qualified/insured status")
             if "BUSINESS_CREDENTIALS:START" not in page_text:
                 errors.append(f"{normalize_rel(path)}: missing reusable business credential block")

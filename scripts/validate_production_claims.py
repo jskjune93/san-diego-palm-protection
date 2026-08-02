@@ -10,7 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 STATUS = ROOT / "site-config" / "business_status.json"
-REQUIRED_SERVICE = re.compile(r"protection and (?:pesticide )?treatment services", re.I)
+REQUIRED_SERVICE = re.compile(r"Owner-Led Palm Stewardship|Ongoing care and management for the health, protection, appearance", re.I)
 
 ACTIVE_CREDENTIAL = re.compile(
     r"\b(?:california\s+licensed|qualified\s+and\s+insured|licensed,\s*qualified|"

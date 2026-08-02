@@ -70,10 +70,10 @@ def main() -> int:
         homepage = (DIST / "index.html").read_text(encoding="utf-8-sig") if (DIST / "index.html").exists() else ""
         managed = (DIST / "managed-property-palm-services.html").read_text(encoding="utf-8-sig") if (DIST / "managed-property-palm-services.html").exists() else ""
         records = (DIST / "palm-records-monitoring-verification.html").read_text(encoding="utf-8-sig") if (DIST / "palm-records-monitoring-verification.html").exists() else ""
-        for phrase in ("Commercial &amp; Managed Properties", "Request a Property Walkthrough", "Residential &amp; Estate Properties"):
+        for phrase in ("Owner-Led Palm Stewardship", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties"):
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
-        for phrase in ("Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "15–20 minutes", "certificate of insurance", "W-9"):
+        for phrase in ("Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "fertilization", "irrigation guidance", "certificate of insurance", "W-9"):
             if phrase not in managed:
                 errors.append(f"managed-property page missing service pathway: {phrase}")
         for field in ("known_palm_species", "existing_contractor", "desired_service", "preferred_contact"):

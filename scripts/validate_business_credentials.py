@@ -65,11 +65,11 @@ def main() -> int:
         if START not in text or STYLE_LINK not in text:
             errors.append(f"{relative}: centralized credential component is missing")
         if relative == "index.html":
-            required_values = (exact, individual_license, category, insurance, "John Krause, Owner", "Qualified, insured, and owner-led")
+            required_values = (summary, individual_license, category, insurance, "John Krause, Owner", label)
         elif relative == "about.html":
-            required_values = (individual_license, category, insurance, "John Krause", exact)
+            required_values = (individual_license, category, insurance, "John Krause", summary)
         else:
-            required_values = (summary, exact, label, individual_license, category, insurance)
+            required_values = (summary, label, individual_license, category, insurance)
         if any(value not in text for value in required_values):
             errors.append(f"{relative}: qualified and insured wording is incomplete")
 

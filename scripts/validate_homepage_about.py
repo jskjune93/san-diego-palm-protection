@@ -31,7 +31,7 @@ def main() -> int:
         public["individual_license"]: 2,
         public["category"]: 2,
         "Insured": 3,
-        public["exact_status"]: 1,
+        public["service_summary"]: 1,
     }
     for phrase, maximum in limits.items():
         count = home.lower().count(phrase.lower())
@@ -40,12 +40,12 @@ def main() -> int:
     descriptive_qualified = len(re.findall(r"\bQualified\b(?!\s+Applicator\s+License)", home))
     if descriptive_qualified > 1:
         errors.append(f"homepage repeats descriptive 'Qualified' {descriptive_qualified} times; maximum is 1")
-    if home.count(public["exact_status"]) != 1:
-        errors.append("homepage must contain exactly one authoritative service statement")
-    if "Available now:" not in home:
-        errors.append("homepage lacks the plain-language service availability label")
+    if home.count(public["service_summary"]) != 1:
+        errors.append("homepage must contain exactly one concise stewardship statement")
+    if public["exact_status"] not in home:
+        errors.append("homepage lacks the complete owner-led stewardship explanation")
     for scoped_fragment in (
-        "I assess the concern, explain the options",
+        "Preventive protection, South American palm weevil awareness",
         "The work is shaped by the palms, the property, and the decisions",
         "John Krause personally assesses and photographs mature palms from Old Escondido.",
     ):
@@ -63,7 +63,7 @@ def main() -> int:
         public["individual_license"],
         public["category"],
         public["insurance"],
-        public["exact_status"],
+        public["service_summary"],
         "based in Old Escondido",
         "I have my B.S. from the University of Minnesota in environmental science and am also a Navy veteran.",
         "South American palm weevil activity and palm loss on my own Old Escondido property",

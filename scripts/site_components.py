@@ -91,16 +91,22 @@ def about_credentials() -> str:
     return render_about_credential_block()
 
 
-def three_pillars(relative_root: str = "./") -> str:
+def stewardship_functions(relative_root: str = "./") -> str:
     items = [
-        ("01", "Assessment, Monitoring & Documentation", "I visit the property, photograph the palm, write down what I find, and return when comparison over time will help.", "residential-palm-assessment.html"),
-        ("02", "Protection & Treatment", "I assess the concern, explain the options, and provide protection and treatment services when they fit the palm and site.", "palm-stewardship-plans.html"),
-        ("03", "Decline Response, Removal & Replacement", "When a palm is failing, I help organize the next steps, the contractor handoff, and what comes after removal.", "palm-removal-coordination.html"),
+        ("01", "Stewardship & Palm Health", "Recurring hands-on care, health observation, fertilization, watering or irrigation guidance, and attention to changes over time.", "quarterly-palm-care-san-diego.html"),
+        ("02", "Protection & Treatment", "Preventive protection, South American palm weevil awareness, treatment when appropriate, and early response to visible decline.", "palm-stewardship-plans.html"),
+        ("03", "Documentation & Portfolio Management", "Palm inventories, condition records, photographs, priorities, recurring schedules, budgeting support, and continuity across a property.", "palm-records-monitoring-verification.html"),
+        ("04", "Response, Removal & Renewal", "Decline response, pruning or removal coordination, replacement planning, sourcing, logistics, and long-term landscape continuity.", "palm-removal-coordination.html"),
     ]
-    return '<div class="pillar-grid">' + "".join(
+    return '<div class="pillar-grid pillar-grid--4">' + "".join(
         f'<article class="pillar"><span>{n}</span><h3>{escape(t)}</h3><p>{escape(d)}</p><a href="{relative_root}{href}">Explore this service</a></article>'
         for n, t, d, href in items
     ) + "</div>"
+
+
+def three_pillars(relative_root: str = "./") -> str:
+    """Backward-compatible name for the shared stewardship model."""
+    return stewardship_functions(relative_root)
 
 
 def inquiry(relative_root: str = "./", heading: str = "Request an on-site palm assessment.") -> str:

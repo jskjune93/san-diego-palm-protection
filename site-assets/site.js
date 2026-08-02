@@ -22,6 +22,14 @@
   document.querySelectorAll('[data-conversion]').forEach(link => link.addEventListener('click', () => {
     recordConversion(link.dataset.conversion);
   }));
+  const focusInquiryTarget = () => {
+    if (!['#homeowner-inquiry', '#organization-inquiry'].includes(location.hash)) return;
+    const target = document.querySelector(location.hash);
+    if (!target) return;
+    requestAnimationFrame(() => target.focus({ preventScroll: true }));
+  };
+  focusInquiryTarget();
+  window.addEventListener('hashchange', focusInquiryTarget);
   const inquiryForms = [...document.querySelectorAll('[data-inquiry-direct]')];
   if (!inquiryForms.length) return;
 
