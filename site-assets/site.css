@@ -13,3 +13,5 @@ form{max-width:900px}fieldset{border:1px solid var(--line);padding:22px;margin:0
 .form-trap{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important}.form-status[data-state="success"]{color:#145c32;font-weight:800}.form-status[data-state="error"]{color:#8b1e1e;font-weight:800}[data-turnstile-container]{min-height:70px;margin:18px 0}.inquiry-panel button[disabled]{opacity:.65;cursor:wait}
 @media(max-width:700px){.inquiry-paths,.price-grid{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.form-grid .full{grid-column:auto}}
 @media(max-width:700px){.form-grid,.about-john-profile{grid-template-columns:1fr}.about-john-profile{gap:32px}.about-john-copy{font-size:1rem}}
+.audience-grid--2,.service-grid--2,.service-grid--4{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:700px){.audience-grid--2,.service-grid--2,.service-grid--4{grid-template-columns:1fr}}
