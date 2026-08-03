@@ -43,3 +43,5 @@ Before merging or deploying:
 6. Search public source and `dist` for private identifiers, local paths, localhost/test endpoints, internal notes, QA artifacts, unapproved proof, and obsolete credential or service language.
 7. Confirm the protected untracked `7_21_2006.jpg` remains untouched unless the owner separately approves its use.
 8. Record the starting commit, final commit, commands, results, working-tree status, deployment identifier, and rollback point.
+
+After the recurring-stewardship production update, submit `https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html` for reindexing in Google Search Console. Record the submission separately; do not describe the page as reindexed until Search Console confirms it.

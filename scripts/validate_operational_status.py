@@ -5,6 +5,8 @@ import json
 import re
 import sys
 
+from pypdf import PdfReader
+
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 STATUS = ROOT / "site-config" / "business_status.json"
@@ -18,6 +20,10 @@ FORBIDDEN = (
     r"regulated work must be discussed with",
     r"referral[- ]only treatment",
     r"production prelicense status",
+    r"(?:sdpp|san diego palm protection) (?:cannot|can not|does not|doesn't) (?:provide )?(?:pesticide )?treat(?:ment)?",
+    r"treatment must be (?:provided|performed) by (?:a )?third[- ]party",
+    r"licensed applicator referral",
+    r"awaiting (?:its |our )?(?:license|licence|insurance)",
 )
 
 CRITICAL_PAGES = (
@@ -70,15 +76,29 @@ def main() -> int:
         homepage = (DIST / "index.html").read_text(encoding="utf-8-sig") if (DIST / "index.html").exists() else ""
         managed = (DIST / "managed-property-palm-services.html").read_text(encoding="utf-8-sig") if (DIST / "managed-property-palm-services.html").exists() else ""
         records = (DIST / "palm-records-monitoring-verification.html").read_text(encoding="utf-8-sig") if (DIST / "palm-records-monitoring-verification.html").exists() else ""
-        for phrase in ("Owner-Led Palm Stewardship", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties"):
+        for phrase in ("Owner-Led Palm Stewardship", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "ongoing palm stewardship for managed properties", "treatment and work history", "budgeting support"):
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
+        recurring = (DIST / "quarterly-palm-care-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "quarterly-palm-care-san-diego.html").exists() else ""
+        for phrase in ("Recurring Palm Stewardship &amp; Monitoring", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"):
+            if phrase not in recurring:
+                errors.append(f"recurring-stewardship page missing current service language: {phrase}")
         for phrase in ("Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "fertilization", "irrigation guidance", "certificate of insurance", "W-9"):
             if phrase not in managed:
                 errors.append(f"managed-property page missing service pathway: {phrase}")
         for field in ("known_palm_species", "existing_contractor", "desired_service", "preferred_contact"):
             if f'name="{field}"' not in records:
                 errors.append(f"managed-property inquiry missing field: {field}")
+
+    for path in sorted(ROOT.glob("*.pdf")):
+        try:
+            text = "\n".join(page.extract_text() or "" for page in PdfReader(str(path)).pages)
+        except Exception as exc:
+            errors.append(f"{path.name}: PDF text audit failed: {exc}")
+            continue
+        for pattern in FORBIDDEN:
+            if re.search(pattern, text, re.IGNORECASE):
+                errors.append(f"{path.name}: obsolete service-status language matched {pattern}")
 
     print("OPERATIONAL_STATUS_OK" if not errors else "OPERATIONAL_STATUS_FAILED")
     print(f"critical_pages_checked={len(CRITICAL_PAGES)}")

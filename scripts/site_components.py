@@ -114,13 +114,18 @@ def three_pillars(relative_root: str = "./") -> str:
 
 def inquiry(relative_root: str = "./", residential_primary: bool = False) -> str:
     heading = "Request an on-site palm assessment." if residential_primary else "Discuss a property or palm stewardship plan."
+    description = (
+        "Tell me what you are seeing and what you need to decide. I work with homeowners protecting important mature palms."
+        if residential_primary else
+        "Tell me about the property, the palms, and what you are responsible for. I work with managed palm portfolios, large estates, and homeowners protecting important mature palms."
+    )
     primary = f'<a class="button" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a>'
     secondary = f'<a class="button button-quiet" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a>'
     if residential_primary:
         primary, secondary = secondary.replace("button button-quiet", "button"), primary.replace('class="button"', 'class="button button-quiet"')
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
-  <p>Tell me what you are seeing and what you need to decide. I work with single palms, small groups, and larger managed properties.</p></div>
+  <p>{description}</p></div>
   <div class="button-row">{primary}{secondary}<a class="text-link" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a></div>
 </section>"""
 

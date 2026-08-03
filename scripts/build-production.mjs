@@ -111,6 +111,10 @@ async function main() {
     /regulated work must be discussed with/i,
     /referral[- ]only treatment/i,
     /production prelicense status/i,
+    /(?:sdpp|san diego palm protection) (?:cannot|can not|does not|doesn't) (?:provide )?(?:pesticide )?treat(?:ment)?/i,
+    /treatment must be (?:provided|performed) by (?:a )?third[- ]party/i,
+    /licensed applicator referral/i,
+    /awaiting (?:its |our )?(?:license|licence|insurance)/i,
   ];
   for (const route of routes) {
     const relative = path.relative(root, route);
@@ -120,11 +124,11 @@ async function main() {
     }
   }
   const requiredByPage = {
-    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Owner-Led Palm Stewardship", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties"],
+    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Owner-Led Palm Stewardship", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "ongoing palm stewardship for managed properties", "treatment and work history", "budgeting support"],
     "managed-property-palm-services.html": ["Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "fertilization", "irrigation guidance", "Request a Property Walkthrough", "certificate of insurance", "W-9"],
-    "palm-records-monitoring-verification.html": ["id=\"homeowner-inquiry\" tabindex=\"-1\"", "id=\"organization-inquiry\" tabindex=\"-1\"", "Tell me a little about the property", "Request a Property Walkthrough"],
-    "palm-records-monitoring-verification.html": ["known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
+    "palm-records-monitoring-verification.html": ["id=\"homeowner-inquiry\" tabindex=\"-1\"", "id=\"organization-inquiry\" tabindex=\"-1\"", "Tell me a little about the property", "Request a Property Walkthrough", "known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
+    "quarterly-palm-care-san-diego.html": ["Recurring Palm Stewardship &amp; Monitoring", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"],
   };
   for (const [relative, phrases] of Object.entries(requiredByPage)) {
     const deployable = await readFile(path.join(output, relative), "utf8");
