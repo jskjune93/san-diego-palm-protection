@@ -65,7 +65,7 @@ def main() -> int:
         public["insurance"],
         public["service_summary"],
         "based in Old Escondido",
-        "Born and raised in Wisconsin. B.S from the University of Minnesota in Environmental Science. Shipboard, deployment, administrative, managerial responsibilities out of Honolulu and Jacksonville.",
+        "Wisconsin native with an Environmental Science B.S. from the University of Minnesota and time in the Naval Service.",
         "South American palm weevil activity and palm loss on my own Old Escondido property",
     ):
         if phrase.lower() not in about.lower():
