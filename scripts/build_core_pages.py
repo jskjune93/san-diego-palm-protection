@@ -171,7 +171,7 @@ PAGES: dict[str, dict] = {
 </figure>
 <div class="about-john-copy">
   <p>I started SDPP after confronting South American palm weevil activity and palm loss on my own Old Escondido property. That experience made the threat very real to me&mdash;and made me look more closely at how many mature palms across our neighborhoods could be lost without earlier attention.</p>
-  <p>Born and raised in Wisconsin. B.S from the University of Minnesota in Environmental Science. Served in the Navy.</p>
+  <p>Born and raised in Wisconsin. B.S from the University of Minnesota in Environmental Science. Shipboard, deployment, administrative, managerial responsibilities out of Honolulu and Jacksonville.</p>
   <p>Today, I provide owner-led palm assessments, monitoring, protection, and treatment services throughout San Diego County. I built SDPP to give palm owners a knowledgeable local point of contact&mdash;someone who will personally look at the tree, explain what is visible, maintain useful records, and help determine a responsible next step.</p>
 </div>
 </div>''') +
