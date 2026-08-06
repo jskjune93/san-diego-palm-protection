@@ -10,7 +10,7 @@ Core HTML pages are generated from `scripts/build_core_pages.py`. Palm Journal p
 python scripts/sync_business_credentials.py
 python scripts/build_core_pages.py
 python scripts/build_journal.py
-python scripts/validate_prelicense_compliance.py --self-test
+python scripts/validate_prelicense_compliance.py --self-test  # backward-compatible active-license regression guard
 node scripts/build-production.mjs
 python scripts/validate_operational_status.py
 python scripts/validate_site.py

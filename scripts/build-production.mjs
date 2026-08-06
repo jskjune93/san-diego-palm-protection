@@ -115,6 +115,9 @@ async function main() {
     /treatment must be (?:provided|performed) by (?:a )?third[- ]party/i,
     /licensed applicator referral/i,
     /awaiting (?:its |our )?(?:license|licence|insurance)/i,
+    /does not establish business[- ]level pesticide authorization/i,
+    /current service scope.{0,100}(?:exclude|without|does not include|unavailable).{0,40}treatment/i,
+    /(?:only|solely) (?:provides?|offers?) (?:documentation|monitoring|reporting|sourcing|coordination)/i,
   ];
   for (const route of routes) {
     const relative = path.relative(root, route);

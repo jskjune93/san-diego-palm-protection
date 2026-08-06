@@ -274,7 +274,8 @@ def main() -> int:
     elif "./palm-records-monitoring-verification.html" not in homepage_text:
         errors.append("homepage does not link to Records & Monitoring service page")
     business_status = json.loads((ROOT / "site-config" / "business_status.json").read_text(encoding="utf-8"))
-    commercial_mode = business_status.get("mode") == "commercial"
+    if business_status.get("mode") != "commercial":
+        errors.append("production business status must be commercial")
     credentials = public_credentials()
     required_current_scope = credentials["licensing_statement"]
     required_qualified_insured_scope = credentials.get("service_summary", "")
@@ -288,18 +289,12 @@ def main() -> int:
         treatment_parser = read_html(TREATMENT_PAGE)[1]
         if treatment_parser.canonicals != [f"{BASE_URL}/palm-stewardship-plans.html"]:
             errors.append("Palm Protection & Treatment page canonical is incorrect")
-        treatment_requirements = ({
+        treatment_requirements = {
             "current availability": (("protection", "treatment services"),),
             "assessment-first scope": (("review", "palm", "site"),),
             "monitoring": (("monitor",),),
             "owner voice": (("i ",),),
-        } if commercial_mode else {
-            "pesticide service unavailable": (("not currently offering pesticide applications",),),
-            "limited scope": (("education", "records"),),
-            "licensed-provider referral": (("appropriately licensed", "provider"),),
-            "no pesticide recommendation": (("individual application guidance", "outside", "current service scope"),),
-            "monitoring and documentation retained": (("documentation", "monitor"),),
-        })
+        }
         for label, alternatives in treatment_requirements.items():
             if not any(all(fragment in treatment_lower for fragment in group) for group in alternatives):
                 errors.append(f"Palm Protection & Treatment page missing semantic requirement: {label}")
@@ -314,14 +309,13 @@ def main() -> int:
         "treatment coming soon",
         "not yet licensed",
     )
-    if commercial_mode:
-        for path, (page_text, _) in pages.items():
-            lowered = page_text.lower()
-            for phrase in public_treatment_unavailable:
-                if phrase in lowered:
-                    errors.append(
-                        f"{normalize_rel(path)}: public treatment-unavailable contradiction remains: {phrase}"
-                    )
+    for path, (page_text, _) in pages.items():
+        lowered = page_text.lower()
+        for phrase in public_treatment_unavailable:
+            if phrase in lowered:
+                errors.append(
+                    f"{normalize_rel(path)}: public treatment-unavailable contradiction remains: {phrase}"
+                )
     if not REPORT_PAGE.exists():
         errors.append("Report a Palm page is missing")
     else:
@@ -361,8 +355,7 @@ def main() -> int:
             errors.append(f"journal article missing standardized contribution footer: {article.name}")
     if required_current_scope not in homepage_text or required_qualified_insured_scope not in records_text:
         errors.append("current stewardship offer and credential summary are not consistently identified")
-    if commercial_mode:
-        for path in (
+    for path in (
             ROOT / "index.html",
             RECORDS_PAGE,
             REPORT_PAGE,
@@ -372,50 +365,18 @@ def main() -> int:
             ROOT / "south-american-palm-weevil-treatment-san-diego.html",
             ROOT / "palm-removal-coordination.html",
             ROOT / "urban-forest-palm-documentation.html",
-        ):
-            page_text = path.read_text(encoding="utf-8-sig")
-            if required_qualified_insured_scope not in page_text:
-                errors.append(f"{normalize_rel(path)}: missing centralized qualified/insured status")
-            if "BUSINESS_CREDENTIALS:START" not in page_text:
-                errors.append(f"{normalize_rel(path)}: missing reusable business credential block")
-        for path in (ROOT / "index.html", RECORDS_PAGE):
-            page_text = path.read_text(encoding="utf-8-sig")
-            if f'<meta name="business-status" content="{credentials["status_label"]}">' not in page_text:
-                errors.append(f"{normalize_rel(path)}: metadata missing qualified/insured service status")
-        for path, (page_text, _) in pages.items():
-            lowered = page_text.lower()
-            for obsolete in (
-                "pending licensing",
-                "awaiting licensing",
-                "awaiting qualification",
-                "still awaiting qualification",
-                "treatment services unavailable",
-            ):
-                if obsolete in lowered:
-                    errors.append(f"{normalize_rel(path)}: obsolete commercial-status wording remains: {obsolete}")
-            for drifted in (
-                "California licensed · DPR Category B qualified · Insured",
-                "Licensed · Qualified · Insured",
-            ):
-                if drifted.lower() in lowered:
-                    errors.append(f"{normalize_rel(path)}: drifted credential wording remains: {drifted}")
-        if "Residential Palm Assessment" not in homepage_text or 'href="./palm-records-monitoring-verification.html#homeowner-inquiry"' not in homepage_text or "Request a Palm Assessment" not in records_text:
-            errors.append("commercial-first homepage and service page must preserve the secondary residential assessment path")
-        for obsolete in ("prelicense", "pending licensing", "treatment services unavailable"):
-            if obsolete in (homepage_text + records_text).lower():
-                errors.append(f"commercial pages retain obsolete status language: {obsolete}")
-    else:
-        for path, (page_text, parser) in pages.items():
-            lowered = page_text.lower()
-            if re.search(r"\b(?:california licensed|qualified and insured|licensed,\s*qualified|qal\s*#?\d+)\b", lowered):
-                errors.append(f"{normalize_rel(path)}: active-license language appears in prelicense mode")
-            structured_text = "\n".join(parser.json_ld_blocks).lower()
-            if '"@type": "service"' in structured_text or '"servicestatus"' in structured_text:
-                errors.append(f"{normalize_rel(path)}: prelicense structured data implies an active service")
-            if re.search(r"\b(?:request|book|schedule|quote|deposit).{0,60}\b(?:pesticide|treatment)\b", lowered):
-                errors.append(f"{normalize_rel(path)}: prelicense page solicits regulated pesticide work")
-        if re.search(r'href="[^"]*(?:request|schedule|book)[^"]*treatment', homepage_text + records_text, re.I):
-            errors.append("active treatment CTA found in current-service pages")
+    ):
+        page_text = path.read_text(encoding="utf-8-sig")
+        if required_qualified_insured_scope not in page_text:
+            errors.append(f"{normalize_rel(path)}: missing centralized qualified/insured status")
+        if "BUSINESS_CREDENTIALS:START" not in page_text:
+            errors.append(f"{normalize_rel(path)}: missing reusable business credential block")
+    for path in (ROOT / "index.html", RECORDS_PAGE):
+        page_text = path.read_text(encoding="utf-8-sig")
+        if f'<meta name="business-status" content="{credentials["status_label"]}">' not in page_text:
+            errors.append(f"{normalize_rel(path)}: metadata missing qualified/insured service status")
+    if "Residential Palm Assessment" not in homepage_text or 'href="./palm-records-monitoring-verification.html#homeowner-inquiry"' not in homepage_text or "Request a Palm Assessment" not in records_text:
+        errors.append("commercial-first homepage and service page must preserve the secondary residential assessment path")
     for required_path in (
         "palm-removal-coordination.html",
         "specimen-palms-cycads.html",

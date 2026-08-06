@@ -24,6 +24,9 @@ FORBIDDEN = (
     r"treatment must be (?:provided|performed) by (?:a )?third[- ]party",
     r"licensed applicator referral",
     r"awaiting (?:its |our )?(?:license|licence|insurance)",
+    r"does not establish business[- ]level pesticide authorization",
+    r"current service scope.{0,100}(?:exclude|without|does not include|unavailable).{0,40}treatment",
+    r"(?:only|solely) (?:provides?|offers?) (?:documentation|monitoring|reporting|sourcing|coordination)",
 )
 
 CRITICAL_PAGES = (
@@ -113,6 +116,10 @@ def main() -> int:
         for phrase in ("Owner-Led Palm Stewardship", "Palm stewardship for managed properties.", "San Diego Palm Protection provides owner-led palm stewardship for managed properties in San Diego County.", "Palm-specific condition documentation", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"):
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
+        treatment_page = (DIST / "south-american-palm-weevil-treatment-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "south-american-palm-weevil-treatment-san-diego.html").exists() else ""
+        for phrase in ("South American Palm Weevil Protection &amp; Treatment", "preventive treatment when appropriate", "California Pest Control Business License active"):
+            if phrase not in treatment_page:
+                errors.append(f"SAPW treatment page missing active service language: {phrase}")
         recurring = (DIST / "quarterly-palm-care-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "quarterly-palm-care-san-diego.html").exists() else ""
         for phrase in ("Recurring Palm Stewardship &amp; Monitoring", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"):
             if phrase not in recurring:

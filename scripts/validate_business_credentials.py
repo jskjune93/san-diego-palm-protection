@@ -35,7 +35,6 @@ UNSUPPORTED_CLAIMS = (
 
 def main() -> int:
     status = load_business_status()
-    prelicense = status["mode"] == "prelicense"
     credentials = public_credentials()
     exact = credentials["exact_status"]
     summary = credentials["service_summary"]
@@ -52,7 +51,7 @@ def main() -> int:
         rel = path.relative_to(ROOT).as_posix()
         lowered = text.lower()
         for pattern in OBSOLETE_PATTERNS:
-            if not prelicense and re.search(pattern, text, re.IGNORECASE):
+            if re.search(pattern, text, re.IGNORECASE):
                 errors.append(f"{rel}: obsolete qualification/licensing language matches {pattern}")
         for phrase in DRIFTED_STATUS:
             if phrase.lower() in lowered:
@@ -101,32 +100,12 @@ def main() -> int:
     if insurance in all_public and status.get("insurance", {}).get("insured") is not True:
         errors.append("insured wording appears without authoritative insurance support")
 
-    if prelicense:
-        prohibited = re.compile(
-            r"\b(?:california\s+licensed|licensed,\s*qualified|qualified\s+and\s+insured|"
-            r"pest control business license\s*(?:no\.?|#)\s*175295|"
-            r"qualified applicator license.{0,30}business|financial responsibility.{0,20}active)\b",
-            re.I,
-        )
-        for path in PUBLIC_HTML:
-            text = path.read_text(encoding="utf-8-sig")
-            if prohibited.search(text):
-                errors.append(f"{path.relative_to(ROOT).as_posix()}: active credential language appears in prelicense mode")
-        if status.get("pest_control_business_license_issued_and_active") is not False:
-            errors.append("Prelicense premise requires inactive Pest Control Business License")
-        if status.get("pesticide_services_enabled") is not False:
-            errors.append("Prelicense premise requires pesticide services disabled")
-        if status.get("qal_issued_and_active") is not True:
-            errors.append("Verified individual QAL must remain active")
-        if status.get("financial_responsibility_active") is not True:
-            errors.append("Verified insured status must remain active")
-    else:
-        if status.get("pest_control_business_license_issued_and_active") is not True:
-            errors.append("Pest Control Business License is not active; licensed public wording must be removed")
-        if status.get("qal_issued_and_active") is not True:
-            errors.append("DPR QAL Category B is not active; qualified public wording must be removed")
-        if status.get("financial_responsibility_active") is not True:
-            errors.append("Financial responsibility is not active; insured public wording must be removed")
+    if status.get("pest_control_business_license_issued_and_active") is not True:
+        errors.append("Pest Control Business License must remain active")
+    if status.get("qal_issued_and_active") is not True:
+        errors.append("DPR QAL Category B must remain active")
+    if status.get("financial_responsibility_active") is not True:
+        errors.append("Financial responsibility must remain active")
 
     print("BUSINESS_CREDENTIAL_VALIDATION_OK" if not errors else "BUSINESS_CREDENTIAL_VALIDATION_FAILED")
     print(f"public_html_checked={len(PUBLIC_HTML)}")

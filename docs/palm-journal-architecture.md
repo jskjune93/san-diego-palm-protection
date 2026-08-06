@@ -23,7 +23,7 @@ The generated files include a comment naming `scripts/build_journal.py`. Do not 
 5. Run `python scripts/validate_site.py`.
 6. Review the generated diff before committing.
 
-Commercial mode is currently active under the owner-authorized business-status configuration. Every Palm Journal build must still pass `python scripts/validate_prelicense_compliance.py`; the historical validator now acts as a fail-closed activation and claims gate, and `scripts/validate_site.py` runs it automatically. Keep Journal copy documentary and non-diagnostic, and preserve licensing, scope, certainty, and outcome boundaries.
+Commercial mode is the only production mode under the owner-authorized business-status configuration. Every Palm Journal build must pass the active-license regression guard retained at `python scripts/validate_prelicense_compliance.py`; `scripts/validate_site.py` runs it automatically. Keep Journal copy documentary and non-diagnostic, and preserve label, scope, certainty, and outcome boundaries without reintroducing former licensing restrictions.
 
 Draft entries must remain `status: draft`; the build and validation workflow prevents draft records from appearing publicly.
 
