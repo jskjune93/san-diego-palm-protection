@@ -7,6 +7,7 @@ import re
 import xml.etree.ElementTree as ET
 
 from site_components import header as global_header, footer as global_footer
+from business_credentials import public_credentials
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.sandiegopalmprotection.com"
@@ -95,7 +96,16 @@ def meta_description(entry: dict) -> str:
 
 
 def shared_head(title: str, description: str, canonical: str, og_image: str, extra_json_ld: str = "", og_type: str = "article") -> str:
-    return f'''  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>{escape(title)}</title>\n  <meta name="description" content="{escape(description)}">\n  <link rel="canonical" href="{escape(canonical)}">\n  <meta property="og:title" content="{escape(title)}">\n  <meta property="og:description" content="{escape(description)}">\n  <meta property="og:image" content="{escape(og_image)}">\n  <meta property="og:type" content="{escape(og_type)}">\n{extra_json_ld}'''
+    credentials = public_credentials()
+    organization = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "San Diego Palm Protection",
+        "url": BASE_URL,
+        "description": credentials["licensing_statement"],
+    }
+    organization_json_ld = f'  <script type="application/ld+json">{json.dumps(organization, ensure_ascii=False)}</script>'
+    return f'''  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>{escape(title)}</title>\n  <meta name="description" content="{escape(description)}">\n  <meta name="business-status" content="{escape(credentials["status_label"])}">\n  <meta name="business-credentials" content="{escape(credentials["licensing_statement"])}">\n  <link rel="canonical" href="{escape(canonical)}">\n  <meta property="og:title" content="{escape(title)}">\n  <meta property="og:description" content="{escape(description)}">\n  <meta property="og:image" content="{escape(og_image)}">\n  <meta property="og:type" content="{escape(og_type)}">\n{organization_json_ld}\n{extra_json_ld}'''
 
 
 def _legacy_styles_reference(relative_root: str = "./") -> str:

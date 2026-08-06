@@ -34,6 +34,21 @@ CRITICAL_PAGES = (
     "south-american-palm-weevil-treatment-san-diego.html",
 )
 
+AUTHORITATIVE_LICENSE_STATEMENT = (
+    "San Diego Palm Protection — California Pest Control Business License active. "
+    "John Krause, California Qualified Applicator License No. 175295, "
+    "Category B — Landscape Maintenance. Insured."
+)
+
+SOURCE_FILES = (
+    ROOT / "scripts" / "build_core_pages.py",
+    ROOT / "scripts" / "build_journal.py",
+    ROOT / "scripts" / "business_credentials.py",
+    ROOT / "scripts" / "site_components.py",
+    ROOT / "site-config" / "business_status.json",
+    ROOT / "journal-data" / "journal_entries.json",
+)
+
 
 def main() -> int:
     errors: list[str] = []
@@ -44,6 +59,14 @@ def main() -> int:
     for key in ("primary_growth_path", "residential_path", "regulated_work_boundary", "excluded_direct_work", "outcome_boundary"):
         if not scope.get(key):
             errors.append(f"authoritative operating scope missing {key}")
+
+    source_paths = sorted(ROOT.glob("*.html")) + sorted((ROOT / "palm-journal").glob("**/*.html")) + list(SOURCE_FILES)
+    for path in source_paths:
+        text = path.read_text(encoding="utf-8-sig")
+        rel = path.relative_to(ROOT).as_posix()
+        for pattern in FORBIDDEN:
+            if re.search(pattern, text, re.IGNORECASE):
+                errors.append(f"{rel}: obsolete service-status source language matched {pattern}")
 
     if not DIST.exists():
         errors.append("dist is missing; run the production build first")
@@ -56,10 +79,21 @@ def main() -> int:
                 if re.search(pattern, text, re.IGNORECASE):
                     errors.append(f"{rel}: obsolete service-status language matched {pattern}")
         required_shared = (
+            "California Pest Control Business License active",
             "California Qualified Applicator License No. 175295",
             "Category B — Landscape Maintenance",
             "Insured",
         )
+        for path in html_paths:
+            text = path.read_text(encoding="utf-8-sig")
+            rel = path.relative_to(DIST).as_posix()
+            if AUTHORITATIVE_LICENSE_STATEMENT not in text:
+                errors.append(f"{rel}: authoritative sitewide licensing statement is missing")
+            head = text.split("</head>", 1)[0]
+            if 'name="business-credentials"' not in head or "California Pest Control Business License active" not in head:
+                errors.append(f"{rel}: licensing metadata is missing or stale")
+            if 'type="application/ld+json"' not in head or "California Pest Control Business License active" not in head:
+                errors.append(f"{rel}: licensing structured data is missing or stale")
         for relative in CRITICAL_PAGES:
             path = DIST / relative
             if not path.exists():

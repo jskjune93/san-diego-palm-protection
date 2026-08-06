@@ -46,11 +46,13 @@
   },
   "public_credentials": {
     "status_label": "Owner-Led Palm Stewardship",
-    "service_summary": "Continuing palm-specific oversight that connects condition, monitoring, authorized work, contractor coordination, and long-term planning.",
+    "service_summary": "Palm assessment and monitoring, preventive palm protection, pesticide treatment when appropriate, fertilization and palm-health stewardship, documentation and portfolio management, decline response, and contractor coordination.",
+    "business_license": "California Pest Control Business License active",
     "individual_license": "California Qualified Applicator License No. 175295",
     "category": "Category B — Landscape Maintenance",
     "insurance": "Insured",
-    "exact_status": "I provide recurring, owner-led stewardship for individual palms and multi-palm properties. Depending on the property and agreed scope, that can include health observation, preventive protection, fertilization, watering and irrigation guidance, treatment when appropriate, photographic documentation, planning, and coordination when pruning, removal, or replacement becomes necessary.",
+    "licensing_statement": "San Diego Palm Protection — California Pest Control Business License active. John Krause, California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. Insured.",
+    "exact_status": "San Diego Palm Protection provides palm assessment and monitoring, preventive palm protection, pesticide treatment when appropriate, fertilization and palm-health stewardship, documentation and portfolio management, decline response, and contractor coordination.",
     "scope_note": "Treatment recommendations and applications remain subject to the pesticide label, applicable law, site conditions, and agreed scope.",
     "effective_date": "2026-08-02"
   }

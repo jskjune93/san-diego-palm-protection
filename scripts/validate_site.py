@@ -276,7 +276,7 @@ def main() -> int:
     business_status = json.loads((ROOT / "site-config" / "business_status.json").read_text(encoding="utf-8"))
     commercial_mode = business_status.get("mode") == "commercial"
     credentials = public_credentials()
-    required_current_scope = credentials["exact_status"]
+    required_current_scope = credentials["licensing_statement"]
     required_qualified_insured_scope = credentials.get("service_summary", "")
     records_text = RECORDS_PAGE.read_text(encoding="utf-8-sig") if RECORDS_PAGE.exists() else ""
     report_text = REPORT_PAGE.read_text(encoding="utf-8-sig") if REPORT_PAGE.exists() else ""

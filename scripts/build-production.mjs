@@ -124,12 +124,23 @@ async function main() {
     }
   }
   const requiredByPage = {
-    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Owner-Led Palm Stewardship", "Palm stewardship for managed properties.", "San Diego Palm Protection provides owner-led palm stewardship for managed properties in San Diego County.", "Palm-specific condition documentation", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"],
+    "index.html": ["California Pest Control Business License active", "California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Owner-Led Palm Stewardship", "Palm stewardship for managed properties.", "San Diego Palm Protection provides owner-led palm stewardship for managed properties in San Diego County.", "Palm-specific condition documentation", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"],
     "managed-property-palm-services.html": ["Palm stewardship for managed properties.", "Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "fertilization", "irrigation guidance", "Request a Property Walkthrough", "existing landscapers", "certificate of insurance", "W-9"],
     "palm-records-monitoring-verification.html": ["id=\"homeowner-inquiry\" tabindex=\"-1\"", "id=\"organization-inquiry\" tabindex=\"-1\"", "Tell me a little about the property", "Request a Property Walkthrough", "known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
     "quarterly-palm-care-san-diego.html": ["Recurring Palm Stewardship &amp; Monitoring", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"],
   };
+  const authoritativeLicenseStatement = "San Diego Palm Protection — California Pest Control Business License active. John Krause, California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. Insured.";
+  for (const route of routes) {
+    const relative = path.relative(root, route);
+    const deployable = await readFile(path.join(output, relative), "utf8");
+    if (!deployable.includes(authoritativeLicenseStatement)) {
+      throw new Error(`Authoritative licensing statement missing in ${relative}`);
+    }
+    if (!deployable.includes('name="business-credentials"') || !deployable.includes('"description": "San Diego Palm Protection — California Pest Control Business License active.')) {
+      throw new Error(`Licensing metadata or structured data missing in ${relative}`);
+    }
+  }
   for (const [relative, phrases] of Object.entries(requiredByPage)) {
     const deployable = await readFile(path.join(output, relative), "utf8");
     for (const phrase of phrases) {
