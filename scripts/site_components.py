@@ -43,6 +43,15 @@ def head(title: str, description: str, path: str, image: str = "background.jpg",
             "description": credential["licensing_statement"],
         },
     }]
+    if path != "index.html":
+        schemas.append({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Home", "item": f"{BASE_URL}/"},
+                {"@type": "ListItem", "position": 2, "name": title.split(" | ")[0], "item": canonical},
+            ],
+        })
     if extra_schema and (load_business_status()["mode"] == "commercial" or publish_extra_schema):
         schemas.append(extra_schema)
     return f"""<meta charset="utf-8">
@@ -166,8 +175,8 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          relative_root: str = "./", extra_schema: dict | None = None,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
-    hero_note = '<p class="hero-microcopy">Palm-specific condition documentation · Scheduled monitoring · Protection and treatment · Contractor coordination · Long-term planning</p>' if filename == "index.html" else ""
-    hero_trust = '<p class="hero-trust-line">Owner-operated • California QAL, Category B</p>' if filename == "index.html" else ""
+    hero_note = '<p class="hero-microcopy">Mature palm care · Assessment and monitoring · Preventive protection and treatment · Preservation planning</p>' if filename == "index.html" else ""
+    hero_trust = '<p class="hero-trust-line">Owner-operated • California Pest Control Business License active • QAL Category B • Insured</p>' if filename == "index.html" else ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '
         f'{escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'

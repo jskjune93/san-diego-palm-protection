@@ -113,18 +113,18 @@ def main() -> int:
         homepage = (DIST / "index.html").read_text(encoding="utf-8-sig") if (DIST / "index.html").exists() else ""
         managed = (DIST / "managed-property-palm-services.html").read_text(encoding="utf-8-sig") if (DIST / "managed-property-palm-services.html").exists() else ""
         records = (DIST / "palm-records-monitoring-verification.html").read_text(encoding="utf-8-sig") if (DIST / "palm-records-monitoring-verification.html").exists() else ""
-        for phrase in ("Owner-Led Palm Stewardship", "Palm stewardship for managed properties.", "San Diego Palm Protection provides owner-led palm stewardship for managed properties in San Diego County.", "Palm-specific condition documentation", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"):
+        for phrase in ("Owner-Led Palm Stewardship", "Palm stewardship, treatment, and preservation for valuable properties.", "Mature palm care", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"):
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
         treatment_page = (DIST / "south-american-palm-weevil-treatment-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "south-american-palm-weevil-treatment-san-diego.html").exists() else ""
-        for phrase in ("South American Palm Weevil Protection &amp; Treatment", "preventive treatment when appropriate", "California Pest Control Business License active"):
+        for phrase in ("South American Palm Weevil Treatment in San Diego", "Preventive treatment is available when appropriate", "California Pest Control Business License active"):
             if phrase not in treatment_page:
                 errors.append(f"SAPW treatment page missing active service language: {phrase}")
         recurring = (DIST / "quarterly-palm-care-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "quarterly-palm-care-san-diego.html").exists() else ""
-        for phrase in ("Recurring Palm Stewardship &amp; Monitoring", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"):
+        for phrase in ("Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"):
             if phrase not in recurring:
                 errors.append(f"recurring-stewardship page missing current service language: {phrase}")
-        for phrase in ("Palm stewardship for managed properties.", "Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "fertilization", "irrigation guidance", "existing landscapers", "certificate of insurance", "W-9"):
+        for phrase in ("Commercial palm care and management for valuable properties.", "Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "fertilization", "irrigation guidance", "existing landscapers", "certificate of insurance", "W-9"):
             if phrase not in managed:
                 errors.append(f"managed-property page missing service pathway: {phrase}")
         for field in ("known_palm_species", "existing_contractor", "desired_service", "preferred_contact"):

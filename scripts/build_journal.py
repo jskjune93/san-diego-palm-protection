@@ -520,6 +520,26 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
             related_links.append(f'<a href="./{escape(related["slug"])}.html">{escape(related["title"])}</a>')
     if not related_links:
         related_links.append('<a href="../palm-journal-new.html">Return to the Palm Journal library</a>')
+    category = entry.get("category", "").lower()
+    title_text = entry.get("title", "").lower()
+    topical_links = [
+        '<a href="../palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm health assessment</a>'
+    ]
+    if "sapw" in category or "weevil" in category or "weevil" in title_text:
+        topical_links = [
+            '<a href="../sapw.html">South American palm weevil signs and local guidance</a>',
+            '<a href="../south-american-palm-weevil-treatment-san-diego.html">South American palm weevil treatment in San Diego</a>',
+        ]
+    elif "preservation" in category or "historic" in category or "loss" in category:
+        topical_links = [
+            '<a href="../quarterly-palm-care-san-diego.html">Mature palm stewardship and preservation</a>',
+            '<a href="../palm-removal-coordination.html">Palm decline, removal, and replacement coordination</a>',
+        ]
+    elif "health" in category or "assessment" in title_text:
+        topical_links = [
+            '<a href="../residential-palm-assessment.html">Palm health assessment in San Diego</a>',
+            '<a href="../palm-stewardship-plans.html">Palm treatment and preventive protection</a>',
+        ]
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -547,11 +567,15 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
         {''.join(related_links)}
       </div>
     </section>
+    <section aria-labelledby="related-palm-services">
+      <h2 id="related-palm-services">Related Palm Services</h2>
+      <div class="related-links">{''.join(topical_links)}</div>
+    </section>
   </article>
   <section class="assessment-cta" id="contact">
     <h2>Seen something similar?</h2>
     <p><a href="../report-a-palm.html">Share a palm observation or dated photograph.</a> Submissions are reviewed privately and are not published automatically.</p>
-    <p><a href="../palm-records-monitoring-verification.html#request">Schedule a palm assessment</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
+    <p><a href="../palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm assessment</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
 {footer('../')}

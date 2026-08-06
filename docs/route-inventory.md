@@ -7,8 +7,8 @@
 | `/about.html` | created | Owner identity, qualifications, field process, and trust |
 | `/canary-island-date-palm-care-san-diego.html` | restructured | Species-specific discovery route |
 | `/cidp-risk-checklist.html` | restructured | Educational observation checklist |
-| `/` | restructured | Primary managed-property palm-stewardship position and service gateway |
-| `/managed-property-palm-services.html` | created | Managed-property stewardship scope, continuity, and walkthrough conversion |
+| `/` | restructured | Broad San Diego palm care, treatment, stewardship, and preservation gateway |
+| `/managed-property-palm-services.html` | created | Commercial palm care, portfolio management, vendor readiness, and walkthrough conversion |
 | `/old-escondido-palm-preservation.html` | restructured | Community documentation and exact UFMP context |
 | `/palm-care-escondido.html` | consolidated in place | Escondido local discovery route |
 | `/palm-care-poway.html` | consolidated in place | Poway local discovery route |
@@ -37,15 +37,15 @@
 | `/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html` | preserved / regenerated | Palm Journal evidence: Historic Homes and Landscapes |
 | `/palm-journal/when-sapw-became-local.html` | preserved / regenerated | Palm Journal evidence: Owner-Documented Field Record |
 | `/palm-proof-examples.html` | created | Approved sanitized proof presentation and privacy boundary |
-| `/palm-records-monitoring-verification.html` | restructured | Canonical service overview and inquiry |
+| `/palm-records-monitoring-verification.html` | restructured | Canonical assessment, monitoring, documentation, and inquiry overview |
 | `/palm-removal-coordination.html` | restructured | Decline, removal, documented loss, and replacement pathway |
 | `/palm-sourcing-installation.html` | restructured | Replacement sourcing and installation planning |
-| `/palm-stewardship-plans.html` | restructured | Protection and treatment planning |
-| `/quarterly-palm-care-san-diego.html` | restructured | Recurring monitoring pathway; URL preserved |
+| `/palm-stewardship-plans.html` | restructured | General palm treatment and preventive-protection service |
+| `/quarterly-palm-care-san-diego.html` | restructured | Recurring stewardship and mature-palm preservation; URL preserved |
 | `/report-a-palm.html` | restructured | Permissioned private observation handoff |
 | `/residential-palm-assessment.html` | created | Residential assessment and baseline conversion |
-| `/sapw.html` | restructured | SAPW education, risk, and assessment gateway |
-| `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Treatment-specific discovery route into canonical protection pathway |
+| `/sapw.html` | restructured | Definitive local SAPW information, signs, prevention, treatment timing, and assessment gateway |
+| `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Commercial SAPW treatment, prevention, monitoring, and treatment-record service |
 | `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |
 | `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
 

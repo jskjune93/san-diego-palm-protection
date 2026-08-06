@@ -135,11 +135,11 @@ def approved_ufmp_resource() -> str:
 
 PAGES: dict[str, dict] = {
     "index.html": {
-        "title": "Palm Stewardship for Managed Properties | SDPP",
-        "description": "Owner-led palm stewardship for managed properties in San Diego County, with condition documentation, monitoring, protection, treatment, coordination, and planning.",
+        "title": "Palm Care, Treatment & Stewardship San Diego | SDPP",
+        "description": "Owner-led palm assessment, treatment, preservation, and recurring stewardship for commercial, managed, estate, and residential properties in San Diego County.",
         "eyebrow": "Owner-led · San Diego County · Based in Old Escondido",
-        "h1": "Palm stewardship for managed properties.",
-        "lede": "San Diego Palm Protection provides owner-led palm stewardship for managed properties in San Diego County.",
+        "h1": "Palm stewardship, treatment, and preservation for valuable properties.",
+        "lede": "San Diego Palm Protection cares for mature and high-value palms across commercial, managed, estate, and residential properties in San Diego and North County.",
         "image": "background.jpg",
         "body": section("Commercial & managed properties", "Start with a property walkthrough.", "For an HOA, apartment community, senior-living property, hotel, club, school, church, campus, commercial site, historic property, or large estate, I can evaluate the palms as a portfolio and build a practical stewardship plan for their health, protection, appearance, documentation, and long-term management.", '<p>One owner-led relationship connects palm health observation, nutrition, watering and irrigation concerns, preventive treatment, recurring visits, condition records, budgeting support, and coordinated response.</p><div class="button-row"><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a><a class="button button-secondary" href="./managed-property-palm-services.html">View Commercial &amp; Managed Services</a></div>', "section-tint") +
         section("Owner-Led Palm Stewardship", "Ongoing care, not isolated transactions.", "I provide recurring, owner-led stewardship for individual palms and multi-palm properties. Depending on the property and agreed scope, that can include health observation, preventive protection, fertilization, watering and irrigation guidance, treatment when appropriate, photographic documentation, planning, and coordination when pruning, removal, or replacement becomes necessary.", three_pillars()) +
@@ -193,10 +193,10 @@ PAGES: dict[str, dict] = {
         section("Start a conversation", "Choose the inquiry path that fits.", "Homeowners can request an assessment. Managers, HOAs, institutions, and other property stakeholders can discuss a palm portfolio.", '<div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Request a Palm Assessment</a><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Discuss a Property or Palm Portfolio</a></div>', "section-tint"),
     },
     "residential-palm-assessment.html": {
-        "title": "Residential Mature Palm Assessment | San Diego Palm Protection",
-        "description": "John Krause visits your property, examines the palm from the ground, takes dated photographs, and gives you a written assessment.",
-        "eyebrow": "On-site residential service", "h1": "Residential Mature Palm Assessment",
-        "lede": "I come to the property, look at the whole palm from the ground, photograph what concerns you, and give you a written account of what I found.",
+        "title": "Palm Health Assessment San Diego | Residential Palm Care",
+        "description": "On-site palm health assessment for declining, damaged, or changing mature palms, with dated photographs, written findings, and practical next steps.",
+        "eyebrow": "On-site residential service", "h1": "Palm Health Assessment for Mature Palms",
+        "lede": "I come to the property, look at the whole palm from the ground, photograph what concerns you, and explain whether monitoring, treatment, confirmation, or urgent response fits what I find.",
         "image": "mature_healthy_cidp_poway_mansion.jpg",
         "body": section("What I deliver", "A dated starting point for your palm.", "I photograph the entire palm, its crown, trunk, base, and any concern I can safely see. Those photographs give us something real to compare later.", cards([
             ("The palm and its setting", "I note where it stands, what can be accessed safely, and what prompted the visit."),
@@ -207,10 +207,10 @@ PAGES: dict[str, dict] = {
         section("If the palm needs watching", "The first visit becomes the comparison point.", "When I return, I try to repeat the same views. That makes it easier to see whether the crown, trunk, or surrounding conditions have changed.", process([("Before the visit", "Tell me what changed and send any older photographs you have."), ("At the property", "I observe and photograph the areas I can access safely."), ("Afterward", "You receive the dated report and a recommended time for another look, if one is useful.")]) + '<p class="section-proof-link"><a href="./about.html">Learn more about John Krause</a></p>')
     },
     "palm-records-monitoring-verification.html": {
-        "title": "Managed-Property Palm Stewardship Services | SDPP",
-        "description": "Owner-led palm stewardship for managed properties, plus residential and estate assessment, monitoring, treatment, documentation, and decline response in San Diego.",
-        "eyebrow": "Owner-led managed-property stewardship", "h1": "Continuity for every important palm on the property.",
-        "lede": "I build recurring stewardship plans for managed palm inventories and provide consistent care for important residential and estate palms.",
+        "title": "Palm Assessment, Monitoring & Management Services | SDPP",
+        "description": "Palm assessment, condition baselines, recurring monitoring, treatment records, portfolio reporting, and decline response for San Diego properties.",
+        "eyebrow": "Palm services in San Diego County", "h1": "Palm assessment, monitoring, and management services.",
+        "lede": "I connect the site visit, photographs, treatment decisions, recurring care, and written record so owners and managers know what each important palm needs next.",
         "image": "journal-monitoring.jpg",
         "body": section("Services", "Four parts of responsible palm stewardship.", "Health care, protection, documentation, and response stay connected instead of becoming isolated transactions.", three_pillars()) +
         section("Assessment, Monitoring & Documentation", "You receive work you can actually use.", "The photographs and report are part of the service.", cards([
@@ -232,9 +232,9 @@ PAGES: dict[str, dict] = {
         section("Related decisions", "When the question changes.", "These pages cover decline, contractor coordination, sourcing, and confirmed loss.", '<p><a href="./palm-removal-coordination.html">Decline, removal, and replacement</a> · <a href="./palm-sourcing-installation.html">Sourcing and installation</a> · <a href="./specimen-palms-cycads.html">Specimen palms and cycads</a> · <a href="./palm-journal/documented-loss/">Documented Loss</a></p>')
     },
     "quarterly-palm-care-san-diego.html": {
-        "title": "Recurring Palm Stewardship & Monitoring | SDPP",
-        "description": "Owner-led recurring palm health visits, fertilization, irrigation guidance, preventive treatment, monitoring, and work histories for San Diego properties.",
-        "eyebrow": "Recurring stewardship", "h1": "Recurring Palm Stewardship & Monitoring",
+        "title": "Palm Stewardship & Mature Palm Preservation San Diego | SDPP",
+        "description": "Recurring palm stewardship for mature-palm preservation, including health visits, fertilization, irrigation review, preventive treatment, and monitoring.",
+        "eyebrow": "Recurring stewardship", "h1": "Palm stewardship and preservation, visit after visit.",
         "lede": "Return visits keep palm health, care, protection, treatment history, and changing priorities connected over time. The schedule follows the palms, the property, and the agreed scope.",
         "image": "journal-seasonal.jpg",
         "body": section("Recurring care", "Each visit advances the stewardship plan.", "I review current palm health and site conditions, carry out agreed care within scope, and keep the history useful for the next decision.", process([
@@ -249,10 +249,10 @@ PAGES: dict[str, dict] = {
         ]), "section-tint")
     },
     "managed-property-palm-services.html": {
-        "title": "Palm Stewardship for Managed Properties San Diego | SDPP",
-        "description": "Owner-led palm stewardship for managed properties in San Diego County, connecting palm condition, monitoring, treatment, contractor coordination, and long-term planning.",
-        "eyebrow": "Commercial and managed properties", "h1": "Palm stewardship for managed properties.",
-        "lede": "I help property managers and owners maintain continuity across important palm inventories—from the first baseline through recurring care, contractor coordination, removal, replacement, and budgeting decisions.",
+        "title": "Commercial Palm Care & Property Palm Management San Diego",
+        "description": "Commercial palm care and portfolio management for HOAs, multifamily, hospitality, senior living, institutions, estates, and managed properties in San Diego.",
+        "eyebrow": "Commercial and managed properties", "h1": "Commercial palm care and management for valuable properties.",
+        "lede": "I help property managers and owners maintain continuity across important palm inventories—from the first baseline through recurring care, treatment, contractor coordination, removal, replacement, and budgeting decisions.",
         "image": "Las Palmas_Appartments_Healthy-CIDP.jpg",
         "body": section("Start with the property", "A practical path from walkthrough to annual planning.", "The first conversation is usually 15–20 minutes. A complete inventory or report is paid work, scoped after I understand the property.", process([
             ("1. Property walkthrough", "Confirm palm count, species, access, known concerns, landscape responsibilities, and management objectives."),
@@ -406,10 +406,10 @@ PAGES: dict[str, dict] = {
         section("Privacy boundary", "Only approved public material belongs here.", "The examples above are separately approved sanitized public artifacts. Private client reports and source records are not copied into website source, and any future examples must pass the same public-use and privacy checks.", '<p class="note">No unapproved proof bundle can render publicly. The website accepts only an allowlisted, versioned public derivative; private identity, address, contact, access details, and unapproved photographs remain outside this repository.</p>')
     },
     "palm-stewardship-plans.html": {
-        "title": "Palm Protection & Treatment | San Diego Palm Protection",
-        "description": "Palm assessment, protection, preventive treatment when appropriate, and recurring monitoring for mature palms in North County San Diego.",
-        "eyebrow": "Protection and treatment", "h1": "Protect a Mature Palm Before the Decision Becomes Urgent",
-        "lede": "I assess visible palm and site conditions, explain protection options, and provide treatment services when they fit the palm and property.",
+        "title": "Palm Tree Treatment & Preventive Protection San Diego | SDPP",
+        "description": "Palm tree treatment and preventive protection for mature palms in San Diego and North County, based on an on-site assessment, label requirements, and site conditions.",
+        "eyebrow": "Protection and treatment", "h1": "Palm treatment and preventive protection in San Diego.",
+        "lede": "I assess the palm and site, explain the protection options, and provide pesticide treatment when it is appropriate for the species, condition, property, and agreed scope.",
         "image": "treatment.jpg",
         "body": section("Protection and treatment", "I start with the palm and the site.", "I review visible conditions, known pest pressure, treatment history, access, and the owner's goals before recommending a plan.", '<p class="note">Protection and treatment services are available when they are appropriate for the palm and property.</p>') +
         section("When protection may be considered", "The recommendation follows the palm and the evidence.", "Mature Canary Island date palms, locally significant palms, known pest pressure, visible change, or a prevention objective may warrant assessment. A symptom or photograph alone does not establish a diagnosis or automatically justify treatment.", cards([
@@ -418,7 +418,7 @@ PAGES: dict[str, dict] = {
             ("Treatment decision", "Use the site history, observed condition, label requirements, and property priorities to decide whether SDPP treatment is appropriate."),
         ]), "section-tint") +
         section("From assessment to follow-up", "Keep the work connected.", "A visible-condition record and treatment history help me choose and track the work.", process([("Assess", "Review the palm, site, history, and visible concern."), ("Plan", "Choose the protection or treatment approach that fits."), ("Treat", "Perform the agreed work when applicable."), ("Monitor", "Add comparable photographs at a useful interval.")])) +
-        section("Records and follow-through", "The history remains understandable over time.", "The written record can identify the palm, visible condition, reported or supplied treatment history, limitations, and recommended monitoring or escalation.", '<p><a href="./quarterly-palm-care-san-diego.html">Explore recurring monitoring</a> · <a href="./palm-proof-examples.html">View sample work</a></p>') +
+        section("Records and follow-through", "The history remains understandable over time.", "The written record can identify the palm, visible condition, reported or supplied treatment history, limitations, and recommended monitoring or escalation.", '<p><a href="./quarterly-palm-care-san-diego.html">Explore recurring palm stewardship</a> · <a href="./palm-proof-examples.html">View sample work</a> · <a href="./palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html">See a local monitoring field record</a></p>') +
         section("Clear boundaries", "Educational information without unsupported promises.", "No pesticide treatment guarantees prevention, control, recovery, survival, eradication, or any other outcome, and a visual visit cannot reveal every hidden condition.", cards([
             ("Current scope", "I provide protection and treatment services when they are appropriate for the palm and site."),
             ("Coordinated work", "SDPP may coordinate pruning, removal, planting, or other contractor work but does not represent that work as directly performed when it falls outside the approved scope."),
@@ -426,30 +426,31 @@ PAGES: dict[str, dict] = {
         ]), "section-tint")
     },
     "south-american-palm-weevil-treatment-san-diego.html": {
-        "title": "South American Palm Weevil Protection & Treatment | SDPP",
-        "description": "SAPW-aware assessment, visible-condition documentation, preventive treatment when appropriate, and monitoring for Canary Island date palms in North County San Diego.",
+        "title": "South American Palm Weevil Treatment San Diego | SDPP",
+        "description": "South American palm weevil treatment, preventive protection, monitoring, and documentation for Canary Island date palms in San Diego and North County.",
         "eyebrow": "Protection and treatment",
-        "h1": "South American Palm Weevil Protection & Treatment",
-        "lede": "I assess visible palm and property conditions, compare what is changing, and provide protection and treatment services for South American palm weevil concerns when applicable.",
+        "h1": "South American Palm Weevil Treatment in San Diego",
+        "lede": "I provide South American palm weevil assessment, preventive protection, pesticide treatment, monitoring, and treatment records for Canary Island date palms when the palm and site are suitable.",
         "image": "treatment.jpg",
-        "body": section("Documentation before decisions", "A visible-condition record supports better questions.", "The review considers palm species, visible condition, reported history, known pest pressure, access, timing, prior treatment information, and client objectives. Photographs or a single symptom do not establish SAPW or another diagnosis.", cards([
+        "body": section("Documentation before decisions", "A visible-condition record supports better questions.", "The review considers palm species, visible condition, reported history, known pest pressure, access, timing, prior treatment information, and client objectives. Preventive treatment is available when appropriate, but photographs or a single symptom do not establish SAPW or another diagnosis.", cards([
             ("Document", "Establish dated photographs, observations, reported history, and limitations."),
             ("Prepare", "Separate monitoring, confirmation, preventive treatment, and urgent response paths."),
             ("Record", "Document SDPP treatment where applicable, supplied prior history, and the recommended follow-up or monitoring point."),
         ])) +
-        section("Protection and treatment", "The palm and site determine the plan.", "I review the palm, its history, current pressure, access, and site conditions before recommending protection or treatment.", '<p><a href="./palm-stewardship-plans.html">Review Protection & Treatment</a> · <a href="./quarterly-palm-care-san-diego.html">Review recurring monitoring</a></p>', "section-tint")
+        section("Protection and treatment", "The palm and site determine the plan.", "I review the palm, its history, current pressure, access, and site conditions before recommending protection or treatment.", '<p><a href="./palm-stewardship-plans.html">Review general palm treatment and preventive protection</a> · <a href="./quarterly-palm-care-san-diego.html">Review recurring palm stewardship</a> · <a href="./sapw.html">Read the South American palm weevil field guide</a></p>', "section-tint")
     },
     "sapw.html": {
-        "title": "South American Palm Weevil Assessment in San Diego | SDPP",
-        "description": "Local SAPW-aware assessment, Canary Island date palm protection, monitoring, and response in North County San Diego.",
-        "eyebrow": "Canary Island date palm risk", "h1": "South American Palm Weevil: Warning Signs and Next Steps",
+        "title": "South American Palm Weevil San Diego: Signs & Prevention",
+        "description": "A San Diego guide to South American palm weevil warning signs, affected palms, prevention, treatment timing, local field evidence, and next steps.",
+        "eyebrow": "Canary Island date palm risk", "h1": "South American Palm Weevil in San Diego: Signs, Prevention, and Response",
         "lede": "If a mature Canary Island date palm looks different, I will look at the whole palm, photograph the change, and explain whether I would monitor it, seek confirmation, or consider it urgent.",
         "image": "south-american-palm-weevil-cidp-poway.jpg",
         "body": section("What I watch for", "A change in the crown deserves a closer look.", "A drooping or thinning crown, unusual frond behavior, damage, odor, or debris may deserve attention. None of those signs alone proves South American palm weevil.", cards([("Look at the whole palm", "I review the crown, trunk, base, nearby ground, access, and the timeline the owner reports."), ("Photograph the change", "Dated views help show whether the palm is stable or continuing to decline."), ("Choose the response", "I explain whether monitoring, protection, treatment, decline response, or contractor coordination fits what I find.")])) +
+        section("Prevention and treatment timing", "Earlier protection preserves more options.", "Canary Island date palms may merit preventive protection before obvious crown collapse, especially where local pressure, palm value, nearby losses, or property responsibility justify an assessment. Treatment timing, product selection, and application must follow the label and site conditions.", '<p><a href="./south-american-palm-weevil-treatment-san-diego.html">See South American palm weevil treatment services</a> · <a href="./palm-journal/when-sapw-became-local.html">Read the local field chronology</a></p>') +
         section("Safety and certainty", "Do not turn a checklist into a diagnosis.", "Hidden decay, structural stability, pest confirmation, and treatment outcome may require different evidence or qualified specialists.", '<p class="note">Keep people away from a visibly unstable or actively failing palm and contact the appropriate emergency or tree-risk professional when life safety may be involved.</p>', "section-tint")
     },
     "old-escondido-palm-preservation.html": {
-        "title": "Old Escondido Mature Palm Protection | SDPP",
+        "title": "Mature Palm Preservation in Old Escondido | SDPP",
         "description": "John Krause documents and follows mature palms in Old Escondido, where he lives and has dealt with South American palm weevil activity firsthand.",
         "eyebrow": "Based in Old Escondido", "h1": "These palms are part of my neighborhood.",
         "lede": "I live in Old Escondido, photograph its mature palms, and have dealt with South American palm weevil activity on my own property.",
@@ -476,12 +477,12 @@ PAGES: dict[str, dict] = {
 
 
 GENERIC = {
-    "canary-island-date-palm-care-san-diego.html": ("Canary Island Date Palm Assessment & Care", "Species pathway", "Assessment, baseline documentation, monitoring, protection planning, and response for significant Canary Island date palms.", "CIDP_big.jpg"),
+    "canary-island-date-palm-care-san-diego.html": ("Canary Island Date Palm Care & Treatment in San Diego", "Species pathway", "Canary Island date palm assessment, treatment, recurring care, nutrition and irrigation review, preservation planning, and decline response in San Diego.", "CIDP_big.jpg"),
     "cidp-risk-checklist.html": ("Canary Island Date Palm Risk Checklist", "Educational checklist", "A practical observation checklist to prepare for an assessment without substituting a diagnosis or safety evaluation.", "poway-what-does-sapw-look-like-cidp.jpg"),
-    "palm-care-escondido.html": ("Palm Assessment & Monitoring in Escondido", "Local service pathway", "Residential and managed-property palm assessment, baselines, monitoring, protection planning, and decline response in Escondido.", "Old-Escondido_full-CIDP.jpg"),
-    "palm-care-poway.html": ("Palm Assessment & Monitoring in Poway", "Local service pathway", "Residential and managed-property palm assessment, baselines, monitoring, protection planning, and decline response in Poway.", "Healthy-CIDP-Poway.jpg"),
-    "palm-care-rancho-santa-fe.html": ("Palm Assessment & Monitoring in Rancho Santa Fe", "Local service pathway", "Discreet residential and estate palm assessment, condition baselines, monitoring, protection planning, and decline response.", "RSF1.jpg"),
-    "palm-faq-san-diego.html": ("Palm Assessment & Monitoring FAQ", "Education & decision support", "Clear answers about assessments, monitoring, treatment boundaries, reporting, managed properties, decline, and proof privacy.", "journal-overview.jpg"),
+    "palm-care-escondido.html": ("Palm Care & Treatment in Escondido", "Local service pathway", "Palm assessment, treatment, recurring care, preservation, and managed-property support from an owner-led specialist based in Old Escondido.", "Old-Escondido_full-CIDP.jpg"),
+    "palm-care-poway.html": ("Palm Care & Treatment in Poway", "Local service pathway", "Palm assessment, treatment, recurring care, and preservation planning for residential, estate, and managed properties in Poway.", "Healthy-CIDP-Poway.jpg"),
+    "palm-care-rancho-santa-fe.html": ("Palm Care & Treatment in Rancho Santa Fe", "Local service pathway", "Discreet palm assessment, treatment, recurring stewardship, and preservation planning for Rancho Santa Fe estates and managed properties.", "RSF1.jpg"),
+    "palm-faq-san-diego.html": ("Palm Care, Treatment & Assessment FAQ", "Education & decision support", "Answers about palm assessments, treatment, monitoring, reporting, managed properties, visible decline, service limits, and next steps in San Diego.", "journal-overview.jpg"),
     "palm-sourcing-installation.html": ("Palm Sourcing, Installation & Replacement Planning", "Response, Removal & Replacement", "Replacement planning connects site constraints, appropriate selection, sourcing questions, installation responsibilities, baseline documentation, and establishment monitoring.", "Bismarck-Specimen-Escondido.jpg"),
     "specimen-palms-cycads.html": ("Specimen Palms & Cycads", "Replacement planning", "Explore significant palm and cycad landscape possibilities with realistic site, sourcing, installation, documentation, and establishment considerations.", "Bismarck.jpg"),
 }
@@ -542,7 +543,7 @@ def write_pages() -> None:
     pages = dict(PAGES)
     for filename, (h1, eyebrow, lede, image) in GENERIC.items():
         pages[filename] = {
-            "title": f"{h1} | San Diego Palm Protection",
+            "title": f"{h1} | SDPP",
             "description": lede,
             "eyebrow": eyebrow, "h1": h1, "lede": lede, "image": image,
             "body": generic_body(filename),
@@ -565,8 +566,16 @@ def write_pages() -> None:
         else:
             schema = {
                 "@context": "https://schema.org", "@type": "Service",
-                "provider": {"@type": "LocalBusiness", "name": "San Diego Palm Protection", "url": BASE_URL},
-                "name": data["h1"], "areaServed": "North County San Diego",
+                "provider": {
+                    "@type": "LocalBusiness",
+                    "name": "San Diego Palm Protection",
+                    "url": BASE_URL,
+                    "telephone": "+1-262-492-3135",
+                    "email": "sandiegopalmprotection@gmail.com",
+                    "areaServed": ["San Diego County", "North County San Diego"],
+                },
+                "name": data["h1"], "serviceType": data["h1"],
+                "areaServed": ["San Diego County", "North County San Diego"],
                 "description": data["description"],
             }
         if filename == "about.html":

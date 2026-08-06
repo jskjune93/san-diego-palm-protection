@@ -42,11 +42,9 @@ def main() -> int:
         errors.append(f"homepage repeats descriptive 'Qualified' {descriptive_qualified} times; maximum is 1")
     if home.count(public["service_summary"]) != 1:
         errors.append("homepage must contain exactly one concise stewardship statement")
-    if public["exact_status"] not in home:
-        errors.append("homepage lacks the complete owner-led stewardship explanation")
     for scoped_fragment in (
-        "Palm stewardship for managed properties.",
-        "San Diego Palm Protection provides owner-led palm stewardship for managed properties in San Diego County.",
+        "Palm stewardship, treatment, and preservation for valuable properties.",
+        "San Diego Palm Protection cares for mature and high-value palms",
         "Preventive protection, South American palm weevil awareness",
         "The work is shaped by the palms, the property, and the decisions",
         "Residential and estate services remain available.",
@@ -57,7 +55,7 @@ def main() -> int:
         errors.append("homepage owner section does not link to About")
     if homepage_html.lower().count("<h1") != 1:
         errors.append("homepage must contain exactly one H1")
-    if "<title>Palm Stewardship for Managed Properties | SDPP</title>" not in homepage_html:
+    if "<title>Palm Care, Treatment &amp; Stewardship San Diego | SDPP</title>" not in homepage_html:
         errors.append("homepage title changed unexpectedly")
 
     for phrase in (
