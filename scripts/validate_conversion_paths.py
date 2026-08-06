@@ -16,8 +16,8 @@ def main() -> int:
         "services": (ROOT / "palm-records-monitoring-verification.html").read_text(encoding="utf-8"),
     }
     required_home = (
-        "Commercial and managed properties",
-        "Estates and residences",
+        "Palm stewardship for managed properties.",
+        "Residential &amp; Estate Properties",
         "homeowner-inquiry-initiation",
         "organization-inquiry-initiation",
         "Scope and pricing",

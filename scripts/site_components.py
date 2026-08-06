@@ -133,7 +133,7 @@ def inquiry(relative_root: str = "./", residential_primary: bool = False) -> str
 def footer(relative_root: str = "./", residential_primary: bool = False) -> str:
     return f"""<footer class="site-footer">
   <div class="footer-grid">
-    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Owner-led stewardship for important palms and multi-palm properties.</p></div>
+    <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Palm stewardship for managed properties in San Diego County. Residential and estate services remain available.</p></div>
     <div><h2>Services</h2><a href="{relative_root}managed-property-palm-services.html">Commercial &amp; managed properties</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring stewardship</a><a href="{relative_root}residential-palm-assessment.html">Residential assessment</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest palm documentation</a></div>
     <div><h2>Resources</h2><a href="{relative_root}about.html">About</a><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
@@ -158,7 +158,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          relative_root: str = "./", extra_schema: dict | None = None,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
-    hero_note = '<p class="hero-microcopy">Commercial and managed properties · Estates and residences · Owner-led field work · Written records</p>' if filename == "index.html" else ""
+    hero_note = '<p class="hero-microcopy">Palm-specific condition documentation · Scheduled monitoring · Protection and treatment · Contractor coordination · Long-term planning</p>' if filename == "index.html" else ""
     hero_trust = '<p class="hero-trust-line">Owner-operated • California QAL, Category B</p>' if filename == "index.html" else ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '

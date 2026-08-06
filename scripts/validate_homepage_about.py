@@ -45,9 +45,11 @@ def main() -> int:
     if public["exact_status"] not in home:
         errors.append("homepage lacks the complete owner-led stewardship explanation")
     for scoped_fragment in (
+        "Palm stewardship for managed properties.",
+        "San Diego Palm Protection provides owner-led palm stewardship for managed properties in San Diego County.",
         "Preventive protection, South American palm weevil awareness",
         "The work is shaped by the palms, the property, and the decisions",
-        "Owner-led stewardship for important palms and multi-palm properties.",
+        "Residential and estate services remain available.",
     ):
         if scoped_fragment not in home:
             errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")
@@ -55,7 +57,7 @@ def main() -> int:
         errors.append("homepage owner section does not link to About")
     if homepage_html.lower().count("<h1") != 1:
         errors.append("homepage must contain exactly one H1")
-    if "<title>Mature Palm Protection in North County San Diego | SDPP</title>" not in homepage_html:
+    if "<title>Palm Stewardship for Managed Properties | SDPP</title>" not in homepage_html:
         errors.append("homepage title changed unexpectedly")
 
     for phrase in (

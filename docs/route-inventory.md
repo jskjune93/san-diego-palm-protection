@@ -7,8 +7,8 @@
 | `/about.html` | created | Owner identity, qualifications, field process, and trust |
 | `/canary-island-date-palm-care-san-diego.html` | restructured | Species-specific discovery route |
 | `/cidp-risk-checklist.html` | restructured | Educational observation checklist |
-| `/` | restructured | Commercial orientation and three-pillar gateway |
-| `/managed-property-palm-services.html` | created | Managed-property inventory and reporting conversion |
+| `/` | restructured | Primary managed-property palm-stewardship position and service gateway |
+| `/managed-property-palm-services.html` | created | Managed-property stewardship scope, continuity, and walkthrough conversion |
 | `/old-escondido-palm-preservation.html` | restructured | Community documentation and exact UFMP context |
 | `/palm-care-escondido.html` | consolidated in place | Escondido local discovery route |
 | `/palm-care-poway.html` | consolidated in place | Poway local discovery route |

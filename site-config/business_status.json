@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "commercial",
-  "explanation": "John Krause is the owner of San Diego Palm Protection and holds California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. SDPP is insured and provides owner-led palm stewardship for important individual palms and multi-palm properties.",
+  "explanation": "San Diego Palm Protection provides owner-led palm stewardship for managed properties in San Diego County. John Krause is the owner and holds California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. SDPP is insured, and residential and estate services remain available.",
   "pesticide_services_enabled": true,
   "tree_palm_contracting_enabled": false,
   "commercial_field_services_enabled": true,
@@ -37,7 +37,7 @@
     "public_wording": "Insured"
   },
   "operating_scope": {
-    "primary_growth_path": "Recurring palm stewardship for commercial, institutional, and managed properties with meaningful palm portfolios.",
+    "primary_growth_path": "Palm stewardship for managed properties through recurring, palm-specific oversight of important palm inventories.",
     "residential_path": "Selective residential assessment, protection, treatment, and recurring care for mature and valuable palms.",
     "authority_path": "Old Escondido field work, SAPW experience, local documentation, Palm Journal, civic participation, and historical-palm work.",
     "regulated_work_boundary": "Treatment recommendations and applications remain subject to the pesticide label, applicable law, site conditions, and agreed scope.",
@@ -46,7 +46,7 @@
   },
   "public_credentials": {
     "status_label": "Owner-Led Palm Stewardship",
-    "service_summary": "Ongoing care and management for the health, protection, appearance, and long-term value of important palms.",
+    "service_summary": "Continuing palm-specific oversight that connects condition, monitoring, authorized work, contractor coordination, and long-term planning.",
     "individual_license": "California Qualified Applicator License No. 175295",
     "category": "Category B — Landscape Maintenance",
     "insurance": "Insured",
