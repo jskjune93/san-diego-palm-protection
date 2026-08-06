@@ -170,10 +170,16 @@ PAGES: dict[str, dict] = {
     <img src="./images/about-john/john-krause-palm-960.jpg" width="960" height="1280" alt="John Krause standing beneath a mature Canary Island date palm at his Old Escondido property" loading="eager" decoding="async" fetchpriority="high">
   </picture>
 </figure>
-<div class="about-john-copy">
-  <p>I started SDPP after confronting South American palm weevil activity and palm loss on my own Old Escondido property. That experience made the threat very real to me&mdash;and made me look more closely at how many mature palms across our neighborhoods could be lost without earlier attention.</p>
-  <p>Wisconsin native with an Environmental Science B.S. from the University of Minnesota and time in the Naval Service.</p>
-  <p>Today, I provide owner-led palm assessments, monitoring, protection, and treatment services throughout San Diego County. I built SDPP to give palm owners a knowledgeable local point of contact&mdash;someone who will personally look at the tree, explain what is visible, maintain useful records, and help determine a responsible next step.</p>
+<div class="about-john-story">
+  <div class="about-john-copy">
+    <p>I started SDPP after confronting South American palm weevil activity and palm loss on my own Old Escondido property. That experience made the threat very real to me&mdash;and made me look more closely at how many mature palms across our neighborhoods could be lost without earlier attention.</p>
+    <p>Wisconsin native with an Environmental Science B.S. from the University of Minnesota and time in the Naval Service.</p>
+    <p>Today, I provide owner-led palm assessments, monitoring, protection, and treatment services throughout San Diego County. I built SDPP to give palm owners a knowledgeable local point of contact&mdash;someone who will personally look at the tree, explain what is visible, maintain useful records, and help determine a responsible next step.</p>
+  </div>
+  <div class="about-john-marks">
+    <img class="about-john-mark about-john-mark--umn" src="./images/about-john/education/university-of-minnesota-block-m.svg" alt="University of Minnesota Block M mark" width="124" height="68" loading="lazy" decoding="async">
+    <img class="about-john-mark about-john-mark--iu" src="./images/about-john/education/indiana-university-trident.svg" alt="Indiana University Trident mark" width="56" height="68" loading="lazy" decoding="async">
+  </div>
 </div>
 </div>''') +
         section("Work directly with the owner", "I stay with the work.", "I answer the inquiry, visit the property, photograph the palms, write the findings, and discuss the next step with you.", '<div class="field-split"><div><h3>Why that matters</h3><p>I do not have to translate another person&#x27;s field notes or guess what happened during the visit. I was there.</p></div><img src="./journal-monitoring.jpg" alt="Palm condition documentation during an SDPP field visit" loading="lazy"></div>', "section-tint") +
