@@ -193,6 +193,26 @@ PAGES: dict[str, dict] = {
   </div>
 </div>
 </div>''') +
+        '''<section class="section section-tint"><div class="article-shell">
+<h2>We Protect What Cannot Be Quickly Replaced</h2>
+<p>Southern California’s mature palms are living landscape assets.</p>
+<p>They define estates, resorts, communities, civic spaces, and historic neighborhoods. They represent decades of growth, shape the identity of a property, and cannot be replaced on demand.</p>
+<p>The South American palm weevil is advancing through this landscape. It does not wait for owners, contractors, or agencies to organize. By the time visible decline appears, the opportunity for preservation may already be narrowing.</p>
+<p>SDPP exists to act before that moment.</p>
+</div></section>
+<section class="section"><div class="article-shell">
+<h2>Stewardship Means Continuity</h2>
+<p>Palm care is often fragmented.</p>
+<p>Landscapers maintain properties. Arborists assess trees. Applicators perform treatments. Researchers advance knowledge. Public agencies track the regional threat.</p>
+<p>Yet no one necessarily maintains continuous responsibility for the palm itself—its identity, condition, history, treatment record, and next required action.</p>
+<p>SDPP closes that gap.</p>
+<p>We establish baselines, document change, provide preventive treatment and monitoring, preserve continuity, and coordinate the next responsible action.</p>
+<p>We do not sell fear. We make risk visible.</p>
+<p>We do not exaggerate certainty. We distinguish observation from diagnosis, evidence from inference, and confidence from speculation.</p>
+<p>We work alongside existing professionals while maintaining a singular focus on the palm.</p>
+<p>We know the palm. We preserve its history. We keep responsibility from disappearing between contractors.</p>
+<p>That is palm stewardship.</p>
+</div></section>''' +
         section("Work directly with the owner", "I stay with the work.", "I answer the inquiry, visit the property, photograph the palms, write the findings, and discuss the next step with you.", '<div class="field-split"><div><h3>Why that matters</h3><p>I do not have to translate another person&#x27;s field notes or guess what happened during the visit. I was there.</p></div><img src="./journal-monitoring.jpg" alt="Palm condition documentation during an SDPP field visit" loading="lazy"></div>', "section-tint") +
         section("Qualification and scope", "Qualified, insured, and operating within a defined service boundary.", "I hold California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. The license supports appropriate treatment within a broader owner-led palm stewardship service.", '<p class="note">Treatment follows the pesticide label, applicable law, site conditions, and agreed scope. I do not promise diagnosis from photographs, treatment efficacy, palm recovery, or guaranteed outcomes.</p>') +
         section("Local focus", "Old Escondido is home.", "I am based in Old Escondido and focus on mature palms, especially Canary Island date palms, across North County and selected nearby San Diego communities.", '<p><a href="./old-escondido-palm-preservation.html">See my Old Escondido work</a></p>', "section-tint") +
