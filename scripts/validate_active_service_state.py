@@ -1,8 +1,4 @@
-"""Backward-compatible entry point for SDPP's active-license regression guard.
-
-The filename is retained because existing build and release commands call it.
-Production no longer supports a dormant pre-license operating mode.
-"""
+"""Validate SDPP's sole supported production state: active commercial service."""
 
 from __future__ import annotations
 
@@ -23,14 +19,16 @@ def run_self_test() -> int:
         "Treatment follows the pesticide label, applicable law, site conditions, and agreed scope.",
         "Some pruning, removal, or specialist work may require a different contractor or license.",
     )
-    prohibited = (
-        "SDPP is " + "not currently offering pesticide applications.",
-        "Pesticide application is " + "not currently offered.",
-        "Regulated work must be discussed with an " + "appropriately licensed treatment provider.",
-        "The QAL " + "does not establish business-level pesticide authorization.",
-        "Treatment must be performed by a " + "third-party provider.",
-        "SDPP is " + "awaiting its license.",
-    )
+    # Construct regression samples from tokens so obsolete public copy is not
+    # retained as a reusable fixture or production variant.
+    prohibited = tuple(" ".join(parts) for parts in (
+        ("SDPP is not currently", "offering pesticide applications."),
+        ("Pesticide application is", "not currently offered."),
+        ("Regulated work must be discussed with an", "appropriately licensed treatment provider."),
+        ("The QAL does not establish", "business-level pesticide authorization."),
+        ("Treatment must be performed by a", "third-party provider."),
+        ("SDPP is awaiting", "its license."),
+    ))
     failures = [text for text in allowed if has_obsolete_status(text)]
     failures.extend(text for text in prohibited if not has_obsolete_status(text))
     if failures:

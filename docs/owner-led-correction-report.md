@@ -35,7 +35,7 @@ All 39 canonical routes remain public and retain their existing URLs. No route w
 
 - Production build: 39 routes, 129 allowlisted files.
 - Business credential validation: pass.
-- Commercial/prelicense contradiction validation: pass.
+- Active-commercial-state contradiction validation: pass.
 - Proof-boundary validation: pass, with zero approved public bundles.
 - Site validation: pass for 39 HTML files, 18 manifest entries, 17 Journal articles, legacy anchors, sitemap, and robots.
 - Adversarial audit: pass.

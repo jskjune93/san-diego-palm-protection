@@ -7,7 +7,7 @@ Current owner-confirmed operational status, effective August 2, 2026:
 - John Krause is the owner.
 - California Qualified Applicator License No. 175295 is active.
 - Category B — Landscape Maintenance.
-- San Diego Palm Protection's California Pest Control Business License is active. No business-license number is published because none is recorded in the repository's authoritative status file.
+- SDPP's active business authorization remains in private operational and compliance records; it is not part of the public credential display.
 - SDPP is insured and provides palm assessment, monitoring, documentation, protection and pesticide treatment services as applicable.
 - Recurring stewardship is available for residential and managed properties.
 - Treatment remains subject to the pesticide label, applicable law, site conditions, agreed scope, and job-specific preflight.
@@ -21,7 +21,7 @@ The public site uses:
 
 Every public page uses this synchronized statement:
 
-> San Diego Palm Protection — California Pest Control Business License active. John Krause, California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. Insured.
+> California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured
 
 ## Owner workflow
 

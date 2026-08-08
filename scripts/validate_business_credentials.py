@@ -38,7 +38,6 @@ def main() -> int:
     credentials = public_credentials()
     exact = credentials["exact_status"]
     summary = credentials["service_summary"]
-    business_license = credentials["business_license"]
     label = credentials["status_label"]
     individual_license = credentials["individual_license"]
     category = credentials["category"]
@@ -66,11 +65,11 @@ def main() -> int:
         if START not in text or STYLE_LINK not in text:
             errors.append(f"{relative}: centralized credential component is missing")
         if relative == "index.html":
-            required_values = (summary, business_license, individual_license, category, insurance, "John Krause, Owner", label)
+            required_values = (summary, individual_license, category, insurance, "John Krause, Owner", label)
         elif relative == "about.html":
-            required_values = (business_license, individual_license, category, insurance, "John Krause", summary)
+            required_values = (individual_license, category, insurance, "John Krause", summary)
         else:
-            required_values = (summary, label, business_license, individual_license, category, insurance)
+            required_values = (summary, label, individual_license, category, insurance)
         if any(value not in text for value in required_values):
             errors.append(f"{relative}: qualified and insured wording is incomplete")
 
@@ -91,8 +90,8 @@ def main() -> int:
     qal_numbers = re.findall(r"(?:QAL|Qualified Applicator License)(?:\s+No\.|\s*#)?\s*(\d{4,})", all_public, re.I)
     if not qal_numbers or set(qal_numbers) != {"175295"}:
         errors.append(f"public QAL number set must be exactly 175295; found {sorted(set(qal_numbers))}")
-    if re.search(r"Pest Control Business License(?:\s+No\.|\s*#)?\s*175295", all_public, re.I):
-        errors.append("QAL No. 175295 is incorrectly represented as a Pest Control Business License")
+    if re.search(r"Pest Control Business License|\bPCBL?\b", all_public, re.I):
+        errors.append("public HTML must not display a Pest Control Business License credential")
     if "Category B — Landscape Maintenance" not in all_public:
         errors.append("public Category B wording is not Landscape Maintenance")
     if licensing_statement not in all_public:

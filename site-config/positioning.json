@@ -3,6 +3,10 @@
   "primary_market": "Commercial and managed properties responsible for valuable palm portfolios.",
   "secondary_market": "Residential and estate owners responsible for valuable mature palms.",
   "core_product": "Owner-led palm portfolio stewardship.",
+  "engagement_paths": [
+    "Palm Portfolio Baseline",
+    "Annual Palm Stewardship Program"
+  ],
   "canonical_position": "SDPP provides owner-led palm portfolio stewardship for managed properties and owners of valuable mature palms. SDPP identifies and records priority palms, maintains their condition and service history, plans recurring care, provides licensed treatment within scope, and coordinates the next responsible action when conditions change.",
   "homepage_headline": "Owner-led stewardship for valuable palm portfolios.",
   "homepage_supporting_copy": "SDPP helps managed properties identify priority palms, establish baselines, plan recurring care, maintain service records, and respond when conditions change. Licensed preventive protection and South American palm weevil treatment are provided within scope.",
@@ -20,12 +24,23 @@
     "Documentation & Planning",
     "Response, Removal & Renewal Coordination"
   ],
+  "public_credentials": "California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured",
+  "private_operational_credentials": "Active Pest Control Business License and related compliance requirements remain authoritative in nonpublic business-status and operational records.",
+  "production_service_state": "Licensed preventive protection and treatment are available within scope.",
+  "governing_principle": "Standardize the stewardship system; customize the property scope.",
+  "prohibited_public_states": [
+    "Treatment-unavailable restrictions",
+    "Treatment-unavailable positioning",
+    "Public Pest Control Business License display",
+    "Competitor comparison",
+    "Unsupported credentials, clients, results, guarantees, affiliations, or endorsements"
+  ],
   "prohibited_drift": [
     "General plant-health-company positioning",
     "Treatment-only positioning",
     "Observation-only positioning",
     "Unsupported credentials or endorsements",
-    "Pre-license treatment restrictions",
+    "Treatment-unavailable restrictions",
     "Public competitor comparisons"
   ]
 }

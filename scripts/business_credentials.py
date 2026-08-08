@@ -16,7 +16,6 @@ REQUIRED_COMMERCIAL_FIELDS = (
 REQUIRED_PUBLIC_FIELDS = (
     "status_label",
     "service_summary",
-    "business_license",
     "individual_license",
     "category",
     "insurance",
@@ -39,7 +38,7 @@ def load_business_status() -> dict:
     status = json.loads(STATUS_PATH.read_text(encoding="utf-8"))
     mode = status.get("mode")
     if mode != "commercial":
-        raise ValueError("Production business status must remain commercial. Historical prelicense mode is not an available production configuration.")
+        raise ValueError("Production business status must remain commercial; no alternate production mode is supported.")
     missing_active = [field for field in REQUIRED_COMMERCIAL_FIELDS if status.get(field) is not True]
     if missing_active:
         raise ValueError(f"Public credential claims are blocked; inactive fields: {', '.join(missing_active)}")
@@ -80,7 +79,7 @@ def render_credential_block(marker: str = "BUSINESS_CREDENTIALS") -> str:
         '<div class="business-credentials" aria-label="Owner qualification and current business service status">\n'
         f'  <p class="business-credentials__label">{escape(credentials["status_label"])}</p>\n'
         f'  <p class="business-credentials__summary">{escape(credentials["service_summary"])}</p>\n'
-        f'  <p class="business-credentials__credential">{escape(credentials["business_license"])}<br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br><strong>{escape(credentials["insurance"])}</strong></p>\n'
+        f'  <p class="business-credentials__credential">{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br><strong>{escape(credentials["insurance"])}</strong></p>\n'
         f'  <p class="business-credentials__note">{escape(credentials["scope_note"])}</p>\n'
         '</div>\n'
         f'<!-- {marker}:END -->'
@@ -94,7 +93,7 @@ def render_homepage_credential_block() -> str:
         '<!-- BUSINESS_CREDENTIALS:START -->\n'
         '<div class="business-credentials business-credentials--homepage" aria-label="Owner qualification and current business service status">\n'
         f'  <p class="business-credentials__label">{escape(credentials["status_label"])}</p>\n'
-        f'  <p class="business-credentials__credential"><strong>{escape(owner)}, Owner</strong><br>{escape(credentials["business_license"])}<br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
+        f'  <p class="business-credentials__credential"><strong>{escape(owner)}, Owner</strong><br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
         f'  <p class="business-credentials__detail">{escape(credentials["service_summary"])}</p>\n'
         '</div>\n'
         '<!-- BUSINESS_CREDENTIALS:END -->'
@@ -108,7 +107,7 @@ def render_about_credential_block() -> str:
         '<!-- BUSINESS_CREDENTIALS:START -->\n'
         '<div class="business-credentials business-credentials--about" aria-label="John Krause qualification and insurance">\n'
         '  <p class="business-credentials__label">Qualifications</p>\n'
-        f'  <p class="business-credentials__credential"><strong>{escape(owner)}</strong><br>Owner, San Diego Palm Protection<br>{escape(credentials["business_license"])}<br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
+        f'  <p class="business-credentials__credential"><strong>{escape(owner)}</strong><br>Owner, San Diego Palm Protection<br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
         f'  <p class="business-credentials__detail">{escape(credentials["service_summary"])}</p>\n'
         '</div>\n'
         '<!-- BUSINESS_CREDENTIALS:END -->'

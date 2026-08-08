@@ -4,7 +4,7 @@
 
 `site-config/business_status.json` confirms owner-authorized commercial mode with:
 
-- active California Pest Control Business License;
+- active business authorization retained in private operational records;
 - active DPR Qualified Applicator License, Category B;
 - active financial responsibility / insurance;
 - current county registration and operating-readiness gates;
@@ -16,7 +16,7 @@ The site now uses one controlled set of claims:
 
 - “Qualified and insured”
 - “Qualified and insured palm protection, assessment, monitoring, and documentation services.”
-- “California Pest Control Business License active · DPR Qualified Applicator License, Category B, active · Insured”
+- “California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured”
 
 Every detailed block also states that credentials and insurance do not guarantee outcomes and that regulated work remains subject to label, site, licensing-scope, and job-specific preflight requirements.
 

@@ -23,6 +23,16 @@ def process(items: list[tuple[str, str]]) -> str:
     return '<div class="process">' + "".join(f'<div><h3>{escape(h)}</h3><p>{escape(p)}</p></div>' for h, p in items) + "</div>"
 
 
+def commercial_engagement_paths() -> str:
+    return '''<section class="section section-tint commercial-engagements" aria-labelledby="commercial-engagements-heading">
+  <div class="section-intro"><p class="eyebrow">Two engagement paths</p><h2 id="commercial-engagements-heading">Start with a baseline or build the annual relationship.</h2><p>A property can begin with a defined record before deciding on recurring stewardship. Standardize the stewardship system; customize the property scope.</p></div>
+  <div class="audience-grid audience-grid--2">
+    <article class="audience-card" data-engagement-path="palm-portfolio-baseline"><h3>Palm Portfolio Baseline</h3><p>A defined initial engagement for a property that does not yet have an organized palm record or is not ready to commit to an annual program.</p><ul><li>Property walkthrough and known-history intake</li><li>Priority-palm identities, photographs, and visible-condition baseline</li><li>Immediate concerns and preservation priorities</li><li>Recommended recurring care, treatment, documentation, and coordination scope</li><li>Property-specific proposal for continuing work</li></ul></article>
+    <article class="audience-card" data-engagement-path="annual-palm-stewardship-program"><h3>Annual Palm Stewardship Program</h3><p>The core recurring relationship, tailored to palm count, condition, access, treatment needs, visit frequency, records, and management responsibilities.</p><ul><li>Maintained palm register and scheduled care visits</li><li>Licensed preventive protection and treatment within scope</li><li>Dated condition, treatment, and supplied work history</li><li>Material-change alerts and preservation priorities</li><li>Specialist coordination, periodic portfolio summary, and next-cycle planning</li></ul></article>
+  </div>
+</section>'''
+
+
 def inquiry_paths() -> str:
     explanation = escape(INQUIRY["public_explanation"])
     return f'''<div class="inquiry-paths">
@@ -256,37 +266,24 @@ PAGES: dict[str, dict] = {
         "lede": "I identify and record priority palms, maintain their condition and service history, plan recurring care, provide licensed treatment within scope, and coordinate the next responsible action when conditions change.",
         "image": "Las Palmas_Appartments_Healthy-CIDP.jpg",
         "body": section("The stewardship role", "What SDPP takes responsibility for.", "The agreed scope creates continuity around the palms without claiming authority over the property or its other professionals.", cards([
-            ("Palm identity and baseline", "Maintain the palm inventory, stable identities, locations, dated photographs, and visible-condition starting point."),
-            ("Priorities and schedule", "Record preservation priorities and plan recurring observation, care, preventive protection, and licensed treatment when appropriate."),
-            ("History and change", "Maintain treatment and supplied work history, detect material visible change, and identify the next responsible action."),
-            ("Planning and coordination", "Support budgets and coordinate questions or handoffs with landscapers, arborists, removal contractors, and other qualified specialists."),
-        ])) +
-        section("Annual Palm Stewardship Program", "A practical path from walkthrough to annual planning.", "The first conversation is usually 15–20 minutes. A complete inventory or report is paid work, scoped after I understand the property.", process([
-            ("1. Property walkthrough", "Confirm palm count, species, access, known concerns, landscape responsibilities, and management objectives."),
-            ("2. Paid palm portfolio baseline", "Assign IDs, establish locations, create repeatable photographs, document visible condition, and identify priorities."),
-            ("3. Stewardship plan", "Set palm nutrition and health priorities, identify watering or irrigation concerns, and plan preventive protection, treatment when appropriate, and escalation."),
-            ("4. Recurring stewardship", "Schedule hands-on visits, appropriate care, comparable photographs, treatment and work history, and management reporting."),
-            ("5. Response coordination", "Organize contractor questions, removal documentation, access, loss records, sourcing, and replacement planning when required."),
-            ("6. Annual planning", "Prepare a concise portfolio summary for preservation, removal, replacement, operational priorities, and budgeting."),
-        ]) + '<p class="note">Once appointment windows are configured, walkthrough and service times will be offered only within them; immediate or continuous owner availability is not promised.</p><p><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a></p>') +
+            ("Palm Portfolio Stewardship", "Maintain the palm inventory, stable identities, locations, dated photographs, visible-condition baseline, priorities, and recurring schedule."),
+            ("Protection & Treatment", "Plan and provide preventive protection, care, and licensed treatment when appropriate and within scope."),
+            ("Documentation & Planning", "Maintain condition, treatment, and supplied work history; detect material change; support next-cycle planning and budgets."),
+            ("Response, Removal & Renewal Coordination", "Coordinate questions or handoffs with landscapers, arborists, removal contractors, and other qualified specialists."),
+        ])) + commercial_engagement_paths() +
         section("Properties served", "Built for valuable palms in shared and substantial landscapes.", "A property does not need hundreds of palms to benefit. The common thread is responsibility for multiple palms, high-value specimens, or a landscape where continuity and records matter.", cards([
             ("Communities and campuses", "HOAs, multifamily communities, senior-living properties, churches, schools, nonprofit campuses, and historic properties."),
             ("Hospitality and clubs", "Hotels, hospitality grounds, country clubs, private clubs, and properties where mature palms shape the arrival experience."),
             ("Commercial properties and estates", "Commercial grounds, large estates, and properties with multiple Canary Island date palms or other valuable mature palms."),
         ])) +
-        section("Commercial service levels", "Choose the depth the property actually needs.", "These are flexible service levels, not rigid packages. Scope follows palm count, species, condition, access, treatment requirements, and property priorities.", cards([
-            ("Palm Portfolio Baseline", "Numbered inventory, species and location where supportable, dated photographs, visible-condition observations, priority classification, and recommended next actions."),
-            ("Protection and Monitoring", "Recurring health observation, preventive protection, fertilization, watering or irrigation guidance, treatment when appropriate, change tracking, and escalation triggers."),
-            ("Palm Stewardship", "Scheduled hands-on care, portfolio priorities, management reporting, contractor interface, decline response, removal and replacement records, and annual planning."),
-        ]), "section-tint") +
-        section("Defined deliverables", "What the property receives.", "Deliverables follow the agreed property scope; no single package automatically includes every item.", cards([
+        section("Defined deliverables", "What ongoing stewardship can include.", "Annual-program deliverables follow the agreed property scope; no single property automatically receives every item.", cards([
             ("Palm asset register", "Stable IDs, locations, species where supportable, and current portfolio status."),
             ("Baseline condition record", "Dated photographs, visible observations, known history, limitations, and preservation priorities."),
             ("Recurring stewardship plan", "An annual or recurring schedule for observation, care, protection, treatment, and review."),
             ("Dated visit and treatment records", "SDPP service records where applicable, supplied contractor history, and completed next actions."),
             ("Material-change alerts", "A concise record of significant visible change and the recommended next responsible action."),
             ("Periodic portfolio summary", "A property-level view of priorities, unresolved items, planned work, and budgeting considerations."),
-        ])) +
+        ])) + '<p class="section-proof-link"><a href="./SDPP-Commercial-Palm-Stewardship.pdf" target="_blank" rel="noopener noreferrer">Download the commercial stewardship overview <span class="sr-only">(PDF, opens in a new tab)</span></a></p>' +
         section("Owner-level accountability", "One point of contact from walkthrough through follow-up.", "John handles the field review, documentation, proposal, and client communication. A certificate of insurance and W-9 are available for vendor setup.", '<p class="note">SDPP remains a specialized palm company, not a general tree-service or full-service landscape contractor.</p>', "section-tint") +
         section("Representative proof", "See the kind of palm-level record a property manager can use.", "This sanitized Old Escondido example demonstrates a repeatable multi-palm record. It is representative documentation, not a claim of commercial client work or a complete municipal inventory.", '<p><a class="button" href="./old-escondido-mature-palm-documentation-example.pdf" target="_blank" rel="noopener noreferrer">View the representative documentation example <span class="sr-only">(PDF, opens in a new tab)</span></a> <a href="./palm-proof-examples.html">View Field Work</a></p>', "section-tint") +
         section("Observation and response", "Visible conditions guide the next step.", "I separate what I observe from reported history and suspected causes, then explain the response that fits the palm and property.", '<p class="note">Palm condition and pest activity can change between visits. Monitoring and treatment reduce risk but cannot guarantee survival or pest exclusion. Pruning, climbing, removal, structural-risk assessment, laboratory diagnosis, unrelated landscape work, and unscheduled visits are outside the annual scope unless separately authorized and legally provided.</p>') +

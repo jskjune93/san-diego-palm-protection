@@ -10,14 +10,14 @@ Core HTML pages are generated from `scripts/build_core_pages.py`. Palm Journal p
 python scripts/sync_business_credentials.py
 python scripts/build_core_pages.py
 python scripts/build_journal.py
-python scripts/validate_prelicense_compliance.py --self-test  # backward-compatible active-license regression guard
+python scripts/validate_active_service_state.py --self-test
 node scripts/build-production.mjs
 python scripts/validate_operational_status.py
 python scripts/validate_site.py
 python scripts/validate_production_claims.py
 ```
 
-Vercel runs the production build declared in `vercel.json` and serves `dist/`. The build itself rejects obsolete prelicense language and missing operational/commercial markers before an artifact can deploy.
+Vercel runs the production build declared in `vercel.json` and serves `dist/`. The build rejects treatment-unavailable regressions and missing operational/commercial markers before an artifact can deploy.
 
 ## Sources of truth
 

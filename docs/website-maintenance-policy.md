@@ -19,7 +19,7 @@ This policy is the permanent change-control standard for the public San Diego Pa
 
 ## Claims, trust, reviews, and pricing
 
-- Publish credentials, insurance, licensing, treatment availability, and regulated-work language only when supported by the authoritative business-status configuration. Keep John Krause's individual California QAL No. 175295, Category B — Landscape Maintenance, separate from SDPP's Pest Control Business License and business-level pesticide authorization.
+- Publish the approved public credential line only: California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured. Keep active business authorization in private operational records and never imply that the QAL alone authorizes business operation.
 - Publish reviews only from an owner-approved exact quote and source. Never paraphrase a customer review or expose a private client.
 - Publish owner biography facts, service areas, civic participation, and affiliations only from an approved source record.
 - Publish a price only when its amount, scope, geography, exclusions, and current approval are documented. Otherwise explain the variables that determine scope and price.
@@ -35,7 +35,7 @@ This policy is the permanent change-control standard for the public San Diego Pa
 
 Before merging or deploying:
 
-1. Synchronize and validate business credentials and prelicense/commercial status.
+1. Synchronize and validate business credentials and the active commercial service state.
 2. Regenerate all pages and run the production build from a clean `dist`.
 3. Run site, link, anchor, canonical, sitemap, schema, privacy, proof-boundary, and production-allowlist validators.
 4. Validate inquiry mode: direct submission and uploads must remain disabled unless their approved infrastructure exists; email fallback must remain explicit.

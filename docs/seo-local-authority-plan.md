@@ -19,7 +19,7 @@ This plan uses legitimate SDPP work, existing relationships, and public proof. I
 
 - Do not buy links, trade reviews, use link farms, or submit generic guest posts.
 - Do not create a public storefront address for this service-area business.
-- Do not imply City endorsement, municipal authority, or certified-arborist status. Describe treatment availability and the active California Pest Control Business License only through the repository's synchronized, verified business-status wording.
+- Do not imply City endorsement, municipal authority, or certified-arborist status. Describe treatment availability within scope and use only the synchronized public QAL, Category B, and insured wording.
 - Use the exact UFMP wording controlled by the repository.
 - Prefer a small number of authentic links to broad directory volume.
 - Record outreach and wait periods before any follow-up.

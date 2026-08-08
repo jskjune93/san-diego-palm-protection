@@ -54,6 +54,8 @@ def main() -> int:
     for key in ("primary_market", "secondary_market", "core_product", "canonical_position", "in_house_capability", "differentiators", "service_pillars", "prohibited_drift"):
         if not config.get(key):
             errors.append(f"canonical positioning source missing {key}")
+    if config.get("engagement_paths") != ["Palm Portfolio Baseline", "Annual Palm Stewardship Program"]:
+        errors.append("commercial offer must contain exactly the two approved engagement paths")
 
     if not DIST.exists():
         errors.append("dist is missing; run the production build first")
@@ -72,7 +74,7 @@ def main() -> int:
             for concept in concepts:
                 if concept.lower() not in text:
                     errors.append(f"{relative}: missing positioning concept {concept}")
-            for credential in ("California Pest Control Business License active", "175295", "Category B — Landscape Maintenance", "Insured"):
+            for credential in ("175295", "Category B — Landscape Maintenance", "Insured"):
                 if credential.lower() not in text:
                     errors.append(f"{relative}: missing credential {credential}")
 

@@ -439,18 +439,18 @@ def main() -> int:
     if operational_status.returncode != 0:
         errors.append("operational status regression validator failed")
 
-    prelicense = subprocess.run(
-        [sys.executable, str(ROOT / "scripts" / "validate_prelicense_compliance.py")],
+    active_service = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "validate_active_service_state.py")],
         cwd=ROOT,
         text=True,
         capture_output=True,
     )
-    if prelicense.stdout.strip():
-        print(prelicense.stdout.strip())
-    if prelicense.stderr.strip():
-        print(prelicense.stderr.strip())
-    if prelicense.returncode != 0:
-        errors.append("prelicense compliance validator failed")
+    if active_service.stdout.strip():
+        print(active_service.stdout.strip())
+    if active_service.stderr.strip():
+        print(active_service.stderr.strip())
+    if active_service.returncode != 0:
+        errors.append("active-service-state validator failed")
 
     positioning = subprocess.run(
         [sys.executable, str(ROOT / "scripts" / "validate_positioning.py")],

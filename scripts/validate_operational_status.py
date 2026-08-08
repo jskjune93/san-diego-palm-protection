@@ -20,6 +20,8 @@ FORBIDDEN = (
     r"regulated work must be discussed with",
     r"referral[- ]only treatment",
     r"production prelicense status",
+    r"Pest Control Business License",
+    r"\bPCBL?\b",
     r"(?:sdpp|san diego palm protection) (?:cannot|can not|does not|doesn't) (?:provide )?(?:pesticide )?treat(?:ment)?",
     r"treatment must be (?:provided|performed) by (?:a )?third[- ]party",
     r"licensed applicator referral",
@@ -37,11 +39,7 @@ CRITICAL_PAGES = (
     "south-american-palm-weevil-treatment-san-diego.html",
 )
 
-AUTHORITATIVE_LICENSE_STATEMENT = (
-    "San Diego Palm Protection — California Pest Control Business License active. "
-    "John Krause, California Qualified Applicator License No. 175295, "
-    "Category B — Landscape Maintenance. Insured."
-)
+AUTHORITATIVE_LICENSE_STATEMENT = "California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured"
 
 SOURCE_FILES = (
     ROOT / "scripts" / "build_core_pages.py",
@@ -82,7 +80,6 @@ def main() -> int:
                 if re.search(pattern, text, re.IGNORECASE):
                     errors.append(f"{rel}: obsolete service-status language matched {pattern}")
         required_shared = (
-            "California Pest Control Business License active",
             "California Qualified Applicator License No. 175295",
             "Category B — Landscape Maintenance",
             "Insured",
@@ -93,9 +90,9 @@ def main() -> int:
             if AUTHORITATIVE_LICENSE_STATEMENT not in text:
                 errors.append(f"{rel}: authoritative sitewide licensing statement is missing")
             head = text.split("</head>", 1)[0]
-            if 'name="business-credentials"' not in head or "California Pest Control Business License active" not in head:
+            if 'name="business-credentials"' not in head or AUTHORITATIVE_LICENSE_STATEMENT not in head:
                 errors.append(f"{rel}: licensing metadata is missing or stale")
-            if 'type="application/ld+json"' not in head or "California Pest Control Business License active" not in head:
+            if 'type="application/ld+json"' not in head or AUTHORITATIVE_LICENSE_STATEMENT not in head:
                 errors.append(f"{rel}: licensing structured data is missing or stale")
         for relative in CRITICAL_PAGES:
             path = DIST / relative
@@ -117,7 +114,7 @@ def main() -> int:
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
         treatment_page = (DIST / "south-american-palm-weevil-treatment-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "south-american-palm-weevil-treatment-san-diego.html").exists() else ""
-        for phrase in ("South American Palm Weevil Treatment in San Diego", "Preventive treatment is available when appropriate", "California Pest Control Business License active"):
+        for phrase in ("South American Palm Weevil Treatment in San Diego", "Preventive treatment is available when appropriate", "California Qualified Applicator License No. 175295"):
             if phrase not in treatment_page:
                 errors.append(f"SAPW treatment page missing active service language: {phrase}")
         recurring = (DIST / "quarterly-palm-care-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "quarterly-palm-care-san-diego.html").exists() else ""
