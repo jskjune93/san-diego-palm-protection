@@ -109,6 +109,8 @@ async function main() {
     /appropriately licensed treatment provider/i,
     /appropriately licensed-provider referral/i,
     /regulated work must be discussed with/i,
+    /documentation, monitoring, reporting, sourcing, and coordination are available now/i,
+    /pre[- ]license/i,
     /referral[- ]only treatment/i,
     /production prelicense status/i,
     /Pest Control Business License/i,

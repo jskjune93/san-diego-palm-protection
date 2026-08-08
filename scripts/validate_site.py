@@ -249,10 +249,10 @@ def main() -> int:
 
     homepage_text, homepage_parser = pages[(ROOT / "index.html").resolve()]
     for required_pillar in (
-        "Palm Portfolio Stewardship",
+        "Stewardship &amp; Palm Health",
         "Protection &amp; Treatment",
-        "Documentation &amp; Planning",
-        "Response, Removal &amp; Renewal Coordination",
+        "Documentation &amp; Portfolio Management",
+        "Response, Removal &amp; Renewal",
     ):
         if required_pillar not in homepage_text:
             errors.append(f"homepage missing stewardship-function positioning: {required_pillar}")

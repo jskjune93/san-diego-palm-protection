@@ -18,12 +18,15 @@ PDF = ROOT / "SDPP-Commercial-Palm-Stewardship.pdf"
 QAL = "California Qualified Applicator License No. 175295"
 CATEGORY = "Category B — Landscape Maintenance"
 PUBLIC_BUSINESS_LICENSE = re.compile(r"Pest Control Business License|\bPCBL?\b", re.I)
-PRELICENSE = (
+OBSOLETE_SERVICE_STATUS = (
     r"not currently offering pesticide",
     r"cannot treat",
     r"treatment (?:is|remains) unavailable",
     r"pesticide applications? (?:are|is) not offered",
     r"discuss treatment with another licensed provider",
+    r"regulated work must be discussed with an appropriately licensed provider",
+    r"documentation, monitoring, reporting, sourcing, and coordination are available now",
+    r"pre[- ]license",
 )
 
 
@@ -58,9 +61,9 @@ def main() -> int:
         rel = path.relative_to(DIST).as_posix()
         if PUBLIC_BUSINESS_LICENSE.search(text):
             errors.append(f"{rel}: public business-license credential remains")
-        for pattern in PRELICENSE:
+        for pattern in OBSOLETE_SERVICE_STATUS:
             if re.search(pattern, text, re.I):
-                errors.append(f"{rel}: pre-license language matched {pattern}")
+                errors.append(f"{rel}: obsolete service-status language matched {pattern}")
         if QAL not in text or CATEGORY not in text or "Insured" not in text:
             errors.append(f"{rel}: QAL-only public credentials are incomplete")
         if re.search(r"QAL.{0,30}(?:authorizes?|licenses?) (?:SDPP|the business)", text, re.I):
@@ -85,17 +88,17 @@ def main() -> int:
                 errors.append(f"commercial PDF missing {phrase}")
         if PUBLIC_BUSINESS_LICENSE.search(text):
             errors.append("commercial PDF displays the business license")
-        for pattern in PRELICENSE:
+        for pattern in OBSOLETE_SERVICE_STATUS:
             if re.search(pattern, text, re.I):
-                errors.append(f"commercial PDF contains pre-license language: {pattern}")
+                errors.append(f"commercial PDF contains obsolete service-status language: {pattern}")
 
     for path in sorted(ROOT.glob("*.pdf")):
         text = compact(pdf_text(path))
         if PUBLIC_BUSINESS_LICENSE.search(text):
             errors.append(f"{path.name}: public PDF displays the business license")
-        for pattern in PRELICENSE:
+        for pattern in OBSOLETE_SERVICE_STATUS:
             if re.search(pattern, text, re.I):
-                errors.append(f"{path.name}: public PDF contains pre-license language: {pattern}")
+                errors.append(f"{path.name}: public PDF contains obsolete service-status language: {pattern}")
 
     print("COMMERCIAL_OFFERING_VALIDATION_OK" if not errors else "COMMERCIAL_OFFERING_VALIDATION_FAILED")
     print(f"public_html_checked={len(public_html)} public_pdfs_checked={len(list(ROOT.glob('*.pdf')))}")

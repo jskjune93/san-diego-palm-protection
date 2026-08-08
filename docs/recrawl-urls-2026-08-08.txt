@@ -1,0 +1,47 @@
+# Google recrawl list - 2026-08-08
+# Historical public HTML carried a shared pre-license footer/status component.
+# Submit these canonical URLs for recrawl when Search Console access is available.
+https://www.sandiegopalmprotection.com/
+https://www.sandiegopalmprotection.com/about.html
+https://www.sandiegopalmprotection.com/palm-records-monitoring-verification.html
+https://www.sandiegopalmprotection.com/report-a-palm.html
+https://www.sandiegopalmprotection.com/sapw.html
+https://www.sandiegopalmprotection.com/old-escondido-palm-preservation.html
+https://www.sandiegopalmprotection.com/palm-care-escondido.html
+https://www.sandiegopalmprotection.com/palm-care-rancho-santa-fe.html
+https://www.sandiegopalmprotection.com/palm-care-poway.html
+https://www.sandiegopalmprotection.com/palm-journal-new.html
+https://www.sandiegopalmprotection.com/canary-island-date-palm-care-san-diego.html
+https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html
+https://www.sandiegopalmprotection.com/south-american-palm-weevil-treatment-san-diego.html
+https://www.sandiegopalmprotection.com/palm-sourcing-installation.html
+https://www.sandiegopalmprotection.com/specimen-palms-cycads.html
+https://www.sandiegopalmprotection.com/palm-removal-coordination.html
+https://www.sandiegopalmprotection.com/cidp-risk-checklist.html
+https://www.sandiegopalmprotection.com/palm-faq-san-diego.html
+https://www.sandiegopalmprotection.com/palm-stewardship-plans.html
+https://www.sandiegopalmprotection.com/palm-journal/classic-old-escondido-canary-island-date-palm.html
+https://www.sandiegopalmprotection.com/palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-mexican-fan-palm-curve.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-albert-h-beach-house-palms.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-cidp-icons-and-change.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-adult-sapw-declining-cidp.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-historic-canary-island-date-palm.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-palm-weevils.html
+https://www.sandiegopalmprotection.com/palm-journal/poway-old-winery-cidp.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-cidp-collection.html
+https://www.sandiegopalmprotection.com/palm-journal/grand-ave-old-escondido.html
+https://www.sandiegopalmprotection.com/palm-journal/grand-ave-cidp.html
+https://www.sandiegopalmprotection.com/palm-journal/rancho-santa-fe-palm-walk.html
+https://www.sandiegopalmprotection.com/palm-journal/healthy-palm-growth.html
+https://www.sandiegopalmprotection.com/palm-journal/cidp-assessment-local-palm-health-concerns.html
+https://www.sandiegopalmprotection.com/palm-journal/documented-loss/
+https://www.sandiegopalmprotection.com/palm-journal/las-palmas-no-reply-then-the-saws.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html
+https://www.sandiegopalmprotection.com/managed-property-palm-services.html
+https://www.sandiegopalmprotection.com/palm-proof-examples.html
+https://www.sandiegopalmprotection.com/residential-palm-assessment.html
+https://www.sandiegopalmprotection.com/urban-forest-palm-documentation.html
+https://www.sandiegopalmprotection.com/palm-journal/when-sapw-became-local.html
+https://www.sandiegopalmprotection.com/palm-journal/old-escondido-living-landmarks.html
+https://www.sandiegopalmprotection.com/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html

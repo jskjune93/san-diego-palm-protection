@@ -25,6 +25,8 @@ def run_self_test() -> int:
         ("SDPP is not currently", "offering pesticide applications."),
         ("Pesticide application is", "not currently offered."),
         ("Regulated work must be discussed with an", "appropriately licensed treatment provider."),
+        ("Documentation, monitoring, reporting, sourcing, and coordination", "are available now."),
+        ("Production", "pre-license status."),
         ("The QAL does not establish", "business-level pesticide authorization."),
         ("Treatment must be performed by a", "third-party provider."),
         ("SDPP is awaiting", "its license."),
