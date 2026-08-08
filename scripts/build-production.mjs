@@ -118,6 +118,11 @@ async function main() {
     /does not establish business[- ]level pesticide authorization/i,
     /current service scope.{0,100}(?:exclude|without|does not include|unavailable).{0,40}treatment/i,
     /(?:only|solely) (?:provides?|offers?) (?:documentation|monitoring|reporting|sourcing|coordination)/i,
+    /aguilar plant care/i,
+    /\b(?:industry-leading|tree doctor|complete tree care|all plant health|sapw-free|eradication)\b/i,
+    /\bSDPP (?:is|employs) (?:an? )?(?:ISA )?(?:certified )?arborist\b/i,
+    /\bSDPP (?:is|employs) (?:an? )?(?:licensed )?PCA\b/i,
+    /\b(?:SDPP|we|our treatment|this treatment) guarantees? (?:prevention|protection|survival|recovery|results?|outcomes?)\b/i,
   ];
   for (const route of routes) {
     const relative = path.relative(root, route);
@@ -127,8 +132,8 @@ async function main() {
     }
   }
   const requiredByPage = {
-    "index.html": ["California Pest Control Business License active", "California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Owner-Led Palm Stewardship", "Palm stewardship, treatment, and preservation for valuable properties.", "Mature palm care", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"],
-    "managed-property-palm-services.html": ["Annual Palm Stewardship Program", "Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "fertilization", "irrigation guidance", "Request a Property Walkthrough", "existing landscapers", "certificate of insurance", "W-9"],
+    "index.html": ["California Pest Control Business License active", "California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Owner-led stewardship for valuable palm portfolios.", "Identity &amp; baselines", "Palm Portfolio Stewardship", "Protection &amp; Treatment", "Documentation &amp; Planning", "Response, Removal &amp; Renewal Coordination", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"],
+    "managed-property-palm-services.html": ["Palm Portfolio Stewardship for Managed Properties", "What SDPP takes responsibility for", "Palm asset register", "Baseline condition record", "Recurring stewardship plan", "Dated visit and treatment records", "Material-change alerts", "Periodic portfolio summary", "Annual Palm Stewardship Program", "licensed treatment", "Request a Property Walkthrough", "existing landscapers", "certificate of insurance", "W-9"],
     "palm-records-monitoring-verification.html": ["id=\"homeowner-inquiry\" tabindex=\"-1\"", "id=\"organization-inquiry\" tabindex=\"-1\"", "Tell me a little about the property", "Request a Property Walkthrough", "known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
     "quarterly-palm-care-san-diego.html": ["Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"],

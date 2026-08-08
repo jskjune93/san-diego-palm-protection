@@ -113,7 +113,7 @@ def main() -> int:
         homepage = (DIST / "index.html").read_text(encoding="utf-8-sig") if (DIST / "index.html").exists() else ""
         managed = (DIST / "managed-property-palm-services.html").read_text(encoding="utf-8-sig") if (DIST / "managed-property-palm-services.html").exists() else ""
         records = (DIST / "palm-records-monitoring-verification.html").read_text(encoding="utf-8-sig") if (DIST / "palm-records-monitoring-verification.html").exists() else ""
-        for phrase in ("Owner-Led Palm Stewardship", "Palm stewardship, treatment, and preservation for valuable properties.", "Mature palm care", "Stewardship &amp; Palm Health", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"):
+        for phrase in ("Owner-led stewardship for valuable palm portfolios.", "Identity &amp; baselines", "Palm Portfolio Stewardship", "Protection &amp; Treatment", "Documentation &amp; Planning", "Response, Removal &amp; Renewal Coordination", "Request a Property Walkthrough", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"):
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
         treatment_page = (DIST / "south-american-palm-weevil-treatment-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "south-american-palm-weevil-treatment-san-diego.html").exists() else ""
@@ -124,7 +124,7 @@ def main() -> int:
         for phrase in ("Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"):
             if phrase not in recurring:
                 errors.append(f"recurring-stewardship page missing current service language: {phrase}")
-        for phrase in ("Annual Palm Stewardship Program", "Palm Portfolio Baseline", "Protection and Monitoring", "Palm Stewardship", "fertilization", "irrigation guidance", "existing landscapers", "certificate of insurance", "W-9"):
+        for phrase in ("Palm Portfolio Stewardship for Managed Properties", "What SDPP takes responsibility for", "Palm asset register", "Baseline condition record", "Recurring stewardship plan", "Dated visit and treatment records", "Material-change alerts", "Periodic portfolio summary", "Annual Palm Stewardship Program", "licensed treatment", "existing landscapers", "certificate of insurance", "W-9"):
             if phrase not in managed:
                 errors.append(f"managed-property page missing service pathway: {phrase}")
         for field in ("known_palm_species", "existing_contractor", "desired_service", "preferred_contact"):

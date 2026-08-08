@@ -112,10 +112,10 @@ def about_credentials() -> str:
 
 def stewardship_functions(relative_root: str = "./") -> str:
     items = [
-        ("01", "Stewardship & Palm Health", "Recurring hands-on care, health observation, fertilization, watering or irrigation guidance, and attention to changes over time.", "quarterly-palm-care-san-diego.html"),
+        ("01", "Palm Portfolio Stewardship", "The overall relationship: palm identities, priorities, recurring care, service history, planning, and direct owner involvement across the property.", "managed-property-palm-services.html"),
         ("02", "Protection & Treatment", "Preventive protection, South American palm weevil awareness, treatment when appropriate, and early response to visible decline.", "palm-stewardship-plans.html"),
-        ("03", "Documentation & Portfolio Management", "Palm inventories, condition records, photographs, priorities, recurring schedules, budgeting support, and continuity across a property.", "palm-records-monitoring-verification.html"),
-        ("04", "Response, Removal & Renewal", "Decline response, pruning or removal coordination, replacement planning, sourcing, logistics, and long-term landscape continuity.", "palm-removal-coordination.html"),
+        ("03", "Documentation & Planning", "Palm inventories, condition records, photographs, treatment and work history, recurring schedules, and budgeting support.", "palm-records-monitoring-verification.html"),
+        ("04", "Response, Removal & Renewal Coordination", "Decline response, pruning or removal coordination, replacement planning, sourcing, and long-term landscape continuity.", "palm-removal-coordination.html"),
     ]
     return '<div class="pillar-grid pillar-grid--4">' + "".join(
         f'<article class="pillar"><span>{n}</span><h3>{escape(t)}</h3><p>{escape(d)}</p><a href="{relative_root}{href}">Explore this service</a></article>'
@@ -175,8 +175,8 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          relative_root: str = "./", extra_schema: dict | None = None,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
-    hero_note = '<p class="hero-microcopy">Mature palm care · Assessment and monitoring · Preventive protection and treatment · Preservation planning</p>' if filename == "index.html" else ""
-    hero_trust = '<p class="hero-trust-line">Owner-operated • California Pest Control Business License active • QAL Category B • Insured</p>' if filename == "index.html" else ""
+    hero_note = '<p class="hero-microcopy">Identity &amp; baselines · Recurring plans &amp; records · Licensed treatment · Coordinated response</p>' if filename == "index.html" else ""
+    hero_trust = '<p class="hero-trust-line">Owner-operated • California Pest Control Business License active • QAL No. 175295 • Category B — Landscape Maintenance • Insured</p>' if filename == "index.html" else ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '
         f'{escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'

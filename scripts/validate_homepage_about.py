@@ -29,7 +29,7 @@ def main() -> int:
 
     limits = {
         public["individual_license"]: 2,
-        public["category"]: 2,
+        public["category"]: 3,
         "Insured": 3,
         public["service_summary"]: 1,
     }
@@ -43,8 +43,8 @@ def main() -> int:
     if home.count(public["service_summary"]) != 1:
         errors.append("homepage must contain exactly one concise stewardship statement")
     for scoped_fragment in (
-        "Palm stewardship, treatment, and preservation for valuable properties.",
-        "San Diego Palm Protection cares for mature and high-value palms",
+        "Owner-led stewardship for valuable palm portfolios.",
+        "SDPP helps managed properties identify priority palms",
         "Preventive protection, South American palm weevil awareness",
         "The work is shaped by the palms, the property, and the decisions",
         "Residential and estate services remain available.",
@@ -55,7 +55,7 @@ def main() -> int:
         errors.append("homepage owner section does not link to About")
     if homepage_html.lower().count("<h1") != 1:
         errors.append("homepage must contain exactly one H1")
-    if "<title>Palm Care, Treatment &amp; Stewardship San Diego | SDPP</title>" not in homepage_html:
+    if "<title>Palm Portfolio Stewardship &amp; Treatment San Diego | SDPP</title>" not in homepage_html:
         errors.append("homepage title changed unexpectedly")
 
     for phrase in (
@@ -104,7 +104,7 @@ def main() -> int:
             print(f" - {error}")
         return 1
     print("HOMEPAGE_ABOUT_VALIDATION_OK")
-    print("homepage_full_qal<=2 homepage_full_category<=2 homepage_insured<=3 homepage_service_statement=1")
+    print("homepage_full_qal<=2 homepage_full_category<=3 homepage_insured<=3 homepage_service_statement=1")
     return 0
 
 

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "primary_market": "Commercial and managed properties responsible for valuable palm portfolios.",
+  "secondary_market": "Residential and estate owners responsible for valuable mature palms.",
+  "core_product": "Owner-led palm portfolio stewardship.",
+  "canonical_position": "SDPP provides owner-led palm portfolio stewardship for managed properties and owners of valuable mature palms. SDPP identifies and records priority palms, maintains their condition and service history, plans recurring care, provides licensed treatment within scope, and coordinates the next responsible action when conditions change.",
+  "homepage_headline": "Owner-led stewardship for valuable palm portfolios.",
+  "homepage_supporting_copy": "SDPP helps managed properties identify priority palms, establish baselines, plan recurring care, maintain service records, and respond when conditions change. Licensed preventive protection and South American palm weevil treatment are provided within scope.",
+  "in_house_capability": "Licensed palm treatment within scope.",
+  "differentiators": [
+    "Palm specialization",
+    "Continuity across visits and contractors",
+    "Individual-palm identity and records",
+    "Recurring planning and change detection",
+    "Direct owner involvement from walkthrough through follow-up"
+  ],
+  "service_pillars": [
+    "Palm Portfolio Stewardship",
+    "Protection & Treatment",
+    "Documentation & Planning",
+    "Response, Removal & Renewal Coordination"
+  ],
+  "prohibited_drift": [
+    "General plant-health-company positioning",
+    "Treatment-only positioning",
+    "Observation-only positioning",
+    "Unsupported credentials or endorsements",
+    "Pre-license treatment restrictions",
+    "Public competitor comparisons"
+  ]
+}

@@ -1,10 +1,11 @@
 # SDPP public website architecture
 
-## Three service pillars
+## Four service pillars
 
-1. Monitoring & Documentation
+1. Palm Portfolio Stewardship
 2. Protection & Treatment
-3. Response, Removal & Replacement
+3. Documentation & Planning
+4. Response, Removal & Renewal Coordination
 
 The homepage and service overview present the pillars as one lifecycle. Residential
 and managed-property routes are audience pathways into the same services.

@@ -15,8 +15,8 @@ Current owner-confirmed operational status, effective August 2, 2026:
 The public site uses:
 
 - **Status label:** “Owner-led palm care”
-- **Service summary:** Palm assessment, monitoring, documentation, protection and treatment services, recurring stewardship, decline response, and contractor or removal coordination.
-- **Primary growth path:** Managed-property palm inventories, preventive treatment, recurring monitoring, reporting, and stewardship.
+- **Service summary:** Owner-led palm portfolio stewardship for managed properties and valuable mature palms, including individual-palm records, recurring care planning, licensed treatment when appropriate, documentation, decline response, and qualified-contractor coordination.
+- **Primary growth path:** Managed-property palm portfolios with stable identities, condition and service histories, recurring plans, licensed treatment within scope, and coordinated next action.
 - **Residential path:** Selective assessment, protection, treatment, and recurring care for mature and valuable palms.
 
 Every public page uses this synchronized statement:

@@ -29,12 +29,12 @@ PRIMARY = {
 }
 
 INTENT_REQUIREMENTS = {
-    "index.html": ("palm care", "treatment", "stewardship", "san diego"),
+    "index.html": ("palm portfolio stewardship", "treatment", "san diego"),
     "sapw.html": ("south american palm weevil", "san diego", "signs", "prevention"),
     "south-american-palm-weevil-treatment-san-diego.html": ("south american palm weevil", "treatment", "san diego"),
     "palm-stewardship-plans.html": ("palm", "treatment", "preventive protection", "san diego"),
     "quarterly-palm-care-san-diego.html": ("palm stewardship", "preservation", "san diego"),
-    "managed-property-palm-services.html": ("commercial palm care", "management", "san diego"),
+    "managed-property-palm-services.html": ("palm portfolio stewardship", "managed properties", "san diego"),
     "palm-records-monitoring-verification.html": ("palm assessment", "monitoring", "management"),
     "residential-palm-assessment.html": ("palm health assessment", "san diego"),
     "canary-island-date-palm-care-san-diego.html": ("canary island date palm", "care", "treatment", "san diego"),

@@ -249,10 +249,10 @@ def main() -> int:
 
     homepage_text, homepage_parser = pages[(ROOT / "index.html").resolve()]
     for required_pillar in (
-        "Stewardship &amp; Palm Health",
+        "Palm Portfolio Stewardship",
         "Protection &amp; Treatment",
-        "Documentation &amp; Portfolio Management",
-        "Response, Removal &amp; Renewal",
+        "Documentation &amp; Planning",
+        "Response, Removal &amp; Renewal Coordination",
     ):
         if required_pillar not in homepage_text:
             errors.append(f"homepage missing stewardship-function positioning: {required_pillar}")
@@ -451,6 +451,19 @@ def main() -> int:
         print(prelicense.stderr.strip())
     if prelicense.returncode != 0:
         errors.append("prelicense compliance validator failed")
+
+    positioning = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "validate_positioning.py")],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if positioning.stdout.strip():
+        print(positioning.stdout.strip())
+    if positioning.stderr.strip():
+        print(positioning.stderr.strip())
+    if positioning.returncode != 0:
+        errors.append("positioning regression validator failed")
 
     print("VALIDATION_OK" if not errors else "VALIDATION_FAILED")
     print(f"html_files_checked={len(html_files)}")
