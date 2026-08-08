@@ -40,8 +40,9 @@ def main() -> int:
     config = json.loads(POSITIONING.read_text(encoding="utf-8"))
     if config.get("engagement_paths") != ["Palm Portfolio Baseline", "Annual Palm Stewardship Program"]:
         errors.append("canonical configuration must contain exactly the two approved engagement paths")
-    if len(config.get("service_pillars") or []) != 4:
-        errors.append("canonical configuration must retain exactly four capability pillars")
+    expected_pillars = ["Stewardship & Palm Health", "Protection & Treatment", "Documentation & Portfolio Management", "Response, Removal & Renewal"]
+    if config.get("service_pillars") != expected_pillars:
+        errors.append("canonical configuration must retain the four approved capability pillars in order")
     if config.get("public_credentials") != f"{QAL} · {CATEGORY} · Insured":
         errors.append("canonical public credential line is not QAL-only")
     if "business licens" not in config.get("private_operational_credentials", "").lower():
@@ -69,7 +70,7 @@ def main() -> int:
     paths = re.findall(r'data-engagement-path="([^"]+)"', managed)
     if paths != ["palm-portfolio-baseline", "annual-palm-stewardship-program"]:
         errors.append(f"managed page must expose exactly two ordered engagement paths; found {paths}")
-    for phrase in ("Standardize the stewardship system; customize the property scope.", "Protection &amp; Treatment", "Documentation &amp; Planning", "Response, Removal &amp; Renewal Coordination"):
+    for phrase in ("Standardize the stewardship system; customize the property scope.", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal"):
         if phrase not in managed:
             errors.append(f"managed page missing commercial hierarchy concept: {phrase}")
     if re.search(r"(?:bronze|silver|gold) (?:package|plan|tier)", managed, re.I):

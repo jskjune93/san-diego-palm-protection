@@ -263,13 +263,13 @@ PAGES: dict[str, dict] = {
         "title": "Palm Portfolio Stewardship for Managed Properties | SDPP",
         "description": "Owner-led palm portfolio stewardship, asset records, recurring care planning, licensed treatment, and coordinated response for managed properties in San Diego.",
         "eyebrow": "Commercial and managed properties", "h1": "Palm Portfolio Stewardship for Managed Properties",
-        "lede": "I identify and record priority palms, maintain their condition and service history, plan recurring care, provide licensed treatment within scope, and coordinate the next responsible action when conditions change.",
+        "lede": POSITIONING["canonical_position"] + " " + POSITIONING["stewardship_distinction"],
         "image": "Las Palmas_Appartments_Healthy-CIDP.jpg",
         "body": section("The stewardship role", "What SDPP takes responsibility for.", "The agreed scope creates continuity around the palms without claiming authority over the property or its other professionals.", cards([
-            ("Palm Portfolio Stewardship", "Maintain the palm inventory, stable identities, locations, dated photographs, visible-condition baseline, priorities, and recurring schedule."),
+            ("Stewardship & Palm Health", "Maintain the palm inventory, stable identities, locations, dated photographs, visible-condition baseline, priorities, and recurring schedule."),
             ("Protection & Treatment", "Plan and provide preventive protection, care, and licensed treatment when appropriate and within scope."),
-            ("Documentation & Planning", "Maintain condition, treatment, and supplied work history; detect material change; support next-cycle planning and budgets."),
-            ("Response, Removal & Renewal Coordination", "Coordinate questions or handoffs with landscapers, arborists, removal contractors, and other qualified specialists."),
+            ("Documentation & Portfolio Management", "Maintain condition, treatment, and supplied work history; detect material change; support next-cycle planning and budgets."),
+            ("Response, Removal & Renewal", "Coordinate questions or handoffs with landscapers, arborists, removal contractors, and other qualified specialists."),
         ])) + commercial_engagement_paths() +
         section("Properties served", "Built for valuable palms in shared and substantial landscapes.", "A property does not need hundreds of palms to benefit. The common thread is responsibility for multiple palms, high-value specimens, or a landscape where continuity and records matter.", cards([
             ("Communities and campuses", "HOAs, multifamily communities, senior-living properties, churches, schools, nonprofit campuses, and historic properties."),

@@ -15,9 +15,10 @@ POSITIONING = ROOT / "site-config" / "positioning.json"
 CRITICAL = {
     "index.html": (
         "owner-led stewardship for valuable palm portfolios",
-        "priority palms",
-        "establish baselines",
-        "licensed preventive protection",
+        "SDPP preserves valuable palm and landscape assets so they can continue contributing to the appearance, identity, use, and long-term value of the property.",
+        "Stewardship &amp; Palm Health",
+        "Documentation &amp; Portfolio Management",
+        "Response, Removal &amp; Renewal",
         "request a property walkthrough",
     ),
     "managed-property-palm-services.html": (
@@ -30,6 +31,7 @@ CRITICAL = {
         "material-change alerts",
         "periodic portfolio summary",
         "licensed treatment",
+        "Treatment is one tool. Stewardship is the ongoing model.",
         "does not need to replace the landscape team",
     ),
     "palm-records-monitoring-verification.html": (
@@ -56,6 +58,11 @@ def main() -> int:
             errors.append(f"canonical positioning source missing {key}")
     if config.get("engagement_paths") != ["Palm Portfolio Baseline", "Annual Palm Stewardship Program"]:
         errors.append("commercial offer must contain exactly the two approved engagement paths")
+    expected_pillars = ["Stewardship & Palm Health", "Protection & Treatment", "Documentation & Portfolio Management", "Response, Removal & Renewal"]
+    if config.get("service_pillars") != expected_pillars:
+        errors.append("canonical configuration must contain the four approved capability pillars in order")
+    if config.get("canonical_position") != "SDPP preserves valuable palm and landscape assets so they can continue contributing to the appearance, identity, use, and long-term value of the property.":
+        errors.append("canonical positioning statement has drifted")
 
     if not DIST.exists():
         errors.append("dist is missing; run the production build first")

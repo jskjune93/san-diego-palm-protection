@@ -112,10 +112,10 @@ def about_credentials() -> str:
 
 def stewardship_functions(relative_root: str = "./") -> str:
     items = [
-        ("01", "Palm Portfolio Stewardship", "The overall relationship: palm identities, priorities, recurring care, service history, planning, and direct owner involvement across the property.", "managed-property-palm-services.html"),
+        ("01", "Stewardship & Palm Health", "The overall relationship: palm identities, priorities, recurring care, service history, planning, and direct owner involvement across the property.", "managed-property-palm-services.html"),
         ("02", "Protection & Treatment", "Preventive protection, South American palm weevil awareness, treatment when appropriate, and early response to visible decline.", "palm-stewardship-plans.html"),
-        ("03", "Documentation & Planning", "Palm inventories, condition records, photographs, treatment and work history, recurring schedules, and budgeting support.", "palm-records-monitoring-verification.html"),
-        ("04", "Response, Removal & Renewal Coordination", "Decline response, pruning or removal coordination, replacement planning, sourcing, and long-term landscape continuity.", "palm-removal-coordination.html"),
+        ("03", "Documentation & Portfolio Management", "Palm inventories, condition records, photographs, treatment and work history, recurring schedules, and budgeting support.", "palm-records-monitoring-verification.html"),
+        ("04", "Response, Removal & Renewal", "Decline response, pruning or removal coordination, replacement planning, sourcing, and long-term landscape continuity.", "palm-removal-coordination.html"),
     ]
     return '<div class="pillar-grid pillar-grid--4">' + "".join(
         f'<article class="pillar"><span>{n}</span><h3>{escape(t)}</h3><p>{escape(d)}</p><a href="{relative_root}{href}">Explore this service</a></article>'
