@@ -15,7 +15,7 @@ POSITIONING = ROOT / "site-config" / "positioning.json"
 CRITICAL = {
     "index.html": (
         "owner-led stewardship for valuable palm portfolios",
-        "SDPP preserves valuable palm and landscape assets so they can continue contributing to the appearance, identity, use, and long-term value of the property.",
+        "Our goal is to preserve the value of your mature landscape assets.",
         "Stewardship &amp; Palm Health",
         "Documentation &amp; Portfolio Management",
         "Response, Removal &amp; Renewal",
@@ -61,7 +61,7 @@ def main() -> int:
     expected_pillars = ["Stewardship & Palm Health", "Protection & Treatment", "Documentation & Portfolio Management", "Response, Removal & Renewal"]
     if config.get("service_pillars") != expected_pillars:
         errors.append("canonical configuration must contain the four approved capability pillars in order")
-    if config.get("canonical_position") != "SDPP preserves valuable palm and landscape assets so they can continue contributing to the appearance, identity, use, and long-term value of the property.":
+    if config.get("canonical_position") != "Our goal is to preserve the value of your mature landscape assets.":
         errors.append("canonical positioning statement has drifted")
 
     if not DIST.exists():
