@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STYLE_LINK = '<link rel="stylesheet" href="./site-assets/credentials.css">'
 BLOCK = render_credential_block()
 COMPACT_BLOCK = render_compact_credential_block()
-CONTACT_BLOCK = render_credential_block("BUSINESS_CREDENTIALS_CONTACT")
+CONTACT_BLOCK = render_compact_credential_block("BUSINESS_CREDENTIALS_CONTACT")
 START = "<!-- BUSINESS_CREDENTIALS:START -->"
 END = "<!-- BUSINESS_CREDENTIALS:END -->"
 CONTACT_START = "<!-- BUSINESS_CREDENTIALS_CONTACT:START -->"

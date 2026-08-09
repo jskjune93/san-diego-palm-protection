@@ -4,7 +4,7 @@ from html import escape
 from pathlib import Path
 import json
 
-from site_components import ROOT, BASE_URL, page, three_pillars, credentials, INQUIRY
+from site_components import ROOT, BASE_URL, page, three_pillars, credentials, compact_credentials, INQUIRY
 
 UFMP_RESOURCE = json.loads((ROOT / "site-config" / "ufmp_resource.json").read_text(encoding="utf-8"))
 POSITIONING = json.loads((ROOT / "site-config" / "positioning.json").read_text(encoding="utf-8"))
@@ -36,9 +36,8 @@ def commercial_engagement_paths() -> str:
 def inquiry_paths() -> str:
     explanation = escape(INQUIRY["public_explanation"])
     return f'''<div class="inquiry-paths">
-<article class="inquiry-panel" id="homeowner-inquiry" tabindex="-1">
-  <p class="eyebrow">For homeowners</p><h3>Request a Palm Assessment</h3>
-  <p>Use this path for a residential assessment, condition baseline, recurring monitoring, sourcing, or decline-response question.</p>
+<details class="inquiry-panel" id="homeowner-inquiry">
+  <summary><span class="eyebrow">For homeowners</span><span class="inquiry-summary-title">Request a Palm Assessment</span><span>For one palm or a small residential group.</span></summary>
   <form data-inquiry-direct data-inquiry-type="homeowner" data-fallback-conversion="homeowner-inquiry-email-prepared" action="/api/inquiry" method="post">
     <input type="hidden" name="inquiry_type" value="homeowner">
     <div class="form-trap" aria-hidden="true"><label for="home-website">Website</label><input id="home-website" name="website" tabindex="-1" autocomplete="off"></div>
@@ -61,10 +60,9 @@ def inquiry_paths() -> str:
     <p><a data-conversion="direct-email-fallback" href="mailto:sandiegopalmprotection@gmail.com?subject=Homeowner%20palm%20inquiry">Prefer email? Send your inquiry directly</a><br><small>Your email application will open. Your inquiry is not sent until you send it.</small></p>
     <p class="form-status" data-form-status aria-live="polite"></p>
   </form>
-</article>
-<article class="inquiry-panel" id="organization-inquiry" tabindex="-1">
-  <p class="eyebrow">For commercial and managed properties</p><h3>Request a Property Walkthrough</h3>
-  <p>Tell me a little about the property, the palms under your care, and any immediate concerns. I’ll review the information and follow up personally to discuss the appropriate next step.</p>
+</details>
+<details class="inquiry-panel" id="organization-inquiry">
+  <summary><span class="eyebrow">For commercial and managed properties</span><span class="inquiry-summary-title">Request a Property Walkthrough</span><span>For managed properties, portfolios, and estates.</span></summary>
   <form data-inquiry-direct data-inquiry-type="organization" data-fallback-conversion="organization-inquiry-email-prepared" action="/api/inquiry" method="post">
     <input type="hidden" name="inquiry_type" value="organization">
     <div class="form-trap" aria-hidden="true"><label for="org-website">Website</label><input id="org-website" name="website" tabindex="-1" autocomplete="off"></div>
@@ -91,7 +89,7 @@ def inquiry_paths() -> str:
     <p><a data-conversion="direct-email-fallback" href="mailto:sandiegopalmprotection@gmail.com?subject=Managed-property%20palm%20portfolio%20inquiry">Prefer email? Tell me about the palm portfolio</a><br><small>Your email application will open. Your inquiry is not sent until you send it.</small></p>
     <p class="form-status" data-form-status aria-live="polite"></p>
   </form>
-</article>
+</details>
 </div>'''
 
 
@@ -219,8 +217,7 @@ PAGES: dict[str, dict] = {
         "eyebrow": "Palm services in San Diego County", "h1": "Palm assessment, monitoring, and management services.",
         "lede": "I connect the site visit, photographs, treatment decisions, recurring care, and written record so owners and managers know what each important palm needs next.",
         "image": "journal-monitoring.jpg",
-        "body": section("Services", "Four parts of responsible palm stewardship.", "Health care, protection, documentation, and response stay connected instead of becoming isolated transactions.", three_pillars()) +
-        section("Assessment, Monitoring & Documentation", "You receive work you can actually use.", "The photographs and report are part of the service.", cards([
+        "body": section("Assessment, Monitoring & Documentation", "You receive work you can actually use.", "The photographs and report are part of the service.", cards([
             ("Residential Mature Palm Assessment", "I visit, examine the palm from the ground, take photographs, and write down what I found."),
             ("Palm Condition Baseline", "A dated set of repeatable photographs before a concern becomes harder to reconstruct."),
             ("Recurring Palm Monitoring", "I return at an agreed interval and compare the palm with the earlier images."),
@@ -234,9 +231,7 @@ PAGES: dict[str, dict] = {
             ("Written findings", "I send a dated account of the visit with priorities, uncertainties, and recommendations."),
             ("What comes next", "I may recommend monitoring, protection or treatment, contractor work, removal, or replacement."),
         ])) +
-        section("Commercial & managed pathway", "Start with a property walkthrough.", "I can evaluate the palms as a portfolio and build a practical stewardship plan for their health, protection, appearance, documentation, and long-term management. The complete inventory, recurring schedule, and proposal are shaped after I understand the property.", '<p><a class="button" data-conversion="organization-inquiry-initiation" href="#organization-inquiry">Request a Property Walkthrough</a> <a href="./managed-property-palm-services.html">View commercial and managed services</a></p>', "section-tint") +
-        section("Request", "Choose the direct inquiry path.", "Managed properties can request a property walkthrough. Homeowners and estate owners can request an assessment for one palm or a small group.", f'{credentials("BUSINESS_CREDENTIALS_CONTACT")}{inquiry_paths()}') +
-        section("Related decisions", "When the question changes.", "These pages cover decline, contractor coordination, sourcing, and confirmed loss.", '<p><a href="./palm-removal-coordination.html">Decline, removal, and replacement</a> · <a href="./palm-sourcing-installation.html">Sourcing and installation</a> · <a href="./specimen-palms-cycads.html">Specimen palms and cycads</a> · <a href="./palm-journal/documented-loss/">Documented Loss</a></p>')
+        section("Request", "Choose the direct inquiry path.", "Open the form that fits the property.", f'{compact_credentials("BUSINESS_CREDENTIALS_CONTACT")}{inquiry_paths()}<p class="section-proof-link"><a href="./palm-removal-coordination.html">Removal coordination</a> · <a href="./palm-sourcing-installation.html">Palm sourcing and installation</a> · <a href="./specimen-palms-cycads.html">Specimen palms and cycads</a> · <a href="./palm-journal/documented-loss/">Documented Loss</a></p>').replace('<section class="section ">', '<section class="section " id="request">', 1)
     },
     "quarterly-palm-care-san-diego.html": {
         "title": "Palm Stewardship & Mature Palm Preservation San Diego | SDPP",
@@ -446,7 +441,7 @@ PAGES: dict[str, dict] = {
         "eyebrow": "Private inquiry", "h1": "Report a Palm or Request Review",
         "lede": "Prepare a private email handoff. Nothing is published automatically, and this page does not upload or store photographs.",
         "image": "evidence1.jpg",
-        "body": section("Private handoff", "Prepare the record before opening email.", "The report is not delivered until you send it from your configured email application.", f'''{credentials("BUSINESS_CREDENTIALS_CONTACT")}
+        "body": section("Private handoff", "Prepare the record before opening email.", "The report is not delivered until you send it from your configured email application.", f'''{compact_credentials("BUSINESS_CREDENTIALS_CONTACT")}
 <form id="observation-form" novalidate>
 <fieldset><legend>About you</legend><div class="form-grid"><div><label for="name">Name</label><input id="name" name="name" required></div><div><label for="email">Email</label><input id="email" name="email" type="email" required></div></div></fieldset>
 <fieldset><legend>The observation</legend><div class="form-grid"><div><label for="city">City</label><input id="city" name="city" required></div><div><label for="category">Category</label><select id="category" name="category" required><option value="">Choose one</option><option>Baseline</option><option>Visible decline</option><option>Removal or loss</option><option>Other</option></select></div><div class="full"><label for="description">Observation and chronology:</label><textarea id="description" name="description" required></textarea></div></div></fieldset>

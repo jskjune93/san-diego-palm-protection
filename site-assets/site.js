@@ -26,6 +26,7 @@
     if (!['#homeowner-inquiry', '#organization-inquiry'].includes(location.hash)) return;
     const target = document.querySelector(location.hash);
     if (!target) return;
+    if (target.matches('details')) target.open = true;
     requestAnimationFrame(() => target.focus({ preventScroll: true }));
   };
   focusInquiryTarget();

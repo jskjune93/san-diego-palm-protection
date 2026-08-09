@@ -196,6 +196,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         f'<a class="button button-quiet" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Residential Palm Assessment</a>'
         if filename == "index.html" else f'<a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a>'
     )
+    inquiry_band = "" if filename == "palm-records-monitoring-verification.html" else "  " + inquiry(relative_root, residential_page)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -210,7 +211,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
   </section>
   <div class="trust-wrap trust-wrap--compact">{homepage_credentials() if filename == "index.html" else about_credentials() if filename == "about.html" else compact_credentials("BUSINESS_CREDENTIALS")}</div>
   {body}
-  {inquiry(relative_root, residential_page)}
+{inquiry_band}
 </main>
 {footer(relative_root, residential_page)}
 </body>
