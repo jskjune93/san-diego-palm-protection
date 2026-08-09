@@ -23,6 +23,12 @@ REMOVED_PHRASES = (
     "support better palm decisions",
     "a direct route for your kind of property",
     "contractor-work verification records evidence; it does not certify the unknowable",
+    "owner-level accountability",
+    "one point of contact from walkthrough through follow-up",
+    "you work with me from the first call",
+    "no sales-to-field handoff",
+    "work directly with the owner",
+    "i stay with the work",
 )
 
 

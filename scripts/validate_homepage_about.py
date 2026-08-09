@@ -51,8 +51,8 @@ def main() -> int:
     ):
         if scoped_fragment not in home:
             errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")
-    if 'href="./about.html"' not in homepage_html or "About John and SDPP" not in home:
-        errors.append("homepage owner section does not link to About")
+    if 'href="./about.html"' not in homepage_html:
+        errors.append("homepage does not retain a route to About")
     if homepage_html.lower().count("<h1") != 1:
         errors.append("homepage must contain exactly one H1")
     if "<title>Palm Portfolio Stewardship &amp; Treatment San Diego | SDPP</title>" not in homepage_html:
