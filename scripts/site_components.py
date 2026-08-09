@@ -182,11 +182,6 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         f'{escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'
         if filename == "residential-palm-assessment.html" else ""
     )
-    organization_trust = (
-        '<div class="institutional-trust"><strong>Owner-led field work</strong><span>California Qualified Applicator License No. 175295</span>'
-        '<span>Category B — Landscape Maintenance</span><span>Insured</span><span>Structured photographic and written reporting</span></div>'
-        if filename in {"managed-property-palm-services.html", "urban-forest-palm-documentation.html"} else ""
-    )
     residential_page = filename == "residential-palm-assessment.html"
     organization_page = not residential_page
     primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'homeowner-inquiry' if residential_page else 'organization-inquiry'}"
@@ -208,7 +203,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
     <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div>
   </section>
-  <div class="trust-wrap trust-wrap--compact">{homepage_credentials() if filename == "index.html" else about_credentials() if filename == "about.html" else credentials("BUSINESS_CREDENTIALS")}{organization_trust}</div>
+  <div class="trust-wrap trust-wrap--compact">{homepage_credentials() if filename == "index.html" else about_credentials() if filename == "about.html" else credentials("BUSINESS_CREDENTIALS")}</div>
   {body}
   {inquiry(relative_root, residential_page)}
 </main>

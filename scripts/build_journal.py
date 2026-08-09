@@ -113,14 +113,14 @@ def _legacy_styles_reference(relative_root: str = "./") -> str:
   <link rel="stylesheet" href="{relative_root}site-assets/site.css">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
   <style>
-    .hero {{ background: #efe7d8; padding: 44px 6vw 34px; }}
-    .hero-inner, main, footer .inner {{ max-width: 1120px; margin: 0 auto; }}
+    .hero {{ background: #efe7d8; padding: 38px 5vw 30px; }}
+    .hero-inner, main, footer .inner {{ max-width: 1240px; margin: 0 auto; }}
     .eyebrow, .entry-label, .category-label {{ color: #6f5b2e; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; font-size: .78rem; }}
     h1 {{ font-size: clamp(2rem, 5vw, 4.1rem); line-height: 1.05; margin: 14px 0; color: #1f3b2c; }}
     h2 {{ color: #1f3b2c; font-size: clamp(1.45rem, 3vw, 2.2rem); line-height: 1.15; }}
     h3 {{ color: #1f3b2c; }}
     .lede {{ font-size: 1.14rem; max-width: 760px; }}
-    main {{ padding: 36px 6vw 52px; }}
+    main {{ padding: 30px 5vw 44px; }}
     .journal-grid {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 22px; }}
     .journal-card {{ background: #fff; border: 1px solid #e2d8c6; border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }}
     .journal-card img {{ width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; background: #e6decf; }}
