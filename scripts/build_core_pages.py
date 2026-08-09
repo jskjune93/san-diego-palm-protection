@@ -137,7 +137,6 @@ def approved_ufmp_resource() -> str:
     <a href="./palm-proof-examples.html">Field Work</a>
     <a href="./palm-journal-new.html">Palm Journal</a>
     <a href="./palm-journal/documented-loss/">Documented Loss</a>
-    <a href="./palm-proof-examples.html#sample-assessment">Sanitized sample assessment</a>
   </div>
 </section>'''
 
@@ -208,7 +207,7 @@ PAGES: dict[str, dict] = {
             ("Dated photographs", "I take whole-palm and detail views that can be repeated during a future visit."),
             ("What I observed", "I separate what I saw from what you reported, what I suspect, and what would need confirmation."),
             ("Your written report", "You receive the photographs, findings, limits of the visit, and the next steps I recommend."),
-        ]) + '<p class="section-proof-link"><a href="./palm-proof-examples.html#sample-assessment">See a sanitized sample report</a></p>') + section("What it is not", "Useful because its limits are explicit.", "A visual assessment cannot promise tree safety, uncover hidden conditions, replace laboratory confirmation, or guarantee an outcome.", '<p class="note">Urgent structural or life-safety concerns may require an emergency contractor or other specialist.</p>', "section-tint") +
+        ]) + '<p class="section-proof-link"><a href="./palm-proof-examples.html">View field work and reporting</a></p>') + section("What it is not", "Useful because its limits are explicit.", "A visual assessment cannot promise tree safety, uncover hidden conditions, replace laboratory confirmation, or guarantee an outcome.", '<p class="note">Urgent structural or life-safety concerns may require an emergency contractor or other specialist.</p>', "section-tint") +
         section("If the palm needs watching", "The first visit becomes the comparison point.", "When I return, I try to repeat the same views. That makes it easier to see whether the crown, trunk, or surrounding conditions have changed.", process([("Before the visit", "Tell me what changed and send any older photographs you have."), ("At the property", "I observe and photograph the areas I can access safely."), ("Afterward", "You receive the dated report and a recommended time for another look, if one is useful.")]) + '<p class="section-proof-link"><a href="./about.html">Learn more about John Krause</a></p>')
     },
     "palm-records-monitoring-verification.html": {
@@ -330,43 +329,12 @@ PAGES: dict[str, dict] = {
         ]), "section-tint")
     },
     "palm-proof-examples.html": {
-        "title": "Sample Palm Assessment Report | San Diego Palm Protection",
-        "description": "See a sanitized SDPP field assessment with dated palm photographs, written observations, limitations, and follow-up recommendations.",
+        "title": "Palm Field Work & Documentation | San Diego Palm Protection",
+        "description": "See SDPP palm field work, broader-area documentation, dated observations, and public Palm Journal records.",
         "eyebrow": "Field work and reporting", "h1": "See what I photograph and what I put in writing.",
         "lede": "These public examples show the kind of palm views I take, how I describe what I saw, and how a field visit becomes a report the owner can use.",
         "image": "evidence.jpg",
-        "body": '''<section class="section sample-assessment" id="sample-assessment" aria-labelledby="sample-assessment-heading">
-<div class="sample-assessment-grid">
-  <div>
-    <p class="eyebrow">Sample assessment</p>
-    <h2 id="sample-assessment-heading">See what a documented palm assessment looks like.</h2>
-     <p class="sample-assessment-lede">This sanitized report shows an actual SDPP field assessment. It includes the reason for the visit, dated photographs, what I observed, what I could not confirm, and what I recommended next.</p>
-    <p class="note">Client-identifying information has been removed. Every assessment is property-specific, and findings are limited by access, visible evidence, site conditions, and the documented scope.</p>
-    <div class="button-row">
-      <a class="button" href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">View sample assessment <span class="sr-only">(PDF, opens in a new tab)</span></a>
-      <a class="sample-request-link" href="./residential-palm-assessment.html#request">Request an assessment</a>
-    </div>
-  </div>
-  <aside class="sample-document-card" aria-label="Sanitized sample palm assessment PDF">
-    <span class="sample-document-type" aria-hidden="true">PDF</span>
-    <h3>Sanitized sample palm assessment</h3>
-    <p>Five-page field report with photographs, observations, limitations, recommendations, and follow-up guidance.</p>
-    <a href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">Open the sample PDF <span class="sr-only">(opens in a new tab)</span></a>
-  </aside>
-</div>
-<div class="sample-includes">
-  <h3>What the report includes</h3>
-  <ul>
-    <li>Dated site and palm baseline</li>
-    <li>Visible-condition observations</li>
-    <li>Photo record and captions</li>
-    <li>Known, unknown, and follow-up items</li>
-    <li>Practical recommendations</li>
-    <li>Monitoring or response interval</li>
-  </ul>
-</div>
-</section>''' +
-        '''<section class="section section-tint sample-assessment" id="mature-palm-documentation-example" aria-labelledby="mature-palm-documentation-heading">
+        "body": '''<section class="section section-tint sample-assessment" id="mature-palm-documentation-example" aria-labelledby="mature-palm-documentation-heading">
 <div class="sample-assessment-grid">
   <div>
     <p class="eyebrow">Broader-area documentation</p>
