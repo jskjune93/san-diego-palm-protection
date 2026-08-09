@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import re
 import sys
 from pathlib import Path
@@ -14,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 POSITIONING = ROOT / "site-config" / "positioning.json"
 PDF = ROOT / "SDPP-Commercial-Palm-Stewardship.pdf"
+PDF_SHA256 = "8dcab8656ec9866a14a7b0cb65673552e1d516742cf7f50ca09bcf90c7d85a40"
 
 QAL = "California Qualified Applicator License No. 175295"
 CATEGORY = "Category B — Landscape Maintenance"
@@ -73,7 +75,7 @@ def main() -> int:
     paths = re.findall(r'data-engagement-path="([^"]+)"', managed)
     if paths != ["palm-portfolio-baseline", "annual-palm-stewardship-program"]:
         errors.append(f"managed page must expose exactly two ordered engagement paths; found {paths}")
-    for phrase in ("Standardize the stewardship system; customize the property scope.", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal"):
+    for phrase in ("Our goal is to preserve the value of your mature landscape assets.", "Why SDPP", "What we do", "Palm Portfolio Baseline", "Annual Palm Stewardship Program", "preventive treatment", "recurring monitoring", "treatment records", "existing landscape professionals", "long-term palm vision", "View Sample Assessment", "View Commercial Overview", "Download Commercial Overview"):
         if phrase not in managed:
             errors.append(f"managed page missing commercial hierarchy concept: {phrase}")
     if re.search(r"(?:bronze|silver|gold) (?:package|plan|tier)", managed, re.I):
@@ -82,6 +84,8 @@ def main() -> int:
     if not PDF.exists():
         errors.append("canonical commercial outreach PDF is missing")
     else:
+        if hashlib.sha256(PDF.read_bytes()).hexdigest() != PDF_SHA256:
+            errors.append("canonical commercial outreach PDF hash has changed")
         text = compact(pdf_text(PDF))
         for phrase in ("Palm Portfolio Baseline", "Annual Palm Stewardship Program", "Licensed preventive protection and treatment within scope", "Our goal is to preserve the value of your mature landscape assets.", "Request a Property Walkthrough", "175295", "Category B - Landscape Maintenance", "Insured"):
             if phrase.lower() not in text.lower():
