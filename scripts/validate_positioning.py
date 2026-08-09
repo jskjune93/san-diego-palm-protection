@@ -36,7 +36,7 @@ CRITICAL = {
         "SDPP-Commercial-Palm-Stewardship.pdf",
     ),
     "palm-records-monitoring-verification.html": (
-        "palm assessment, monitoring, and management services",
+        "palm assessment, treatment, and management services",
         "request a property walkthrough",
         "treatment",
     ),

@@ -215,18 +215,18 @@ PAGES: dict[str, dict] = {
         section("If the palm needs watching", "The first visit becomes the comparison point.", "When I return, I try to repeat the same views. That makes it easier to see whether the crown, trunk, or surrounding conditions have changed.", process([("Before the visit", "Tell me what changed and send any older photographs you have."), ("At the property", "I observe and photograph the areas I can access safely."), ("Afterward", "You receive the dated report and a recommended time for another look, if one is useful.")]) + '<p class="section-proof-link"><a href="./about.html">Learn more about John Krause</a></p>')
     },
     "palm-records-monitoring-verification.html": {
-        "title": "Palm Assessment, Monitoring & Management Services | SDPP",
-        "description": "Palm assessment, condition baselines, recurring monitoring, treatment records, portfolio reporting, and decline response for San Diego properties.",
-        "eyebrow": "Palm services in San Diego County", "h1": "Palm assessment, monitoring, and management services.",
-        "lede": "I connect the site visit, photographs, treatment decisions, recurring care, and written record so owners and managers know what each important palm needs next.",
+        "title": "Palm Assessment, Treatment & Management Services | SDPP",
+        "description": "Palm assessment, preventive treatment, fertilization, recurring monitoring, portfolio reporting, and decline response for San Diego properties.",
+        "eyebrow": "Palm services in San Diego County", "h1": "Palm assessment, treatment, and management services.",
+        "lede": "I connect assessment, licensed treatment, recurring care, photographs, and written records so owners and managers know what each important palm needs next.",
         "image": "journal-monitoring.jpg",
-        "body": section("Assessment, Monitoring & Documentation", "You receive work you can actually use.", "The photographs and report are part of the service.", cards([
-            ("Residential Mature Palm Assessment", "I visit, examine the palm from the ground, take photographs, and write down what I found."),
-            ("Palm Condition Baseline", "A dated set of repeatable photographs before a concern becomes harder to reconstruct."),
-            ("Recurring Palm Monitoring", "I return at an agreed interval and compare the palm with the earlier images."),
-            ("Managed-property Palm Inventory & Reporting", "Each palm gets an ID, photographs, current notes, and a place in the property summary."),
-            ("Written Palm Condition Report", "A readable account of the visit, including what I know, what I do not know, and what I recommend."),
-            ("Contractor-Work Verification", "I can photograph completed work and organize the records the contractor provides. I cannot verify work hidden from view."),
+        "body": section("Assessment, Protection & Treatment", "The work follows the palm from the first visit through the next responsible action.", "Assessment, treatment, care, and documentation stay connected.", cards([
+            ("Palm Assessment & Baseline", "I examine the palm from the ground, take repeatable photographs, document visible conditions, and establish the starting record."),
+            ("Preventive Protection & Treatment", "I provide licensed pesticide treatment when appropriate for the palm, site, label, and agreed scope."),
+            ("Fertilization & Recovery Support", "I address agreed nutrient support and follow changing condition, irrigation concerns, and response over time."),
+            ("Recurring Monitoring & Records", "I return at an agreed interval, compare earlier photographs, and maintain useful condition and treatment history."),
+            ("Palm Portfolio Reporting", "For managed properties, each priority palm can have an ID, photographs, current status, service history, and next action."),
+            ("Decline Response & Coordination", "I document material change, explain the available response, and coordinate qualified contractor work, removal records, or replacement planning when needed."),
         ]), "section-tint") +
         section("How it works", "Tell me what you are trying to decide.", "I will ask about the palm, the property, access, and recent history before we agree on the visit.", process([
             ("First conversation", "Tell me what you have noticed and share any older photographs or work history."),
