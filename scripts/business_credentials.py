@@ -86,6 +86,23 @@ def render_credential_block(marker: str = "BUSINESS_CREDENTIALS") -> str:
     )
 
 
+def render_compact_credential_block(marker: str = "BUSINESS_CREDENTIALS") -> str:
+    credentials = public_credentials()
+    return (
+        f'<!-- {marker}:START -->\n'
+        '<div class="business-credentials business-credentials--strip" aria-label="Owner qualification and current business service status">\n'
+        f'  <p class="business-credentials__label">{escape(credentials["status_label"])}</p>\n'
+        f'  <p class="business-credentials__summary">{escape(credentials["service_summary"])}</p>\n'
+        '  <p class="business-credentials__credential">'
+        f'<span>{escape(credentials["individual_license"])}</span>'
+        f'<span>{escape(credentials["category"])}</span>'
+        f'<strong>{escape(credentials["insurance"])}</strong></p>\n'
+        f'  <p class="business-credentials__note">{escape(credentials["scope_note"])}</p>\n'
+        '</div>\n'
+        f'<!-- {marker}:END -->'
+    )
+
+
 def render_homepage_credential_block() -> str:
     credentials = public_credentials()
     owner = load_business_status()["owner"]["name"]

@@ -9,6 +9,7 @@ from business_credentials import (
     footer_line,
     public_credentials,
     render_about_credential_block,
+    render_compact_credential_block,
     render_credential_block,
     render_homepage_credential_block,
 )
@@ -16,6 +17,7 @@ from business_credentials import (
 ROOT = Path(__file__).resolve().parents[1]
 STYLE_LINK = '<link rel="stylesheet" href="./site-assets/credentials.css">'
 BLOCK = render_credential_block()
+COMPACT_BLOCK = render_compact_credential_block()
 CONTACT_BLOCK = render_credential_block("BUSINESS_CREDENTIALS_CONTACT")
 START = "<!-- BUSINESS_CREDENTIALS:START -->"
 END = "<!-- BUSINESS_CREDENTIALS:END -->"
@@ -71,7 +73,7 @@ def insert_for_page(path: Path, text: str) -> str:
         elif path.name == "about.html":
             page_block = render_about_credential_block()
         else:
-            page_block = BLOCK
+            page_block = COMPACT_BLOCK
         text = replace_marked_block(text, page_block)
         if path.name == "palm-records-monitoring-verification.html" and CONTACT_START not in text:
             text = text.replace('<form class="inquiry-form"', f'{CONTACT_BLOCK}\n<form class="inquiry-form"', 1)
@@ -93,7 +95,7 @@ def insert_for_page(path: Path, text: str) -> str:
         return text.replace('<form id="observation-form"', f'{CONTACT_BLOCK}\n<form id="observation-form"', 1)
 
     hero_end = re.compile(r'(<section\b[^>]*class="[^"]*\bhero\b[^"]*"[^>]*>.*?</section>)', re.DOTALL)
-    return hero_end.sub(rf'\1\n<section class="credential-band">\n{BLOCK}\n</section>', text, count=1)
+    return hero_end.sub(rf'\1\n<section class="credential-band">\n{COMPACT_BLOCK}\n</section>', text, count=1)
 
 
 def update_file(path: Path) -> str:

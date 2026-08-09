@@ -7,6 +7,7 @@ import json
 from business_credentials import (
     load_business_status,
     render_about_credential_block,
+    render_compact_credential_block,
     render_credential_block,
     render_homepage_credential_block,
     public_credentials,
@@ -100,6 +101,10 @@ def header(relative_root: str = "./", residential_primary: bool = False) -> str:
 
 def credentials(marker: str) -> str:
     return render_credential_block(marker)
+
+
+def compact_credentials(marker: str) -> str:
+    return render_compact_credential_block(marker)
 
 
 def homepage_credentials() -> str:
@@ -203,7 +208,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
     <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div>
   </section>
-  <div class="trust-wrap trust-wrap--compact">{homepage_credentials() if filename == "index.html" else about_credentials() if filename == "about.html" else credentials("BUSINESS_CREDENTIALS")}</div>
+  <div class="trust-wrap trust-wrap--compact">{homepage_credentials() if filename == "index.html" else about_credentials() if filename == "about.html" else compact_credentials("BUSINESS_CREDENTIALS")}</div>
   {body}
   {inquiry(relative_root, residential_page)}
 </main>
