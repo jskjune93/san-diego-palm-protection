@@ -25,10 +25,10 @@ def process(items: list[tuple[str, str]]) -> str:
 
 def commercial_engagement_paths() -> str:
     return '''<section class="section section-tint commercial-engagements" aria-labelledby="commercial-engagements-heading">
-  <div class="section-intro"><p class="eyebrow">How clients engage SDPP</p><h2 id="commercial-engagements-heading">Start with a baseline or establish recurring stewardship.</h2></div>
+  <div class="section-intro"><p class="eyebrow">Two engagement paths</p><h2 id="commercial-engagements-heading">Start with a baseline or build the annual relationship.</h2><p>A property can begin with a defined record before deciding on recurring stewardship. Standardize the stewardship system; customize the property scope.</p></div>
   <div class="audience-grid audience-grid--2">
-    <article class="audience-card" data-engagement-path="palm-portfolio-baseline"><h3>Palm Portfolio Baseline</h3><p>A defined first engagement: property walkthrough, priority-palm identities, dated photographs, visible conditions, immediate concerns, and a recommended scope for continuing work.</p></article>
-    <article class="audience-card" data-engagement-path="annual-palm-stewardship-program"><h3>Annual Palm Stewardship Program</h3><p>The recurring relationship: maintained palm register, scheduled monitoring and care, licensed treatment within scope, change alerts, specialist coordination, and next-cycle planning.</p></article>
+    <article class="audience-card" data-engagement-path="palm-portfolio-baseline"><h3>Palm Portfolio Baseline</h3><p>A defined first engagement for a property without an organized palm record.</p><ul><li>Property walkthrough and known-history intake</li><li>Priority-palm identities, photographs, and visible conditions</li><li>Immediate concerns and preservation priorities</li><li>Recommended care, treatment, documentation, and coordination scope</li><li>Proposal for continuing work</li></ul></article>
+    <article class="audience-card" data-engagement-path="annual-palm-stewardship-program"><h3>Annual Palm Stewardship Program</h3><p>The recurring relationship, tailored to the palms and management responsibilities.</p><ul><li>Maintained palm register and scheduled care</li><li>Licensed preventive protection and treatment within scope</li><li>Dated condition, treatment, and supplied work history</li><li>Material-change alerts and preservation priorities</li><li>Specialist coordination and next-cycle planning</li></ul></article>
   </div>
 </section>'''
 
@@ -263,19 +263,27 @@ PAGES: dict[str, dict] = {
         "eyebrow": "Commercial and managed properties", "h1": "Palm Portfolio Stewardship for Managed Properties",
         "lede": POSITIONING["canonical_position"] + " " + POSITIONING["stewardship_distinction"],
         "image": "Las Palmas_Appartments_Healthy-CIDP.jpg",
-        "body": section("Why SDPP", "Mature palms cannot be replaced on demand.", "They represent decades of growth, shape a property's identity, and can be expensive or impossible to replace at the same scale.", '<p>SDPP keeps attention on the palm itself—its condition, history, care, and next responsible action.</p>', "section-tint") +
-        section("What we do", "One clear scope around the palm portfolio.", "SDPP establishes a baseline, documents condition and change, provides preventive treatment and recurring monitoring, maintains treatment records, works alongside existing landscape professionals, and supports the property’s long-term palm vision.", '<p class="note">The agreed scope follows the palms, site conditions, access, and management responsibilities.</p>') +
-        commercial_engagement_paths() +
-        section("Representative proof", "See a representative SDPP deliverable.", "The sanitized sample shows how dated photographs, observations, limitations, and next steps appear in a client report.", '<p><a class="button" href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">View Sample Assessment <span class="sr-only">(PDF, opens in a new tab)</span></a></p>') +
-        '''<section class="section section-tint commercial-overview" aria-labelledby="commercial-overview-heading">
-  <div class="section-intro"><p class="eyebrow">Commercial overview</p><h2 id="commercial-overview-heading">Palm portfolio stewardship at a glance.</h2><p>Review the current approved commercial overview directly or download the PDF.</p></div>
-  <div class="document-preview-shell">
-    <object class="document-preview" data="./SDPP-Commercial-Palm-Stewardship.pdf#view=FitH&amp;toolbar=1" type="application/pdf" aria-label="SDPP Commercial Palm Stewardship overview">
-      <p>Your browser cannot display the PDF here. Use the links below to view or download it.</p>
-    </object>
-    <div class="document-actions"><a class="button" href="./SDPP-Commercial-Palm-Stewardship.pdf" target="_blank" rel="noopener noreferrer">View Commercial Overview <span class="sr-only">(PDF, opens in a new tab)</span></a><a class="text-link" href="./SDPP-Commercial-Palm-Stewardship.pdf" download>Download Commercial Overview</a></div>
-  </div>
-</section>'''
+        "body": section("The stewardship role", "What SDPP takes responsibility for.", "The agreed scope keeps the palm inventory, care, records, and next actions connected.", cards([
+            ("Stewardship & Palm Health", "Maintain palm identities, visible conditions, priorities, and the recurring schedule."),
+            ("Protection & Treatment", "Provide preventive care and licensed treatment when appropriate and within scope."),
+            ("Documentation & Portfolio Management", "Maintain condition, treatment, and supplied work history for planning."),
+            ("Response, Removal & Renewal", "Coordinate focused handoffs with landscapers, arborists, removal contractors, and other specialists."),
+        ])) + commercial_engagement_paths() +
+        section("Defined deliverables", "What ongoing stewardship can include.", "Deliverables follow the agreed property scope.", cards([
+            ("Palm asset register", "Stable IDs, locations, supportable species, and current status."),
+            ("Baseline condition record", "Dated photographs, visible observations, known history, and priorities."),
+            ("Recurring stewardship plan", "A schedule for observation, care, protection, treatment, and review."),
+            ("Dated visit and treatment records", "SDPP service records, supplied contractor history, and completed actions."),
+            ("Material-change alerts", "Significant visible change and the recommended next action."),
+            ("Periodic portfolio summary", "Priorities, unresolved items, planned work, and budgeting considerations."),
+        ]) + '''<div class="document-preview-shell commercial-overview-inline" aria-label="Commercial overview">
+  <object class="document-preview" data="./SDPP-Commercial-Palm-Stewardship.pdf#view=FitH&amp;toolbar=1" type="application/pdf" aria-label="SDPP Commercial Palm Stewardship overview"><p>Your browser cannot display the PDF here. Use the links below.</p></object>
+  <div class="document-actions"><a class="button" href="./SDPP-Commercial-Palm-Stewardship.pdf" target="_blank" rel="noopener noreferrer">View Commercial Overview <span class="sr-only">(PDF, opens in a new tab)</span></a><a class="text-link" href="./SDPP-Commercial-Palm-Stewardship.pdf" download>Download Commercial Overview</a></div>
+</div>''') +
+        section("Owner-level accountability", "One point of contact from walkthrough through follow-up.", "John handles the field review, records, proposal, and communication for managed properties and estates.", '<p class="note">A certificate of insurance and W-9 are available for vendor setup. SDPP is a specialized palm company, not a general tree-service or landscape contractor.</p>', "section-tint") +
+        section("Representative proof", "See the kind of palm-level record a property manager can use.", "This sanitized Old Escondido example demonstrates a repeatable multi-palm record without exposing private client information.", '<p><a class="button" href="./old-escondido-mature-palm-documentation-example.pdf" target="_blank" rel="noopener noreferrer">View the representative documentation example <span class="sr-only">(PDF, opens in a new tab)</span></a> <a href="./palm-proof-examples.html">View Field Work</a></p>', "section-tint") +
+        section("Existing property teams", "SDPP does not need to replace the landscape team.", "I work alongside existing landscapers, maintain the palm record, perform agreed licensed work, and coordinate specialized action.", '<p class="note">Monitoring and treatment cannot guarantee survival or pest exclusion. Coordination does not imply supervision or verification of hidden work, workmanship, structural safety, code compliance, licensing, efficacy, or outcomes.</p>', "section-tint") +
+        section("Next step", "Start with the property and its palms.", "A walkthrough establishes the scope, priorities, and records the property needs.", '<p><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a> <a href="./urban-forest-palm-documentation.html">Municipal and urban-forest support</a></p>')
     },
     "urban-forest-palm-documentation.html": {
         "title": UFMP_RESOURCE["metadata"]["title"],
@@ -336,7 +344,7 @@ PAGES: dict[str, dict] = {
         "lede": "These public examples show the kind of palm views I take, how I describe what I saw, and how a field visit becomes a report the owner can use.",
         "image": "evidence.jpg",
         "body": '''<section class="section sample-assessment" id="sample-assessment" aria-labelledby="sample-assessment-heading">
-<div class="section-intro">
+<div class="sample-assessment-grid">
   <div>
     <p class="eyebrow">Sample assessment</p>
     <h2 id="sample-assessment-heading">See what a documented palm assessment looks like.</h2>
@@ -344,8 +352,15 @@ PAGES: dict[str, dict] = {
     <p class="note">Client-identifying information has been removed. Every assessment is property-specific, and findings are limited by access, visible evidence, site conditions, and the documented scope.</p>
     <div class="button-row">
       <a class="button" href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">View sample assessment <span class="sr-only">(PDF, opens in a new tab)</span></a>
+      <a class="sample-request-link" href="./residential-palm-assessment.html#request">Request an assessment</a>
     </div>
   </div>
+  <aside class="sample-document-card" aria-label="Sanitized sample palm assessment PDF">
+    <span class="sample-document-type" aria-hidden="true">PDF</span>
+    <h3>Sanitized sample palm assessment</h3>
+    <p>Five-page field report with photographs, observations, limitations, recommendations, and follow-up guidance.</p>
+    <a href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">Open the sample PDF <span class="sr-only">(opens in a new tab)</span></a>
+  </aside>
 </div>
 <div class="sample-includes">
   <h3>What the report includes</h3>
@@ -358,13 +373,22 @@ PAGES: dict[str, dict] = {
     <li>Monitoring or response interval</li>
   </ul>
 </div>
-<aside class="sample-document-card sample-document-card--primary" aria-label="Sanitized sample SDPP palm assessment PDF">
-  <span class="sample-document-type" aria-hidden="true">PDF</span>
-  <h3>Representative SDPP palm assessment</h3>
-  <p>Five-page sanitized field report with photographs, observations, limitations, recommendations, and follow-up guidance.</p>
-  <a class="button" href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">Open the Representative Assessment <span class="sr-only">(PDF, opens in a new tab)</span></a>
-</aside>
-</section>'''
+</section>''' +
+        '''<section class="section section-tint sample-assessment" id="mature-palm-documentation-example" aria-labelledby="mature-palm-documentation-heading">
+<div class="sample-assessment-grid">
+  <div>
+    <p class="eyebrow">Broader-area documentation</p>
+    <h2 id="mature-palm-documentation-heading">Mature Palm Documentation Example</h2>
+    <p class="sample-assessment-lede">See a sanitized example of broader-area palm documentation prepared to support preservation, monitoring, loss records, and urban-forest implementation.</p>
+    <p class="note">This limited Old Escondido field sample is not a complete inventory, municipal plan, formal tree-risk assessment, laboratory report, or City-endorsed document.</p>
+    <div class="button-row"><a class="button" href="./old-escondido-urban-forest-documentation.pdf" target="_blank" rel="noopener noreferrer">View Civic Documentation Example <span class="sr-only">(PDF, opens in a new tab)</span></a><a class="sample-request-link" href="./urban-forest-palm-documentation.html">Explore urban forest documentation</a></div>
+  </div>
+  <aside class="sample-document-card" aria-label="Sanitized mature palm documentation example PDF">
+    <span class="sample-document-type" aria-hidden="true">PDF</span><h3>Old Escondido mature palm documentation</h3><p>Eight-page public example with a repeatable field structure, monitoring value, decline and loss documentation, and explicit limitations.</p><a href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Review the documentation pathway</a> · <a href="./old-escondido-urban-forest-documentation.pdf" target="_blank" rel="noopener noreferrer">Open the PDF <span class="sr-only">(opens in a new tab)</span></a>
+  </aside>
+</div>
+</section>''' +
+        section("Continue from the field", "Examples, report scope, and privacy in one place.", "The Palm Journal and Documented Loss preserve dated local context. A client report can connect the purpose of the visit, baseline photographs, visible findings, limitations, recommendations, and follow-through without exposing private source records.", '<div class="field-links"><a href="./palm-journal-new.html">Read the Palm Journal</a><a href="./palm-journal/las-palmas-no-reply-then-the-saws.html">View the Las Palmas entry</a><a href="./palm-journal/documented-loss/">Visit Documented Loss</a></div><p class="note">Only separately approved, sanitized material appears publicly. Client identity, address, contact details, private notes, and unapproved photographs remain outside the website.</p><p><a class="button" data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Request a Palm Assessment</a></p>', "section-tint")
     },
     "palm-stewardship-plans.html": {
         "title": "Palm Tree Treatment & Preventive Protection San Diego | SDPP",
