@@ -207,7 +207,11 @@ PAGES: dict[str, dict] = {
             ("Dated photographs", "I take whole-palm and detail views that can be repeated during a future visit."),
             ("What I observed", "I separate what I saw from what you reported, what I suspect, and what would need confirmation."),
             ("Your written report", "You receive the photographs, findings, limits of the visit, and the next steps I recommend."),
-        ]) + '<p class="section-proof-link"><a href="./palm-proof-examples.html">View field work and reporting</a></p>') + section("What it is not", "Useful because its limits are explicit.", "A visual assessment cannot promise tree safety, uncover hidden conditions, replace laboratory confirmation, or guarantee an outcome.", '<p class="note">Urgent structural or life-safety concerns may require an emergency contractor or other specialist.</p>', "section-tint") +
+        ]) + '''<aside class="residential-proof-inline" aria-labelledby="old-escondido-proof-title">
+  <div><p class="eyebrow">Field work example</p><h3 id="old-escondido-proof-title">Old Escondido palm documentation</h3></div>
+  <p>A sanitized, multi-palm example showing dated observations, photographs, limits, and monitoring value.</p>
+  <div class="residential-proof-inline__links"><a href="./old-escondido-urban-forest-documentation.pdf" target="_blank" rel="noopener noreferrer">View the PDF <span class="sr-only">(opens in a new tab)</span></a><a href="./palm-proof-examples.html">More field work</a></div>
+</aside>''') + section("What it is not", "Useful because its limits are explicit.", "A visual assessment cannot promise tree safety, uncover hidden conditions, replace laboratory confirmation, or guarantee an outcome.", '<p class="note">Urgent structural or life-safety concerns may require an emergency contractor or other specialist.</p>', "section-tint") +
         section("If the palm needs watching", "The first visit becomes the comparison point.", "When I return, I try to repeat the same views. That makes it easier to see whether the crown, trunk, or surrounding conditions have changed.", process([("Before the visit", "Tell me what changed and send any older photographs you have."), ("At the property", "I observe and photograph the areas I can access safely."), ("Afterward", "You receive the dated report and a recommended time for another look, if one is useful.")]) + '<p class="section-proof-link"><a href="./about.html">Learn more about John Krause</a></p>')
     },
     "palm-records-monitoring-verification.html": {
