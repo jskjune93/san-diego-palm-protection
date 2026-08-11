@@ -19,7 +19,7 @@ CRITICAL = {
         "Stewardship &amp; Palm Health",
         "Documentation &amp; Portfolio Management",
         "Response, Removal &amp; Renewal",
-        "request a property walkthrough",
+        "request a baseline",
     ),
     "managed-property-palm-services.html": (
         "palm portfolio stewardship for managed properties",
@@ -37,7 +37,7 @@ CRITICAL = {
     ),
     "palm-records-monitoring-verification.html": (
         "palm assessment, treatment, and management services",
-        "request a property walkthrough",
+        "request a baseline",
         "treatment",
     ),
 }

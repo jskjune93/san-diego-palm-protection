@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 UFMP = "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process."
 PRIVATE_TERMS = ("karrie", "gate code", "private-client@", "confidential avenue", "source_report_path")
 ENDORSEMENT = ("city endorsed", "city partner", "official ufmp partner", "approved by the city")
-NAV_LABELS = ("Services", "Commercial & Managed", "Residential", "Palm Decline", "Palm Journal", "Field Work", "Call or Text", "Property Walkthrough")
+NAV_LABELS = ("Services", "Commercial & Managed", "Residential", "Palm Decline", "Palm Journal", "Field Work", "Call or Text", "Request a Baseline")
 
 
 class VisibleText(HTMLParser):

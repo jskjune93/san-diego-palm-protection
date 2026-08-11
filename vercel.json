@@ -11,7 +11,7 @@
         }
       ],
       "destination": "https://www.sandiegopalmprotection.com/$1",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/",

@@ -74,7 +74,7 @@ def head(title: str, description: str, path: str, image: str = "background.jpg",
 
 
 def header(relative_root: str = "./", residential_primary: bool = False) -> str:
-    action_label = "Request Assessment" if residential_primary else "Property Walkthrough"
+    action_label = "Request Assessment" if residential_primary else "Request a Baseline"
     action_anchor = "homeowner-inquiry" if residential_primary else "organization-inquiry"
     action_event = "homeowner-inquiry-initiation" if residential_primary else "organization-inquiry-initiation"
     return f"""<a class="skip-link" href="#main">Skip to content</a>
@@ -140,7 +140,7 @@ def inquiry(relative_root: str = "./", residential_primary: bool = False) -> str
         if residential_primary else
         "Tell me about the property, the palms, and what you are responsible for. I work with managed palm portfolios, large estates, and homeowners protecting important mature palms."
     )
-    primary = f'<a class="button" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Property Walkthrough</a>'
+    primary = f'<a class="button" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Baseline</a>'
     secondary = f'<a class="button button-quiet" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a>'
     if residential_primary:
         primary, secondary = secondary.replace("button button-quiet", "button"), primary.replace('class="button"', 'class="button button-quiet"')
@@ -166,7 +166,7 @@ def footer(relative_root: str = "./", residential_primary: bool = False) -> str:
 
 
 def mobile_contact(relative_root: str = "./", residential_primary: bool = False) -> str:
-    action_label = "Request Assessment" if residential_primary else "Property Walkthrough"
+    action_label = "Request Assessment" if residential_primary else "Request a Baseline"
     action_anchor = "homeowner-inquiry" if residential_primary else "organization-inquiry"
     action_event = "homeowner-inquiry-initiation" if residential_primary else "organization-inquiry-initiation"
     return f"""<aside class="mobile-contact-bar" aria-label="Quick contact">
@@ -190,7 +190,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     residential_page = filename == "residential-palm-assessment.html"
     organization_page = not residential_page
     primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'homeowner-inquiry' if residential_page else 'organization-inquiry'}"
-    primary_label = "Request a Palm Assessment" if residential_page else "Request a Property Walkthrough"
+    primary_label = "Request a Palm Assessment" if residential_page else "Request a Baseline"
     primary_event = "homeowner-inquiry-initiation" if residential_page else "organization-inquiry-initiation"
     secondary_action = (
         f'<a class="button button-quiet" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Residential Palm Assessment</a>'
