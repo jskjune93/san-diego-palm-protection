@@ -44,7 +44,7 @@ def main() -> int:
         errors.append("homepage must contain exactly one concise stewardship statement")
     for scoped_fragment in (
         "Owner-led stewardship for valuable palm portfolios.",
-        "Our goal is to preserve the value of your mature landscape assets.",
+        "Protect valuable landscape assets. Reduce preventable palm loss.",
         "Preventive protection, South American palm weevil awareness",
         "The work is shaped by the palms, the property, and the decisions",
         "Residential and estate services remain available.",

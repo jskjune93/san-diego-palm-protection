@@ -15,7 +15,7 @@ POSITIONING = ROOT / "site-config" / "positioning.json"
 CRITICAL = {
     "index.html": (
         "owner-led stewardship for valuable palm portfolios",
-        "Our goal is to preserve the value of your mature landscape assets.",
+        "Protect valuable landscape assets. Reduce preventable palm loss.",
         "Stewardship &amp; Palm Health",
         "Documentation &amp; Portfolio Management",
         "Response, Removal &amp; Renewal",
@@ -23,7 +23,7 @@ CRITICAL = {
     ),
     "managed-property-palm-services.html": (
         "palm portfolio stewardship for managed properties",
-        "what sdpp takes responsibility for",
+        "protect the asset. reduce preventable loss. keep responsibility clear",
         "palm asset register",
         "baseline condition record",
         "recurring stewardship plan",
@@ -31,8 +31,8 @@ CRITICAL = {
         "material-change alerts",
         "periodic portfolio summary",
         "licensed treatment",
-        "Treatment is one tool. Stewardship is the ongoing model.",
-        "does not need to replace the landscape team",
+        "one accountable point of contact",
+        "works alongside existing landscapers",
         "SDPP-Commercial-Palm-Stewardship.pdf",
     ),
     "palm-records-monitoring-verification.html": (
@@ -62,7 +62,7 @@ def main() -> int:
     expected_pillars = ["Stewardship & Palm Health", "Protection & Treatment", "Documentation & Portfolio Management", "Response, Removal & Renewal"]
     if config.get("service_pillars") != expected_pillars:
         errors.append("canonical configuration must contain the four approved capability pillars in order")
-    if config.get("canonical_position") != "Our goal is to preserve the value of your mature landscape assets.":
+    if config.get("canonical_position") != "Protect valuable landscape assets. Reduce preventable palm loss. Give management one accountable point of contact and a defensible record of what was done.":
         errors.append("canonical positioning statement has drifted")
 
     if not DIST.exists():
