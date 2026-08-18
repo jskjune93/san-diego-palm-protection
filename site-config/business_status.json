@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "mode": "commercial",
-  "explanation": "San Diego Palm Protection provides owner-led palm portfolio stewardship for managed properties and owners of valuable mature palms in San Diego County. John Krause is the owner and holds California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. SDPP is insured, and residential and estate services remain available.",
+  "explanation": "San Diego Palm Protection provides owner-led palm portfolio stewardship for managed properties and owners of valuable mature palms in San Diego County. SDPP holds California Pest Control Business License No. 47756. John Krause is the owner and holds California Qualified Applicator License No. 175295, Category B — Landscape Maintenance. SDPP is insured, and residential and estate services remain available.",
   "pesticide_services_enabled": true,
   "tree_palm_contracting_enabled": false,
   "commercial_field_services_enabled": true,
@@ -32,6 +32,11 @@
     "category_name": "Landscape Maintenance",
     "issued_and_active": true
   },
+  "business_license": {
+    "license_type": "California Pest Control Business License",
+    "license_number": "47756",
+    "issued_and_active": true
+  },
   "insurance": {
     "insured": true,
     "public_wording": "Insured"
@@ -47,10 +52,11 @@
   "public_credentials": {
     "status_label": "Owner-Led Palm Stewardship",
     "service_summary": "Owner-led palm portfolio stewardship for managed properties and valuable mature palms, including individual-palm records, recurring care planning, licensed treatment when appropriate, documentation, decline response, and qualified-contractor coordination.",
+    "business_license": "California Pest Control Business License No. 47756",
     "individual_license": "California Qualified Applicator License No. 175295",
     "category": "Category B — Landscape Maintenance",
     "insurance": "Insured",
-    "licensing_statement": "California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured",
+    "licensing_statement": "California Pest Control Business License No. 47756 · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured",
     "exact_status": "San Diego Palm Protection provides owner-led palm portfolio stewardship, including individual-palm records, recurring care planning, licensed treatment within scope, documentation, decline response, and qualified-contractor coordination.",
     "scope_note": "Treatment recommendations and applications remain subject to the pesticide label, applicable law, site conditions, and agreed scope.",
     "effective_date": "2026-08-02"

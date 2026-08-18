@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the two-path offering, QAL-only public credentials, and outreach PDF."""
+"""Validate the two-path offering, public credentials, and outreach PDF."""
 
 from __future__ import annotations
 
@@ -15,11 +15,11 @@ ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
 POSITIONING = ROOT / "site-config" / "positioning.json"
 PDF = ROOT / "SDPP-Commercial-Palm-Stewardship.pdf"
-PDF_SHA256 = "8dcab8656ec9866a14a7b0cb65673552e1d516742cf7f50ca09bcf90c7d85a40"
+PDF_SHA256 = "013e0600c1859b4cdf196e59a1c6c7b56c388feaf447af92b1670ebd0f526885"
 
 QAL = "California Qualified Applicator License No. 175295"
+BUSINESS_LICENSE = "California Pest Control Business License No. 47756"
 CATEGORY = "Category B — Landscape Maintenance"
-PUBLIC_BUSINESS_LICENSE = re.compile(r"Pest Control Business License|\bPCBL?\b", re.I)
 OBSOLETE_SERVICE_STATUS = (
     r"not currently offering pesticide",
     r"cannot treat",
@@ -48,10 +48,8 @@ def main() -> int:
     expected_pillars = ["Stewardship & Palm Health", "Protection & Treatment", "Documentation & Portfolio Management", "Response, Removal & Renewal"]
     if config.get("service_pillars") != expected_pillars:
         errors.append("canonical configuration must retain the four approved capability pillars in order")
-    if config.get("public_credentials") != f"{QAL} · {CATEGORY} · Insured":
-        errors.append("canonical public credential line is not QAL-only")
-    if "business licens" not in config.get("private_operational_credentials", "").lower():
-        errors.append("private operational business-license state is not preserved")
+    if config.get("public_credentials") != f"{BUSINESS_LICENSE} · {QAL} · {CATEGORY} · Insured":
+        errors.append("canonical public credential line is incomplete")
 
     if not DIST.exists():
         errors.append("dist is missing")
@@ -61,13 +59,11 @@ def main() -> int:
     for path in public_html:
         text = path.read_text(encoding="utf-8-sig")
         rel = path.relative_to(DIST).as_posix()
-        if PUBLIC_BUSINESS_LICENSE.search(text):
-            errors.append(f"{rel}: public business-license credential remains")
         for pattern in OBSOLETE_SERVICE_STATUS:
             if re.search(pattern, text, re.I):
                 errors.append(f"{rel}: obsolete service-status language matched {pattern}")
-        if QAL not in text or CATEGORY not in text or "Insured" not in text:
-            errors.append(f"{rel}: QAL-only public credentials are incomplete")
+        if BUSINESS_LICENSE not in text or QAL not in text or CATEGORY not in text or "Insured" not in text:
+            errors.append(f"{rel}: public credentials are incomplete")
         if re.search(r"QAL.{0,30}(?:authorizes?|licenses?) (?:SDPP|the business)", text, re.I):
             errors.append(f"{rel}: QAL is represented as business authorization")
 
@@ -87,19 +83,15 @@ def main() -> int:
         if hashlib.sha256(PDF.read_bytes()).hexdigest() != PDF_SHA256:
             errors.append("canonical commercial outreach PDF hash has changed")
         text = compact(pdf_text(PDF))
-        for phrase in ("Palm Portfolio Baseline", "Annual Palm Stewardship Program", "Licensed preventive protection and treatment within scope", "Our goal is to preserve the value of your mature landscape assets.", "Request a Property Walkthrough", "175295", "Category B - Landscape Maintenance", "Insured"):
+        for phrase in ("Palm Portfolio Baseline", "Annual Palm Stewardship Program", "Licensed preventive protection and treatment within scope", "Our goal is to preserve the value of your mature landscape assets.", "Request a Property Walkthrough", "47756", "175295", "Category B", "Insured"):
             if phrase.lower() not in text.lower():
                 errors.append(f"commercial PDF missing {phrase}")
-        if PUBLIC_BUSINESS_LICENSE.search(text):
-            errors.append("commercial PDF displays the business license")
         for pattern in OBSOLETE_SERVICE_STATUS:
             if re.search(pattern, text, re.I):
                 errors.append(f"commercial PDF contains obsolete service-status language: {pattern}")
 
     for path in sorted(ROOT.glob("*.pdf")):
         text = compact(pdf_text(path))
-        if PUBLIC_BUSINESS_LICENSE.search(text):
-            errors.append(f"{path.name}: public PDF displays the business license")
         for pattern in OBSOLETE_SERVICE_STATUS:
             if re.search(pattern, text, re.I):
                 errors.append(f"{path.name}: public PDF contains obsolete service-status language: {pattern}")

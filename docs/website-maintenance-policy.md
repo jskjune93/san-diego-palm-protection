@@ -19,7 +19,7 @@ This policy is the permanent change-control standard for the public San Diego Pa
 
 ## Claims, trust, reviews, and pricing
 
-- Publish the approved public credential line only: California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured. Keep active business authorization in private operational records and never imply that the QAL alone authorizes business operation.
+- Publish the approved public credential line only: California Pest Control Business License No. 47756 · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured. Never imply that the QAL alone authorizes business operation.
 - Publish reviews only from an owner-approved exact quote and source. Never paraphrase a customer review or expose a private client.
 - Publish owner biography facts, service areas, civic participation, and affiliations only from an approved source record.
 - Publish a price only when its amount, scope, geography, exclusions, and current approval are documented. Otherwise explain the variables that determine scope and price.

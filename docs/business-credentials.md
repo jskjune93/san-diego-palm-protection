@@ -5,9 +5,10 @@
 Current owner-confirmed operational status, effective August 2, 2026:
 
 - John Krause is the owner.
+- California Pest Control Business License No. 47756 is active.
 - California Qualified Applicator License No. 175295 is active.
 - Category B — Landscape Maintenance.
-- SDPP's active business authorization remains in private operational and compliance records; it is not part of the public credential display.
+- SDPP's active business authorization is displayed publicly with the individual QAL and remains supported by private operational and compliance records.
 - SDPP is insured and provides palm assessment, monitoring, documentation, protection and pesticide treatment services as applicable.
 - Recurring stewardship is available for residential and managed properties.
 - Treatment remains subject to the pesticide label, applicable law, site conditions, agreed scope, and job-specific preflight.
@@ -21,7 +22,7 @@ The public site uses:
 
 Every public page uses this synchronized statement:
 
-> California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured
+> California Pest Control Business License No. 47756 · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured
 
 ## Owner workflow
 

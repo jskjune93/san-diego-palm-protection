@@ -40,6 +40,7 @@ def main() -> int:
     summary = credentials["service_summary"]
     label = credentials["status_label"]
     individual_license = credentials["individual_license"]
+    business_license = credentials["business_license"]
     category = credentials["category"]
     insurance = credentials["insurance"]
     licensing_statement = credentials["licensing_statement"]
@@ -58,6 +59,10 @@ def main() -> int:
         for phrase in UNSUPPORTED_CLAIMS:
             if phrase.lower() in lowered:
                 errors.append(f"{rel}: unsupported credential or insurance claim: {phrase}")
+        for match in re.finditer(r"(?:QAL|Qualified Applicator License)(?:\s+No\.|\s*#)?\s*175295", text, re.I):
+            nearby = text[max(0, match.start() - 300):match.end() + 300]
+            if not re.search(r"Pest Control Business License(?:\s+No\.|\s*#)?\s*47756", nearby, re.I):
+                errors.append(f"{rel}: QAL listing is not paired with Pest Control Business License No. 47756")
 
     for relative in PRIMARY_PAGES:
         path = ROOT / relative
@@ -65,11 +70,11 @@ def main() -> int:
         if START not in text or STYLE_LINK not in text:
             errors.append(f"{relative}: centralized credential component is missing")
         if relative == "index.html":
-            required_values = (summary, individual_license, category, insurance, "John Krause, Owner", label)
+            required_values = (summary, business_license, individual_license, category, insurance, "John Krause, Owner", label)
         elif relative == "about.html":
-            required_values = (individual_license, category, insurance, "John Krause", summary)
+            required_values = (business_license, individual_license, category, insurance, "John Krause", summary)
         else:
-            required_values = (summary, label, individual_license, category, insurance)
+            required_values = (summary, label, business_license, individual_license, category, insurance)
         if any(value not in text for value in required_values):
             errors.append(f"{relative}: qualified and insured wording is incomplete")
 
@@ -90,8 +95,9 @@ def main() -> int:
     qal_numbers = re.findall(r"(?:QAL|Qualified Applicator License)(?:\s+No\.|\s*#)?\s*(\d{4,})", all_public, re.I)
     if not qal_numbers or set(qal_numbers) != {"175295"}:
         errors.append(f"public QAL number set must be exactly 175295; found {sorted(set(qal_numbers))}")
-    if re.search(r"Pest Control Business License|\bPCBL?\b", all_public, re.I):
-        errors.append("public HTML must not display a Pest Control Business License credential")
+    business_license_numbers = re.findall(r"Pest Control Business License(?:\s+No\.|\s*#)?\s*(\d{4,})", all_public, re.I)
+    if not business_license_numbers or set(business_license_numbers) != {"47756"}:
+        errors.append(f"public Pest Control Business License number set must be exactly 47756; found {sorted(set(business_license_numbers))}")
     if "Category B — Landscape Maintenance" not in all_public:
         errors.append("public Category B wording is not Landscape Maintenance")
     if licensing_statement not in all_public:

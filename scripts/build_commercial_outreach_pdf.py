@@ -178,7 +178,7 @@ def build() -> None:
     c.line(42, 77, 570, 77)
     c.setFillColor(MUTED)
     c.setFont("Helvetica-Bold", 8.7)
-    c.drawCentredString(306, 58, "California Qualified Applicator License No. 175295  |  Category B - Landscape Maintenance  |  Insured")
+    c.drawCentredString(306, 58, "Pest Control Business License No. 47756  |  Qualified Applicator License No. 175295  |  Category B  |  Insured")
     c.setFont("Helvetica", 7.8)
     c.drawCentredString(306, 43, "Treatment follows the label, applicable law, site conditions, and agreed scope. No outcome is guaranteed.")
 

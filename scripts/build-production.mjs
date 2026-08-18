@@ -113,8 +113,6 @@ async function main() {
     /pre[- ]license/i,
     /referral[- ]only treatment/i,
     /production prelicense status/i,
-    /Pest Control Business License/i,
-    /\bPCBL?\b/i,
     /(?:sdpp|san diego palm protection) (?:cannot|can not|does not|doesn't) (?:provide )?(?:pesticide )?treat(?:ment)?/i,
     /treatment must be (?:provided|performed) by (?:a )?third[- ]party/i,
     /licensed applicator referral/i,
@@ -142,14 +140,14 @@ async function main() {
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
     "quarterly-palm-care-san-diego.html": ["Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"],
   };
-  const authoritativeLicenseStatement = "California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured";
+  const authoritativeLicenseStatement = "California Pest Control Business License No. 47756 · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured";
   for (const route of routes) {
     const relative = path.relative(root, route);
     const deployable = await readFile(path.join(output, relative), "utf8");
     if (!deployable.includes(authoritativeLicenseStatement)) {
       throw new Error(`Authoritative licensing statement missing in ${relative}`);
     }
-    if (!deployable.includes('name="business-credentials"') || !deployable.includes('"description": "California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured')) {
+    if (!deployable.includes('name="business-credentials"') || !deployable.includes('"description": "California Pest Control Business License No. 47756 · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured')) {
       throw new Error(`Licensing metadata or structured data missing in ${relative}`);
     }
   }

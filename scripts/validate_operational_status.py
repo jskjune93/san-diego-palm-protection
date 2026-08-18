@@ -22,8 +22,6 @@ FORBIDDEN = (
     r"pre[- ]license",
     r"referral[- ]only treatment",
     r"production prelicense status",
-    r"Pest Control Business License",
-    r"\bPCBL?\b",
     r"(?:sdpp|san diego palm protection) (?:cannot|can not|does not|doesn't) (?:provide )?(?:pesticide )?treat(?:ment)?",
     r"treatment must be (?:provided|performed) by (?:a )?third[- ]party",
     r"licensed applicator referral",
@@ -41,7 +39,7 @@ CRITICAL_PAGES = (
     "south-american-palm-weevil-treatment-san-diego.html",
 )
 
-AUTHORITATIVE_LICENSE_STATEMENT = "California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured"
+AUTHORITATIVE_LICENSE_STATEMENT = "California Pest Control Business License No. 47756 · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured"
 
 SOURCE_FILES = (
     ROOT / "scripts" / "build_core_pages.py",
@@ -82,6 +80,7 @@ def main() -> int:
                 if re.search(pattern, text, re.IGNORECASE):
                     errors.append(f"{rel}: obsolete service-status language matched {pattern}")
         required_shared = (
+            "California Pest Control Business License No. 47756",
             "California Qualified Applicator License No. 175295",
             "Category B — Landscape Maintenance",
             "Insured",

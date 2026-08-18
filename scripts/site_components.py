@@ -181,10 +181,10 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
     hero_note = '<p class="hero-microcopy">Identity &amp; baselines · Recurring plans &amp; records · Licensed treatment · Coordinated response</p>' if filename == "index.html" else ""
-    hero_trust = '<p class="hero-trust-line">Owner-operated • QAL No. 175295 • Category B — Landscape Maintenance • Insured</p>' if filename == "index.html" else ""
+    hero_trust = '<p class="hero-trust-line">Owner-operated • Pest Control Business License No. 47756 • QAL No. 175295 • Category B — Landscape Maintenance • Insured</p>' if filename == "index.html" else ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '
-        f'{escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'
+        f'{escape(public["business_license"])} and {escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'
         if filename == "residential-palm-assessment.html" else ""
     )
     residential_page = filename == "residential-palm-assessment.html"
