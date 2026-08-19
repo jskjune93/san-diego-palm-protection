@@ -207,10 +207,12 @@ def main() -> int:
         if entry["legacy_anchor"] not in ids_by_page[INDEX.resolve()]:
             errors.append(f"legacy anchor not preserved on index: {entry['legacy_anchor']}")
         if entry.get("page"):
-            article = ROOT / "palm-journal" / f"{slug}.html"
+            directory_route = entry.get("directory_route", False)
+            article = (ROOT / "palm-journal" / slug / "index.html") if directory_route else (ROOT / "palm-journal" / f"{slug}.html")
+            expected_href = f"palm-journal/{slug}/" if directory_route else f"palm-journal/{slug}.html"
             if not article.exists():
                 errors.append(f"missing article page for {slug}")
-            if f"palm-journal/{slug}.html" not in index_text:
+            if expected_href not in index_text:
                 errors.append(f"journal card does not point to article page: {slug}")
             article_text = article.read_text(encoding="utf-8-sig") if article.exists() else ""
             if entry["legacy_anchor"] not in article_text:
@@ -349,7 +351,13 @@ def main() -> int:
         errors.append("Old Escondido initiative does not link to Report a Palm")
     if "Share a palm observation or dated photograph." not in index_text:
         errors.append("Palm Journal is missing contribution language")
-    article_pages = sorted((ROOT / "palm-journal").glob("*.html"))
+    article_pages = [
+        (ROOT / "palm-journal" / entry["slug"] / "index.html")
+        if entry.get("directory_route")
+        else (ROOT / "palm-journal" / f"{entry['slug']}.html")
+        for entry in entries
+        if entry.get("status") == "published" and entry.get("page")
+    ]
     for article in article_pages:
         if "Share a palm observation or dated photograph." not in article.read_text(encoding="utf-8-sig"):
             errors.append(f"journal article missing standardized contribution footer: {article.name}")
@@ -468,7 +476,7 @@ def main() -> int:
     print("VALIDATION_OK" if not errors else "VALIDATION_FAILED")
     print(f"html_files_checked={len(html_files)}")
     print(f"journal_manifest_entries={len(entries)}")
-    print(f"journal_article_pages={len(list((ROOT / 'palm-journal').glob('*.html')))}")
+    print(f"journal_article_pages={len(article_pages)}")
     print(f"legacy_anchors_checked={len(anchors)}")
     print(f"sitemap_present={SITEMAP.exists()}")
     print(f"robots_present={ROBOTS.exists()}")

@@ -31,8 +31,10 @@ def read_entries() -> list[dict]:
     for entry in entries:
         required = [
             "slug", "title", "date", "date_label", "location", "category", "excerpt",
-            "primary_image", "primary_image_alt", "legacy_anchor", "status", "page",
+            "legacy_anchor", "status", "page",
         ]
+        if not entry.get("allow_no_image"):
+            required.extend(["primary_image", "primary_image_alt"])
         for key in required:
             if key not in entry or entry[key] in ("", None):
                 errors.append(f"{entry.get('slug', '<unknown>')}: missing {key}")
@@ -69,7 +71,14 @@ def absolutize(path: str) -> str:
 
 def article_href(entry: dict, from_root: bool = True) -> str:
     prefix = "./" if from_root else ""
-    return f"{prefix}palm-journal/{entry['slug']}.html" if from_root else f"./{entry['slug']}.html"
+    suffix = "/" if entry.get("directory_route") else ".html"
+    return f"{prefix}palm-journal/{entry['slug']}{suffix}" if from_root else f"./{entry['slug']}{suffix}"
+
+
+def article_output_path(entry: dict) -> Path:
+    if entry.get("directory_route"):
+        return JOURNAL_DIR / entry["slug"] / "index.html"
+    return JOURNAL_DIR / f"{entry['slug']}.html"
 
 
 def card_image_src(entry: dict) -> str:
@@ -199,13 +208,16 @@ def json_ld_article(entry: dict) -> str:
         "@type": "BlogPosting",
         "headline": entry["title"],
         "description": meta_description(entry),
-        "image": absolutize(entry["primary_image"]),
+    }
+    if entry.get("primary_image"):
+        data["image"] = absolutize(entry["primary_image"])
+    data.update({
         "datePublished": entry["date"],
         "dateModified": entry.get("modified_date", MODIFIED_DATE),
         "author": {"@type": "Organization", "name": "San Diego Palm Protection"},
         "publisher": {"@type": "Organization", "name": "San Diego Palm Protection", "logo": {"@type": "ImageObject", "url": f"{BASE_URL}/logo.png"}},
         "mainEntityOfPage": entry["canonical_url"],
-    }
+    })
     return f'  <script type="application/ld+json">\n{json.dumps(data, indent=2)}\n  </script>'
 
 
@@ -241,8 +253,9 @@ def render_index(entries: list[dict]) -> None:
             action = f'<a class="read-link" href="{article_href(entry)}">Read the field note</a>'
         else:
             action = ''
+        card_image = f'<img src="{escape(img)}" alt="{escape(entry["primary_image_alt"])}" loading="lazy" decoding="async">' if img else ''
         cards.append(f'''      <article class="journal-card" id="{card_id}" data-slug="{escape(entry['slug'])}" data-page="{str(entry.get('page')).lower()}">
-        <img src="{escape(img)}" alt="{escape(entry['primary_image_alt'])}" loading="lazy" decoding="async">
+{card_image}
         <div class="journal-card-content">
           <span class="category-label">{escape(entry['category'])}</span>
           <h2>{escape(entry['title'])}</h2>
@@ -513,45 +526,47 @@ def render_documented_loss_page() -> None:
 
 def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     content = (CONTENT_DIR / f"{entry['slug']}.html").read_text(encoding="utf-8")
+    relative_root = "../../" if entry.get("directory_route") else "../"
+    journal_relative = "../" if entry.get("directory_route") else "./"
     related_links = []
     for slug in entry.get("related", []):
         related = entries_by_slug.get(slug)
         if related and related.get("page") and related.get("status") == "published":
-            related_links.append(f'<a href="./{escape(related["slug"])}.html">{escape(related["title"])}</a>')
+            related_links.append(f'<a href="{journal_relative}{escape(related["slug"])}.html">{escape(related["title"])}</a>')
     if not related_links:
-        related_links.append('<a href="../palm-journal-new.html">Return to the Palm Journal library</a>')
+        related_links.append(f'<a href="{relative_root}palm-journal-new.html">Return to the Palm Journal library</a>')
     category = entry.get("category", "").lower()
     title_text = entry.get("title", "").lower()
     topical_links = [
-        '<a href="../palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm health assessment</a>'
+        f'<a href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm health assessment</a>'
     ]
     if "sapw" in category or "weevil" in category or "weevil" in title_text:
         topical_links = [
-            '<a href="../sapw.html">South American palm weevil signs and local guidance</a>',
-            '<a href="../south-american-palm-weevil-treatment-san-diego.html">South American palm weevil treatment in San Diego</a>',
+            f'<a href="{relative_root}sapw.html">South American palm weevil signs and local guidance</a>',
+            f'<a href="{relative_root}south-american-palm-weevil-treatment-san-diego.html">South American palm weevil treatment in San Diego</a>',
         ]
     elif "preservation" in category or "historic" in category or "loss" in category:
         topical_links = [
-            '<a href="../quarterly-palm-care-san-diego.html">Mature palm stewardship and preservation</a>',
-            '<a href="../palm-removal-coordination.html">Palm decline, removal, and replacement coordination</a>',
+            f'<a href="{relative_root}quarterly-palm-care-san-diego.html">Mature palm stewardship and preservation</a>',
+            f'<a href="{relative_root}palm-removal-coordination.html">Palm decline, removal, and replacement coordination</a>',
         ]
     elif "health" in category or "assessment" in title_text:
         topical_links = [
-            '<a href="../residential-palm-assessment.html">Palm health assessment in San Diego</a>',
-            '<a href="../palm-stewardship-plans.html">Palm treatment and preventive protection</a>',
+            f'<a href="{relative_root}residential-palm-assessment.html">Palm health assessment in San Diego</a>',
+            f'<a href="{relative_root}palm-stewardship-plans.html">Palm treatment and preventive protection</a>',
         ]
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-{shared_head(page_title(entry), meta_description(entry), entry['canonical_url'], absolutize(entry['primary_image']), json_ld_article(entry))}
-{styles('../')}
+{shared_head(page_title(entry), meta_description(entry), entry['canonical_url'], absolutize(entry.get('primary_image', 'logo.png')), json_ld_article(entry))}
+{styles(relative_root)}
 </head>
 <body>
 <!-- {GENERATED_NOTE} -->
-{header('../')}
+{header(relative_root)}
 <section class="hero">
   <div class="hero-inner">
-    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="../palm-journal-new.html">Palm Journal</a> / {escape(entry['title'])}</nav>
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{relative_root}index.html">Home</a> / <a href="{relative_root}palm-journal-new.html">Palm Journal</a> / {escape(entry['title'])}</nav>
     <span class="eyebrow">{escape(entry['category'])}</span>
     <h1>{escape(entry['title'])}</h1>
     <p class="article-meta">{escape(display_meta(entry))}</p>
@@ -574,15 +589,17 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
   </article>
   <section class="assessment-cta" id="contact">
     <h2>Seen something similar?</h2>
-    <p><a href="../report-a-palm.html">Share a palm observation or dated photograph.</a> Submissions are reviewed privately and are not published automatically.</p>
-    <p><a href="../palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm assessment</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
+    <p><a href="{relative_root}report-a-palm.html">Share a palm observation or dated photograph.</a> Submissions are reviewed privately and are not published automatically.</p>
+    <p><a href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm assessment</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
-{footer('../')}
+{footer(relative_root)}
 </body>
 </html>
 '''
-    (JOURNAL_DIR / f"{entry['slug']}.html").write_text(html, encoding="utf-8")
+    output_path = article_output_path(entry)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(html, encoding="utf-8")
 
 
 def update_sitemap(entries: list[dict]) -> None:

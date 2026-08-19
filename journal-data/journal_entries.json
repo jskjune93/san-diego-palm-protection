@@ -1,5 +1,33 @@
 [
   {
+    "slug": "when-palms-were-california-gold",
+    "title": "When Palms Were California Gold",
+    "date": "2026-08-19",
+    "date_label": "San Diego County | August 19, 2026",
+    "location": "San Diego County",
+    "category": "Palm Preservation",
+    "topic": "The specimen-palm trade, an active relocation search, and the changed market for Canary Island date palms",
+    "excerpt": "An active San Diego palm-relocation search reveals how Southern California's specimen-palm trade flourished—and why Canary Island date palms are now being left behind.",
+    "page": true,
+    "directory_route": true,
+    "substantial": true,
+    "review": "owner-supplied draft rewritten for the SDPP Palm Journal with identifying property details withheld",
+    "related": [
+      "old-escondido-living-landmarks",
+      "poway-old-winery-cidp",
+      "when-sapw-became-local"
+    ],
+    "legacy_anchor": "when-palms-were-california-gold",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/when-palms-were-california-gold/",
+    "allow_no_image": true,
+    "primary_image": "",
+    "primary_image_alt": "",
+    "gallery_images": [],
+    "classification": "Palm Preservation",
+    "modified_date": "2026-08-19"
+  },
+  {
     "slug": "the-palm-record-outlives-the-palm",
     "title": "The Palm Record Outlives the Palm",
     "date": "2026-08-11",

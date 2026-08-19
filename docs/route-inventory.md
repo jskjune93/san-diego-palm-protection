@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-45 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; five audience, proof, and owner-trust routes and one evidence-led Palm Journal article were added. No route required a redirect because each valuable URL retains a distinct purpose.
+46 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; five audience, proof, and owner-trust routes and two evidence-led Palm Journal articles were added. No route required a redirect because each valuable URL retains a distinct purpose.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -37,6 +37,7 @@
 | `/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html` | preserved / regenerated | Palm Journal evidence: Historic Homes and Landscapes |
 | `/palm-journal/the-palm-record-outlives-the-palm.html` | created | Palm Journal evidence: why stable palm identity and dated records matter before and after loss |
 | `/palm-journal/when-sapw-became-local.html` | preserved / regenerated | Palm Journal evidence: Owner-Documented Field Record |
+| `/palm-journal/when-palms-were-california-gold/` | created | Palm Journal editorial: specimen-palm relocation, preservation value, and the changed Canary Island date palm market |
 | `/palm-proof-examples.html` | created | Approved sanitized proof presentation and privacy boundary |
 | `/palm-records-monitoring-verification.html` | restructured | Canonical assessment, monitoring, documentation, and inquiry overview |
 | `/palm-removal-coordination.html` | restructured | Decline, removal, documented loss, and replacement pathway |
