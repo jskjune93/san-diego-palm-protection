@@ -15,6 +15,7 @@
 | `/palm-care-rancho-santa-fe.html` | consolidated in place | Rancho Santa Fe local discovery route |
 | `/palm-faq-san-diego.html` | restructured | Educational decision support |
 | `/palm-journal-new.html` | restructured | Field evidence library and Journal gateway |
+| `/palm-journal/palm-stewardship-solving-the-whole-problem.html` | created | Palm Journal stewardship feature connecting identification, treatment, monitoring, documentation, relocation research, and owner guidance |
 | `/palm-journal/cidp-assessment-local-palm-health-concerns.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/classic-old-escondido-canary-island-date-palm.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
 | `/palm-journal/documented-loss/` | restructured | Confirmed-loss collection with attribution boundaries |

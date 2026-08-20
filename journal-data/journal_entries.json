@@ -1,5 +1,44 @@
 [
   {
+    "slug": "palm-stewardship-solving-the-whole-problem",
+    "title": "Palm Stewardship Means Solving the Whole Problem",
+    "date": "2026-08-19",
+    "date_label": "Escondido | August 19, 2026",
+    "location": "Escondido",
+    "category": "Palm Stewardship",
+    "topic": "Coordinated identification, treatment, monitoring, documentation, relocation research and owner guidance",
+    "excerpt": "Palm stewardship connects identification, treatment, monitoring, documentation, relocation research and practical guidance for the property owner.",
+    "page": true,
+    "substantial": true,
+    "review": "owner-authorized stewardship article using privacy-cropped photographs from a private Escondido property",
+    "related": [
+      "old-escondido-living-landmarks",
+      "the-palm-record-outlives-the-palm",
+      "healthy-palm-growth"
+    ],
+    "legacy_anchor": "palm-stewardship-solving-the-whole-problem",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/palm-stewardship-solving-the-whole-problem.html",
+    "primary_image": "./images/palm-journal/palm-stewardship-solving-the-whole-problem/01-multi-headed-sago.jpg",
+    "primary_image_alt": "Large multi-headed sago cycad at a private Escondido property",
+    "gallery_images": [
+      {
+        "src": "./images/palm-journal/palm-stewardship-solving-the-whole-problem/02-mediterranean-fan-palm.jpg",
+        "alt": "Established multi-trunk Mediterranean fan palm in Escondido"
+      },
+      {
+        "src": "./images/palm-journal/palm-stewardship-solving-the-whole-problem/03-encephalartos-cycad.jpg",
+        "alt": "Established Encephalartos cycad being evaluated by San Diego Palm Protection"
+      },
+      {
+        "src": "./images/palm-journal/palm-stewardship-solving-the-whole-problem/04-pygmy-date-grouping.jpg",
+        "alt": "Mature pygmy-date palm grouping at a private Escondido property"
+      }
+    ],
+    "classification": "Palm Stewardship",
+    "modified_date": "2026-08-19"
+  },
+  {
     "slug": "when-palms-were-california-gold",
     "title": "When Palms Were California Gold",
     "date": "2026-08-19",
