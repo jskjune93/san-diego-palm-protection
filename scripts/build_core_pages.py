@@ -219,7 +219,7 @@ PAGES: dict[str, dict] = {
         "description": "Palm assessment, preventive treatment, fertilization, recurring monitoring, portfolio reporting, and decline response for San Diego properties.",
         "eyebrow": "Palm services in San Diego County", "h1": "Palm assessment, treatment, and management services.",
         "lede": "I connect assessment, licensed treatment, recurring care, photographs, and written records so owners and managers know what each important palm needs next.",
-        "image": "journal-monitoring.jpg",
+        "image": "canary-island-date-palm-mansion-poway.jpg",
         "body": section("Assessment, Protection & Treatment", "The work follows the palm from the first visit through the next responsible action.", "Assessment, treatment, care, and documentation stay connected.", cards([
             ("Palm Assessment & Baseline", "I examine the palm from the ground, take repeatable photographs, document visible conditions, and establish the starting record."),
             ("Preventive Protection & Treatment", "I provide licensed pesticide treatment when appropriate for the palm, site, label, and agreed scope."),
@@ -241,7 +241,7 @@ PAGES: dict[str, dict] = {
         "description": "Recurring palm stewardship for mature-palm preservation, including health visits, fertilization, irrigation review, preventive treatment, and monitoring.",
         "eyebrow": "Recurring stewardship", "h1": "Palm stewardship and preservation, visit after visit.",
         "lede": "Return visits keep palm health, care, protection, treatment history, and changing priorities connected over time. The schedule follows the palms, the property, and the agreed scope.",
-        "image": "journal-seasonal.jpg",
+        "image": "cidp-palms-poway.jpg",
         "body": section("Recurring care", "Each visit advances the stewardship plan.", "I review current palm health and site conditions, carry out agreed care within scope, and keep the history useful for the next decision.", process([
             ("Observe", "Review palm health, site conditions, watering or irrigation concerns, and changes since the prior visit."),
             ("Care", "Address agreed fertilization, preventive protection, or treatment when appropriate for the palm and property."),
@@ -358,7 +358,7 @@ PAGES: dict[str, dict] = {
         "description": "Palm tree treatment and preventive protection for mature palms in San Diego and North County, based on an on-site assessment, label requirements, and site conditions.",
         "eyebrow": "Protection and treatment", "h1": "Palm treatment and preventive protection in San Diego.",
         "lede": "I assess the palm and site, explain the protection options, and provide pesticide treatment when it is appropriate for the species, condition, property, and agreed scope.",
-        "image": "treatment.jpg",
+        "image": "early-south-american-palm-weevil-cidp-poway.jpg",
         "body": section("Protection and treatment", "I start with the palm and the site.", "I review visible conditions, known pest pressure, treatment history, access, and the owner's goals before recommending a plan.", '<p class="note">Protection and treatment services are available when they are appropriate for the palm and property.</p>') +
         section("When protection may be considered", "The recommendation follows the palm and the evidence.", "Mature Canary Island date palms, locally significant palms, known pest pressure, visible change, or a prevention objective may warrant assessment. A symptom or photograph alone does not establish a diagnosis or automatically justify treatment.", cards([
             ("Assessment and observation", "Document visible condition, property context, history, access, and the decision the client needs to make."),
@@ -402,7 +402,7 @@ PAGES: dict[str, dict] = {
         "description": "John Krause documents and follows mature palms in Old Escondido, where he lives and has dealt with South American palm weevil activity firsthand.",
         "eyebrow": "Based in Old Escondido", "h1": "These palms are part of my neighborhood.",
         "lede": "I live in Old Escondido, photograph its mature palms, and have dealt with South American palm weevil activity on my own property.",
-        "image": "beautiful-old_escondido-cidp.jpg",
+        "image": "historic_escondido-cidp.jpg",
         "body": section("Why I pay attention", "A mature palm can change faster than people expect.", "I have seen important neighborhood palms decline and disappear. I want owners to have dated photographs before memory becomes the only baseline.", three_pillars()) +
         section("Municipal context", "Accurate participation wording.", "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.", '<p class="note">This statement describes a submission for consideration. It does not state or imply City endorsement, partnership, selection, approval, or adoption.</p>', "section-tint")
     },
@@ -411,7 +411,7 @@ PAGES: dict[str, dict] = {
         "description": "Private palm observation and photo-review inquiry with explicit permissions and no automatic publication.",
         "eyebrow": "Private inquiry", "h1": "Report a Palm or Request Review",
         "lede": "Prepare a private email handoff. Nothing is published automatically, and this page does not upload or store photographs.",
-        "image": "evidence1.jpg",
+        "image": "driveway-cidp-poway.jpg",
         "body": section("Private handoff", "Prepare the record before opening email.", "The report is not delivered until you send it from your configured email application.", f'''{compact_credentials("BUSINESS_CREDENTIALS_CONTACT")}
 <form id="observation-form" novalidate>
 <fieldset><legend>About you</legend><div class="form-grid"><div><label for="name">Name</label><input id="name" name="name" required></div><div><label for="email">Email</label><input id="email" name="email" type="email" required></div></div></fieldset>
@@ -425,11 +425,11 @@ PAGES: dict[str, dict] = {
 
 
 GENERIC = {
-    "canary-island-date-palm-care-san-diego.html": ("Canary Island Date Palm Care & Treatment in San Diego", "Species pathway", "Canary Island date palm assessment, treatment, recurring care, nutrition and irrigation review, preservation planning, and decline response in San Diego.", "CIDP_big.jpg"),
+    "canary-island-date-palm-care-san-diego.html": ("Canary Island Date Palm Care & Treatment in San Diego", "Species pathway", "Canary Island date palm assessment, treatment, recurring care, nutrition and irrigation review, preservation planning, and decline response in San Diego.", "mansion_healthy_cidp_poway_three.jpg"),
     "cidp-risk-checklist.html": ("Canary Island Date Palm Risk Checklist", "Educational checklist", "A practical observation checklist to prepare for an assessment without substituting a diagnosis or safety evaluation.", "poway-what-does-sapw-look-like-cidp.jpg"),
-    "palm-care-escondido.html": ("Palm Care & Treatment in Escondido", "Local service pathway", "Palm assessment, treatment, recurring care, preservation, and managed-property support from an owner-led specialist based in Old Escondido.", "Old-Escondido_full-CIDP.jpg"),
+    "palm-care-escondido.html": ("Palm Care & Treatment in Escondido", "Local service pathway", "Palm assessment, treatment, recurring care, preservation, and managed-property support from an owner-led specialist based in Old Escondido.", "mature-cidp-old_escondido.jpg"),
     "palm-care-poway.html": ("Palm Care & Treatment in Poway", "Local service pathway", "Palm assessment, treatment, recurring care, and preservation planning for residential, estate, and managed properties in Poway.", "Healthy-CIDP-Poway.jpg"),
-    "palm-care-rancho-santa-fe.html": ("Palm Care & Treatment in Rancho Santa Fe", "Local service pathway", "Discreet palm assessment, treatment, recurring stewardship, and preservation planning for Rancho Santa Fe estates and managed properties.", "RSF1.jpg"),
+    "palm-care-rancho-santa-fe.html": ("Palm Care & Treatment in Rancho Santa Fe", "Local service pathway", "Discreet palm assessment, treatment, recurring stewardship, and preservation planning for Rancho Santa Fe estates and managed properties.", "RSF3.jpg"),
     "palm-faq-san-diego.html": ("Palm Care, Treatment & Assessment FAQ", "Education & decision support", "Answers about palm assessments, treatment, monitoring, reporting, managed properties, visible decline, service limits, and next steps in San Diego.", "journal-overview.jpg"),
     "palm-sourcing-installation.html": ("Palm Sourcing, Installation & Replacement Planning", "Response, Removal & Replacement", "Replacement planning connects site constraints, appropriate selection, sourcing questions, installation responsibilities, baseline documentation, and establishment monitoring.", "Bismarck-Specimen-Escondido.jpg"),
     "specimen-palms-cycads.html": ("Specimen Palms & Cycads", "Replacement planning", "Explore significant palm and cycad landscape possibilities with realistic site, sourcing, installation, documentation, and establishment considerations.", "Bismarck.jpg"),
@@ -496,6 +496,10 @@ def write_pages() -> None:
             "eyebrow": eyebrow, "h1": h1, "lede": lede, "image": image,
             "body": generic_body(filename),
         }
+    hero_images = [data["image"] for data in pages.values()]
+    duplicate_hero_images = sorted({image for image in hero_images if hero_images.count(image) > 1})
+    if duplicate_hero_images:
+        raise SystemExit(f"Core page hero images must be unique: {', '.join(duplicate_hero_images)}")
     for filename, data in pages.items():
         if filename == "urban-forest-palm-documentation.html":
             schema = {

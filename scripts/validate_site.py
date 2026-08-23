@@ -24,6 +24,9 @@ TREATMENT_ROUTE = "./palm-stewardship-plans.html"
 SKIP_SCHEMES = ("http://", "https://", "mailto:", "tel:", "sms:", "data:")
 ENCODING_ARTIFACTS = ["â€", "â€™", "â€œ", "â€�", "Â", "�"]
 WINDOWS_PATH_RE = re.compile(r"\b[A-Za-z]:\\\\")
+HERO_IMAGE_RE = re.compile(
+    r'<section\s+class="page-hero"\s+style="--hero-image:url\([\'\"]?/?([^\'\")]+)'
+)
 
 
 class PageParser(HTMLParser):
@@ -173,6 +176,21 @@ def main() -> int:
                     ids_by_page[target_resolved] = set(target_parser.ids)
                 if anchor not in ids_by_page.get(target_resolved, set()):
                     errors.append(f"{rel}: missing anchor target {href}")
+
+    hero_pages_by_image: dict[str, list[str]] = {}
+    for path, (text, _) in pages.items():
+        hero_match = HERO_IMAGE_RE.search(text)
+        if not hero_match:
+            continue
+        hero_image = hero_match.group(1)
+        hero_pages_by_image.setdefault(hero_image, []).append(normalize_rel(path))
+        if not (ROOT / hero_image).exists():
+            errors.append(f"{normalize_rel(path)}: missing hero image {hero_image}")
+    for hero_image, hero_pages in hero_pages_by_image.items():
+        if len(hero_pages) > 1:
+            errors.append(
+                f"hero image reused across pages: {hero_image} ({', '.join(sorted(hero_pages))})"
+            )
 
     titles = {}
     descriptions = {}
