@@ -160,7 +160,7 @@ PAGES: dict[str, dict] = {
         "eyebrow": "About San Diego Palm Protection",
         "h1": "I look at the palm, take the photographs, and write the report.",
         "lede": "SDPP began after South American palm weevil activity and palm loss reached my own Old Escondido property.",
-        "image": "beautiful-old_escondido-cidp.jpg",
+        "image": "beautiful-old-escondido-cidp-san-diego-palm-protection.jpg",
         "body": section("About John", "Local experience shapes how I approach the work.", "SDPP grew from firsthand experience with the threat facing the mature palms that help define Old Escondido and other San Diego communities.", '''<div class="about-john-profile">
 <figure class="about-john-photo">
   <picture>
@@ -379,7 +379,7 @@ PAGES: dict[str, dict] = {
         "eyebrow": "Protection and treatment",
         "h1": "South American Palm Weevil Treatment in San Diego",
         "lede": "I provide South American palm weevil assessment, preventive protection, pesticide treatment, monitoring, and treatment records for Canary Island date palms when the palm and site are suitable.",
-        "image": "treatment.jpg",
+        "image": "mature-palm-documentation-and-landscape-context-in-poway-san-diego-palm-protection.jpg",
         "body": section("Documentation before decisions", "A visible-condition record supports better questions.", "The review considers palm species, visible condition, reported history, known pest pressure, access, timing, prior treatment information, and client objectives. Preventive treatment is available when appropriate, but photographs or a single symptom do not establish SAPW or another diagnosis.", cards([
             ("Document", "Establish dated photographs, observations, reported history, and limitations."),
             ("Prepare", "Separate monitoring, confirmation, preventive treatment, and urgent response paths."),
@@ -427,11 +427,11 @@ PAGES: dict[str, dict] = {
 GENERIC = {
     "canary-island-date-palm-care-san-diego.html": ("Canary Island Date Palm Care & Treatment in San Diego", "Species pathway", "Canary Island date palm assessment, treatment, recurring care, nutrition and irrigation review, preservation planning, and decline response in San Diego.", "mansion_healthy_cidp_poway_three.jpg"),
     "cidp-risk-checklist.html": ("Canary Island Date Palm Risk Checklist", "Educational checklist", "A practical observation checklist to prepare for an assessment without substituting a diagnosis or safety evaluation.", "poway-what-does-sapw-look-like-cidp.jpg"),
-    "palm-care-escondido.html": ("Palm Care & Treatment in Escondido", "Local service pathway", "Palm assessment, treatment, recurring care, preservation, and managed-property support from an owner-led specialist based in Old Escondido.", "mature-cidp-old_escondido.jpg"),
-    "palm-care-poway.html": ("Palm Care & Treatment in Poway", "Local service pathway", "Palm assessment, treatment, recurring care, and preservation planning for residential, estate, and managed properties in Poway.", "Healthy-CIDP-Poway.jpg"),
-    "palm-care-rancho-santa-fe.html": ("Palm Care & Treatment in Rancho Santa Fe", "Local service pathway", "Discreet palm assessment, treatment, recurring stewardship, and preservation planning for Rancho Santa Fe estates and managed properties.", "RSF3.jpg"),
+    "palm-care-escondido.html": ("Palm Care & Treatment in Escondido", "Local service pathway", "Palm assessment, treatment, recurring care, preservation, and managed-property support from an owner-led specialist based in Old Escondido.", "mature-cidp-old-escondido-san-diego-palm-protection.jpg"),
+    "palm-care-poway.html": ("Palm Care & Treatment in Poway", "Local service pathway", "Palm assessment, treatment, recurring care, and preservation planning for residential, estate, and managed properties in Poway.", "lake-poway-1-palm-san-diego-palm-protection.jpg"),
+    "palm-care-rancho-santa-fe.html": ("Palm Care & Treatment in Rancho Santa Fe", "Local service pathway", "Discreet palm assessment, treatment, recurring stewardship, and preservation planning for Rancho Santa Fe estates and managed properties.", "healthy-canary-island-date-palm-in-rancho-santa-fe-san-diego-palm-protection.jpg"),
     "palm-faq-san-diego.html": ("Palm Care, Treatment & Assessment FAQ", "Education & decision support", "Answers about palm assessments, treatment, monitoring, reporting, managed properties, visible decline, service limits, and next steps in San Diego.", "journal-overview.jpg"),
-    "palm-sourcing-installation.html": ("Palm Sourcing, Installation & Replacement Planning", "Response, Removal & Replacement", "Replacement planning connects site constraints, appropriate selection, sourcing questions, installation responsibilities, baseline documentation, and establishment monitoring.", "Bismarck-Specimen-Escondido.jpg"),
+    "palm-sourcing-installation.html": ("Palm Sourcing, Installation & Replacement Planning", "Response, Removal & Replacement", "Replacement planning connects site constraints, appropriate selection, sourcing questions, installation responsibilities, baseline documentation, and establishment monitoring.", "bismarck-specimen-escondido-palm-san-diego-palm-protection.jpg"),
     "specimen-palms-cycads.html": ("Specimen Palms & Cycads", "Replacement planning", "Explore significant palm and cycad landscape possibilities with realistic site, sourcing, installation, documentation, and establishment considerations.", "Bismarck.jpg"),
 }
 
