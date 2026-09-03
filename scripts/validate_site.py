@@ -371,7 +371,6 @@ def main() -> int:
     if required_current_scope not in homepage_text or required_qualified_insured_scope not in records_text:
         errors.append("current stewardship offer and credential summary are not consistently identified")
     for path in (
-            ROOT / "index.html",
             RECORDS_PAGE,
             REPORT_PAGE,
             ROOT / "palm-stewardship-plans.html",

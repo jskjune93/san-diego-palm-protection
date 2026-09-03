@@ -25,7 +25,6 @@ CONTACT_START = "<!-- BUSINESS_CREDENTIALS_CONTACT:START -->"
 CONTACT_END = "<!-- BUSINESS_CREDENTIALS_CONTACT:END -->"
 
 PRIMARY_PAGES = (
-    "index.html",
     "about.html",
     "managed-property-palm-services.html",
     "urban-forest-palm-documentation.html",

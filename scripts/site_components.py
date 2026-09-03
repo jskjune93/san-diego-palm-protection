@@ -179,7 +179,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
     hero_note = '<p class="hero-microcopy">SAPW prevention · Licensed treatment · Recurring palm care</p><p class="hero-photo-credit">SDPP field photograph · Old Escondido</p>' if filename == "index.html" else ""
-    hero_trust = '<p class="hero-trust-line">Owner-operated • Pest Control Business License No. 47756 • QAL No. 175295 • Category B — Landscape Maintenance • Insured</p>' if filename == "index.html" else ""
+    hero_trust = ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '
         f'{escape(public["business_license"])} and {escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'
@@ -210,7 +210,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
     <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div>
   </section>
-  <div class="trust-wrap trust-wrap--compact">{homepage_credentials() if filename == "index.html" else about_credentials() if filename == "about.html" else compact_credentials("BUSINESS_CREDENTIALS")}</div>
+{'' if filename == "index.html" else f'  <div class="trust-wrap trust-wrap--compact">{about_credentials() if filename == "about.html" else compact_credentials("BUSINESS_CREDENTIALS")}</div>'}
   {body}
 {inquiry_band}
 </main>

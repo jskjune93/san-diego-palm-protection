@@ -31,7 +31,7 @@ def main() -> int:
         public["individual_license"]: 2,
         public["category"]: 3,
         "Insured": 3,
-        public["service_summary"]: 1,
+        public["service_summary"]: 0,
     }
     for phrase, maximum in limits.items():
         count = home.lower().count(phrase.lower())
@@ -40,8 +40,8 @@ def main() -> int:
     descriptive_qualified = len(re.findall(r"\bQualified\b(?!\s+Applicator\s+License)", home))
     if descriptive_qualified > 1:
         errors.append(f"homepage repeats descriptive 'Qualified' {descriptive_qualified} times; maximum is 1")
-    if home.count(public["service_summary"]) != 1:
-        errors.append("homepage must contain exactly one concise stewardship statement")
+    if home.count(public["service_summary"]) != 0:
+        errors.append("homepage must not display the detailed credential-panel service statement")
     for scoped_fragment in (
         "South American Palm Weevil Protection for San Diego’s Mature Palms",
         "licensed preventive treatment",
@@ -107,7 +107,7 @@ def main() -> int:
             print(f" - {error}")
         return 1
     print("HOMEPAGE_ABOUT_VALIDATION_OK")
-    print("homepage_full_qal<=2 homepage_full_category<=3 homepage_insured<=3 homepage_service_statement=1")
+    print("homepage_full_qal<=2 homepage_full_category<=3 homepage_insured<=3 homepage_service_statement=0")
     return 0
 
 
