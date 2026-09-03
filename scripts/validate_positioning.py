@@ -22,10 +22,10 @@ CRITICAL = {
     ),
     "palm-records-monitoring-verification.html": (
         "sapw prevention and licensed palm treatment",
-        "south american palm weevil prevention and treatment",
+        "licensed sapw prevention and treatment",
         "assessments &amp; baselines",
-        "recurring stewardship",
-        "decline, recovery &amp; transplant assessment",
+        "recurring palm care",
+        "decline, recovery &amp; transplant care",
         "request a baseline",
     ),
 }

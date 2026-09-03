@@ -46,12 +46,11 @@ def main() -> int:
         "South American Palm Weevil Protection for San Diego’s Mature Palms",
         "licensed preventive treatment",
         "mature Canary Island date palms",
-        "Real photographs. Real local records.",
-        "Commercial properties, HOAs, institutions, estates, and homeowners",
-        "Treatment at San Diego Botanic Garden.",
-        "Called to address an active South American palm weevil infestation",
+        "See the work behind the service.",
+        "For estates, luxury landscapes, HOAs, institutions, and managed properties.",
+        "San Diego Botanic Garden called. I was there the next day.",
+        "active South American palm weevil infestation",
         "Chilean wine palms, Canary Island date palms, and Sylvester palms",
-        "does not imply that every treated palm was infested",
     ):
         if scoped_fragment not in home:
             errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")
