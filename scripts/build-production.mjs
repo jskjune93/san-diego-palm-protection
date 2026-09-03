@@ -139,6 +139,7 @@ async function main() {
     "palm-records-monitoring-verification.html": ["id=\"homeowner-inquiry\"", "id=\"organization-inquiry\"", "For commercial and managed properties", "Request a Baseline", "known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
     "quarterly-palm-care-san-diego.html": ["Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"],
+    "palm-sourcing-installation.html": ["Sourcing guidance", "Re-homing and transplant review", "Planting coordination", "Establishment baseline", "does not claim to own nursery inventory, trucks, cranes, or relocation crews", "transplant-health assessment"],
   };
   const authoritativeLicenseStatement = "California Pest Control Business License No. 47756 · California Qualified Applicator License No. 175295 · Category B — Landscape Maintenance · Insured";
   for (const route of routes) {

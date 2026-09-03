@@ -156,6 +156,12 @@ PAGES: dict[str, dict] = {
         section("Commercial & managed properties", "Owner-led stewardship for valuable palm portfolios.", "Protect valuable landscape assets. Reduce preventable palm loss. Keep responsibility clear, and maintain a defensible record of care, treatment, and response.", '<p>The system behind that outcome is straightforward: identify priority palms, establish the baseline, act on risk, maintain the history, and keep the next decision from disappearing between contractors.</p><div class="button-row"><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Baseline</a><a class="button button-secondary" href="./managed-property-palm-services.html">See the Stewardship Model</a></div>') +
         section("One stewardship model", "One accountable path from prevention through response.", "Assessment, treatment, records, and coordination serve one business outcome: protect the landscape asset.", three_pillars()) +
         section("Who I work with", "Palm protection for valuable properties.", "The work is shaped by the palms, the property, and the decisions that need to be made.", '<div class="audience-grid audience-grid--2"><article class="audience-card"><h3>Commercial &amp; Managed Properties</h3><p>For managed properties, I can build a practical stewardship plan across the palm portfolio—documenting conditions, identifying priorities, scheduling recurring care, supporting budget decisions, and maintaining continuity from one visit to the next.</p><a data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Discuss a multi-palm property</a></article><article class="audience-card"><h3>Residential &amp; Estate Properties</h3><p>For homeowners and estate owners, stewardship means having one knowledgeable person consistently looking after the palms rather than addressing each concern as an isolated event.</p><a data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Tell me about your palm</a></article></div>') +
+        section("After you contact me", "From the first question to a continuing palm record.", "The scope stays proportional to the palm, property, and decision you need to make.", process([
+            ("Review", "I ask what changed, which palms matter most, and what photographs or service history already exist."),
+            ("Visit", "I examine what is safely visible, take repeatable photographs, and identify immediate questions or priorities."),
+            ("Report", "You receive written observations, evidence limits, recommended actions, and the agreed treatment or coordination scope."),
+            ("Follow", "When continuing stewardship is useful, later visits update the same palm record and compare change over time."),
+        ])) +
         section("Field work", "See the evidence behind the service.", "Review local observations, sample reporting, and documented outcomes.", '<div class="field-links"><a href="./palm-proof-examples.html">View Field Work</a><a href="./palm-journal-new.html">Read the Palm Journal</a><a href="./palm-journal/documented-loss/">Visit Documented Loss</a></div>', "section-tint"),
     },
     "about.html": {
@@ -178,21 +184,17 @@ PAGES: dict[str, dict] = {
     <p>Wisconsin native with an Environmental Science B.S. from the University of Minnesota and time in the Naval Service.</p>
     <p>Today, based in Old Escondido, I provide owner-led palm assessments, monitoring, protection, and treatment services throughout San Diego County. I built SDPP to give palm owners a knowledgeable local point of contact&mdash;someone who will personally look at the tree, explain what is visible, maintain useful records, and help determine a responsible next step.</p>
   </div>
-  <div class="about-john-marks">
-    <img class="about-john-mark about-john-mark--umn" src="./images/about-john/education/university-of-minnesota-block-m.svg" alt="University of Minnesota Block M mark" width="124" height="68" loading="lazy" decoding="async">
-    <img class="about-john-mark about-john-mark--iu" src="./images/about-john/education/indiana-university-trident.svg" alt="Indiana University Trident mark" width="56" height="68" loading="lazy" decoding="async">
-  </div>
 </div>
 </div>''') +
         '''<section class="section section-tint"><div class="article-shell">
-<h2>We Protect What Cannot Be Quickly Replaced</h2>
+<h2>Why I document mature palms early</h2>
 <p>Southern California’s mature palms define estates, resorts, communities, civic spaces, and historic neighborhoods. They represent decades of growth and cannot be replaced on demand.</p>
-<p>The South American palm weevil does not wait for owners, contractors, or agencies to organize. SDPP exists to act before visible decline narrows the opportunity for preservation.</p>
+<p>South American palm weevil activity can narrow the opportunity for preservation before a response is organized. A baseline, an appropriate prevention plan, and repeat observation give the owner more useful information sooner.</p>
 </div></section>
 <section class="section"><div class="article-shell">
-<h2>Stewardship Means Continuity</h2>
+<h2>Why I keep the record with the palm</h2>
 <p>Palm care is often fragmented among landscapers, arborists, applicators, researchers, and public agencies. No one necessarily maintains continuous responsibility for the palm itself—its identity, condition, history, treatment record, and next action.</p>
-<p>SDPP closes that gap with baselines, monitoring, preventive treatment, useful records, and coordinated follow-through.</p>
+<p>I connect the baseline, monitoring, preventive treatment when appropriate, and coordinated follow-through in one continuing record.</p>
 <p>We do not sell fear or exaggerate certainty. We distinguish observation from diagnosis, evidence from inference, and confidence from speculation.</p>
 <p>We work alongside existing professionals while keeping responsibility for the palm from disappearing between contractors.</p>
 <p>That is palm stewardship.</p>
@@ -492,6 +494,18 @@ def generic_body(name: str) -> str:
         ),
     }
     eyebrow, heading, intro = local_openings[name]
+    if name == "palm-sourcing-installation.html":
+        return section(eyebrow, heading, intro, cards([
+            ("Sourcing guidance", "Define the species, size, condition questions, site limits, and documentation to request before selecting a palm."),
+            ("Re-homing and transplant review", "Document the candidate palm and receiving site, flag visible health concerns, and organize questions for the nursery or relocation contractor."),
+            ("Planting coordination", "Keep supplier information, site preparation, installer responsibilities, and the agreed planting scope clear."),
+            ("Establishment baseline", "Photograph the palm after planting and follow visible condition, irrigation questions, and establishment concerns over time."),
+        ]) + '<p class="note">SDPP does not claim to own nursery inventory, trucks, cranes, or relocation crews. I provide palm-focused assessment, guidance, documentation, and coordination; qualified suppliers and contractors remain responsible for the inventory, transport, lifting, installation, and work they perform.</p>') + section("Continuing stewardship", "The record should continue after planting or relocation.", "A transplant-health assessment and repeat photographs can document visible condition, establishment concerns, supplied work history, and the next review without promising transplant success.", process([
+            ("Before", "Record the palm, proposed site, access, visible condition, and open technical questions."),
+            ("During", "Keep supplier and contractor roles, supplied records, and approved scope attached to the project."),
+            ("After", "Establish dated whole-palm and detail photographs at the receiving site."),
+            ("Follow", "Compare visible condition and decide whether care, confirmation, or contractor follow-up is needed."),
+        ]), "section-tint")
     return section(eyebrow, heading, intro, three_pillars()) + section("What to expect", "I start with your question and the palm in front of me.", "Tell me what you noticed, what has been done recently, and what you need to decide.", cards([
         ("At the property", "I examine what can be seen safely from the ground and take the photographs the question requires."),
         ("After the visit", "I explain what I observed, what remains uncertain, and what I recommend next."),

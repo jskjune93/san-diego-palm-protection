@@ -3,6 +3,7 @@ from __future__ import annotations
 from hashlib import sha256
 from html.parser import HTMLParser
 from pathlib import Path
+from collections import Counter
 import json
 import re
 import sys
@@ -76,6 +77,14 @@ def main() -> int:
         actual = sha256(path.read_bytes()).hexdigest()
         if actual != record["sha256"]:
             errors.append(f"approved media fingerprint changed: {relative}")
+        classification = record.get("classification")
+        decision = record.get("publication_decision")
+        if classification not in manifest["classification_definitions"]:
+            errors.append(f"invalid provenance classification: {relative}")
+        if classification in {"third_party_copied_or_externally_sourced", "ai_generated_or_possibly_ai_generated"}:
+            errors.append(f"disallowed media classification is visible: {relative} ({classification})")
+        if classification == "unverified_or_uncertain" and decision != "approved_context_only":
+            errors.append(f"uncertain media lacks context-only decision: {relative}")
 
     stale = sorted(set(approved) - referenced)
     if stale:
@@ -84,6 +93,9 @@ def main() -> int:
     print("IMAGE_PROVENANCE_OK" if not errors else "IMAGE_PROVENANCE_FAILED")
     print(f"visible_media_assets_checked={len(referenced)}")
     print(f"approved_media_assets={len(approved)}")
+    counts = Counter(record.get("classification", "missing") for record in approved.values())
+    for classification, count in sorted(counts.items()):
+        print(f"classification_{classification}={count}")
     if errors:
         for error in errors:
             print(f" - {error}")
