@@ -137,7 +137,7 @@ async function main() {
     }
   }
   const requiredByPage = {
-    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "South American Palm Weevil Protection for San Diego’s Mature Palms", "licensed preventive treatment", "mature Canary Island date palms", "Request a Palm Assessment", "View Field Work", "Real photographs. Real local records."],
+    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "South American Palm Weevil Protection for San Diego’s Mature Palms", "licensed preventive treatment", "mature Canary Island date palms", "Request a Palm Assessment", "View Field Work", "Treatment at San Diego Botanic Garden.", "Chilean wine palms, Canary Island date palms, and Sylvester palms", "Real photographs. Real local records."],
     "palm-records-monitoring-verification.html": ["SAPW prevention and licensed palm treatment", "South American palm weevil prevention and treatment", "Assessments &amp; baselines", "Continuing care", "Decline, recovery &amp; transplant assessment", "Sourcing, re-homing &amp; coordination", "id=\"homeowner-inquiry\"", "id=\"organization-inquiry\"", "For commercial and managed properties", "Request a Baseline", "known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
     "quarterly-palm-care-san-diego.html": ["Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"],

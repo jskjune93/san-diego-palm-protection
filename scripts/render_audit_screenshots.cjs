@@ -22,13 +22,17 @@ function walk(directory) {
   });
 }
 
-const routes = [
+const allRoutes = [
   ...fs.readdirSync(root).filter(name => name.endsWith(".html") && ![
     "managed-property-palm-services.html",
     "residential-palm-assessment.html",
   ].includes(name)).map(name => path.join(root, name)),
   ...walk(path.join(root, "palm-journal")),
 ].sort();
+const routeFilter = process.env.SDPP_AUDIT_ONLY;
+const routes = routeFilter
+  ? allRoutes.filter(route => path.relative(root, route).replaceAll("\\", "/") === routeFilter)
+  : allRoutes;
 
 function screenshotName(route, width, height) {
   const relative = path.relative(root, route).replaceAll("\\", "_").replaceAll("/", "_");
@@ -38,7 +42,7 @@ function screenshotName(route, width, height) {
 
 (async () => {
   const browser = await chromium.launch({ executablePath, headless: true });
-  fs.rmSync(output, { recursive: true, force: true });
+  if (!routeFilter) fs.rmSync(output, { recursive: true, force: true });
   fs.mkdirSync(output, { recursive: true });
   for (const [width, height] of viewports) {
     const page = await browser.newPage({ viewport: { width, height } });

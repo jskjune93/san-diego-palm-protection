@@ -48,6 +48,8 @@ def main() -> int:
         "mature Canary Island date palms",
         "Real photographs. Real local records.",
         "Commercial properties, HOAs, institutions, estates, and homeowners",
+        "Treatment at San Diego Botanic Garden.",
+        "Chilean wine palms, Canary Island date palms, and Sylvester palms",
     ):
         if scoped_fragment not in home:
             errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")
