@@ -49,7 +49,9 @@ def main() -> int:
         "Real photographs. Real local records.",
         "Commercial properties, HOAs, institutions, estates, and homeowners",
         "Treatment at San Diego Botanic Garden.",
+        "Called to address an active South American palm weevil infestation",
         "Chilean wine palms, Canary Island date palms, and Sylvester palms",
+        "does not imply that every treated palm was infested",
     ):
         if scoped_fragment not in home:
             errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")
