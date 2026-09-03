@@ -3,6 +3,11 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/background.jpg",
+      "destination": "/images/old-escondido-ufmp/john-krause-with-mature-cidp.jpg",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {

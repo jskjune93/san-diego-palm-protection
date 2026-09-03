@@ -4,7 +4,7 @@
 
 Every media asset referenced by a public HTML route was inventoried, fingerprinted, and assigned a source basis in `site-config/image_provenance.json`. The audit covers hero backgrounds, inline images, Open Graph images, responsive `srcset` variants, the SDPP logo, the two credited university marks, and the published field-record video.
 
-The review found one disallowed third-party image: `background.jpg`. It visibly contains a Coastline Palms watermark and was still the homepage hero and Open Graph image. It was removed from the generated homepage, removed from the repository, and placed on a permanent denylist in `scripts/validate_image_provenance.py` and the production build.
+The review found one disallowed third-party image: `background.jpg`. It visibly contains a Coastline Palms watermark and was still the homepage hero and Open Graph image. It was removed from the generated homepage, removed from the repository, and placed on a permanent denylist in `scripts/validate_image_provenance.py` and the production build. The legacy public URL permanently redirects to the approved replacement so an older cached asset path cannot continue presenting the third-party image.
 
 ## Replacement and presentation
 
