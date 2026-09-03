@@ -23,7 +23,10 @@ function walk(directory) {
 }
 
 const routes = [
-  ...fs.readdirSync(root).filter(name => name.endsWith(".html")).map(name => path.join(root, name)),
+  ...fs.readdirSync(root).filter(name => name.endsWith(".html") && ![
+    "managed-property-palm-services.html",
+    "residential-palm-assessment.html",
+  ].includes(name)).map(name => path.join(root, name)),
   ...walk(path.join(root, "palm-journal")),
 ].sort();
 
@@ -35,6 +38,7 @@ function screenshotName(route, width, height) {
 
 (async () => {
   const browser = await chromium.launch({ executablePath, headless: true });
+  fs.rmSync(output, { recursive: true, force: true });
   fs.mkdirSync(output, { recursive: true });
   for (const [width, height] of viewports) {
     const page = await browser.newPage({ viewport: { width, height } });

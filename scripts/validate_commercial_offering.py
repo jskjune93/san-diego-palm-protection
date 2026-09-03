@@ -67,15 +67,15 @@ def main() -> int:
         if re.search(r"QAL.{0,30}(?:authorizes?|licenses?) (?:SDPP|the business)", text, re.I):
             errors.append(f"{rel}: QAL is represented as business authorization")
 
-    managed = (DIST / "managed-property-palm-services.html").read_text(encoding="utf-8-sig") if (DIST / "managed-property-palm-services.html").exists() else ""
-    paths = re.findall(r'data-engagement-path="([^"]+)"', managed)
+    services = (DIST / "palm-records-monitoring-verification.html").read_text(encoding="utf-8-sig") if (DIST / "palm-records-monitoring-verification.html").exists() else ""
+    paths = re.findall(r'data-engagement-path="([^"]+)"', services)
     if paths != ["palm-portfolio-baseline", "annual-palm-stewardship-program"]:
-        errors.append(f"managed page must expose exactly two ordered engagement paths; found {paths}")
-    for phrase in ("Standardize the stewardship system; customize the property scope.", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "View Commercial Overview", "Download Commercial Overview"):
-        if phrase not in managed:
-            errors.append(f"managed page missing commercial hierarchy concept: {phrase}")
-    if re.search(r"(?:bronze|silver|gold) (?:package|plan|tier)", managed, re.I):
-        errors.append("managed page contains an artificial package tier")
+        errors.append(f"consolidated services page must expose exactly two ordered engagement paths; found {paths}")
+    for phrase in ("SAPW prevention and licensed palm treatment", "Assessments &amp; baselines", "Continuing care", "Decline, recovery &amp; transplant assessment", "Palm Portfolio Baseline", "Annual Palm Stewardship Program", "View Commercial Overview", "Download Commercial Overview"):
+        if phrase not in services:
+            errors.append(f"consolidated services page missing commercial hierarchy concept: {phrase}")
+    if re.search(r"(?:bronze|silver|gold) (?:package|plan|tier)", services, re.I):
+        errors.append("consolidated services page contains an artificial package tier")
 
     if not PDF.exists():
         errors.append("canonical commercial outreach PDF is missing")

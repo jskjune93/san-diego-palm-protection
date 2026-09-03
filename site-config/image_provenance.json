@@ -100,13 +100,6 @@
       "publication_decision": "approved_context_only",
       "presentation_risk": "Must not imply SDPP performed depicted work"
     },
-    "beautiful-old-escondido-cidp-san-diego-palm-protection.jpg": {
-      "sha256": "c97fb3504bc4dae28536a6525eb519394ad81eb5ae09a76b7cc1d20af3569d87",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
-    },
     "beautiful-old_escondido-cidp.jpg": {
       "sha256": "e9cf098ff56d88580c360bf39ad661f0032ac707120fc688437e90f4aa69f1c9",
       "classification": "unverified_or_uncertain",
@@ -123,13 +116,6 @@
     },
     "blue-hesper-canary-island-date-palm-poway.jpg": {
       "sha256": "c21fc32249eb95c079abc4ce326c543c560175176df9f39c698100a8db2e1c22",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
-    },
-    "canary-island-date-palm-mansion-poway.jpg": {
-      "sha256": "e2b90ab75b7bee24c23c43fd5adacf6fadbe5edbc70a5862032a674e899912a4",
       "classification": "unverified_or_uncertain",
       "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
       "publication_decision": "approved_context_only",

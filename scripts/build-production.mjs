@@ -37,7 +37,10 @@ async function copyPublic(source) {
 
 async function htmlRoutes() {
   const rootHtml = (await readdir(root))
-    .filter(name => name.endsWith(".html"))
+    .filter(name => name.endsWith(".html") && !new Set([
+      "managed-property-palm-services.html",
+      "residential-palm-assessment.html",
+    ]).has(name))
     .map(name => path.join(root, name));
   const journalRoot = path.join(root, "palm-journal");
   const journal = [];
@@ -72,7 +75,7 @@ async function main() {
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
   const routes = await htmlRoutes();
-  if (routes.length !== 47) throw new Error(`Expected 47 HTML routes, found ${routes.length}`);
+  if (routes.length !== 45) throw new Error(`Expected 45 HTML routes after consolidation, found ${routes.length}`);
 
   const referenceQueue = [];
   for (const route of routes) {
@@ -134,9 +137,8 @@ async function main() {
     }
   }
   const requiredByPage = {
-    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "I document, protect, and follow valuable palms across San Diego County.", "Owner-led field work for managed properties", "Documented field work", "SDPP field photograph", "Identity &amp; baselines", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Baseline", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"],
-    "managed-property-palm-services.html": ["Palm Portfolio Stewardship for Managed Properties", "Protect valuable landscape assets. Reduce preventable palm loss.", "Protect the asset. Reduce preventable loss. Keep responsibility clear.", "one accountable point of contact", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Palm asset register", "Baseline condition record", "Recurring stewardship plan", "Dated visit and treatment records", "Material-change alerts", "Periodic portfolio summary", "Palm Portfolio Baseline", "Annual Palm Stewardship Program", "data-engagement-path=\"palm-portfolio-baseline\"", "data-engagement-path=\"annual-palm-stewardship-program\"", "licensed treatment", "Request a Baseline", "existing landscapers", "SDPP-Commercial-Palm-Stewardship.pdf", "View Commercial Overview", "Download Commercial Overview"],
-    "palm-records-monitoring-verification.html": ["id=\"homeowner-inquiry\"", "id=\"organization-inquiry\"", "For commercial and managed properties", "Request a Baseline", "known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
+    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "South American Palm Weevil Protection for San Diego’s Mature Palms", "licensed preventive treatment", "mature Canary Island date palms", "Request a Palm Assessment", "View Field Work", "Real photographs. Real local records."],
+    "palm-records-monitoring-verification.html": ["SAPW prevention and licensed palm treatment", "South American palm weevil prevention and treatment", "Assessments &amp; baselines", "Continuing care", "Decline, recovery &amp; transplant assessment", "Sourcing, re-homing &amp; coordination", "id=\"homeowner-inquiry\"", "id=\"organization-inquiry\"", "For commercial and managed properties", "Request a Baseline", "known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
     "quarterly-palm-care-san-diego.html": ["Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"],
     "palm-sourcing-installation.html": ["Sourcing guidance", "Re-homing and transplant review", "Planting coordination", "Establishment baseline", "does not claim to own nursery inventory, trucks, cranes, or relocation crews", "transplant-health assessment"],
@@ -162,12 +164,9 @@ async function main() {
   if (/background\.jpg/i.test(homepage)) {
     throw new Error("Denied Coastline Palms image must not appear in the production homepage.");
   }
-  if (homepage.indexOf("Commercial &amp; Managed</a>") > homepage.indexOf(">Residential</a>")) {
-    throw new Error("Commercial navigation must precede Residential on the homepage.");
-  }
   const homepageHero = homepage.match(/<section class="page-hero"[\s\S]*?<\/section>/)?.[0] || "";
-  if (homepageHero.indexOf("Request a Baseline") < 0 || homepageHero.indexOf("Request a Baseline") > homepageHero.indexOf("Residential Palm Assessment")) {
-    throw new Error("Homepage hero must lead with the commercial walkthrough before the residential assessment.");
+  if (homepageHero.indexOf("Request a Palm Assessment") < 0 || homepageHero.indexOf("View Field Work") < 0) {
+    throw new Error("Homepage hero must provide one assessment CTA and one field-evidence CTA.");
   }
 
   const files = [...copied].map(item => item.split(path.sep).join("/")).sort();

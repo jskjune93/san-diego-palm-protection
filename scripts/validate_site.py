@@ -269,26 +269,15 @@ def main() -> int:
 
     homepage_text, homepage_parser = pages[(ROOT / "index.html").resolve()]
     for required_pillar in (
-        "Stewardship &amp; Palm Health",
-        "Protection &amp; Treatment",
-        "Documentation &amp; Portfolio Management",
-        "Response, Removal &amp; Renewal",
+        "South American Palm Weevil Protection",
+        "licensed preventive treatment",
+        "mature Canary Island date palms",
+        "Real photographs. Real local records.",
     ):
         if required_pillar not in homepage_text:
             errors.append(f"homepage missing stewardship-function positioning: {required_pillar}")
-    treatment_card = re.search(
-        r'<article class="pillar">(?:(?!</article>).)*Protection &amp; Treatment'
-        r'(?:(?!</article>).)*href="([^"]+)"(?:(?!</article>).)*</article>',
-        homepage_text,
-        re.DOTALL,
-    )
-    if not treatment_card:
-        errors.append("homepage Protection & Treatment service card is missing or has no destination")
-    elif treatment_card.group(1) != TREATMENT_ROUTE:
-        errors.append(
-            "homepage Protection & Treatment service card must resolve to "
-            f"{TREATMENT_ROUTE}, found {treatment_card.group(1)}"
-        )
+    if "./south-american-palm-weevil-treatment-san-diego.html" not in homepage_text:
+        errors.append("homepage does not link to the dedicated SAPW treatment route")
     if not RECORDS_PAGE.exists():
         errors.append("Records & Monitoring service page is missing")
     elif "./palm-records-monitoring-verification.html" not in homepage_text:
@@ -401,8 +390,8 @@ def main() -> int:
         page_text = path.read_text(encoding="utf-8-sig")
         if f'<meta name="business-status" content="{credentials["status_label"]}">' not in page_text:
             errors.append(f"{normalize_rel(path)}: metadata missing qualified/insured service status")
-    if "Residential Palm Assessment" not in homepage_text or 'href="./palm-records-monitoring-verification.html#homeowner-inquiry"' not in homepage_text or "Request a Palm Assessment" not in records_text:
-        errors.append("commercial-first homepage and service page must preserve the secondary residential assessment path")
+    if 'href="./palm-records-monitoring-verification.html#homeowner-inquiry"' not in homepage_text or "Request a Palm Assessment" not in records_text:
+        errors.append("homepage and service page must preserve the residential assessment path")
     for required_path in (
         "palm-removal-coordination.html",
         "specimen-palms-cycads.html",

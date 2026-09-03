@@ -552,7 +552,7 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
         ]
     elif "health" in category or "assessment" in title_text:
         topical_links = [
-            f'<a href="{relative_root}residential-palm-assessment.html">Palm health assessment in San Diego</a>',
+            f'<a href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Palm health assessment in San Diego</a>',
             f'<a href="{relative_root}palm-stewardship-plans.html">Palm treatment and preventive protection</a>',
         ]
     html = f'''<!DOCTYPE html>
@@ -620,6 +620,14 @@ def update_sitemap(entries: list[dict]) -> None:
         loc_node = url.find(loc_tag)
         if loc_node is not None and loc_node.text:
             urls_by_loc[loc_node.text] = url
+
+    for retired in (
+        f"{BASE_URL}/managed-property-palm-services.html",
+        f"{BASE_URL}/residential-palm-assessment.html",
+    ):
+        node = urls_by_loc.pop(retired, None)
+        if node is not None:
+            root_el.remove(node)
 
     documented_loss_url = urls_by_loc.get(DOCUMENTED_LOSS_URL)
     if documented_loss_url is None:

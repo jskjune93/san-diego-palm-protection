@@ -43,11 +43,11 @@ def main() -> int:
     if home.count(public["service_summary"]) != 1:
         errors.append("homepage must contain exactly one concise stewardship statement")
     for scoped_fragment in (
-        "I document, protect, and follow valuable palms across San Diego County.",
-        "Owner-led field work for managed properties",
-        "Preventive protection, South American palm weevil awareness",
-        "The work is shaped by the palms, the property, and the decisions",
-        "Residential and estate services remain available.",
+        "South American Palm Weevil Protection for San Diego’s Mature Palms",
+        "licensed preventive treatment",
+        "mature Canary Island date palms",
+        "Real photographs. Real local records.",
+        "Commercial properties, HOAs, institutions, estates, and homeowners",
     ):
         if scoped_fragment not in home:
             errors.append(f"homepage expected positive replacement is missing: {scoped_fragment}")
@@ -55,7 +55,7 @@ def main() -> int:
         errors.append("homepage does not retain a route to About")
     if homepage_html.lower().count("<h1") != 1:
         errors.append("homepage must contain exactly one H1")
-    if "<title>Palm Portfolio Stewardship &amp; Treatment San Diego | SDPP</title>" not in homepage_html:
+    if "<title>SAPW Prevention &amp; Licensed Palm Treatment San Diego | SDPP</title>" not in homepage_html:
         errors.append("homepage title changed unexpectedly")
 
     for phrase in (

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stable semantic guard for SDPP's public portfolio-stewardship position."""
+"""Stable semantic guard for SDPP's SAPW-first service position."""
 
 from __future__ import annotations
 
@@ -14,31 +14,19 @@ POSITIONING = ROOT / "site-config" / "positioning.json"
 
 CRITICAL = {
     "index.html": (
-        "owner-led stewardship for valuable palm portfolios",
-        "Protect valuable landscape assets. Reduce preventable palm loss.",
-        "Stewardship &amp; Palm Health",
-        "Documentation &amp; Portfolio Management",
-        "Response, Removal &amp; Renewal",
-        "request a baseline",
-    ),
-    "managed-property-palm-services.html": (
-        "palm portfolio stewardship for managed properties",
-        "protect the asset. reduce preventable loss. keep responsibility clear",
-        "palm asset register",
-        "baseline condition record",
-        "recurring stewardship plan",
-        "dated visit and treatment records",
-        "material-change alerts",
-        "periodic portfolio summary",
-        "licensed treatment",
-        "one accountable point of contact",
-        "works alongside existing landscapers",
-        "SDPP-Commercial-Palm-Stewardship.pdf",
+        "south american palm weevil protection",
+        "licensed preventive treatment",
+        "mature canary island date palms",
+        "request a palm assessment",
+        "view field work",
     ),
     "palm-records-monitoring-verification.html": (
-        "palm assessment, treatment, and management services",
+        "sapw prevention and licensed palm treatment",
+        "south american palm weevil prevention and treatment",
+        "assessments &amp; baselines",
+        "recurring stewardship",
+        "decline, recovery &amp; transplant assessment",
         "request a baseline",
-        "treatment",
     ),
 }
 

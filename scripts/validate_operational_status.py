@@ -33,7 +33,6 @@ FORBIDDEN = (
 
 CRITICAL_PAGES = (
     "index.html",
-    "managed-property-palm-services.html",
     "palm-records-monitoring-verification.html",
     "palm-stewardship-plans.html",
     "south-american-palm-weevil-treatment-san-diego.html",
@@ -109,9 +108,8 @@ def main() -> int:
                     errors.append(f"{relative}: missing operational concept {concept}")
 
         homepage = (DIST / "index.html").read_text(encoding="utf-8-sig") if (DIST / "index.html").exists() else ""
-        managed = (DIST / "managed-property-palm-services.html").read_text(encoding="utf-8-sig") if (DIST / "managed-property-palm-services.html").exists() else ""
         records = (DIST / "palm-records-monitoring-verification.html").read_text(encoding="utf-8-sig") if (DIST / "palm-records-monitoring-verification.html").exists() else ""
-        for phrase in ("I document, protect, and follow valuable palms across San Diego County.", "Documented field work", "Identity &amp; baselines", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Baseline", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"):
+        for phrase in ("South American Palm Weevil Protection for San Diego’s Mature Palms", "licensed preventive treatment", "mature Canary Island date palms", "Request a Palm Assessment", "View Field Work"):
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
         treatment_page = (DIST / "south-american-palm-weevil-treatment-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "south-american-palm-weevil-treatment-san-diego.html").exists() else ""
@@ -122,9 +120,9 @@ def main() -> int:
         for phrase in ("Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"):
             if phrase not in recurring:
                 errors.append(f"recurring-stewardship page missing current service language: {phrase}")
-        for phrase in ("Palm Portfolio Stewardship for Managed Properties", "Protect the asset. Reduce preventable loss. Keep responsibility clear.", "Palm asset register", "Baseline condition record", "Recurring stewardship plan", "Dated visit and treatment records", "Material-change alerts", "Periodic portfolio summary", "Annual Palm Stewardship Program", "licensed treatment", "existing landscapers", "SDPP-Commercial-Palm-Stewardship.pdf", "View Commercial Overview", "Download Commercial Overview"):
-            if phrase not in managed:
-                errors.append(f"managed-property page missing service pathway: {phrase}")
+        for phrase in ("South American palm weevil prevention and treatment", "Assessments &amp; baselines", "Continuing care", "Decline, recovery &amp; transplant assessment", "Sourcing, re-homing &amp; coordination", "Commercial and managed properties", "HOAs and institutions", "estates", "homeowners", "SDPP-Commercial-Palm-Stewardship.pdf"):
+            if phrase not in records:
+                errors.append(f"consolidated services page missing service pathway: {phrase}")
         for field in ("known_palm_species", "existing_contractor", "desired_service", "preferred_contact"):
             if f'name="{field}"' not in records:
                 errors.append(f"managed-property inquiry missing field: {field}")

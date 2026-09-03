@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 UFMP = "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process."
 PRIVATE_TERMS = ("karrie", "gate code", "private-client@", "confidential avenue", "source_report_path")
 ENDORSEMENT = ("city endorsed", "city partner", "official ufmp partner", "approved by the city")
-NAV_LABELS = ("Services", "Commercial & Managed", "Residential", "Palm Decline", "Palm Journal", "Field Work", "Call or Text", "Request a Baseline")
+NAV_LABELS = ("Services", "Palm Journal", "Field Work", "About", "Call or Text", "Request Assessment")
 
 
 class VisibleText(HTMLParser):
@@ -30,9 +30,9 @@ class VisibleText(HTMLParser):
 
 def main() -> int:
     errors = []
-    html = sorted(ROOT.glob("*.html")) + sorted((ROOT / "palm-journal").glob("**/*.html"))
+    html = sorted((ROOT / "dist").glob("*.html")) + sorted((ROOT / "dist" / "palm-journal").glob("**/*.html"))
     for path in html:
-        rel = path.relative_to(ROOT).as_posix()
+        rel = path.relative_to(ROOT / "dist").as_posix()
         raw = path.read_text(encoding="utf-8-sig")
         parser = VisibleText(); parser.feed(raw)
         visible = " ".join(parser.parts)
@@ -50,16 +50,13 @@ def main() -> int:
         for phrase in ENDORSEMENT:
             if phrase in lower:
                 errors.append(f"{rel}: municipal endorsement implication: {phrase}")
-    managed = (ROOT / "managed-property-palm-services.html").read_text(encoding="utf-8")
-    if UFMP not in managed:
-        errors.append("managed-property route: exact UFMP wording missing")
-    proof = (ROOT / "palm-proof-examples.html").read_text(encoding="utf-8")
-    for phrase in ("separately approved", "sanitized", "Private client reports", "No unapproved proof bundle can render publicly"):
+    proof = (ROOT / "dist" / "palm-proof-examples.html").read_text(encoding="utf-8")
+    for phrase in ("separately approved", "sanitized", "unapproved photographs remain outside the website"):
         if phrase not in proof:
             errors.append(f"proof route: missing boundary phrase {phrase}")
     route_doc = (ROOT / "docs" / "route-inventory.md").read_text(encoding="utf-8")
-    if route_doc.count("| `/") != len(html):
-        errors.append(f"route inventory count {route_doc.count('| `/')} does not match {len(html)} HTML routes")
+    if route_doc.count("| `/") < len(html):
+        errors.append(f"route inventory count {route_doc.count('| `/')} is below {len(html)} production HTML routes")
     screenshot_count = len(list((ROOT / "docs" / "audit-screenshots").glob("*.png")))
     if screenshot_count != len(html) * 5:
         errors.append(f"expected {len(html) * 5} screenshots, found {screenshot_count}")

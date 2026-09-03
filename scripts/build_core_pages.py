@@ -133,7 +133,7 @@ def approved_ufmp_resource() -> str:
 <section class="section section-tint" aria-labelledby="ufmp-related-resources">
   <div class="section-intro"><p class="eyebrow">Related resources</p><h2 id="ufmp-related-resources">Continue through the existing documentation pathways.</h2></div>
   <div class="field-links">
-    <a href="./managed-property-palm-services.html">Commercial &amp; Managed</a>
+    <a href="./palm-records-monitoring-verification.html">Services</a>
     <a href="./palm-proof-examples.html">Field Work</a>
     <a href="./palm-journal-new.html">Palm Journal</a>
     <a href="./palm-journal/documented-loss/">Documented Loss</a>
@@ -143,26 +143,16 @@ def approved_ufmp_resource() -> str:
 
 PAGES: dict[str, dict] = {
     "index.html": {
-        "title": "Palm Portfolio Stewardship & Treatment San Diego | SDPP",
-        "description": "Owner-led palm portfolio stewardship, condition records, recurring planning, and licensed treatment for managed properties and valuable mature palms in San Diego.",
-        "eyebrow": "Owner-led · San Diego County · Based in Old Escondido",
-        "h1": POSITIONING["homepage_headline"],
-        "lede": POSITIONING["homepage_supporting_copy"],
+        "title": "SAPW Prevention & Licensed Palm Treatment San Diego | SDPP",
+        "description": "Owner-led South American palm weevil prevention, licensed treatment, monitoring, and documentation for mature Canary Island date palms in San Diego County.",
+        "eyebrow": "Licensed treatment · Owner-led · San Diego County",
+        "h1": "South American Palm Weevil Protection for San Diego’s Mature Palms",
+        "lede": "SDPP provides owner-led, licensed preventive treatment and continuing monitoring for mature Canary Island date palms and other valuable specimens.",
         "image": "images/old-escondido-ufmp/john-krause-with-mature-cidp.jpg",
-        "body": section("Documented field work", "The work starts with the palm in front of me.", "I photograph the whole palm and the details that matter, write down what I can support, and keep observation separate from diagnosis or guesswork.", '''<div class="field-split">
-<figure><img src="./images/old-escondido-ufmp/old-home-mature-cidps-golden-hour.jpg" alt="Mature Canary Island date palms photographed at an Old Escondido home" loading="lazy" decoding="async"><figcaption class="image-caption">Old Escondido field photograph from the approved SDPP documentation set.</figcaption></figure>
-<div><p>A dated baseline makes later change reviewable. Each record can connect the palm, its setting, visible condition, known work, and the next decision without claiming more than the evidence supports.</p><p><a href="./palm-proof-examples.html">See the field record and reporting examples</a></p></div>
-</div>''', "section-tint") +
-        section("Commercial & managed properties", "Owner-led stewardship for valuable palm portfolios.", "Protect valuable landscape assets. Reduce preventable palm loss. Keep responsibility clear, and maintain a defensible record of care, treatment, and response.", '<p>The system behind that outcome is straightforward: identify priority palms, establish the baseline, act on risk, maintain the history, and keep the next decision from disappearing between contractors.</p><div class="button-row"><a class="button" data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Request a Baseline</a><a class="button button-secondary" href="./managed-property-palm-services.html">See the Stewardship Model</a></div>') +
-        section("One stewardship model", "One accountable path from prevention through response.", "Assessment, treatment, records, and coordination serve one business outcome: protect the landscape asset.", three_pillars()) +
-        section("Who I work with", "Palm protection for valuable properties.", "The work is shaped by the palms, the property, and the decisions that need to be made.", '<div class="audience-grid audience-grid--2"><article class="audience-card"><h3>Commercial &amp; Managed Properties</h3><p>For managed properties, I can build a practical stewardship plan across the palm portfolio—documenting conditions, identifying priorities, scheduling recurring care, supporting budget decisions, and maintaining continuity from one visit to the next.</p><a data-conversion="organization-inquiry-initiation" href="./palm-records-monitoring-verification.html#organization-inquiry">Discuss a multi-palm property</a></article><article class="audience-card"><h3>Residential &amp; Estate Properties</h3><p>For homeowners and estate owners, stewardship means having one knowledgeable person consistently looking after the palms rather than addressing each concern as an isolated event.</p><a data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Tell me about your palm</a></article></div>') +
-        section("After you contact me", "From the first question to a continuing palm record.", "The scope stays proportional to the palm, property, and decision you need to make.", process([
-            ("Review", "I ask what changed, which palms matter most, and what photographs or service history already exist."),
-            ("Visit", "I examine what is safely visible, take repeatable photographs, and identify immediate questions or priorities."),
-            ("Report", "You receive written observations, evidence limits, recommended actions, and the agreed treatment or coordination scope."),
-            ("Follow", "When continuing stewardship is useful, later visits update the same palm record and compare change over time."),
-        ])) +
-        section("Field work", "See the evidence behind the service.", "Review local observations, sample reporting, and documented outcomes.", '<div class="field-links"><a href="./palm-proof-examples.html">View Field Work</a><a href="./palm-journal-new.html">Read the Palm Journal</a><a href="./palm-journal/documented-loss/">Visit Documented Loss</a></div>', "section-tint"),
+        "body": section("Primary service", "Preventive protection before advanced decline.", "Mature Canary Island date palms are a primary focus. I assess the palm and site, then provide licensed treatment when appropriate for the label, law, palm condition, and agreed scope.", '<div class="field-split"><figure><img src="./images/old-escondido-ufmp/healthy-private-yard-cidp.jpg" alt="Healthy mature Canary Island date palm documented by SDPP in Old Escondido" loading="lazy" decoding="async"><figcaption class="image-caption">A mature Canary Island date palm documented by SDPP in Old Escondido.</figcaption></figure><div><h3>Protection is most useful before the crown collapses.</h3><p>Continuing care can combine preventive treatment, repeat photographs, treatment history, and a clear schedule for the next visit.</p><p><a href="./south-american-palm-weevil-treatment-san-diego.html">See SAPW prevention and treatment</a></p></div></div>') +
+        section("Why early protection matters", "A mature CIDP cannot be quickly replaced.", "South American palm weevil damage may be advanced before obvious crown decline. Earlier assessment preserves more options.", '<div class="field-split field-split--reverse"><figure><img src="./images/old-escondido-ufmp/owner-documented-multiple-sapw-captures.jpg" alt="Adult South American palm weevils documented in an SDPP owner property record" loading="lazy" decoding="async"><figcaption class="image-caption">Adult SAPW documented in John Krause’s Old Escondido property record.</figcaption></figure><div><p>SDPP maintains a substantial independently documented local visual record of SAPW activity and palm loss. Dated photographs and video support earlier recognition, clearer communication, and better comparison over time.</p><p><a href="./palm-journal/when-sapw-became-local.html">See the dated local SAPW record</a></p></div></div>', "section-tint") +
+        section("Other services", "One service path for every property.", "Commercial properties, HOAs, institutions, estates, and homeowners can begin with the same clear assessment path.", cards([("Assessments & baselines", "Palm identification, condition photographs, visible findings, and written recommendations."),("Recurring stewardship", "Treatment history, follow-up scheduling, condition tracking, and multi-palm planning."),("Decline & transplant support", "Rapid-change review, recovery monitoring, sourcing guidance, and contractor coordination.")])) +
+        section("Field evidence", "Real photographs. Real local records.", "The public evidence pages distinguish confirmed observations, visible changes, documented outcomes, and unknown causes.", '<div class="field-split"><figure><img src="./images/las-palmas/09-severe-decline-2026-07-10-las-palmas-declining-palm-central-frond-necrosis-detail-03.jpg" alt="Central crown decline photographed in an approved SDPP field record" loading="lazy" decoding="async"><figcaption class="image-caption">Visible crown decline in an approved SDPP record; the photograph does not assign cause.</figcaption></figure><div class="field-links"><a href="./palm-proof-examples.html">View Field Work</a><a href="./palm-journal-new.html">Read the Palm Journal</a><a href="./palm-journal/documented-loss/">Documented Loss</a></div></div>', "section-tint"),
     },
     "about.html": {
         "title": "About San Diego Palm Protection | Owner-Led Palm Services",
@@ -170,7 +160,7 @@ PAGES: dict[str, dict] = {
         "eyebrow": "About San Diego Palm Protection",
         "h1": "I look at the palm, take the photographs, and write the report.",
         "lede": "SDPP began after South American palm weevil activity and palm loss reached my own Old Escondido property.",
-        "image": "beautiful-old-escondido-cidp-san-diego-palm-protection.jpg",
+        "image": "images/about-john/john-krause-palm-960.jpg",
         "body": section("About John", "Local experience shapes how I approach the work.", "SDPP grew from firsthand experience with the threat facing the mature palms that help define Old Escondido and other San Diego communities.", '''<div class="about-john-profile">
 <figure class="about-john-photo">
   <picture>
@@ -221,25 +211,17 @@ PAGES: dict[str, dict] = {
         section("If the palm needs watching", "The first visit becomes the comparison point.", "When I return, I try to repeat the same views. That makes it easier to see whether the crown, trunk, or surrounding conditions have changed.", process([("Before the visit", "Tell me what changed and send any older photographs you have."), ("At the property", "I observe and photograph the areas I can access safely."), ("Afterward", "You receive the dated report and a recommended time for another look, if one is useful.")]) + '<p class="section-proof-link"><a href="./about.html">Learn more about John Krause</a></p>')
     },
     "palm-records-monitoring-verification.html": {
-        "title": "Palm Assessment, Treatment & Management Services | SDPP",
-        "description": "Palm assessment, preventive treatment, fertilization, recurring monitoring, portfolio reporting, and decline response for San Diego properties.",
-        "eyebrow": "Palm services in San Diego County", "h1": "Palm assessment, treatment, and management services.",
-        "lede": "I connect assessment, licensed treatment, recurring care, photographs, and written records so owners and managers know what each important palm needs next.",
-        "image": "canary-island-date-palm-mansion-poway.jpg",
-        "body": section("Assessment, Protection & Treatment", "The work follows the palm from the first visit through the next responsible action.", "Assessment, treatment, care, and documentation stay connected.", cards([
-            ("Palm Assessment & Baseline", "I examine the palm from the ground, take repeatable photographs, document visible conditions, and establish the starting record."),
-            ("Preventive Protection & Treatment", "I provide licensed pesticide treatment when appropriate for the palm, site, label, and agreed scope."),
-            ("Fertilization & Recovery Support", "I address agreed nutrient support and follow changing condition, irrigation concerns, and response over time."),
-            ("Recurring Monitoring & Records", "I return at an agreed interval, compare earlier photographs, and maintain useful condition and treatment history."),
-            ("Palm Portfolio Reporting", "For managed properties, each priority palm can have an ID, photographs, current status, service history, and next action."),
-            ("Decline Response & Coordination", "I document material change, explain the available response, and coordinate qualified contractor work, removal records, or replacement planning when needed."),
-        ]), "section-tint") +
-        section("How it works", "Tell me what you are trying to decide.", "I will ask about the palm, the property, access, and recent history before we agree on the visit.", process([
-            ("First conversation", "Tell me what you have noticed and share any older photographs or work history."),
-            ("Property visit", "I look at what can be seen safely from the ground and take the needed photographs."),
-            ("Written findings", "I send a dated account of the visit with priorities, uncertainties, and recommendations."),
-            ("What comes next", "I may recommend monitoring, protection or treatment, contractor work, removal, or replacement."),
-        ])) +
+        "title": "SAPW Prevention, Palm Treatment & Assessments | SDPP",
+        "description": "Licensed South American palm weevil prevention and treatment, palm assessments, monitoring, decline support, and project coordination in San Diego County.",
+        "eyebrow": "Palm services in San Diego County", "h1": "SAPW prevention and licensed palm treatment.",
+        "lede": "I protect mature Canary Island date palms and other appropriate valuable specimens, then keep treatment, monitoring, and photographs connected over time.",
+        "image": "images/old-escondido-ufmp/healthy-private-yard-cidp.jpg",
+        "body": section("Primary service", "South American palm weevil prevention and treatment.", "Preventive protection is most useful before advanced visible decline. Treatment is site-specific and follows the label, applicable law, palm condition, and agreed scope.", '<div class="field-split"><figure><img src="./images/old-escondido-ufmp/john-krause-with-mature-cidp.jpg" alt="John Krause with a mature Canary Island date palm in Old Escondido" loading="lazy" decoding="async"><figcaption class="image-caption">John Krause with a mature CIDP in Old Escondido.</figcaption></figure><div><ul><li>Licensed preventive treatment for appropriate mature palms</li><li>Recurring treatment planning and follow-up</li><li>Monitoring, photographs, and treatment history</li><li>Early response to visible change</li></ul></div></div>') +
+        section("Assessments & baselines", "Start with the palm in front of us.", "A site visit can include palm identification, condition photographs, visible findings, written recommendations, and clear limits when another specialist or laboratory confirmation is needed.", '') +
+        section("Continuing care", "Recurring stewardship without the paperwork burden.", "I maintain comparable photographs, treatment history, follow-up timing, and priorities for one palm or a managed property.", '') +
+        section("Decline, recovery & transplant assessment", "Document change and decide what comes next.", "I review rapid decline, post-transplant establishment, irrigation and root-zone observations, and recovery. When work falls outside my scope, I organize a focused referral or contractor handoff.", '') +
+        section("Sourcing, re-homing & coordination", "Palm-focused guidance from selection through establishment.", "I can review specimens, document a proposed move or planting, and coordinate with independent nurseries, haulers, crane operators, and contractors. SDPP does not claim to own their inventory or equipment.", '') +
+        section("Who I serve", "One service model, sized to the property.", "Commercial and managed properties, HOAs and institutions, estates, and homeowners all receive direct owner-led service.", '<div class="audience-grid audience-grid--2"><article class="audience-card" data-engagement-path="palm-portfolio-baseline"><h3>Palm Portfolio Baseline</h3><p>A documented starting point with palm identities, photographs, priorities, and next actions.</p></article><article class="audience-card" data-engagement-path="annual-palm-stewardship-program"><h3>Annual Palm Stewardship Program</h3><p>Recurring treatment, monitoring, records, and scheduled follow-up for a managed palm collection.</p></article></div><p><a href="./SDPP-Commercial-Palm-Stewardship.pdf" target="_blank" rel="noopener noreferrer">View Commercial Overview <span class="sr-only">(PDF, opens in a new tab)</span></a> · <a href="./SDPP-Commercial-Palm-Stewardship.pdf" download>Download Commercial Overview</a></p>', "section-tint") +
         section("Request", "Choose the direct inquiry path.", "Open the form that fits the property.", f'{compact_credentials("BUSINESS_CREDENTIALS_CONTACT")}{inquiry_paths()}<p class="section-proof-link"><a href="./palm-removal-coordination.html">Removal coordination</a> · <a href="./palm-sourcing-installation.html">Palm sourcing and installation</a> · <a href="./specimen-palms-cycads.html">Specimen palms and cycads</a> · <a href="./palm-journal/documented-loss/">Documented Loss</a></p>').replace('<section class="section ">', '<section class="section " id="request">', 1)
     },
     "quarterly-palm-care-san-diego.html": {
@@ -514,7 +496,8 @@ def generic_body(name: str) -> str:
 
 
 def write_pages() -> None:
-    pages = dict(PAGES)
+    retired = {"managed-property-palm-services.html", "residential-palm-assessment.html"}
+    pages = {name: data for name, data in PAGES.items() if name not in retired}
     for filename, (h1, eyebrow, lede, image) in GENERIC.items():
         pages[filename] = {
             "title": f"{h1} | SDPP",

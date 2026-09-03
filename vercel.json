@@ -3,6 +3,16 @@
   "outputDirectory": "dist",
   "redirects": [
     {
+      "source": "/managed-property-palm-services.html",
+      "destination": "/palm-records-monitoring-verification.html#organization-inquiry",
+      "permanent": true
+    },
+    {
+      "source": "/residential-palm-assessment.html",
+      "destination": "/palm-records-monitoring-verification.html#homeowner-inquiry",
+      "permanent": true
+    },
+    {
       "source": "/background.jpg",
       "destination": "/images/old-escondido-ufmp/john-krause-with-mature-cidp.jpg",
       "permanent": true
