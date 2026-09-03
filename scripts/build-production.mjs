@@ -134,7 +134,7 @@ async function main() {
     }
   }
   const requiredByPage = {
-    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "Owner-led stewardship for valuable palm portfolios.", "Protect valuable landscape assets. Reduce preventable palm loss.", "Identity &amp; baselines", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Baseline", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"],
+    "index.html": ["California Qualified Applicator License No. 175295", "Category B — Landscape Maintenance", "Insured", "I document, protect, and follow valuable palms across San Diego County.", "Owner-led field work for managed properties", "Documented field work", "SDPP field photograph", "Identity &amp; baselines", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Request a Baseline", "Residential &amp; Estate Properties", "treatment and work history", "budgeting support"],
     "managed-property-palm-services.html": ["Palm Portfolio Stewardship for Managed Properties", "Protect valuable landscape assets. Reduce preventable palm loss.", "Protect the asset. Reduce preventable loss. Keep responsibility clear.", "one accountable point of contact", "Stewardship &amp; Palm Health", "Protection &amp; Treatment", "Documentation &amp; Portfolio Management", "Response, Removal &amp; Renewal", "Palm asset register", "Baseline condition record", "Recurring stewardship plan", "Dated visit and treatment records", "Material-change alerts", "Periodic portfolio summary", "Palm Portfolio Baseline", "Annual Palm Stewardship Program", "data-engagement-path=\"palm-portfolio-baseline\"", "data-engagement-path=\"annual-palm-stewardship-program\"", "licensed treatment", "Request a Baseline", "existing landscapers", "SDPP-Commercial-Palm-Stewardship.pdf", "View Commercial Overview", "Download Commercial Overview"],
     "palm-records-monitoring-verification.html": ["id=\"homeowner-inquiry\"", "id=\"organization-inquiry\"", "For commercial and managed properties", "Request a Baseline", "known_palm_species", "existing_contractor", "desired_service", "preferred_contact"],
     "palm-stewardship-plans.html": ["Protection and treatment services are available"],
@@ -158,6 +158,9 @@ async function main() {
     }
   }
   const homepage = await readFile(path.join(output, "index.html"), "utf8");
+  if (/background\.jpg/i.test(homepage)) {
+    throw new Error("Denied Coastline Palms image must not appear in the production homepage.");
+  }
   if (homepage.indexOf("Commercial &amp; Managed</a>") > homepage.indexOf(">Residential</a>")) {
     throw new Error("Commercial navigation must precede Residential on the homepage.");
   }

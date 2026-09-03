@@ -491,6 +491,19 @@ def main() -> int:
     if positioning.returncode != 0:
         errors.append("positioning regression validator failed")
 
+    image_provenance = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "validate_image_provenance.py")],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if image_provenance.stdout.strip():
+        print(image_provenance.stdout.strip())
+    if image_provenance.stderr.strip():
+        print(image_provenance.stderr.strip())
+    if image_provenance.returncode != 0:
+        errors.append("image provenance validator failed")
+
     print("VALIDATION_OK" if not errors else "VALIDATION_FAILED")
     print(f"html_files_checked={len(html_files)}")
     print(f"journal_manifest_entries={len(entries)}")

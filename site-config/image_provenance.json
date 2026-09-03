@@ -1,0 +1,465 @@
+{
+  "schema_version": 1,
+  "audited_on": "2026-09-03",
+  "denied_assets": {
+    "background.jpg": "Coastline Palms-branded third-party image; removed from SDPP"
+  },
+  "approved_assets": {
+    "Bismarck.jpg": {
+      "sha256": "fca4aac0a5682dd55d5c94eae08f0004eb89dd44937126e5d08a5f67643b49a4",
+      "source_basis": "sdpp_field_repository"
+    },
+    "Felicita_CIDP.jpg": {
+      "sha256": "2b7d4267789d79d4eb636ec8bc0b6de5a6be1f2ab85118db29102927c85d74a4",
+      "source_basis": "sdpp_field_repository"
+    },
+    "Felicita_CIDP_healthy.jpg": {
+      "sha256": "b215c8ce3bc3a7bcf1c28a22b87223af5a09cb1307870cb55e69a9817baefe33",
+      "source_basis": "sdpp_field_repository"
+    },
+    "Las Palmas_Appartments_Healthy-CIDP.jpg": {
+      "sha256": "87c2ff7c8250801b0d6077c531c0222b75dd5bdf7d17c2b4b1651beec89d6f8e",
+      "source_basis": "sdpp_field_repository"
+    },
+    "Old-Escondido_full-CIDP.jpg": {
+      "sha256": "67a5a181e2a20962aebccc89b410b7048ab9f3f3ff593c9ddcb9b4de42f18a4d",
+      "source_basis": "sdpp_field_repository"
+    },
+    "RSF1.jpg": {
+      "sha256": "f94ca102b38eb85698ba4836a5b6ae66970ddc127817e82ab97f9a3fe2d59dbe",
+      "source_basis": "sdpp_field_repository"
+    },
+    "RSF2.jpg": {
+      "sha256": "2824db42d7c6e46f23165ea524cec0b550d2bbdd6a1db543e63378554acbe3f0",
+      "source_basis": "sdpp_field_repository"
+    },
+    "RSF3.jpg": {
+      "sha256": "d45eadb56a41f683b02ae60aefa949eefab240fa8a0d157f3782fa1bb6d0aa19",
+      "source_basis": "sdpp_field_repository"
+    },
+    "RSF4.jpg": {
+      "sha256": "9a407a1df025b73afd790abe9975da6364b70fca9937a3f43ef14f9678fc40b9",
+      "source_basis": "sdpp_field_repository"
+    },
+    "beautiful-old-escondido-cidp-san-diego-palm-protection.jpg": {
+      "sha256": "c97fb3504bc4dae28536a6525eb519394ad81eb5ae09a76b7cc1d20af3569d87",
+      "source_basis": "sdpp_field_repository"
+    },
+    "beautiful-old_escondido-cidp.jpg": {
+      "sha256": "e9cf098ff56d88580c360bf39ad661f0032ac707120fc688437e90f4aa69f1c9",
+      "source_basis": "sdpp_field_repository"
+    },
+    "bismarck-specimen-escondido-palm-san-diego-palm-protection.jpg": {
+      "sha256": "53178b082d401019cecb06f03615479fa187428c6d8cc42ffb696db18124aa61",
+      "source_basis": "sdpp_field_repository"
+    },
+    "blue-hesper-canary-island-date-palm-poway.jpg": {
+      "sha256": "c21fc32249eb95c079abc4ce326c543c560175176df9f39c698100a8db2e1c22",
+      "source_basis": "sdpp_field_repository"
+    },
+    "canary-island-date-palm-mansion-poway.jpg": {
+      "sha256": "e2b90ab75b7bee24c23c43fd5adacf6fadbe5edbc70a5862032a674e899912a4",
+      "source_basis": "sdpp_field_repository"
+    },
+    "cidp-palms-poway.jpg": {
+      "sha256": "c38d16a02429c23594679d1698476a5f43187893f1595c70845e995cb6cd6a67",
+      "source_basis": "sdpp_field_repository"
+    },
+    "dead-cidp-healthy-cidp-poway.jpg": {
+      "sha256": "60a138b4db4f84d45527e4169cc9b17cb38f6135d26ec67db315447ce4a1b34f",
+      "source_basis": "sdpp_field_repository"
+    },
+    "dead-cidp-sapw-healthy-cidp-poway.jpg": {
+      "sha256": "c08dcd25ce92fac9676ee3424d76d7474f86cfc41aff85ecad333fb53b7e414b",
+      "source_basis": "sdpp_field_repository"
+    },
+    "driveway-cidp-poway.jpg": {
+      "sha256": "75a9155254230a08cebe5b913f902a1a21688866abd99784d582a501cdc3737c",
+      "source_basis": "sdpp_field_repository"
+    },
+    "early-south-american-palm-weevil-cidp-poway.jpg": {
+      "sha256": "8922c6f6e99e5ab9946340e3d50755b736a56fc2ec0194845d36cc54dcfe3f95",
+      "source_basis": "sdpp_field_repository"
+    },
+    "evidence.jpg": {
+      "sha256": "1e326a7c73f63ab5218585e73ffa4c026985047c03cd85cf38d080d9ae0bb179",
+      "source_basis": "sdpp_field_repository"
+    },
+    "exhibit_1.jpg": {
+      "sha256": "eb101c30f22621ffc0cdc8368cd893cc0d23c8d106715e64c0e59a02feb60439",
+      "source_basis": "sdpp_field_repository"
+    },
+    "exhibit_5.jpg": {
+      "sha256": "8b97b96bf5bd9820d06706da4a0eb6fb9b14b75d27576f8c54bd2bbc4f3eefc9",
+      "source_basis": "sdpp_field_repository"
+    },
+    "exhibit_8.jpg": {
+      "sha256": "6d69d05893adf968d654e23be65b439270db97e4d579792525d20d6488c6c35a",
+      "source_basis": "sdpp_field_repository"
+    },
+    "exhibit_8a.JPG": {
+      "sha256": "5c8e62fa5e41b149cf106294ed37519b30435f38717340fc94a44cab0c2c2fa8",
+      "source_basis": "sdpp_field_repository"
+    },
+    "grand.jpg": {
+      "sha256": "74410a6f2166f47b5390ed6bb81700658a362adf93e465aeae6b9d5dd994e377",
+      "source_basis": "sdpp_field_repository"
+    },
+    "grand1.jpg": {
+      "sha256": "ceaa171a887d830019157a1c38620fc7bcd2ea6a83465c8ad712fedb396b8aba",
+      "source_basis": "sdpp_field_repository"
+    },
+    "grand2.jpg": {
+      "sha256": "a7944f30eda80ef84bf71c59614e5eb976813af495b37aafb6068877691bffcc",
+      "source_basis": "sdpp_field_repository"
+    },
+    "grape1.jpg": {
+      "sha256": "41d6910e99dfd945d069ad606ecf6b6a193905ff8db3e1a7d3293a5aa4388db8",
+      "source_basis": "sdpp_field_repository"
+    },
+    "grape2.jpg": {
+      "sha256": "af66457670859c1b5509cbed7cdbdd248093a0bde31bf11d4ea221b46fa0fcf2",
+      "source_basis": "sdpp_field_repository"
+    },
+    "grape4.jpg": {
+      "sha256": "0a68c0147d11690aab8324089ac823d1d0b8b62682156bfc5d99f229219f8da5",
+      "source_basis": "sdpp_field_repository"
+    },
+    "healthy-canary-island-date-palm-in-rancho-santa-fe-san-diego-palm-protection.jpg": {
+      "sha256": "0fb8a056d41a27f0f80101fe6bf39b4a392f18b8825c13968cf0ee88e93b5161",
+      "source_basis": "sdpp_field_repository"
+    },
+    "healthy.jpg": {
+      "sha256": "5797cc40f5745893ecc3ecc35a5e8d454e0a806f2313dc38b2310d401d8e4ea2",
+      "source_basis": "sdpp_field_repository"
+    },
+    "historic_escondido-cidp.jpg": {
+      "sha256": "c130cf81830320b10d017ab8a71a798a931baec9fef57235cc5ffe1e1243c723",
+      "source_basis": "sdpp_field_repository"
+    },
+    "images/about-john/education/indiana-university-trident.svg": {
+      "sha256": "74757d324913be7dabccdcd3573c8d8f6f13347a765448429b3dbe5b4d16d359",
+      "source_basis": "credited_education_mark"
+    },
+    "images/about-john/education/university-of-minnesota-block-m.svg": {
+      "sha256": "eb206ab9de9b31d246d8efdc3f15a50389199d550e8c9d617ca434ce56fd068e",
+      "source_basis": "credited_education_mark"
+    },
+    "images/about-john/john-krause-palm-1280.webp": {
+      "sha256": "f87262817d344646f86d8555c930dbf5dfd12e009b0662b016852a4ccc6c503c",
+      "source_basis": "owner_identity"
+    },
+    "images/about-john/john-krause-palm-640.webp": {
+      "sha256": "348bfaef70abbf1507b9b970ad82a9ee93bcddc49c6c348b5aaffe6b510ab91b",
+      "source_basis": "owner_identity"
+    },
+    "images/about-john/john-krause-palm-960.jpg": {
+      "sha256": "d229cfe16f9471f48424187ccc5d3291477856dd1b80fb77490dd48779ba3341",
+      "source_basis": "owner_identity"
+    },
+    "images/about-john/john-krause-palm-960.webp": {
+      "sha256": "cbdeeeb8863ed95839ad9060687687778536dde7feb9eb2b0db5e842041acf06",
+      "source_basis": "owner_identity"
+    },
+    "images/las-palmas/01-property-context-laspalmas-escondido-cidp.jpg": {
+      "sha256": "981e6d383c0ffea2e1ed3ed0cb757f396be5356debec82eed4170eab03da5466",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/las-palmas/02-property-context-laspalmas-rentesc.jpg": {
+      "sha256": "227ab99605414d613e2241b6e014769a328eabec24da1bdde1343a148d7d984f",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/las-palmas/03-subject-identification-20260710-193311.jpg": {
+      "sha256": "a159b8852f180930796de6f7c6f9fd624453e33127609aed3768772ae692e9b6",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/las-palmas/04-exact-subject-20260710-193355.jpg": {
+      "sha256": "05a11e60bdf55a02d49302ee92d43887c77b948f169fec5575add5af63c9e060",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/las-palmas/05-establishing-2026-07-10-las-palmas-property-sign-healthy-palm-comparison-05.jpg": {
+      "sha256": "88f7eed40ea9f729579bad689202cc500e8d69baf8d3a1dc0bd6f6b3b69a80f0",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/las-palmas/09-severe-decline-2026-07-10-las-palmas-declining-palm-central-frond-necrosis-detail-03.jpg": {
+      "sha256": "794e663512cf43ca25484b832f4b133ec168b84cd0a1afcbeb6ad53caf487be5",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/las-palmas/11-outcome-context-20260713-184152.jpg": {
+      "sha256": "dd5e433de8ca5c9ce9f085dfd3e152af62a527a05dd257d1ebf62a0b76741151",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/las-palmas/12-stump-20260713-184911.jpg": {
+      "sha256": "7dab476d8e2b1ab1d8dfa71b048be51bf84ee475f615ec95237aca8b156242ac",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/mexican-fan-palm-lean-curve.jpg": {
+      "sha256": "5dbe2cfaabc1709589edb39b38e6770fce52ebcb9998d790d60c3348fe0113dd",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/mexican-fan-palm_curvature.jpg": {
+      "sha256": "3a1eb0cd93e4586cb08449c1b8c02e80c5edbfb6c2edfa034432dc71b11b1b86",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/multiple-cidp-11th-ave-old-escondido.jpg": {
+      "sha256": "120bcfce1c33f33981dce8c1c19d7266d0d39e62a296c372562f53f981597201",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-albert-h-beach-house-canary-island-date-palms-golden-hour-01.jpg": {
+      "sha256": "9401e7e5c91a10c52e6556a8599c1e40c22d8eb1443d59f8dd6afe4f253cd70e",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-canary-island-date-palm-residential-baseline-november-2025.jpg": {
+      "sha256": "aed789007f9eb1078faad431a2209049747b1535dae063258f58c5816e8f6af6",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-cidp-severe-crown-loss.jpg": {
+      "sha256": "10dc250e46048cb48e9fcf2219d7be9ff66ad5c68c26c76e9e2a7d8c642d1c94",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-felicita-contrast.jpg": {
+      "sha256": "e4dd2f482116a6ec30d639fa0d7f93353c6ddde1aa23a4e70af144e1910f6f7d",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-own-cidp-crown-health-monitoring-02.jpg": {
+      "sha256": "b9561cf67379226a7e0626ec414a32a2a399ccc3a4d9454b8111f5adb16e61ca",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-own-cidp-decline-observation-03.jpg": {
+      "sha256": "49a9415409f9d32c69b117559d7a2b5f874df1949d6161adaa77ddef940f06dd",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-own-cidp-palm-weevil-monitoring-01.jpg": {
+      "sha256": "0d74f7e5ab43e6dbae28d7c62d3afe48ed15232b343384008d3405cab2ddc29b",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-ufmp/healthy-private-yard-cidp.jpg": {
+      "sha256": "cd061d9e5e3a43898cfcb0d8fbdaf5901763b99a796ced20c73d166952e4392d",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-ufmp/john-krause-with-mature-cidp.jpg": {
+      "sha256": "6a35ef942d040873dc0087d9520fbf651601aef5bca66d740e0e7b339050b888",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-ufmp/las-palmas-documented-loss-crown-context.jpg": {
+      "sha256": "e54e2fa2a29dea83b8112a85ae08fa166791537e889abe955a8b0014b6598ee6",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-ufmp/old-escondido-multiple-cidp-street-pattern.jpg": {
+      "sha256": "be58fcf951aadc89eeaf059820bc5a27c2ba742b14edeb34342cbc558533be44",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-ufmp/old-home-mature-cidps-golden-hour.jpg": {
+      "sha256": "9d77271b9971d1a8bb1a6304ac86889dd04496d929622922c411aecfdfdabeb8",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-ufmp/owner-documented-multiple-sapw-captures.jpg": {
+      "sha256": "ace589267dad6a31c86ea18d6fabaedf40efac81ec3434274f67af5cefbfc317",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-urban-forest-documentation/old-escondido-ufmp-01.jpg": {
+      "sha256": "3c64b920cbe95a41c552b432c28387e4e57d954fb8c996067a8bb898d9ee660a",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-urban-forest-documentation/old-escondido-ufmp-02.jpg": {
+      "sha256": "7613627589f231722546130ac04faf1f099b0cf93631bf30320d2984821feb6e",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-urban-forest-documentation/old-escondido-ufmp-03.jpg": {
+      "sha256": "96d1343f176359e59646c8ef72f4d615b81816f14e6337c7058a6f66833d9246",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/old-escondido-urban-forest-documentation/old-escondido-ufmp-04.jpg": {
+      "sha256": "8e4c5274835fe76631d84507eed7494e0dcb82342394b3354007a42c553b7ba0",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/old-escondido-living-landmarks/01-historic-house-and-mature-palms.webp": {
+      "sha256": "3436ddc25e9eea703d43d907379455d71df07231066a56624e2106c438361fef",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/old-escondido-living-landmarks/02-pair-of-palms-above-old-escondido-house.webp": {
+      "sha256": "bc0cd7a205af2b8261a44ffa30eed304f9b38bc6c541d9dbaa7b560ff6c18ac7",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/old-escondido-living-landmarks/03-mature-palm-and-established-home.webp": {
+      "sha256": "83d2216d22786d8eb645aaddbe41f72f76de1bf17a3bab55778f5dfdd5a806cc",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/old-escondido-living-landmarks/04-mature-palm-in-neighborhood-streetscape.webp": {
+      "sha256": "ba5507f9d286990af0b585d5b691abf7e2af3b628a284f4f790c78f53da237ed",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palm-stewardship-solving-the-whole-problem/01-multi-headed-sago.jpg": {
+      "sha256": "6cae95df95974d1026a76835c887872757e0b46a505bbc0755ddaa5ed8621fcc",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palm-stewardship-solving-the-whole-problem/02-mediterranean-fan-palm.jpg": {
+      "sha256": "bc2e6cb648d70a73154fabdde955f6a58adf72dceb2269f41c3e24847aa1cc5f",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palm-stewardship-solving-the-whole-problem/03-encephalartos-cycad.jpg": {
+      "sha256": "28c226c324717fe349ba83edd96e8ae01e19b7bdc8de2b82fb16aa387f841e0c",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palm-stewardship-solving-the-whole-problem/04-pygmy-date-grouping.jpg": {
+      "sha256": "a057adeb174193a225c2af7df4d67f912f068b131a9563bb3cd4178837addad4",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palms-complete-old-escondido-homes/00-albert-h-beach-house-palms-card.webp": {
+      "sha256": "464c78547d1b051ab5e02be0e479a34f2b5295f45d0efc5bb27865dff0da32a8",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palms-complete-old-escondido-homes/01-albert-h-beach-house-palms-hero.webp": {
+      "sha256": "3f0a5bb2bdfe11d6e26a1f552154b53fbc607b2c5da88c0b4d062c6d001c2e5f",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palms-complete-old-escondido-homes/02-albert-h-beach-house-streetscape.webp": {
+      "sha256": "5c2d2d36ed30ecc93ec154da5b56c25f3121a7fedf5f18b12353147dae2fd51f",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palms-complete-old-escondido-homes/03-710-south-broadway-house-and-palm.webp": {
+      "sha256": "d4e1bf9358cc57ff17312e258cfeff27ec7383a9672e818b932a4f1de122ebc9",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palms-complete-old-escondido-homes/05-hillside-home-and-full-palm-trunk.webp": {
+      "sha256": "743ef1645248d56e6befa7a9abaf20c0cb3d5141f90ba71382abdaf5a1ff593c",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palms-complete-old-escondido-homes/06-old-escondido-palm-street-pattern.webp": {
+      "sha256": "36d38568e507467b29d978592b92229f7fd3e79fcb532447f96a55ffc5b76d9f",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/palms-complete-old-escondido-homes/07-beach-house-queen-anne-entry-detail.webp": {
+      "sha256": "aa5dd30474c93197d8df6a7cc503004ae1af8a3ae289895ddaba2e6e2b5904dc",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/when-sapw-became-local/01-june-15-adult-sapw.jpg": {
+      "sha256": "6264d56555b2f47361fc8d00f4a49479bd917ce9a752c6b366864a609c4e1b84",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/when-sapw-became-local/02-june-15-captured-adults-jar.jpg": {
+      "sha256": "299ac86ff564e44fdebe9af70e7eecf2ff1cdbfba66f7e19da4d1ddadc401ebd",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/when-sapw-became-local/03-june-16-six-captured-adults.jpg": {
+      "sha256": "7fb3271eb3dfd91c443f6994441840883aafe5ecb844b4937d2e75eb50c51f66",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/when-sapw-became-local/04-june-16-specimen-profiles.jpg": {
+      "sha256": "4a39cc7b54461a675ff0604e35241e7ac7787c06e5d188d7a0754b43b1afee68",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/when-sapw-became-local/05-june-26-adult-on-trunk-poster.jpg": {
+      "sha256": "171424d4fdad9279d94e5457ee48a8b30df86c451a3e1de9705c7dcffdd2cbe9",
+      "source_basis": "approved_owner_field_record"
+    },
+    "images/palm-journal/when-sapw-became-local/05-june-26-adult-on-trunk.mp4": {
+      "sha256": "1f20afc1c318d37defb4a785dff14521cf7975a5fa936c25f7112cdf8749676c",
+      "source_basis": "approved_owner_field_record"
+    },
+    "journal-overview.jpg": {
+      "sha256": "bcf56b37e1c5745b268123cbed5b79a85b4bb8ad14d75eab89a19d9dc5d6c949",
+      "source_basis": "sdpp_field_repository"
+    },
+    "lake-poway-1-palm-san-diego-palm-protection.jpg": {
+      "sha256": "4b1810b7861683f9267ad3da63a20c6c07122f2df30e064dd472f84c207afee5",
+      "source_basis": "sdpp_field_repository"
+    },
+    "logo.png": {
+      "sha256": "a43d048095e4c598b5b284132a0c21dee85afe08aff83797d375f77d8a03d572",
+      "source_basis": "sdpp_brand"
+    },
+    "majestic_cidp_poway_mansion.jpg": {
+      "sha256": "020ad000f070bc0bf76834a8e87978a6aeee38397f2eb454eda719a82be575db",
+      "source_basis": "sdpp_field_repository"
+    },
+    "mansion_healthy_cidp_poway_three.jpg": {
+      "sha256": "06a5249c2b8bf9103fa8f0dc75aed3e54698726f2fa634255ce965ecf4591419",
+      "source_basis": "sdpp_field_repository"
+    },
+    "mature-cidp-estate.jpg": {
+      "sha256": "81f870581d2a6f20878f3f75e391777a279350e7e684a2f39073dc20ab8702da",
+      "source_basis": "sdpp_field_repository"
+    },
+    "mature-cidp-old-escondido-san-diego-palm-protection.jpg": {
+      "sha256": "1b134b3d2308dab75dcdfc96093687ca964cf38854c9082989eb15e821492330",
+      "source_basis": "sdpp_field_repository"
+    },
+    "mature-cidp-old_escondido.jpg": {
+      "sha256": "ec2cc11f62362760ffffbc4ad19422d0965866a4c0573d31ad8a35e52dbacd4a",
+      "source_basis": "sdpp_field_repository"
+    },
+    "mature-palm-documentation-and-landscape-context-in-poway-san-diego-palm-protection.jpg": {
+      "sha256": "351f1fbdc2dc4efd186faf6ca0f2591c74c793ec6f21eee62b1b9ebe6a876d75",
+      "source_basis": "sdpp_field_repository"
+    },
+    "mature_healthy_cidp_poway_mansion.jpg": {
+      "sha256": "e2cc307bdbc65f605a999253863e1150bc4fe901f987ad5948885d1947e98c0c",
+      "source_basis": "sdpp_field_repository"
+    },
+    "multiple-south-american-palm-weevil-sapw-canary-island-date-palm-old_escondido.jpg": {
+      "sha256": "c83b0ce13e0d66029ac7a533750751b18706afea61f9ea8df139df955f9766f2",
+      "source_basis": "sdpp_field_repository"
+    },
+    "old-escondido-declining-cidp-crown-context-01.jpg": {
+      "sha256": "45d02455969158157849f2fa3097cdc92748c2193d51985aba3a5f19de64bfa1",
+      "source_basis": "sdpp_field_repository"
+    },
+    "old-escondido-multiple-south-american-palm-weevil-sapw-canary-island-date-palm-cidp.jpg": {
+      "sha256": "ffdecf5faebe499ddca92e83309d4d583bf31bcb478403d3587ed7e8d3a53dc7",
+      "source_basis": "sdpp_field_repository"
+    },
+    "old-escondido-nearby-cidp-context-02.jpg": {
+      "sha256": "780b54205854e1d569000a472b9a95f730d8e7cba13a460e467d186442359037",
+      "source_basis": "sdpp_field_repository"
+    },
+    "old-escondido-nearby-mature-cidp-street-context-01.jpg": {
+      "sha256": "2e393039fa8cf8b8894f20732a96b3c6269c6e6df593c118c77265cfa568e142",
+      "source_basis": "sdpp_field_repository"
+    },
+    "old-escondido-south-american-palm-weevil-sapw-canary-island-date-palm-cidp_closeup.jpg": {
+      "sha256": "5051a0b96bf89f426b6aa9c12ffe2031c7ae71c5b9b24d944083d90bd19d560c",
+      "source_basis": "sdpp_field_repository"
+    },
+    "old-escondido-topview-south-american-palm-weevil-sapw-canary-island-date-palm-cidp.jpg": {
+      "sha256": "25d2297c955e701af34ad5cba8b38c09a077a9e1f0f5ec642c70bbd5e79316f4",
+      "source_basis": "sdpp_field_repository"
+    },
+    "old-historic-canary-island-date-palm-sandiego.jpg": {
+      "sha256": "66ba56ccf1336a24caf516ac94a1891a83075535b62b82771b5ec8514313f14a",
+      "source_basis": "sdpp_field_repository"
+    },
+    "old_escondido-mature-cidp.jpg": {
+      "sha256": "3a97e10f8abab8e39823a9d1196d38dc1eca275e33b1fa694f9b7b1384162fca",
+      "source_basis": "sdpp_field_repository"
+    },
+    "older-cidp-old_escondido.jpg": {
+      "sha256": "2e670c406d4e2f74a4e5bb110d83badcfda3cc22681d24892b694ab002306209",
+      "source_basis": "sdpp_field_repository"
+    },
+    "poway-what-does-sapw-look-like-cidp.jpg": {
+      "sha256": "93519400c23d27aaf45755406899639bc212e285daf9c0d49ac7180e396ae8fc",
+      "source_basis": "sdpp_field_repository"
+    },
+    "several-healthy-cidp-poway-and-one-dead-cidp.jpg": {
+      "sha256": "3892b121abcccdbae010df11a1a00062dcfca9ec1612c01cecc66fabf72b349c",
+      "source_basis": "sdpp_field_repository"
+    },
+    "silver_luxury_poway.jpg": {
+      "sha256": "4058e8117d80811c2553dca241f6a9473b1776276af5f6a80b1fcdb9629fa6e9",
+      "source_basis": "sdpp_field_repository"
+    },
+    "south-american-palm-weevil-cidp-poway.jpg": {
+      "sha256": "b41cf414eec6e01eeb36c207086aa1bd5ae0aa2cf0b29d7b7a588b84540a42fa",
+      "source_basis": "sdpp_field_repository"
+    },
+    "sunset-old_escondido-mature-cidp.jpg": {
+      "sha256": "55b4e803e63e304d3961a1abc95c70c71fd86f4001b531a3e1ea9143d38a6bf6",
+      "source_basis": "sdpp_field_repository"
+    },
+    "two-statement-cidp-mansion-poway.jpg": {
+      "sha256": "d6bd3d6ad8a24cec624c058e841c460a0080902e1e23977644f04bccaf6a5f47",
+      "source_basis": "sdpp_field_repository"
+    }
+  }
+}

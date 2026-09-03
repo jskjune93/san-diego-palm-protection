@@ -43,8 +43,8 @@ def main() -> int:
     if home.count(public["service_summary"]) != 1:
         errors.append("homepage must contain exactly one concise stewardship statement")
     for scoped_fragment in (
-        "Owner-led stewardship for valuable palm portfolios.",
-        "Protect valuable landscape assets. Reduce preventable palm loss.",
+        "I document, protect, and follow valuable palms across San Diego County.",
+        "Owner-led field work for managed properties",
         "Preventive protection, South American palm weevil awareness",
         "The work is shaped by the palms, the property, and the decisions",
         "Residential and estate services remain available.",

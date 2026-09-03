@@ -16,11 +16,11 @@ def main() -> int:
         "services": (ROOT / "palm-records-monitoring-verification.html").read_text(encoding="utf-8"),
     }
     required_home = (
-        "Owner-led stewardship for valuable palm portfolios.",
+        "I document, protect, and follow valuable palms across San Diego County.",
         "Residential &amp; Estate Properties",
         "homeowner-inquiry-initiation",
         "organization-inquiry-initiation",
-        "Scope and pricing",
+        "See the field record and reporting examples",
     )
     required_services = (
         'id="homeowner-inquiry"',

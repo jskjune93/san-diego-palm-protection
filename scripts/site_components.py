@@ -24,7 +24,7 @@ def asset_prefix(relative_root: str) -> str:
     return relative_root
 
 
-def head(title: str, description: str, path: str, image: str = "background.jpg",
+def head(title: str, description: str, path: str, image: str = "Old-Escondido_full-CIDP.jpg",
          schema_type: str = "WebPage", extra_schema: dict | None = None,
          relative_root: str = "./", publish_extra_schema: bool = False) -> str:
     canonical = BASE_URL + ("/" if path == "index.html" else f"/{path}")
@@ -176,11 +176,11 @@ def mobile_contact(relative_root: str = "./", residential_primary: bool = False)
 
 
 def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
-         lede: str, body: str, image: str = "background.jpg",
+         lede: str, body: str, image: str = "Old-Escondido_full-CIDP.jpg",
          relative_root: str = "./", extra_schema: dict | None = None,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
-    hero_note = '<p class="hero-microcopy">Identity &amp; baselines · Recurring plans &amp; records · Licensed treatment · Coordinated response</p>' if filename == "index.html" else ""
+    hero_note = '<p class="hero-microcopy">Identity &amp; baselines · Recurring plans &amp; records · Licensed treatment · Coordinated response</p><p class="hero-photo-credit">SDPP field photograph · Old Escondido</p>' if filename == "index.html" else ""
     hero_trust = '<p class="hero-trust-line">Owner-operated • Pest Control Business License No. 47756 • QAL No. 175295 • Category B — Landscape Maintenance • Insured</p>' if filename == "index.html" else ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '
