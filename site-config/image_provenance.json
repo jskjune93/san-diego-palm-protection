@@ -830,10 +830,10 @@
     },
     "two-statement-cidp-mansion-poway.jpg": {
       "sha256": "d6bd3d6ad8a24cec624c058e841c460a0080902e1e23977644f04bccaf6a5f47",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     }
   }
 }
