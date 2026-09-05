@@ -71,7 +71,7 @@ def main() -> int:
     paths = re.findall(r'data-engagement-path="([^"]+)"', services)
     if paths != ["palm-portfolio-baseline", "annual-palm-stewardship-program"]:
         errors.append(f"consolidated services page must expose exactly two ordered engagement paths; found {paths}")
-    for phrase in ("Protect valuable palms from SAPW", "Treatment is what SDPP does", "Preventive SAPW treatment", "Coordinating removals", "Coordinating replacements", "Palm Portfolio Baseline", "Annual Palm Stewardship Program", "View Commercial Overview", "Download Commercial Overview"):
+    for phrase in ("Protect valuable palms from SAPW", "Annual Mature Palm Protection Program", "Four scheduled visits", "Preventive SAPW treatment", "Coordinating removals", "Coordinating replacements", "Managed-property protection", "View Commercial Overview", "Download Commercial Overview"):
         if phrase not in services:
             errors.append(f"consolidated services page missing commercial hierarchy concept: {phrase}")
     if re.search(r"(?:bronze|silver|gold) (?:package|plan|tier)", services, re.I):

@@ -16,6 +16,7 @@ CRITICAL = {
     "index.html": (
         "preventive treatment for san diego’s most valuable palms",
         "licensed preventive treatment",
+        "annual mature palm protection program",
         "mature canary island date palms",
         "request a palm assessment",
         "view field work",
@@ -23,6 +24,7 @@ CRITICAL = {
     "palm-records-monitoring-verification.html": (
         "protect valuable palms from sapw",
         "treatment is what sdpp does",
+        "annual mature palm protection program",
         "preventive sapw treatment",
         "coordinating removals",
         "coordinating replacements",

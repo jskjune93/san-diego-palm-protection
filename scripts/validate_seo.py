@@ -31,7 +31,7 @@ INTENT_REQUIREMENTS = {
     "sapw.html": ("south american palm weevil", "san diego", "signs", "prevention"),
     "south-american-palm-weevil-treatment-san-diego.html": ("south american palm weevil", "treatment", "san diego"),
     "palm-stewardship-plans.html": ("palm", "treatment", "preventive protection", "san diego"),
-    "quarterly-palm-care-san-diego.html": ("palm stewardship", "preservation", "san diego"),
+    "quarterly-palm-care-san-diego.html": ("annual mature palm protection program", "preventive sapw treatment", "san diego"),
     "palm-records-monitoring-verification.html": ("preventive sapw treatment", "south american palm weevil", "high-value specimens"),
     "canary-island-date-palm-care-san-diego.html": ("canary island date palm", "care", "treatment", "san diego"),
     "palm-care-escondido.html": ("palm care", "treatment", "escondido"),

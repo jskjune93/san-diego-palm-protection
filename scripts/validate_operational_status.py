@@ -117,10 +117,10 @@ def main() -> int:
             if phrase not in treatment_page:
                 errors.append(f"SAPW treatment page missing active service language: {phrase}")
         recurring = (DIST / "quarterly-palm-care-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "quarterly-palm-care-san-diego.html").exists() else ""
-        for phrase in ("Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"):
+        for phrase in ("Annual Mature Palm Protection Program", "every three months", "preventive SAPW treatment", "Four visits each year", "Priority response"):
             if phrase not in recurring:
                 errors.append(f"recurring-stewardship page missing current service language: {phrase}")
-        for phrase in ("Treatment is what SDPP does", "Preventive SAPW treatment", "Coordinating removals", "Coordinating replacements", "Other palm goals", "Commercial properties, HOAs, institutions, estates, and homeowners", "SDPP-Commercial-Palm-Stewardship.pdf"):
+        for phrase in ("Annual Mature Palm Protection Program", "Treatment is what SDPP does", "Four scheduled visits", "Preventive SAPW treatment", "Coordinating removals", "Coordinating replacements", "Other palm goals", "homeowners, estates, HOAs, institutions, and selected managed properties", "SDPP-Commercial-Palm-Stewardship.pdf"):
             if phrase not in records:
                 errors.append(f"consolidated services page missing service pathway: {phrase}")
         for field in ("known_palm_species", "existing_contractor", "desired_service", "preferred_contact"):
