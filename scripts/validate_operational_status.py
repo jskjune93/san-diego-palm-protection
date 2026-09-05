@@ -109,7 +109,7 @@ def main() -> int:
 
         homepage = (DIST / "index.html").read_text(encoding="utf-8-sig") if (DIST / "index.html").exists() else ""
         records = (DIST / "palm-records-monitoring-verification.html").read_text(encoding="utf-8-sig") if (DIST / "palm-records-monitoring-verification.html").exists() else ""
-        for phrase in ("South American Palm Weevil Protection for San Diego’s Mature Palms", "licensed preventive treatment", "mature Canary Island date palms", "Request a Palm Assessment", "View Field Work"):
+        for phrase in ("Protecting San Diego’s Most Valuable Palms", "licensed preventive treatment", "mature Canary Island date palms", "Request a Palm Assessment", "Field Work"):
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
         treatment_page = (DIST / "south-american-palm-weevil-treatment-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "south-american-palm-weevil-treatment-san-diego.html").exists() else ""

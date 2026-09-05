@@ -16,7 +16,7 @@ def main() -> int:
         "services": (ROOT / "palm-records-monitoring-verification.html").read_text(encoding="utf-8"),
     }
     required_home = (
-        "South American Palm Weevil Protection for San Diego’s Mature Palms",
+        "Protecting San Diego’s Most Valuable Palms",
         "homeowner-inquiry-initiation",
         "organization-inquiry-initiation",
         "View Field Work",

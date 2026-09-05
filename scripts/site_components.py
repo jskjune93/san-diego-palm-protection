@@ -178,7 +178,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          relative_root: str = "./", extra_schema: dict | None = None,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
-    hero_note = '<p class="hero-microcopy">SAPW prevention · Licensed treatment · Recurring palm care</p><p class="hero-photo-credit">SDPP field photograph · Old Escondido</p>' if filename == "index.html" else ""
+    hero_note = ""
     hero_trust = ""
     residential_trust = (
         '<p class="hero-trust-line">Your assessment is completed by John Krause, owner of San Diego Palm Protection and holder of '

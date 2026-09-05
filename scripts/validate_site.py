@@ -272,7 +272,7 @@ def main() -> int:
         "South American Palm Weevil Protection",
         "licensed preventive treatment",
         "mature Canary Island date palms",
-        "See the work behind the service.",
+        "The landscapes worth protecting.",
     ):
         if required_pillar not in homepage_text:
             errors.append(f"homepage missing stewardship-function positioning: {required_pillar}")

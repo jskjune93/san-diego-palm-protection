@@ -43,10 +43,10 @@ def main() -> int:
     if home.count(public["service_summary"]) != 0:
         errors.append("homepage must not display the detailed credential-panel service statement")
     for scoped_fragment in (
-        "South American Palm Weevil Protection for San Diego’s Mature Palms",
+        "Protecting San Diego’s Most Valuable Palms",
         "licensed preventive treatment",
         "mature Canary Island date palms",
-        "See the work behind the service.",
+        "The landscapes worth protecting.",
         "For estates, luxury landscapes, HOAs, institutions, and managed properties.",
         "San Diego Botanic Garden called. I was there the next day.",
         "active South American palm weevil infestation",

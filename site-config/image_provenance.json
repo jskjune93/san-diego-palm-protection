@@ -779,6 +779,41 @@
       "publication_decision": "approved_context_only",
       "presentation_risk": "Must not imply SDPP performed depicted work"
     },
+    "images/luxury-landscapes/garden-color-and-palms.webp": {
+      "sha256": "5e822a014edf5a2732b70933ba879ef772fc938b071b3927ddb99f915b4bbfcc",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
+    "images/luxury-landscapes/historic-home-and-mature-palm.webp": {
+      "sha256": "c2332f39f86bad92dff9d58be06efb7efe25cd44ccf16e76b0b44c70949ed3c5",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
+    "images/luxury-landscapes/palm-estate-arrival.webp": {
+      "sha256": "8a64952d5ce115e4955c1f4d8352fa0bdf2638b1c3560baf68017de50e24b50d",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
+    "images/luxury-landscapes/palm-lined-estate-court.webp": {
+      "sha256": "234f397ee2123273b65492962eae718d7328f5b345153b3f70bc2d63ae729e89",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
+    "images/luxury-landscapes/specimen-date-palm-estate.webp": {
+      "sha256": "8f42780101f2b1d69dffb59984d19f4769733843e6b5ec7a86bb7c131a321db1",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
     "silver_luxury_poway.jpg": {
       "sha256": "4058e8117d80811c2553dca241f6a9473b1776276af5f6a80b1fcdb9629fa6e9",
       "classification": "unverified_or_uncertain",

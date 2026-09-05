@@ -14,7 +14,7 @@ POSITIONING = ROOT / "site-config" / "positioning.json"
 
 CRITICAL = {
     "index.html": (
-        "south american palm weevil protection",
+        "protecting san diego’s most valuable palms",
         "licensed preventive treatment",
         "mature canary island date palms",
         "request a palm assessment",
