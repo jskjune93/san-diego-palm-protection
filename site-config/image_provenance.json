@@ -235,10 +235,10 @@
     },
     "healthy-canary-island-date-palm-in-rancho-santa-fe-san-diego-palm-protection.jpg": {
       "sha256": "0fb8a056d41a27f0f80101fe6bf39b4a392f18b8825c13968cf0ee88e93b5161",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     },
     "healthy.jpg": {
       "sha256": "5797cc40f5745893ecc3ecc35a5e8d454e0a806f2313dc38b2310d401d8e4ea2",
@@ -660,12 +660,19 @@
       "publication_decision": "approved_context_only",
       "presentation_risk": "Must not imply SDPP performed depicted work"
     },
+    "mature-CIDP-Escondido-estate.jpg": {
+      "sha256": "3fcace879ffa401df6cf41ca51801591ce7e364ce83aca801e5562f6e5135d06",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
     "mature-cidp-estate.jpg": {
       "sha256": "81f870581d2a6f20878f3f75e391777a279350e7e684a2f39073dc20ab8702da",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     },
     "mature-cidp-old-escondido-san-diego-palm-protection.jpg": {
       "sha256": "1b134b3d2308dab75dcdfc96093687ca964cf38854c9082989eb15e821492330",
@@ -779,10 +786,17 @@
       "publication_decision": "approved_context_only",
       "presentation_risk": "Must not imply SDPP performed depicted work"
     },
-    "images/luxury-landscapes/garden-color-and-palms.webp": {
-      "sha256": "5e822a014edf5a2732b70933ba879ef772fc938b071b3927ddb99f915b4bbfcc",
+    "canary-island-date-palm-mansion-poway.jpg": {
+      "sha256": "e2b90ab75b7bee24c23c43fd5adacf6fadbe5edbc70a5862032a674e899912a4",
       "classification": "confirmed_original_sdpp",
-      "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
+      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
+    "images/luxury-landscapes/coastal-palm-landscape.webp": {
+      "sha256": "877db4d4b0d8a7ce7e06b682f968c58e0f7c25ed12a0f9d437b65873b46003d0",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04; optimized from 20260523_133523.jpg",
       "publication_decision": "approved_original",
       "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     },
@@ -795,13 +809,6 @@
     },
     "images/luxury-landscapes/palm-lined-estate-court.webp": {
       "sha256": "234f397ee2123273b65492962eae718d7328f5b345153b3f70bc2d63ae729e89",
-      "classification": "confirmed_original_sdpp",
-      "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
-      "publication_decision": "approved_original",
-      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
-    },
-    "images/luxury-landscapes/specimen-date-palm-estate.webp": {
-      "sha256": "8f42780101f2b1d69dffb59984d19f4769733843e6b5ec7a86bb7c131a321db1",
       "classification": "confirmed_original_sdpp",
       "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
       "publication_decision": "approved_original",
