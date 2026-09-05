@@ -786,13 +786,6 @@
       "publication_decision": "approved_original",
       "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     },
-    "images/luxury-landscapes/historic-home-and-mature-palm.webp": {
-      "sha256": "c2332f39f86bad92dff9d58be06efb7efe25cd44ccf16e76b0b44c70949ed3c5",
-      "classification": "confirmed_original_sdpp",
-      "source_basis": "Owner explicitly identified the source photograph as one of his own pictures on 2026-09-04",
-      "publication_decision": "approved_original",
-      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
-    },
     "images/luxury-landscapes/palm-estate-arrival.webp": {
       "sha256": "8a64952d5ce115e4955c1f4d8352fa0bdf2638b1c3560baf68017de50e24b50d",
       "classification": "confirmed_original_sdpp",
