@@ -269,7 +269,7 @@ def main() -> int:
 
     homepage_text, homepage_parser = pages[(ROOT / "index.html").resolve()]
     for required_pillar in (
-        "South American Palm Weevil Protection",
+        "Preventive SAPW treatment",
         "licensed preventive treatment",
         "mature Canary Island date palms",
         "The landscapes worth protecting.",

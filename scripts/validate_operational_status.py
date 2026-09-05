@@ -109,7 +109,7 @@ def main() -> int:
 
         homepage = (DIST / "index.html").read_text(encoding="utf-8-sig") if (DIST / "index.html").exists() else ""
         records = (DIST / "palm-records-monitoring-verification.html").read_text(encoding="utf-8-sig") if (DIST / "palm-records-monitoring-verification.html").exists() else ""
-        for phrase in ("Protecting San Diego’s Most Valuable Palms", "licensed preventive treatment", "mature Canary Island date palms", "Request a Palm Assessment", "Field Work"):
+        for phrase in ("Preventive Treatment for San Diego’s Most Valuable Palms", "licensed preventive treatment", "mature Canary Island date palms", "Request a Palm Assessment", "Field Work"):
             if phrase not in homepage:
                 errors.append(f"homepage missing commercial/residential pathway: {phrase}")
         treatment_page = (DIST / "south-american-palm-weevil-treatment-san-diego.html").read_text(encoding="utf-8-sig") if (DIST / "south-american-palm-weevil-treatment-san-diego.html").exists() else ""
@@ -120,7 +120,7 @@ def main() -> int:
         for phrase in ("Palm stewardship and preservation, visit after visit.", "fertilization", "preventive protection", "treatment", "Managed-property stewardship"):
             if phrase not in recurring:
                 errors.append(f"recurring-stewardship page missing current service language: {phrase}")
-        for phrase in ("Licensed SAPW prevention and treatment", "Assessments &amp; baselines", "Recurring palm care", "Decline, recovery &amp; transplant care", "Sourcing, re-homing &amp; coordination", "Commercial properties, HOAs, institutions, estates, and homeowners", "SDPP-Commercial-Palm-Stewardship.pdf"):
+        for phrase in ("Treatment is what SDPP does", "Preventive SAPW treatment", "Coordinating removals", "Coordinating replacements", "Other palm goals", "Commercial properties, HOAs, institutions, estates, and homeowners", "SDPP-Commercial-Palm-Stewardship.pdf"):
             if phrase not in records:
                 errors.append(f"consolidated services page missing service pathway: {phrase}")
         for field in ("known_palm_species", "existing_contractor", "desired_service", "preferred_contact"):

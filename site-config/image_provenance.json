@@ -690,10 +690,10 @@
     },
     "mature_healthy_cidp_poway_mansion.jpg": {
       "sha256": "e2cc307bdbc65f605a999253863e1150bc4fe901f987ad5948885d1947e98c0c",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     },
     "multiple-south-american-palm-weevil-sapw-canary-island-date-palm-old_escondido.jpg": {
       "sha256": "c83b0ce13e0d66029ac7a533750751b18706afea61f9ea8df139df955f9766f2",

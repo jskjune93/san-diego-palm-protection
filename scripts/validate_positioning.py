@@ -14,18 +14,18 @@ POSITIONING = ROOT / "site-config" / "positioning.json"
 
 CRITICAL = {
     "index.html": (
-        "protecting san diego’s most valuable palms",
+        "preventive treatment for san diego’s most valuable palms",
         "licensed preventive treatment",
         "mature canary island date palms",
         "request a palm assessment",
         "view field work",
     ),
     "palm-records-monitoring-verification.html": (
-        "sapw prevention and licensed palm treatment",
-        "licensed sapw prevention and treatment",
-        "assessments &amp; baselines",
-        "recurring palm care",
-        "decline, recovery &amp; transplant care",
+        "protect valuable palms from sapw",
+        "treatment is what sdpp does",
+        "preventive sapw treatment",
+        "coordinating removals",
+        "coordinating replacements",
         "request a baseline",
     ),
 }
