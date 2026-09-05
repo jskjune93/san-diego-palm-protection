@@ -154,7 +154,7 @@ def footer(relative_root: str = "./", residential_primary: bool = False) -> str:
     return f"""<footer class="site-footer">
   <div class="footer-grid">
     <div><a class="footer-brand" href="{relative_root}index.html">San Diego Palm Protection</a><p>Owner-led South American palm weevil prevention, licensed treatment, and continuing care in San Diego County.</p></div>
-    <div><h2>Services</h2><a href="{relative_root}palm-records-monitoring-verification.html">All palm services</a><a href="{relative_root}south-american-palm-weevil-treatment-san-diego.html">SAPW prevention &amp; treatment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring stewardship</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest support</a></div>
+    <div><h2>Services</h2><a href="{relative_root}palm-records-monitoring-verification.html">All palm services</a><a href="{relative_root}south-american-palm-weevil-treatment-san-diego.html">Palm weevil prevention &amp; treatment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring stewardship</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest support</a></div>
     <div><h2>Resources</h2><a href="{relative_root}about.html">About</a><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
   <p class="footer-legal">{licensing_statement}</p>

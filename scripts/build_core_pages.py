@@ -143,11 +143,11 @@ def approved_ufmp_resource() -> str:
 
 PAGES: dict[str, dict] = {
     "index.html": {
-        "title": "SAPW Prevention & Licensed Palm Treatment San Diego | SDPP",
+        "title": "Palm Weevil Prevention & Licensed Palm Treatment San Diego | SDPP",
         "description": "Owner-led South American palm weevil prevention, licensed treatment, and recurring care for valuable mature palms in San Diego County.",
-        "eyebrow": "Preventive SAPW treatment · Owner-led",
+        "eyebrow": "San Diego's Palm Weevil Treatment Experts",
         "h1": "Preventive Treatment for San Diego’s Most Valuable Palms",
-        "lede": "The Annual Mature Palm Protection Program provides scheduled, licensed preventive treatment for SAPW on mature Canary Island date palms and other appropriate high-value specimens.",
+        "lede": "The Annual Mature Palm Protection Program provides scheduled, licensed preventive treatment for South American palm weevil (SAPW) on mature Canary Island date palms and other appropriate high-value specimens.",
         "image": "canary-island-date-palm-mansion-poway.jpg",
         "body": section("Annual Mature Palm Protection Program", "Four scheduled visits. One year of protection.", "SAPW can advance inside a palm before severe crown decline is visible. SDPP handles the recurring preventive-treatment schedule so protection does not depend on the owner remembering the next visit.", '<div class="field-split"><figure><img src="./mature_healthy_cidp_poway_mansion.jpg" alt="Mature Canary Island date palms at a Poway estate photographed by SDPP" loading="lazy" decoding="async"><figcaption class="image-caption">Mature Canary Island date palms in Poway.</figcaption></figure><div class="luxury-copy"><p class="display-line">Protect the palm while there is still time.</p><ul class="clean-list"><li>Four scheduled visits per year</li><li>Licensed preventive SAPW treatment</li><li>Visual inspection, repeat photographs, and service records</li><li>SDPP reminders and priority response when symptoms appear</li><li>Direct service from owner and Qualified Applicator John Krause</li></ul><a class="text-arrow" href="./quarterly-palm-care-san-diego.html">See annual protection</a></div></div>') +
         section("Urgent response", "San Diego Botanic Garden called. I was there the next day.", "SDPP responded to an active South American palm weevil infestation with licensed protective treatment for high-value specimens, including Chilean wine palms, Canary Island date palms, and Sylvester palms.", '<p class="garden-note">Urgent, owner-led care for palms that matter.</p>', "statement-section") +
