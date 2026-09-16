@@ -22,6 +22,7 @@ const fieldSets = {
       ["Concern or decision", "concern"],
       ["Preferred contact", "preferred_contact"],
       ["Timing or urgency", "timing"],
+      ["How they found SDPP (self-reported)", "discovery_source"],
     ],
   },
   organization: {
@@ -42,6 +43,7 @@ const fieldSets = {
       ["Preferred contact", "preferred_contact"],
       ["Current concern or property objective", "support_requested"],
       ["Timing or procurement context", "timing"],
+      ["How they found SDPP (self-reported)", "discovery_source"],
     ],
   },
 };

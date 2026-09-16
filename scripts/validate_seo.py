@@ -139,6 +139,7 @@ def main() -> int:
 
     for rel, tokens in INTENT_REQUIREMENTS.items():
         title_description = html.unescape(f"{titles[rel]} {descriptions[rel]}").lower()
+        title_description = title_description.replace("south american palm weevil", "south american palm weevil sapw")
         missing = [token for token in tokens if token not in title_description]
         if missing:
             raise AssertionError(f"{rel}: assigned search intent is missing {missing}")

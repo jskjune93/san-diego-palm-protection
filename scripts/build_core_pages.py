@@ -33,6 +33,11 @@ def commercial_engagement_paths() -> str:
 </section>'''
 
 
+def inquiry_source(prefix: str) -> str:
+    options = ["Google Search", "Google Maps", "ChatGPT or another AI assistant", "Referral", "Social media", "Other"]
+    return f'<div><label for="{prefix}-source">How did you find SDPP? (optional)</label><select id="{prefix}-source" name="discovery_source"><option value="">Select if known</option>' + ''.join(f'<option>{escape(option)}</option>' for option in options) + '</select></div>'
+
+
 def inquiry_paths() -> str:
     explanation = escape(INQUIRY["public_explanation"])
     return f'''<div class="inquiry-paths">
@@ -51,6 +56,7 @@ def inquiry_paths() -> str:
       <div class="full"><label for="home-concern">What are you seeing or trying to decide?</label><textarea id="home-concern" name="concern" required></textarea></div>
       <div><label for="home-contact">Preferred contact method</label><select id="home-contact" name="preferred_contact"><option>Phone</option><option>Text</option><option>Email</option></select></div>
       <div><label for="home-timing">Timing or urgency</label><input id="home-timing" name="timing"></div>
+      {inquiry_source("home")}
     </div>
     <p class="form-help">Photograph uploads are not enabled. SDPP can request photographs during follow-up.</p>
     <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
@@ -80,6 +86,7 @@ def inquiry_paths() -> str:
       <div><label for="org-contact">Preferred contact method</label><select id="org-contact" name="preferred_contact"><option>Phone</option><option>Text</option><option>Email</option></select></div>
       <div class="full"><label for="org-scope">Current concern or property objective</label><textarea id="org-scope" name="support_requested" required></textarea></div>
       <div class="full"><label for="org-timing">Timing or procurement context</label><input id="org-timing" name="timing"></div>
+      {inquiry_source("org")}
     </div>
     <p class="form-help">Supporting-file uploads are not enabled. SDPP can request photographs or records during follow-up.</p>
     <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
@@ -378,7 +385,8 @@ PAGES: dict[str, dict] = {
             ("Record", "Document SDPP treatment where applicable, supplied prior history, and the recommended follow-up or monitoring point."),
         ])) +
         section("Why prevention matters", "A healthy crown can become a documented loss.", "This short field sequence moves from a healthy Canary Island date palm to South American palm weevil evidence, severe decline, and removal. It is a reminder to assess valuable palms before the crown collapses—not a diagnosis of any other palm.", '<div class="vertical-video-feature"><iframe src="https://www.youtube-nocookie.com/embed/gyZdrI4qjdo" title="Why preventive South American palm weevil treatment matters for Canary Island date palms" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><p class="section-proof-link"><a href="https://youtube.com/shorts/gyZdrI4qjdo">Watch this field sequence on YouTube</a></p>', "section-tint") +
-        section("Protection and treatment", "The palm and site determine the plan.", "I review the palm, its history, current pressure, access, and site conditions before recommending protection or treatment.", '<p><a href="./palm-stewardship-plans.html">Review general palm treatment and preventive protection</a> · <a href="./quarterly-palm-care-san-diego.html">Review recurring palm stewardship</a> · <a href="./sapw.html">Read the South American palm weevil field guide</a></p>', "section-tint")
+        section("Questions before treatment", "What to expect from a palm assessment.", "Tell me which city the palm is in, what has changed, and any treatment history you know.", '<div class="faq-list"><details><summary>Can you assess a palm that still looks healthy?</summary><p>Yes. I review the species, visible condition, property setting, and known treatment history to decide whether preventive protection is appropriate. A healthy-looking crown does not establish that a palm is pest-free.</p></details><details><summary>What happens at the first visit?</summary><p>I look at the palm and site, take dated photographs, review the history you can provide, and explain the next steps. Treatment depends on the findings, applicable label, access, and agreed scope.</p></details><details><summary>Can a declining palm always be saved?</summary><p>No. Visible decline can have different causes, and treatment cannot guarantee recovery. I explain what I can support from the observations and when further confirmation or removal coordination may be needed.</p></details><details><summary>Can you provide ongoing care?</summary><p>The <a href="./quarterly-palm-care-san-diego.html">Annual Mature Palm Protection Program</a> includes four scheduled visits each year, with preventive treatment when appropriate and a continuing record of the palm. The treatment schedule must fit the label and site conditions.</p></details></div><p><a class="button" data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Request a Palm Assessment</a></p>') +
+        section("Protection and treatment", "The palm and site determine the plan.", "I review the palm, its history, current pressure, access, and site conditions before recommending protection or treatment.", '<p><a href="./palm-stewardship-plans.html">Review general palm treatment and preventive protection</a> · <a href="./quarterly-palm-care-san-diego.html">Review recurring palm stewardship</a> · <a href="./sapw.html">Read the South American palm weevil field guide</a> · <a href="./palm-proof-examples.html">See local field work and reporting examples</a></p>', "section-tint")
     },
     "sapw.html": {
         "title": "South American Palm Weevil San Diego: Signs & Prevention",

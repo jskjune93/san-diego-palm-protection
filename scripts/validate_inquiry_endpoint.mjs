@@ -112,4 +112,28 @@ const providerSuccess = async url => {
   assert.match(res.payload.message, /could not be confirmed/i);
 }
 
-console.log("Inquiry endpoint validation passed: configuration is non-secret; Turnstile is required and hostname-restricted; provider confirmation gates success and verified-lead events; failure remains honest.");
+// Attribution must reach the existing delivery provider, stay optional, and be escaped.
+for (const kind of ["homeowner", "organization"]) {
+  let deliveredEmail;
+  const res = response();
+  await handleInquiry(request({
+    inquiry_type: kind,
+    contact_name: "Property Manager",
+    organization: "Example HOA",
+    role: "Manager",
+    property_or_service_area: "North County",
+    desired_service: "Palm portfolio walkthrough",
+    support_requested: "Palm assessment",
+    discovery_source: "Google Maps <test>",
+  }), res, { fetch: async (url, options) => {
+    if (url.includes("api.resend.com")) deliveredEmail = JSON.parse(options.body);
+    return providerSuccess(url);
+  } });
+  assert.equal(res.statusCode, 200);
+  assert.match(deliveredEmail.text, /How they found SDPP \(self-reported\): Google Maps <test>/);
+  assert.match(deliveredEmail.html, /Google Maps &lt;test&gt;/);
+  assert.doesNotMatch(deliveredEmail.html, /Google Maps <test>/);
+  assert.equal(res.payload.discovery_source, undefined);
+}
+
+console.log("Inquiry endpoint validation passed: optional source attribution reaches both inquiry emails safely; Turnstile and provider confirmation still gate verified delivery.");

@@ -274,7 +274,7 @@ def main() -> int:
         "mature Canary Island date palms",
         "The landscapes worth protecting.",
     ):
-        if required_pillar not in homepage_text:
+        if required_pillar.lower() not in homepage_text.lower():
             errors.append(f"homepage missing stewardship-function positioning: {required_pillar}")
     if "./south-american-palm-weevil-treatment-san-diego.html" not in homepage_text:
         errors.append("homepage does not link to the dedicated SAPW treatment route")

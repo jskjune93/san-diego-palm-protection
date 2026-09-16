@@ -668,6 +668,17 @@ def update_sitemap(entries: list[dict]) -> None:
         ET.SubElement(url, lastmod_tag).text = entry.get("modified_date", MODIFIED_DATE)
         ET.SubElement(url, changefreq_tag).text = "monthly"
         ET.SubElement(url, priority_tag).text = "0.70"
+    # Explicit content-change dates; never mark every page fresh on each build.
+    modified_path = ROOT / "site-config" / "page_modified_dates.json"
+    if modified_path.exists():
+        modified_dates = json.loads(modified_path.read_text(encoding="utf-8"))
+        for url in root_el.findall(url_tag):
+            loc = url.find(loc_tag)
+            if loc is not None and loc.text in modified_dates:
+                lastmod = url.find(lastmod_tag)
+                if lastmod is None:
+                    lastmod = ET.SubElement(url, lastmod_tag)
+                lastmod.text = modified_dates[loc.text]
     tree.write(SITEMAP_PATH, encoding="utf-8", xml_declaration=True)
 
 

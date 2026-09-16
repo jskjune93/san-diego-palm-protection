@@ -141,7 +141,7 @@ def inquiry(relative_root: str = "./", residential_primary: bool = False) -> str
     primary = f'<a class="button" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Baseline</a>'
     secondary = f'<a class="button button-quiet" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a>'
     if residential_primary:
-        primary, secondary = secondary.replace("button button-quiet", "button"), primary.replace('class="button"', 'class="button button-quiet"')
+        primary, secondary = secondary.replace("button button-quiet", "button").replace("Homeowner Inquiry", "Request a Palm Assessment"), primary.replace('class="button"', 'class="button button-quiet"')
     return f"""<section class="conversion-band" id="request" aria-labelledby="request-heading">
   <div><p class="eyebrow">Private inquiry</p><h2 id="request-heading">{escape(heading)}</h2>
   <p>{description}</p></div>
@@ -185,7 +185,13 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         f'{escape(public["business_license"])} and {escape(public["individual_license"])}, {escape(public["category"])}. <strong>{escape(public["insurance"])}</strong></p>'
         if filename == "residential-palm-assessment.html" else ""
     )
-    residential_page = filename == "residential-palm-assessment.html"
+    residential_page = filename in {
+        "index.html", "residential-palm-assessment.html", "sapw.html",
+        "south-american-palm-weevil-treatment-san-diego.html",
+        "palm-stewardship-plans.html", "quarterly-palm-care-san-diego.html",
+        "canary-island-date-palm-care-san-diego.html", "palm-care-escondido.html",
+        "palm-care-poway.html", "palm-care-rancho-santa-fe.html",
+    }
     organization_page = not residential_page
     primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'homeowner-inquiry' if residential_page else 'organization-inquiry'}"
     primary_label = "Request a Palm Assessment" if residential_page else "Request a Baseline"
