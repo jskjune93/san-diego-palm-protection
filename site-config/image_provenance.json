@@ -828,13 +828,6 @@
       "publication_decision": "approved_original",
       "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     },
-    "images/palm-journal/september-treatment-day/palm-crown.webp": {
-      "sha256": "544daac523bb4cbeabc808a9dd7480e071541288c98b7f7425710033e94d5431",
-      "classification": "confirmed_original_sdpp",
-      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
-      "publication_decision": "approved_public",
-      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
-    },
     "images/palm-journal/september-treatment-day/fairbanks-ranch.webp": {
       "sha256": "7e0e50a1cacef0e1c58e7effb1671a3b08b6e31c520eeb53f254e43ba5528cc5",
       "classification": "confirmed_original_sdpp",
@@ -865,13 +858,6 @@
     },
     "images/palm-journal/september-treatment-day/mediterranean-palms.webp": {
       "sha256": "1f93082c6d42cfcd585afd0dcd36852efd9d84dddbae05848902aa0a30851150",
-      "classification": "confirmed_original_sdpp",
-      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
-      "publication_decision": "approved_public",
-      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
-    },
-    "images/palm-journal/september-treatment-day/september-palm.webp": {
-      "sha256": "ea902386c8c474f7e6b563d804c1dc09b538e7c43e1ba3496694ff24c688c082",
       "classification": "confirmed_original_sdpp",
       "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
       "publication_decision": "approved_public",

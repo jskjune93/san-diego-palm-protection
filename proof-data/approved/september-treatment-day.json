@@ -2,20 +2,20 @@
   "schema_version": 1,
   "artifact_id": "journal-september-treatment-day-2026",
   "product_type": "website_proof_excerpt",
-  "artifact_version": 3,
-  "artifact_fingerprint": "fee7410c701cc182a29747f296305512502fbca0f0ebffb1a7a7741ebdd558d2",
-  "approved_fingerprint": "fee7410c701cc182a29747f296305512502fbca0f0ebffb1a7a7741ebdd558d2",
+  "artifact_version": 4,
+  "artifact_fingerprint": "348ccac9ef0fee516a8a37837a7d3dfb564cb723ea77a7cb500aa4c4e42ee00c",
+  "approved_fingerprint": "348ccac9ef0fee516a8a37837a7d3dfb564cb723ea77a7cb500aa4c4e42ee00c",
   "status": "approved",
   "publication_approval": "approved",
   "privacy": "sanitized",
   "publication_target": "website",
   "privacy_scan_passed": true,
-  "approval_basis": "Owner requested additional previous-week treatment photographs and explicitly confirmed firsthand SAPW observations in Mediterranean fan palms and pygmy date palms. Publication revision authorized on September 20, 2026.",
+  "approval_basis": "Owner explicitly requested removal of the final two photographs and publication of the revised post on September 20, 2026.",
   "export_method": "Direct sanitized editorial export for this owner-authorized post; no private report published. Canonical Machine checkout was unavailable.",
   "content": {
     "title": "September Palm Treatments",
     "article_source": "journal-data/articles/september-treatment-day.html",
-    "scope": "September 11, 12, 13 and 19 treatment visits across five properties. Species observations attributed to the owner's firsthand field experience, without implying infestation in the pictured palms."
+    "scope": "September 11, 12 and 19 treatment visits across four properties. Species observations attributed to the owner's firsthand field experience, without implying infestation in the pictured palms."
   },
   "media": [
     {
@@ -41,16 +41,6 @@
     {
       "filename": "mediterranean-palms.webp",
       "sha256": "1f93082c6d42cfcd585afd0dcd36852efd9d84dddbae05848902aa0a30851150",
-      "approved_for_public": true
-    },
-    {
-      "filename": "september-palm.webp",
-      "sha256": "ea902386c8c474f7e6b563d804c1dc09b538e7c43e1ba3496694ff24c688c082",
-      "approved_for_public": true
-    },
-    {
-      "filename": "palm-crown.webp",
-      "sha256": "544daac523bb4cbeabc808a9dd7480e071541288c98b7f7425710033e94d5431",
       "approved_for_public": true
     },
     {
