@@ -2,35 +2,55 @@
   "schema_version": 1,
   "artifact_id": "journal-september-treatment-day-2026",
   "product_type": "website_proof_excerpt",
-  "artifact_version": 1,
-  "artifact_fingerprint": "b446251eedbe3be614842fcb7752ab1c44c644f53bb6276832d12d599593f3c1",
-  "approved_fingerprint": "b446251eedbe3be614842fcb7752ab1c44c644f53bb6276832d12d599593f3c1",
+  "artifact_version": 2,
+  "artifact_fingerprint": "cdc3e6de2cdc2c0fb6fb7756bf3f42ced5fd9853ddbf5b9cfd23866e865ea8ed",
+  "approved_fingerprint": "cdc3e6de2cdc2c0fb6fb7756bf3f42ced5fd9853ddbf5b9cfd23866e865ea8ed",
   "status": "approved",
   "publication_approval": "approved",
   "privacy": "sanitized",
   "publication_target": "website",
   "privacy_scan_passed": true,
-  "approval_basis": "Owner explicitly requested writing and publishing a recent-work journal post with photographs on September 20, 2026.",
+  "approval_basis": "Owner explicitly requested this published revision: remove fruit-tree material, emphasize palm treatment and weevil concerns, and add residential treatment photographs including Fairbanks Ranch.",
   "export_method": "Direct sanitized editorial export for this owner-authorized post; no private report published. Canonical Machine checkout was unavailable.",
   "content": {
-    "title": "A September Treatment Day",
+    "title": "September Palm Treatments",
     "article_source": "journal-data/articles/september-treatment-day.html",
-    "scope": "September 19 palm work and fruit-tree observations; planned corrections are not presented as completed."
+    "scope": "September residential palm treatment visits, prevention and follow-up monitoring; no treatment outcome or community endorsement claimed."
   },
   "media": [
     {
+      "filename": "fairbanks-ranch.webp",
+      "sha256": "7e0e50a1cacef0e1c58e7effb1671a3b08b6e31c520eeb53f254e43ba5528cc5",
+      "approved_for_public": true
+    },
+    {
+      "filename": "poolside-treatment.webp",
+      "sha256": "fa7395e79d1b1304f8fb229e345fb231d62484cfc2f9d8a5a8316ee406610bcf",
+      "approved_for_public": true
+    },
+    {
+      "filename": "residential-palms.webp",
+      "sha256": "1c0a576b3b64f4e947cf4bb120f2816ef7314c4711f13702cc509c6912b16cef",
+      "approved_for_public": true
+    },
+    {
+      "filename": "garden-treatment.webp",
+      "sha256": "3a9df85cf55709a0ec8e03dbc0ebf3875c143c66f03c861ef823008727e8307a",
+      "approved_for_public": true
+    },
+    {
+      "filename": "mediterranean-palms.webp",
+      "sha256": "1f93082c6d42cfcd585afd0dcd36852efd9d84dddbae05848902aa0a30851150",
+      "approved_for_public": true
+    },
+    {
+      "filename": "september-palm.webp",
+      "sha256": "ea902386c8c474f7e6b563d804c1dc09b538e7c43e1ba3496694ff24c688c082",
+      "approved_for_public": true
+    },
+    {
       "filename": "palm-crown.webp",
-      "sha256": "fa909dbb9acb569accddcc170f3662f4fec0887620eda5e762d691c480a2d1dc",
-      "approved_for_public": true
-    },
-    {
-      "filename": "fig-leaves.webp",
-      "sha256": "5f45c4506258a0af5619bb98cafa34f744989884e3610a66c1f887545e335786",
-      "approved_for_public": true
-    },
-    {
-      "filename": "citrus-foliage.webp",
-      "sha256": "7fe7333f4d7c48a069d685204f311a7f26e07b43f9e55b199dac1019208f96b0",
+      "sha256": "544daac523bb4cbeabc808a9dd7480e071541288c98b7f7425710033e94d5431",
       "approved_for_public": true
     }
   ]

@@ -829,25 +829,53 @@
       "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     },
     "images/palm-journal/september-treatment-day/palm-crown.webp": {
-      "sha256": "fa909dbb9acb569accddcc170f3662f4fec0887620eda5e762d691c480a2d1dc",
+      "sha256": "544daac523bb4cbeabc808a9dd7480e071541288c98b7f7425710033e94d5431",
       "classification": "confirmed_original_sdpp",
-      "source_basis": "Owner-supplied September 19, 2026 field photographs, reviewed against the visit records. Owner explicitly requested publication of a journal post with these recent-work photographs on September 20, 2026.",
+      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
       "publication_decision": "approved_public",
-      "presentation_risk": "Observations only; no treatment-result claim. Full-frame web derivative, camera metadata removed; no client identity or property address."
+      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
     },
-    "images/palm-journal/september-treatment-day/fig-leaves.webp": {
-      "sha256": "5f45c4506258a0af5619bb98cafa34f744989884e3610a66c1f887545e335786",
+    "images/palm-journal/september-treatment-day/fairbanks-ranch.webp": {
+      "sha256": "7e0e50a1cacef0e1c58e7effb1671a3b08b6e31c520eeb53f254e43ba5528cc5",
       "classification": "confirmed_original_sdpp",
-      "source_basis": "Owner-supplied September 19, 2026 field photographs, reviewed against the visit records. Owner explicitly requested publication of a journal post with these recent-work photographs on September 20, 2026.",
+      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
       "publication_decision": "approved_public",
-      "presentation_risk": "Observations only; no treatment-result claim. Full-frame web derivative, camera metadata removed; no client identity or property address."
+      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
     },
-    "images/palm-journal/september-treatment-day/citrus-foliage.webp": {
-      "sha256": "7fe7333f4d7c48a069d685204f311a7f26e07b43f9e55b199dac1019208f96b0",
+    "images/palm-journal/september-treatment-day/poolside-treatment.webp": {
+      "sha256": "fa7395e79d1b1304f8fb229e345fb231d62484cfc2f9d8a5a8316ee406610bcf",
       "classification": "confirmed_original_sdpp",
-      "source_basis": "Owner-supplied September 19, 2026 field photographs, reviewed against the visit records. Owner explicitly requested publication of a journal post with these recent-work photographs on September 20, 2026.",
+      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
       "publication_decision": "approved_public",
-      "presentation_risk": "Observations only; no treatment-result claim. Full-frame web derivative, camera metadata removed; no client identity or property address."
+      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
+    },
+    "images/palm-journal/september-treatment-day/residential-palms.webp": {
+      "sha256": "1c0a576b3b64f4e947cf4bb120f2816ef7314c4711f13702cc509c6912b16cef",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
+    },
+    "images/palm-journal/september-treatment-day/garden-treatment.webp": {
+      "sha256": "3a9df85cf55709a0ec8e03dbc0ebf3875c143c66f03c861ef823008727e8307a",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
+    },
+    "images/palm-journal/september-treatment-day/mediterranean-palms.webp": {
+      "sha256": "1f93082c6d42cfcd585afd0dcd36852efd9d84dddbae05848902aa0a30851150",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
+    },
+    "images/palm-journal/september-treatment-day/september-palm.webp": {
+      "sha256": "ea902386c8c474f7e6b563d804c1dc09b538e7c43e1ba3496694ff24c688c082",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
     }
   }
 }

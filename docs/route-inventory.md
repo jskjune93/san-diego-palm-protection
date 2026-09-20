@@ -52,7 +52,7 @@
 | `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |
 | `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
 
-| `/palm-journal/september-treatment-day.html` | created | Field journal: recent palm service, photo comparison and fruit-tree observations; homeowner assessment pathway |
+| `/palm-journal/september-treatment-day.html` | created | Field journal: residential palm treatments, weevil prevention and ongoing monitoring; homeowner treatment inquiry pathway |
 
 ## Consolidation policy
 

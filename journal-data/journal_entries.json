@@ -1,16 +1,16 @@
 [
   {
     "slug": "september-treatment-day",
-    "title": "A September Treatment Day",
+    "title": "September Palm Treatments",
     "date": "2026-09-20",
     "date_label": "San Diego County | September 20, 2026",
     "location": "San Diego County",
-    "category": "Field Observation",
-    "topic": "September palm treatments, crown photographs and a fruit-tree walkthrough",
-    "excerpt": "Two palm-treatment stops, a look through the fruit trees, and the questions I am taking into the next visit.",
+    "category": "Protection & Treatment",
+    "topic": "Residential palm treatments, South American palm weevil prevention and continued monitoring",
+    "excerpt": "Recent treatment visits across San Diego residential landscapes, from Fairbanks Ranch to poolside palms, with follow-up photographs that support ongoing protection.",
     "page": true,
     "substantial": true,
-    "review": "Owner-authorized field journal; customer details withheld, original field photos reviewed, proposed fruit-tree corrections distinguished from completed palm work.",
+    "review": "Owner-authorized treatment-focused revision using seven original field photographs; no infestation, outcome or community endorsement claimed.",
     "related": [
       "palm-stewardship-solving-the-whole-problem",
       "the-palm-record-outlives-the-palm",
@@ -19,19 +19,35 @@
     "legacy_anchor": "september-treatment-day",
     "status": "published",
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/september-treatment-day.html",
-    "primary_image": "./images/palm-journal/september-treatment-day/palm-crown.webp",
-    "primary_image_alt": "View up a Canary Island date palm trunk into its crown during a September field visit",
+    "primary_image": "./images/palm-journal/september-treatment-day/poolside-treatment.webp",
+    "primary_image_alt": "Mature Canary Island date palm beside a pool and pavilion, with treatment equipment at its base",
     "gallery_images": [
       {
-        "src": "./images/palm-journal/september-treatment-day/fig-leaves.webp",
-        "alt": "Close view of fig leaves from the fruit-tree walkthrough"
+        "src": "./images/palm-journal/september-treatment-day/fairbanks-ranch.webp",
+        "alt": "Fairbanks Ranch entrance monument surrounded by flowers and mature landscaping"
       },
       {
-        "src": "./images/palm-journal/september-treatment-day/citrus-foliage.webp",
-        "alt": "Fruiting citrus with yellowing and irregular leaf damage"
+        "src": "./images/palm-journal/september-treatment-day/residential-palms.webp",
+        "alt": "Two established Canary Island date palms framing a tile-roof residence and lawn"
+      },
+      {
+        "src": "./images/palm-journal/september-treatment-day/garden-treatment.webp",
+        "alt": "Canary Island date palm beside a garden fountain with treatment equipment nearby"
+      },
+      {
+        "src": "./images/palm-journal/september-treatment-day/mediterranean-palms.webp",
+        "alt": "Multi-trunk Mediterranean fan palms within a circular hedge in a residential garden"
+      },
+      {
+        "src": "./images/palm-journal/september-treatment-day/september-palm.webp",
+        "alt": "Canary Island date palm rising above neighboring residential roofs"
+      },
+      {
+        "src": "./images/palm-journal/september-treatment-day/palm-crown.webp",
+        "alt": "View up a Canary Island date palm trunk into its crown against a blue sky"
       }
     ],
-    "classification": "Field Observation",
+    "classification": "Protection & Treatment",
     "modified_date": "2026-09-20"
   },
   {
