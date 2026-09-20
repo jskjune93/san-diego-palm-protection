@@ -827,6 +827,27 @@
       "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
       "publication_decision": "approved_original",
       "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
+    "images/palm-journal/september-treatment-day/palm-crown.webp": {
+      "sha256": "fa909dbb9acb569accddcc170f3662f4fec0887620eda5e762d691c480a2d1dc",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-supplied September 19, 2026 field photographs, reviewed against the visit records. Owner explicitly requested publication of a journal post with these recent-work photographs on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Observations only; no treatment-result claim. Full-frame web derivative, camera metadata removed; no client identity or property address."
+    },
+    "images/palm-journal/september-treatment-day/fig-leaves.webp": {
+      "sha256": "5f45c4506258a0af5619bb98cafa34f744989884e3610a66c1f887545e335786",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-supplied September 19, 2026 field photographs, reviewed against the visit records. Owner explicitly requested publication of a journal post with these recent-work photographs on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Observations only; no treatment-result claim. Full-frame web derivative, camera metadata removed; no client identity or property address."
+    },
+    "images/palm-journal/september-treatment-day/citrus-foliage.webp": {
+      "sha256": "7fe7333f4d7c48a069d685204f311a7f26e07b43f9e55b199dac1019208f96b0",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-supplied September 19, 2026 field photographs, reviewed against the visit records. Owner explicitly requested publication of a journal post with these recent-work photographs on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Observations only; no treatment-result claim. Full-frame web derivative, camera metadata removed; no client identity or property address."
     }
   }
 }

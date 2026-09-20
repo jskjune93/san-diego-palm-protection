@@ -629,6 +629,13 @@ def update_sitemap(entries: list[dict]) -> None:
         if node is not None:
             root_el.remove(node)
 
+    journal_index = urls_by_loc.get(f"{BASE_URL}/palm-journal-new.html")
+    if journal_index is not None:
+        lastmod = journal_index.find(lastmod_tag)
+        if lastmod is None:
+            lastmod = ET.SubElement(journal_index, lastmod_tag)
+        lastmod.text = max(e.get("modified_date", e["date"]) for e in entries if e.get("status") == "published")
+
     documented_loss_url = urls_by_loc.get(DOCUMENTED_LOSS_URL)
     if documented_loss_url is None:
         documented_loss_url = ET.SubElement(root_el, url_tag)

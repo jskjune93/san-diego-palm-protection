@@ -1,5 +1,40 @@
 [
   {
+    "slug": "september-treatment-day",
+    "title": "A September Treatment Day",
+    "date": "2026-09-20",
+    "date_label": "San Diego County | September 20, 2026",
+    "location": "San Diego County",
+    "category": "Field Observation",
+    "topic": "September palm treatments, crown photographs and a fruit-tree walkthrough",
+    "excerpt": "Two palm-treatment stops, a look through the fruit trees, and the questions I am taking into the next visit.",
+    "page": true,
+    "substantial": true,
+    "review": "Owner-authorized field journal; customer details withheld, original field photos reviewed, proposed fruit-tree corrections distinguished from completed palm work.",
+    "related": [
+      "palm-stewardship-solving-the-whole-problem",
+      "the-palm-record-outlives-the-palm",
+      "healthy-palm-growth"
+    ],
+    "legacy_anchor": "september-treatment-day",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/september-treatment-day.html",
+    "primary_image": "./images/palm-journal/september-treatment-day/palm-crown.webp",
+    "primary_image_alt": "View up a Canary Island date palm trunk into its crown during a September field visit",
+    "gallery_images": [
+      {
+        "src": "./images/palm-journal/september-treatment-day/fig-leaves.webp",
+        "alt": "Close view of fig leaves from the fruit-tree walkthrough"
+      },
+      {
+        "src": "./images/palm-journal/september-treatment-day/citrus-foliage.webp",
+        "alt": "Fruiting citrus with yellowing and irregular leaf damage"
+      }
+    ],
+    "classification": "Field Observation",
+    "modified_date": "2026-09-20"
+  },
+  {
     "slug": "palm-stewardship-solving-the-whole-problem",
     "title": "Palm Stewardship Means Solving the Whole Problem",
     "date": "2026-08-19",

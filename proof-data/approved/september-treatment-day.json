@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "artifact_id": "journal-september-treatment-day-2026",
+  "product_type": "website_proof_excerpt",
+  "artifact_version": 1,
+  "artifact_fingerprint": "b446251eedbe3be614842fcb7752ab1c44c644f53bb6276832d12d599593f3c1",
+  "approved_fingerprint": "b446251eedbe3be614842fcb7752ab1c44c644f53bb6276832d12d599593f3c1",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner explicitly requested writing and publishing a recent-work journal post with photographs on September 20, 2026.",
+  "export_method": "Direct sanitized editorial export for this owner-authorized post; no private report published. Canonical Machine checkout was unavailable.",
+  "content": {
+    "title": "A September Treatment Day",
+    "article_source": "journal-data/articles/september-treatment-day.html",
+    "scope": "September 19 palm work and fruit-tree observations; planned corrections are not presented as completed."
+  },
+  "media": [
+    {
+      "filename": "palm-crown.webp",
+      "sha256": "fa909dbb9acb569accddcc170f3662f4fec0887620eda5e762d691c480a2d1dc",
+      "approved_for_public": true
+    },
+    {
+      "filename": "fig-leaves.webp",
+      "sha256": "5f45c4506258a0af5619bb98cafa34f744989884e3610a66c1f887545e335786",
+      "approved_for_public": true
+    },
+    {
+      "filename": "citrus-foliage.webp",
+      "sha256": "7fe7333f4d7c48a069d685204f311a7f26e07b43f9e55b199dac1019208f96b0",
+      "approved_for_public": true
+    }
+  ]
+}

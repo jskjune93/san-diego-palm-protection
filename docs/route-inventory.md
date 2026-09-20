@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-46 public HTML routes are generated and validated. The 36 pre-reconstruction routes are preserved; five audience, proof, and owner-trust routes and two evidence-led Palm Journal articles were added. No route required a redirect because each valuable URL retains a distinct purpose.
+48 HTML source routes are documented, with 46 public HTML routes in the production build and two legacy routes handled by redirects. The September 20 field journal adds a recent-work observation and a homeowner assessment pathway.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -51,6 +51,8 @@
 | `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Commercial SAPW treatment, prevention, monitoring, and treatment-record service |
 | `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |
 | `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
+
+| `/palm-journal/september-treatment-day.html` | created | Field journal: recent palm service, photo comparison and fruit-tree observations; homeowner assessment pathway |
 
 ## Consolidation policy
 
