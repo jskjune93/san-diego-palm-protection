@@ -876,6 +876,20 @@
       "source_basis": "Original SDPP September field photographs. Owner expressly requested these treatment and residential landscape photographs, including the Fairbanks Ranch entrance, for this public journal revision on September 20, 2026.",
       "publication_decision": "approved_public",
       "presentation_risk": "No client identity or address in copy; no endorsement or treatment outcome implied. Full-frame web derivative with camera metadata removed; community image framed as landscape in page layout."
+    },
+    "images/palm-journal/september-treatment-day/september-11-poolside.webp": {
+      "sha256": "a1ba55917d26d9a5cc8294bd4bd2f0bcf1363c46a88e1bd024e6f55195f33308",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original September treatment-visit photo, date checked against the service invoice. Owner explicitly requested more photographs from the previous week for the public journal on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "No client identity or address in copy; no treatment outcome implied. Full-frame web derivative with camera metadata removed."
+    },
+    "images/palm-journal/september-treatment-day/september-12-date-palm.webp": {
+      "sha256": "33480c5dcccc1cc9377ee325eadf6c8a059e4b47e8618c728f0cc28bcfa15eeb",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original September treatment-visit photo, date checked against the service invoice. Owner explicitly requested more photographs from the previous week for the public journal on September 20, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "No client identity or address in copy; no treatment outcome implied. Full-frame web derivative with camera metadata removed."
     }
   }
 }

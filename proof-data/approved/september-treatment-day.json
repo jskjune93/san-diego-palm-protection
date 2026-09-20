@@ -2,20 +2,20 @@
   "schema_version": 1,
   "artifact_id": "journal-september-treatment-day-2026",
   "product_type": "website_proof_excerpt",
-  "artifact_version": 2,
-  "artifact_fingerprint": "cdc3e6de2cdc2c0fb6fb7756bf3f42ced5fd9853ddbf5b9cfd23866e865ea8ed",
-  "approved_fingerprint": "cdc3e6de2cdc2c0fb6fb7756bf3f42ced5fd9853ddbf5b9cfd23866e865ea8ed",
+  "artifact_version": 3,
+  "artifact_fingerprint": "fee7410c701cc182a29747f296305512502fbca0f0ebffb1a7a7741ebdd558d2",
+  "approved_fingerprint": "fee7410c701cc182a29747f296305512502fbca0f0ebffb1a7a7741ebdd558d2",
   "status": "approved",
   "publication_approval": "approved",
   "privacy": "sanitized",
   "publication_target": "website",
   "privacy_scan_passed": true,
-  "approval_basis": "Owner explicitly requested this published revision: remove fruit-tree material, emphasize palm treatment and weevil concerns, and add residential treatment photographs including Fairbanks Ranch.",
+  "approval_basis": "Owner requested additional previous-week treatment photographs and explicitly confirmed firsthand SAPW observations in Mediterranean fan palms and pygmy date palms. Publication revision authorized on September 20, 2026.",
   "export_method": "Direct sanitized editorial export for this owner-authorized post; no private report published. Canonical Machine checkout was unavailable.",
   "content": {
     "title": "September Palm Treatments",
     "article_source": "journal-data/articles/september-treatment-day.html",
-    "scope": "September residential palm treatment visits, prevention and follow-up monitoring; no treatment outcome or community endorsement claimed."
+    "scope": "September 11, 12, 13 and 19 treatment visits across five properties. Species observations attributed to the owner's firsthand field experience, without implying infestation in the pictured palms."
   },
   "media": [
     {
@@ -51,6 +51,16 @@
     {
       "filename": "palm-crown.webp",
       "sha256": "544daac523bb4cbeabc808a9dd7480e071541288c98b7f7425710033e94d5431",
+      "approved_for_public": true
+    },
+    {
+      "filename": "september-11-poolside.webp",
+      "sha256": "a1ba55917d26d9a5cc8294bd4bd2f0bcf1363c46a88e1bd024e6f55195f33308",
+      "approved_for_public": true
+    },
+    {
+      "filename": "september-12-date-palm.webp",
+      "sha256": "33480c5dcccc1cc9377ee325eadf6c8a059e4b47e8618c728f0cc28bcfa15eeb",
       "approved_for_public": true
     }
   ]
