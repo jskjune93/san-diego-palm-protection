@@ -1,4 +1,17 @@
 (() => {
+  // Account-owned Google Ads tag. Preview and local visits never send ad events.
+  const adsDestination = 'AW-18301751378/Wr8pCK6pu4AdENKg-pZE';
+  const adsEnabled = ['www.sandiegopalmprotection.com', 'sandiegopalmprotection.com'].includes(location.hostname);
+  const adsEvent = function () { window.dataLayer.push(arguments); };
+  if (adsEnabled) {
+    window.dataLayer = window.dataLayer || [];
+    adsEvent('js', new Date());
+    adsEvent('config', 'AW-18301751378', { allow_ad_personalization_signals: false });
+    const adsScript = document.createElement('script');
+    adsScript.async = true;
+    adsScript.src = 'https://www.googletagmanager.com/gtag/js?id=AW-18301751378';
+    document.head.append(adsScript);
+  }
   const button = document.querySelector('.nav-toggle');
   const nav = document.querySelector('#primary-nav');
   if (button && nav) {
@@ -112,6 +125,10 @@
             if (!response.ok || !result.ok || !result.verified) throw new Error(result.message || 'Delivery could not be confirmed.');
             setStatus(form, result.message, 'success');
             recordConversion(result.event);
+            if (adsEnabled && ['homeowner-inquiry-delivered', 'organization-inquiry-delivered'].includes(result.event)) {
+              // No names, email addresses, phone numbers, or inquiry content are sent.
+              adsEvent('event', 'conversion', { send_to: adsDestination });
+            }
             form.reset();
             reset();
           } catch (error) {
