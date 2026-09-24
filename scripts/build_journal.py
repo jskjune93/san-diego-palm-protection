@@ -22,6 +22,47 @@ DOCUMENTED_LOSS_DIR = JOURNAL_DIR / "documented-loss"
 DOCUMENTED_LOSS_URL = f"{BASE_URL}/palm-journal/documented-loss/"
 DOCUMENTED_LOSS_LASTMOD = "2026-07-13"
 
+TOPIC_SECTIONS = [
+    {
+        "id": "weevil-treatment",
+        "title": "South American Palm Weevil & Treatment",
+        "description": "What the local threat looks like, why early action matters, and how treatment and monitoring fit together.",
+        "slugs": [
+            "i-have-seen-this-pattern-before", "september-treatment-day", "when-sapw-became-local",
+            "monitoring-mature-cidp-after-palm-weevil-activity", "old-escondido-adult-sapw-declining-cidp",
+            "old-escondido-palm-weevils",
+        ],
+    },
+    {
+        "id": "care-stewardship",
+        "title": "Palm Health, Monitoring & Stewardship",
+        "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
+        "slugs": [
+            "palm-stewardship-solving-the-whole-problem", "the-palm-record-outlives-the-palm",
+            "old-escondido-mature-cidps-deserve-a-baseline", "old-escondido-cidp-icons-and-change",
+            "grand-ave-old-escondido", "healthy-palm-growth", "cidp-assessment-local-palm-health-concerns",
+        ],
+    },
+    {
+        "id": "places-history",
+        "title": "Places, History & Landscape",
+        "description": "The palms that give San Diego properties, streets, and historic neighborhoods their character.",
+        "slugs": [
+            "the-palms-that-complete-old-escondidos-historic-homes", "old-escondido-living-landmarks",
+            "classic-old-escondido-canary-island-date-palm", "old-escondido-mexican-fan-palm-curve",
+            "old-escondido-albert-h-beach-house-palms", "old-escondido-historic-canary-island-date-palm",
+            "poway-old-winery-cidp", "old-escondido-cidp-collection", "grand-ave-cidp",
+            "rancho-santa-fe-palm-walk",
+        ],
+    },
+    {
+        "id": "loss-preservation",
+        "title": "Loss, Change & Preservation",
+        "description": "What disappears, what can still be moved or protected, and why the landscape record matters.",
+        "slugs": ["when-palms-were-california-gold", "las-palmas-no-reply-then-the-saws"],
+    },
+]
+
 
 def read_entries() -> list[dict]:
     entries = json.loads(MANIFEST.read_text(encoding="utf-8"))
@@ -244,30 +285,45 @@ def json_ld_documented_loss() -> str:
 
 def render_index(entries: list[dict]) -> None:
     published = [e for e in entries if e.get("status") == "published" and e.get("public", True) is not False]
-    featured = next(e for e in published if e["slug"] == "classic-old-escondido-canary-island-date-palm")
-    cards = []
-    for entry in published:
-        img = card_image_src(entry)
-        card_id = escape(entry["legacy_anchor"])
-        if entry.get("page"):
-            action = f'<a class="read-link" href="{article_href(entry)}">Read the field note</a>'
-        else:
-            action = ''
-        card_image = f'<img src="{escape(img)}" alt="{escape(entry["primary_image_alt"])}" loading="lazy" decoding="async">' if img else ''
-        cards.append(f'''      <article class="journal-card" id="{card_id}" data-slug="{escape(entry['slug'])}" data-page="{str(entry.get('page')).lower()}">
-{card_image}
-        <div class="journal-card-content">
-          <span class="category-label">{escape(entry['category'])}</span>
-          <h2>{escape(entry['title'])}</h2>
-          <p class="date-location">{escape(display_meta(entry))}</p>
+    article_entries = {e["slug"]: e for e in published if e.get("page")}
+    assigned_slugs = [slug for section in TOPIC_SECTIONS for slug in section["slugs"]]
+    duplicate_slugs = sorted({slug for slug in assigned_slugs if assigned_slugs.count(slug) > 1})
+    missing_slugs = sorted(set(article_entries) - set(assigned_slugs))
+    unknown_slugs = sorted(set(assigned_slugs) - set(article_entries))
+    if duplicate_slugs or missing_slugs or unknown_slugs:
+        raise SystemExit(
+            "Palm Journal topic index is out of sync. "
+            f"duplicates={duplicate_slugs}; uncategorized={missing_slugs}; unknown={unknown_slugs}"
+        )
+
+    def render_entry_link(entry: dict) -> str:
+        return f'''        <li id="{escape(entry['legacy_anchor'])}">
+          <div class="journal-link-heading"><a href="{article_href(entry)}">{escape(entry['title'])}</a><span>{escape(display_meta(entry))}</span></div>
           <p>{escape(entry['excerpt'])}</p>
-          {action}
-        </div>
-      </article>''')
+        </li>'''
+
+    sections = []
+    for section in TOPIC_SECTIONS:
+        links = [render_entry_link(article_entries[slug]) for slug in section["slugs"]]
+        if section["id"] == "loss-preservation":
+            links.append('''        <li class="journal-collection-link">
+          <div class="journal-link-heading"><a href="./palm-journal/documented-loss/">Documented Loss</a><span>Permanent Journal collection</span></div>
+          <p>Confirmed palm removals and losses, with a clear boundary between observed facts, assessment, and what remains unknown.</p>
+        </li>''')
+        sections.append(f'''  <section class="journal-topic" id="{escape(section['id'])}" aria-labelledby="{escape(section['id'])}-heading">
+    <h2 id="{escape(section['id'])}-heading">{escape(section['title'])}</h2>
+    <p class="journal-topic-intro">{escape(section['description'])}</p>
+    <ul class="journal-link-list">
+{chr(10).join(links)}
+    </ul>
+  </section>''')
+
+    latest = article_entries["i-have-seen-this-pattern-before"]
+    og_entry = next(e for e in published if e["slug"] == "classic-old-escondido-canary-island-date-palm")
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-{shared_head('SDPP Palm Journal | John Krause’s Local Palm Field Notes', 'John Krause’s field notes on mature palms, South American palm weevil activity, Old Escondido landscapes, monitoring, and documented loss.', f'{BASE_URL}/palm-journal-new.html', absolutize(featured['primary_image']), json_ld_index(entries))}
+{shared_head('SDPP Palm Journal | Essays and Local Palm Field Notes', 'Choose SDPP Palm Journal essays and field notes by topic: South American palm weevil, treatment, palm care, San Diego landscapes, preservation, and documented loss.', f'{BASE_URL}/palm-journal-new.html', absolutize(og_entry['primary_image']), json_ld_index(entries))}
 {styles('./')}
 </head>
 <body>
@@ -275,44 +331,28 @@ def render_index(entries: list[dict]) -> None:
 {header('./')}
 <section class="hero">
   <div class="hero-inner">
-    <span class="eyebrow">Palm Journal Library</span>
-    <h1>Field Notes on Mature Palms in San Diego County</h1>
-    <p class="lede">These are my field notes on mature palms around Old Escondido and North County: what I photographed, what changed, and what I could or could not conclude. <a href="./report-a-palm.html">Share a palm observation or dated photograph.</a> Nothing is published automatically.</p>
+    <span class="eyebrow">Palm Journal</span>
+    <h1>Choose What You Want to Read About</h1>
+    <p class="lede">Essays, field notes, and local records about mature palms, South American palm weevil, stewardship, landscape history, and loss across San Diego County.</p>
   </div>
 </section>
-<main id="main">
-  <section class="featured" aria-labelledby="featured-entry">
-    <div>
-      <span class="category-label">Featured Entry</span>
-      <h2 id="featured-entry">{escape(featured['title'])}</h2>
-      <p class="date-location">{escape(display_meta(featured))}</p>
-      <p>{escape(featured['excerpt'])}</p>
-      <a class="read-link" href="{article_href(featured)}">Read the field note</a>
-    </div>
-    <img src="{escape(featured['primary_image'])}" alt="{escape(featured['primary_image_alt'])}" loading="lazy" decoding="async">
+<main id="main" class="journal-index">
+  <section class="journal-start" aria-labelledby="start-here-heading">
+    <span class="category-label">Start here</span>
+    <h2 id="start-here-heading"><a href="{article_href(latest)}">{escape(latest['title'])}</a></h2>
+    <p>{escape(latest['excerpt'])}</p>
+    <p class="journal-start-links"><a href="./palm-journal/when-sapw-became-local.html">How SAPW became local</a><a href="./palm-journal/when-palms-were-california-gold/">When palms were California gold</a></p>
   </section>
 
-  <section class="editorial-section" aria-labelledby="documented-loss-section">
-    <span class="category-label">Permanent Journal Section</span>
-    <h2 id="documented-loss-section">Documented Loss</h2>
-    <p>Before-and-after field records of significant palms that have died, declined beyond practical recovery, or been removed from San Diego landscapes.</p>
-    <p>This section is reserved for confirmed outcomes. Palms still being watched remain ongoing field records until death, removal, or irreversible structural loss is documented.</p>
-    <a class="read-link" href="./palm-journal/documented-loss/">View Documented Loss records</a>
-  </section>
+  <nav class="journal-topic-nav" aria-label="Palm Journal topics">
+    <span>Browse by topic</span>
+    {''.join(f'<a href="#{escape(section["id"])}">{escape(section["title"])}</a>' for section in TOPIC_SECTIONS)}
+  </nav>
 
-  <section class="editorial-section" aria-labelledby="urban-forest-documentation-resource">
-    <span class="category-label">Urban Forest Documentation</span>
-    <h2 id="urban-forest-documentation-resource">Old Escondido Palm Documentation for Urban-Forest Decisions</h2>
-    <p>A limited owner/SDPP photographic record showing how stable palm IDs, dated images, visible-condition notes, and loss chronology can support urban-forest and multi-palm decisions.</p>
-    <a class="read-link" href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Review the approved civic documentation resource</a>
-  </section>
+{chr(10).join(sections)}
 
-  <section aria-labelledby="journal-library">
-    <h2 id="journal-library">Field notes and local palm stories</h2>
-    <div class="journal-grid">
-{chr(10).join(cards)}
-    </div>
-  </section>
+  <p class="journal-related-resource"><strong>Related field resource:</strong> <a href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Old Escondido palm documentation for urban-forest decisions</a>.</p>
+  <p class="journal-contribution"><a href="./report-a-palm.html">Share a palm observation or dated photograph.</a> Nothing is published automatically.</p>
 
   <section class="assessment-cta" id="contact">
     <h2>Seen Something Worth Recording?</h2>

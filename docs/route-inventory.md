@@ -53,6 +53,7 @@
 | `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
 
 | `/palm-journal/september-treatment-day.html` | created | Field journal: residential palm treatments, weevil prevention and ongoing monitoring; homeowner treatment inquiry pathway |
+| `/palm-journal/i-have-seen-this-pattern-before.html` | created | Opinion essay comparing the local SAPW pattern with emerald ash borer losses witnessed in Minnesota |
 
 ## Consolidation policy
 
