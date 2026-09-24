@@ -1,5 +1,32 @@
 [
   {
+    "slug": "local-is-the-point",
+    "title": "Local Is the Point",
+    "date": "2026-09-23",
+    "date_label": "San Diego County | September 23, 2026",
+    "location": "San Diego County",
+    "category": "Palm Stewardship",
+    "topic": "Why owner-led local knowledge and continuity matter when protecting mature palms from South American palm weevil",
+    "excerpt": "Your palms are here, the weevil is here, and so am I. Why I believe local continuity matters as much as the treatment visit.",
+    "page": true,
+    "substantial": true,
+    "review": "owner-requested first-person positioning essay; comparative language is limited to SDPP's local proximity, continuity and firsthand experience without challenging another provider's competence",
+    "related": [
+      "september-treatment-day",
+      "when-sapw-became-local",
+      "monitoring-mature-cidp-after-palm-weevil-activity"
+    ],
+    "legacy_anchor": "local-is-the-point",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/local-is-the-point.html",
+    "allow_no_image": true,
+    "primary_image": "",
+    "primary_image_alt": "",
+    "gallery_images": [],
+    "classification": "Palm Stewardship",
+    "modified_date": "2026-09-23"
+  },
+  {
     "slug": "i-have-seen-this-pattern-before",
     "title": "I Have Seen This Pattern Before",
     "date": "2026-09-23",

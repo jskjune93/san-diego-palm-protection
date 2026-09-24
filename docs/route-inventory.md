@@ -54,6 +54,7 @@
 
 | `/palm-journal/september-treatment-day.html` | created | Field journal: residential palm treatments, weevil prevention and ongoing monitoring; homeowner treatment inquiry pathway |
 | `/palm-journal/i-have-seen-this-pattern-before.html` | created | Opinion essay comparing the local SAPW pattern with emerald ash borer losses witnessed in Minnesota |
+| `/palm-journal/local-is-the-point.html` | created | First-person essay on SDPP's local proximity, owner-led continuity, and firsthand San Diego palm-weevil experience |
 
 ## Consolidation policy
 
