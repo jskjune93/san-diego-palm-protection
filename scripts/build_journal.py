@@ -38,7 +38,7 @@ TOPIC_SECTIONS = [
         "title": "Palm Health, Monitoring & Stewardship",
         "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
         "slugs": [
-            "local-is-the-point",
+            "who-owns-your-palm-treatment-company", "local-is-the-point",
             "palm-stewardship-solving-the-whole-problem", "the-palm-record-outlives-the-palm",
             "old-escondido-mature-cidps-deserve-a-baseline", "old-escondido-cidp-icons-and-change",
             "grand-ave-old-escondido", "healthy-palm-growth", "cidp-assessment-local-palm-health-concerns",

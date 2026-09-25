@@ -56,6 +56,8 @@
 | `/palm-journal/i-have-seen-this-pattern-before.html` | created | Opinion essay comparing the local SAPW pattern with emerald ash borer losses witnessed in Minnesota |
 | `/palm-journal/local-is-the-point.html` | created | First-person essay on SDPP's local proximity, owner-led continuity, and firsthand San Diego palm-weevil experience |
 
+| `/palm-journal/who-owns-your-palm-treatment-company.html` | created | Editorial: verified ownership context and questions for choosing accountable local palm treatment |
+
 ## Consolidation policy
 
 Local and species pages retain search/discovery roles but point into the canonical service architecture. They do not define competing service names, navigation, credential wording, or design systems. No public route was archived or removed in this reconstruction.
