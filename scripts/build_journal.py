@@ -38,6 +38,7 @@ TOPIC_SECTIONS = [
         "title": "Palm Health, Monitoring & Stewardship",
         "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
         "slugs": [
+            "the-palm-is-only-part-of-the-site",
             "who-owns-your-palm-treatment-company", "local-is-the-point",
             "palm-stewardship-solving-the-whole-problem", "the-palm-record-outlives-the-palm",
             "old-escondido-mature-cidps-deserve-a-baseline", "old-escondido-cidp-icons-and-change",
@@ -319,7 +320,7 @@ def render_index(entries: list[dict]) -> None:
     </ul>
   </section>''')
 
-    latest = article_entries["i-have-seen-this-pattern-before"]
+    latest = article_entries["the-palm-is-only-part-of-the-site"]
     og_entry = next(e for e in published if e["slug"] == "classic-old-escondido-canary-island-date-palm")
     html = f'''<!DOCTYPE html>
 <html lang="en">

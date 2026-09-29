@@ -1,5 +1,40 @@
 [
   {
+    "slug": "the-palm-is-only-part-of-the-site",
+    "title": "The Palm Is Only Part of the Site",
+    "date": "2026-09-28",
+    "date_label": "Old Escondido | September 28, 2026",
+    "location": "Old Escondido",
+    "category": "Field Observation",
+    "topic": "Why access, utilities, structures and repeatable viewpoints belong in a palm assessment",
+    "excerpt": "The crown may be the reason for the visit. The slope, roof, fence, utility lines and route to the trunk help determine what responsible work looks like.",
+    "page": true,
+    "substantial": true,
+    "review": "New first-person field essay using three previously unpublished SDPP photographs from a July 29 Old Escondido walk; no diagnosis, client relationship or authority around utility work implied.",
+    "related": [
+      "the-palm-record-outlives-the-palm",
+      "old-escondido-mature-cidps-deserve-a-baseline",
+      "healthy-palm-growth"
+    ],
+    "legacy_anchor": "the-palm-is-only-part-of-the-site",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/the-palm-is-only-part-of-the-site.html",
+    "primary_image": "./images/palm-journal/the-palm-is-only-part-of-the-site/mature-palm-and-property.webp",
+    "primary_image_alt": "Mature Canary Island date palm rising beside an Old Escondido house, street and overhead utility lines",
+    "gallery_images": [
+      {
+        "src": "./images/palm-journal/the-palm-is-only-part-of-the-site/palm-above-street-and-utilities.webp",
+        "alt": "Canary Island date palm above an Old Escondido street with trees, roofs and utility lines between the viewer and the crown"
+      },
+      {
+        "src": "./images/palm-journal/the-palm-is-only-part-of-the-site/declining-palm-in-site-context.webp",
+        "alt": "Declining mature Canary Island date palm behind a house and vegetation with overhead utility lines in the foreground"
+      }
+    ],
+    "classification": "Field Observation",
+    "modified_date": "2026-09-28"
+  },
+  {
     "slug": "who-owns-your-palm-treatment-company",
     "title": "Who Owns Your Palm Treatment Company?",
     "date": "2026-09-24",
