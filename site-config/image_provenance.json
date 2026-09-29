@@ -37,26 +37,26 @@
     }
   },
   "approved_assets": {
-    "images/palm-journal/the-palm-is-only-part-of-the-site/declining-palm-in-site-context.webp": {
-      "sha256": "b1da6b93277c8fdb6ec4e188961bc9d73c80115a7d229b7a0356cdebcdb90bba",
+    "images/palm-journal/the-palm-is-only-part-of-the-site/september-complete-crown.webp": {
+      "sha256": "05a1873ee128fecea4671d12b2ef2f9e0e53f5dbe6df6217a82dcb85ecc58657",
       "classification": "confirmed_original_sdpp",
-      "source_basis": "Original SDPP field photograph captured July 29, 2026. Owner expressly requested a new public Journal article using recent, previously unused photographs from SDPP files on September 28, 2026.",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026. Owner expressly requested current customer-folder photographs for this public Journal correction on September 28, 2026.",
       "publication_decision": "approved_public",
-      "presentation_risk": "Public streetscape context only; no client relationship, diagnosis, treatment history, address, or authority around utility work implied. Full-frame web derivative with camera metadata removed."
+      "presentation_risk": "Customer name and address excluded from repository, copy, alt text, and captions. Full-frame web derivative with camera metadata removed; no diagnosis or treatment outcome implied."
     },
-    "images/palm-journal/the-palm-is-only-part-of-the-site/mature-palm-and-property.webp": {
-      "sha256": "70b258285620e34a2d8418316167496c84ff0ea7e6ab3dc8ca1e21268f9ff2ce",
+    "images/palm-journal/the-palm-is-only-part-of-the-site/september-field-work-context.webp": {
+      "sha256": "870511b2c8a666ef004080eb1339d66c5d9f8f17c2ae9f89145018e6ebad2b45",
       "classification": "confirmed_original_sdpp",
-      "source_basis": "Original SDPP field photograph captured July 29, 2026. Owner expressly requested a new public Journal article using recent, previously unused photographs from SDPP files on September 28, 2026.",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026. Owner expressly requested current customer-folder photographs for this public Journal correction on September 28, 2026.",
       "publication_decision": "approved_public",
-      "presentation_risk": "Public streetscape context only; no client relationship, diagnosis, treatment history, address, or authority around utility work implied. Full-frame web derivative with camera metadata removed."
+      "presentation_risk": "Customer name and address excluded from repository, copy, alt text, and captions. Full-frame web derivative with camera metadata removed; SDPP truck appears only as actual field-work context, and no diagnosis or treatment outcome is implied."
     },
-    "images/palm-journal/the-palm-is-only-part-of-the-site/palm-above-street-and-utilities.webp": {
-      "sha256": "d4a39e5cb778d337f3ca8affc5330e136290d295f3fce5d782f2d1d21c8fcd60",
+    "images/palm-journal/the-palm-is-only-part-of-the-site/september-property-and-palm.webp": {
+      "sha256": "4c1779d434511d60850aebfc3803f843aaa682b362145792c9c302a6fa33ee26",
       "classification": "confirmed_original_sdpp",
-      "source_basis": "Original SDPP field photograph captured July 29, 2026. Owner expressly requested a new public Journal article using recent, previously unused photographs from SDPP files on September 28, 2026.",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026. Owner expressly requested current customer-folder photographs for this public Journal correction on September 28, 2026.",
       "publication_decision": "approved_public",
-      "presentation_risk": "Public streetscape context only; no client relationship, diagnosis, treatment history, address, or authority around utility work implied. Full-frame web derivative with camera metadata removed."
+      "presentation_risk": "Customer name and address excluded from repository, copy, alt text, and captions. Full-frame web derivative with camera metadata removed; no diagnosis or treatment outcome implied."
     },
     "Bismarck.jpg": {
       "sha256": "fca4aac0a5682dd55d5c94eae08f0004eb89dd44937126e5d08a5f67643b49a4",

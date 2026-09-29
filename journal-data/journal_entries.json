@@ -3,14 +3,14 @@
     "slug": "the-palm-is-only-part-of-the-site",
     "title": "The Palm Is Only Part of the Site",
     "date": "2026-09-28",
-    "date_label": "Old Escondido | September 28, 2026",
-    "location": "Old Escondido",
+    "date_label": "San Diego County | September 28, 2026",
+    "location": "San Diego County",
     "category": "Field Observation",
-    "topic": "Why access, utilities, structures and repeatable viewpoints belong in a palm assessment",
-    "excerpt": "The crown may be the reason for the visit. The slope, roof, fence, utility lines and route to the trunk help determine what responsible work looks like.",
+    "topic": "Why a palm visit starts with the complete palm, complete crown and the working conditions around it",
+    "excerpt": "A September customer visit shows why I begin with the complete palm and crown before moving into details, treatment, and the next action.",
     "page": true,
     "substantial": true,
-    "review": "New first-person field essay using three previously unpublished SDPP photographs from a July 29 Old Escondido walk; no diagnosis, client relationship or authority around utility work implied.",
+    "review": "First-person field essay revised with three current September 28 customer-work photographs. Customer identity and address are excluded; no diagnosis or treatment outcome is claimed.",
     "related": [
       "the-palm-record-outlives-the-palm",
       "old-escondido-mature-cidps-deserve-a-baseline",
@@ -19,16 +19,16 @@
     "legacy_anchor": "the-palm-is-only-part-of-the-site",
     "status": "published",
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/the-palm-is-only-part-of-the-site.html",
-    "primary_image": "./images/palm-journal/the-palm-is-only-part-of-the-site/mature-palm-and-property.webp",
-    "primary_image_alt": "Mature Canary Island date palm rising beside an Old Escondido house, street and overhead utility lines",
+    "primary_image": "./images/palm-journal/the-palm-is-only-part-of-the-site/september-property-and-palm.webp",
+    "primary_image_alt": "Complete Canary Island date palm and crown within a mature San Diego County residential palm landscape",
     "gallery_images": [
       {
-        "src": "./images/palm-journal/the-palm-is-only-part-of-the-site/palm-above-street-and-utilities.webp",
-        "alt": "Canary Island date palm above an Old Escondido street with trees, roofs and utility lines between the viewer and the crown"
+        "src": "./images/palm-journal/the-palm-is-only-part-of-the-site/september-complete-crown.webp",
+        "alt": "Complete crown of a mature Canary Island date palm photographed during a September customer visit"
       },
       {
-        "src": "./images/palm-journal/the-palm-is-only-part-of-the-site/declining-palm-in-site-context.webp",
-        "alt": "Declining mature Canary Island date palm behind a house and vegetation with overhead utility lines in the foreground"
+        "src": "./images/palm-journal/the-palm-is-only-part-of-the-site/september-field-work-context.webp",
+        "alt": "Complete Canary Island date palm, surrounding landscape and San Diego Palm Protection truck during a customer visit"
       }
     ],
     "classification": "Field Observation",
