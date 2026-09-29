@@ -118,6 +118,16 @@ def normalize_rel(path: Path) -> str:
 def main() -> int:
     errors: list[str] = []
     warnings: list[str] = []
+    site_css = (ROOT / "site-assets" / "site.css").read_text(encoding="utf-8")
+    evidence_crop_patterns = (
+        r"\.article-shell\s+\.entry-landscape\s+img\s*\{[^}]*aspect-ratio",
+        r"\.ufmp-photo-grid\s+img\s*\{[^}]*aspect-ratio",
+        r"\.article-shell\s+\.entry-landscape\s+img\s*\{[^}]*object-fit\s*:\s*cover",
+        r"\.ufmp-photo-grid\s+img\s*\{[^}]*object-fit\s*:\s*cover",
+    )
+    for pattern in evidence_crop_patterns:
+        if re.search(pattern, site_css, flags=re.IGNORECASE):
+            errors.append(f"evidence image cropping rule is prohibited: {pattern}")
     html_files = sorted(ROOT.glob("*.html")) + sorted((ROOT / "palm-journal").glob("**/*.html"))
     pages: dict[Path, tuple[str, PageParser]] = {}
     ids_by_page: dict[Path, set[str]] = {}
