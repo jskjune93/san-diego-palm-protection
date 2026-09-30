@@ -1,98 +1,115 @@
 {
   "buildCommand": "node scripts/build-production.mjs",
   "outputDirectory": "dist",
-  "redirects": [
+  "routes": [
     {
-      "source": "/managed-property-palm-services.html",
-      "destination": "/palm-records-monitoring-verification.html#organization-inquiry",
-      "permanent": true
+      "src": "^/managed-property-palm-services.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/palm-records-monitoring-verification.html#organization-inquiry"
+      }
     },
     {
-      "source": "/residential-palm-assessment.html",
-      "destination": "/palm-records-monitoring-verification.html#homeowner-inquiry",
-      "permanent": true
+      "src": "^/residential-palm-assessment.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/palm-records-monitoring-verification.html#homeowner-inquiry"
+      }
     },
     {
-      "source": "/background.jpg",
-      "destination": "/images/old-escondido-ufmp/john-krause-with-mature-cidp.jpg",
-      "permanent": true
+      "src": "^/background.jpg$",
+      "status": 308,
+      "headers": {
+        "Location": "/images/old-escondido-ufmp/john-krause-with-mature-cidp.jpg"
+      }
     },
     {
-      "source": "/(.*)",
+      "src": "^/(.*)$",
+      "status": 301,
+      "headers": {
+        "Location": "https://www.sandiegopalmprotection.com/$1"
+      },
       "has": [
         {
           "type": "host",
           "value": "sandiegopalmprotection.com"
         }
-      ],
-      "destination": "https://www.sandiegopalmprotection.com/$1",
-      "statusCode": 301
+      ]
     },
     {
-      "source": "/",
+      "src": "^/$",
+      "status": 308,
+      "headers": {
+        "Location": "https://www.sandiegopalmprotection.com/palm-faq-san-diego.html"
+      },
       "has": [
         {
           "type": "host",
           "value": "sandiegopalmhealth.com"
         }
-      ],
-      "destination": "https://www.sandiegopalmprotection.com/palm-faq-san-diego.html",
-      "permanent": true
+      ]
     },
     {
-      "source": "/",
+      "src": "^/$",
+      "status": 308,
+      "headers": {
+        "Location": "https://www.sandiegopalmprotection.com/palm-faq-san-diego.html"
+      },
       "has": [
         {
           "type": "host",
           "value": "www.sandiegopalmhealth.com"
         }
-      ],
-      "destination": "https://www.sandiegopalmprotection.com/palm-faq-san-diego.html",
-      "permanent": true
+      ]
     },
     {
-      "source": "/",
+      "src": "^/$",
+      "status": 308,
+      "headers": {
+        "Location": "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html"
+      },
       "has": [
         {
           "type": "host",
           "value": "sandiegopalmcare.com"
         }
-      ],
-      "destination": "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html",
-      "permanent": true
+      ]
     },
     {
-      "source": "/",
+      "src": "^/$",
+      "status": 308,
+      "headers": {
+        "Location": "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html"
+      },
       "has": [
         {
           "type": "host",
           "value": "www.sandiegopalmcare.com"
         }
-      ],
-      "destination": "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html",
-      "permanent": true
-    }
-  ],
-  "rewrites": [
+      ]
+    },
     {
-      "source": "/",
+      "src": "^/$",
       "has": [
         {
           "type": "host",
           "value": "southamericanpalmweevil.com"
         }
       ],
-      "destination": "/sapw.html"
+      "dest": "/sapw.html"
     },
     {
-      "source": "/",
+      "src": "^/$",
       "has": [
         {
           "type": "host",
           "value": "www.southamericanpalmweevil.com"
         }
       ],
-      "destination": "/sapw.html"
+      "dest": "/sapw.html"
+    },
+    {
+      "handle": "filesystem"
     }
   ]
 }

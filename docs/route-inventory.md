@@ -67,3 +67,5 @@
 Local and species pages retain search/discovery roles but point into the canonical service architecture. They do not define competing service names, navigation, credential wording, or design systems. Superseded audience pages redirect to the matching inquiry on the canonical service page.
 
 SAPW visual exhibit: `/sapw.html` is the original SDPP photo and film page. The apex and www `southamericanpalmweevil.com` roots rewrite to it without changing the visitor-facing domain. Existing SDPP links and the SDPP canonical URL remain intact.
+
+SAPW domain dispatch uses explicit Vercel routes before the filesystem phase. Ordinary rewrites are evaluated after static index.html and therefore do not override the existing root document. Existing redirect rules are retained as equivalent ordered routes.
