@@ -67,6 +67,10 @@ def main() -> int:
     for relative in PRIMARY_PAGES:
         path = ROOT / relative
         text = path.read_text(encoding="utf-8-sig")
+        if relative == "sapw.html":
+            if licensing_statement not in text or 'name="business-credentials"' not in text:
+                errors.append("sapw.html: centralized credential metadata is missing")
+            continue
         if START not in text or STYLE_LINK not in text:
             errors.append(f"{relative}: centralized credential component is missing")
         if relative == "index.html":

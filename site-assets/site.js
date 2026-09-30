@@ -142,3 +142,29 @@
     })
     .catch(() => inquiryForms.forEach(fallbackMode));
 })();
+
+// Progressive enhancement: original photographs remain ordinary links without JS.
+(() => {
+  const dialog = document.querySelector('.sapw-lightbox');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  const fullImage = dialog.querySelector('img');
+  let opener;
+  document.querySelectorAll('[data-sapw-photo]').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      opener = link;
+      fullImage.src = link.href;
+      fullImage.alt = link.querySelector('img').alt;
+      dialog.showModal();
+    });
+  });
+  dialog.querySelector('button').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+  dialog.addEventListener('close', () => { opener?.focus({preventScroll:true}); });
+  document.querySelectorAll('.sapw-raw video').forEach(video => {
+    video.addEventListener('play', () => {
+      document.querySelectorAll('.sapw-raw video').forEach(other => { if (other !== video) other.pause(); });
+    });
+  });
+})();

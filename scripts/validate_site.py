@@ -385,7 +385,6 @@ def main() -> int:
             REPORT_PAGE,
             ROOT / "palm-stewardship-plans.html",
             ROOT / "quarterly-palm-care-san-diego.html",
-            ROOT / "sapw.html",
             ROOT / "south-american-palm-weevil-treatment-san-diego.html",
             ROOT / "palm-removal-coordination.html",
             ROOT / "urban-forest-palm-documentation.html",

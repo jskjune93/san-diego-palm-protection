@@ -66,6 +66,8 @@ def replace_marked_block(text: str, block: str = BLOCK) -> str:
 
 
 def insert_for_page(path: Path, text: str) -> str:
+    if path.name == "sapw.html":
+        return text  # Media-only exhibit retains centralized metadata in its head.
     if START in text:
         if path.name == "index.html":
             page_block = render_homepage_credential_block()

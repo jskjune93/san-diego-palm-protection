@@ -28,7 +28,7 @@ PRIMARY = {
 
 INTENT_REQUIREMENTS = {
     "index.html": ("sapw", "treatment", "san diego"),
-    "sapw.html": ("south american palm weevil", "san diego", "signs", "prevention"),
+    "sapw.html": ("south american palm weevil", "san diego", "photographs", "video"),
     "south-american-palm-weevil-treatment-san-diego.html": ("south american palm weevil", "treatment", "san diego"),
     "palm-stewardship-plans.html": ("palm", "treatment", "preventive protection", "san diego"),
     "quarterly-palm-care-san-diego.html": ("annual mature palm protection program", "preventive sapw treatment", "san diego"),
@@ -161,7 +161,7 @@ def main() -> int:
             raise AssertionError(f"{rel}: primary description length is {description_length}, expected 90-170")
 
     sitemap = ET.parse(DIST / "sitemap.xml")
-    urls = [node.text or "" for node in sitemap.findall(".//{*}loc")]
+    urls = [node.text or "" for node in sitemap.findall("{http://www.sitemaps.org/schemas/sitemap/0.9}url/{http://www.sitemaps.org/schemas/sitemap/0.9}loc")]
     if len(urls) != len(set(urls)):
         raise AssertionError("sitemap contains duplicate URLs")
     if any(not url.startswith(BASE + "/") for url in urls):

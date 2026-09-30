@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.sandiegopalmprotection.com/</loc>
     <lastmod>2026-09-15</lastmod>
@@ -22,9 +22,9 @@
   </url>
   <url>
     <loc>https://www.sandiegopalmprotection.com/sapw.html</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <priority>0.9</priority>
-  </url>
+  <image:image><image:loc>https://www.sandiegopalmprotection.com/images/palm-journal/when-sapw-became-local/01-june-15-adult-sapw.jpg</image:loc></image:image><image:image><image:loc>https://www.sandiegopalmprotection.com/images/palm-journal/the-palm-is-only-part-of-the-site/september-complete-crown.webp</image:loc></image:image><image:image><image:loc>https://www.sandiegopalmprotection.com/images/palm-journal/when-sapw-became-local/03-june-16-six-captured-adults.jpg</image:loc></image:image><image:image><image:loc>https://www.sandiegopalmprotection.com/images/palm-journal/when-sapw-became-local/04-june-16-specimen-profiles.jpg</image:loc></image:image><image:image><image:loc>https://www.sandiegopalmprotection.com/images/old-escondido-ufmp/old-home-mature-cidps-golden-hour.jpg</image:loc></image:image><image:image><image:loc>https://www.sandiegopalmprotection.com/images/las-palmas/09-severe-decline-2026-07-10-las-palmas-declining-palm-central-frond-necrosis-detail-03.jpg</image:loc></image:image></url>
   <url>
     <loc>https://www.sandiegopalmprotection.com/old-escondido-palm-preservation.html</loc>
     <lastmod>2026-07-20</lastmod>

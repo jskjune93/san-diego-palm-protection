@@ -728,6 +728,18 @@ def update_sitemap(entries: list[dict]) -> None:
                 if lastmod is None:
                     lastmod = ET.SubElement(url, lastmod_tag)
                 lastmod.text = modified_dates[loc.text]
+    # The original photo exhibit is also discoverable through the image sitemap.
+    image_ns = "http://www.google.com/schemas/sitemap-image/1.1"
+    ET.register_namespace("image", image_ns)
+    from sapw_gallery import DIMENSIONS
+    for url in root_el.findall(url_tag):
+        if url.findtext(loc_tag) != BASE_URL + "/sapw.html":
+            continue
+        for old_image in list(url.findall(f"{{{image_ns}}}image")):
+            url.remove(old_image)
+        for asset in DIMENSIONS:
+            image = ET.SubElement(url, f"{{{image_ns}}}image")
+            ET.SubElement(image, f"{{{image_ns}}}loc").text = BASE_URL + "/" + asset
     tree.write(SITEMAP_PATH, encoding="utf-8", xml_declaration=True)
 
 

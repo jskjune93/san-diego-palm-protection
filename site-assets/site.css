@@ -44,3 +44,27 @@ form{max-width:900px}fieldset{border:1px solid var(--line);padding:22px;margin:0
 .field-split--full-frame figure{background:var(--cream)}
 .field-split--full-frame img{height:clamp(360px,42vw,580px);aspect-ratio:auto;object-fit:contain;background:var(--cream)}
 @media(max-width:700px){.field-split--full-frame img{height:440px}}
+
+
+/* Raw media page with one plain heading and no captions or labels. */
+.sapw-raw{margin:0;padding:0;background:#080808;color:#aaa;font-family:Arial,Helvetica,sans-serif}
+.sapw-raw *{box-sizing:border-box}
+.sapw-raw main{columns:3;column-gap:4px;padding:4px;width:100%;max-width:none;margin:0}
+.sapw-raw main>a,.sapw-raw main>video{display:block;width:100%;margin:0 0 4px;break-inside:avoid;border:0;border-radius:0;background:#080808}
+.sapw-raw .sapw-photo img{display:block;width:100%;height:auto;border-radius:0}
+.sapw-raw a:focus-visible,.sapw-raw button:focus-visible{outline:3px solid white;outline-offset:-3px}
+.sapw-raw-footer{display:flex;justify-content:space-between;align-items:center;padding:8px 16px;font-size:.8125rem;gap:24px}
+.sapw-raw-footer a{color:#ddd;display:inline-flex;align-items:center;min-height:48px;text-decoration:none}
+.sapw-lightbox{background:#080808;color:#fff;border:0;padding:56px 12px 12px;max-width:96vw;width:1400px;max-height:96dvh;overflow:auto}
+.sapw-lightbox::backdrop{background:rgba(0,0,0,.94)}
+.sapw-lightbox img{display:block;max-height:calc(90dvh - 80px);max-width:100%;height:auto;width:auto;object-fit:contain;margin:auto}
+.sapw-close{position:absolute;right:8px;top:0;min-height:48px;min-width:48px;padding:0;background:transparent;color:#fff;border:0;border-radius:0;font:32px Arial,sans-serif;cursor:pointer}
+@media(max-width:700px){.sapw-raw main{columns:2}}
+@media(prefers-reduced-motion:reduce){.sapw-raw *{scroll-behavior:auto!important;transition:none!important}}
+
+.sapw-raw-heading{margin:0;padding:18px 12px;background:#080808;color:#fff;font-family:Arial,Helvetica,sans-serif;font-size:clamp(1.45rem,3.6vw,3.5rem);font-weight:800;line-height:1.05;letter-spacing:-.025em;max-width:none}
+
+.sapw-raw-titles{padding:18px 12px;background:#080808;color:#fff}
+.sapw-raw .sapw-raw-heading,.sapw-raw .sapw-raw-subheading{margin:0;padding:0;color:#fff;font-family:Arial,Helvetica,sans-serif;font-weight:800;line-height:1.12;letter-spacing:-.025em;max-width:none;white-space:nowrap}
+.sapw-raw .sapw-raw-heading{font-size:clamp(12px,4.9vw,56px)}
+.sapw-raw .sapw-raw-subheading{font-size:clamp(11px,3.5vw,40px);margin-top:6px}

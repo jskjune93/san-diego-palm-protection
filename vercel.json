@@ -33,29 +33,6 @@
       "has": [
         {
           "type": "host",
-          "value": "southamericanpalmweevil.com"
-        }
-      ],
-      "destination": "https://www.sandiegopalmprotection.com/sapw.html",
-      "permanent": true
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.southamericanpalmweevil.com"
-        }
-      ],
-      "destination": "https://www.sandiegopalmprotection.com/sapw.html",
-      "permanent": true
-    },
-
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
           "value": "sandiegopalmhealth.com"
         }
       ],
@@ -73,7 +50,6 @@
       "destination": "https://www.sandiegopalmprotection.com/palm-faq-san-diego.html",
       "permanent": true
     },
-
     {
       "source": "/",
       "has": [
@@ -95,6 +71,28 @@
       ],
       "destination": "https://www.sandiegopalmprotection.com/quarterly-palm-care-san-diego.html",
       "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "southamericanpalmweevil.com"
+        }
+      ],
+      "destination": "/sapw.html"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.southamericanpalmweevil.com"
+        }
+      ],
+      "destination": "/sapw.html"
     }
   ]
 }

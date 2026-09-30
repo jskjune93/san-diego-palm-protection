@@ -34,6 +34,14 @@
       "classification": "unverified_or_uncertain",
       "production_status": "not referenced and not deployed",
       "reason": "Stripped EXIF and upload history do not establish photographer, license, or whether AI generation can be excluded"
+    },
+    "south-american-palm-weevil-cidp-poway.jpg": {
+      "sha256": "b41cf414eec6e01eeb36c207086aa1bd5ae0aa2cf0b29d7b7a588b84540a42fa",
+      "classification": "unverified_or_uncertain",
+      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
+      "publication_decision": "approved_context_only",
+      "presentation_risk": "Must not imply SDPP performed depicted work",
+      "production_status": "Not referenced after replacing the SAPW guide with the owner-requested original photo exhibit."
     }
   },
   "approved_assets": {
@@ -795,13 +803,6 @@
     },
     "silver_luxury_poway.jpg": {
       "sha256": "4058e8117d80811c2553dca241f6a9473b1776276af5f6a80b1fcdb9629fa6e9",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
-    },
-    "south-american-palm-weevil-cidp-poway.jpg": {
-      "sha256": "b41cf414eec6e01eeb36c207086aa1bd5ae0aa2cf0b29d7b7a588b84540a42fa",
       "classification": "unverified_or_uncertain",
       "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
       "publication_decision": "approved_context_only",
