@@ -81,6 +81,16 @@ def main() -> int:
         og_description = one(r'<meta\s+property=["\']og:description["\']\s+content=["\'](.*?)["\']', text, "Open Graph description", path)
         if og_title != title or og_description != description:
             raise AssertionError(f"{rel}: Open Graph metadata does not match canonical title and description")
+        og_image = one(r'<meta\s+property=["\']og:image["\']\s+content=["\'](.*?)["\']', text, "Open Graph image", path)
+        parsed_og_image = urlparse(og_image)
+        if parsed_og_image.scheme not in {"http", "https"} or not parsed_og_image.path.strip("/"):
+            raise AssertionError(f"{rel}: Open Graph image is not a direct image URL: {og_image}")
+        twitter_card = one(r'<meta\s+name=["\']twitter:card["\']\s+content=["\'](.*?)["\']', text, "Twitter card", path)
+        twitter_title = one(r'<meta\s+name=["\']twitter:title["\']\s+content=["\'](.*?)["\']', text, "Twitter title", path)
+        twitter_description = one(r'<meta\s+name=["\']twitter:description["\']\s+content=["\'](.*?)["\']', text, "Twitter description", path)
+        twitter_image = one(r'<meta\s+name=["\']twitter:image["\']\s+content=["\'](.*?)["\']', text, "Twitter image", path)
+        if twitter_card != "summary_large_image" or twitter_title != title or twitter_description != description or twitter_image != og_image:
+            raise AssertionError(f"{rel}: social preview metadata is inconsistent")
         if rel == "index.html":
             expected_canonical = BASE + "/"
         elif rel.endswith("/index.html"):

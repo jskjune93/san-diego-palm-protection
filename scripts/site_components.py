@@ -66,6 +66,10 @@ def head(title: str, description: str, path: str, image: str = "Old-Escondido_fu
   <meta property="og:description" content="{escape(description)}">
   <meta property="og:image" content="{image_url}">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{escape(title)}">
+  <meta name="twitter:description" content="{escape(description)}">
+  <meta name="twitter:image" content="{image_url}">
   <link rel="icon" href="{relative_root}logo.png" type="image/png">
   <link rel="stylesheet" href="{relative_root}site-assets/site.css">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">

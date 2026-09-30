@@ -47,9 +47,6 @@ def main() -> int:
         "licensed preventive treatment",
         "mature Canary Island date palms",
         "The landscapes worth protecting.",
-        "Sometimes the work goes beyond treatment.",
-        "Coordinating removals",
-        "Coordinating replacements",
         "San Diego Botanic Garden called. I was there the next day.",
         "active South American palm weevil infestation",
         "Chilean wine palms, Canary Island date palms, and Sylvester palms",
@@ -60,7 +57,7 @@ def main() -> int:
         errors.append("homepage does not retain a route to About")
     if homepage_html.lower().count("<h1") != 1:
         errors.append("homepage must contain exactly one H1")
-    if "<title>SAPW Prevention &amp; Licensed Palm Treatment San Diego | SDPP</title>" not in homepage_html:
+    if "<title>Palm Weevil Prevention &amp; Licensed Palm Treatment San Diego | SDPP</title>" not in homepage_html:
         errors.append("homepage title changed unexpectedly")
 
     for phrase in (

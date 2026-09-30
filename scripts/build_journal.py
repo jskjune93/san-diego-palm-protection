@@ -157,7 +157,7 @@ def shared_head(title: str, description: str, canonical: str, og_image: str, ext
         "description": credentials["licensing_statement"],
     }
     organization_json_ld = f'  <script type="application/ld+json">{json.dumps(organization, ensure_ascii=False)}</script>'
-    return f'''  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>{escape(title)}</title>\n  <meta name="description" content="{escape(description)}">\n  <meta name="business-status" content="{escape(credentials["status_label"])}">\n  <meta name="business-credentials" content="{escape(credentials["licensing_statement"])}">\n  <link rel="canonical" href="{escape(canonical)}">\n  <meta property="og:title" content="{escape(title)}">\n  <meta property="og:description" content="{escape(description)}">\n  <meta property="og:image" content="{escape(og_image)}">\n  <meta property="og:type" content="{escape(og_type)}">\n{organization_json_ld}\n{extra_json_ld}'''
+    return f'''  <meta charset="UTF-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1.0">\n  <title>{escape(title)}</title>\n  <meta name="description" content="{escape(description)}">\n  <meta name="business-status" content="{escape(credentials["status_label"])}">\n  <meta name="business-credentials" content="{escape(credentials["licensing_statement"])}">\n  <link rel="canonical" href="{escape(canonical)}">\n  <meta property="og:title" content="{escape(title)}">\n  <meta property="og:description" content="{escape(description)}">\n  <meta property="og:image" content="{escape(og_image)}">\n  <meta property="og:type" content="{escape(og_type)}">\n  <meta name="twitter:card" content="summary_large_image">\n  <meta name="twitter:title" content="{escape(title)}">\n  <meta name="twitter:description" content="{escape(description)}">\n  <meta name="twitter:image" content="{escape(og_image)}">\n{organization_json_ld}\n{extra_json_ld}'''
 
 
 def _legacy_styles_reference(relative_root: str = "./") -> str:
@@ -600,7 +600,7 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     html = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
-{shared_head(page_title(entry), meta_description(entry), entry['canonical_url'], absolutize(entry.get('primary_image', 'logo.png')), json_ld_article(entry))}
+{shared_head(page_title(entry), meta_description(entry), entry['canonical_url'], absolutize(entry.get('primary_image') or 'journal-overview.jpg'), json_ld_article(entry))}
 {styles(relative_root)}
 </head>
 <body>
