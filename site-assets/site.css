@@ -37,3 +37,10 @@ form{max-width:900px}fieldset{border:1px solid var(--line);padding:22px;margin:0
 /* Preserve full journal evidence frames; do not crop crowns or site context. */
 .article-shell .entry-landscape img{width:100%;height:auto;object-fit:contain}
 @media(max-width:700px){.ufmp-photo-grid{column-count:1}}
+
+/* Keep the intended palm or crown in view when a portrait field photograph is used as a wide hero. */
+.page-hero{background-position:center,var(--hero-position,center center)}
+@media(max-width:700px){.page-hero{background-position:center,var(--hero-position-mobile,var(--hero-position,center center))}}
+.field-split--full-frame figure{background:var(--cream)}
+.field-split--full-frame img{height:clamp(360px,42vw,580px);aspect-ratio:auto;object-fit:contain;background:var(--cream)}
+@media(max-width:700px){.field-split--full-frame img{height:440px}}

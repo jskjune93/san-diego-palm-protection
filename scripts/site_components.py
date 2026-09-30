@@ -179,6 +179,7 @@ def mobile_contact(relative_root: str = "./", residential_primary: bool = False)
 
 def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
          lede: str, body: str, image: str = "Old-Escondido_full-CIDP.jpg",
+         hero_position: str = "center center", hero_position_mobile: str | None = None,
          relative_root: str = "./", extra_schema: dict | None = None,
          publish_extra_schema: bool = False) -> str:
     public = public_credentials()
@@ -216,7 +217,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
 <body>
 {header(relative_root, residential_page)}
 <main id="main">
-  <section class="page-hero" style="--hero-image:url('/{image}')">
+  <section class="page-hero" style="--hero-image:url('/{image}');--hero-position:{escape(hero_position)};--hero-position-mobile:{escape(hero_position_mobile or hero_position)}">
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
     <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div>
   </section>
