@@ -1,4 +1,41 @@
 (() => {
+  // Keep source evidence within this browser tab. Never retain full URLs or searches.
+  const attributionKey = 'sdpp-attribution-v1';
+  const attributionLifetime = 30 * 24 * 60 * 60 * 1000;
+  const sourceLabel = value => /^[a-zA-Z0-9_. -]{1,100}$/.test(value || '') ? value : '';
+  const clickId = value => /^[a-zA-Z0-9_-]{1,256}$/.test(value || '') ? value : '';
+  const sourcePoint = () => {
+    const params = new URLSearchParams(location.search);
+    let referrerHost = '';
+    try { referrerHost = new URL(document.referrer).hostname; } catch { /* Direct or unavailable. */ }
+    const ownHosts = ['www.sandiegopalmprotection.com', 'sandiegopalmprotection.com', location.hostname];
+    if (ownHosts.includes(referrerHost)) referrerHost = '';
+    return {
+      at: new Date().toISOString(),
+      landing_path: /^[a-zA-Z0-9_./-]{1,200}$/.test(location.pathname) ? location.pathname : '/',
+      referrer_host: referrerHost,
+      utm_source: sourceLabel(params.get('utm_source')),
+      utm_medium: sourceLabel(params.get('utm_medium')),
+      utm_campaign: sourceLabel(params.get('utm_campaign')),
+      gclid: clickId(params.get('gclid')),
+      gbraid: clickId(params.get('gbraid')),
+      wbraid: clickId(params.get('wbraid')),
+    };
+  };
+  const currentSource = sourcePoint();
+  let attribution = { first: currentSource, last: currentSource };
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(attributionKey) || 'null');
+    const age = Date.now() - Date.parse(saved?.first?.at);
+    if (saved?.first && saved?.last && age >= 0 && age < attributionLifetime) {
+      attribution = saved;
+      if (currentSource.referrer_host || currentSource.utm_source || currentSource.utm_medium ||
+          currentSource.utm_campaign || currentSource.gclid || currentSource.gbraid || currentSource.wbraid) {
+        attribution.last = currentSource;
+      }
+    }
+  } catch { /* Storage restrictions must never prevent an inquiry. */ }
+  try { sessionStorage.setItem(attributionKey, JSON.stringify(attribution)); } catch { /* Optional storage. */ }
   // Account-owned Google Ads tag. Preview and local visits never send ad events.
   const adsDestination = 'AW-18301751378/Wr8pCK6pu4AdENKg-pZE';
   const adsEnabled = ['www.sandiegopalmprotection.com', 'sandiegopalmprotection.com'].includes(location.hostname);
@@ -95,6 +132,7 @@
         container.dataset.widgetId = widgetId;
 
         let started = false;
+        let pendingSubmission;
         form.addEventListener('focusin', () => {
           if (!started) {
             started = true;
@@ -112,14 +150,19 @@
           button.disabled = true;
           setStatus(form, 'Submitting securely…');
           try {
+            const fields = Object.fromEntries(new FormData(form));
+            const signature = JSON.stringify({ ...fields, 'cf-turnstile-response': '' });
+            if (!pendingSubmission || pendingSubmission.signature !== signature) {
+              pendingSubmission = { signature, id: `${Date.now()}_${crypto.randomUUID().replaceAll('-', '')}` };
+            }
             const response = await fetch(form.action, {
               method: 'POST',
               headers: {
                 Accept: 'application/json',
                 'Content-Type': 'application/json',
-                'X-Idempotency-Key': `${Date.now()}_${crypto.randomUUID().replaceAll('-', '')}`,
+                'X-Idempotency-Key': pendingSubmission.id,
               },
-              body: JSON.stringify(Object.fromEntries(new FormData(form))),
+              body: JSON.stringify({ ...fields, attribution }),
             });
             const result = await response.json();
             if (!response.ok || !result.ok || !result.verified) throw new Error(result.message || 'Delivery could not be confirmed.');
@@ -127,9 +170,10 @@
             recordConversion(result.event);
             if (adsEnabled && ['homeowner-inquiry-delivered', 'organization-inquiry-delivered'].includes(result.event)) {
               // No names, email addresses, phone numbers, or inquiry content are sent.
-              adsEvent('event', 'conversion', { send_to: adsDestination });
+              adsEvent('event', 'conversion', { send_to: adsDestination, transaction_id: result.inquiryId || pendingSubmission.id });
             }
             form.reset();
+            pendingSubmission = null;
             reset();
           } catch (error) {
             setStatus(form, error.message || 'Delivery could not be confirmed. Please use the email link or call or text SDPP.', 'error');

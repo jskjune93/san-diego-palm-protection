@@ -55,7 +55,7 @@ async function htmlRoutes() {
   return [...rootHtml, ...journal].sort();
 }
 
-function localReferences(text) {
+function localReferences(text, includeCssUrls = true) {
   const values = [];
   for (const match of text.matchAll(/(?:src|href|poster)=["']([^"'#]+)["']/gi)) values.push(match[1]);
   for (const match of text.matchAll(/srcset=["']([^"']+)["']/gi)) {
@@ -64,7 +64,8 @@ function localReferences(text) {
       if (value) values.push(value);
     }
   }
-  for (const match of text.matchAll(/url\(["']?([^"')]+)["']?\)/gi)) values.push(match[1]);
+  // JavaScript's new URL(...) is not a CSS asset reference.
+  if (includeCssUrls) for (const match of text.matchAll(/url\(["']?([^"')]+)["']?\)/gi)) values.push(match[1]);
   return values.filter(value =>
     !/^(?:https?:|mailto:|tel:|sms:|data:|javascript:)/i.test(value) &&
     !value.endsWith(".html") && !value.endsWith("/")
@@ -101,7 +102,7 @@ async function main() {
     await copyPublic(target);
     if (/\.(?:css|js)$/i.test(target)) {
       const text = await readFile(target, "utf8");
-      referenceQueue.push(...localReferences(text).map(next => ({ base: path.dirname(target), value: next })));
+      referenceQueue.push(...localReferences(text, target.endsWith('.css')).map(next => ({ base: path.dirname(target), value: next })));
     }
   }
 

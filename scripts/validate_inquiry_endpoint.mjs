@@ -125,6 +125,11 @@ for (const kind of ["homeowner", "organization"]) {
     desired_service: "Palm portfolio walkthrough",
     support_requested: "Palm assessment",
     discovery_source: "Google Maps <test>",
+    discovery_detail: "ChatGPT <details>",
+    attribution: {
+      first: { at: "2026-10-01T12:00:00.000Z", landing_path: "/quarterly-palm-care-san-diego.html", referrer_host: "www.google.com", gclid: "test-click_123", utm_campaign: "north_county" },
+      last: { referrer_host: "evil.example/<script>", landing_path: "/?email=private@example.com", utm_source: "private@example.com", unknown: "private-value", gbraid: "test-braid_456" },
+    },
   }), res, { fetch: async (url, options) => {
     if (url.includes("api.resend.com")) deliveredEmail = JSON.parse(options.body);
     return providerSuccess(url);
@@ -134,6 +139,13 @@ for (const kind of ["homeowner", "organization"]) {
   assert.match(deliveredEmail.html, /Google Maps &lt;test&gt;/);
   assert.doesNotMatch(deliveredEmail.html, /Google Maps <test>/);
   assert.equal(res.payload.discovery_source, undefined);
+  assert.match(deliveredEmail.text, /Inquiry reference: test_/);
+  assert.match(deliveredEmail.text, /first visit — gclid: test-click_123/);
+  assert.match(deliveredEmail.text, /last visit — gbraid: test-braid_456/);
+  assert.match(deliveredEmail.html, /ChatGPT &lt;details&gt;/);
+  assert.doesNotMatch(deliveredEmail.text, /private@example.com|private-value|evil.example/);
+  assert.match(res.payload.inquiryId, /^test_/);
+  assert.equal(res.payload.attribution, undefined);
 }
 
 console.log("Inquiry endpoint validation passed: optional source attribution reaches both inquiry emails safely; Turnstile and provider confirmation still gate verified delivery.");

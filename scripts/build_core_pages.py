@@ -61,8 +61,8 @@ def sapw_visual_guide() -> str:
 
 
 def inquiry_source(prefix: str) -> str:
-    options = ["Google Search", "Google Maps", "ChatGPT or another AI assistant", "Referral", "Social media", "Other"]
-    return f'<div><label for="{prefix}-source">How did you find SDPP? (optional)</label><select id="{prefix}-source" name="discovery_source"><option value="">Select if known</option>' + ''.join(f'<option>{escape(option)}</option>' for option in options) + '</select></div>'
+    options = ["Google Search", "Google ad / Sponsored result", "Google Maps", "ChatGPT or another AI assistant", "Referral", "Social media", "Other", "Not sure"]
+    return f'<div><label for="{prefix}-source">How did you find SDPP? (optional)</label><select id="{prefix}-source" name="discovery_source"><option value="">Select if known</option>' + ''.join(f'<option>{escape(option)}</option>' for option in options) + f'</select></div><div><label for="{prefix}-source-detail">Anything else about how you found me? (optional)</label><input id="{prefix}-source-detail" name="discovery_detail" maxlength="200" placeholder="Search phrase, AI assistant, or referral"></div>'
 
 
 def inquiry_paths() -> str:
@@ -86,7 +86,7 @@ def inquiry_paths() -> str:
       {inquiry_source("home")}
     </div>
     <p class="form-help">Photograph uploads are not enabled. SDPP can request photographs during follow-up.</p>
-    <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
+    <p class="form-help">SDPP uses your information to respond and evaluate the requested service. Your inquiry may include the referring website, landing page, and campaign identifiers to help us understand how you found us.</p>
     <p class="form-help">{explanation}</p>
     <div data-turnstile-container></div>
     <button class="button" type="submit">Submit Homeowner Inquiry</button>
@@ -116,7 +116,7 @@ def inquiry_paths() -> str:
       {inquiry_source("org")}
     </div>
     <p class="form-help">Supporting-file uploads are not enabled. SDPP can request photographs or records during follow-up.</p>
-    <p class="form-help">Information submitted through this form is used to respond to your inquiry and evaluate the requested palm or property service.</p>
+    <p class="form-help">SDPP uses your information to respond and evaluate the requested service. Your inquiry may include the referring website, landing page, and campaign identifiers to help us understand how you found us.</p>
     <p class="form-help">{explanation}</p>
     <div data-turnstile-container></div>
     <button class="button" type="submit">Request a Baseline</button>
@@ -262,7 +262,7 @@ PAGES: dict[str, dict] = {
     },
     "quarterly-palm-care-san-diego.html": {
         "title": "Annual Mature Palm Protection Program San Diego | SDPP",
-        "description": "Four scheduled annual visits with licensed preventive SAPW treatment, visual review, repeat photographs, service records, reminders, and priority response.",
+        "description": "Annual palm protection in Escondido, Poway and North County San Diego. Four visits with preventive SAPW treatment, photos and records. Request an assessment.",
         "eyebrow": "Recurring SAPW protection", "h1": "Annual Mature Palm Protection Program",
         "lede": "I return every three months to treat your palms and check for changes. SDPP keeps the next visit on the calendar.",
         "image": "images/palm-journal/september-treatment-day/september-11-poolside.webp",
@@ -277,7 +277,9 @@ PAGES: dict[str, dict] = {
             ("Home and estate palms", "A straightforward annual relationship for one mature palm or a small group."),
             ("Managed properties", "The same program scaled to an agreed portfolio and efficient service route."),
             ("Priority response", "Program clients receive priority attention when concerning symptoms appear between scheduled visits."),
-        ]), "section-tint")
+        ]), "section-tint") +
+        section("Before the first treatment", "Tell me about the palms you want to protect.", "Start with your city, the number of palms, any visible changes, and the treatment history you know. I review the palm and site before recommending the work and quoting the annual scope.", '<div class="faq-list"><details><summary>Does every palm need the same treatment?</summary><p>No. Species, size, condition, access, irrigation, prior treatment and the product label affect the plan. Four scheduled visits keep the review and service on the calendar; the treatment at each visit must fit the palm and site.</p></details><details><summary>What if the palm changes between visits?</summary><p>Call or text me when you notice a change. Program clients receive priority attention, and we can decide whether the palm needs a visit before its next scheduled treatment. Do not wait for the quarterly visit if the crown changes quickly.</p></details><details><summary>Where do you work?</summary><p>I am based in Escondido and serve North County and selected San Diego County properties. See local palm care in <a href="./palm-care-escondido.html">Escondido</a>, <a href="./palm-care-poway.html">Poway</a> and <a href="./palm-care-rancho-santa-fe.html">Rancho Santa Fe</a>, or send your city with the inquiry.</p></details></div><div class="button-row"><a class="button" data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Request a Palm Assessment</a><a class="button" data-conversion="call" href="tel:2624923135">Call or Text 262-492-3135</a></div>') +
+        section("From recent field work", "See what a treatment visit looks like.", "My September field notes show mature palms and equipment during preventive-treatment visits. They document the work, not a promise that a palm will never decline.", '<p><a class="text-arrow" href="./palm-journal/september-treatment-day.html">See September treatment photographs</a></p><p><a href="./south-american-palm-weevil-treatment-san-diego.html">Read treatment methods, timing and common questions</a> · <a href="./palm-proof-examples.html">View Field Work</a></p>', "section-tint")
     },
     "managed-property-palm-services.html": {
         "title": "Palm Portfolio Stewardship for Managed Properties | SDPP",

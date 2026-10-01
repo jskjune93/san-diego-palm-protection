@@ -23,6 +23,7 @@ const fieldSets = {
       ["Preferred contact", "preferred_contact"],
       ["Timing or urgency", "timing"],
       ["How they found SDPP (self-reported)", "discovery_source"],
+      ["Search or referral detail (self-reported)", "discovery_detail"],
     ],
   },
   organization: {
@@ -44,6 +45,7 @@ const fieldSets = {
       ["Current concern or property objective", "support_requested"],
       ["Timing or procurement context", "timing"],
       ["How they found SDPP (self-reported)", "discovery_source"],
+      ["Search or referral detail (self-reported)", "discovery_detail"],
     ],
   },
 };
@@ -105,18 +107,48 @@ async function verifyTurnstile(token, ip, fetcher) {
   return verification.success === true && ALLOWED_HOSTNAMES.has(verification.hostname);
 }
 
-function emailPayload(kind, data) {
+function attributionRows(attribution) {
+  const rows = [];
+  if (!attribution || typeof attribution !== "object") return rows;
+  const rules = {
+    at: /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/,
+    landing_path: /^\/[a-zA-Z0-9_./-]{0,199}$/,
+    referrer_host: /^(?:[a-zA-Z0-9-]+\.)+[a-zA-Z]{2,63}$/,
+    utm_source: /^[a-zA-Z0-9_. -]{1,100}$/,
+    utm_medium: /^[a-zA-Z0-9_. -]{1,100}$/,
+    utm_campaign: /^[a-zA-Z0-9_. -]{1,100}$/,
+    gclid: /^[a-zA-Z0-9_-]{1,256}$/,
+    gbraid: /^[a-zA-Z0-9_-]{1,256}$/,
+    wbraid: /^[a-zA-Z0-9_-]{1,256}$/,
+  };
+  for (const touch of ["first", "last"]) {
+    const point = attribution[touch];
+    if (!point || typeof point !== "object") continue;
+    for (const [key, pattern] of Object.entries(rules)) {
+      const value = point[key];
+      if (typeof value === "string" && pattern.test(value)) rows.push([`${touch} visit — ${key}`, value]);
+    }
+  }
+  return rows;
+}
+
+function emailPayload(kind, data, inquiryId, attribution) {
   const definition = fieldSets[kind];
-  const rows = definition.fields
-    .map(([label, name]) => `<tr><th align="left" style="padding:6px 12px 6px 0;vertical-align:top">${html(label)}</th><td style="padding:6px 0">${html(data[name]) || "—"}</td></tr>`)
+  const allRows = [
+    ["Inquiry reference", inquiryId],
+    ...definition.fields.map(([label, name]) => [label, data[name]]),
+    ...attributionRows(attribution),
+  ];
+  const rows = allRows
+    .map(([label, value]) => `<tr><th align="left" style="padding:6px 12px 6px 0;vertical-align:top">${html(label)}</th><td style="padding:6px 0">${html(value) || "—"}</td></tr>`)
     .join("");
   return {
     from: process.env.SDPP_INQUIRY_FROM_EMAIL,
     to: [process.env.SDPP_INQUIRY_TO_EMAIL],
     reply_to: data.email,
     subject: `${definition.label} — ${text(data.name || data.contact_name, 100)}`,
-    html: `<h1>${html(definition.label)}</h1><table>${rows}</table><p>Delivered from the verified SDPP website inquiry form.</p>`,
-    text: `${definition.label}\n\n${definition.fields.map(([label, name]) => `${label}: ${text(data[name]) || "—"}`).join("\n")}`,
+    html: `<h1>${html(definition.label)}</h1><table>${rows}</table><p>Delivered from the verified SDPP website inquiry form. Visit metadata is browser-reported source evidence, not proof of ad attribution. Keep the inquiry reference with the appointment and invoice.</p>`,
+    text: `${definition.label}\n\n${allRows.map(([label, value]) => `${label}: ${text(value) || "—"}`).join("\n")}\n\nVisit metadata is browser-reported source evidence, not proof of ad attribution. Keep the inquiry reference with the appointment and invoice.`,
   };
 }
 
@@ -181,7 +213,7 @@ export async function handleInquiry(request, response, dependencies = {}) {
     return json(response, 400, { ok: false, message: "Please refresh the page and try again." });
   }
   try {
-    const delivered = await deliver({ idempotencyKey, email: emailPayload(kind, data) }, fetcher);
+    const delivered = await deliver({ idempotencyKey, email: emailPayload(kind, data, idempotencyKey, body.attribution) }, fetcher);
     if (!delivered) throw new Error("delivery_failed");
   } catch {
     return json(response, 502, { ok: false, message: "Delivery could not be confirmed. Please use the email link or call or text SDPP." });
@@ -189,6 +221,7 @@ export async function handleInquiry(request, response, dependencies = {}) {
   return json(response, 200, {
     ok: true,
     verified: true,
+    inquiryId: idempotencyKey,
     event: definition.event,
     message: "Your inquiry was delivered to SDPP. A copy was not emailed automatically; keep this page for confirmation.",
   });
