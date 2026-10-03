@@ -1192,6 +1192,13 @@
       "source_basis": "Original owner-supplied Pictures library photograph; camera metadata: samsung Galaxy S24, captured 2026:07:26 13:41:10. Source SHA-256 893b0eb2a2a543183440e801a5d19f5246a1a26dff85804c4e7fc90b9ca87dae. Owner explicitly requested publication of quality weevil and damaged-palm photographs on October 1, 2026.",
       "publication_decision": "approved_public",
       "presentation_risk": "Original photographic content retained; resized and optionally cropped for subject emphasis, with camera/location metadata removed. No client identity, diagnosis, treatment outcome, or performed work is asserted."
+    },
+    "images/palm-journal/where-we-care-for-palms-october-2026/sdpp-customer-map-2026-10-03.webp": {
+      "sha256": "6c3f7b20899a6146cdd066aaa442bf2a0b2b42110a9c5d2bffe97b53c5bc8add",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP map rendered from reconciled customer records and public San Diego County GIS boundaries. Owner requested publication October 3, 2026.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Generalized customer locations only; no customer identities or street addresses. Dots do not indicate infestation or treatment outcomes. Public GIS sources credited in article."
     }
   }
 }

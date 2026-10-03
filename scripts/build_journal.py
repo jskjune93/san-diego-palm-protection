@@ -38,6 +38,7 @@ TOPIC_SECTIONS = [
         "title": "Palm Health, Monitoring & Stewardship",
         "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
         "slugs": [
+            "where-we-care-for-palms-october-2026",
             "the-palm-is-only-part-of-the-site",
             "who-owns-your-palm-treatment-company", "local-is-the-point",
             "palm-stewardship-solving-the-whole-problem", "the-palm-record-outlives-the-palm",

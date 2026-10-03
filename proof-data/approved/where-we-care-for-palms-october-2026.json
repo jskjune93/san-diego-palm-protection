@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "artifact_id": "journal-customer-map-2026-10-03",
+  "product_type": "website_proof_excerpt",
+  "artifact_version": 1,
+  "artifact_fingerprint": "9383b9035d117ffbe818ab92e84c972d42d912dca99c09c6059e04bed08bebf1",
+  "approved_fingerprint": "9383b9035d117ffbe818ab92e84c972d42d912dca99c09c6059e04bed08bebf1",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner explicitly requested publication of the customer map to the website journal and GBP, with cutoff date, June opening and prevention message, on October 3, 2026.",
+  "export_method": "Direct sanitized editorial export under current explicit owner instruction; no private customer records exported.",
+  "content": {
+    "title": "Where We Care for Palms: October 2026 Update",
+    "article_source": "journal-data/articles/where-we-care-for-palms-october-2026.html",
+    "scope": "14 approximate customer locations through October 3, 2026. Not an infestation map."
+  },
+  "media": [
+    {
+      "filename": "sdpp-customer-map-2026-10-03.webp",
+      "sha256": "6c3f7b20899a6146cdd066aaa442bf2a0b2b42110a9c5d2bffe97b53c5bc8add",
+      "approved_for_public": true
+    }
+  ]
+}

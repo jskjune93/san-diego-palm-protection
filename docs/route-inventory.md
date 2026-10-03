@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-50 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
+51 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -69,3 +69,5 @@ Local and species pages retain search/discovery roles but point into the canonic
 SAPW visual exhibit: `/sapw.html` is the original SDPP photo and film page. The apex and www `southamericanpalmweevil.com` roots rewrite to it without changing the visitor-facing domain. Existing SDPP links and the SDPP canonical URL remain intact.
 
 SAPW domain dispatch uses explicit Vercel routes before the filesystem phase. Ordinary rewrites are evaluated after static index.html and therefore do not override the existing root document. Existing redirect rules are retained as equivalent ordered routes.
+
+| `/palm-journal/where-we-care-for-palms-october-2026.html` | created | Dated customer reach update, preventive-care education, and assessment inquiry |
