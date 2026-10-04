@@ -5,7 +5,7 @@ from pathlib import Path
 import json
 
 from sapw_gallery import render as render_sapw_gallery
-from site_components import ROOT, BASE_URL, page, three_pillars, credentials, compact_credentials, INQUIRY
+from site_components import ROOT, BASE_URL, page, three_pillars, credentials, compact_credentials, INQUIRY, customer_map
 
 UFMP_RESOURCE = json.loads((ROOT / "site-config" / "ufmp_resource.json").read_text(encoding="utf-8"))
 POSITIONING = json.loads((ROOT / "site-config" / "positioning.json").read_text(encoding="utf-8"))
@@ -547,7 +547,7 @@ def generic_body(name: str) -> str:
 
 def write_pages() -> None:
     retired = {"managed-property-palm-services.html", "residential-palm-assessment.html"}
-    pages = {name: data for name, data in PAGES.items() if name not in retired}
+    pages = {name: dict(data) for name, data in PAGES.items() if name not in retired}
     for filename, (h1, eyebrow, lede, image) in GENERIC.items():
         pages[filename] = {
             "title": f"{h1} | SDPP",
@@ -556,6 +556,7 @@ def write_pages() -> None:
             "body": generic_body(filename),
         }
     hero_images = [data["image"] for data in pages.values()]
+    pages["index.html"]["body"] += customer_map()
     duplicate_hero_images = sorted({image for image in hero_images if hero_images.count(image) > 1})
     if duplicate_hero_images:
         raise SystemExit(f"Core page hero images must be unique: {', '.join(duplicate_hero_images)}")

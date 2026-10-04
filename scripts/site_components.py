@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from html import escape
+from hashlib import sha256
 from pathlib import Path
 import json
 
@@ -17,7 +18,20 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.sandiegopalmprotection.com"
 PHONE = "262-492-3135"
 EMAIL = "sandiegopalmprotection@gmail.com"
+CUSTOMER_MAP = "images/palm-journal/where-we-care-for-palms-october-2026/sdpp-customer-map-2026-10-03.webp"
 INQUIRY = json.loads((ROOT / "site-config" / "inquiry.json").read_text(encoding="utf-8"))
+
+
+def asset_version(path: str) -> str:
+    return sha256((ROOT / path).read_bytes()).hexdigest()[:12]
+
+
+def customer_map(relative_root: str = "./") -> str:
+    """Reuse the existing maintained map; never create a per-page copy."""
+    return f'''<section class="section customer-map-section" id="sdpp-customer-map" aria-labelledby="customer-map-heading">
+  <div class="section-intro"><p class="eyebrow">SDPP around the county</p><h2 id="customer-map-heading">Where I care for palms.</h2><p>This map follows the customer locations in my treatment records. I keep it updated as the work grows.</p></div>
+  <figure><a href="{relative_root}{CUSTOMER_MAP}" aria-label="View the current SDPP customer map at full size"><img src="{relative_root}{CUSTOMER_MAP}" alt="San Diego County map showing approximate SDPP customer treatment locations; the map displays its latest update date and location count" width="2000" height="2000" loading="lazy" decoding="async"></a><figcaption>One yellow dot per customer location, with nearby dots separated for clarity. Treatment locations do not by themselves establish confirmed palm weevil presence. Customer names and street addresses are omitted.</figcaption></figure>
+</section>'''
 
 
 def asset_prefix(relative_root: str) -> str:
@@ -71,7 +85,7 @@ def head(title: str, description: str, path: str, image: str = "Old-Escondido_fu
   <meta name="twitter:description" content="{escape(description)}">
   <meta name="twitter:image" content="{image_url}">
   <link rel="icon" href="{relative_root}logo.png" type="image/png">
-  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
+  <link rel="stylesheet" href="{relative_root}site-assets/site.css?v={asset_version('site-assets/site.css')}">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
   <script type="application/ld+json">{json.dumps(schemas, ensure_ascii=False)}</script>
   <!-- SDPP analytics integration point: existing measurement configuration is preserved; no identifier is invented here. -->"""
@@ -163,7 +177,7 @@ def footer(relative_root: str = "./", residential_primary: bool = False) -> str:
   </div>
   <p class="footer-legal">{licensing_statement}</p>
 </footer>
-<script src="{relative_root}site-assets/site.js" defer></script>
+<script src="{relative_root}site-assets/site.js?v={asset_version('site-assets/site.js')}" defer></script>
 {mobile_contact(relative_root, residential_primary)}"""
 
 

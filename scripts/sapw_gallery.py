@@ -2,7 +2,7 @@
 import json
 from html import escape
 from pathlib import Path
-from site_components import head, BASE_URL
+from site_components import head, BASE_URL, customer_map, asset_version
 
 ROOT = Path(__file__).resolve().parents[1]
 MEDIA = "images/palm-journal/when-sapw-became-local/"
@@ -27,6 +27,7 @@ def render():
 </head>
 <body class="sapw-raw">
 <div class="sapw-raw-titles"><h1 class="sapw-raw-heading">SOUTH AMERICAN PALM WEEVIL.</h1><p class="sapw-raw-subheading">CANARY ISLAND DATE PALM DESTRUCTION.</p></div>
+{customer_map()}
 <main id="main" aria-label="Palm weevil and palm photographs and video">
 {photo(GALLERY[0]["src"], GALLERY[0]["alt"], eager=True)}
 <video controls playsinline preload="none" poster="./{MEDIA}05-june-26-adult-on-trunk-poster.jpg" aria-label="Palm weevil moving on a palm trunk"><source src="./{MEDIA}05-june-26-adult-on-trunk.mp4" type="video/mp4"></video>
@@ -34,6 +35,6 @@ def render():
 </main>
 <footer class="sapw-raw-footer"><a href="{BASE_URL}/">SDPP</a><span>© 2026 SDPP</span></footer>
 <dialog class="sapw-lightbox" aria-label="Full photograph"><button type="button" class="sapw-close" aria-label="Close full photograph">×</button><img alt="Selected full photograph"></dialog>
-<script src="./site-assets/site.js" defer></script>
+<script src="./site-assets/site.js?v={asset_version('site-assets/site.js')}" defer></script>
 </body>
 </html>'''

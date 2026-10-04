@@ -1,5 +1,7 @@
 # SDPP website guardrails
 
+- Standing owner instruction (2026-10-04): preserve the consolidated SDPP ecosystem at `C:\Users\jskju\Pictures\SDPP`; read its existing `START HERE.txt`. Update authoritative existing documents, workbook and county map in place. Do not scatter new folders, duplicate master lists or create replacement maps for routine updates. The master treatment workbook is `Tracker\SDPP-Master-Treatment-Schedule.xlsx` under that SDPP root. Reuse one maintained map across both domain homepages and existing SDPP placements. Keep confirmed palm-weevil presence distinct from palms treated and preserve existing privacy/evidence boundaries.
+
 - Keep public copy in John Krause's plainspoken owner-operator voice. Prefer what John looks at, photographs, writes, compares, or helps the owner decide over abstract frameworks, symmetrical slogans, institutional filler, and repeated service-noun lists.
 - Preserve the two commercial engagement paths: Palm Portfolio Baseline and Annual Palm Stewardship Program. Preserve the four capability pillars: Palm Portfolio Stewardship; Protection & Treatment; Documentation & Planning; Response, Removal & Renewal Coordination. Do not present the capabilities as packages.
 - Keep the public identity owner-led, local, and field-service oriented. Lead with mature palm documentation, monitoring, protection planning, sourcing, coordination, and decline response—not records consulting or internal proof architecture.

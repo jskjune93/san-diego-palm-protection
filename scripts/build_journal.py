@@ -6,7 +6,7 @@ import json
 import re
 import xml.etree.ElementTree as ET
 
-from site_components import header as global_header, footer as global_footer
+from site_components import header as global_header, footer as global_footer, asset_version
 from business_credentials import public_credentials
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -163,7 +163,7 @@ def shared_head(title: str, description: str, canonical: str, og_image: str, ext
 
 def _legacy_styles_reference(relative_root: str = "./") -> str:
     return f'''  <link rel="icon" href="{relative_root}logo.png" type="image/png">
-  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
+  <link rel="stylesheet" href="{relative_root}site-assets/site.css?v={asset_version('site-assets/site.css')}">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
   <style>
     .hero {{ background: #efe7d8; padding: 38px 5vw 30px; }}
@@ -225,7 +225,7 @@ def _legacy_styles_reference(relative_root: str = "./") -> str:
 
 def styles(relative_root: str = "./") -> str:
     return f'''  <link rel="icon" href="{relative_root}logo.png" type="image/png">
-  <link rel="stylesheet" href="{relative_root}site-assets/site.css">
+  <link rel="stylesheet" href="{relative_root}site-assets/site.css?v={asset_version('site-assets/site.css')}">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
   <link rel="stylesheet" href="{relative_root}site-assets/journal.css">'''
 

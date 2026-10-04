@@ -1,4 +1,20 @@
 (() => {
+  // Every placement uses the original map asset. Refresh open pages after a
+  // published map update; no customer workbook or private data reaches clients.
+  const maintainedMaps = document.querySelectorAll('img[src*="sdpp-customer-map-2026-10-03.webp"]');
+  if (maintainedMaps.length) {
+    const refreshMaps = () => {
+      if (document.visibilityState === 'hidden') return;
+      maintainedMaps.forEach(img => {
+        const next = new URL(img.src, location.href);
+        next.searchParams.set('map_refresh', String(Math.floor(Date.now() / 300000)));
+        if (img.src !== next.href) img.src = next.href;
+      });
+    };
+    refreshMaps();
+    setInterval(refreshMaps, 300000);
+    document.addEventListener('visibilitychange', refreshMaps);
+  }
   // Keep source evidence within this browser tab. Never retain full URLs or searches.
   const attributionKey = 'sdpp-attribution-v1';
   const attributionLifetime = 30 * 24 * 60 * 60 * 1000;

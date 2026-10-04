@@ -3,6 +3,11 @@
   "outputDirectory": "dist",
   "routes": [
     {
+      "src": "^/images/palm-journal/where-we-care-for-palms-october-2026/sdpp-customer-map-2026-10-03.webp$",
+      "headers": { "Cache-Control": "public, max-age=0, must-revalidate" },
+      "continue": true
+    },
+    {
       "src": "^/managed-property-palm-services.html$",
       "status": 308,
       "headers": {
