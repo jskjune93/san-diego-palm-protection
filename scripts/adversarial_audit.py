@@ -37,12 +37,21 @@ def main() -> int:
         parser = VisibleText(); parser.feed(raw)
         visible = " ".join(parser.parts)
         lower = raw.lower()
-        for label in NAV_LABELS:
-            if label not in visible:
-                errors.append(f"{rel}: canonical navigation missing {label}")
+        # The separately published photo exhibit deliberately has minimal chrome.
+        # See docs/route-inventory.md and the original exhibit release (74622af).
+        if rel == "sapw.html":
+            for marker in ('class="sapw-raw"', 'class="sapw-raw-footer"',
+                           'href="https://www.sandiegopalmprotection.com/"',
+                           'data-sapw-photo', '<video controls'):
+                if marker not in raw:
+                    errors.append(f"{rel}: exhibit or SDPP return link missing: {marker}")
+        else:
+            for label in NAV_LABELS:
+                if label not in visible:
+                    errors.append(f"{rel}: canonical navigation missing {label}")
         if "site-assets/site.css" not in raw or "site-assets/site.js" not in raw:
             errors.append(f"{rel}: global design/navigation assets missing")
-        if len(re.findall(r'<nav[^>]+aria-label="Primary navigation"', raw)) != 1:
+        if rel != "sapw.html" and len(re.findall(r'<nav[^>]+aria-label="Primary navigation"', raw)) != 1:
             errors.append(f"{rel}: expected one primary navigation")
         for term in PRIVATE_TERMS:
             if term in lower and rel != "palm-proof-examples.html":

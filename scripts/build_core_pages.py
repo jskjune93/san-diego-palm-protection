@@ -181,7 +181,7 @@ PAGES: dict[str, dict] = {
         "description": "Owner-led South American palm weevil prevention, licensed treatment, and recurring care for valuable mature palms in San Diego County.",
         "eyebrow": "South American palm weevil specialist · Old Escondido",
         "h1": "Preventive Treatment for San Diego’s Most Valuable Palms",
-        "lede": "I’m John Krause, based in Old Escondido. I specialize in South American palm weevil (SAPW) prevention and licensed treatment, with a primary focus on mature Canary Island date palms across San Diego County.",
+        "lede": POSITIONING["homepage_supporting_copy"],
         "image": "images/palm-journal/the-palm-is-only-part-of-the-site/september-property-and-palm.webp",
         "hero_position": "center 8%",
         "hero_position_mobile": "62% 36%",
@@ -191,7 +191,7 @@ PAGES: dict[str, dict] = {
     },
     "about.html": {
         "title": "About San Diego Palm Protection | Owner-Led Palm Services",
-        "description": "Meet John Krause, the owner-led specialist providing palm stewardship for managed properties and important residential palms in San Diego County.",
+        "description": "Meet John Krause, San Diego’s South American palm weevil specialist, focused on prevention and licensed treatment for mature Canary Island date palms.",
         "eyebrow": "About San Diego Palm Protection",
         "h1": "I built SDPP to protect the palms around me.",
         "lede": "SDPP began after South American palm weevil activity and palm loss reached my own Old Escondido property.",
@@ -207,7 +207,7 @@ PAGES: dict[str, dict] = {
   <div class="about-john-copy">
     <p>I started SDPP after confronting South American palm weevil activity and palm loss on my own Old Escondido property. That experience made the threat very real to me&mdash;and made me look more closely at how many mature palms across our neighborhoods could be lost without earlier attention.</p>
     <p>Wisconsin native with an Environmental Science B.S. from the University of Minnesota and time in the Naval Service.</p>
-    <p>Today, based in Old Escondido, I specialize in protecting mature palms throughout San Diego County. I visit your property, carry out the treatment, keep the photographs and service records, and answer your questions between visits.</p>
+    <p>Today, based in Old Escondido, I specialize in South American palm weevil prevention and licensed treatment, with a primary focus on mature Canary Island date palms throughout San Diego County. I visit your property, carry out the treatment, keep the photographs and service records, and answer your questions between visits.</p>
   </div>
 </div>
 </div>''') +
@@ -473,9 +473,9 @@ PAGES: dict[str, dict] = {
 GENERIC = {
     "canary-island-date-palm-care-san-diego.html": ("Canary Island Date Palm Care & Treatment in San Diego", "Species pathway", "Canary Island date palm assessment, treatment, recurring care, nutrition and irrigation review, preservation planning, and decline response in San Diego.", "mansion_healthy_cidp_poway_three.jpg"),
     "cidp-risk-checklist.html": ("Canary Island Date Palm Risk Checklist", "Educational checklist", "A practical observation checklist to prepare for an assessment without substituting a diagnosis or safety evaluation.", "poway-what-does-sapw-look-like-cidp.jpg"),
-    "palm-care-escondido.html": ("Palm Care & Treatment in Escondido", "Local service pathway", "Palm assessment, treatment, recurring care, preservation, and managed-property support from an owner-led specialist based in Old Escondido.", "mature-cidp-old-escondido-san-diego-palm-protection.jpg"),
-    "palm-care-poway.html": ("Palm Care & Treatment in Poway", "Local service pathway", "Palm assessment, treatment, recurring care, and preservation planning for residential, estate, and managed properties in Poway.", "lake-poway-1-palm-san-diego-palm-protection.jpg"),
-    "palm-care-rancho-santa-fe.html": ("Palm Care & Treatment in Rancho Santa Fe", "Local service pathway", "Discreet palm assessment, treatment, recurring stewardship, and preservation planning for Rancho Santa Fe estates and managed properties.", "healthy-canary-island-date-palm-in-rancho-santa-fe-san-diego-palm-protection.jpg"),
+    "palm-care-escondido.html": ("Palm Care & Treatment in Escondido", "Local service pathway", "South American palm weevil prevention and licensed treatment from an owner-led specialist based in Old Escondido, with a primary focus on mature Canary Island date palms.", "mature-cidp-old-escondido-san-diego-palm-protection.jpg"),
+    "palm-care-poway.html": ("Palm Care & Treatment in Poway", "Local service pathway", "South American palm weevil prevention, licensed treatment, and recurring care in Poway, with a primary focus on mature Canary Island date palms.", "lake-poway-1-palm-san-diego-palm-protection.jpg"),
+    "palm-care-rancho-santa-fe.html": ("Palm Care & Treatment in Rancho Santa Fe", "Local service pathway", "South American palm weevil prevention and licensed treatment for Rancho Santa Fe estates and managed properties, with a primary focus on mature Canary Island date palms.", "healthy-canary-island-date-palm-in-rancho-santa-fe-san-diego-palm-protection.jpg"),
     "palm-faq-san-diego.html": ("Palm Care, Treatment & Assessment FAQ", "Education & decision support", "Answers about palm assessments, treatment, monitoring, reporting, managed properties, visible decline, service limits, and next steps in San Diego.", "journal-overview.jpg"),
     "palm-sourcing-installation.html": ("Palm Sourcing, Installation & Replacement Planning", "Response, Removal & Replacement", "Replacement planning connects site constraints, appropriate selection, sourcing questions, installation responsibilities, baseline documentation, and establishment monitoring.", "bismarck-specimen-escondido-palm-san-diego-palm-protection.jpg"),
     "specimen-palms-cycads.html": ("Specimen Palms & Cycads", "Replacement planning", "Explore significant palm and cycad landscape possibilities with realistic site, sourcing, installation, documentation, and establishment considerations.", "Bismarck.jpg"),
