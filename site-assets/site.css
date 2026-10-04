@@ -69,3 +69,18 @@ form{max-width:900px}fieldset{border:1px solid var(--line);padding:22px;margin:0
 .sapw-raw .sapw-raw-heading{font-size:clamp(12px,4.9vw,56px)}
 .sapw-raw .sapw-raw-subheading{font-size:clamp(11px,3.5vw,40px);margin-top:6px}
 .customer-map-section figure{margin:0 auto;max-width:960px}.customer-map-section figure img{display:block;width:100%;height:auto}.customer-map-section figcaption{font-size:.9rem;line-height:1.6;margin-top:14px;color:var(--muted)}.sapw-raw .customer-map-section{background:#f7f6ee;color:#183e30;max-width:none;margin:0;padding:40px max(16px,calc((100vw - 1100px)/2))}.sapw-raw .customer-map-section .section-intro{margin-bottom:20px}.sapw-raw .customer-map-section h2{color:#183e30}.sapw-raw .customer-map-section figcaption{color:#60736b}
+
+/* Give homepage imagery more room while retaining readable text measures. */
+@media(min-width:981px){
+.homepage-content>.section{padding-top:48px;padding-bottom:48px;max-width:1480px}
+.homepage-content>.gallery-section{max-width:none;padding-left:max(24px,calc((100% - 1432px)/2));padding-right:max(24px,calc((100% - 1432px)/2))}
+.homepage-content .field-split--full-frame{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:40px;align-items:center}
+.homepage-content .field-split--full-frame figure{background:transparent}
+.homepage-content .field-split--full-frame img{height:560px;background:transparent}
+.homepage-content .luxury-copy{max-width:68ch}
+.homepage-content>.statement-section{max-width:none;text-align:left;padding-left:max(24px,calc((100% - 1432px)/2));padding-right:max(24px,calc((100% - 1432px)/2))}
+.homepage-content>.statement-section .section-intro{margin-left:0;margin-right:0}
+.homepage-content>.statement-section .section-intro p{margin-left:0;margin-right:0}
+.homepage-content>.statement-section .garden-note{margin-top:18px}
+.homepage-content .customer-map-section figure{max-width:1200px}
+}

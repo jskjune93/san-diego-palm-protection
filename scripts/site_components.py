@@ -230,7 +230,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
 </head>
 <body>
 {header(relative_root, residential_page)}
-<main id="main">
+<main id="main"{' class="homepage-content"' if filename == 'index.html' else ''}>
   <section class="page-hero" style="--hero-image:url('/{image}');--hero-position:{escape(hero_position)};--hero-position-mobile:{escape(hero_position_mobile or hero_position)}">
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
     <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div>
