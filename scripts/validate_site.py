@@ -280,7 +280,7 @@ def main() -> int:
     homepage_text, homepage_parser = pages[(ROOT / "index.html").resolve()]
     for required_pillar in (
         "Preventive SAPW treatment",
-        "licensed preventive treatment",
+        "SAPW) prevention and licensed treatment",
         "mature Canary Island date palms",
         "The landscapes worth protecting.",
     ):

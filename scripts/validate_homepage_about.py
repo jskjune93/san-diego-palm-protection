@@ -44,7 +44,7 @@ def main() -> int:
         errors.append("homepage must not display the detailed credential-panel service statement")
     for scoped_fragment in (
         "Preventive Treatment for San Diego’s Most Valuable Palms",
-        "licensed preventive treatment",
+        "SAPW) prevention and licensed treatment",
         "mature Canary Island date palms",
         "The landscapes worth protecting.",
         "San Diego Botanic Garden called. I was there the next day.",
