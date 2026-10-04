@@ -2,9 +2,9 @@
   "schema_version": 1,
   "artifact_id": "journal-customer-map-2026-10-03",
   "product_type": "website_proof_excerpt",
-  "artifact_version": 4,
-  "artifact_fingerprint": "ad78b804cfd87a90e0d2a090ca222789d6e1a9a0c17b41f2dbc6b755512290c0",
-  "approved_fingerprint": "ad78b804cfd87a90e0d2a090ca222789d6e1a9a0c17b41f2dbc6b755512290c0",
+  "artifact_version": 5,
+  "artifact_fingerprint": "62df32cc82739f2607db9c21dbc600dd314be146d45a37c8fa5a7d1465ebe19f",
+  "approved_fingerprint": "62df32cc82739f2607db9c21dbc600dd314be146d45a37c8fa5a7d1465ebe19f",
   "status": "approved",
   "publication_approval": "approved",
   "privacy": "sanitized",
@@ -13,14 +13,14 @@
   "approval_basis": "Owner instructed on October 4, 2026 to maintain the original map in place, update it from the master treatment list, and publish the same sanitized map across both homepages and existing SDPP placements.",
   "export_method": "Direct sanitized editorial export under current explicit owner instruction; no private customer records exported.",
   "content": {
-    "title": "Where We Care for Palms: October 2026 Update",
+    "title": "Where We Treat for Palm Weevil in San Diego County",
     "article_source": "journal-data/articles/where-we-care-for-palms-october-2026.html",
     "scope": "14 approximate customer locations. Continuing treatment-location map; no infestation confirmation inferred from treatment."
   },
   "media": [
     {
       "filename": "sdpp-customer-map-2026-10-03.webp",
-      "sha256": "8c596c0f7f81c1b9d0950cbc3373d9f6c015b06145fb57199cc08878d94c7e60",
+      "sha256": "972f1ed94c946cbd4d7c92eb1c90292051dc273527a024df9d0c72b7209299b8",
       "approved_for_public": true
     }
   ]

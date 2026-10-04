@@ -29,8 +29,8 @@ def asset_version(path: str) -> str:
 def customer_map(relative_root: str = "./") -> str:
     """Reuse the existing maintained map; never create a per-page copy."""
     return f'''<section class="section customer-map-section" id="sdpp-customer-map" aria-labelledby="customer-map-heading">
-  <div class="section-intro"><p class="eyebrow">SDPP around the county</p><h2 id="customer-map-heading">Where I care for palms.</h2><p>Our growing treatment footprint across San Diego County. SDPP officially opened in June 2026. This map includes our early customer work and is updated as new treatment locations are recorded and published.</p></div>
-  <figure><a href="{relative_root}{CUSTOMER_MAP}" aria-label="View the current SDPP customer map at full size"><img src="{relative_root}{CUSTOMER_MAP}" alt="San Diego County map showing approximate SDPP customer treatment locations; the map displays its latest update date and location count" width="2000" height="2000" loading="lazy" decoding="async"></a><figcaption>One yellow dot per customer location, with nearby dots separated for clarity. Treatment locations do not by themselves establish confirmed palm weevil presence. Customer names and street addresses are omitted.</figcaption></figure>
+  <div class="section-intro"><h2 id="customer-map-heading">Where we treat for palm weevil</h2><p>San Diego County</p></div>
+  <figure><a href="{relative_root}{CUSTOMER_MAP}" aria-label="View the SDPP treatment map at full size"><img src="{relative_root}{CUSTOMER_MAP}" alt="San Diego County map with yellow dots showing SDPP palm weevil treatment locations" width="2000" height="1440" loading="lazy" decoding="async"></a></figure>
 </section>'''
 
 
