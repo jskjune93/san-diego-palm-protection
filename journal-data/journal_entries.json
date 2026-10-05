@@ -1,5 +1,31 @@
 [
   {
+    "slug": "do-i-need-to-spray-the-crown",
+    "title": "Do I Need to Spray the Crown?",
+    "date": "2026-10-05",
+    "date_label": "San Diego County | October 5, 2026",
+    "location": "San Diego County",
+    "category": "Protection & Treatment",
+    "topic": "The role of crown and canopy treatments in preventive South American palm weevil management for Canary Island date palms",
+    "excerpt": "Crown sprays can be useful, but they are not a substitute for systemic protection. Here is how I explain the difference to owners of mature Canary Island date palms.",
+    "page": true,
+    "substantial": true,
+    "review": "Owner-requested treatment explainer grounded in current UC Riverside and UC Agriculture and Natural Resources guidance; distinguishes contact crown sprays, systemic crown drenches and systemic preventive treatment without prescribing a product or rate.",
+    "related": [
+      "september-treatment-day",
+      "i-have-seen-this-pattern-before",
+      "when-sapw-became-local"
+    ],
+    "legacy_anchor": "do-i-need-to-spray-the-crown",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/do-i-need-to-spray-the-crown.html",
+    "primary_image": "./images/palm-journal/the-palm-is-only-part-of-the-site/september-complete-crown.webp",
+    "primary_image_alt": "Complete crown of a mature Canary Island date palm photographed during a September SDPP field visit",
+    "gallery_images": [],
+    "classification": "Protection & Treatment",
+    "modified_date": "2026-10-05"
+  },
+  {
     "slug": "where-we-care-for-palms-october-2026",
     "title": "Where We Treat for Palm Weevil in San Diego County",
     "date": "2026-10-03",

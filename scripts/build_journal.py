@@ -28,7 +28,7 @@ TOPIC_SECTIONS = [
         "title": "South American Palm Weevil & Treatment",
         "description": "What the local threat looks like, why early action matters, and how treatment and monitoring fit together.",
         "slugs": [
-            "i-have-seen-this-pattern-before", "september-treatment-day", "when-sapw-became-local",
+            "do-i-need-to-spray-the-crown", "i-have-seen-this-pattern-before", "september-treatment-day", "when-sapw-became-local",
             "monitoring-mature-cidp-after-palm-weevil-activity", "old-escondido-adult-sapw-declining-cidp",
             "old-escondido-palm-weevils",
         ],

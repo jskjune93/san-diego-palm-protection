@@ -17,6 +17,7 @@
 | `/palm-journal/cidp-assessment-local-palm-health-concerns.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/classic-old-escondido-canary-island-date-palm.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
 | `/palm-journal/documented-loss/` | restructured | Confirmed-loss collection with attribution boundaries |
+| `/palm-journal/do-i-need-to-spray-the-crown.html` | created | Palm Journal treatment education: systemic protection and the limited preventive role of crown spraying |
 | `/palm-journal/grand-ave-cidp.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
 | `/palm-journal/grand-ave-old-escondido.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/healthy-palm-growth.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |

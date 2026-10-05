@@ -76,7 +76,7 @@ async function main() {
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
   const routes = await htmlRoutes();
-  if (routes.length !== 51) throw new Error(`Expected 51 HTML routes after adding the new Palm Journal article, found ${routes.length}`);
+  if (routes.length !== 52) throw new Error(`Expected 52 HTML routes after adding the crown-treatment Palm Journal article, found ${routes.length}`);
 
   const referenceQueue = [];
   for (const route of routes) {
