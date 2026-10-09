@@ -22,11 +22,12 @@ def render():
     return f'''<!doctype html>
 <html lang="en">
 <head>
-{head("SAPW & CIDP Photos | South American Palm Weevil | SDPP", "Original SAPW (South American palm weevil) and CIDP (Canary Island date palm) photographs, crown decline and field video from San Diego Palm Protection.", "sapw.html", adult, schema_type="ImageGallery")}
+{head("SAPW & Palm Photos | South American Palm Weevil | SDPP", "Original SAPW photographs, palm decline, and San Diego field video, with host guidance for Canary Island date, Chilean wine, and Bismarck palms.", "sapw.html", adult, schema_type="ImageGallery")}
 <meta name="robots" content="index,follow,max-image-preview:large">
 </head>
 <body class="sapw-raw">
 <div class="sapw-raw-titles"><h1 class="sapw-raw-heading">SOUTH AMERICAN PALM WEEVIL.</h1><p class="sapw-raw-subheading">CANARY ISLAND DATE PALM DESTRUCTION.</p></div>
+<p class="sapw-raw-host-note">Canary Island date palms remain the primary local target. Chilean wine and Bismarck palms are confirmed California hosts too. <a href="./south-american-palm-weevil-treatment-san-diego.html">See prevention and treatment.</a></p>
 <main id="main" aria-label="Palm weevil and palm photographs and video">
 {photo(GALLERY[0]["src"], GALLERY[0]["alt"], eager=True)}
 <video controls playsinline preload="none" poster="./{MEDIA}05-june-26-adult-on-trunk-poster.jpg" aria-label="Palm weevil moving on a palm trunk"><source src="./{MEDIA}05-june-26-adult-on-trunk.mp4" type="video/mp4"></video>

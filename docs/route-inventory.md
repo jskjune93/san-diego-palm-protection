@@ -53,7 +53,7 @@
 | `/report-a-palm.html` | restructured | Permissioned private observation handoff |
 | `/sapw.html` | visual exhibit | Original SAPW and CIDP photo and film evidence, with an SDPP return link |
 | `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Treatment-specific discovery route into canonical protection pathway |
-| `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |
+| `/specimen-palms-cycads.html` | restructured | High-value Canary Island date, Chilean wine, and Bismarck palm protection and replacement education |
 | `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
 
 ## Permanent redirects

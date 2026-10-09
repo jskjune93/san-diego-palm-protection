@@ -45,7 +45,8 @@ def main() -> int:
     for scoped_fragment in (
         "Preventive Treatment for San Diego’s Most Valuable Palms",
         "SAPW) prevention and licensed treatment",
-        "mature Canary Island date palms",
+        "Canary Island date palms first. Chilean wine and Bismarck palms belong in the plan.",
+        "Bismarck palm",
         "The landscapes worth protecting.",
         "San Diego Botanic Garden called. I was there the next day.",
         "active South American palm weevil infestation",

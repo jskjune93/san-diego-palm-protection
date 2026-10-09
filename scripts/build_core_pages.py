@@ -24,6 +24,20 @@ def process(items: list[tuple[str, str]]) -> str:
     return '<div class="process">' + "".join(f'<div><h3>{escape(h)}</h3><p>{escape(p)}</p></div>' for h, p in items) + "</div>"
 
 
+def priority_palms() -> str:
+    return section(
+        "Three palms I prioritize",
+        "Canary Island date palms first. Chilean wine and Bismarck palms belong in the plan.",
+        "Canary Island date palms remain the primary local target. Chilean wine palms and Bismarck palms are also confirmed California hosts, and their value and slow replacement make a preventive review worth discussing.",
+        cards([
+            ("Canary Island date palm", "The headline species for SDPP prevention and treatment because SAPW attacks it most heavily in San Diego."),
+            ("Chilean wine palm", "A slow-growing specimen palm already lost to SAPW in San Diego and worth protecting before visible decline."),
+            ("Bismarck palm", "A high-value specimen and confirmed California SAPW host that should not be left out of a property protection plan."),
+        ]) + '<p class="section-proof-link"><a href="https://www.ucanr.edu/site/south-american-palm-weevil/hosts">Review the University of California host list</a></p>',
+        "section-tint",
+    )
+
+
 def commercial_engagement_paths() -> str:
     return '''<section class="section section-tint commercial-engagements" aria-labelledby="commercial-engagements-heading">
   <div class="section-intro"><p class="eyebrow">Two engagement paths</p><h2 id="commercial-engagements-heading">Start with a baseline or build the annual relationship.</h2><p>A property can begin with a defined record before deciding on recurring stewardship. Standardize the stewardship system; customize the property scope.</p></div>
@@ -178,7 +192,7 @@ def approved_ufmp_resource() -> str:
 PAGES: dict[str, dict] = {
     "index.html": {
         "title": "Palm Weevil Prevention & Licensed Palm Treatment San Diego | SDPP",
-        "description": "Owner-led South American palm weevil prevention, licensed treatment, and recurring care for valuable mature palms in San Diego County.",
+        "description": "Owner-led South American palm weevil prevention and licensed treatment for high-value Canary Island date, Chilean wine, and Bismarck palms in San Diego County.",
         "eyebrow": "South American palm weevil specialist · Old Escondido",
         "h1": "Preventive Treatment for San Diego’s Most Valuable Palms",
         "lede": POSITIONING["homepage_supporting_copy"],
@@ -186,12 +200,13 @@ PAGES: dict[str, dict] = {
         "hero_position": "center 8%",
         "hero_position_mobile": "62% 36%",
         "body": section("Annual Mature Palm Protection Program", "Four scheduled visits. One year of protection.", "SAPW can advance inside a palm before severe crown decline is visible. SDPP handles the recurring preventive-treatment schedule so protection does not depend on the owner remembering the next visit.", '<div class="field-split field-split--full-frame"><figure><img src="./images/palm-journal/september-treatment-day/poolside-treatment.webp" alt="Mature Canary Island date palm during an SDPP preventive-treatment visit at a San Diego County property" loading="lazy" decoding="async"><figcaption class="image-caption">A mature palm during a scheduled SDPP treatment visit.</figcaption></figure><div class="luxury-copy"><p class="display-line">Protect the palm while there is still time.</p><ul class="clean-list"><li>Four scheduled visits per year</li><li>Licensed preventive SAPW treatment</li><li>Visual inspection, repeat photographs, and service records</li><li>SDPP reminders and priority response when symptoms appear</li><li>Direct service from owner and Qualified Applicator John Krause</li></ul><a class="text-arrow" href="./quarterly-palm-care-san-diego.html">See annual protection</a></div></div>') +
+        priority_palms() +
         section("Urgent response", "San Diego Botanic Garden called. I was there the next day.", "SDPP responded to an active South American palm weevil infestation with licensed protective treatment for high-value specimens, including Chilean wine palms, Canary Island date palms, and Sylvester palms.", '<p class="garden-note">Urgent, owner-led care for palms that matter.</p>', "statement-section") +
-        section("Palm landscapes", "The landscapes worth protecting.", "My work also includes Chilean wine palms and other significant specimens in private landscapes and botanical collections. These photographs show recent palms and treatment visits across San Diego County.", '<div class="visual-gallery" aria-label="Palm landscape gallery"><figure class="visual-gallery__feature"><img src="./images/palm-journal/september-treatment-day/residential-palms.webp" alt="Mature Canary Island date palms framing a San Diego County residence during an SDPP treatment visit" loading="lazy" decoding="async"></figure><figure><img src="./images/palm-journal/the-palm-is-only-part-of-the-site/september-field-work-context.webp" alt="Mature Canary Island date palm and San Diego Palm Protection field vehicle at a client property" loading="lazy" decoding="async"></figure><figure><img src="./images/palm-journal/september-treatment-day/garden-treatment.webp" alt="Date palm and treatment equipment during an SDPP garden visit" loading="lazy" decoding="async"></figure><figure><img src="./images/palm-journal/the-palm-is-only-part-of-the-site/september-complete-crown.webp" alt="Complete Canary Island date palm crown photographed during a September SDPP field visit" loading="lazy" decoding="async"></figure></div><div class="gallery-links"><a class="text-arrow" href="./palm-proof-examples.html">Field Work</a><a class="text-arrow" href="./palm-journal-new.html">Palm Journal</a></div>', "gallery-section"),
+        section("Palm landscapes", "The landscapes worth protecting.", "My work starts with Canary Island date palms and extends to valuable Chilean wine and Bismarck palms in private landscapes and botanical collections.", '<div class="visual-gallery" aria-label="Palm landscape gallery"><figure class="visual-gallery__feature"><img src="./images/palm-journal/september-treatment-day/residential-palms.webp" alt="Mature Canary Island date palms framing a San Diego County residence during an SDPP treatment visit" loading="lazy" decoding="async"></figure><figure><img src="./images/palm-journal/the-palm-is-only-part-of-the-site/september-field-work-context.webp" alt="Mature Canary Island date palm and San Diego Palm Protection field vehicle at a client property" loading="lazy" decoding="async"></figure><figure><img src="./images/palm-journal/september-treatment-day/garden-treatment.webp" alt="Mature palm and treatment equipment during an SDPP garden visit" loading="lazy" decoding="async"></figure><figure><img src="./Bismarck.jpg" alt="Mature Bismarck palm in an Escondido landscape" loading="lazy" decoding="async"></figure></div><div class="gallery-links"><a class="text-arrow" href="./palm-proof-examples.html">Field Work</a><a class="text-arrow" href="./palm-journal-new.html">Palm Journal</a></div>', "gallery-section"),
     },
     "about.html": {
         "title": "About San Diego Palm Protection | Owner-Led Palm Services",
-        "description": "Meet John Krause, San Diego’s South American palm weevil specialist, focused on prevention and licensed treatment for mature Canary Island date palms.",
+        "description": "Meet John Krause, San Diego’s South American palm weevil specialist for high-value Canary Island date, Chilean wine, and Bismarck palms.",
         "eyebrow": "About San Diego Palm Protection",
         "h1": "I built SDPP to protect the palms around me.",
         "lede": "SDPP began after South American palm weevil activity and palm loss reached my own Old Escondido property.",
@@ -207,7 +222,7 @@ PAGES: dict[str, dict] = {
   <div class="about-john-copy">
     <p>I started SDPP after confronting South American palm weevil activity and palm loss on my own Old Escondido property. That experience made the threat very real to me&mdash;and made me look more closely at how many mature palms across our neighborhoods could be lost without earlier attention.</p>
     <p>Wisconsin native with an Environmental Science B.S. from the University of Minnesota and time in the Naval Service.</p>
-    <p>Today, based in Old Escondido, I specialize in South American palm weevil prevention and licensed treatment, with a primary focus on mature Canary Island date palms throughout San Diego County. I visit your property, carry out the treatment, keep the photographs and service records, and answer your questions between visits.</p>
+    <p>Today, based in Old Escondido, I specialize in South American palm weevil prevention and licensed treatment for high-value palms throughout San Diego County. Canary Island date palms remain my primary focus; I also protect Chilean wine and Bismarck palms where the species, site, pest pressure, and treatment label support the work. I visit your property, carry out the treatment, keep the photographs and service records, and answer your questions between visits.</p>
   </div>
 </div>
 </div>''') +
@@ -415,14 +430,15 @@ PAGES: dict[str, dict] = {
     },
     "south-american-palm-weevil-treatment-san-diego.html": {
         "title": "South American Palm Weevil Treatment San Diego | SDPP",
-        "description": "South American palm weevil treatment in San Diego: preventive protection, treatment timing, monitoring, warning signs, and care for Canary Island date palms.",
+        "description": "South American palm weevil treatment in San Diego for high-value Canary Island date, Chilean wine, and Bismarck palms.",
         "eyebrow": "Protection and treatment",
         "h1": "South American Palm Weevil Treatment in San Diego",
-        "lede": "I provide South American palm weevil assessment, preventive protection, pesticide treatment, monitoring, and treatment records for Canary Island date palms when the palm and site are suitable.",
+        "lede": "I provide South American palm weevil assessment, preventive protection, pesticide treatment, monitoring, and treatment records for high-value palms. Canary Island date palms are the primary focus; Chilean wine and Bismarck palms are also confirmed California hosts.",
         "image": "images/palm-journal/september-treatment-day/poolside-treatment.webp",
         "hero_position": "center 34%",
         "hero_position_mobile": "center 28%",
         "body": section("SAPW field guide", "Understand the pest before choosing a response.", "The SDPP guide explains how South American palm weevil reached San Diego, why Canary Island date palms are especially vulnerable, what changes to watch for, and how preventive management routes differ.", '<p><a class="button" data-conversion="pdf-view" href="./output/pdf/sdpp-sapw-prevention-management-guide.pdf" download>Download the SAPW Prevention &amp; Management Guide (PDF)</a></p>') +
+        priority_palms() +
         section("Documentation before decisions", "A visible-condition record supports better questions.", "The review considers palm species, visible condition, reported history, known pest pressure, access, timing, prior treatment information, and client objectives. Preventive treatment is available when appropriate, but photographs or a single symptom do not establish SAPW or another diagnosis.", cards([
             ("Document", "Establish dated photographs, observations, reported history, and limitations."),
             ("Prepare", "Separate monitoring, confirmation, preventive treatment, and urgent response paths."),
@@ -435,12 +451,12 @@ PAGES: dict[str, dict] = {
     },
     "sapw.html": {
         "title": "South American Palm Weevil Photos & Signs in San Diego | SDPP",
-        "description": "See local South American palm weevil photos, palm decline and removal, warning signs, and prevention options from San Diego Palm Protection.",
-        "eyebrow": "Canary Island date palm risk", "h1": "South American Palm Weevil in San Diego: Signs, Prevention, and Response",
-        "lede": "If a mature Canary Island date palm looks different, I will look at the whole palm, photograph the change, and explain whether I would monitor it, seek confirmation, or consider it urgent.",
+        "description": "See local South American palm weevil photos, warning signs, and prevention options for Canary Island date, Chilean wine, and Bismarck palms.",
+        "eyebrow": "High-value palm risk", "h1": "South American Palm Weevil in San Diego: Signs, Prevention, and Response",
+        "lede": "Canary Island date palms remain the primary local target. Chilean wine palms and Bismarck palms are confirmed California hosts too. If one of these valuable palms looks different, I will examine the whole palm, photograph the change, and explain the next responsible step.",
         "image": "south-american-palm-weevil-cidp-poway.jpg",
         "body": section("Free field guide", "What SAPW is, how it reached San Diego, and what prevention involves.", "This seven-page SDPP guide covers the local history, warning signs, preventive management program, treatment routes, monitoring, removal response, and questions to ask a provider.", '<p><a class="button" data-conversion="pdf-view" href="./output/pdf/sdpp-sapw-prevention-management-guide.pdf" download>Download the SAPW Prevention &amp; Management Guide (PDF)</a></p>') + sapw_visual_guide() + section("What I watch for", "A change in the crown deserves a closer look.", "A drooping or thinning crown, unusual frond behavior, damage, odor, or debris may deserve attention. None of those signs alone proves South American palm weevil.", cards([("Look at the whole palm", "I review the crown, trunk, base, nearby ground, access, and the timeline the owner reports."), ("Photograph the change", "Dated views help show whether the palm is stable or continuing to decline."), ("Choose the response", "I explain whether monitoring, protection, treatment, decline response, or contractor coordination fits what I find.")])) +
-        section("Prevention and treatment timing", "Earlier protection preserves more options.", "Canary Island date palms may merit preventive protection before obvious crown collapse, especially where local pressure, palm value, nearby losses, or property responsibility justify an assessment. Treatment timing, product selection, and application must follow the label and site conditions.", '<p><a href="./south-american-palm-weevil-treatment-san-diego.html">See South American palm weevil treatment services</a> · <a href="./palm-journal/when-sapw-became-local.html">Read the local field chronology</a></p>') +
+        section("Prevention and treatment timing", "Earlier protection preserves more options.", "Canary Island date palms may merit preventive protection before obvious crown collapse. Chilean wine and Bismarck palms also deserve a site-specific review where local pressure, specimen value, nearby losses, or property responsibility justify it. Treatment timing, product selection, and application must follow the label and site conditions.", '<p><a href="./south-american-palm-weevil-treatment-san-diego.html">See South American palm weevil treatment services</a> · <a href="https://www.ucanr.edu/site/south-american-palm-weevil/hosts">Review the University of California host list</a> · <a href="./palm-journal/when-sapw-became-local.html">Read the local field chronology</a></p>') +
         section("Safety and certainty", "Do not turn a checklist into a diagnosis.", "Hidden decay, structural stability, pest confirmation, and treatment outcome may require different evidence or qualified specialists.", '<p class="note">Keep people away from a visibly unstable or actively failing palm and contact the appropriate emergency or tree-risk professional when life safety may be involved.</p>', "section-tint")
     },
     "old-escondido-palm-preservation.html": {
@@ -478,7 +494,7 @@ GENERIC = {
     "palm-care-rancho-santa-fe.html": ("Palm Care & Treatment in Rancho Santa Fe", "Local service pathway", "South American palm weevil prevention and licensed treatment for Rancho Santa Fe estates and managed properties, with a primary focus on mature Canary Island date palms.", "healthy-canary-island-date-palm-in-rancho-santa-fe-san-diego-palm-protection.jpg"),
     "palm-faq-san-diego.html": ("Palm Care, Treatment & Assessment FAQ", "Education & decision support", "Answers about palm assessments, treatment, monitoring, reporting, managed properties, visible decline, service limits, and next steps in San Diego.", "journal-overview.jpg"),
     "palm-sourcing-installation.html": ("Palm Sourcing, Installation & Replacement Planning", "Response, Removal & Replacement", "Replacement planning connects site constraints, appropriate selection, sourcing questions, installation responsibilities, baseline documentation, and establishment monitoring.", "bismarck-specimen-escondido-palm-san-diego-palm-protection.jpg"),
-    "specimen-palms-cycads.html": ("Specimen Palms & Cycads", "Replacement planning", "Explore significant palm and cycad landscape possibilities with realistic site, sourcing, installation, documentation, and establishment considerations.", "Bismarck.jpg"),
+    "specimen-palms-cycads.html": ("High-Value Palms Under SAPW Pressure", "Species protection", "South American palm weevil prevention, treatment, monitoring, sourcing, and replacement planning for high-value Canary Island date, Chilean wine, and Bismarck palms.", "Bismarck.jpg"),
 }
 
 
@@ -520,9 +536,9 @@ def generic_body(name: str) -> str:
             "Before choosing another palm, I look at space, long-term scale, access, irrigation, installation responsibilities, and how the new palm will be photographed after planting.",
         ),
         "specimen-palms-cycads.html": (
-            "Specimen plants",
-            "A striking plant still has to fit the property.",
-            "Size at maturity, access, sourcing, installation, irrigation, and follow-up all matter. I help organize those questions before a purchase or replacement decision.",
+            "High-value palms",
+            "Three species deserve particular attention.",
+            "Canary Island date palms remain the primary SAPW target in San Diego. Chilean wine and Bismarck palms are confirmed California hosts and can represent decades of growth that cannot be quickly replaced.",
         ),
     }
     eyebrow, heading, intro = local_openings[name]
@@ -538,6 +554,12 @@ def generic_body(name: str) -> str:
             ("After", "Establish dated whole-palm and detail photographs at the receiving site."),
             ("Follow", "Compare visible condition and decide whether care, confirmation, or contractor follow-up is needed."),
         ]), "section-tint")
+    if name == "specimen-palms-cycads.html":
+        return section(eyebrow, heading, intro, cards([
+            ("Canary Island date palm", "The primary local target and the center of SDPP preventive treatment work."),
+            ("Chilean wine palm", "A confirmed California SAPW host and a slow-growing specimen that deserves early attention."),
+            ("Bismarck palm", "A confirmed California SAPW host whose scale and character make replacement a poor substitute for prevention."),
+        ])) + section("Protection before replacement", "Start with the palm that is already there.", "I review the species, visible condition, site, pest pressure, and treatment history before recommending preventive treatment, monitoring, or another response.", '<p><a href="./south-american-palm-weevil-treatment-san-diego.html">See SAPW protection and treatment</a> · <a href="./palm-sourcing-installation.html">See replacement planning</a></p>', "section-tint")
     return section(eyebrow, heading, intro, three_pillars()) + section("What to expect", "I start with your question and the palm in front of me.", "Tell me what you noticed, what has been done recently, and what you need to decide.", cards([
         ("At the property", "I examine what can be seen safely from the ground and take the photographs the question requires."),
         ("After the visit", "I explain what I observed, what remains uncertain, and what I recommend next."),
