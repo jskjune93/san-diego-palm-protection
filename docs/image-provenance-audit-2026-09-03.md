@@ -16,7 +16,7 @@ The homepage now leads with owner-led field work—dated photographs, written fi
 
 ## Durable control
 
-`scripts/validate_image_provenance.py` walks every public route, resolves visible media references, verifies each file against the exact SHA-256 recorded in the provenance manifest, rejects unapproved assets, rejects changed fingerprints, rejects stale approvals, and explicitly rejects `background.jpg`. `scripts/validate_site.py` runs this check as part of the normal validation suite.
+`scripts/validate_image_provenance.py` walks every public route, resolves visible media references, verifies each file against the exact SHA-256 recorded in the provenance manifest, rejects unapproved assets and changed fingerprints, prevents an SDPP-owned photograph from being reused in multiple visible placements, and explicitly rejects `background.jpg`. Approved but currently unused assets may remain in the provenance allowlist for future editorial use. `scripts/validate_site.py` runs this check as part of the normal validation suite.
 
 The confirmed-original basis is limited to the expressly approved, privacy-reviewed Old Escondido, Las Palmas, SAPW, newer Journal field sets, John Krause portrait variants, and the SDPP brand asset. Older top-level uploads receive the separate uncertain classification even when their subject and location appear consistent with surrounding editorial copy.
 

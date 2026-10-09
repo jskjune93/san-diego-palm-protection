@@ -3,8 +3,8 @@
   "artifact_id": "old-escondido-urban-forest-documentation",
   "product_type": "website_proof_excerpt",
   "artifact_version": "1.0.0",
-  "artifact_fingerprint": "8000bae74723e5d1aa64711113b56f793c6db41ddc5bd62e1cea4ffdad4ea882",
-  "approved_fingerprint": "8000bae74723e5d1aa64711113b56f793c6db41ddc5bd62e1cea4ffdad4ea882",
+  "artifact_fingerprint": "cf95f75decd18883096a8b30a298e21c436011465bbd4f87d4328ccfd66d77c7",
+  "approved_fingerprint": "cf95f75decd18883096a8b30a298e21c436011465bbd4f87d4328ccfd66d77c7",
   "approved_package_fingerprint": "6b000803ddd52b377e3a85365ae4f0072b253d0de100de6809ea04d0099f0386",
   "business_status_fingerprint": "aee886c262d3a4b2eb7a3dbd407c65b5ddb41f5d5d0b7331c301a501a31ec1e1",
   "status": "approved",
@@ -15,7 +15,7 @@
   "content": {
     "title": "Old Escondido Palm Documentation for Urban-Forest Decisions",
     "public_filename": "old-escondido-urban-forest-documentation.pdf",
-    "page_count": 6,
+    "page_count": 4,
     "source_basis": "Approved limited owner/SDPP photographic record"
   },
   "media": [

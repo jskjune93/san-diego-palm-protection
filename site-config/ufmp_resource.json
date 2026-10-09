@@ -54,8 +54,8 @@
   },
   "pdf": {
     "filename": "old-escondido-urban-forest-documentation.pdf",
-    "sha256": "8000bae74723e5d1aa64711113b56f793c6db41ddc5bd62e1cea4ffdad4ea882",
-    "page_count": 6
+    "sha256": "cf95f75decd18883096a8b30a298e21c436011465bbd4f87d4328ccfd66d77c7",
+    "page_count": 4
   },
   "media": [
     {
@@ -69,18 +69,6 @@
       "sha256": "7613627589f231722546130ac04faf1f099b0cf93631bf30320d2984821feb6e",
       "caption": "Several mature palms in one streetside view show why stable palm IDs matter.",
       "alt": "Old Escondido streetside view with several mature Canary Island date palms."
-    },
-    {
-      "filename": "old-escondido-ufmp-03.jpg",
-      "sha256": "96d1343f176359e59646c8ef72f4d615b81816f14e6337c7058a6f66833d9246",
-      "caption": "Adult South American palm weevils documented in the owner's own property record.",
-      "alt": "Several adult South American palm weevils photographed for the owner's property record."
-    },
-    {
-      "filename": "old-escondido-ufmp-04.jpg",
-      "sha256": "8e4c5274835fe76631d84507eed7494e0dcb82342394b3354007a42c553b7ba0",
-      "caption": "Visible crown change photographed before a documented removal; no cause is assigned.",
-      "alt": "Palm crown with visible change photographed before documented removal."
     }
   ],
   "metadata": {

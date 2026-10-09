@@ -18,6 +18,7 @@ class MediaParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__()
         self.references: set[str] = set()
+        self.visible_references: list[str] = []
 
     def handle_starttag(self, tag: str, attrs_list) -> None:
         attrs = dict(attrs_list)
@@ -25,14 +26,19 @@ class MediaParser(HTMLParser):
             for name in ("src", "poster"):
                 if attrs.get(name):
                     self.references.add(attrs[name])
+                    self.visible_references.append(attrs[name])
             if attrs.get("srcset"):
                 for candidate in attrs["srcset"].split(","):
-                    self.references.add(candidate.strip().split()[0])
+                    value = candidate.strip().split()[0]
+                    self.references.add(value)
+                    self.visible_references.append(value)
         if tag == "meta" and attrs.get("property") in {"og:image", "twitter:image"}:
             if attrs.get("content"):
                 self.references.add(attrs["content"])
         if attrs.get("style"):
-            self.references.update(re.findall(r"url\(['\"]?([^'\")]+)", attrs["style"]))
+            values = re.findall(r"url\(['\"]?([^'\")]+)", attrs["style"])
+            self.references.update(values)
+            self.visible_references.extend(values)
 
 
 def normalize(base: Path, value: str) -> str | None:
@@ -50,8 +56,12 @@ def normalize(base: Path, value: str) -> str | None:
 
 def main() -> int:
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-    approved = manifest["approved_assets"]
+    approved = {
+        **manifest.get("approved_assets", {}),
+        **manifest.get("approved_derivative_sources", {}),
+    }
     referenced: set[str] = set()
+    visible_usage: dict[str, list[str]] = {}
     html_files = sorted(ROOT.glob("*.html")) + sorted((ROOT / "palm-journal").glob("**/*.html"))
     for html in html_files:
         parser = MediaParser()
@@ -60,6 +70,10 @@ def main() -> int:
             relative = normalize(html.parent, value)
             if relative:
                 referenced.add(relative)
+        for value in parser.visible_references:
+            relative = normalize(html.parent, value)
+            if relative:
+                visible_usage.setdefault(relative, []).append(html.relative_to(ROOT).as_posix())
 
     errors: list[str] = []
     for relative in sorted(referenced):
@@ -86,9 +100,28 @@ def main() -> int:
         if classification == "unverified_or_uncertain" and decision != "approved_context_only":
             errors.append(f"uncertain media lacks context-only decision: {relative}")
 
-    stale = sorted(set(approved) - referenced)
-    if stale:
-        errors.append("provenance manifest contains unreferenced assets: " + ", ".join(stale))
+    # An SDPP photograph belongs to one visible placement. Licensed reference
+    # imagery may be reused, but owner photography must not become wallpaper.
+    duplicate_exceptions = {
+        "logo.png",
+        "images/palm-journal/where-we-care-for-palms-october-2026/sdpp-customer-map-2026-10-03.webp",
+    }
+    for relative, pages in sorted(visible_usage.items()):
+        record = approved.get(relative, {})
+        if relative in duplicate_exceptions or record.get("classification") != "confirmed_original_sdpp":
+            continue
+        if len(pages) > 1:
+            locations = ", ".join(pages)
+            errors.append(f"SDPP-owned photograph is reused in visible placements: {relative} ({locations})")
+
+    # Different derivatives or filenames can still contain the same original
+    # photograph. Keep those known source-equivalent groups to one public use.
+    for group in manifest.get("same_source_photo_groups", []):
+        used = [(relative, visible_usage[relative]) for relative in group if relative in visible_usage]
+        placements = sum(len(pages) for _, pages in used)
+        if placements > 1:
+            detail = "; ".join(f"{relative} ({', '.join(pages)})" for relative, pages in used)
+            errors.append(f"same SDPP source photograph is reused through multiple assets: {detail}")
 
     print("IMAGE_PROVENANCE_OK" if not errors else "IMAGE_PROVENANCE_FAILED")
     print(f"visible_media_assets_checked={len(referenced)}")

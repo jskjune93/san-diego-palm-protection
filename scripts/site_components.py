@@ -21,6 +21,14 @@ EMAIL = "sandiegopalmprotection@gmail.com"
 CUSTOMER_MAP = "images/palm-journal/where-we-care-for-palms-october-2026/sdpp-customer-map-2026-10-03.webp"
 INQUIRY = json.loads((ROOT / "site-config" / "inquiry.json").read_text(encoding="utf-8"))
 
+def species_reference_gallery(relative_root: str = "./") -> str:
+    """Show priority palms while clearly separating outside reference photography."""
+    return f'''<div class="species-reference-gallery" aria-label="Canary Island date, Chilean wine, and Bismarck palm photographs">
+  <figure><img src="{relative_root}mansion_healthy_cidp_poway_three.jpg" alt="Mature Canary Island date palms with complete crowns visible in a Poway property landscape" loading="lazy" decoding="async"><figcaption><strong>Canary Island date palm</strong><span>San Diego County landscape context.</span></figcaption></figure>
+  <figure><img src="{relative_root}images/species-reference/chilean-wine-palm-california.webp" alt="Grove of mature Chilean wine palms with complete crowns visible in a cultivated landscape" loading="lazy" decoding="async" width="1800" height="1198"><figcaption><strong>Chilean wine palm</strong><span>Species reference. Photograph: <a href="https://commons.wikimedia.org/wiki/File:Jubaea_chilensis_kz05.jpg" target="_blank" rel="noopener noreferrer">Krzysztof Ziarnek, Kenraiz / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>; resized for web.</span></figcaption></figure>
+  <figure><img src="{relative_root}images/species-reference/silver-bismarck-palm.webp" alt="Silver Bismarck palm with its complete crown visible in a landscaped palm collection" loading="lazy" decoding="async" width="1800" height="1200"><figcaption><strong>Bismarck palm</strong><span>Species reference. Photograph: <a href="https://commons.wikimedia.org/wiki/File:At_Palmetum_de_Santa_Cruz_de_Tenerife_2022_016.jpg" target="_blank" rel="noopener noreferrer">Mike Peel / Wikimedia Commons</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>; resized for web.</span></figcaption></figure>
+</div>'''
+
 
 def asset_version(path: str) -> str:
     return sha256((ROOT / path).read_bytes()).hexdigest()[:12]

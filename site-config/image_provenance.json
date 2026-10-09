@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "audited_on": "2026-09-03",
+  "audited_on": "2026-10-08",
   "classification_definitions": [
     "confirmed_original_sdpp",
     "confirmed_properly_licensed_stock",
@@ -15,7 +15,20 @@
       "reason": "Visible Coastline Palms branding; removed and redirected"
     }
   },
-  "confirmed_licensed_stock": {},
+  "confirmed_licensed_stock": {
+    "images/species-reference/chilean-wine-palm-california.webp": {
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jubaea_chilensis_kz05.jpg",
+      "author": "Krzysztof Ziarnek, Kenraiz",
+      "license": "Creative Commons Attribution 4.0 International",
+      "source_subject": "Grove of mature Jubaea chilensis with complete crowns in a cultivated landscape"
+    },
+    "images/species-reference/silver-bismarck-palm.webp": {
+      "source_page": "https://commons.wikimedia.org/wiki/File:At_Palmetum_de_Santa_Cruz_de_Tenerife_2022_016.jpg",
+      "author": "Mike Peel",
+      "license": "Creative Commons Attribution-ShareAlike 4.0 International",
+      "source_subject": "Bismarckia nobilis with a complete crown in the Palmetum de Santa Cruz de Tenerife"
+    }
+  },
   "audited_unpublished_assets": {
     "huntington1.jpg": {
       "sha256": "0ab7532b7c573ba0f75a172fa4f53f4ade213368c53ee6c20b62a7230a6d15ea",
@@ -42,9 +55,85 @@
       "publication_decision": "approved_context_only",
       "presentation_risk": "Must not imply SDPP performed depicted work",
       "production_status": "Not referenced after replacing the SAPW guide with the owner-requested original photo exhibit."
+    },
+    "Bismarck.jpg": {
+      "sha256": "fca4aac0a5682dd55d5c94eae08f0004eb89dd44937126e5d08a5f67643b49a4",
+      "classification": "unverified_or_uncertain",
+      "production_status": "not referenced and not deployed by this revision",
+      "reason": "The visible palm has pinnate leaves and should not be presented as a Bismarck palm; replaced with a verified owner field photograph."
     }
   },
   "approved_assets": {
+    "images/species-reference/chilean-wine-palm-california.webp": {
+      "sha256": "1e83e4c07aac78cbcf777071d690ade35c56ef39cb37c4350ffa5139790a8b5a",
+      "classification": "confirmed_properly_licensed_stock",
+      "source_basis": "Web derivative of Krzysztof Ziarnek, Kenraiz's Jubaea chilensis grove photograph from Wikimedia Commons, verified CC BY 4.0 on the source page; resized, metadata removed, and credited.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Caption must identify this as outside species-reference photography, not SDPP field work, and preserve the author, source, license, and modification notice."
+    },
+    "images/species-reference/silver-bismarck-palm.webp": {
+      "sha256": "03a701ac70b45bff975af7a23e5e9ed179cc863e777e07c0d711b27db0ec8b39",
+      "classification": "confirmed_properly_licensed_stock",
+      "source_basis": "Web derivative of Mike Peel's Bismarckia nobilis photograph from Wikimedia Commons, verified CC BY-SA 4.0 on the source page; resized, metadata removed, credited, and distributed under the same license.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Caption must identify this as outside species-reference photography, not SDPP field work, and preserve the author, source, license, and modification notice."
+    },
+    "images/field-gallery/cidp-estate-wide-landscape.webp": {
+      "sha256": "e9688642a379d16dccd1b3af1c3fbd7f19d3f13cc140931723afa705390cc184",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe 4:3 web derivative of the approved September 28, 2026 SDPP customer-visit photograph; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-estate-full-landscape.webp": {
+      "sha256": "37fac1780bb42a0efc9dbe59d1460304fec6be59a8fa0a6c2ac67dd49273e9c7",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe 4:3 web derivative of the approved September 28, 2026 SDPP customer-visit photograph; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-estate-property-landscape.webp": {
+      "sha256": "e3f00c3ea63ffd12df4a191901b332005c73b8c240412b800c250d78e0f1ad8f",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe 4:3 web derivative of the approved September 28, 2026 SDPP customer-visit photograph; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-san-marcos-crown-landscape.webp": {
+      "sha256": "cf23f86de663668fb27dbeac1f01562dfb1ac4a7d876016fd66cc63dce9df051",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe 4:3 web derivative of the approved September 26, 2026 SDPP customer-visit photograph; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-estate-records-banner.webp": {
+      "sha256": "e8563336af9d8866a6a492a5409e1461c33aa2e5fe33234d4cfbd747a8e0e88b",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe extra-wide web derivative of the approved SDPP-owned mature-cidp-estate.jpg photograph; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Property identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-treatment-crown-banner.webp": {
+      "sha256": "00303ab818fae580c3bb737d56b4e133f565f09ead702b63964ad1d4692cbf1b",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe extra-wide web derivative of the September 28, 2026 SDPP customer-visit photograph 20260928_183405.jpg; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/bismarck-mature-landscape.webp": {
+      "sha256": "e215b4b4826728390a738f18429938abbd0a150c637271bef6e150dd93f47cff",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe 4:3 web derivative of the approved June 6, 2026 SDPP field photograph; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Context photograph only; no treatment or diagnosis is implied."
+    },
+    "healthy-canary-island-date-palm-in-rancho-santa-fe-landscape.webp": {
+      "sha256": "2da976c8e1ecd9fe0c282e1ddc2d32b92666f9c601349db43585e46673f8bc4e",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe 4:3 web derivative of the approved Rancho Santa Fe SDPP photograph; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Location-level context only; no client identity, treatment, diagnosis, or outcome is implied."
+    },
     "images/palm-journal/the-palm-is-only-part-of-the-site/september-complete-crown.webp": {
       "sha256": "05a1873ee128fecea4671d12b2ef2f9e0e53f5dbe6df6217a82dcb85ecc58657",
       "classification": "confirmed_original_sdpp",
@@ -65,13 +154,6 @@
       "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026. Owner expressly requested current customer-folder photographs for this public Journal correction on September 28, 2026.",
       "publication_decision": "approved_public",
       "presentation_risk": "Customer name and address excluded from repository, copy, alt text, and captions. Full-frame web derivative with camera metadata removed; no diagnosis or treatment outcome implied."
-    },
-    "Bismarck.jpg": {
-      "sha256": "fca4aac0a5682dd55d5c94eae08f0004eb89dd44937126e5d08a5f67643b49a4",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
     },
     "Felicita_CIDP.jpg": {
       "sha256": "2b7d4267789d79d4eb636ec8bc0b6de5a6be1f2ab85118db29102927c85d74a4",
@@ -131,13 +213,6 @@
     },
     "beautiful-old_escondido-cidp.jpg": {
       "sha256": "e9cf098ff56d88580c360bf39ad661f0032ac707120fc688437e90f4aa69f1c9",
-      "classification": "unverified_or_uncertain",
-      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
-      "publication_decision": "approved_context_only",
-      "presentation_risk": "Must not imply SDPP performed depicted work"
-    },
-    "bismarck-specimen-escondido-palm-san-diego-palm-protection.jpg": {
-      "sha256": "53178b082d401019cecb06f03615479fa187428c6d8cc42ffb696db18124aa61",
       "classification": "unverified_or_uncertain",
       "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
       "publication_decision": "approved_context_only",
@@ -254,13 +329,6 @@
       "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
       "publication_decision": "approved_context_only",
       "presentation_risk": "Must not imply SDPP performed depicted work"
-    },
-    "healthy-canary-island-date-palm-in-rancho-santa-fe-san-diego-palm-protection.jpg": {
-      "sha256": "0fb8a056d41a27f0f80101fe6bf39b4a392f18b8825c13968cf0ee88e93b5161",
-      "classification": "confirmed_original_sdpp",
-      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
-      "publication_decision": "approved_original",
-      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
     },
     "healthy.jpg": {
       "sha256": "5797cc40f5745893ecc3ecc35a5e8d454e0a806f2313dc38b2310d401d8e4ea2",
@@ -1200,5 +1268,190 @@
       "publication_decision": "approved_public",
       "presentation_risk": "Generalized customer locations only; no customer identities or street addresses. Dots do not indicate infestation or treatment outcomes. Public GIS sources credited in article."
     }
-  }
+  },
+  "approved_derivative_sources": {
+    "bismarck-specimen-escondido-palm-san-diego-palm-protection.jpg": {
+      "sha256": "53178b082d401019cecb06f03615479fa187428c6d8cc42ffb696db18124aa61",
+      "classification": "unverified_or_uncertain",
+      "source_basis": "Repository upload without conclusive embedded ownership or license metadata",
+      "publication_decision": "approved_context_only",
+      "presentation_risk": "Must not imply SDPP performed depicted work"
+    },
+    "healthy-canary-island-date-palm-in-rancho-santa-fe-san-diego-palm-protection.jpg": {
+      "sha256": "0fb8a056d41a27f0f80101fe6bf39b4a392f18b8825c13968cf0ee88e93b5161",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner explicitly identified the SDPP picture repository as his own photographs on 2026-09-04",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Present as an SDPP photograph of a San Diego County landscape; do not imply a client relationship"
+    },
+    "images/field-gallery/bismarck-mature.webp": {
+      "sha256": "4b788935648b9398e1198a7372ca9c8b182432d2982a45fd92fa214edace6b7f",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner field photograph captured June 6, 2026; matched to the consolidated SDPP archive index and normalized as a metadata-free web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Context photograph only; no treatment or diagnosis is implied."
+    },
+    "images/field-gallery/bismarck-young.webp": {
+      "sha256": "c855ff9517dc2891c116fe0e1d6c9433397f0673f534524377f5bb568f66719c",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner field photograph captured June 8, 2026; matched to the consolidated SDPP archive index and normalized as a metadata-free web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Context photograph only; no treatment or diagnosis is implied."
+    },
+    "images/field-gallery/botanic-palm-landscape.webp": {
+      "sha256": "f325bf5a2f4348901d2d9803bb80e25bd173672a0b85e74afed16824c3438e58",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP field photograph from the August 22, 2026 San Diego Botanic Garden service visit; metadata removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Botanical collection context; no diagnosis or treatment outcome is implied."
+    },
+    "images/field-gallery/chilean-wine-full.webp": {
+      "sha256": "3b0a57a7411b06a0491fe6829cc2936586108df2e782de4ff2803af125bff490",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP photograph of the labeled Chilean wine palm during the August 22, 2026 San Diego Botanic Garden service visit; metadata removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Species identity is supported by the visible garden label; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/chilean-wine-label.webp": {
+      "sha256": "eadd7546871eff6760559b182ffbd008215ebb0614bc58f97d27470bc551b360",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP photograph of the labeled Chilean wine palm during the August 22, 2026 San Diego Botanic Garden service visit; metadata removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Species identity is supported by the visible garden label; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/chilean-wine-treatment.webp": {
+      "sha256": "84d2d579992aa711c5d3dbd450a0f7b8301385b493826ad7daff74e3b745840c",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP photograph of a labeled Chilean wine palm and SDPP equipment during the August 22, 2026 San Diego Botanic Garden service visit; metadata removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Shows actual field-work context without implying diagnosis or treatment outcome."
+    },
+    "images/field-gallery/cidp-estate-crown.webp": {
+      "sha256": "c39c719d2c24db57b7ded0969a86debe1bb2bbb1590b5fc26ffd2c7719c6432f",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-estate-full.webp": {
+      "sha256": "520bde86f8f53cfe18517d112833613a0d6c64ddc90f2f2a2684591ba6379217",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-estate-landscape.webp": {
+      "sha256": "2a26ab18f03c368ffd327ab12c09b76259be2d42c8b509df17b005f8c134a81e",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-estate-wide.webp": {
+      "sha256": "01676fbfb8404fe6092a332bfb016482c7c4c6cc0e3bc6b135b612e5c15138ae",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-hillside-context.webp": {
+      "sha256": "b899046b569281f9376598b3e6e9ccb08ca281aa840ea7c9d91e9a85d178146d",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 19, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-hillside-specimen.webp": {
+      "sha256": "0543cd341e03aab86361bcea20f09f4bedbaafa0224cfcff67e8f1796eb2d530",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 19, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-san-marcos-context.webp": {
+      "sha256": "d6508347e61ad47030fb6704a57c6e9e649d6210888666210f36a70055da00bd",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 26, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-san-marcos-crown.webp": {
+      "sha256": "e703075640d6b605013b41c64871fcc6601991d192f54e8e91b264987c069781",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 26, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-san-marcos-treatment.webp": {
+      "sha256": "4e6dd947395a3ce827752be86c8af22372159b3af8edb3e0ce700252f4a1162f",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP treatment-visit photograph captured September 26, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Shows actual SDPP equipment and field-work context; no diagnosis or treatment outcome is implied."
+    },
+    "images/field-gallery/cidp-san-marcos-trunk.webp": {
+      "sha256": "bbd4b2251ab22e26c0ae0effbe59961fd85686c870ce489cc06d3f37ea4af654",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 26, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/john-botanic-fieldwork.webp": {
+      "sha256": "ef7e7f7af64d8eef865ae40602f7bba19748b6a02f2a4d72a5fcd60d4cfafa56",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP owner field photograph from the August 22, 2026 San Diego Botanic Garden service visit; metadata removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Actual owner field-work context; no diagnosis or treatment outcome is implied."
+    },
+    "images/field-gallery/cidp-crown-upward-september-2026.webp": {
+      "sha256": "d4d97ed9b0e187de02d5b58b602534832505f299266c23476169c2be338acc7e",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; the crown is visible and no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-crown-baseline-september-2026.webp": {
+      "sha256": "bca11d8db91224ce2900859180247df8f685030b29e97e895ef85155df974221",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; the whole palm and crown are visible and no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-treatment-context-september-2026.webp": {
+      "sha256": "4496a367af9a5b143cc22d19fe35d7c0798688e7f4dfa23454a55caa84dc120e",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Shows real field-work context without identifying the customer or implying a diagnosis or outcome."
+    },
+    "images/field-gallery/cidp-residential-setting-september-2026.webp": {
+      "sha256": "cb5b04405f10a15130a4bb0d3e79014e653db9900d8298da25c17ed21b13d4c2",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; the palm is shown in landscape context and no diagnosis or outcome is implied."
+    },
+    "images/field-gallery/cidp-property-landscape-september-2026.webp": {
+      "sha256": "a396303eff96ad21edf3897cd8dac96acdb1a245617dd65b4e877f3bb230bbb6",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Original SDPP customer-visit photograph captured September 28, 2026; metadata and identifying path information removed from the web derivative.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Private customer identity and address excluded; the palm and surrounding landscape are visible and no diagnosis or outcome is implied."
+    }
+  },
+  "same_source_photo_groups": [
+    ["images/field-gallery/cidp-estate-full-landscape.webp", "images/field-gallery/cidp-estate-full.webp", "images/field-gallery/september-complete-crown.webp"],
+    ["images/field-gallery/cidp-estate-records-banner.webp", "mature-cidp-estate.jpg"],
+    ["images/field-gallery/cidp-estate-wide-landscape.webp", "images/field-gallery/september-property-and-palm.webp"],
+    ["images/field-gallery/cidp-estate-property-landscape.webp", "images/field-gallery/cidp-estate-landscape.webp"],
+    ["images/old-escondido-urban-forest-documentation/old-escondido-ufmp-01.jpg", "journal-assets/the-palms-that-complete-old-escondidos-historic-homes/02-old-escondido-cidp-streetscape.webp", "journal-assets/the-palms-that-complete-old-escondidos-historic-homes/07-old-escondido-cidp-detail.webp"],
+    ["images/old-escondido-urban-forest-documentation/old-escondido-ufmp-03.jpg", "journal-assets/when-sapw-became-local/04-june-16-specimen-profiles.jpg", "old-escondido-multiple-adult-weevils.jpg"],
+    ["images/sapw-gallery/weevil-2dac4c257c6a.webp", "old-escondido-multiple-adult-weevils.jpg"],
+    ["images/sapw-gallery/weevil-593657b37b20.webp", "journal-assets/when-sapw-became-local/01-june-13-first-adult.jpg"],
+    ["images/sapw-gallery/weevil-59bf94b98116.webp", "old-escondido-adult-palm-weevil-closeup.jpg"],
+    ["images/sapw-gallery/weevil-67b1671d152d.webp", "journal-assets/when-sapw-became-local/02-june-13-jar-context.jpg"],
+    ["images/sapw-gallery/weevil-93cbe8562fe9.webp", "old-escondido-adult-palm-weevil-topview.jpg"],
+    ["images/sapw-gallery/weevil-ad6cf6fc14f8.webp", "journal-assets/when-sapw-became-local/03-june-16-six-adults.jpg"],
+    ["images/old-escondido-urban-forest-documentation/old-escondido-ufmp-04.jpg", "images/las-palmas/03-subject-identification-20260710-193311.jpg"]
+  ]
 }

@@ -5,9 +5,6 @@ from pathlib import Path
 from site_components import head, BASE_URL, customer_map, asset_version
 
 ROOT = Path(__file__).resolve().parents[1]
-MEDIA = "images/palm-journal/when-sapw-became-local/"
-
-
 GALLERY = json.loads((ROOT / "site-config" / "sapw_gallery.json").read_text(encoding="utf-8"))
 DIMENSIONS = {item["src"]: (item["width"], item["height"]) for item in GALLERY}
 
@@ -18,7 +15,7 @@ def photo(src, alt, *, eager=False):
 
 
 def render():
-    adult = MEDIA + "01-june-15-adult-sapw.jpg"
+    adult = GALLERY[0]["src"]
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -30,7 +27,6 @@ def render():
 <p class="sapw-raw-host-note">Canary Island date palms remain the primary local target. Chilean wine and Bismarck palms are confirmed California hosts too. <a href="./south-american-palm-weevil-treatment-san-diego.html">See prevention and treatment.</a></p>
 <main id="main" aria-label="Palm weevil and palm photographs and video">
 {photo(GALLERY[0]["src"], GALLERY[0]["alt"], eager=True)}
-<video controls playsinline preload="none" poster="./{MEDIA}05-june-26-adult-on-trunk-poster.jpg" aria-label="Palm weevil moving on a palm trunk"><source src="./{MEDIA}05-june-26-adult-on-trunk.mp4" type="video/mp4"></video>
 {chr(10).join(photo(item["src"], item["alt"], eager=index < 3) for index, item in enumerate(GALLERY[1:]))}
 </main>
 {customer_map()}

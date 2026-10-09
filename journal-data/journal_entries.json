@@ -19,8 +19,8 @@
     "legacy_anchor": "do-i-need-to-spray-the-crown",
     "status": "published",
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/do-i-need-to-spray-the-crown.html",
-    "primary_image": "./images/palm-journal/the-palm-is-only-part-of-the-site/september-complete-crown.webp",
-    "primary_image_alt": "Complete crown of a mature Canary Island date palm photographed during a September SDPP field visit",
+    "primary_image": "./images/field-gallery/cidp-crown-upward-september-2026.webp",
+    "primary_image_alt": "Complete crown of a mature Canary Island date palm photographed from below during a September SDPP field visit",
     "gallery_images": [],
     "classification": "Protection & Treatment",
     "modified_date": "2026-10-05"
@@ -71,12 +71,12 @@
     "legacy_anchor": "the-palm-is-only-part-of-the-site",
     "status": "published",
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/the-palm-is-only-part-of-the-site.html",
-    "primary_image": "./images/palm-journal/the-palm-is-only-part-of-the-site/september-property-and-palm.webp",
-    "primary_image_alt": "Complete Canary Island date palm and crown within a mature San Diego County residential palm landscape",
+    "primary_image": "./images/field-gallery/cidp-treatment-context-september-2026.webp",
+    "primary_image_alt": "Complete Canary Island date palm, crown, surrounding landscape, and SDPP field equipment during a property visit",
     "gallery_images": [
       {
-        "src": "./images/palm-journal/the-palm-is-only-part-of-the-site/september-complete-crown.webp",
-        "alt": "Complete crown of a mature Canary Island date palm photographed during a September customer visit"
+        "src": "./images/field-gallery/cidp-crown-baseline-september-2026.webp",
+        "alt": "Complete trunk and crown of a mature Canary Island date palm photographed during a September customer visit"
       },
       {
         "src": "./images/palm-journal/the-palm-is-only-part-of-the-site/september-field-work-context.webp",
@@ -667,10 +667,6 @@
       {
         "src": "./old-escondido-topview-south-american-palm-weevil-sapw-canary-island-date-palm-cidp.jpg",
         "alt": "Top view of adult palm weevil recovered in Old Escondido"
-      },
-      {
-        "src": "./multiple-south-american-palm-weevil-sapw-canary-island-date-palm-old_escondido.jpg",
-        "alt": "Multiple adult palm weevils recovered in Old Escondido"
       }
     ]
   },
@@ -800,8 +796,8 @@
         "alt": "Mature Canary Island Date Palms at Felicita Villas with dramatic sky"
       },
       {
-        "src": "./mature-cidp-estate.jpg",
-        "alt": "Large healthy Canary Island Date Palm on an Old Escondido residential property"
+        "src": "./images/field-gallery/cidp-residential-setting-september-2026.webp",
+        "alt": "Large healthy Canary Island date palm shown in its residential property setting"
       },
       {
         "src": "./mature-cidp-old_escondido.jpg",
