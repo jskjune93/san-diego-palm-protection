@@ -34,6 +34,16 @@ def priority_palms() -> str:
     )
 
 
+def orange_county_sapw_resource() -> str:
+    return section(
+        "County authority resource",
+        "Orange County's homeowner pest alert.",
+        "Orange County Agriculture, Weights & Measures published this July 2026 South American palm weevil pest alert for property owners. Its pest biology, warning signs, pruning caution, and management guidance are relevant across Southern California.",
+        '''<p><a class="button" data-conversion="pdf-view" href="./output/pdf/orange-county-sapw-homeowner-pest-alert-july-2026.pdf" target="_blank" rel="noopener noreferrer">View the Orange County SAPW Pest Alert <span class="sr-only">(PDF, opens in a new tab)</span></a></p><p class="note">The reporting phone number and email in this flyer are for Orange County. San Diego County residents should use the guidance as an authority resource and contact the appropriate local agency or qualified provider for a local concern.</p>''',
+        "section-tint",
+    )
+
+
 def commercial_engagement_paths() -> str:
     return '''<section class="section section-tint commercial-engagements" aria-labelledby="commercial-engagements-heading">
   <div class="section-intro"><p class="eyebrow">Two engagement paths</p><h2 id="commercial-engagements-heading">Start with a baseline or build the annual relationship.</h2><p>A property can begin with a defined record before deciding on recurring stewardship. Standardize the stewardship system; customize the property scope.</p></div>
@@ -434,6 +444,7 @@ PAGES: dict[str, dict] = {
         "hero_position": "center 34%",
         "hero_position_mobile": "center 28%",
         "body": section("SAPW field guide", "Understand the pest before choosing a response.", "The SDPP guide explains how South American palm weevil reached San Diego, why Canary Island date palms are especially vulnerable, what changes to watch for, and how preventive management routes differ.", '<p><a class="button" data-conversion="pdf-view" href="./output/pdf/sdpp-sapw-prevention-management-guide.pdf" download>Download the SAPW Prevention &amp; Management Guide (PDF)</a></p>') +
+        orange_county_sapw_resource() +
         priority_palms() +
         section("Documentation before decisions", "A visible-condition record supports better questions.", "The review considers palm species, visible condition, reported history, known pest pressure, access, timing, prior treatment information, and client objectives. Preventive treatment is available when appropriate, but photographs or a single symptom do not establish SAPW or another diagnosis.", cards([
             ("Document", "Establish dated photographs, observations, reported history, and limitations."),
