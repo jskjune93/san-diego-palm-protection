@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-51 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
+53 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -16,8 +16,8 @@
 | `/palm-journal-new.html` | restructured | Field evidence library and Journal gateway |
 | `/palm-journal/cidp-assessment-local-palm-health-concerns.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/classic-old-escondido-canary-island-date-palm.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
+| `/palm-journal/do-i-need-to-spray-the-crown.html` | preserved / regenerated | Palm Journal evidence: Protection & Treatment |
 | `/palm-journal/documented-loss/` | restructured | Confirmed-loss collection with attribution boundaries |
-| `/palm-journal/do-i-need-to-spray-the-crown.html` | created | Palm Journal treatment education: systemic protection and the limited preventive role of crown spraying |
 | `/palm-journal/grand-ave-cidp.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
 | `/palm-journal/grand-ave-old-escondido.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/healthy-palm-growth.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
@@ -34,6 +34,7 @@
 | `/palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html` | preserved / regenerated | Palm Journal evidence: Civic Documentation |
 | `/palm-journal/old-escondido-mexican-fan-palm-curve.html` | preserved / regenerated | Palm Journal evidence: Preservation and Historic Landscapes |
 | `/palm-journal/old-escondido-palm-weevils.html` | preserved / regenerated | Palm Journal evidence: SAPW Documentation |
+| `/palm-journal/older-posts.html` | created | Quiet chronological index for earlier Palm Journal field notes |
 | `/palm-journal/palm-stewardship-solving-the-whole-problem.html` | preserved / regenerated | Palm Journal evidence: Palm Stewardship |
 | `/palm-journal/poway-old-winery-cidp.html` | preserved / regenerated | Palm Journal evidence: Preservation and Historic Landscapes |
 | `/palm-journal/rancho-santa-fe-palm-walk.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
@@ -43,6 +44,7 @@
 | `/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html` | preserved / regenerated | Palm Journal evidence: Historic Homes and Landscapes |
 | `/palm-journal/when-palms-were-california-gold/` | preserved / regenerated | Palm Journal evidence: Palm Preservation |
 | `/palm-journal/when-sapw-became-local.html` | preserved / regenerated | Palm Journal evidence: Owner-Documented Field Record |
+| `/palm-journal/where-we-care-for-palms-october-2026.html` | preserved / regenerated | Palm Journal evidence: Palm Stewardship |
 | `/palm-journal/who-owns-your-palm-treatment-company.html` | preserved / regenerated | Palm Journal evidence: Palm Stewardship |
 | `/palm-proof-examples.html` | created | Approved sanitized proof presentation and privacy boundary |
 | `/palm-records-monitoring-verification.html` | restructured | Canonical service overview and inquiry |
@@ -51,9 +53,9 @@
 | `/palm-stewardship-plans.html` | restructured | Protection and treatment planning |
 | `/quarterly-palm-care-san-diego.html` | restructured | Annual mature-palm protection and recurring treatment pathway; URL preserved |
 | `/report-a-palm.html` | restructured | Permissioned private observation handoff |
-| `/sapw.html` | visual exhibit | Original SAPW and CIDP photo and film evidence, with an SDPP return link |
+| `/sapw.html` | restructured | SAPW education, risk, and assessment gateway |
 | `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Treatment-specific discovery route into canonical protection pathway |
-| `/specimen-palms-cycads.html` | restructured | High-value Canary Island date, Chilean wine, and Bismarck palm protection and replacement education |
+| `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |
 | `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
 
 ## Permanent redirects
@@ -66,9 +68,3 @@
 ## Consolidation policy
 
 Local and species pages retain search/discovery roles but point into the canonical service architecture. They do not define competing service names, navigation, credential wording, or design systems. Superseded audience pages redirect to the matching inquiry on the canonical service page.
-
-SAPW visual exhibit: `/sapw.html` is the original SDPP photo and film page. The apex and www `southamericanpalmweevil.com` roots rewrite to it without changing the visitor-facing domain. Existing SDPP links and the SDPP canonical URL remain intact.
-
-SAPW domain dispatch uses explicit Vercel routes before the filesystem phase. Ordinary rewrites are evaluated after static index.html and therefore do not override the existing root document. Existing redirect rules are retained as equivalent ordered routes.
-
-| `/palm-journal/where-we-care-for-palms-october-2026.html` | created | Dated customer reach update, preventive-care education, and assessment inquiry |

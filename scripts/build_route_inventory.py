@@ -28,6 +28,7 @@ CORE_ROLES = {
     "specimen-palms-cycads.html": ("restructured", "Specimen selection and replacement education"),
     "palm-journal-new.html": ("restructured", "Field evidence library and Journal gateway"),
     "palm-journal/documented-loss/index.html": ("restructured", "Confirmed-loss collection with attribution boundaries"),
+    "palm-journal/older-posts.html": ("created", "Quiet chronological index for earlier Palm Journal field notes"),
 }
 
 LEGACY_REDIRECTS = {

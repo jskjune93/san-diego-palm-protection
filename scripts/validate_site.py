@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://www.sandiegopalmprotection.com"
 MANIFEST = ROOT / "journal-data" / "journal_entries.json"
 INDEX = ROOT / "palm-journal-new.html"
+OLDER_INDEX = ROOT / "palm-journal" / "older-posts.html"
 SITEMAP = ROOT / "sitemap.xml"
 ROBOTS = ROOT / "robots.txt"
 RECORDS_PAGE = ROOT / "palm-records-monitoring-verification.html"
@@ -224,6 +225,16 @@ def main() -> int:
     if len(anchors) != len(set(anchors)):
         errors.append("journal manifest has duplicate legacy anchors")
     index_text, index_parser = pages[INDEX.resolve()]
+    older_text, older_parser = pages[OLDER_INDEX.resolve()]
+    older_slugs = {
+        "monitoring-mature-cidp-after-palm-weevil-activity", "old-escondido-mexican-fan-palm-curve",
+        "old-escondido-albert-h-beach-house-palms", "old-escondido-cidp-icons-and-change",
+        "old-escondido-adult-sapw-declining-cidp", "old-escondido-historic-canary-island-date-palm",
+        "old-escondido-palm-weevils", "poway-old-winery-cidp", "old-escondido-cidp-collection",
+        "grand-ave-old-escondido", "grand-ave-cidp", "rancho-santa-fe-palm-walk",
+        "healthy-palm-growth", "cidp-assessment-local-palm-health-concerns",
+        "classic-old-escondido-canary-island-date-palm",
+    }
     if "status\": \"draft" in index_text.lower():
         errors.append("draft status text appears in journal index")
     for entry in entries:
@@ -232,16 +243,21 @@ def main() -> int:
             if slug in index_text or entry.get("legacy_anchor", "") in ids_by_page[INDEX.resolve()]:
                 errors.append(f"held or draft article exposed in index: {slug}")
             continue
-        if entry["legacy_anchor"] not in ids_by_page[INDEX.resolve()]:
-            errors.append(f"legacy anchor not preserved on index: {entry['legacy_anchor']}")
+        catalog_path = OLDER_INDEX.resolve() if slug in older_slugs else INDEX.resolve()
+        catalog_text = older_text if slug in older_slugs else index_text
+        if entry["legacy_anchor"] not in ids_by_page[catalog_path]:
+            errors.append(f"legacy anchor not preserved in journal catalog: {entry['legacy_anchor']}")
         if entry.get("page"):
             directory_route = entry.get("directory_route", False)
             article = (ROOT / "palm-journal" / slug / "index.html") if directory_route else (ROOT / "palm-journal" / f"{slug}.html")
-            expected_href = f"palm-journal/{slug}/" if directory_route else f"palm-journal/{slug}.html"
+            if slug in older_slugs:
+                expected_href = f"./{slug}/" if directory_route else f"./{slug}.html"
+            else:
+                expected_href = f"palm-journal/{slug}/" if directory_route else f"palm-journal/{slug}.html"
             if not article.exists():
                 errors.append(f"missing article page for {slug}")
-            if expected_href not in index_text:
-                errors.append(f"journal card does not point to article page: {slug}")
+            if expected_href not in catalog_text:
+                errors.append(f"journal catalog does not point to article page: {slug}")
             article_text = article.read_text(encoding="utf-8-sig") if article.exists() else ""
             if entry["legacy_anchor"] not in article_text:
                 errors.append(f"article page does not preserve legacy anchor: {slug}")
@@ -257,6 +273,8 @@ def main() -> int:
             errors.append("sitemap missing Palm Journal index")
         if f"{BASE_URL}/palm-journal/documented-loss/" not in locs:
             errors.append("sitemap missing Documented Loss page")
+        if f"{BASE_URL}/palm-journal/older-posts.html" not in locs:
+            errors.append("sitemap missing Older Journal Posts page")
         if f"{BASE_URL}/palm-records-monitoring-verification.html" not in locs:
             errors.append("sitemap missing Records & Monitoring page")
         if f"{BASE_URL}/report-a-palm.html" not in locs:

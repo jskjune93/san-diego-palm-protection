@@ -21,6 +21,27 @@ MODIFIED_DATE = "2026-07-11"
 DOCUMENTED_LOSS_DIR = JOURNAL_DIR / "documented-loss"
 DOCUMENTED_LOSS_URL = f"{BASE_URL}/palm-journal/documented-loss/"
 DOCUMENTED_LOSS_LASTMOD = "2026-07-13"
+OLDER_INDEX_PATH = JOURNAL_DIR / "older-posts.html"
+OLDER_INDEX_URL = f"{BASE_URL}/palm-journal/older-posts.html"
+OLDER_INDEX_LASTMOD = "2026-10-09"
+
+OLDER_SLUGS = [
+    "monitoring-mature-cidp-after-palm-weevil-activity",
+    "old-escondido-mexican-fan-palm-curve",
+    "old-escondido-albert-h-beach-house-palms",
+    "old-escondido-cidp-icons-and-change",
+    "old-escondido-adult-sapw-declining-cidp",
+    "old-escondido-historic-canary-island-date-palm",
+    "old-escondido-palm-weevils",
+    "poway-old-winery-cidp",
+    "old-escondido-cidp-collection",
+    "grand-ave-old-escondido",
+    "grand-ave-cidp",
+    "rancho-santa-fe-palm-walk",
+    "healthy-palm-growth",
+    "cidp-assessment-local-palm-health-concerns",
+    "classic-old-escondido-canary-island-date-palm",
+]
 
 TOPIC_SECTIONS = [
     {
@@ -29,8 +50,6 @@ TOPIC_SECTIONS = [
         "description": "What the local threat looks like, why early action matters, and how treatment and monitoring fit together.",
         "slugs": [
             "do-i-need-to-spray-the-crown", "i-have-seen-this-pattern-before", "september-treatment-day", "when-sapw-became-local",
-            "monitoring-mature-cidp-after-palm-weevil-activity", "old-escondido-adult-sapw-declining-cidp",
-            "old-escondido-palm-weevils",
         ],
     },
     {
@@ -42,8 +61,7 @@ TOPIC_SECTIONS = [
             "the-palm-is-only-part-of-the-site",
             "who-owns-your-palm-treatment-company", "local-is-the-point",
             "palm-stewardship-solving-the-whole-problem", "the-palm-record-outlives-the-palm",
-            "old-escondido-mature-cidps-deserve-a-baseline", "old-escondido-cidp-icons-and-change",
-            "grand-ave-old-escondido", "healthy-palm-growth", "cidp-assessment-local-palm-health-concerns",
+            "old-escondido-mature-cidps-deserve-a-baseline",
         ],
     },
     {
@@ -52,10 +70,6 @@ TOPIC_SECTIONS = [
         "description": "The palms that give San Diego properties, streets, and historic neighborhoods their character.",
         "slugs": [
             "the-palms-that-complete-old-escondidos-historic-homes", "old-escondido-living-landmarks",
-            "classic-old-escondido-canary-island-date-palm", "old-escondido-mexican-fan-palm-curve",
-            "old-escondido-albert-h-beach-house-palms", "old-escondido-historic-canary-island-date-palm",
-            "poway-old-winery-cidp", "old-escondido-cidp-collection", "grand-ave-cidp",
-            "rancho-santa-fe-palm-walk",
         ],
     },
     {
@@ -289,7 +303,7 @@ def json_ld_documented_loss() -> str:
 def render_index(entries: list[dict]) -> None:
     published = [e for e in entries if e.get("status") == "published" and e.get("public", True) is not False]
     article_entries = {e["slug"]: e for e in published if e.get("page")}
-    assigned_slugs = [slug for section in TOPIC_SECTIONS for slug in section["slugs"]]
+    assigned_slugs = [slug for section in TOPIC_SECTIONS for slug in section["slugs"]] + OLDER_SLUGS
     duplicate_slugs = sorted({slug for slug in assigned_slugs if assigned_slugs.count(slug) > 1})
     missing_slugs = sorted(set(article_entries) - set(assigned_slugs))
     unknown_slugs = sorted(set(assigned_slugs) - set(article_entries))
@@ -350,9 +364,17 @@ def render_index(entries: list[dict]) -> None:
   <nav class="journal-topic-nav" aria-label="Palm Journal topics">
     <span>Browse by topic</span>
     {''.join(f'<a href="#{escape(section["id"])}">{escape(section["title"])}</a>' for section in TOPIC_SECTIONS)}
+    <a href="./palm-journal/older-posts.html">Older Journal Posts</a>
   </nav>
 
 {chr(10).join(sections)}
+
+  <section class="journal-archive-link" aria-labelledby="older-journal-heading">
+    <p class="category-label">The earlier notebook</p>
+    <h2 id="older-journal-heading">Older Journal Posts</h2>
+    <p>The earlier field notes and neighborhood palm observations remain available without crowding the current Journal.</p>
+    <p><a class="read-link" href="./palm-journal/older-posts.html">Browse older posts</a></p>
+  </section>
 
   <p class="journal-related-resource"><strong>Related field resource:</strong> <a href="./urban-forest-palm-documentation.html#old-escondido-documentation-method">Old Escondido palm documentation for urban-forest decisions</a>.</p>
   <p class="journal-contribution"><a href="./report-a-palm.html">Share a palm observation or dated photograph.</a> Nothing is published automatically.</p>
@@ -368,6 +390,44 @@ def render_index(entries: list[dict]) -> None:
 </html>
 '''
     INDEX_PATH.write_text(html, encoding="utf-8")
+
+
+def render_older_index(entries: list[dict]) -> None:
+    entries_by_slug = {entry["slug"]: entry for entry in entries}
+    older = [entries_by_slug[slug] for slug in OLDER_SLUGS]
+    older.sort(key=lambda entry: entry["date"], reverse=True)
+    links = "\n".join(
+        f'''      <li id="{escape(entry['legacy_anchor'])}"><div class="journal-link-heading"><a href="{article_href(entry, from_root=False)}">{escape(entry['title'])}</a><span>{escape(display_meta(entry))}</span></div></li>'''
+        for entry in older
+    )
+    item_list = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Older SDPP Palm Journal Posts",
+        "url": OLDER_INDEX_URL,
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {"@type": "ListItem", "position": index, "url": entry["canonical_url"], "name": entry["title"]}
+                for index, entry in enumerate(older, 1)
+            ],
+        },
+    }
+    html = f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+{shared_head('Older Journal Posts | SDPP Palm Journal', 'Earlier SDPP field notes and local palm observations, preserved in a simple chronological index.', OLDER_INDEX_URL, f'{BASE_URL}/journal-overview.jpg', f'  <script type="application/ld+json">{json.dumps(item_list, ensure_ascii=False)}</script>', 'website')}
+{styles('../')}
+</head>
+<body>
+<!-- {GENERATED_NOTE} -->
+{header('../')}
+<section class="hero"><div class="hero-inner"><nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">Home</a> / <a href="../palm-journal-new.html">Palm Journal</a> / Older Journal Posts</nav><span class="eyebrow">Palm Journal Archive</span><h1>Older Journal Posts</h1><p class="lede">Earlier field notes and neighborhood observations, kept available in one quiet chronological index.</p></div></section>
+<main id="main" class="journal-index journal-archive"><ul class="journal-link-list">{links}</ul><p class="journal-related-resource"><a href="../palm-journal-new.html">Return to the current Palm Journal</a></p></main>
+{footer('../')}
+</body>
+</html>'''
+    OLDER_INDEX_PATH.write_text(html, encoding="utf-8")
 
 
 def _render_legacy_documented_loss_page() -> None:
@@ -693,6 +753,20 @@ def update_sitemap(entries: list[dict]) -> None:
             node = ET.SubElement(documented_loss_url, tag)
         node.text = value
 
+    older_index_url = urls_by_loc.get(OLDER_INDEX_URL)
+    if older_index_url is None:
+        older_index_url = ET.SubElement(root_el, url_tag)
+        ET.SubElement(older_index_url, loc_tag).text = OLDER_INDEX_URL
+    for tag, value in (
+        (lastmod_tag, OLDER_INDEX_LASTMOD),
+        (changefreq_tag, "yearly"),
+        (priority_tag, "0.45"),
+    ):
+        node = older_index_url.find(tag)
+        if node is None:
+            node = ET.SubElement(older_index_url, tag)
+        node.text = value
+
     existing_locs = set(urls_by_loc)
     existing_locs.add(DOCUMENTED_LOSS_URL)
     core_manifest = ROOT / "site-config" / "core_routes.json"
@@ -751,6 +825,7 @@ def main() -> None:
         old_page.unlink()
     entries_by_slug = {entry["slug"]: entry for entry in entries}
     render_index(entries)
+    render_older_index(entries)
     for entry in entries:
         if entry.get("status") == "published" and entry.get("page"):
             render_article(entry, entries_by_slug)

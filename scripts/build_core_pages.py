@@ -29,11 +29,7 @@ def priority_palms() -> str:
         "Three palms I prioritize",
         "Canary Island date palms first. Chilean wine and Bismarck palms belong in the plan.",
         "Canary Island date palms remain the primary local target. Chilean wine palms and Bismarck palms are also confirmed California hosts, and their value and slow replacement make a preventive review worth discussing.",
-        cards([
-            ("Canary Island date palm", "The headline species for SDPP prevention and treatment because SAPW attacks it most heavily in San Diego."),
-            ("Chilean wine palm", "A slow-growing specimen palm already lost to SAPW in San Diego and worth protecting before visible decline."),
-            ("Bismarck palm", "A high-value specimen and confirmed California SAPW host that should not be left out of a property protection plan."),
-        ]) + '<p class="section-proof-link"><a href="https://www.ucanr.edu/site/south-american-palm-weevil/hosts">Review the University of California host list</a></p>',
+        '''<div class="service-lines service-lines--3"><article><h3>Canary Island date palm</h3><p>The headline species for SDPP prevention and treatment because SAPW attacks it most heavily in San Diego.</p></article><article><h3>Chilean wine palm</h3><p>A slow-growing specimen palm already lost to SAPW in San Diego and worth protecting before visible decline.</p></article><article><h3>Bismarck palm</h3><p>A high-value specimen and confirmed California SAPW host that should not be left out of a property protection plan.</p></article></div><p class="section-proof-link"><a href="https://www.ucanr.edu/site/south-american-palm-weevil/hosts">Review the University of California host list</a></p>''',
         "section-tint",
     )
 
@@ -555,11 +551,8 @@ def generic_body(name: str) -> str:
             ("Follow", "Compare visible condition and decide whether care, confirmation, or contractor follow-up is needed."),
         ]), "section-tint")
     if name == "specimen-palms-cycads.html":
-        return section(eyebrow, heading, intro, cards([
-            ("Canary Island date palm", "The primary local target and the center of SDPP preventive treatment work."),
-            ("Chilean wine palm", "A confirmed California SAPW host and a slow-growing specimen that deserves early attention."),
-            ("Bismarck palm", "A confirmed California SAPW host whose scale and character make replacement a poor substitute for prevention."),
-        ]) + species_reference_gallery()) + section("Protection before replacement", "Start with the palm that is already there.", "I review the species, visible condition, site, pest pressure, and treatment history before recommending preventive treatment, monitoring, or another response.", '<p><a href="./south-american-palm-weevil-treatment-san-diego.html">See SAPW protection and treatment</a> · <a href="./palm-sourcing-installation.html">See replacement planning</a></p>', "section-tint")
+        species_lines = '''<div class="service-lines service-lines--3"><article><h3>Canary Island date palm</h3><p>The primary local target and the center of SDPP preventive treatment work.</p></article><article><h3>Chilean wine palm</h3><p>A confirmed California SAPW host and a slow-growing specimen that deserves early attention.</p></article><article><h3>Bismarck palm</h3><p>A confirmed California SAPW host whose scale and character make replacement a poor substitute for prevention.</p></article></div>'''
+        return section(eyebrow, heading, intro, species_lines + species_reference_gallery()) + section("Protection before replacement", "Start with the palm that is already there.", "I review the species, visible condition, site, pest pressure, and treatment history before recommending preventive treatment, monitoring, or another response.", '<p><a href="./south-american-palm-weevil-treatment-san-diego.html">See SAPW protection and treatment</a> · <a href="./palm-sourcing-installation.html">See replacement planning</a></p>', "section-tint")
     return section(eyebrow, heading, intro, three_pillars()) + section("What to expect", "I start with your question and the palm in front of me.", "Tell me what you noticed, what has been done recently, and what you need to decide.", cards([
         ("At the property", "I examine what can be seen safely from the ground and take the photographs the question requires."),
         ("After the visit", "I explain what I observed, what remains uncertain, and what I recommend next."),
