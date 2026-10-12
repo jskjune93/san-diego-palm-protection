@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "audited_on": "2026-10-08",
+  "audited_on": "2026-10-11",
   "classification_definitions": [
     "confirmed_original_sdpp",
     "confirmed_properly_licensed_stock",
@@ -126,6 +126,34 @@
       "source_basis": "Crown-safe 4:3 web derivative of the approved June 6, 2026 SDPP field photograph; source original remains unchanged.",
       "publication_decision": "approved_public",
       "presentation_risk": "Context photograph only; no treatment or diagnosis is implied."
+    },
+    "images/field-gallery/bismarck-property-hero-october-2026.webp": {
+      "sha256": "3c88c6d8254849e17bbc5e32f0dc9d46ec46746442850a07cdde5f4ef2b8374f",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe web derivative of the original SDPP photograph 20261004_093111.jpg captured October 4, 2026 in the owner's dedicated Bismarck folder; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Property-level context only; no client relationship, treatment, diagnosis, or outcome is implied."
+    },
+    "images/field-gallery/bismarck-mature-property-october-2026.webp": {
+      "sha256": "bbaf56e38080767ae73828fe488cf691caf7ea8f52437bc937eda36fec47caa4",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe 4:3 web derivative of the original SDPP photograph 20261004_093115.jpg captured October 4, 2026 in the owner's dedicated Bismarck folder; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Property-level context only; no client relationship, treatment, diagnosis, or outcome is implied."
+    },
+    "images/species-reference/bismarck-crown-property-october-2026.webp": {
+      "sha256": "942f46bb748196a5fcc3e557d64de9a21cf7319d0f5dca4b862e4d7d67108243",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe, exposure-balanced 4:3 web derivative of the original SDPP photograph 20261009_102323.jpg captured October 9, 2026 in the owner's dedicated Bismarck folder; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Species and property context only; no client relationship, treatment, diagnosis, or outcome is implied."
+    },
+    "images/field-gallery/bismarck-young-landscape-october-2026.webp": {
+      "sha256": "5d8f563c2852f115ba7a4a0f4e8a81db6c8f66623192dd4a402e30a53acf7582",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Crown-safe 4:3 web derivative of the original SDPP photograph 20261009_102040.jpg captured October 9, 2026 in the owner's dedicated Bismarck folder; source original remains unchanged.",
+      "publication_decision": "approved_public",
+      "presentation_risk": "Residential landscape context only; no client relationship, treatment, diagnosis, or outcome is implied."
     },
     "healthy-canary-island-date-palm-in-rancho-santa-fe-landscape.webp": {
       "sha256": "2da976c8e1ecd9fe0c282e1ddc2d32b92666f9c601349db43585e46673f8bc4e",
