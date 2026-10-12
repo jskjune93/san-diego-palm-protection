@@ -76,7 +76,7 @@ TOPIC_SECTIONS = [
         "id": "loss-preservation",
         "title": "Loss, Change & Preservation",
         "description": "What disappears, what can still be moved or protected, and why the landscape record matters.",
-        "slugs": ["fairbanks-ranch-bismarck-palm-removal", "when-palms-were-california-gold", "las-palmas-no-reply-then-the-saws"],
+        "slugs": ["black-mountain-ranch-bismarck-palm-removal", "when-palms-were-california-gold", "las-palmas-no-reply-then-the-saws"],
     },
 ]
 

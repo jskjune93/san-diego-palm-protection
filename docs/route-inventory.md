@@ -69,4 +69,4 @@
 
 Local and species pages retain search/discovery roles but point into the canonical service architecture. They do not define competing service names, navigation, credential wording, or design systems. Superseded audience pages redirect to the matching inquiry on the canonical service page.
 
-| `/palm-journal/fairbanks-ranch-bismarck-palm-removal.html` | created | SDPP-handled Bismarck removal field record with photos and video; documented loss |
+| `/palm-journal/black-mountain-ranch-bismarck-palm-removal.html` | created | SDPP-handled Bismarck removal field record with photos and video; documented loss |
