@@ -233,7 +233,13 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         secondary_action = f'<a class="button button-quiet" href="{relative_root}palm-proof-examples.html">View Field Work</a>'
     else:
         secondary_action = f'<a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a>'
-    inquiry_band = "" if filename == "palm-records-monitoring-verification.html" else "  " + inquiry(relative_root, residential_page)
+    report_page = filename == "report-a-palm.html"
+    if report_page:
+        primary_href = "https://sdpp-community-palm-map.san-diego-pa-2324.chatgpt.site/?report=1"
+        primary_label = "Report a palm"
+        primary_event = "palm-report-map-open"
+        secondary_action = ""
+    inquiry_band = "" if filename in {"palm-records-monitoring-verification.html", "report-a-palm.html"} else "  " + inquiry(relative_root, residential_page)
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -246,7 +252,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
     <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div>
   </section>
-{'' if filename == "index.html" else f'  <div class="trust-wrap trust-wrap--compact">{about_credentials() if filename == "about.html" else compact_credentials("BUSINESS_CREDENTIALS")}</div>'}
+{'' if filename in {"index.html", "report-a-palm.html"} else f'  <div class="trust-wrap trust-wrap--compact">{about_credentials() if filename == "about.html" else compact_credentials("BUSINESS_CREDENTIALS")}</div>'}
   {body}
 {inquiry_band}
 </main>

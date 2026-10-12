@@ -67,6 +67,10 @@ def main() -> int:
     for relative in PRIMARY_PAGES:
         path = ROOT / relative
         text = path.read_text(encoding="utf-8-sig")
+        if relative == "report-a-palm.html":
+            if licensing_statement not in text or START in text or CONTACT_START in text:
+                errors.append("Report a Palm must keep current credentials in its footer")
+            continue
         if relative == "sapw.html":
             if licensing_statement not in text or 'name="business-credentials"' not in text:
                 errors.append("sapw.html: centralized credential metadata is missing")
@@ -90,6 +94,8 @@ def main() -> int:
 
     for relative in ("palm-records-monitoring-verification.html", "report-a-palm.html"):
         text = (ROOT / relative).read_text(encoding="utf-8-sig")
+        if relative == "report-a-palm.html" and "palm-report-map-open" in text:
+            continue
         if CONTACT_START not in text or text.index(CONTACT_START) > text.index("<form"):
             errors.append(f"{relative}: inquiry area lacks a credential block before the form")
 

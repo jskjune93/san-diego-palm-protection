@@ -356,27 +356,12 @@ def main() -> int:
     if not REPORT_PAGE.exists():
         errors.append("Report a Palm page is missing")
     else:
-        for required_fragment in (
-            'id="observation-form"',
-            'name="contact_permission" required',
-            'name="private_retention_permission" required',
-            'name="public_use_permission"',
-            "Nothing is published automatically",
-            "The report is not delivered until you send it",
-            "does not upload or store photographs",
-            "configured email application",
-            "Observation and chronology:",
-            "identifiable private-property details remain private",
-            "Review status: needs_review",
-        ):
-            if required_fragment not in report_text:
-                errors.append(f"Report a Palm page missing safeguard or field: {required_fragment}")
-        if 'type="file"' in report_text:
-            errors.append("Report a Palm implies direct upload without a supported backend")
-        if "public_use_permission') ? 'yes' : 'no'" not in report_text:
-            errors.append("optional public-use permission is not kept separate")
-        if "Not provided" in report_text:
-            errors.append("Report a Palm handoff should omit empty optional fields")
+        if 'https://sdpp-community-palm-map.san-diego-pa-2324.chatgpt.site/?report=1' not in report_text:
+            errors.append("Report a Palm must open the existing location-only map")
+        if '<form' in report_text or 'BUSINESS_CREDENTIALS_CONTACT:START' in report_text:
+            errors.append("Report a Palm must not duplicate intake or inline credentials")
+        if 'unverified observations' not in report_text:
+            errors.append("Report a Palm must explain the certainty of community reports")
     if "./report-a-palm.html" not in homepage_text:
         errors.append("homepage does not link to Report a Palm")
     if "./urban-forest-palm-documentation.html" not in homepage_text:
@@ -408,6 +393,10 @@ def main() -> int:
             ROOT / "urban-forest-palm-documentation.html",
     ):
         page_text = path.read_text(encoding="utf-8-sig")
+        if path == REPORT_PAGE:
+            if credentials["licensing_statement"] not in page_text:
+                errors.append("Report a Palm footer lacks the current licensing statement")
+            continue
         if required_qualified_insured_scope not in page_text:
             errors.append(f"{normalize_rel(path)}: missing centralized qualified/insured status")
         if "BUSINESS_CREDENTIALS:START" not in page_text:

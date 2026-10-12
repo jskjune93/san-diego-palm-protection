@@ -52,7 +52,7 @@
 | `/palm-sourcing-installation.html` | restructured | Replacement sourcing and installation planning |
 | `/palm-stewardship-plans.html` | restructured | Protection and treatment planning |
 | `/quarterly-palm-care-san-diego.html` | restructured | Annual mature-palm protection and recurring treatment pathway; URL preserved |
-| `/report-a-palm.html` | restructured | Permissioned private observation handoff |
+| `/report-a-palm.html` | restructured | Location-only community map reporting gateway |
 | `/sapw.html` | restructured | SAPW education, risk, and assessment gateway |
 | `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Treatment-specific discovery route into canonical protection pathway |
 | `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |

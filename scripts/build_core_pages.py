@@ -476,19 +476,12 @@ PAGES: dict[str, dict] = {
         section("Municipal context", "Accurate participation wording.", "San Diego Palm Protection submitted mature-palm documentation for consideration during the City of Escondido Urban Forest Management Plan process.", '<p class="note">This statement describes a submission for consideration. It does not state or imply City endorsement, partnership, selection, approval, or adoption.</p>', "section-tint")
     },
     "report-a-palm.html": {
-        "title": "Report a Palm or Request Review | San Diego Palm Protection",
-        "description": "Private palm observation and photo-review inquiry with explicit permissions and no automatic publication.",
-        "eyebrow": "Private inquiry", "h1": "Report a Palm or Request Review",
-        "lede": "Prepare a private email handoff. Nothing is published automatically, and this page does not upload or store photographs.",
+        "title": "Report a Palm | San Diego Palm Protection",
+        "description": "Report a declining palm on the community map. Just choose a location. No name, email, or photo needed.",
+        "eyebrow": "Community map", "h1": "Report a palm",
+        "lede": "See a declining palm? Add its location to the map.",
         "image": "driveway-cidp-poway.jpg",
-        "body": section("Private handoff", "Prepare the record before opening email.", "The report is not delivered until you send it from your configured email application.", f'''{compact_credentials("BUSINESS_CREDENTIALS_CONTACT")}
-<form id="observation-form" novalidate>
-<fieldset><legend>About you</legend><div class="form-grid"><div><label for="name">Name</label><input id="name" name="name" required></div><div><label for="email">Email</label><input id="email" name="email" type="email" required></div></div></fieldset>
-<fieldset><legend>The observation</legend><div class="form-grid"><div><label for="city">City</label><input id="city" name="city" required></div><div><label for="category">Category</label><select id="category" name="category" required><option value="">Choose one</option><option>Baseline</option><option>Visible decline</option><option>Removal or loss</option><option>Other</option></select></div><div class="full"><label for="description">Observation and chronology:</label><textarea id="description" name="description" required></textarea></div></div></fieldset>
-<fieldset><legend>Permissions</legend><label class="check"><input type="checkbox" name="contact_permission" required> SDPP may contact me to clarify this observation.</label><label class="check"><input type="checkbox" name="private_retention_permission" required> SDPP may retain this submission privately for review.</label><label class="check"><input type="checkbox" name="public_use_permission"> Separately and optionally, SDPP may ask about public editorial use.</label></fieldset>
-<p class="note">Nothing is published automatically; identifiable private-property details remain private unless separately agreed. This page does not upload or store photographs. Review status: needs_review.</p>
-<button class="button" type="submit">Prepare Email Report</button> <span id="form-status" role="status" aria-live="polite"></span></form>
-<script>(()=>{{const form=document.getElementById('observation-form'),status=document.getElementById('form-status');form.addEventListener('submit',e=>{{e.preventDefault();if(!form.checkValidity()){{form.reportValidity();return;}}const data=new FormData(form),v=k=>String(data.get(k)||'').trim();const body=['REPORT A PALM — NEEDS REVIEW',`Name: ${{v('name')}}`,`Email: ${{v('email')}}`,`City: ${{v('city')}}`,`Category: ${{v('category')}}`,'Observation and chronology:',v('description'),'Contact permission: yes','Private retention permission: yes',`Optional public-use follow-up permission: ${{data.has('public_use_permission') ? 'yes' : 'no'}}`,'Review status: needs_review'].join('\\n');status.textContent='Opening your configured email application. Attach photographs there, then send; nothing has been delivered yet.';location.href=`mailto:sandiegopalmprotection@gmail.com?subject=${{encodeURIComponent('Palm observation')}}&body=${{encodeURIComponent(body)}}`;}});}})();</script>''')
+        "body": '<section class="section"><h2>Just a location.</h2><p>Choose the palm’s location on the map and tap Submit. No name, email, or photo needed.</p><p class="note">Reports appear publicly at an approximate location. They are unverified observations, not confirmed infestations.</p></section>'
     },
 }
 
