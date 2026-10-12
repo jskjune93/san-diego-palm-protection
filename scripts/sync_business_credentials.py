@@ -16,7 +16,7 @@ from business_credentials import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-CREDENTIAL_STYLE_VERSION = sha256((ROOT / 'site-assets/credentials.css').read_bytes()).hexdigest()[:12]
+CREDENTIAL_STYLE_VERSION = sha256((ROOT / "site-assets/credentials.css").read_bytes()).hexdigest()[:12]
 STYLE_LINK = f'<link rel="stylesheet" href="./site-assets/credentials.css?v={CREDENTIAL_STYLE_VERSION}">'
 BLOCK = render_credential_block()
 COMPACT_BLOCK = render_compact_credential_block()

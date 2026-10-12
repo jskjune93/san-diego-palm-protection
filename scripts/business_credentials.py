@@ -117,10 +117,14 @@ def render_homepage_credential_block() -> str:
     owner = load_business_status()["owner"]["name"]
     return (
         '<!-- BUSINESS_CREDENTIALS:START -->\n'
-        '<div class="business-credentials business-credentials--homepage" aria-label="Owner qualification and current business service status">\n'
+        '<div class="business-credentials business-credentials--strip business-credentials--homepage" aria-label="Owner qualification and current business service status">\n'
         f'  <p class="business-credentials__label">{escape(credentials["status_label"])}</p>\n'
-        f'  <p class="business-credentials__credential"><strong>{escape(owner)}, Owner</strong><br>{escape(credentials["business_license"])}<br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
-        f'  <p class="business-credentials__detail">{escape(credentials["service_summary"])}</p>\n'
+        '  <p class="business-credentials__credential">'
+        f'<strong>{escape(owner)}, Owner</strong>'
+        f'<span>{escape(credentials["business_license"])}</span>'
+        f'<span>{escape(credentials["individual_license"])}</span>'
+        f'<span>{escape(credentials["category"])}</span>'
+        f'<strong>{escape(credentials["insurance"])}</strong></p>\n'
         '</div>\n'
         '<!-- BUSINESS_CREDENTIALS:END -->'
     )
@@ -131,9 +135,14 @@ def render_about_credential_block() -> str:
     owner = load_business_status()["owner"]["name"]
     return (
         '<!-- BUSINESS_CREDENTIALS:START -->\n'
-        '<div class="business-credentials business-credentials--about" aria-label="John Krause qualification and insurance">\n'
+        '<div class="business-credentials business-credentials--strip business-credentials--about" aria-label="John Krause qualification and insurance">\n'
         '  <p class="business-credentials__label">Qualifications</p>\n'
-        f'  <p class="business-credentials__credential"><strong>{escape(owner)}</strong><br>Owner, San Diego Palm Protection<br>{escape(credentials["business_license"])}<br>{escape(credentials["individual_license"])}<br>{escape(credentials["category"])}<br>{escape(credentials["insurance"])}</p>\n'
+        '  <p class="business-credentials__credential">'
+        f'<strong>{escape(owner)}, Owner</strong>'
+        f'<span>{escape(credentials["business_license"])}</span>'
+        f'<span>{escape(credentials["individual_license"])}</span>'
+        f'<span>{escape(credentials["category"])}</span>'
+        f'<strong>{escape(credentials["insurance"])}</strong></p>\n'
         f'  <p class="business-credentials__detail">{escape(credentials["service_summary"])}</p>\n'
         '</div>\n'
         '<!-- BUSINESS_CREDENTIALS:END -->'

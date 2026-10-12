@@ -165,7 +165,7 @@ async function main() {
   if (/background\.jpg/i.test(homepage)) {
     throw new Error("Denied Coastline Palms image must not appear in the production homepage.");
   }
-  const homepageHero = homepage.match(/<section class="page-hero"[\s\S]*?<\/section>/)?.[0] || "";
+  const homepageHero = homepage.match(/<section class="[^"]*\bpage-hero\b[^"]*"[\s\S]*?<\/section>/)?.[0] || "";
   if (homepageHero.indexOf("Request a Palm Assessment") < 0 || homepageHero.indexOf("View Field Work") < 0) {
     throw new Error("Homepage hero must provide one assessment CTA and one field-evidence CTA.");
   }

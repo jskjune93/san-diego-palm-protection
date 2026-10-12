@@ -244,6 +244,25 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         primary_label = "Discuss a removal"
         primary_event = "removal-inquiry-initiation"
     inquiry_band = "" if filename in {"palm-records-monitoring-verification.html", "report-a-palm.html"} else "  " + inquiry(relative_root, residential_page)
+    if filename == "index.html":
+        page_variant = "home"
+    elif filename == "about.html":
+        page_variant = "profile"
+    elif filename == "palm-proof-examples.html":
+        page_variant = "evidence"
+    elif filename == "specimen-palms-cycads.html":
+        page_variant = "species"
+    else:
+        page_variant = "service"
+    main_classes = f"site-main site-main--{page_variant}"
+    if filename == "index.html":
+        main_classes += " homepage-content"
+    credential_rail = ""
+    if not report_page:
+        credential_block = homepage_credentials() if filename == "index.html" else (
+            about_credentials() if filename == "about.html" else compact_credentials("BUSINESS_CREDENTIALS")
+        )
+        credential_rail = f'  <div class="trust-wrap trust-wrap--compact trust-wrap--{page_variant}">{credential_block}</div>'
     return f"""<!doctype html>
 <html lang="en">
 <head>
@@ -251,12 +270,12 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
 </head>
 <body>
 {header(relative_root, residential_page)}
-<main id="main"{' class="homepage-content"' if filename == 'index.html' else ''}>
-  <section class="page-hero" style="--hero-image:url('/{image}');--hero-position:{escape(hero_position)};--hero-position-mobile:{escape(hero_position_mobile or hero_position)}">
-    <div class="hero-inner"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
-    <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div>
+<main id="main" class="{main_classes}">
+  <section class="page-hero page-hero--{page_variant}" style="--hero-image:url('/{image}');--hero-position:{escape(hero_position)};--hero-position-mobile:{escape(hero_position_mobile or hero_position)}">
+    <div class="hero-inner"><div class="hero-copy"><p class="eyebrow">{escape(eyebrow)}</p><h1>{escape(h1)}</h1><p class="lede">{escape(lede)}</p>{hero_note}{hero_trust}{residential_trust}
+    <div class="button-row"><a class="button" data-conversion="{primary_event}" href="{primary_href}">{primary_label}</a>{secondary_action}</div></div></div>
   </section>
-{'' if filename in {"index.html", "report-a-palm.html"} else f'  <div class="trust-wrap trust-wrap--compact">{about_credentials() if filename == "about.html" else compact_credentials("BUSINESS_CREDENTIALS")}</div>'}
+{credential_rail}
   {body}
 {inquiry_band}
 </main>

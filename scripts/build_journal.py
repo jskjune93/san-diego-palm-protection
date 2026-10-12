@@ -241,7 +241,7 @@ def styles(relative_root: str = "./") -> str:
     return f'''  <link rel="icon" href="{relative_root}logo.png" type="image/png">
   <link rel="stylesheet" href="{relative_root}site-assets/site.css?v={asset_version('site-assets/site.css')}">
   <link rel="stylesheet" href="{relative_root}site-assets/credentials.css?v={asset_version('site-assets/credentials.css')}">
-  <link rel="stylesheet" href="{relative_root}site-assets/journal.css">'''
+  <link rel="stylesheet" href="{relative_root}site-assets/journal.css?v={asset_version('site-assets/journal.css')}">'''
 
 
 def header(relative_root: str = "./") -> str:
