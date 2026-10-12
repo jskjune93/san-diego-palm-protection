@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from hashlib import sha256
 import argparse
 import re
 import sys
@@ -15,7 +16,8 @@ from business_credentials import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-STYLE_LINK = '<link rel="stylesheet" href="./site-assets/credentials.css">'
+CREDENTIAL_STYLE_VERSION = sha256((ROOT / 'site-assets/credentials.css').read_bytes()).hexdigest()[:12]
+STYLE_LINK = f'<link rel="stylesheet" href="./site-assets/credentials.css?v={CREDENTIAL_STYLE_VERSION}">'
 BLOCK = render_credential_block()
 COMPACT_BLOCK = render_compact_credential_block()
 CONTACT_BLOCK = render_compact_credential_block("BUSINESS_CREDENTIALS_CONTACT")
@@ -103,6 +105,7 @@ def insert_for_page(path: Path, text: str) -> str:
 
 def update_file(path: Path) -> str:
     text = path.read_text(encoding="utf-8-sig")
+    text = re.sub(r'<link rel="stylesheet" href="\./site-assets/credentials\.css(?:\?[^" ]*)?">', STYLE_LINK, text)
     if STYLE_LINK not in text:
         text = text.replace("</head>", f"{STYLE_LINK}\n</head>", 1)
     text = insert_for_page(path, text)

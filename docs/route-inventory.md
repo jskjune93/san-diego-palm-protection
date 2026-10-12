@@ -48,7 +48,7 @@
 | `/palm-journal/who-owns-your-palm-treatment-company.html` | preserved / regenerated | Palm Journal evidence: Palm Stewardship |
 | `/palm-proof-examples.html` | created | Approved sanitized proof presentation and privacy boundary |
 | `/palm-records-monitoring-verification.html` | restructured | Canonical service overview and inquiry |
-| `/palm-removal-coordination.html` | restructured | Decline, removal, documented loss, and replacement pathway |
+| `/palm-removal-coordination.html` | restructured | Palm and tree removal service inquiry, crew coordination, and recent removal evidence |
 | `/palm-sourcing-installation.html` | restructured | Replacement sourcing and installation planning |
 | `/palm-stewardship-plans.html` | restructured | Protection and treatment planning |
 | `/quarterly-palm-care-san-diego.html` | restructured | Annual mature-palm protection and recurring treatment pathway; URL preserved |

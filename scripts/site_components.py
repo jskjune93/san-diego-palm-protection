@@ -97,7 +97,7 @@ def head(title: str, description: str, path: str, image: str = "Old-Escondido_fu
   <meta name="twitter:image" content="{image_url}">
   <link rel="icon" href="{relative_root}logo.png" type="image/png">
   <link rel="stylesheet" href="{relative_root}site-assets/site.css?v={asset_version('site-assets/site.css')}">
-  <link rel="stylesheet" href="{relative_root}site-assets/credentials.css">
+  <link rel="stylesheet" href="{relative_root}site-assets/credentials.css?v={asset_version('site-assets/credentials.css')}">
   <script type="application/ld+json">{json.dumps(schemas, ensure_ascii=False)}</script>
   <!-- SDPP analytics integration point: existing measurement configuration is preserved; no identifier is invented here. -->"""
 
@@ -239,6 +239,10 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         primary_label = "Report a palm"
         primary_event = "palm-report-map-open"
         secondary_action = ""
+    if filename == "palm-removal-coordination.html":
+        primary_href = f"{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry"
+        primary_label = "Discuss a removal"
+        primary_event = "removal-inquiry-initiation"
     inquiry_band = "" if filename in {"palm-records-monitoring-verification.html", "report-a-palm.html"} else "  " + inquiry(relative_root, residential_page)
     return f"""<!doctype html>
 <html lang="en">
