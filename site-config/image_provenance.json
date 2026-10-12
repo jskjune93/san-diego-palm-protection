@@ -1267,6 +1267,97 @@
       "source_basis": "Original SDPP map rendered from reconciled customer records and public San Diego County GIS boundaries. Owner requested publication October 3, 2026.",
       "publication_decision": "approved_public",
       "presentation_risk": "Generalized customer locations only; no customer identities or street addresses. Dots do not indicate infestation or treatment outcomes. Public GIS sources credited in article."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/bismarck-before-removal.webp": {
+      "sha256": "f57bbfaddfec812b481d74e77735f34063544ed4cb3d72dc5003b2e36634f6fa",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_074341.jpg",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/damaged-leaf-bases.webp": {
+      "sha256": "65b922d98f17caee7d1df8e0605f6927e2b1b66397f0604572672e27392c7588",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_074117.jpg",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/fibrous-weevil-cocoon.webp": {
+      "sha256": "18204282c46ef46758cd3e096b062f26e41c8a22fd5cef79cfa2100e90e68daf",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_075808.jpg",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/damaged-palm-tissue.webp": {
+      "sha256": "ff1df0c629e23d31b2837c9bdd9c7597f6afd457b70304fffb603f90b354a0a2",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_075901.jpg",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/removal-in-progress.webp": {
+      "sha256": "145b876f66e4e9a8cce353100c8259406050c586350579d278acfac65daa7384",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_082108.jpg",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/palm-and-damage.mp4": {
+      "sha256": "42e7a48f5adc7d807454e0a056f46ef78de98ae648e0cc54a137fb4979fe5c36",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_080157.mp4",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/palm-and-damage-poster.webp": {
+      "sha256": "411d00dc44f4540b4028182fc9b7bd1e9ba0b563e1318bf35e13929e057cb98d",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_080157.mp4",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/palm-down.mp4": {
+      "sha256": "f72180d7ca4513bf59db9f43e4ed7d0c9f9df1b451f40dea40a26f84a2ae25cb",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_082900.mp4",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/palm-down-poster.webp": {
+      "sha256": "da87cfbef7793240002f84a12152def2392aff3d13c36439217d5d61b5cd2fa1",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_082900.mp4",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/inside-the-trunk.mp4": {
+      "sha256": "29cb7f9aa931fc561d7389cefad3cecaa085e27672a63e144fcb57097961d7f3",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_092043.mp4",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/inside-the-trunk-poster.webp": {
+      "sha256": "dc58cfc732fbed7172cf42cb09514dbd8dbb6e137bf9d9bfb92c48069e087997",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_092043.mp4",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/weevil-larva.mp4": {
+      "sha256": "648f20f1872d19371a83d0db39044a8f5d261fb8c06cf3e75d6872363a9ccb47",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_092219.mp4",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/palm-journal/fairbanks-ranch-bismarck-palm-removal/weevil-larva-poster.webp": {
+      "sha256": "a63a66f2a913bd0d1d6e3f4a1e7a80a3abaaf1af7755ba966d6af3ffdf98c135",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_092219.mp4",
+      "publication_decision": "approved_original",
+      "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
     }
   },
   "approved_derivative_sources": {
@@ -1440,18 +1531,60 @@
     }
   },
   "same_source_photo_groups": [
-    ["images/field-gallery/cidp-estate-full-landscape.webp", "images/field-gallery/cidp-estate-full.webp", "images/field-gallery/september-complete-crown.webp"],
-    ["images/field-gallery/cidp-estate-records-banner.webp", "mature-cidp-estate.jpg"],
-    ["images/field-gallery/cidp-estate-wide-landscape.webp", "images/field-gallery/september-property-and-palm.webp"],
-    ["images/field-gallery/cidp-estate-property-landscape.webp", "images/field-gallery/cidp-estate-landscape.webp"],
-    ["images/old-escondido-urban-forest-documentation/old-escondido-ufmp-01.jpg", "journal-assets/the-palms-that-complete-old-escondidos-historic-homes/02-old-escondido-cidp-streetscape.webp", "journal-assets/the-palms-that-complete-old-escondidos-historic-homes/07-old-escondido-cidp-detail.webp"],
-    ["images/old-escondido-urban-forest-documentation/old-escondido-ufmp-03.jpg", "journal-assets/when-sapw-became-local/04-june-16-specimen-profiles.jpg", "old-escondido-multiple-adult-weevils.jpg"],
-    ["images/sapw-gallery/weevil-2dac4c257c6a.webp", "old-escondido-multiple-adult-weevils.jpg"],
-    ["images/sapw-gallery/weevil-593657b37b20.webp", "journal-assets/when-sapw-became-local/01-june-13-first-adult.jpg"],
-    ["images/sapw-gallery/weevil-59bf94b98116.webp", "old-escondido-adult-palm-weevil-closeup.jpg"],
-    ["images/sapw-gallery/weevil-67b1671d152d.webp", "journal-assets/when-sapw-became-local/02-june-13-jar-context.jpg"],
-    ["images/sapw-gallery/weevil-93cbe8562fe9.webp", "old-escondido-adult-palm-weevil-topview.jpg"],
-    ["images/sapw-gallery/weevil-ad6cf6fc14f8.webp", "journal-assets/when-sapw-became-local/03-june-16-six-adults.jpg"],
-    ["images/old-escondido-urban-forest-documentation/old-escondido-ufmp-04.jpg", "images/las-palmas/03-subject-identification-20260710-193311.jpg"]
+    [
+      "images/field-gallery/cidp-estate-full-landscape.webp",
+      "images/field-gallery/cidp-estate-full.webp",
+      "images/field-gallery/september-complete-crown.webp"
+    ],
+    [
+      "images/field-gallery/cidp-estate-records-banner.webp",
+      "mature-cidp-estate.jpg"
+    ],
+    [
+      "images/field-gallery/cidp-estate-wide-landscape.webp",
+      "images/field-gallery/september-property-and-palm.webp"
+    ],
+    [
+      "images/field-gallery/cidp-estate-property-landscape.webp",
+      "images/field-gallery/cidp-estate-landscape.webp"
+    ],
+    [
+      "images/old-escondido-urban-forest-documentation/old-escondido-ufmp-01.jpg",
+      "journal-assets/the-palms-that-complete-old-escondidos-historic-homes/02-old-escondido-cidp-streetscape.webp",
+      "journal-assets/the-palms-that-complete-old-escondidos-historic-homes/07-old-escondido-cidp-detail.webp"
+    ],
+    [
+      "images/old-escondido-urban-forest-documentation/old-escondido-ufmp-03.jpg",
+      "journal-assets/when-sapw-became-local/04-june-16-specimen-profiles.jpg",
+      "old-escondido-multiple-adult-weevils.jpg"
+    ],
+    [
+      "images/sapw-gallery/weevil-2dac4c257c6a.webp",
+      "old-escondido-multiple-adult-weevils.jpg"
+    ],
+    [
+      "images/sapw-gallery/weevil-593657b37b20.webp",
+      "journal-assets/when-sapw-became-local/01-june-13-first-adult.jpg"
+    ],
+    [
+      "images/sapw-gallery/weevil-59bf94b98116.webp",
+      "old-escondido-adult-palm-weevil-closeup.jpg"
+    ],
+    [
+      "images/sapw-gallery/weevil-67b1671d152d.webp",
+      "journal-assets/when-sapw-became-local/02-june-13-jar-context.jpg"
+    ],
+    [
+      "images/sapw-gallery/weevil-93cbe8562fe9.webp",
+      "old-escondido-adult-palm-weevil-topview.jpg"
+    ],
+    [
+      "images/sapw-gallery/weevil-ad6cf6fc14f8.webp",
+      "journal-assets/when-sapw-became-local/03-june-16-six-adults.jpg"
+    ],
+    [
+      "images/old-escondido-urban-forest-documentation/old-escondido-ufmp-04.jpg",
+      "images/las-palmas/03-subject-identification-20260710-193311.jpg"
+    ]
   ]
 }

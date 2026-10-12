@@ -369,7 +369,7 @@ def main() -> int:
     old_escondido_text = (ROOT / "old-escondido-palm-preservation.html").read_text(encoding="utf-8-sig")
     if "./report-a-palm.html" not in old_escondido_text:
         errors.append("Old Escondido initiative does not link to Report a Palm")
-    if "Share a palm observation or dated photograph." not in index_text:
+    if "Report a palm on the community map." not in index_text:
         errors.append("Palm Journal is missing contribution language")
     article_pages = [
         (ROOT / "palm-journal" / entry["slug"] / "index.html")
@@ -379,7 +379,7 @@ def main() -> int:
         if entry.get("status") == "published" and entry.get("page")
     ]
     for article in article_pages:
-        if "Share a palm observation or dated photograph." not in article.read_text(encoding="utf-8-sig"):
+        if "Report a palm on the community map." not in article.read_text(encoding="utf-8-sig"):
             errors.append(f"journal article missing standardized contribution footer: {article.name}")
     if required_current_scope not in homepage_text or required_qualified_insured_scope not in records_text:
         errors.append("current stewardship offer and credential summary are not consistently identified")

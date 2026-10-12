@@ -1,5 +1,31 @@
 [
   {
+    "slug": "fairbanks-ranch-bismarck-palm-removal",
+    "title": "The Bismarck Palm Came Down Today",
+    "date": "2026-10-11",
+    "modified_date": "2026-10-11",
+    "date_label": "Fairbanks Ranch | October 11, 2026",
+    "location": "Fairbanks Ranch",
+    "category": "Documented Loss",
+    "classification": "Documented Loss",
+    "topic": "SDPP-handled removal of a weevil-infested Bismarck palm",
+    "excerpt": "SDPP handled the removal of this weevil-infested Bismarck palm in Fairbanks Ranch. The photographs and videos show the palm, the removal, and what we found inside.",
+    "page": true,
+    "substantial": true,
+    "review": "Owner requested publication on October 11, 2026 and confirmed SDPP handled removal of the infected Bismarck. Media reviewed from the same-day field record. No customer name or street address published. Species-level laboratory confirmation is not claimed.",
+    "related": [
+      "las-palmas-no-reply-then-the-saws",
+      "the-palm-is-only-part-of-the-site",
+      "when-sapw-became-local"
+    ],
+    "legacy_anchor": "fairbanks-ranch-bismarck-palm-removal",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/fairbanks-ranch-bismarck-palm-removal.html",
+    "primary_image": "./images/palm-journal/fairbanks-ranch-bismarck-palm-removal/bismarck-before-removal.webp",
+    "primary_image_alt": "Bismarck palm with silver fan leaves and damaged lower leaf bases before SDPP-handled removal",
+    "gallery_images": []
+  },
+  {
     "slug": "do-i-need-to-spray-the-crown",
     "title": "Do I Need to Spray the Crown?",
     "date": "2026-10-05",
