@@ -96,6 +96,7 @@ def head(title: str, description: str, path: str, image: str = "Old-Escondido_fu
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{escape(title)}</title>
   <meta name="description" content="{escape(description)}">
+{('<meta name="google-site-verification" content="j22OLD5tPSCDJbZptb41c_NojwR6N0oC3p0H2yoK0Ck">' if path == 'index.html' else '')}
   <meta name="business-status" content="{escape(credential["status_label"])}">
   <meta name="business-credentials" content="{escape(credential["licensing_statement"])}">
   <link rel="canonical" href="{canonical}">
