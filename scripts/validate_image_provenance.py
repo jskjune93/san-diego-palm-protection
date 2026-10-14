@@ -108,6 +108,11 @@ def main() -> int:
     }
     for relative, pages in sorted(visible_usage.items()):
         record = approved.get(relative, {})
+        # The owner requested this existing case evidence beside the homepage
+        # offer. Retain its original Field Work context; permit only these two
+        # placements, not a general exemption for repeated owner photography.
+        if relative == "images/field-gallery/john-botanic-fieldwork.webp" and set(pages) <= {"index.html", "palm-proof-examples.html"}:
+            continue
         if relative in duplicate_exceptions or record.get("classification") != "confirmed_original_sdpp":
             continue
         if len(pages) > 1:
