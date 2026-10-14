@@ -61,14 +61,26 @@ def head(title: str, description: str, path: str, image: str = "Old-Escondido_fu
         "name": title.split(" | ")[0],
         "description": description,
         "url": canonical,
-        "isPartOf": {"@type": "WebSite", "name": "San Diego Palm Protection", "url": BASE_URL},
+        "isPartOf": {"@type": "WebSite", "@id": BASE_URL + "/#website", "name": "San Diego Palm Protection", "alternateName": "SDPP", "url": BASE_URL},
         "publisher": {
             "@type": "Organization",
+            "@id": BASE_URL + "/#business",
             "name": "San Diego Palm Protection",
             "url": BASE_URL,
             "description": credential["licensing_statement"],
         },
     }]
+    if path == "index.html":
+        schemas.extend([
+            {"@context": "https://schema.org", "@type": "WebSite", "@id": BASE_URL + "/#website",
+             "url": BASE_URL + "/", "name": "San Diego Palm Protection", "alternateName": "SDPP"},
+            {"@context": "https://schema.org", "@type": "LocalBusiness", "@id": BASE_URL + "/#business",
+             "name": "San Diego Palm Protection", "alternateName": "SDPP", "legalName": "San Diego Palm Protection LLC",
+             "url": BASE_URL + "/", "logo": BASE_URL + "/logo.png", "image": image_url,
+             "telephone": "+1-262-492-3135", "email": EMAIL,
+             "description": description, "areaServed": ["San Diego County", "North County San Diego", "Escondido"],
+             "founder": {"@type": "Person", "name": "John Krause", "url": BASE_URL + "/about.html"}}
+        ])
     if path != "index.html":
         schemas.append({
             "@context": "https://schema.org",
@@ -167,7 +179,7 @@ def inquiry(relative_root: str = "./", residential_primary: bool = False) -> str
         if residential_primary else
         "Tell me about the property, the palms, and what you are responsible for. I work with managed palm portfolios, large estates, and homeowners protecting important mature palms."
     )
-    primary = f'<a class="button" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Request a Baseline</a>'
+    primary = f'<a class="button" data-conversion="organization-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#organization-inquiry">Discuss Your Palm Portfolio</a>'
     secondary = f'<a class="button button-quiet" data-conversion="homeowner-inquiry-initiation" href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Homeowner Inquiry</a>'
     if residential_primary:
         primary, secondary = secondary.replace("button button-quiet", "button").replace("Homeowner Inquiry", "Request a Palm Assessment"), primary.replace('class="button"', 'class="button button-quiet"')
@@ -186,6 +198,7 @@ def footer(relative_root: str = "./", residential_primary: bool = False) -> str:
     <div><h2>Services</h2><a href="{relative_root}palm-records-monitoring-verification.html">All palm services</a><a href="{relative_root}south-american-palm-weevil-treatment-san-diego.html">Palm weevil prevention &amp; treatment</a><a href="{relative_root}quarterly-palm-care-san-diego.html">Recurring stewardship</a><a href="{relative_root}urban-forest-palm-documentation.html">Urban forest support</a></div>
     <div><h2>Resources</h2><a href="{relative_root}sapw.html">SAPW &amp; CIDP Photos</a><a href="{relative_root}about.html">About</a><a href="{relative_root}palm-proof-examples.html">Field work</a><a href="{relative_root}palm-journal-new.html">Palm Journal</a><a href="{relative_root}palm-faq-san-diego.html">Palm FAQ</a><a href="{relative_root}report-a-palm.html">Report a palm</a></div>
   </div>
+  <p class="footer-service-areas">Based in Old Escondido · Serving North County and San Diego County. <a href="{relative_root}palm-care-escondido.html">Escondido palm care</a> · <a href="{relative_root}palm-care-poway.html">Poway palm care</a> · <a href="{relative_root}palm-care-rancho-santa-fe.html">Rancho Santa Fe palm care</a></p>
   <p class="footer-legal">{licensing_statement}</p>
 </footer>
 <script src="{relative_root}site-assets/site.js?v={asset_version('site-assets/site.js')}" defer></script>
@@ -193,7 +206,7 @@ def footer(relative_root: str = "./", residential_primary: bool = False) -> str:
 
 
 def mobile_contact(relative_root: str = "./", residential_primary: bool = False) -> str:
-    action_label = "Request Assessment" if residential_primary else "Request a Baseline"
+    action_label = "Request Assessment" if residential_primary else "Discuss Your Palms"
     action_anchor = "homeowner-inquiry" if residential_primary else "organization-inquiry"
     action_event = "homeowner-inquiry-initiation" if residential_primary else "organization-inquiry-initiation"
     return f"""<aside class="mobile-contact-bar" aria-label="Quick contact">
@@ -216,7 +229,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         if filename == "residential-palm-assessment.html" else ""
     )
     residential_page = filename in {
-        "index.html", "residential-palm-assessment.html", "sapw.html",
+        "index.html", "residential-palm-assessment.html", "palm-records-monitoring-verification.html", "sapw.html",
         "south-american-palm-weevil-treatment-san-diego.html",
         "palm-stewardship-plans.html", "quarterly-palm-care-san-diego.html",
         "canary-island-date-palm-care-san-diego.html", "palm-care-escondido.html",
@@ -224,7 +237,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     }
     organization_page = not residential_page
     primary_href = f"{relative_root}palm-records-monitoring-verification.html#{'homeowner-inquiry' if residential_page else 'organization-inquiry'}"
-    primary_label = "Request a Palm Assessment" if residential_page else "Request a Baseline"
+    primary_label = "Request a Palm Assessment" if residential_page else "Discuss Your Palm Portfolio"
     primary_event = "homeowner-inquiry-initiation" if residential_page else "organization-inquiry-initiation"
     if filename == "index.html":
         primary_href = f"{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry"

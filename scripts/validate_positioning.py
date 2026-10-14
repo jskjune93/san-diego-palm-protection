@@ -28,7 +28,7 @@ CRITICAL = {
         "preventive sapw treatment",
         "coordinating removals",
         "coordinating replacements",
-        "request a baseline",
+        "discuss your palm portfolio",
     ),
 }
 
