@@ -56,8 +56,46 @@
   const adsDestination = 'AW-18301751378/Wr8pCK6pu4AdENKg-pZE';
   const adsEnabled = ['www.sandiegopalmprotection.com', 'sandiegopalmprotection.com'].includes(location.hostname);
   const adsEvent = function () { window.dataLayer.push(arguments); };
+  // Enhanced measurement is optional and only follows a verified inquiry.
+  async function recordVerifiedInquiryAds(fields, result, transactionId, consent, privacySignal) {
+    if (!adsEnabled || !result.ok || !result.verified ||
+        !['homeowner-inquiry-delivered', 'organization-inquiry-delivered'].includes(result.event)) return;
+    let userData = null;
+    if (consent && privacySignal !== true) {
+      try {
+        const email = String(fields.email || '').trim().toLowerCase();
+        const normalizedEmail = email.replace(/^([^@]+)@(gmail\.com|googlemail\.com)$/, (_, local, domain) => `${local.replaceAll('.', '')}@${domain}`);
+        const hash = async value => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(value)))].map(byte => byte.toString(16).padStart(2, '0')).join('');
+        if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+          userData = { sha256_email_address: await hash(normalizedEmail) };
+          const rawPhone = String(fields.phone || '').trim();
+          const digits = rawPhone.replace(/\D/g, '');
+          const phone = /^\+/.test(rawPhone) ? `+${digits}` :
+            /^\d{10}$/.test(digits) ? `+1${digits}` : /^1\d{10}$/.test(digits) ? `+${digits}` : '';
+          if (/^\+[1-9]\d{10,14}$/.test(phone)) userData.sha256_phone_number = await hash(phone);
+        }
+      } catch { /* Measurement must never prevent a successfully delivered inquiry. */ }
+    }
+    if (userData) {
+      adsEvent('consent', 'update', { ad_user_data: 'granted' });
+      adsEvent('set', 'user_data', userData);
+    }
+    const clearUserData = () => {
+      adsEvent('set', 'user_data', null);
+      adsEvent('consent', 'update', { ad_user_data: 'denied' });
+    };
+    if (!userData) clearUserData();
+    adsEvent('event', 'conversion', {
+      send_to: adsDestination,
+      transaction_id: transactionId,
+      ...(userData ? { event_callback: clearUserData, event_timeout: 2000 } : {}),
+    });
+    if (userData) setTimeout(clearUserData, 2500);
+  }
+  // End enhanced measurement helper.
   if (adsEnabled) {
     window.dataLayer = window.dataLayer || [];
+    adsEvent('consent', 'default', { ad_user_data: 'denied', ad_personalization: 'denied' });
     adsEvent('js', new Date());
     adsEvent('config', 'AW-18301751378', { allow_ad_personalization_signals: false });
     const adsScript = document.createElement('script');
@@ -184,10 +222,8 @@
             if (!response.ok || !result.ok || !result.verified) throw new Error(result.message || 'Delivery could not be confirmed.');
             setStatus(form, result.message, 'success');
             recordConversion(result.event);
-            if (adsEnabled && ['homeowner-inquiry-delivered', 'organization-inquiry-delivered'].includes(result.event)) {
-              // No names, email addresses, phone numbers, or inquiry content are sent.
-              adsEvent('event', 'conversion', { send_to: adsDestination, transaction_id: result.inquiryId || pendingSubmission.id });
-            }
+            await recordVerifiedInquiryAds(fields, result, result.inquiryId || pendingSubmission.id,
+              form.querySelector('[data-ads-measurement]')?.checked === true, navigator.globalPrivacyControl);
             form.reset();
             pendingSubmission = null;
             reset();

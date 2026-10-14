@@ -107,6 +107,7 @@ def inquiry_paths() -> str:
     </div>
     <p class="form-help">Photograph uploads are not enabled. SDPP can request photographs during follow-up.</p>
     <p class="form-help">SDPP uses your information to respond and evaluate the requested service. Your inquiry may include the referring website, landing page, and campaign identifiers to help us understand how you found us.</p>
+    <label class="ads-measurement-choice"><input type="checkbox" data-ads-measurement><span>Allow Google to use a hashed version of my email and phone number to measure SDPP ads. Optional; my inquiry is sent either way. SDPP does not send my name, address, or inquiry message to Google.</span></label>
     <p class="form-help">{explanation}</p>
     <div data-turnstile-container></div>
     <button class="button" type="submit">Submit Homeowner Inquiry</button>
@@ -137,6 +138,7 @@ def inquiry_paths() -> str:
     </div>
     <p class="form-help">Supporting-file uploads are not enabled. SDPP can request photographs or records during follow-up.</p>
     <p class="form-help">SDPP uses your information to respond and evaluate the requested service. Your inquiry may include the referring website, landing page, and campaign identifiers to help us understand how you found us.</p>
+    <label class="ads-measurement-choice"><input type="checkbox" data-ads-measurement><span>Allow Google to use a hashed version of my email and phone number to measure SDPP ads. Optional; my inquiry is sent either way. SDPP does not send my name, address, or inquiry message to Google.</span></label>
     <p class="form-help">{explanation}</p>
     <div data-turnstile-container></div>
     <button class="button" type="submit">Request a Baseline</button>
