@@ -151,3 +151,14 @@ def render_about_credential_block() -> str:
 
 def footer_line() -> str:
     return escape(public_credentials()["licensing_statement"])
+
+
+def government_buyer_block() -> str:
+    status = load_business_status()
+    cert = status["state_certification"]
+    return f'''<section class="section section-tint" id="government-buyers" aria-labelledby="government-buyers-heading">
+  <div class="section-intro"><p class="eyebrow">Government &amp; institutional services</p><h2 id="government-buyers-heading">A palm specialist for your property or project.</h2><p>I work directly with the palms: reviewing visible condition, carrying out appropriate licensed treatment, and keeping dated photographs and service records. Send me the site, palm count, required work and procurement schedule.</p></div>
+  <div class="service-lines"><article><h3>California certified</h3><p>{escape(cert["legal_name"])}<br>{escape(cert["programs"])}<br>Certification ID {escape(cert["certification_id"])}<br>Approved through {escape(cert["expires"])}</p><p><a href="https://caleprocure.ca.gov/pages/PublicSearch/supplier-search.aspx">Verify in Cal eProcure</a> using the certification ID.</p></article><article><h3>What I perform</h3><p>Palm assessments, visible-condition monitoring, photographic records, preventive SAPW protection and appropriate pesticide treatment within the agreed Category B scope.</p><p>When removal, pruning or replacement needs another contractor, I can help coordinate the next step. The proposal identifies who performs each part.</p></article><article><h3>Location and availability</h3><p>{escape(status["government_service_area"])}</p><p>Contact John Krause: <a href="mailto:sandiegopalmprotection@gmail.com">sandiegopalmprotection@gmail.com</a> or <a href="tel:2624923135">262-492-3135</a>.</p></article></div>
+  <div class="button-row"><a class="button" href="./SDPP-Commercial-Palm-Stewardship.pdf" target="_blank" rel="noopener noreferrer">View capability overview <span class="sr-only">(PDF, opens in a new tab)</span></a><a class="button" href="./palm-proof-examples.html">Review Field Work</a><a href="./san-diego-palm-protection-sample-assessment.pdf" target="_blank" rel="noopener noreferrer">View a public documentation example <span class="sr-only">(PDF, opens in a new tab)</span></a></div>
+  <p class="note">{escape(status["operating_scope"]["regulated_work_boundary"])}</p>
+</section>'''

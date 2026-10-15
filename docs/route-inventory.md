@@ -7,7 +7,7 @@
 | `/about.html` | created | Owner identity, qualifications, field process, and trust |
 | `/canary-island-date-palm-care-san-diego.html` | restructured | Species-specific discovery route |
 | `/cidp-risk-checklist.html` | restructured | Educational observation checklist |
-| `/` | restructured | Commercial orientation and three-pillar gateway |
+| `/` | restructured | Commercial orientation, field service, and California-certified government buyer gateway |
 | `/old-escondido-palm-preservation.html` | restructured | Community documentation and exact UFMP context |
 | `/palm-care-escondido.html` | consolidated in place | Escondido local discovery route |
 | `/palm-care-poway.html` | consolidated in place | Poway local discovery route |
@@ -56,7 +56,7 @@
 | `/sapw.html` | restructured | SAPW education, risk, and assessment gateway |
 | `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Treatment-specific discovery route into canonical protection pathway |
 | `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |
-| `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
+| `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support; California certifications, scope, availability, capability overview, and public evidence for buyers |
 
 ## Permanent redirects
 

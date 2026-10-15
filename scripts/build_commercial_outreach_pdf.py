@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from business_credentials import load_business_status
 
 from PIL import Image
 from reportlab.lib.colors import Color, HexColor, white
@@ -83,6 +84,8 @@ def crop_hero() -> Image.Image:
 
 
 def build() -> None:
+    status = load_business_status()
+    cert = status["state_certification"]
     c = canvas.Canvas(str(OUTPUT), pagesize=letter, pageCompression=1)
     c.setTitle("SDPP Commercial Palm Stewardship")
     c.setAuthor("San Diego Palm Protection")
@@ -158,9 +161,9 @@ def build() -> None:
     c.rect(42, 176, 528, 54, fill=1, stroke=0)
     c.setFillColor(white)
     c.setFont("Helvetica-Bold", 12.2)
-    c.drawCentredString(306, 207, "Our goal is to preserve the value of your mature landscape assets.")
+    c.drawCentredString(306, 207, f'{cert["programs"]} | Certification ID {cert["certification_id"]}')
     c.setFont("Helvetica", 9.2)
-    c.drawCentredString(306, 190, "The baseline can stand alone or become the foundation for annual stewardship.")
+    c.drawCentredString(306, 190, f'Approved through {cert["expires"]} | Verify at caleprocure.ca.gov')
 
     c.setFillColor(GOLD)
     c.roundRect(42, 97, 244, 48, 2, fill=1, stroke=0)
@@ -172,7 +175,10 @@ def build() -> None:
     c.drawString(312, 132, "sandiegopalmprotection.com")
     c.setFont("Helvetica", 10)
     c.drawString(312, 115, "Call or text 262-492-3135")
-    c.drawString(312, 99, "San Diego County")
+    c.drawString(312, 99, "John Krause | San Diego County")
+    c.setFont("Helvetica", 7.5)
+    c.drawString(42, 157, "Direct palm treatment and records; removal and other contractor work coordinated under a defined scope.")
+    c.drawString(42, 86, "Other counties: send location and scope to confirm availability. UNSPSC: 70111500, 70111506, 70111508.")
 
     c.setStrokeColor(LINE)
     c.line(42, 77, 570, 77)

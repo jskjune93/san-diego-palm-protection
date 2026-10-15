@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 
 from sapw_gallery import render as render_sapw_gallery
+from business_credentials import government_buyer_block
 from site_components import ROOT, BASE_URL, page, three_pillars, credentials, compact_credentials, INQUIRY, customer_map, species_reference_gallery
 
 UFMP_RESOURCE = json.loads((ROOT / "site-config" / "ufmp_resource.json").read_text(encoding="utf-8"))
@@ -595,7 +596,8 @@ def write_pages() -> None:
             "body": generic_body(filename),
         }
     hero_images = [data["image"] for data in pages.values()]
-    pages["index.html"]["body"] += customer_map()
+    pages["index.html"]["body"] += government_buyer_block() + customer_map()
+    pages["urban-forest-palm-documentation.html"]["body"] = government_buyer_block() + pages["urban-forest-palm-documentation.html"]["body"]
     duplicate_hero_images = sorted({image for image in hero_images if hero_images.count(image) > 1})
     if duplicate_hero_images:
         raise SystemExit(f"Core page hero images must be unique: {', '.join(duplicate_hero_images)}")
