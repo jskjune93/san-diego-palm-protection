@@ -2,25 +2,25 @@
   "schema_version": 1,
   "artifact_id": "journal-customer-map-2026-10-03",
   "product_type": "website_proof_excerpt",
-  "artifact_version": 6,
-  "artifact_fingerprint": "20be6750318c380fb72645c8165fee1a75789dfd0472d0f54e2980683a662b25",
-  "approved_fingerprint": "20be6750318c380fb72645c8165fee1a75789dfd0472d0f54e2980683a662b25",
+  "artifact_version": 7,
+  "artifact_fingerprint": "3047549c896ba25581f7603e17a16b6159c06963b852da61f5da1344f945325a",
+  "approved_fingerprint": "3047549c896ba25581f7603e17a16b6159c06963b852da61f5da1344f945325a",
   "status": "approved",
   "publication_approval": "approved",
   "privacy": "sanitized",
   "publication_target": "website",
   "privacy_scan_passed": true,
-  "approval_basis": "Owner instructed on October 4, 2026 to maintain the original map in place, update it from the master treatment list, and publish the same sanitized map across both homepages and existing SDPP placements. Owner explicitly requested addition of two latest customer locations to the internal and public website maps on October 10, 2026; generalized map only, no identities or addresses.",
+  "approval_basis": "Standing October 4 owner instruction to maintain and publish the existing sanitized treatment-location map following authorized master-workbook updates. October 17 owner confirms Lucy service; no infestation inferred.",
   "export_method": "Direct sanitized editorial export under current explicit owner instruction; no private customer records exported.",
   "content": {
     "title": "Where We Treat for Palm Weevil in San Diego County",
     "article_source": "journal-data/articles/where-we-care-for-palms-october-2026.html",
-    "scope": "16 approximate customer locations. Continuing treatment-location map; no infestation confirmation inferred from treatment."
+    "scope": "17 approximate customer locations. Continuing treatment-location map; no infestation confirmation inferred from treatment."
   },
   "media": [
     {
       "filename": "sdpp-customer-map-2026-10-03.webp",
-      "sha256": "cdb3b99b4b2b7a2ceb1f8060d6514bb02ec879de0c3c47c02ff12c71d87b0a34",
+      "sha256": "d1c8861c74cfa6d3971a713beaa33b49806952e8cf7093f844edc2a63d6acd81",
       "approved_for_public": true
     }
   ]
