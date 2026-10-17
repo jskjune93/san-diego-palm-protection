@@ -1,0 +1,572 @@
+{
+  "date": "2026-10-17",
+  "starting_commit": "9a20152870a2346731acfb677004a1d67407e62a",
+  "scope": "Technical metadata, internal links, index placement, attribution and conversion-path review of all 32 published Journal routes. Contextual reading of the new case and related treatment/stewardship sources; not an independent re-verification of every historical field claim.",
+  "changes": [
+    "32 descriptive distinct search titles; editorial headlines and URLs preserved",
+    "Five targeted descriptions for previously vague article snippets",
+    "John Krause visible byline and Person author schema linked to About",
+    "Modification-date fallback uses publication date, not shared July 11 constant",
+    "Directory-style related links resolve to their real route",
+    "Treatment and stewardship categories link to relevant commercial pages",
+    "Assessment/call actions precede community reporting in article footer",
+    "New sanitized Del Mar Journal entry and capability case at Field Work anchor",
+    "GBP Learn more destination uses a named UTM campaign"
+  ],
+  "primary_guidance": [
+    "https://developers.google.com/search/docs/crawling-indexing/links-crawlable",
+    "https://developers.google.com/search/docs/appearance/structured-data/article",
+    "https://support.google.com/business/answer/7213077?hl=en"
+  ],
+  "validation": {
+    "seo": "PASS: 55 HTML routes and 55 sitemap URLs",
+    "site": "PASS",
+    "proof": "PASS: 5 bundles",
+    "conversion": "PASS",
+    "production_claims": "PASS",
+    "attribution": "PASS",
+    "responsive_checks": 275,
+    "responsive_failures": 0,
+    "sanitized_case_privacy_scan": "PASS",
+    "screenshots": "All 55 routes at five required sizes; representative article and case visually inspected"
+  },
+  "measurement_boundary": "No increased rankings, traffic, inquiries or sales are claimed. Existing acquisition and confirmed-lead tracking are preserved. GBP UTM identifies future campaign visits where measurement is available; no test inquiry sent.",
+  "journal_routes": [
+    {
+      "route": "palm-journal/del-mar-canary-island-date-palm-treatment-fertilization.html",
+      "title": "Del Mar Palm Treatment & Fertilization | SDPP",
+      "description": "A Del Mar Canary Island date palm visit connects treatment, palm-specific fertilizer and a written next step. See SDPP stewardship in practice.",
+      "source_word_count": 360,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/del-mar-canary-island-date-palm-treatment-fertilization.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../canary-island-date-palm-care-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/black-mountain-ranch-bismarck-palm-removal.html",
+      "title": "Bismarck Palm Removal in Black Mountain Ranch | SDPP",
+      "description": "SDPP’s first palm removal was a weevil-infested Bismarck in Black Mountain Ranch. Photos and videos show the work and what we found inside.",
+      "source_word_count": 422,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/black-mountain-ranch-bismarck-palm-removal.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/do-i-need-to-spray-the-crown.html",
+      "title": "Palm Weevil Crown Sprays vs. Systemic Treatment | SDPP",
+      "description": "How crown sprays and systemic treatments differ in South American palm weevil care, and why the palm, site and product label determine the plan.",
+      "source_word_count": 1338,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/do-i-need-to-spray-the-crown.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../sapw.html",
+        "../south-american-palm-weevil-treatment-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/where-we-care-for-palms-october-2026.html",
+      "title": "Palm Weevil Treatment Locations in San Diego County | SDPP",
+      "description": "Where we treat for palm weevil across San Diego County.",
+      "source_word_count": 222,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/where-we-care-for-palms-october-2026.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../sapw.html",
+        "../south-american-palm-weevil-treatment-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/the-palm-is-only-part-of-the-site.html",
+      "title": "Mature Palm Assessment: Crown and Site Conditions | SDPP",
+      "description": "A September SDPP visit shows how the complete palm, crown and surrounding site inform mature palm assessment, treatment decisions and follow-up.",
+      "source_word_count": 455,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/the-palm-is-only-part-of-the-site.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../palm-records-monitoring-verification.html#homeowner-inquiry"
+      ]
+    },
+    {
+      "route": "palm-journal/who-owns-your-palm-treatment-company.html",
+      "title": "Choosing an Owner-Led Palm Treatment Company | SDPP",
+      "description": "Why I would start with a local palm specialist, and what I would ask before hiring a private-equity-backed treatment company.",
+      "source_word_count": 736,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/who-owns-your-palm-treatment-company.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../canary-island-date-palm-care-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/local-is-the-point.html",
+      "title": "Local Palm Care in North County San Diego | SDPP",
+      "description": "Why local continuity matters for mature palm care in North County San Diego: knowing the palms, recording treatment and staying available between visits.",
+      "source_word_count": 537,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/local-is-the-point.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../canary-island-date-palm-care-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/i-have-seen-this-pattern-before.html",
+      "title": "Palm Weevil Prevention Before Visible Decline | SDPP",
+      "description": "John Krause explains why South American palm weevil prevention should begin before visible decline changes the options for a valuable mature palm.",
+      "source_word_count": 785,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/i-have-seen-this-pattern-before.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../palm-records-monitoring-verification.html#homeowner-inquiry"
+      ]
+    },
+    {
+      "route": "palm-journal/september-treatment-day.html",
+      "title": "San Diego Palm Treatment Visits: September Field Notes | SDPP",
+      "description": "A September route through four residential properties: treatment work, the palms being protected, and what I watch between visits.",
+      "source_word_count": 459,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/september-treatment-day.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../sapw.html",
+        "../south-american-palm-weevil-treatment-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/palm-stewardship-solving-the-whole-problem.html",
+      "title": "Palm Stewardship and Relocation Planning in Escondido | SDPP",
+      "description": "One Escondido property needed more than one partial answer. I had to connect identification, treatment, monitoring, and relocation decisions for the owner.",
+      "source_word_count": 262,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/palm-stewardship-solving-the-whole-problem.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../canary-island-date-palm-care-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/when-palms-were-california-gold/index.html",
+      "title": "California Specimen Palms and the Relocation Market | SDPP",
+      "description": "An active San Diego palm-relocation search reveals how Southern California's specimen-palm trade flourished—and why Canary Island date palms are now bei...",
+      "source_word_count": 1121,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/when-palms-were-california-gold/",
+      "has_assessment_action": true,
+      "service_links": [
+        "../../quarterly-palm-care-san-diego.html",
+        "../../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/the-palm-record-outlives-the-palm.html",
+      "title": "Mature Palm Records, Monitoring and Preservation | SDPP",
+      "description": "Dated palm photographs and service history preserve what a mature palm looked like, how it changed and the decisions made before its loss.",
+      "source_word_count": 631,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/the-palm-record-outlives-the-palm.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../palm-records-monitoring-verification.html#homeowner-inquiry"
+      ]
+    },
+    {
+      "route": "palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html",
+      "title": "Canary Island Date Palms at Historic Escondido Homes | SDPP",
+      "description": "The 1896 Albert H. Beach House anchors a photographic walk through the height, symmetry, and permanence mature Canary Island date palms bring to Old Esc...",
+      "source_word_count": 1270,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-living-landmarks.html",
+      "title": "Old Escondido Palms: Living Landscape Landmarks | SDPP",
+      "description": "A dated field walk shows why mature palms are best recorded with the homes, streets, and neighborhood views they help define.",
+      "source_word_count": 321,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-living-landmarks.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/when-sapw-became-local.html",
+      "title": "South American Palm Weevil in Old Escondido: Field Record | SDPP",
+      "description": "A dated owner record connects captured adult palm weevils on June 15 and 16 with an adult observed on one declining Canary Island date palm trunk on Jun...",
+      "source_word_count": 360,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/when-sapw-became-local.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../palm-records-monitoring-verification.html#homeowner-inquiry"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html",
+      "title": "Old Escondido Canary Island Date Palm Baselines | SDPP",
+      "description": "I want a dated record of Old Escondido's mature Canary Island date palms before more crowns change or disappear.",
+      "source_word_count": 368,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-mature-cidps-deserve-a-baseline.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../palm-records-monitoring-verification.html#homeowner-inquiry"
+      ]
+    },
+    {
+      "route": "palm-journal/las-palmas-no-reply-then-the-saws.html",
+      "title": "Las Palmas Canary Island Date Palm Decline and Removal | SDPP",
+      "description": "I photographed the failing crown, sent the pictures, heard nothing, and found a fresh stump two days later.",
+      "source_word_count": 914,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/las-palmas-no-reply-then-the-saws.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/classic-old-escondido-canary-island-date-palm.html",
+      "title": "A Classic Old Escondido Canary Island Date Palm | SDPP",
+      "description": "Why I kept one ordinary November 2025 photograph of a mature Old Escondido palm—and what it will let me compare later.",
+      "source_word_count": 144,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/classic-old-escondido-canary-island-date-palm.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../palm-records-monitoring-verification.html#homeowner-inquiry"
+      ]
+    },
+    {
+      "route": "palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html",
+      "title": "Monitoring a Canary Island Date Palm After Weevil Activity | SDPP",
+      "description": "My own mature CIDP has been treated twice and has not rapidly collapsed. I am watching what happens without pretending to know the ending.",
+      "source_word_count": 164,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../sapw.html",
+        "../south-american-palm-weevil-treatment-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-mexican-fan-palm-curve.html",
+      "title": "Mature Mexican Fan Palms in Old Escondido | SDPP",
+      "description": "A short field note on curved Mexican fan palms and the older landscape character they contribute in Old Escondido.",
+      "source_word_count": 199,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-mexican-fan-palm-curve.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-albert-h-beach-house-palms.html",
+      "title": "Albert H. Beach House Palms in Old Escondido | SDPP",
+      "description": "The 1896 house is recognizable on its own. The mature palms change the entire view from the street.",
+      "source_word_count": 120,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-albert-h-beach-house-palms.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-icons-and-change.html",
+      "title": "Old Escondido Canary Palms: Condition and Change | SDPP",
+      "description": "A full crown, a palm in severe decline, and a street lined with mature CIDPs—all within the same neighborhood walk.",
+      "source_word_count": 313,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-cidp-icons-and-change.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../canary-island-date-palm-care-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-adult-sapw-declining-cidp.html",
+      "title": "Adult Palm Weevil on a Declining Canary Island Date Palm | SDPP",
+      "description": "I recorded an adult South American palm weevil walking up my palm, then kept the claim where the evidence belongs.",
+      "source_word_count": 167,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-adult-sapw-declining-cidp.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../sapw.html",
+        "../south-american-palm-weevil-treatment-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-historic-canary-island-date-palm.html",
+      "title": "Ten Mature Canary Palms on an Old Escondido Street | SDPP",
+      "description": "I do not know the planting date of this palm. I do know it stands among at least ten mature CIDPs in the same part of the street.",
+      "source_word_count": 261,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-historic-canary-island-date-palm.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-palm-weevils.html",
+      "title": "Adult Palm Weevil Captures in Old Escondido | SDPP",
+      "description": "I recovered and photographed several adult palm weevils while monitoring my mature Canary Island date palm.",
+      "source_word_count": 139,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-palm-weevils.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../sapw.html",
+        "../south-american-palm-weevil-treatment-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/poway-old-winery-cidp.html",
+      "title": "Canary Island Date Palms Near Old Winery Road, Poway | SDPP",
+      "description": "The Old Winery Road area has some of the strongest palm landscapes I have found in North County—and visible decline in the same neighborhood.",
+      "source_word_count": 369,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/poway-old-winery-cidp.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/old-escondido-cidp-collection.html",
+      "title": "Old Escondido Canary Island Date Palm Collection | SDPP",
+      "description": "I live among these palms. Once I started counting the mature crowns across Old Escondido, I also began noticing the gaps.",
+      "source_word_count": 573,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-cidp-collection.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../palm-removal-coordination.html"
+      ]
+    },
+    {
+      "route": "palm-journal/grand-ave-old-escondido.html",
+      "title": "Canary Palm Condition on Grand Avenue, Escondido | SDPP",
+      "description": "Grand Avenue is investing in its future while some of the mature palms above the storefronts are visibly failing.",
+      "source_word_count": 201,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/grand-ave-old-escondido.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../canary-island-date-palm-care-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/grand-ave-cidp.html",
+      "title": "Mature Palms in Escondido's Historic District | SDPP",
+      "description": "A resident gave me the blunt version. My photographs from the same walk show full crowns, a fresh stump, and dead palms nearby.",
+      "source_word_count": 177,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/grand-ave-cidp.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../palm-records-monitoring-verification.html#homeowner-inquiry"
+      ]
+    },
+    {
+      "route": "palm-journal/rancho-santa-fe-palm-walk.html",
+      "title": "Rancho Santa Fe Palm Walk: Mature Landscape Observations | SDPP",
+      "description": "A full crown, major canopy loss, a UC monitoring trap, and a hurricane cut—all along one Rancho Santa Fe walk.",
+      "source_word_count": 168,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/rancho-santa-fe-palm-walk.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../palm-records-monitoring-verification.html#homeowner-inquiry"
+      ]
+    },
+    {
+      "route": "palm-journal/healthy-palm-growth.html",
+      "title": "Healthy Palm Growth: Crown and New Frond Observations | SDPP",
+      "description": "One crown is full and balanced. The other has been cut to a few upright fronds. Start with what the photographs actually show.",
+      "source_word_count": 168,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/healthy-palm-growth.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../canary-island-date-palm-care-san-diego.html"
+      ]
+    },
+    {
+      "route": "palm-journal/cidp-assessment-local-palm-health-concerns.html",
+      "title": "Declining Canary Island Date Palms: Field Assessment Notes | SDPP",
+      "description": "Several palms were already in advanced decline. The more important question was what to do about the healthy CIDPs standing nearby.",
+      "source_word_count": 182,
+      "author": {
+        "@type": "Person",
+        "name": "John Krause",
+        "url": "https://www.sandiegopalmprotection.com/about.html"
+      },
+      "canonical": "https://www.sandiegopalmprotection.com/palm-journal/cidp-assessment-local-palm-health-concerns.html",
+      "has_assessment_action": true,
+      "service_links": [
+        "../quarterly-palm-care-san-diego.html",
+        "../canary-island-date-palm-care-san-diego.html"
+      ]
+    }
+  ]
+}

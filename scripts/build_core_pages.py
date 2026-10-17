@@ -293,7 +293,7 @@ PAGES: dict[str, dict] = {
     },
     "palm-records-monitoring-verification.html": {
         "title": "Palm Weevil Treatment & Annual Care | San Diego Palm Protection",
-        "description": "Preventive palm weevil treatment, four scheduled visits, repeat photos and direct care from John Krause. Based in Escondido, serving San Diego County.",
+        "description": "Preventive SAPW treatment for high-value specimens in San Diego. South American palm weevil protection with scheduled visits, photographs and owner-led care.",
         "eyebrow": "Annual preventive treatment in San Diego County", "h1": "Protect valuable palms from SAPW.",
         "lede": "The Annual Mature Palm Protection Program keeps preventive South American palm weevil treatment on schedule throughout the year.",
         "image": "images/field-gallery/cidp-estate-records-banner.webp",
@@ -409,7 +409,8 @@ PAGES: dict[str, dict] = {
         "image": "images/field-gallery/cidp-estate-full-landscape.webp",
         "hero_position": "center 32%",
         "hero_position_mobile": "center 25%",
-        "body": '''<section class="section section-tint" aria-labelledby="field-record-heading">
+        "body": '<section class="section section-tint" id="del-mar-treatment-fertilization-case" aria-labelledby="del-mar-case-heading">\n<div class="section-intro"><p class="eyebrow">Capability case · Del Mar · October 17, 2026</p><h2 id="del-mar-case-heading">Treatment, palm nutrition and a written next step.</h2><p>One Canary Island date palm. One completed visit. A service record the owner can refer to.</p></div>\n<div class="article-shell"><h3>Work completed</h3><p>I treated the palm and applied about nine pounds of PolyPlus Opti Palm fertilizer. The amount is specific to this recorded job; it is not an application recommendation for other palms.</p>\n<h3>How the work stays connected</h3><p>The treatment and fertilizer application are recorded together, with the next recommended treatment date on the invoice. The owner has a record of what was done and a next step. This was a one-time visit, not an annual-plan enrollment or a confirmed return appointment.</p>\n<h3>What this case establishes</h3><p>It demonstrates treatment, palm-specific fertilization, service documentation and follow-up planning. A same-day record does not establish improved growth, corrected deficiency, confirmed infestation or lasting pest protection.</p>\n<p><a class="text-arrow" href="./palm-journal/del-mar-canary-island-date-palm-treatment-fertilization.html">Read the Del Mar treatment and fertilization field note</a></p><p><a href="./quarterly-palm-care-san-diego.html">Explore continuing palm stewardship</a> or <a data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">request a palm assessment</a>.</p></div></section>' +
+        '''<section class="section section-tint" aria-labelledby="field-record-heading">
 <div class="section-intro"><p class="eyebrow">Documented field work</p><h2 id="field-record-heading">Local photographs with explicit evidence boundaries.</h2><p>These images come from approved SDPP field records. Their captions say what the photograph establishes—and what it does not.</p></div>
 <div class="ufmp-photo-grid">
   <figure><img src="./images/field-gallery/john-botanic-fieldwork.webp" alt="John Krause carrying out SDPP field work at San Diego Botanic Garden" loading="lazy" decoding="async"><figcaption>Owner-led SDPP field work in an established botanical collection.</figcaption></figure>

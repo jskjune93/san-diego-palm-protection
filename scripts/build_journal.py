@@ -57,6 +57,7 @@ TOPIC_SECTIONS = [
         "title": "Palm Health, Monitoring & Stewardship",
         "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
         "slugs": [
+            "del-mar-canary-island-date-palm-treatment-fertilization",
             "where-we-care-for-palms-october-2026",
             "the-palm-is-only-part-of-the-site",
             "who-owns-your-palm-treatment-company", "local-is-the-point",
@@ -152,11 +153,11 @@ def display_meta(entry: dict) -> str:
     return date_label
 
 def page_title(entry: dict) -> str:
-    return f"{entry['title']} | SDPP Palm Journal"
+    return entry.get("seo_title") or f"{entry['title']} | SDPP Palm Journal"
 
 
 def meta_description(entry: dict) -> str:
-    text = entry.get("excerpt", "")
+    text = entry.get("meta_description") or entry.get("excerpt", "")
     if len(text) > 155:
         text = text[:152].rstrip() + "..."
     return text
@@ -271,8 +272,8 @@ def json_ld_article(entry: dict) -> str:
         data["image"] = absolutize(entry["primary_image"])
     data.update({
         "datePublished": entry["date"],
-        "dateModified": entry.get("modified_date", MODIFIED_DATE),
-        "author": {"@type": "Organization", "name": "San Diego Palm Protection"},
+        "dateModified": entry.get("modified_date", entry["date"]),
+        "author": {"@type": "Person", "name": "John Krause", "url": f"{BASE_URL}/about.html"},
         "publisher": {"@type": "Organization", "name": "San Diego Palm Protection", "logo": {"@type": "ImageObject", "url": f"{BASE_URL}/logo.png"}},
         "mainEntityOfPage": entry["canonical_url"],
     })
@@ -635,7 +636,8 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     for slug in entry.get("related", []):
         related = entries_by_slug.get(slug)
         if related and related.get("page") and related.get("status") == "published":
-            related_links.append(f'<a href="{journal_relative}{escape(related["slug"])}.html">{escape(related["title"])}</a>')
+            related_suffix = "/" if related.get("directory_route") else ".html"
+            related_links.append(f'<a href="{journal_relative}{escape(related["slug"])}{related_suffix}">{escape(related["title"])}</a>')
     if not related_links:
         related_links.append(f'<a href="{relative_root}palm-journal-new.html">Return to the Palm Journal library</a>')
     category = entry.get("category", "").lower()
@@ -643,7 +645,7 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     topical_links = [
         f'<a href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm health assessment</a>'
     ]
-    if "sapw" in category or "weevil" in category or "weevil" in title_text:
+    if "sapw" in category or "weevil" in category or "weevil" in title_text or "treatment" in category:
         topical_links = [
             f'<a href="{relative_root}sapw.html">South American palm weevil signs and local guidance</a>',
             f'<a href="{relative_root}south-american-palm-weevil-treatment-san-diego.html">South American palm weevil treatment in San Diego</a>',
@@ -652,6 +654,11 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
         topical_links = [
             f'<a href="{relative_root}quarterly-palm-care-san-diego.html">Mature palm stewardship and preservation</a>',
             f'<a href="{relative_root}palm-removal-coordination.html">Palm decline, removal, and replacement coordination</a>',
+        ]
+    elif "stewardship" in category:
+        topical_links = [
+            f'<a href="{relative_root}quarterly-palm-care-san-diego.html">Annual Palm Stewardship Program in San Diego</a>',
+            f'<a href="{relative_root}canary-island-date-palm-care-san-diego.html">Canary Island date palm care and treatment</a>',
         ]
     elif "health" in category or "assessment" in title_text:
         topical_links = [
@@ -672,7 +679,7 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     <nav class="breadcrumb" aria-label="Breadcrumb"><a href="{relative_root}index.html">Home</a> / <a href="{relative_root}palm-journal-new.html">Palm Journal</a> / {escape(entry['title'])}</nav>
     <span class="eyebrow">{escape(entry['category'])}</span>
     <h1>{escape(entry['title'])}</h1>
-    <p class="article-meta">{escape(display_meta(entry))}</p>
+    <p class="article-meta">{escape(display_meta(entry))} · By <a href="{relative_root}about.html">John Krause</a></p>
     <p class="lede">{escape(entry['excerpt'])}</p>
   </div>
 </section>
@@ -691,9 +698,10 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     </section>
   </article>
   <section class="assessment-cta" id="contact">
-    <h2>Seen something similar?</h2>
+    <h2>Need help caring for your palm?</h2>
+    <p>Tell me about the palm, your neighborhood and what has changed.</p>
+    <p><a href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry" data-conversion="homeowner-inquiry-initiation">Request a palm assessment</a> or <a href="tel:2624923135" data-conversion="call">call or text John</a>.</p>
     <p><a href="{relative_root}report-a-palm.html">Report a palm on the community map.</a> Locations are approximate and reports are unverified.</p>
-    <p><a href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm assessment</a> or call/text <a href="tel:2624923135">262-492-3135</a>.</p>
   </section>
 </main>
 {footer(relative_root)}
@@ -789,7 +797,7 @@ def update_sitemap(entries: list[dict]) -> None:
             continue
         url = ET.SubElement(root_el, url_tag)
         ET.SubElement(url, loc_tag).text = loc
-        ET.SubElement(url, lastmod_tag).text = entry.get("modified_date", MODIFIED_DATE)
+        ET.SubElement(url, lastmod_tag).text = entry.get("modified_date", entry["date"])
         ET.SubElement(url, changefreq_tag).text = "monthly"
         ET.SubElement(url, priority_tag).text = "0.70"
     # Explicit content-change dates; never mark every page fresh on each build.

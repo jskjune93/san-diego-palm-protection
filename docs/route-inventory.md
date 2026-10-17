@@ -1,21 +1,23 @@
 # Route inventory and disposition
 
-53 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
+55 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
 | `/about.html` | created | Owner identity, qualifications, field process, and trust |
 | `/canary-island-date-palm-care-san-diego.html` | restructured | Species-specific discovery route |
 | `/cidp-risk-checklist.html` | restructured | Educational observation checklist |
-| `/` | restructured | Commercial orientation, field service, and California-certified government buyer gateway |
+| `/` | restructured | Commercial orientation and three-pillar gateway |
 | `/old-escondido-palm-preservation.html` | restructured | Community documentation and exact UFMP context |
 | `/palm-care-escondido.html` | consolidated in place | Escondido local discovery route |
 | `/palm-care-poway.html` | consolidated in place | Poway local discovery route |
 | `/palm-care-rancho-santa-fe.html` | consolidated in place | Rancho Santa Fe local discovery route |
 | `/palm-faq-san-diego.html` | restructured | Educational decision support |
 | `/palm-journal-new.html` | restructured | Field evidence library and Journal gateway |
+| `/palm-journal/black-mountain-ranch-bismarck-palm-removal.html` | preserved / regenerated | Palm Journal evidence: Documented Loss |
 | `/palm-journal/cidp-assessment-local-palm-health-concerns.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/classic-old-escondido-canary-island-date-palm.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
+| `/palm-journal/del-mar-canary-island-date-palm-treatment-fertilization.html` | preserved / regenerated | Palm Journal evidence: Palm Health & Stewardship |
 | `/palm-journal/do-i-need-to-spray-the-crown.html` | preserved / regenerated | Palm Journal evidence: Protection & Treatment |
 | `/palm-journal/documented-loss/` | restructured | Confirmed-loss collection with attribution boundaries |
 | `/palm-journal/grand-ave-cidp.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
@@ -48,15 +50,15 @@
 | `/palm-journal/who-owns-your-palm-treatment-company.html` | preserved / regenerated | Palm Journal evidence: Palm Stewardship |
 | `/palm-proof-examples.html` | created | Approved sanitized proof presentation and privacy boundary |
 | `/palm-records-monitoring-verification.html` | restructured | Canonical service overview and inquiry |
-| `/palm-removal-coordination.html` | restructured | Palm and tree removal service inquiry, crew coordination, and recent removal evidence |
+| `/palm-removal-coordination.html` | restructured | Decline, removal, documented loss, and replacement pathway |
 | `/palm-sourcing-installation.html` | restructured | Replacement sourcing and installation planning |
 | `/palm-stewardship-plans.html` | restructured | Protection and treatment planning |
 | `/quarterly-palm-care-san-diego.html` | restructured | Annual mature-palm protection and recurring treatment pathway; URL preserved |
-| `/report-a-palm.html` | restructured | Location-only community map reporting gateway |
+| `/report-a-palm.html` | restructured | Permissioned private observation handoff |
 | `/sapw.html` | restructured | SAPW education, risk, and assessment gateway |
 | `/south-american-palm-weevil-treatment-san-diego.html` | consolidated in place | Treatment-specific discovery route into canonical protection pathway |
 | `/specimen-palms-cycads.html` | restructured | Specimen selection and replacement education |
-| `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support; California certifications, scope, availability, capability overview, and public evidence for buyers |
+| `/urban-forest-palm-documentation.html` | created | Municipal, public-agency, institutional, and urban-forest palm documentation support |
 
 ## Permanent redirects
 
@@ -68,5 +70,3 @@
 ## Consolidation policy
 
 Local and species pages retain search/discovery roles but point into the canonical service architecture. They do not define competing service names, navigation, credential wording, or design systems. Superseded audience pages redirect to the matching inquiry on the canonical service page.
-
-| `/palm-journal/black-mountain-ranch-bismarck-palm-removal.html` | created | SDPP-handled Bismarck removal field record with photos and video; documented loss |

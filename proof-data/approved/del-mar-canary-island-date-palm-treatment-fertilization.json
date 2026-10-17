@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "del-mar-treatment-fertilization-2026-10-17",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "27113e0aaff25b89c0a59a4fdbc64ea7b1c228e2d0bbcbcd40cee7c59fea6828",
+  "approved_fingerprint": "27113e0aaff25b89c0a59a4fdbc64ea7b1c228e2d0bbcbcd40cee7c59fea6828",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner explicitly requested publication of today treatment/fertilization Journal, capability case and GBP update on October 17, 2026. Sanitized public text only; no customer identity, precise location, payment details or media published.",
+  "export_method": "Direct sanitized editorial export under current explicit owner instruction; private source records remain outside website.",
+  "content": {
+    "title": "Del Mar Palm Care: Treatment, Fertilizer and Follow-Through",
+    "article_source": "journal-data/articles/del-mar-canary-island-date-palm-treatment-fertilization.html",
+    "case_target": "palm-proof-examples.html#del-mar-treatment-fertilization-case",
+    "scope": "One owner-reported completed treatment and fertilizer application; future results not established."
+  },
+  "media": []
+}

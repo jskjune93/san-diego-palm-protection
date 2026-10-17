@@ -1,5 +1,32 @@
 [
   {
+    "slug": "del-mar-canary-island-date-palm-treatment-fertilization",
+    "title": "Del Mar Palm Care: Treatment, Fertilizer and Follow-Through",
+    "seo_title": "Del Mar Palm Treatment & Fertilization | SDPP",
+    "meta_description": "A Del Mar Canary Island date palm visit connects treatment, palm-specific fertilizer and a written next step. See SDPP stewardship in practice.",
+    "date": "2026-10-17",
+    "modified_date": "2026-10-17",
+    "date_label": "October 17, 2026",
+    "location": "Del Mar, San Diego County",
+    "category": "Palm Health & Stewardship",
+    "classification": "Palm Stewardship",
+    "topic": "Owner-led treatment, palm-specific fertilization and documented follow-up for one Canary Island date palm",
+    "excerpt": "Today I treated a Canary Island date palm in Del Mar, applied palm-specific fertilizer and recorded the next recommended treatment. This is stewardship in practice.",
+    "page": true,
+    "substantial": true,
+    "allow_no_image": true,
+    "review": "Owner requested public Journal, capability case and Google Business Profile update on October 17, 2026. Sanitized editorial account from owner-reported completed work and private service record; no private identity, precise location, payment details or unapproved media exported. Work performed is distinct from any future outcome or annual enrollment.",
+    "related": [
+      "september-treatment-day",
+      "palm-stewardship-solving-the-whole-problem",
+      "the-palm-is-only-part-of-the-site"
+    ],
+    "legacy_anchor": "del-mar-canary-island-date-palm-treatment-fertilization",
+    "status": "published",
+    "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/del-mar-canary-island-date-palm-treatment-fertilization.html",
+    "gallery_images": []
+  },
+  {
     "slug": "black-mountain-ranch-bismarck-palm-removal",
     "title": "SDPP’s First Palm Removal: A Bismarck",
     "date": "2026-10-11",
@@ -23,7 +50,8 @@
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/black-mountain-ranch-bismarck-palm-removal.html",
     "primary_image": "./images/palm-journal/black-mountain-ranch-bismarck-palm-removal/bismarck-before-removal.webp",
     "primary_image_alt": "Bismarck palm with silver fan leaves and damaged lower leaf bases before SDPP-handled removal",
-    "gallery_images": []
+    "gallery_images": [],
+    "seo_title": "Bismarck Palm Removal in Black Mountain Ranch | SDPP"
   },
   {
     "slug": "do-i-need-to-spray-the-crown",
@@ -49,7 +77,9 @@
     "primary_image_alt": "Complete crown of a mature Canary Island date palm photographed from below during a September SDPP field visit",
     "gallery_images": [],
     "classification": "Protection & Treatment",
-    "modified_date": "2026-10-05"
+    "modified_date": "2026-10-05",
+    "seo_title": "Palm Weevil Crown Sprays vs. Systemic Treatment | SDPP",
+    "meta_description": "How crown sprays and systemic treatments differ in South American palm weevil care, and why the palm, site and product label determine the plan."
   },
   {
     "slug": "where-we-care-for-palms-october-2026",
@@ -75,7 +105,8 @@
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/where-we-care-for-palms-october-2026.html",
     "primary_image": "./images/palm-journal/where-we-care-for-palms-october-2026/sdpp-customer-map-2026-10-03.webp",
     "primary_image_alt": "San Diego County map with yellow dots showing SDPP palm weevil treatment locations",
-    "gallery_images": []
+    "gallery_images": [],
+    "seo_title": "Palm Weevil Treatment Locations in San Diego County | SDPP"
   },
   {
     "slug": "the-palm-is-only-part-of-the-site",
@@ -110,7 +141,9 @@
       }
     ],
     "classification": "Field Observation",
-    "modified_date": "2026-09-28"
+    "modified_date": "2026-09-28",
+    "seo_title": "Mature Palm Assessment: Crown and Site Conditions | SDPP",
+    "meta_description": "A September SDPP visit shows how the complete palm, crown and surrounding site inform mature palm assessment, treatment decisions and follow-up."
   },
   {
     "slug": "who-owns-your-palm-treatment-company",
@@ -137,7 +170,8 @@
     "primary_image_alt": "",
     "gallery_images": [],
     "classification": "Palm Stewardship",
-    "modified_date": "2026-09-24"
+    "modified_date": "2026-09-24",
+    "seo_title": "Choosing an Owner-Led Palm Treatment Company | SDPP"
   },
   {
     "slug": "local-is-the-point",
@@ -164,7 +198,9 @@
     "primary_image_alt": "",
     "gallery_images": [],
     "classification": "Palm Stewardship",
-    "modified_date": "2026-09-23"
+    "modified_date": "2026-09-23",
+    "seo_title": "Local Palm Care in North County San Diego | SDPP",
+    "meta_description": "Why local continuity matters for mature palm care in North County San Diego: knowing the palms, recording treatment and staying available between visits."
   },
   {
     "slug": "i-have-seen-this-pattern-before",
@@ -191,7 +227,9 @@
     "primary_image_alt": "",
     "gallery_images": [],
     "classification": "Palm Protection",
-    "modified_date": "2026-09-23"
+    "modified_date": "2026-09-23",
+    "seo_title": "Palm Weevil Prevention Before Visible Decline | SDPP",
+    "meta_description": "John Krause explains why South American palm weevil prevention should begin before visible decline changes the options for a valuable mature palm."
   },
   {
     "slug": "september-treatment-day",
@@ -242,7 +280,8 @@
       }
     ],
     "classification": "Protection & Treatment",
-    "modified_date": "2026-09-20"
+    "modified_date": "2026-09-20",
+    "seo_title": "San Diego Palm Treatment Visits: September Field Notes | SDPP"
   },
   {
     "slug": "palm-stewardship-solving-the-whole-problem",
@@ -281,7 +320,8 @@
       }
     ],
     "classification": "Palm Stewardship",
-    "modified_date": "2026-08-19"
+    "modified_date": "2026-08-19",
+    "seo_title": "Palm Stewardship and Relocation Planning in Escondido | SDPP"
   },
   {
     "slug": "when-palms-were-california-gold",
@@ -309,7 +349,8 @@
     "primary_image_alt": "",
     "gallery_images": [],
     "classification": "Palm Preservation",
-    "modified_date": "2026-08-19"
+    "modified_date": "2026-08-19",
+    "seo_title": "California Specimen Palms and the Relocation Market | SDPP"
   },
   {
     "slug": "the-palm-record-outlives-the-palm",
@@ -335,7 +376,9 @@
     "primary_image_alt": "Mature Canary Island date palms framing an established Old Escondido residence in evening light",
     "gallery_images": [],
     "classification": "Field Documentation",
-    "modified_date": "2026-08-11"
+    "modified_date": "2026-08-11",
+    "seo_title": "Mature Palm Records, Monitoring and Preservation | SDPP",
+    "meta_description": "Dated palm photographs and service history preserve what a mature palm looked like, how it changed and the decisions made before its loss."
   },
   {
     "slug": "the-palms-that-complete-old-escondidos-historic-homes",
@@ -361,7 +404,8 @@
     "primary_image_alt": "Albert H. Beach House in Old Escondido framed by two mature Canary Island date palms",
     "gallery_images": [],
     "classification": "Historic Homes and Landscapes",
-    "modified_date": "2026-07-29"
+    "modified_date": "2026-07-29",
+    "seo_title": "Canary Island Date Palms at Historic Escondido Homes | SDPP"
   },
   {
     "slug": "old-escondido-living-landmarks",
@@ -387,7 +431,8 @@
     "primary_image_alt": "Mature Canary Island date palms rising behind a two-story Old Escondido house",
     "gallery_images": [],
     "classification": "Preservation and Historic Landscapes",
-    "modified_date": "2026-07-28"
+    "modified_date": "2026-07-28",
+    "seo_title": "Old Escondido Palms: Living Landscape Landmarks | SDPP"
   },
   {
     "slug": "when-sapw-became-local",
@@ -413,7 +458,8 @@
     "primary_image_alt": "Adult South American palm weevil photographed from the side after capture in Old Escondido",
     "gallery_images": [],
     "classification": "Owner-Documented Field Record",
-    "modified_date": "2026-07-26"
+    "modified_date": "2026-07-26",
+    "seo_title": "South American Palm Weevil in Old Escondido: Field Record | SDPP"
   },
   {
     "slug": "old-escondido-mature-cidps-deserve-a-baseline",
@@ -439,7 +485,8 @@
     "primary_image_alt": "Mature Canary Island date palms framing an established Old Escondido residence in warm evening light",
     "gallery_images": [],
     "classification": "Civic Documentation",
-    "modified_date": "2026-07-19"
+    "modified_date": "2026-07-19",
+    "seo_title": "Old Escondido Canary Island Date Palm Baselines | SDPP"
   },
   {
     "slug": "las-palmas-no-reply-then-the-saws",
@@ -463,7 +510,8 @@
     "primary_image": "./images/las-palmas/01-property-context-laspalmas-escondido-cidp.jpg",
     "primary_image_alt": "Las Palmas apartment frontage in Old Escondido with mature Canary Island date palms and property signage",
     "gallery_images": [],
-    "classification": "Documented Loss"
+    "classification": "Documented Loss",
+    "seo_title": "Las Palmas Canary Island Date Palm Decline and Removal | SDPP"
   },
   {
     "slug": "classic-old-escondido-canary-island-date-palm",
@@ -486,7 +534,8 @@
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/classic-old-escondido-canary-island-date-palm.html",
     "primary_image": "./images/old-escondido-canary-island-date-palm-residential-baseline-november-2025.jpg",
     "primary_image_alt": "Mature Canary Island date palm in an Old Escondido residential setting with a full green crown and clear trunk structure.",
-    "gallery_images": []
+    "gallery_images": [],
+    "seo_title": "A Classic Old Escondido Canary Island Date Palm | SDPP"
   },
   {
     "slug": "monitoring-mature-cidp-after-palm-weevil-activity",
@@ -518,7 +567,8 @@
         "src": "./images/old-escondido-own-cidp-decline-observation-03.jpg",
         "alt": "Frond and crown decline symptoms on a mature Canary Island date palm in Old Escondido"
       }
-    ]
+    ],
+    "seo_title": "Monitoring a Canary Island Date Palm After Weevil Activity | SDPP"
   },
   {
     "slug": "old-escondido-mexican-fan-palm-curve",
@@ -546,7 +596,8 @@
         "src": "./images/mexican-fan-palm-lean-curve.jpg",
         "alt": "Leaning Mexican fan palm framed by other palms and older neighborhood streetscape in Old Escondido"
       }
-    ]
+    ],
+    "seo_title": "Mature Mexican Fan Palms in Old Escondido | SDPP"
   },
   {
     "slug": "old-escondido-albert-h-beach-house-palms",
@@ -570,7 +621,8 @@
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-albert-h-beach-house-palms.html",
     "primary_image": "./images/old-escondido-albert-h-beach-house-canary-island-date-palms-golden-hour-01.jpg",
     "primary_image_alt": "Albert H. Beach House in Old Escondido framed by mature Canary Island date palms at golden hour",
-    "gallery_images": []
+    "gallery_images": [],
+    "seo_title": "Albert H. Beach House Palms in Old Escondido | SDPP"
   },
   {
     "slug": "old-escondido-cidp-icons-and-change",
@@ -606,7 +658,8 @@
         "src": "./images/multiple-cidp-11th-ave-old-escondido.jpg",
         "alt": "Multiple mature Canary Island Date Palms along a street in Old Escondido, California."
       }
-    ]
+    ],
+    "seo_title": "Old Escondido Canary Palms: Condition and Change | SDPP"
   },
   {
     "slug": "old-escondido-adult-sapw-declining-cidp",
@@ -638,7 +691,8 @@
         "src": "./old-escondido-nearby-mature-cidp-street-context-01.jpg",
         "alt": "Mature Canary Island Date Palm near an Old Escondido street with residential and utility corridor context"
       }
-    ]
+    ],
+    "seo_title": "Adult Palm Weevil on a Declining Canary Island Date Palm | SDPP"
   },
   {
     "slug": "old-escondido-historic-canary-island-date-palm",
@@ -662,7 +716,8 @@
     "canonical_url": "https://www.sandiegopalmprotection.com/palm-journal/old-escondido-historic-canary-island-date-palm.html",
     "primary_image": "./old-historic-canary-island-date-palm-sandiego.jpg",
     "primary_image_alt": "Mature historic Canary Island Date Palm in Old Escondido near other mature palms",
-    "gallery_images": []
+    "gallery_images": [],
+    "seo_title": "Ten Mature Canary Palms on an Old Escondido Street | SDPP"
   },
   {
     "slug": "old-escondido-palm-weevils",
@@ -694,7 +749,8 @@
         "src": "./old-escondido-topview-south-american-palm-weevil-sapw-canary-island-date-palm-cidp.jpg",
         "alt": "Top view of adult palm weevil recovered in Old Escondido"
       }
-    ]
+    ],
+    "seo_title": "Adult Palm Weevil Captures in Old Escondido | SDPP"
   },
   {
     "slug": "poway-old-winery-cidp",
@@ -754,7 +810,8 @@
         "src": "./several-healthy-cidp-poway-and-one-dead-cidp.jpg",
         "alt": "Several healthy Canary Island Date Palms and one dead palm in Poway"
       }
-    ]
+    ],
+    "seo_title": "Canary Island Date Palms Near Old Winery Road, Poway | SDPP"
   },
   {
     "slug": "las-palmas-cidp",
@@ -837,7 +894,8 @@
         "src": "./old_escondido-mature-cidp.jpg",
         "alt": "Mature Canary Island Date Palm above Juniper Village in Old Escondido"
       }
-    ]
+    ],
+    "seo_title": "Old Escondido Canary Island Date Palm Collection | SDPP"
   },
   {
     "slug": "grand-ave-old-escondido",
@@ -873,7 +931,8 @@
         "src": "./grand2.jpg",
         "alt": "Grand Avenue revitalization in Old Escondido"
       }
-    ]
+    ],
+    "seo_title": "Canary Palm Condition on Grand Avenue, Escondido | SDPP"
   },
   {
     "slug": "grand-ave-cidp",
@@ -909,7 +968,8 @@
         "src": "./grape4.jpg",
         "alt": "Dead Canary Island Date Palms in Escondido Historic District"
       }
-    ]
+    ],
+    "seo_title": "Mature Palms in Escondido's Historic District | SDPP"
   },
   {
     "slug": "rancho-santa-fe-palm-walk",
@@ -945,7 +1005,8 @@
         "src": "./RSF2.jpg",
         "alt": "Over-trimmed palm in Rancho Santa Fe"
       }
-    ]
+    ],
+    "seo_title": "Rancho Santa Fe Palm Walk: Mature Landscape Observations | SDPP"
   },
   {
     "slug": "healthy-palm-growth",
@@ -973,7 +1034,8 @@
         "src": "./RSF2.jpg",
         "alt": "Over-trimmed Canary Island Date Palm with sparse crown"
       }
-    ]
+    ],
+    "seo_title": "Healthy Palm Growth: Crown and New Frond Observations | SDPP"
   },
   {
     "slug": "cidp-assessment-local-palm-health-concerns",
@@ -1013,6 +1075,7 @@
         "src": "./exhibit_1.jpg",
         "alt": "Healthy Canary Island Date Palms near declining palms in a high-risk setting"
       }
-    ]
+    ],
+    "seo_title": "Declining Canary Island Date Palms: Field Assessment Notes | SDPP"
   }
 ]
