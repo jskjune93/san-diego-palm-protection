@@ -350,13 +350,13 @@ def render_index(entries: list[dict]) -> None:
 <section class="hero">
   <div class="hero-inner">
     <span class="eyebrow">Palm Journal</span>
-    <h1>Choose What You Want to Read About</h1>
+    <h1>The Palm Journal</h1>
     <p class="lede">Essays, field notes, and local records about mature palms, South American palm weevil, stewardship, landscape history, and loss across San Diego County.</p>
   </div>
 </section>
 <main id="main" class="journal-index">
   <section class="journal-start" aria-labelledby="start-here-heading">
-    <span class="category-label">Start here</span>
+    <span class="category-label">Latest field note</span>
     <h2 id="start-here-heading"><a href="{article_href(latest)}">{escape(latest['title'])}</a></h2>
     <p>{escape(latest['excerpt'])}</p>
     <p class="journal-start-links"><a href="./palm-journal/when-sapw-became-local.html">How SAPW became local</a><a href="./palm-journal/when-palms-were-california-gold/">When palms were California gold</a></p>
@@ -373,7 +373,7 @@ def render_index(entries: list[dict]) -> None:
   <section class="journal-archive-link" aria-labelledby="older-journal-heading">
     <p class="category-label">The earlier notebook</p>
     <h2 id="older-journal-heading">Older Journal Posts</h2>
-    <p>The earlier field notes and neighborhood palm observations remain available without crowding the current Journal.</p>
+    <p>Return to the earlier field notes, neighborhood observations and dated photographs. These posts remain part of the continuing record.</p>
     <p><a class="read-link" href="./palm-journal/older-posts.html">Browse older posts</a></p>
   </section>
 
@@ -381,9 +381,10 @@ def render_index(entries: list[dict]) -> None:
   <p class="journal-contribution"><a href="./report-a-palm.html">Report a palm on the community map.</a> Locations are approximate and reports are unverified.</p>
 
   <section class="assessment-cta" id="contact">
-    <h2>Seen Something Worth Recording?</h2>
-    <p>Choose a location on the community map. No name, email, or photo needed. Reports appear publicly as unverified observations.</p>
-    <p><a href="./report-a-palm.html">Report a palm</a> or <a href="./palm-records-monitoring-verification.html#request">request private help with your own palm</a>.</p>
+    <h2>Have a question about your own palm?</h2>
+    <p>Send me your city, the number of palms and what you have noticed. I can explain the next step and discuss an on-site assessment.</p>
+    <p><a data-conversion="homeowner-inquiry-initiation" href="./palm-records-monitoring-verification.html#homeowner-inquiry">Request a Palm Assessment</a> or <a data-conversion="call" href="tel:2624923135">call John</a>. To share photographs, <a href="sms:+12624923135">text John</a> or <a href="mailto:sandiegopalmprotection@gmail.com">email me</a>.</p>
+    <p>For a public neighborhood observation, <a href="./report-a-palm.html">report a palm on the community map</a>. Reports are public and unverified; contact me privately about service.</p>
   </section>
 </main>
 {footer('./')}
@@ -645,7 +646,12 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
     topical_links = [
         f'<a href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry">Request a palm health assessment</a>'
     ]
-    if "sapw" in category or "weevil" in category or "weevil" in title_text or "treatment" in category:
+    if entry['slug'] == 'black-mountain-ranch-bismarck-palm-removal':
+        topical_links = [
+            f'<a href="{relative_root}palm-removal-coordination.html">Palm removal coordination</a>',
+            f'<a href="{relative_root}palm-sourcing-installation.html">Replacement palm sourcing and establishment</a>',
+        ]
+    elif "sapw" in category or "weevil" in category or "weevil" in title_text or "treatment" in category:
         topical_links = [
             f'<a href="{relative_root}sapw.html">South American palm weevil signs and local guidance</a>',
             f'<a href="{relative_root}south-american-palm-weevil-treatment-san-diego.html">South American palm weevil treatment in San Diego</a>',
@@ -699,7 +705,7 @@ def render_article(entry: dict, entries_by_slug: dict[str, dict]) -> None:
   </article>
   <section class="assessment-cta" id="contact">
     <h2>Need help caring for your palm?</h2>
-    <p>Tell me about the palm, your neighborhood and what has changed.</p>
+    <p>Tell me your city, the number of palms and what has changed. For photographs, <a href="sms:+12624923135">text John</a> or <a href="mailto:sandiegopalmprotection@gmail.com">email me</a>. A whole-palm view and a closer crown view are useful starting points; photographs do not replace an on-site assessment.</p>
     <p><a href="{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry" data-conversion="homeowner-inquiry-initiation">Request a palm assessment</a> or <a href="tel:2624923135" data-conversion="call">call or text John</a>.</p>
     <p><a href="{relative_root}report-a-palm.html">Report a palm on the community map.</a> Locations are approximate and reports are unverified.</p>
   </section>

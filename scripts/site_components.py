@@ -244,7 +244,7 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
         primary_href = f"{relative_root}palm-records-monitoring-verification.html#homeowner-inquiry"
         primary_label = "Request a Palm Assessment"
         primary_event = "homeowner-inquiry-initiation"
-        secondary_action = f'<a class="button button-quiet" href="{relative_root}palm-proof-examples.html">View Field Work</a>'
+        secondary_action = f'<a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a><a class="text-link" href="{relative_root}palm-proof-examples.html">View Field Work</a>'
     else:
         secondary_action = f'<a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a>'
     report_page = filename == "report-a-palm.html"
