@@ -1,6 +1,6 @@
 # SDPP inquiry attribution
 
-Updated October 1, 2026.
+Updated October 18, 2026.
 
 The delivered inquiry email contains an inquiry reference, the customer's optional discovery source and detail, and available browser-reported first/latest visit evidence. It retains landing paths, referring hostnames, campaign source/medium/name and Google click identifiers. Full referring URLs, search queries and arbitrary URL parameters are not retained. Evidence lasts within the browser tab for up to 30 days; blocked storage and missing referrers do not prevent submission. This does not reconstruct earlier leads.
 
@@ -25,3 +25,13 @@ This is an unsent template. No automated review messages are configured.
 ## Campaign test
 
 Baseline: September 1–30, 2026: 66 impressions, 5 clicks, $23.10 spend, $4.62 average CPC, zero recorded ad leads. Inspect and adjust the existing maximum CPC limit while keeping the daily budget and October 20 end date. Record the actual old/new limit and change date after saving in Google Ads. Compare subsequent search terms, cost, delivered inquiries and collected revenue; five clicks are insufficient to establish a reliable acquisition cost.
+
+## October 18 measurement and distribution improvement
+
+The prepared website update also retains allowlisted `utm_content` in first/latest visit evidence and delivered inquiry emails. This identifies the distributed asset (for example `del_mar_handout`), without retaining arbitrary URL fields or personal information. Internal links do not add UTMs or overwrite the original acquisition source.
+
+Use the Lead Outcomes worksheet in the existing SDPP master workbook for the inquiry-to-paid trail. It is a marketing view, not another revenue ledger; service/payment facts remain owned by Master Schedule, Customer Records and customer documents. An unknown amount is blank, not zero. Keep inquiry IDs, source message IDs and browser source evidence separate from Google Ads attribution. Annual repeat business is recorded only after an actual agreement/payment.
+
+Live October 18 review: October 11-17 Google Ads shows 19 clicks, 196 impressions, $119.60 cost, and two verified-website-inquiry conversions. The conversion action still reports a tag-ping warning; the diagnostics show October 15 as last conversion and October 2 as last event ping. Do not manufacture a live lead or opt-in to clear this warning. Existing offline source-to-payment evidence does not establish platform-attributed revenue, enhanced-data receipt, profitability or a reason to increase budget.
+
+Use external distribution links with `utm_source`, `utm_medium`, `utm_campaign=stewardship_del_mar_202610`, and `utm_content` identifying the handout/post. The October 17 GBP post already links to the case with its own campaign and should not be duplicated. Prepare video from approved media or an owner narration; do not present photographs from another property as this Del Mar visit. No customer records or contact information belong in public assets.

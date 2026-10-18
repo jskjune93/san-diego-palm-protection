@@ -127,7 +127,7 @@ for (const kind of ["homeowner", "organization"]) {
     discovery_source: "Google Maps <test>",
     discovery_detail: "ChatGPT <details>",
     attribution: {
-      first: { at: "2026-10-01T12:00:00.000Z", landing_path: "/quarterly-palm-care-san-diego.html", referrer_host: "www.google.com", gclid: "test-click_123", utm_campaign: "north_county" },
+      first: { at: "2026-10-01T12:00:00.000Z", landing_path: "/quarterly-palm-care-san-diego.html", referrer_host: "www.google.com", gclid: "test-click_123", utm_campaign: "north_county", utm_content: "del_mar_handout" },
       last: { referrer_host: "evil.example/<script>", landing_path: "/?email=private@example.com", utm_source: "private@example.com", unknown: "private-value", gbraid: "test-braid_456" },
     },
   }), res, { fetch: async (url, options) => {
@@ -141,6 +141,7 @@ for (const kind of ["homeowner", "organization"]) {
   assert.equal(res.payload.discovery_source, undefined);
   assert.match(deliveredEmail.text, /Inquiry reference: test_/);
   assert.match(deliveredEmail.text, /first visit — gclid: test-click_123/);
+  assert.match(deliveredEmail.text, /first visit — utm_content: del_mar_handout/);
   assert.match(deliveredEmail.text, /last visit — gbraid: test-braid_456/);
   assert.match(deliveredEmail.html, /ChatGPT &lt;details&gt;/);
   assert.doesNotMatch(deliveredEmail.text, /private@example.com|private-value|evil.example/);

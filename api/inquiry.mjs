@@ -117,6 +117,7 @@ function attributionRows(attribution) {
     utm_source: /^[a-zA-Z0-9_. -]{1,100}$/,
     utm_medium: /^[a-zA-Z0-9_. -]{1,100}$/,
     utm_campaign: /^[a-zA-Z0-9_. -]{1,100}$/,
+    utm_content: /^[a-zA-Z0-9_. -]{1,100}$/,
     gclid: /^[a-zA-Z0-9_-]{1,256}$/,
     gbraid: /^[a-zA-Z0-9_-]{1,256}$/,
     wbraid: /^[a-zA-Z0-9_-]{1,256}$/,

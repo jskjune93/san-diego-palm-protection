@@ -22,7 +22,7 @@ async function scenario({ hostname = 'www.sandiegopalmprotection.com', responseO
     turnstile: { render(element, config) { if (token) config.callback('test-token'); return 'widget'; }, reset() {} },
   };
   const context = {
-    URL, URLSearchParams, Date, console,
+    URL, URLSearchParams, Date, console, navigator: { globalPrivacyControl: false },
     crypto: { randomUUID: () => 'test-uuid-0123456789012345' },
     location: { hostname, pathname: '/inquiry.html', search: '?gclid=testClick', hash: '' },
     sessionStorage: { getItem: () => null, setItem() {} }, window,

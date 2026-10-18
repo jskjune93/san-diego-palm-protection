@@ -33,6 +33,7 @@
       utm_source: sourceLabel(params.get('utm_source')),
       utm_medium: sourceLabel(params.get('utm_medium')),
       utm_campaign: sourceLabel(params.get('utm_campaign')),
+      utm_content: sourceLabel(params.get('utm_content')),
       gclid: clickId(params.get('gclid')),
       gbraid: clickId(params.get('gbraid')),
       wbraid: clickId(params.get('wbraid')),
@@ -46,7 +47,7 @@
     if (saved?.first && saved?.last && age >= 0 && age < attributionLifetime) {
       attribution = saved;
       if (currentSource.referrer_host || currentSource.utm_source || currentSource.utm_medium ||
-          currentSource.utm_campaign || currentSource.gclid || currentSource.gbraid || currentSource.wbraid) {
+          currentSource.utm_campaign || currentSource.utm_content || currentSource.gclid || currentSource.gbraid || currentSource.wbraid) {
         attribution.last = currentSource;
       }
     }
