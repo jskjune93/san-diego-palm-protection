@@ -231,3 +231,6 @@ export async function handleInquiry(request, response, dependencies = {}) {
 export default async function handler(request, response) {
   return handleInquiry(request, response);
 }
+
+// Shared verified-delivery primitives for Jacksonville intake.
+export { configurationReady, verifyTurnstile, rateLimited, json, text, html, validEmail };

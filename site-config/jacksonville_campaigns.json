@@ -1,0 +1,345 @@
+{
+  "legal_entity": "San Diego Palm Protection LLC",
+  "research_date": "2026-10-19",
+  "status": "recommendations_only_not_created_in_google_ads",
+  "volume_status": "24 representative terms checked in SDPP Keyword Planner, Jacksonville city only, Google, all languages, Oct 2025-Sep 2026. Many unavailable/rounded-zero metrics; no local bid ranges returned. See private export and scope metadata.",
+  "geography": [
+    "Jacksonville",
+    "Jacksonville Beach",
+    "Atlantic Beach",
+    "Neptune Beach",
+    "Ponte Vedra Beach",
+    "Nocatee",
+    "St. Johns"
+  ],
+  "settings": {
+    "network": "Google Search only; Search Partners and Display off initially",
+    "location_option": "Presence: people in or regularly in targeted locations",
+    "match_types": [
+      "Exact",
+      "Phrase"
+    ],
+    "bidding": "Start with controlled Manual CPC if available; otherwise Maximize Clicks with owner-selected CPC cap after forecast review. Do not optimize to page visits or phone clicks.",
+    "language": "English initially",
+    "cold_campaign": "Paused until a documented local cold event; reuse JAX_PHC with cold ad group and matching landing-page emphasis",
+    "auto_apply_recommendations": false
+  },
+  "campaigns": [
+    {
+      "id": "JAX_PHC",
+      "daily_budget": 20,
+      "daily_budget_range": [
+        15,
+        25
+      ],
+      "landing_page": "https://www.sandiegopalmprotection.com/jacksonville-palm-health.html",
+      "groups": [
+        {
+          "name": "Declining palm",
+          "priority": 1,
+          "status": "Enabled at launch",
+          "keywords": [
+            "palm tree dying Jacksonville",
+            "sick palm tree Jacksonville",
+            "palm tree diagnosis Jacksonville",
+            "palm crown dying",
+            "palm spear dying"
+          ],
+          "headlines": [
+            "Palm Looking Sick?",
+            "Jacksonville Palm Assessment",
+            "Send Photos to SDPP",
+            "Help for Declining Palms",
+            "Protect Valuable Palms",
+            "Palm Diagnosis Starts Here",
+            "Talk With John at SDPP",
+            "Review Your Palm's Decline"
+          ],
+          "descriptions": [
+            "Send photos and describe the decline. SDPP reviews the next assessment step with you.",
+            "Jacksonville-area inquiries. Local availability and any assessment fee confirmed first.",
+            "Crown damage, yellowing or sudden decline? Start with your palm's history and photos.",
+            "Photo review is not a confirmed diagnosis. Testing or local inspection may be needed."
+          ]
+        },
+        {
+          "name": "Lethal bronzing",
+          "priority": 2,
+          "status": "Enabled at launch",
+          "keywords": [
+            "lethal bronzing Jacksonville",
+            "lethal bronzing palm",
+            "lethal bronzing treatment",
+            "Canary Island date palm dying",
+            "sabal palm dying",
+            "cabbage palm dying"
+          ],
+          "headlines": [
+            "Worried About Palm Bronzing?",
+            "Lethal Bronzing Concerns",
+            "Request a Palm Health Review",
+            "Protect Valuable Healthy Palms",
+            "Send SDPP Your Palm Photos",
+            "Jacksonville Palm Concerns"
+          ],
+          "descriptions": [
+            "Early fruit drop or bronzing fronds? Discuss assessment and diagnostic testing needs.",
+            "SDPP helps review the next step. Symptomatic infected palms are not offered a cure.",
+            "Ask about preventive planning for healthy valuable palms. Local scope confirmed first.",
+            "Florida treatment arrangements require verification before any regulated work."
+          ]
+        },
+        {
+          "name": "Palm specialist",
+          "priority": 3,
+          "status": "Enabled at launch",
+          "keywords": [
+            "palm specialist Jacksonville",
+            "palm tree doctor Jacksonville",
+            "palm tree health service",
+            "palm tree treatment Jacksonville"
+          ],
+          "headlines": [
+            "Palm Health Assessment",
+            "Specialist Palm Review",
+            "Get Answers About Your Palm",
+            "Palm Protection Planning",
+            "Send Photos to SDPP"
+          ],
+          "descriptions": [
+            "A focused review of valuable palms, their history and the decision you need to make.",
+            "Send your location and palm photos. Availability and scope are confirmed before booking.",
+            "Nutrition, pests or site stress may look alike. Review the cause before choosing care.",
+            "San Diego Palm Protection LLC welcomes Northeast Florida palm-health inquiries."
+          ]
+        },
+        {
+          "name": "Crown and palmetto weevil",
+          "priority": 4,
+          "status": "Paused for initial learning",
+          "keywords": [
+            "palmetto weevil",
+            "palm weevil Jacksonville",
+            "beetles in palm tree",
+            "palm crown collapsing",
+            "palm crown damage"
+          ],
+          "headlines": [
+            "Palm Crown Declining?",
+            "Palmetto Weevil Concerns",
+            "Request a Palm Health Review",
+            "Send Photos to SDPP"
+          ],
+          "descriptions": [
+            "Describe crown damage, insects and recent stress. Ask SDPP about the next assessment step.",
+            "Florida palmetto weevil concerns belong in a broader palm-health review."
+          ]
+        },
+        {
+          "name": "Palm nutrition",
+          "priority": 5,
+          "status": "Paused for initial learning",
+          "keywords": [
+            "palm tree yellowing Jacksonville",
+            "palm nutrient deficiency",
+            "palm tree brown tips",
+            "palm fertilizer Jacksonville"
+          ],
+          "headlines": [
+            "Palm Yellowing Despite Care?",
+            "Palm Nutrition Assessment",
+            "Review Weak Palm Growth",
+            "Send Photos to SDPP"
+          ],
+          "descriptions": [
+            "Yellowing, frizzling or poor new growth? Review palm nutrition and maintenance history.",
+            "Tell SDPP what fertilizer was used and what changed. Local assessment scope confirmed."
+          ]
+        },
+        {
+          "name": "Transplant stress",
+          "priority": 6,
+          "status": "Paused for initial learning",
+          "keywords": [
+            "transplanted palm dying",
+            "palm transplant shock",
+            "new palm tree dying"
+          ],
+          "headlines": [
+            "Newly Planted Palm Struggling?",
+            "Review Palm Transplant Stress",
+            "Send Photos to SDPP"
+          ],
+          "descriptions": [
+            "Share planting history, site conditions and photos. Discuss the next assessment step.",
+            "A declining transplant needs a cause review before a treatment decision."
+          ]
+        },
+        {
+          "name": "Cold injury",
+          "priority": 7,
+          "status": "Seasonal paused",
+          "keywords": [
+            "palm freeze damage Jacksonville",
+            "palm spear damage after freeze",
+            "palm tree cold damage"
+          ],
+          "headlines": [
+            "Palm Damaged After a Freeze?",
+            "Review Cold-Injured Palms",
+            "Send SDPP Your Palm Photos"
+          ],
+          "descriptions": [
+            "Describe the cold event and changes in new growth. Ask about a palm-health review.",
+            "Cold injury can have delayed effects. Confirm the next step before major pruning."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JAX_SOURCING",
+      "daily_budget": 15,
+      "daily_budget_range": [
+        10,
+        20
+      ],
+      "landing_page": "https://www.sandiegopalmprotection.com/jacksonville-mature-palm-sourcing.html",
+      "groups": [
+        {
+          "name": "Mature date and specimen",
+          "priority": 1,
+          "status": "Enabled at launch",
+          "keywords": [
+            "mature date palms for sale",
+            "large date palm for sale",
+            "specimen palms for sale",
+            "mature palms Jacksonville",
+            "large date palm Jacksonville",
+            "mature palm supplier"
+          ],
+          "headlines": [
+            "Looking for a Mature Palm?",
+            "Source Large Date Palms",
+            "Mature Palm Sourcing by SDPP",
+            "Tell Us the Size You Need",
+            "Hard-to-Find Specimen Palms",
+            "Jacksonville Project Sourcing",
+            "Request a Specimen Palm Search",
+            "Send Your Palm Requirements"
+          ],
+          "descriptions": [
+            "Tell SDPP the species, size and project location. Availability must be confirmed.",
+            "Sourcing for estates, landscape contractors and commercial projects in Northeast Florida.",
+            "Review purchase, freight, site access and installation needs before committing.",
+            "No confirmed inventory is advertised. Request a project-specific mature palm search."
+          ]
+        },
+        {
+          "name": "Canary and Sylvester",
+          "priority": 2,
+          "status": "Enabled at launch",
+          "keywords": [
+            "Canary Island date palm for sale",
+            "large Sylvester palm for sale",
+            "mature Sylvester palm",
+            "large Phoenix palm",
+            "10 ft clear trunk palm",
+            "15 ft clear trunk date palm",
+            "20 ft date palm"
+          ],
+          "headlines": [
+            "Need a Specific Date Palm?",
+            "Canary Island Palm Sourcing",
+            "Mature Sylvester Palm Search",
+            "Specify Clear-Trunk Height",
+            "Tell SDPP Your Project Needs"
+          ],
+          "descriptions": [
+            "Send species, quantity, clear-trunk height, budget and timing for a sourcing review.",
+            "Candidate palms, freight and local installation partners must be confirmed.",
+            "Compare specimen requirements and landed cost before choosing a palm.",
+            "SDPP coordinates project-specific sourcing inquiries. No nursery inventory is promised."
+          ]
+        },
+        {
+          "name": "Commercial and installation",
+          "priority": 3,
+          "status": "Paused for initial learning",
+          "keywords": [
+            "commercial palm trees",
+            "large palm tree installation Jacksonville",
+            "specimen palm supplier",
+            "date palm supplier Florida",
+            "mature palm installation"
+          ],
+          "headlines": [
+            "Commercial Palm Sourcing",
+            "Large Palms for Your Project",
+            "Review Delivery & Site Access",
+            "Send SDPP Your Requirements"
+          ],
+          "descriptions": [
+            "Sourcing inquiries for developers, contractors, HOAs and commercial properties.",
+            "Discuss palm size, access and coordination needs. Installation scope confirmed separately."
+          ]
+        }
+      ]
+    }
+  ],
+  "shared_negatives": [
+    "artificial",
+    "indoor",
+    "houseplant",
+    "houseplants",
+    "seeds",
+    "seedlings",
+    "wallpaper",
+    "crafts",
+    "jobs",
+    "careers",
+    "free plants",
+    "free trees",
+    "lawn mowing",
+    "lawn service",
+    "cheap palm trimming",
+    "DIY landscaping",
+    "DIY palm growing",
+    "primary care",
+    "weight loss",
+    "hormone",
+    "regenerative medicine",
+    "medical clinic"
+  ],
+  "phc_negatives": [
+    "South American palm weevil",
+    "red palm weevil",
+    "coconut rhinoceros beetle",
+    "red ring nematode"
+  ],
+  "sourcing_negatives": [
+    "small potted palm",
+    "palm pictures",
+    "palm identification",
+    "houseplant care"
+  ],
+  "final_url_suffix": "utm_source=google&utm_medium=cpc&utm_campaign={_costcenter}&utm_content={adgroupid}-{creative}&utm_term={keyword}&campaignid={campaignid}&adgroupid={adgroupid}&keyword={keyword}&matchtype={matchtype}&device={device}&loc_physical_ms={loc_physical_ms}",
+  "custom_parameters": "Set _costcenter to JAX_PHC or JAX_SOURCING on the respective campaign. Enable auto-tagging. keyword is the bid keyword, not the actual search term. Join available search-term exports by campaign/ad group/date; never infer a per-lead query.",
+  "planner_research": {
+    "account": "170-506-9152",
+    "research_only_plan_id": "1443028180",
+    "geography": "Jacksonville city, Florida, United States ONLY; surrounding six communities not included",
+    "network": "Google",
+    "language": "All languages (disabled in saved-keyword historical metrics UI)",
+    "period": "2025-10-01 through 2026-09-30",
+    "exported_at_local": "2026-10-19 12:40:40 America/Los_Angeles",
+    "keywords_tested": 24,
+    "caveats": [
+      "Rounded historical averages include close variants; not guaranteed exact-keyword demand.",
+      "Blank metrics mean unavailable, not zero.",
+      "Displayed zero is retained as a reported zero, not proof of zero current searches.",
+      "No Jacksonville top-of-page bid ranges were returned for these terms.",
+      "Research plan only; no campaign or spend created.",
+      "Call/message asset terms are pending in Ads and were not accepted."
+    ]
+  }
+}

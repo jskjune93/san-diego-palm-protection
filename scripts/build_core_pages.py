@@ -660,7 +660,7 @@ def write_pages() -> None:
             (ROOT / filename).write_text(render_sapw_gallery(), encoding="utf-8")
             continue
         (ROOT / filename).write_text(page(filename=filename, extra_schema=schema, publish_extra_schema=filename == "about.html", **data), encoding="utf-8")
-    (ROOT / "site-config" / "core_routes.json").write_text(json.dumps(sorted(pages), indent=2) + "\n", encoding="utf-8")
+    (ROOT / "site-config" / "core_routes.json").write_text(json.dumps(sorted(list(pages) + __import__("jacksonville_pages").render()), indent=2) + "\n", encoding="utf-8")
     print(f"Generated {len(pages)} canonical core pages.")
 
 

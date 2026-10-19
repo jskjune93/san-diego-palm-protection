@@ -70,3 +70,6 @@
 ## Consolidation policy
 
 Local and species pages retain search/discovery roles but point into the canonical service architecture. They do not define competing service names, navigation, credential wording, or design systems. Superseded audience pages redirect to the matching inquiry on the canonical service page.
+
+| /jacksonville-palm-health.html | Conversion | JAX_PHC: Northeast Florida photo-review and assessment inquiries under SDPP; no Florida treatment claim. |
+| /jacksonville-mature-palm-sourcing.html | Conversion | JAX_SOURCING: project-specific sourcing requirements; no inventory claim. |
