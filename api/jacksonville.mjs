@@ -29,8 +29,11 @@ export async function handleJacksonville(request,response,dependencies={}){
     if(!body||typeof body!=='object'||Array.isArray(body))throw Error();
   }catch{return json(response,413,{ok:false,message:'Request is too large or could not be read.'});}
   const campaign=body.campaign_identifier, data=Object.fromEntries(fields.map(k=>[k,text(body[k],k==='problem'||k==='notes'||k==='site_access'?3000:200)]));
-  const required=['name','email','phone','zip','city','customer_type',...(campaign==='JAX_PHC'?['issue_category','problem']:['quantity','clear_trunk_ft','budget_range','timeline'])];
-  if(!campaignIds.has(campaign)||text(body.website)||!['on',true].includes(body.contact_consent)||required.some(k=>!data[k])||!validEmail(data.email)||!/^\d{5}$/.test(data.zip)||data.phone.replace(/\D/g,'').length<10||(campaign==='JAX_SOURCING'&&(!/^\d+$/.test(data.quantity)||+data.quantity<1||+data.quantity>10000)))return json(response,400,{ok:false,message:'Review the required fields.'});
+  const required=['name','email','zip',...(campaign==='JAX_PHC'?['issue_category','problem']:['quantity','clear_trunk_ft','budget_range','timeline'])];
+  if(!campaignIds.has(campaign)||text(body.website)||!['on',true].includes(body.contact_consent)||required.some(k=>!data[k])||!validEmail(data.email)||!/^\d{5}$/.test(data.zip)||(data.phone && data.phone.replace(/\D/g,'').length<10)||(campaign==='JAX_SOURCING'&&(!/^\d+$/.test(data.quantity)||+data.quantity<1||+data.quantity>10000)))return json(response,400,{ok:false,message:'Review the required fields. If you add a phone number, include its area code.'});
+  // Explicit QA requests still use the same validation, anti-bot and delivery path.
+  // The flag only labels/excludes the request from customer-lead measurement.
+  const isTest=body.inquiry_kind==='delivery_test';
   const inquiryId=text(request.headers['x-idempotency-key'],128);
   if(!/^[a-zA-Z0-9_-]{16,128}$/.test(inquiryId))return json(response,400,{ok:false});
   const ip=text(request.headers['x-forwarded-for']||request.socket?.remoteAddress||'unknown',128).split(',')[0].trim();
@@ -41,13 +44,13 @@ export async function handleJacksonville(request,response,dependencies={}){
   // Stable browser request timestamp keeps the provider payload idempotent on retry.
   // It is source evidence, not a server-certified receipt time.
   if(!/^\d{4}-\d\d-\d\dT\d\d:\d\d:\d\d\.\d{3}Z$/.test(body.lead_timestamp||'')||!Number.isFinite(Date.parse(body.lead_timestamp)))return json(response,400,{ok:false,message:'Refresh and try again.'});
-  const lead={schema_version:1,id:inquiryId,legal_entity:'San Diego Palm Protection LLC',campaign_identifier:campaign,lead_timestamp:body.lead_timestamp,first_touch_timestamp:text(body.attribution?.first?.at,40),status:'new',qualified:false,...data,attribution:cleanAttribution(body.attribution),photo_count:attachments.length,contact_consent:true};
+  const lead={schema_version:1,id:inquiryId,legal_entity:'San Diego Palm Protection LLC',campaign_identifier:campaign,lead_timestamp:body.lead_timestamp,first_touch_timestamp:text(body.attribution?.first?.at,40),status:isTest?'test':'new',is_test:isTest,qualified:false,...data,attribution:cleanAttribution(body.attribution),photo_count:attachments.length,contact_consent:true};
   attachments.push({filename:`${campaign}-${inquiryId}.json`,content:Buffer.from(JSON.stringify(lead,null,2)).toString('base64')});
-  const rows=[['Campaign / SDPP cost center',campaign],['Reference',inquiryId],...Object.entries(data)];
+  const rows=[['Request kind',isTest?'TEST ONLY - not a customer lead':'Customer inquiry'],['Campaign / SDPP cost center',campaign],['Reference',inquiryId],...Object.entries(data)];
   try{
-    const delivered=await fetcher('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${process.env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':inquiryId},body:JSON.stringify({from:process.env.SDPP_INQUIRY_FROM_EMAIL,to:[process.env.SDPP_INQUIRY_TO_EMAIL],reply_to:data.email,subject:`${campaign} — Jacksonville inquiry — ${text(data.name,80)}`,text:rows.map(([k,v])=>`${k}: ${v}`).join('\n')+'\n\nNew inquiry, not yet qualified. Attached JSON retains attribution for private import. Photo review is not a confirmed diagnosis. All activity belongs to SDPP.',html:'<h1>'+html(campaign)+' inquiry</h1><table>'+rows.map(([k,v])=>`<tr><th>${html(k)}</th><td>${html(v)}</td></tr>`).join('')+'</table><p>New inquiry, not yet qualified. Import attached JSON into the private Jacksonville reporting tool. All activity belongs to SDPP.</p>',attachments})});
+    const delivered=await fetcher('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${process.env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':inquiryId},body:JSON.stringify({from:process.env.SDPP_INQUIRY_FROM_EMAIL,to:[process.env.SDPP_INQUIRY_TO_EMAIL],reply_to:data.email,subject:`${isTest?'[TEST ONLY] ':''}${campaign} — Jacksonville inquiry — ${text(data.name,80)}`,text:rows.map(([k,v])=>`${k}: ${v}`).join('\n')+'\n\nNew inquiry, not yet qualified. Attached JSON retains attribution for private import. Photo review is not a confirmed diagnosis. All activity belongs to SDPP.',html:'<h1>'+html(campaign)+' inquiry</h1><table>'+rows.map(([k,v])=>`<tr><th>${html(k)}</th><td>${html(v)}</td></tr>`).join('')+'</table><p>New inquiry, not yet qualified. Import attached JSON into the private Jacksonville reporting tool. All activity belongs to SDPP.</p>',attachments})});
     if(!delivered.ok||!(await delivered.json()).id)throw Error();
   }catch{return json(response,502,{ok:false,message:'Delivery could not be confirmed. Retry or contact SDPP.'});}
-  return json(response,200,{ok:true,verified:true,inquiryId,campaign_identifier:campaign,event:'jax-inquiry-delivered'});
+  return json(response,200,{ok:true,verified:true,inquiryId,campaign_identifier:campaign,isTest,event:isTest?'jax-test-delivered':'jax-inquiry-delivered'});
 }
 export default handleJacksonville;

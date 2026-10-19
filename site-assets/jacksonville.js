@@ -8,7 +8,7 @@
   };
   const adsEnabled = ['www.sandiegopalmprotection.com', 'sandiegopalmprotection.com'].includes(location.hostname);
   function recordVerifiedAds(result) {
-    if (!adsEnabled || !result.ok || !result.verified || result.inquiryId !== id || !adsDestinations[campaign]) return;
+    if (isTest || result.isTest || !adsEnabled || !result.ok || !result.verified || result.inquiryId !== id || !adsDestinations[campaign]) return;
     window.dataLayer = window.dataLayer || [];
     const gtag = function () { window.dataLayer.push(arguments); };
     gtag('event', 'conversion', { send_to: adsDestinations[campaign], transaction_id: id, value: 0, currency: 'USD' });
@@ -18,6 +18,13 @@
   const id = crypto.randomUUID();
   let token = '', photos = [], busy = false, processingPhotos = false, started = false, widget, leadTimestamp;
   const params = new URLSearchParams(location.search);
+  const isTest = params.get('sdpp_test') === 'delivery';
+  if (isTest) {
+    form.elements.inquiry_kind.value = 'delivery_test';
+    const notice = form.querySelector('[data-jax-test]');
+    notice.hidden = false;
+    notice.textContent = 'TEST ONLY: this request checks SDPP inbox and photo delivery. It will not count as a customer lead or an advertising conversion.';
+  }
   const keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','campaignid','adgroupid','keyword','matchtype','device','loc_physical_ms','gclid','gbraid','wbraid'];
   const point = Object.fromEntries(keys.map(k => [k,(params.get(k) || '').slice(0,256)]));
   point.at = new Date().toISOString(); point.landing_page = location.pathname;
@@ -29,6 +36,7 @@
     sessionStorage.setItem('sdpp-jax-touch-'+campaign,JSON.stringify(attribution));
   } catch {}
   function event(action, extra={}) {
+    if (isTest) return;
     // Only fixed labels and opaque references reach analytics, never form values/photos.
     const detail={event:'sdpp_jax',action,campaign_identifier:campaign,landing_page:location.pathname,...extra};
     window.dataLayer=window.dataLayer||[]; window.dataLayer.push(detail);
@@ -88,9 +96,11 @@
       const response=await fetch('/api/jacksonville',{method:'POST',headers:{'Content-Type':'application/json','X-Idempotency-Key':id},body:JSON.stringify({...values,campaign_identifier:campaign,lead_timestamp:leadTimestamp,attribution,photos,'cf-turnstile-response':token})});
       const result=await response.json();
       if(!response.ok||!result.ok||!result.verified||result.inquiryId!==id)throw Error();
-      event('form_submission',{inquiry_id:id});if(photos.length)event('photo_upload',{inquiry_id:id,photo_count:photos.length});
+      if (!result.isTest) {
+        event('form_submission',{inquiry_id:id});if(photos.length)event('photo_upload',{inquiry_id:id,photo_count:photos.length});
+      }
       recordVerifiedAds(result);
-      status.textContent='Your request was delivered to SDPP. Reference: '+id+'. John will review the details and confirm the next step. A booking or quote has not yet been confirmed.';
+      status.textContent=(result.isTest?'TEST delivered to SDPP; excluded from customer-lead and conversion counts. Reference: ':'Your request was delivered to SDPP. Reference: ')+id+(result.isTest?'':'. John will review the details and confirm the next step. A booking or quote has not yet been confirmed.');
       form.querySelectorAll('input,select,textarea,button').forEach(c=>c.disabled=true);
     }catch{status.textContent='Delivery could not be confirmed. Please retry or call/email SDPP. Keep reference '+id+' if you contact us.';token='';window.turnstile?.reset(widget);submit.disabled=true;}
     busy=false;

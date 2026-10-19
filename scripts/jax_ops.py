@@ -47,7 +47,7 @@ def ingest_lead(db, record):
     if campaign not in CAMPAIGNS: raise ValueError('Unknown campaign.')
     created=iso(record['lead_timestamp'])
     if db.execute('SELECT 1 FROM leads WHERE id=?',(lid,)).fetchone(): return False
-    record.update(legal_entity=ENTITY,status='new',qualified=False,qualification_checks={},quoted_value=0,closed_revenue=0,fulfillment_cost=0,lost_reason='',final_disposition='')
+    record.update(legal_entity=ENTITY,status='test' if record.get('is_test') is True else 'new',qualified=False,qualification_checks={},quoted_value=0,closed_revenue=0,fulfillment_cost=0,lost_reason='',final_disposition='')
     db.execute('INSERT INTO leads VALUES(?,?,?,?)',(lid,campaign,created,json.dumps(record)))
     return True
 
@@ -55,7 +55,8 @@ def update(db, lid, changes):
     row=db.execute('SELECT * FROM leads WHERE id=?',(lid,)).fetchone()
     if not row: raise ValueError('Lead not found.')
     record=json.loads(row['data']); old=record['status']; changes=dict(changes)
-    for protected in ['id','campaign_identifier','legal_entity','lead_timestamp','attribution','first_touch_timestamp','qualified']:
+    if record.get('is_test') is True: raise ValueError('Delivery tests cannot enter the customer pipeline.')
+    for protected in ['id','campaign_identifier','legal_entity','lead_timestamp','attribution','first_touch_timestamp','qualified','is_test']:
         if protected in changes: raise ValueError('Immutable field: '+protected)
     at=iso(changes.pop('at',datetime.now(timezone.utc).isoformat()));record.update(changes)
     checks=PHC_CHECKS if row['campaign']=='JAX_PHC' else SOURCE_CHECKS
@@ -91,7 +92,7 @@ def import_csv(db, kind, path):
 def ratio(a,b): return round(a/b,2) if b else None
 
 def scoreboard(db, start, end):
-    rows=[dict(r) for r in db.execute('SELECT * FROM leads')]; traffic=[dict(r) for r in db.execute('SELECT * FROM traffic WHERE day>=? AND day<?',(start,end))];expenses=[dict(r) for r in db.execute('SELECT * FROM expenses WHERE day>=? AND day<?',(start,end))]
+    rows=[dict(r) for r in db.execute('SELECT * FROM leads') if json.loads(r['data']).get('is_test') is not True]; traffic=[dict(r) for r in db.execute('SELECT * FROM traffic WHERE day>=? AND day<?',(start,end))];expenses=[dict(r) for r in db.execute('SELECT * FROM expenses WHERE day>=? AND day<?',(start,end))]
     milestones=[dict(r) for r in db.execute('SELECT * FROM milestones')]
     output={'start_inclusive':start,'end_exclusive':end,'reporting_timezone':str(TZ),'legal_entity':ENTITY,'campaigns':{}}
     for camp in CAMPAIGNS+['Combined Jacksonville']:

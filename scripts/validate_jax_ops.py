@@ -8,6 +8,11 @@ with tempfile.TemporaryDirectory() as temp:
     lead={'id':'test','campaign_identifier':'JAX_PHC','lead_timestamp':'2026-10-19T12:00:00Z','city':'Jacksonville'}
     assert ingest_lead(db,lead)
     assert not ingest_lead(db,lead)
+    assert ingest_lead(db,{**lead,'id':'delivery-test','is_test':True})
+    assert scoreboard(db,'2026-10-19','2026-10-26')['campaigns']['JAX_PHC']['new_leads']==1
+    try:update(db,'delivery-test',{'status':'qualified'})
+    except ValueError:pass
+    else:raise AssertionError('Delivery test entered customer pipeline')
     try:update(db,'test',{'status':'won','closed_revenue':100})
     except ValueError:pass
     else:raise AssertionError('Unqualified lead progressed')
