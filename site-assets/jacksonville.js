@@ -2,6 +2,17 @@
   const form = document.querySelector('[data-jax-form]');
   if (!form) return;
   const campaign = form.dataset.campaign;
+  const adsDestinations = {
+    JAX_PHC: 'AW-18301751378/8YZxCKP7yqIdENKg-pZE',
+    JAX_SOURCING: 'AW-18301751378/ldaECKb7yqIdENKg-pZE',
+  };
+  const adsEnabled = ['www.sandiegopalmprotection.com', 'sandiegopalmprotection.com'].includes(location.hostname);
+  function recordVerifiedAds(result) {
+    if (!adsEnabled || !result.ok || !result.verified || result.inquiryId !== id || !adsDestinations[campaign]) return;
+    window.dataLayer = window.dataLayer || [];
+    const gtag = function () { window.dataLayer.push(arguments); };
+    gtag('event', 'conversion', { send_to: adsDestinations[campaign], transaction_id: id, value: 0, currency: 'USD' });
+  }
   const status = form.querySelector('[data-jax-status]');
   const submit = form.querySelector('button[type=submit]');
   const id = crypto.randomUUID();
@@ -78,6 +89,7 @@
       const result=await response.json();
       if(!response.ok||!result.ok||!result.verified||result.inquiryId!==id)throw Error();
       event('form_submission',{inquiry_id:id});if(photos.length)event('photo_upload',{inquiry_id:id,photo_count:photos.length});
+      recordVerifiedAds(result);
       status.textContent='Your request was delivered to SDPP. Reference: '+id+'. John will review the details and confirm the next step. A booking or quote has not yet been confirmed.';
       form.querySelectorAll('input,select,textarea,button').forEach(c=>c.disabled=true);
     }catch{status.textContent='Delivery could not be confirmed. Please retry or call/email SDPP. Keep reference '+id+' if you contact us.';token='';window.turnstile?.reset(widget);submit.disabled=true;}
