@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "artifact_id": "del-mar-treatment-nutrition-handout-2026-10-18",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "35e9ddb00f7bb2949efab81050293eabf2fcbf27775bec10e1ab29a325d646b5",
+  "approved_fingerprint": "35e9ddb00f7bb2949efab81050293eabf2fcbf27775bec10e1ab29a325d646b5",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner selected deliberate distribution of field evidence and authorized continuation/publication October 18, 2026. Public page is the previously reviewed Del Mar case from the existing capability handout; no customer identity, precise location, pricing or media included.",
+  "export_method": "Sanitized editorial derivative of the reviewed public case; private source remains outside the website.",
+  "content": {
+    "public_filename": "sdpp-palm-treatment-fertilization-case.pdf",
+    "title": "Palm treatment, nutrition and follow-through",
+    "scope": "Completed service and recommended follow-up; no outcome or recurring agreement claimed."
+  },
+  "media": []
+}
