@@ -17,7 +17,7 @@
   const submit = form.querySelector('button[type=submit]');
   const retrySecurity = document.createElement('button');
   retrySecurity.type = 'button';
-  retrySecurity.className = 'button button-quiet';
+  retrySecurity.className = 'button';
   retrySecurity.textContent = 'Retry security check';
   retrySecurity.hidden = true;
   status.after(retrySecurity);
