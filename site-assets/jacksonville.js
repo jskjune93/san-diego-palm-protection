@@ -15,8 +15,24 @@
   }
   const status = form.querySelector('[data-jax-status]');
   const submit = form.querySelector('button[type=submit]');
+  const retrySecurity = document.createElement('button');
+  retrySecurity.type = 'button';
+  retrySecurity.className = 'button button-quiet';
+  retrySecurity.textContent = 'Retry security check';
+  retrySecurity.hidden = true;
+  status.after(retrySecurity);
   const id = crypto.randomUUID();
   let token = '', photos = [], busy = false, processingPhotos = false, started = false, widget, leadTimestamp;
+  function securityUnavailable() {
+    token = ''; submit.disabled = true; retrySecurity.hidden = false;
+    status.textContent = 'Security check timed out or is unavailable. Retry the check below; your details and photos stay here. You can also call or email SDPP.';
+  }
+  retrySecurity.addEventListener('click', () => {
+    if (busy || widget === undefined || !window.turnstile) return;
+    token = ''; submit.disabled = true; retrySecurity.hidden = true;
+    status.textContent = 'Retrying the security check. Your details and photos are still here.';
+    window.turnstile.reset(widget);
+  });
   const params = new URLSearchParams(location.search);
   const isTest = params.get('sdpp_test') === 'delivery';
   if (isTest) {
@@ -84,7 +100,7 @@
       const response=await fetch('/api/jacksonville',{cache:'no-store'});if(!response.ok)throw Error();const config=await response.json();
       if(!config.enabled || !config.turnstileSiteKey)throw Error();
       await new Promise((resolve,reject)=>{const s=document.createElement('script');s.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';s.onload=resolve;s.onerror=reject;document.head.append(s);});
-      widget=window.turnstile.render(form.querySelector('[data-jax-challenge]'),{sitekey:config.turnstileSiteKey,callback:value=>{token=value;submit.disabled=processingPhotos;},'expired-callback':()=>{token='';submit.disabled=true;},'error-callback':()=>{token='';submit.disabled=true;status.textContent='Security check unavailable. Try again or email SDPP.';}});
+      widget=window.turnstile.render(form.querySelector('[data-jax-challenge]'),{sitekey:config.turnstileSiteKey,callback:value=>{token=value;submit.disabled=processingPhotos;retrySecurity.hidden=true;},'expired-callback':securityUnavailable,'timeout-callback':securityUnavailable,'error-callback':securityUnavailable});
       status.textContent='Complete your request and security check.';
     }catch{status.textContent='Secure submission is unavailable here. Call or email SDPP using the links below; attach photos in your email app.';}
   }
