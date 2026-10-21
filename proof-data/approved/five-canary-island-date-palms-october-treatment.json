@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "five-canary-island-date-palms-october-treatment",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "392aebc87dfbdb1c2b50fb7a2008c3597e9362d565acd062de01dffe3844f04b",
+  "approved_fingerprint": "392aebc87dfbdb1c2b50fb7a2008c3597e9362d565acd062de01dffe3844f04b",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Current owner standing authorization October 20, 2026, retroactive instruction and proceed; sanitized derivative reviewed independently of private-source approval.",
+  "export_method": "Anonymous editorial derivative; private records stay outside website.",
+  "content": {
+    "title": "Five Canary Island Date Palms and the Next Visit",
+    "journal_slug": "five-canary-island-date-palms-october-treatment",
+    "article_sha256": "392aebc87dfbdb1c2b50fb7a2008c3597e9362d565acd062de01dffe3844f04b",
+    "scope": "Five completed treatments on October 19; separate dead palm untreated; recommended follow-up is not booked."
+  },
+  "media": []
+}

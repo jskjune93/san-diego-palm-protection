@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-55 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
+58 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -8,6 +8,8 @@
 | `/canary-island-date-palm-care-san-diego.html` | restructured | Species-specific discovery route |
 | `/cidp-risk-checklist.html` | restructured | Educational observation checklist |
 | `/` | restructured | Commercial orientation and three-pillar gateway |
+| `/jacksonville-mature-palm-sourcing.html` | Conversion | JAX_SOURCING: project-specific sourcing requirements; no inventory claim. |
+| `/jacksonville-palm-health.html` | Conversion | JAX_PHC: Northeast Florida photo-review and assessment inquiries under SDPP; no Florida treatment claim. |
 | `/old-escondido-palm-preservation.html` | restructured | Community documentation and exact UFMP context |
 | `/palm-care-escondido.html` | consolidated in place | Escondido local discovery route |
 | `/palm-care-poway.html` | consolidated in place | Poway local discovery route |
@@ -20,6 +22,7 @@
 | `/palm-journal/del-mar-canary-island-date-palm-treatment-fertilization.html` | preserved / regenerated | Palm Journal evidence: Palm Health & Stewardship |
 | `/palm-journal/do-i-need-to-spray-the-crown.html` | preserved / regenerated | Palm Journal evidence: Protection & Treatment |
 | `/palm-journal/documented-loss/` | restructured | Confirmed-loss collection with attribution boundaries |
+| `/palm-journal/five-canary-island-date-palms-october-treatment.html` | preserved / regenerated | Palm Journal evidence: Palm Health & Stewardship |
 | `/palm-journal/grand-ave-cidp.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
 | `/palm-journal/grand-ave-old-escondido.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/healthy-palm-growth.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
@@ -70,6 +73,3 @@
 ## Consolidation policy
 
 Local and species pages retain search/discovery roles but point into the canonical service architecture. They do not define competing service names, navigation, credential wording, or design systems. Superseded audience pages redirect to the matching inquiry on the canonical service page.
-
-| /jacksonville-palm-health.html | Conversion | JAX_PHC: Northeast Florida photo-review and assessment inquiries under SDPP; no Florida treatment claim. |
-| /jacksonville-mature-palm-sourcing.html | Conversion | JAX_SOURCING: project-specific sourcing requirements; no inventory claim. |

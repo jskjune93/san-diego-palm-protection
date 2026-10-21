@@ -6,6 +6,8 @@ import json
 ROOT = Path(__file__).resolve().parents[1]
 
 CORE_ROLES = {
+    "jacksonville-palm-health.html": ("Conversion", "JAX_PHC: Northeast Florida photo-review and assessment inquiries under SDPP; no Florida treatment claim."),
+    "jacksonville-mature-palm-sourcing.html": ("Conversion", "JAX_SOURCING: project-specific sourcing requirements; no inventory claim."),
     "index.html": ("restructured", "Commercial orientation and three-pillar gateway"),
     "about.html": ("created", "Owner identity, qualifications, field process, and trust"),
     "urban-forest-palm-documentation.html": ("created", "Municipal, public-agency, institutional, and urban-forest palm documentation support"),

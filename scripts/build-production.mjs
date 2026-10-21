@@ -76,7 +76,20 @@ async function main() {
   await rm(output, { recursive: true, force: true });
   await mkdir(output, { recursive: true });
   const routes = await htmlRoutes();
-  if (routes.length !== 57) throw new Error(`Expected 57 HTML routes including the older Palm Journal index, found ${routes.length}`);
+  const coreRoutes = JSON.parse(await readFile(path.join(root, "site-config/core_routes.json"), "utf8"));
+  const expectedJournalEntries = JSON.parse(await readFile(path.join(root, "journal-data/journal_entries.json"), "utf8"));
+  const expectedRoutes = new Set([
+    ...coreRoutes,
+    "palm-journal-new.html", "palm-journal/older-posts.html", "palm-journal/documented-loss/index.html",
+    ...expectedJournalEntries.filter(entry => entry.status === "published" && entry.page).map(entry =>
+      `palm-journal/${entry.slug}${entry.directory_route ? "/index.html" : ".html"}`),
+  ]);
+  const actualRoutes = new Set(routes.map(route => path.relative(root, route).split(path.sep).join("/")));
+  const missing = [...expectedRoutes].filter(route => !actualRoutes.has(route));
+  const unexpected = [...actualRoutes].filter(route => !expectedRoutes.has(route));
+  if (missing.length || unexpected.length) {
+    throw new Error(`Public route manifest mismatch: missing=${missing.join(",")}; unexpected=${unexpected.join(",")}`);
+  }
 
   const referenceQueue = [];
   for (const route of routes) {
