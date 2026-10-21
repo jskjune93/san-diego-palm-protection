@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "after-palm-treatment-follow-up-matters",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "0db2d64251398c222abfe2b30a05aef8a104fd66f46db88dace800cbc51d031e",
+  "approved_fingerprint": "0db2d64251398c222abfe2b30a05aef8a104fd66f46db88dace800cbc51d031e",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner standing October 20 authorization for factual sanitized treatment stories, applied retroactively. Current derivative reviewed separately from private-source approval.",
+  "export_method": "Anonymous editorial paraphrase; private records remain outside website.",
+  "content": {
+    "title": "After Palm Treatment, the Follow-Up Matters",
+    "journal_slug": "after-palm-treatment-follow-up-matters",
+    "article_sha256": "0db2d64251398c222abfe2b30a05aef8a104fd66f46db88dace800cbc51d031e",
+    "scope": "Completed August 26 treatment and homeowner-reported October 12 observations; no confirmed treatment result."
+  },
+  "media": []
+}

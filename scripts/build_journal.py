@@ -57,6 +57,7 @@ TOPIC_SECTIONS = [
         "title": "Palm Health, Monitoring & Stewardship",
         "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
         "slugs": [
+            "after-palm-treatment-follow-up-matters",
             "five-canary-island-date-palms-october-treatment",
             "del-mar-canary-island-date-palm-treatment-fertilization",
             "where-we-care-for-palms-october-2026",
