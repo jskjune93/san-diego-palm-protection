@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "seven-canary-palms-two-august-visits",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "10730a18513a4452a3580c9fc40a980005e90cab498adaedb78f2aca212566a0",
+  "approved_fingerprint": "10730a18513a4452a3580c9fc40a980005e90cab498adaedb78f2aca212566a0",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Standing owner October 20 authorization for retroactive factual sanitized stories. Current anonymous derivative reviewed separately from private-source approval.",
+  "export_method": "Anonymous editorial derivative; source records stay private.",
+  "content": {
+    "title": "Seven Canary Palms, Two August Visits",
+    "journal_slug": "seven-canary-palms-two-august-visits",
+    "article_sha256": "10730a18513a4452a3580c9fc40a980005e90cab498adaedb78f2aca212566a0",
+    "scope": "Seven completed palm treatments, three August 22 and four August 24; no later condition claim."
+  },
+  "media": []
+}

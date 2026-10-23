@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-59 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
+60 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -45,6 +45,7 @@
 | `/palm-journal/poway-old-winery-cidp.html` | preserved / regenerated | Palm Journal evidence: Preservation and Historic Landscapes |
 | `/palm-journal/rancho-santa-fe-palm-walk.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
 | `/palm-journal/september-treatment-day.html` | preserved / regenerated | Palm Journal evidence: Protection & Treatment |
+| `/palm-journal/seven-canary-palms-two-august-visits.html` | preserved / regenerated | Palm Journal evidence: Palm Health & Stewardship |
 | `/palm-journal/the-palm-is-only-part-of-the-site.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
 | `/palm-journal/the-palm-record-outlives-the-palm.html` | preserved / regenerated | Palm Journal evidence: Field Documentation |
 | `/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html` | preserved / regenerated | Palm Journal evidence: Historic Homes and Landscapes |
