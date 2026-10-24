@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "chilean-wine-canary-sylvester-palm-treatment",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "bb4d0b704a5e815500c399d273d75507993feaec583b33888779326fa2130ae5",
+  "approved_fingerprint": "bb4d0b704a5e815500c399d273d75507993feaec583b33888779326fa2130ae5",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner standing October 20 authorization for retroactive factual sanitized treatment stories; current public derivative independently reviewed.",
+  "export_method": "Anonymous prose derivative; no private sources copied to public site.",
+  "content": {
+    "title": "Chilean Wine, Canary and Sylvester Palms: An August Visit",
+    "journal_slug": "chilean-wine-canary-sylvester-palm-treatment",
+    "article_sha256": "bb4d0b704a5e815500c399d273d75507993feaec583b33888779326fa2130ae5",
+    "scope": "Completed assessment and treatment August 22 for three palm species; no later outcome or ongoing agreement claimed."
+  },
+  "media": []
+}

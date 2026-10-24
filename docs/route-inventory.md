@@ -1,6 +1,6 @@
 # Route inventory and disposition
 
-60 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
+61 public HTML routes are generated and validated. Two superseded audience routes are preserved through permanent redirects into the canonical service and inquiry page.
 
 | Route | Disposition | Commercial or educational purpose |
 |---|---|---|
@@ -18,6 +18,7 @@
 | `/palm-journal-new.html` | restructured | Field evidence library and Journal gateway |
 | `/palm-journal/after-palm-treatment-follow-up-matters.html` | preserved / regenerated | Palm Journal evidence: Palm Health & Stewardship |
 | `/palm-journal/black-mountain-ranch-bismarck-palm-removal.html` | preserved / regenerated | Palm Journal evidence: Documented Loss |
+| `/palm-journal/chilean-wine-canary-sylvester-palm-treatment.html` | preserved / regenerated | Palm Journal evidence: Palm Health & Stewardship |
 | `/palm-journal/cidp-assessment-local-palm-health-concerns.html` | preserved / regenerated | Palm Journal evidence: Palm Health and Stewardship |
 | `/palm-journal/classic-old-escondido-canary-island-date-palm.html` | preserved / regenerated | Palm Journal evidence: Field Observation |
 | `/palm-journal/del-mar-canary-island-date-palm-treatment-fertilization.html` | preserved / regenerated | Palm Journal evidence: Palm Health & Stewardship |
