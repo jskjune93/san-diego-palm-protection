@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "pygmy-date-palms-first-kentia-treatment",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "bd8c1c2d83f40d7af8770497e47f3092a2c6b68c5cb3e1f0f87458c069eedd5a",
+  "approved_fingerprint": "bd8c1c2d83f40d7af8770497e47f3092a2c6b68c5cb3e1f0f87458c069eedd5a",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner October 20 standing authorization for factual anonymous treatment stories; current sanitized derivative reviewed October 25.",
+  "export_method": "Anonymous prose derivative; no private source or customer media exported.",
+  "content": {
+    "title": "Pygmy Date Palms and SDPP’s First Kentia Treatment",
+    "journal_slug": "pygmy-date-palms-first-kentia-treatment",
+    "article_sha256": "bd8c1c2d83f40d7af8770497e47f3092a2c6b68c5cb3e1f0f87458c069eedd5a",
+    "scope": "Completed October 23 mixed planting treatment; owner-reported first Kentia milestone. No confirmed infestation, application details or treatment outcome claimed."
+  },
+  "media": []
+}
