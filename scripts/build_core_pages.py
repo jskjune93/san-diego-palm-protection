@@ -123,16 +123,21 @@ def inquiry_paths() -> str:
     <div class="form-grid">
       <div><label for="home-name">Name</label><input id="home-name" name="name" autocomplete="name" required></div>
       <div><label for="home-email">Email</label><input id="home-email" name="email" type="email" autocomplete="email" required></div>
-      <div><label for="home-phone">Phone</label><input id="home-phone" name="phone" type="tel" autocomplete="tel"></div>
       <div><label for="home-city">Property city</label><input id="home-city" name="property_city" autocomplete="address-level2" required></div>
+      <div class="full"><label for="home-concern">What would you like help with?</label><textarea id="home-concern" name="concern" placeholder="For example: preventive care for a healthy Canary palm, or a change in its crown." required></textarea></div>
+    </div>
+    <div class="faq-list"><details class="inquiry-extras">
+      <summary>Add palm details or a phone number (optional)</summary>
+      <div class="form-grid">
+      <div><label for="home-phone">Phone (optional)</label><input id="home-phone" name="phone" type="tel" autocomplete="tel"></div>
       <div><label for="home-species">Palm type, if known</label><input id="home-species" name="palm_type"></div>
       <div><label for="home-count">Number of palms</label><input id="home-count" name="number_of_palms" inputmode="numeric"></div>
-      <div class="full"><label for="home-concern">What are you seeing or trying to decide?</label><textarea id="home-concern" name="concern" required></textarea></div>
-      <div><label for="home-contact">Preferred contact method</label><select id="home-contact" name="preferred_contact"><option>Phone</option><option>Text</option><option>Email</option></select></div>
+      <div><label for="home-contact">Preferred contact method</label><select id="home-contact" name="preferred_contact"><option>Email</option><option>Text</option><option>Phone</option></select></div>
       <div><label for="home-timing">Timing or urgency</label><input id="home-timing" name="timing"></div>
       {inquiry_source("home")}
-    </div>
-    <p class="form-help">Photograph uploads are not enabled. SDPP can request photographs during follow-up.</p>
+      </div>
+    </details></div>
+    <p class="form-help">Have photos? <a data-conversion="text" href="sms:+12624923135">Text John at 262-492-3135</a> with your city and palm count. You can start by text instead of completing this form.</p>
     <p class="form-help">SDPP uses your information to respond and evaluate the requested service. Your inquiry may include the referring website, landing page, and campaign identifiers to help us understand how you found us.</p>
     <label class="ads-measurement-choice"><input type="checkbox" data-ads-measurement><span>Allow Google to use a hashed version of my email and phone number to measure SDPP ads. Optional; my inquiry is sent either way. SDPP does not send my name, address, or inquiry message to Google.</span></label>
     <p class="form-help">{explanation}</p>

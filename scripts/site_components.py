@@ -248,6 +248,8 @@ def page(*, filename: str, title: str, description: str, eyebrow: str, h1: str,
     else:
         secondary_action = f'<a class="button button-quiet" data-conversion="call" href="tel:2624923135">Call or Text {PHONE}</a>'
     report_page = filename == "report-a-palm.html"
+    if filename in {"index.html", "south-american-palm-weevil-treatment-san-diego.html", "quarterly-palm-care-san-diego.html", "palm-records-monitoring-verification.html"}:
+        secondary_action += '<a class="button button-quiet" data-conversion="text" href="sms:+12624923135">Text a Palm Photo</a>'
     if report_page:
         primary_href = "https://sdpp-community-palm-map.san-diego-pa-2324.chatgpt.site/?report=1"
         primary_label = "Report a palm"

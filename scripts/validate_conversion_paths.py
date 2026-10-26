@@ -40,7 +40,8 @@ def main() -> int:
             visible_label = re.sub(r"<[^>]+>", "", label).strip()
             if visible_label in {"Request a Baseline", "Discuss Your Palm Portfolio", "Discuss Your Palms", "Request a Property Walkthrough", "Property Walkthrough"} and not href.endswith("#organization-inquiry"):
                 errors.append(f"{path.relative_to(ROOT).as_posix()}: commercial walkthrough CTA misses organization inquiry anchor")
-            if visible_label in {"Request Assessment", "Request a Palm Assessment"} and not href.endswith("#homeowner-inquiry"):
+            residential_anchor = "#jax-inquiry" if path.name == "jacksonville-palm-health.html" else "#homeowner-inquiry"
+            if visible_label in {"Request Assessment", "Request a Palm Assessment"} and not href.endswith(residential_anchor):
                 errors.append(f"{path.relative_to(ROOT).as_posix()}: residential assessment CTA misses homeowner inquiry anchor")
 
     if CONFIG["submitted_form_enabled"]:
