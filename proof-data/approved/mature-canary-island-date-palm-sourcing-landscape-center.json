@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "mature-canary-island-date-palm-sourcing-landscape-center",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "a43bd03e3e93a26219c536c94851b91c2c8edbebc4c835ecc57986eb9bca3a47",
+  "approved_fingerprint": "a43bd03e3e93a26219c536c94851b91c2c8edbebc4c835ecc57986eb9bca3a47",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner direct October 25 request and October 20 standing authorization; current sanitized derivative reviewed October 26. Nursery visit/selection completed; removal/delivery/installation pending.",
+  "export_method": "Anonymous prose; no private source documents or images exported.",
+  "content": {
+    "title": "Sourcing a Mature Canary Island Date Palm with Landscape Center",
+    "journal_slug": "mature-canary-island-date-palm-sourcing-landscape-center",
+    "article_sha256": "a43bd03e3e93a26219c536c94851b91c2c8edbebc4c835ecc57986eb9bca3a47",
+    "scope": "October 24 nursery visit and specimen selection; coordination in progress, no completed installation claimed."
+  },
+  "media": []
+}

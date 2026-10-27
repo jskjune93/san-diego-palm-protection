@@ -576,7 +576,7 @@ def generic_body(name: str) -> str:
     }
     eyebrow, heading, intro = local_openings[name]
     if name == "palm-sourcing-installation.html":
-        return section(eyebrow, heading, intro, cards([
+        return section("Mature CIDP sourcing", "From finding the palm to planning its arrival.", "I have helped an Oceanside homeowner source and select a mature Canary Island date palm through Landscape Center. Removal and installation coordination are underway.", '<p>I visited the nursery on October 24 and met with Mark. A smaller specimen was selected than originally considered. The next steps are the revised proposal, removal plan, delivery and installation. <a href="./palm-journal/mature-canary-island-date-palm-sourcing-landscape-center.html">Follow the project in the Palm Journal</a>.</p>') + section(eyebrow, heading, intro, cards([
             ("Sourcing guidance", "Define the species, size, condition questions, site limits, and documentation to request before selecting a palm."),
             ("Re-homing and transplant review", "Document the candidate palm and receiving site, flag visible health concerns, and organize questions for the nursery or relocation contractor."),
             ("Planting coordination", "Keep supplier information, site preparation, installer responsibilities, and the agreed planting scope clear."),

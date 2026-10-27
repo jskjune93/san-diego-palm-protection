@@ -57,6 +57,7 @@ TOPIC_SECTIONS = [
         "title": "Palm Health, Monitoring & Stewardship",
         "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
         "slugs": [
+            "mature-canary-island-date-palm-sourcing-landscape-center",
             "pygmy-date-palms-first-kentia-treatment",
             "chilean-wine-canary-sylvester-palm-treatment",
             "seven-canary-palms-two-august-visits",
