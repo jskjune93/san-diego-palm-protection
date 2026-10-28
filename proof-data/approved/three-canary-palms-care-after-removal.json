@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "three-canary-palms-care-after-removal",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "7abf2bc010defedc57d72ea6e35ff6954efe47632dd4f60d9bec4b689e3dc7c8",
+  "approved_fingerprint": "7abf2bc010defedc57d72ea6e35ff6954efe47632dd4f60d9bec4b689e3dc7c8",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner October20 standing authorization; current sanitized derivative independently reviewed October27.",
+  "export_method": "Anonymous factual prose; no private source files or customer media exported.",
+  "content": {
+    "title": "After a Palm Removal, Care for the Three That Remain",
+    "journal_slug": "three-canary-palms-care-after-removal",
+    "article_sha256": "7abf2bc010defedc57d72ea6e35ff6954efe47632dd4f60d9bec4b689e3dc7c8",
+    "scope": "August26 treatment of three retained CIDP and baseline photography; separate removal described without performer attribution or pest diagnosis. No later outcome claimed."
+  },
+  "media": []
+}
