@@ -594,7 +594,28 @@ def generic_body(name: str) -> str:
     if name == "specimen-palms-cycads.html":
         species_lines = '''<div class="service-lines service-lines--3"><article><h3>Canary Island date palm</h3><p>The primary local target and the center of SDPP preventive treatment work.</p></article><article><h3>Chilean wine palm</h3><p>A confirmed California SAPW host and a slow-growing specimen that deserves early attention.</p></article><article><h3>Bismarck palm</h3><p>A confirmed California SAPW host whose scale and character make replacement a poor substitute for prevention.</p></article></div>'''
         return section(eyebrow, heading, intro, species_lines + species_reference_gallery()) + section("Protection before replacement", "Start with the palm that is already there.", "I review the species, visible condition, site, pest pressure, and treatment history before recommending preventive treatment, monitoring, or another response.", '<p><a href="./south-american-palm-weevil-treatment-san-diego.html">See SAPW protection and treatment</a> · <a href="./palm-sourcing-installation.html">See replacement planning</a></p>', "section-tint")
-    return section(eyebrow, heading, intro, three_pillars()) + section("What to expect", "I start with your question and the palm in front of me.", "Tell me what you noticed, what has been done recently, and what you need to decide.", cards([
+    local_field_notes = {
+        "palm-care-escondido.html": (
+            "Mature palms in Old Escondido",
+            "See the palms behind the work.",
+            "My own Canary Island date palm has been treated and photographed repeatedly after adult weevil activity. The photographs help me compare the crown without claiming an outcome that has not happened.",
+            '<p><a href="./palm-journal/monitoring-mature-cidp-after-palm-weevil-activity.html">Follow the Old Escondido palm monitoring record</a>. For the neighborhood context, see <a href="./palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html">the mature palms around Old Escondido historic homes</a>.</p>',
+        ),
+        "palm-care-poway.html": (
+            "A record for the next visit",
+            "Bring the earlier photographs and treatment dates.",
+            "A full crown today is useful to photograph before anything changes. I compare whole-palm and crown views, ask about earlier treatments, and review access before recommending the work.",
+            '<p><a href="./cidp-risk-checklist.html">Use the Canary Island date palm observation checklist</a> to prepare for a visit. <a href="./quarterly-palm-care-san-diego.html">See how four scheduled annual care visits work</a>.</p>',
+        ),
+        "palm-care-rancho-santa-fe.html": (
+            "Photographed in Rancho Santa Fe",
+            "A full crown, canopy loss, and a monitoring trap on one walk.",
+            "My Rancho Santa Fe field note compares visible crown condition and pruning along one walk. The photographs are local observations, not a diagnosis of the properties shown or a claim that they are clients.",
+            '<p><a href="./palm-journal/rancho-santa-fe-palm-walk.html">See the Rancho Santa Fe palm walk and photographs</a>. If you notice a change on your property, <a href="./palm-records-monitoring-verification.html#homeowner-inquiry">request an on-site palm assessment</a>.</p>',
+        ),
+    }
+    local_evidence = section(*local_field_notes[name], classes="section-tint") if name in local_field_notes else ""
+    return section(eyebrow, heading, intro, three_pillars()) + local_evidence + section("What to expect", "I start with your question and the palm in front of me.", "Tell me what you noticed, what has been done recently, and what you need to decide.", cards([
         ("At the property", "I examine what can be seen safely from the ground and take the photographs the question requires."),
         ("After the visit", "I explain what I observed, what remains uncertain, and what I recommend next."),
         ("If another professional is needed", "I keep the handoff focused on the facts and photographs already gathered."),
