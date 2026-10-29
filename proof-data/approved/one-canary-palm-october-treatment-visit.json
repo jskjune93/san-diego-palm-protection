@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "one-canary-palm-october-treatment-visit",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "012406b2a5faec3dc652c0bf84fd73d26a1d8d17b03fb97c02915842fb95a431",
+  "approved_fingerprint": "012406b2a5faec3dc652c0bf84fd73d26a1d8d17b03fb97c02915842fb95a431",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner October20 standing authorization; current anonymous derivative separately reviewed October29.",
+  "export_method": "Anonymous factual prose; no private files or media exported.",
+  "content": {
+    "title": "One Canary Palm: An October Treatment Visit",
+    "journal_slug": "one-canary-palm-october-treatment-visit",
+    "article_sha256": "012406b2a5faec3dc652c0bf84fd73d26a1d8d17b03fb97c02915842fb95a431",
+    "scope": "October23 one-CIDP treatment with reported active ingredients, dated photographs and separate optional future care; no method, diagnosis or response claim."
+  },
+  "media": []
+}
