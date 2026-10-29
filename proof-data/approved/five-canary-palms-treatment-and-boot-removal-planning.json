@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "five-canary-palms-treatment-and-boot-removal-planning",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "f378c579fa7cbe0a252fbbf4333ab90bd20e1f01164ba3e05b765fc23c1796b9",
+  "approved_fingerprint": "f378c579fa7cbe0a252fbbf4333ab90bd20e1f01164ba3e05b765fc23c1796b9",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner October20 standing authorization; this current anonymous derivative independently reviewed October28.",
+  "export_method": "Anonymous factual prose only; no private records or customer media exported.",
+  "content": {
+    "title": "Five Canary Palms: Treatment and a Separate Trunk-Work Plan",
+    "journal_slug": "five-canary-palms-treatment-and-boot-removal-planning",
+    "article_sha256": "f378c579fa7cbe0a252fbbf4333ab90bd20e1f01164ba3e05b765fc23c1796b9",
+    "scope": "October23 completed treatment of five CIDP and annual care arrangement; separate boot-removal quote search remains pending. No method, diagnosis, pest presence or outcome inferred."
+  },
+  "media": []
+}

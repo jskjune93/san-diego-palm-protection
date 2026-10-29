@@ -53,6 +53,7 @@
 | `/palm-journal/the-palm-record-outlives-the-palm.html` | preserved / regenerated | Palm Journal evidence: Field Documentation |
 | `/palm-journal/the-palms-that-complete-old-escondidos-historic-homes.html` | preserved / regenerated | Palm Journal evidence: Historic Homes and Landscapes |
 | `/palm-journal/three-canary-palms-care-after-removal.html` | preserved / regenerated | Palm Journal evidence: Palm Health & Stewardship |
+| `/palm-journal/five-canary-palms-treatment-and-boot-removal-planning.html` | new / generated | Field evidence: five-palm annual treatment and separate contractor scope; assessment inquiry |
 | `/palm-journal/when-palms-were-california-gold/` | preserved / regenerated | Palm Journal evidence: Palm Preservation |
 | `/palm-journal/when-sapw-became-local.html` | preserved / regenerated | Palm Journal evidence: Owner-Documented Field Record |
 | `/palm-journal/where-we-care-for-palms-october-2026.html` | preserved / regenerated | Palm Journal evidence: Palm Stewardship |
