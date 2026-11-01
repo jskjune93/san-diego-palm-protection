@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "escondido-canary-palm-annual-care-october-visit",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "e877e74153d0bd8210ee2fb2542fa509c1a5e621360a4930e8da985c852fb393",
+  "approved_fingerprint": "e877e74153d0bd8210ee2fb2542fa509c1a5e621360a4930e8da985c852fb393",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner October20 standing authorization; current anonymous derivative separately reviewed November1.",
+  "export_method": "Anonymous factual prose only; no private files/media exported.",
+  "content": {
+    "title": "An Escondido Canary Palm Begins Annual Care",
+    "journal_slug": "escondido-canary-palm-annual-care-october-visit",
+    "article_sha256": "e877e74153d0bd8210ee2fb2542fa509c1a5e621360a4930e8da985c852fb393",
+    "scope": "October28 completed one-CIDP treatment and annual-plan start; remaining annual scope and next date to arrange. No claimed outcome or invented application detail."
+  },
+  "media": []
+}

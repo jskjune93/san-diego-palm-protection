@@ -57,6 +57,7 @@ TOPIC_SECTIONS = [
         "title": "Palm Health, Monitoring & Stewardship",
         "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
         "slugs": [
+            "escondido-canary-palm-annual-care-october-visit",
             "one-canary-palm-october-treatment-visit",
             "five-canary-palms-treatment-and-boot-removal-planning",
             "three-canary-palms-care-after-removal",
