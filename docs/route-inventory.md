@@ -56,6 +56,7 @@
 | `/palm-journal/five-canary-palms-treatment-and-boot-removal-planning.html` | new / generated | Field evidence: five-palm annual treatment and separate contractor scope; assessment inquiry |
 | `/palm-journal/one-canary-palm-october-treatment-visit.html` | new / generated | Field evidence: one-palm treatment and continuing-care choice; assessment inquiry |
 | `/palm-journal/escondido-canary-palm-annual-care-october-visit.html` | new / generated | Field evidence: Escondido treatment and annual-care start; assessment inquiry |
+| `/palm-journal/four-mature-canary-palms-one-young-palm.html` | new / generated | Field evidence: five Canary palms at two growth stages; assessment inquiry |
 | `/palm-journal/when-palms-were-california-gold/` | preserved / regenerated | Palm Journal evidence: Palm Preservation |
 | `/palm-journal/when-sapw-became-local.html` | preserved / regenerated | Palm Journal evidence: Owner-Documented Field Record |
 | `/palm-journal/where-we-care-for-palms-october-2026.html` | preserved / regenerated | Palm Journal evidence: Palm Stewardship |

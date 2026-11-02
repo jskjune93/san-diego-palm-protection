@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "four-mature-canary-palms-one-young-palm",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "9886efa3ff195bb63178bc26ec5c28710ee36d2f051fd98a43dce8efb7ef986c",
+  "approved_fingerprint": "9886efa3ff195bb63178bc26ec5c28710ee36d2f051fd98a43dce8efb7ef986c",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner October20 standing authorization; current anonymous derivative separately reviewed November2.",
+  "export_method": "Anonymous factual prose only; private source images not exported.",
+  "content": {
+    "title": "Four Mature Canaries and One Young Palm",
+    "journal_slug": "four-mature-canary-palms-one-young-palm",
+    "article_sha256": "9886efa3ff195bb63178bc26ec5c28710ee36d2f051fd98a43dce8efb7ef986c",
+    "scope": "May30 five-palm treatment and contemporaneous healthy appearance; no diagnosis, outcome or private identifying details."
+  },
+  "media": []
+}
