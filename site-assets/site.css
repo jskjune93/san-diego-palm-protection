@@ -89,3 +89,16 @@ form{max-width:900px}fieldset{border:1px solid var(--line);padding:22px;margin:0
 /* Optional ad measurement is separate from submitting an inquiry. */
 .ads-measurement-choice { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 12px; align-items: start; margin: 16px 0; font-size: .85rem; line-height: 1.5; font-weight: 400; }
 .ads-measurement-choice input[type="checkbox"] { width: 24px; height: 24px; min-height: 24px; margin: 0; accent-color: #244d40; }
+
+/* Field video previews retain a YouTube link when JavaScript is unavailable. */
+.field-video{width:min(100%,720px);margin:24px auto;color:var(--ink,#20352d)}
+.field-video-player{position:relative;aspect-ratio:16/9;overflow:hidden;background:#14271e;border-radius:8px}
+.field-video--portrait{max-width:320px}
+.field-video--portrait .field-video-player{aspect-ratio:9/16}
+.field-video-player .youtube-preview{position:relative;display:block;width:100%;height:100%;color:#fff;background:#14271e}
+.field-video-player img{display:block;width:100%;height:100%;object-fit:cover}
+.field-video-player iframe{display:block;width:100%;height:100%;border:0}
+.field-video-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:#153f30;color:white;font-size:26px;box-shadow:0 2px 15px #0007}
+.field-video-label{position:absolute;bottom:16px;left:50%;transform:translateX(-50%);padding:6px 12px;border-radius:4px;background:#14271e;color:white;white-space:nowrap}
+.field-video figcaption{padding:12px 4px;font-size:1rem;line-height:1.5}
+.sapw-raw .field-video{padding:16px;background:#fff}

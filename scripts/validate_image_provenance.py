@@ -113,6 +113,14 @@ def main() -> int:
         # placements, not a general exemption for repeated owner photography.
         if relative == "images/field-gallery/john-botanic-fieldwork.webp" and set(pages) <= {"index.html", "palm-proof-examples.html"}:
             continue
+        # One video preview follows the same owner-approved Del Mar case on
+        # these existing routes; it is a player cover, not decorative reuse.
+        if relative == "images/field-video/del-mar-treatment.jpg" and set(pages) <= {
+            "index.html", "quarterly-palm-care-san-diego.html",
+            "south-american-palm-weevil-treatment-san-diego.html",
+            "palm-journal/del-mar-canary-island-date-palm-treatment-fertilization.html",
+        }:
+            continue
         if relative in duplicate_exceptions or record.get("classification") != "confirmed_original_sdpp":
             continue
         if len(pages) > 1:

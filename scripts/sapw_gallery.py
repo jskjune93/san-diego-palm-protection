@@ -1,5 +1,6 @@
 """The single-page SAPW photo and film exhibit, generated with the core pages."""
 import json
+from field_video import youtube_preview
 from html import escape
 from pathlib import Path
 from site_components import head, BASE_URL, customer_map, asset_version
@@ -25,6 +26,7 @@ def render():
 <body class="sapw-raw">
 <div class="sapw-raw-titles"><h1 class="sapw-raw-heading">SOUTH AMERICAN PALM WEEVIL.</h1><p class="sapw-raw-subheading">CANARY ISLAND DATE PALM DESTRUCTION.</p></div>
 <p class="sapw-raw-host-note">Canary Island date palms remain the primary local target. Chilean wine and Bismarck palms are confirmed California hosts too. <a href="./south-american-palm-weevil-treatment-san-diego.html">See prevention and treatment.</a></p>
+{youtube_preview('A3HuLiahFcY', 'Palm weevil field examination', './images/field-video/palm-weevil-examination.jpg', 'A field examination from my San Diego video record. This footage does not diagnose another palm.')}
 <main id="main" aria-label="Palm weevil and palm photographs and video">
 {photo(GALLERY[0]["src"], GALLERY[0]["alt"], eager=True)}
 {chr(10).join(photo(item["src"], item["alt"], eager=index < 3) for index, item in enumerate(GALLERY[1:]))}

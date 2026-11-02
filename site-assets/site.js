@@ -1,4 +1,22 @@
 (() => {
+  // Load the external player only after an explicit visitor click.
+  document.querySelectorAll('a.youtube-preview').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      const id = link.dataset.youtubeId;
+      if (!/^[A-Za-z0-9_-]{11}$/.test(id || '')) return;
+      event.preventDefault();
+      const frame = document.createElement('iframe');
+      frame.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+      frame.title = link.dataset.videoTitle || 'SDPP field video';
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      frame.allowFullscreen = true;
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      frame.tabIndex = 0;
+      link.replaceWith(frame);
+      frame.focus();
+    });
+  });
   // Every placement uses the original map asset. Refresh open pages after a
   // published map update; no customer workbook or private data reaches clients.
   const maintainedMaps = document.querySelectorAll('img[src*="sdpp-customer-map-2026-10-03.webp"]');

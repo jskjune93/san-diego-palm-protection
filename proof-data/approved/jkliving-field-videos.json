@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "artifact_id": "jkliving-field-videos-2026-11-02",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "public",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Owner supplied channel ID and requested website update November 2, 2026 after specific Del Mar, Bismarck and weevil-examination placement recommendations. Use existing public YouTube videos; no private customer data added.",
+  "content": {
+    "scope": "Del Mar treatment video previews on existing core case sections and Journal; palm weevil examination video on SAPW photo page; Bismarck Short link in existing removal article.",
+    "video_ids": [
+      "LeOwNMANzOI",
+      "A3HuLiahFcY",
+      "zuaIFbCM4rc"
+    ]
+  },
+  "media": [
+    {
+      "filename": "del-mar-treatment.jpg",
+      "sha256": "578147677f200188ec409cb063a814c28da909718033c3eeb6bd3ea026695ad1",
+      "approved_for_public": true
+    },
+    {
+      "filename": "palm-weevil-examination.jpg",
+      "sha256": "0a776c0b450f4f1c9e57fc2456b0538768bbae329b39839593d5405780b5d6b7",
+      "approved_for_public": true
+    }
+  ],
+  "artifact_fingerprint": "ad60cbdb85cc0c929281057107342ac3fac0da1642e59d62aa76ad34da27e20e",
+  "approved_fingerprint": "ad60cbdb85cc0c929281057107342ac3fac0da1642e59d62aa76ad34da27e20e"
+}

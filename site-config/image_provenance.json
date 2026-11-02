@@ -1386,6 +1386,20 @@
       "source_basis": "Owner-authorized October 11, 2026 field media from the Rio Rancho Bismarck removal; original capture filename 20261011_092219.mp4",
       "publication_decision": "approved_original",
       "presentation_risk": "Publish as this SDPP-handled removal. Do not identify the customer or exact address; no laboratory species confirmation claimed."
+    },
+    "images/field-video/del-mar-treatment.jpg": {
+      "sha256": "578147677f200188ec409cb063a814c28da909718033c3eeb6bd3ea026695ad1",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Thumbnail for owner-identified SDPP video on JK Living @JKLivingSD. Owner requested website placements November 2, 2026.",
+      "source_url": "https://www.youtube.com/watch?v=LeOwNMANzOI",
+      "publication_decision": "approved_public"
+    },
+    "images/field-video/palm-weevil-examination.jpg": {
+      "sha256": "0a776c0b450f4f1c9e57fc2456b0538768bbae329b39839593d5405780b5d6b7",
+      "classification": "confirmed_original_sdpp",
+      "source_basis": "Thumbnail for owner-identified SDPP video on JK Living @JKLivingSD. Owner requested website placements November 2, 2026.",
+      "source_url": "https://www.youtube.com/watch?v=A3HuLiahFcY",
+      "publication_decision": "approved_public"
     }
   },
   "approved_derivative_sources": {
