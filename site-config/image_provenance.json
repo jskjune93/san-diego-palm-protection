@@ -1400,6 +1400,14 @@
       "source_basis": "Thumbnail for owner-identified SDPP video on JK Living @JKLivingSD. Owner requested website placements November 2, 2026.",
       "source_url": "https://www.youtube.com/watch?v=A3HuLiahFcY",
       "publication_decision": "approved_public"
+    },
+    "images/reference/rainbow-palm-weevil-treatment-guide-discussion.jpg": {
+      "sha256": "9f868282e952d0901d0ef870d28709f3717d42476d12979a787d96e2dfdbad18",
+      "classification": "third_party_copied_or_externally_sourced",
+      "source_basis": "Owner-supplied photograph of Rainbow Ecoscience treatment guide, expressly requested for sharing with commentary on November2. Underlying guide remains attributed to Rainbow; not SDPP field evidence or a licensing claim.",
+      "publication_decision": "approved_document_commentary",
+      "owner_authorization_date": "2026-11-02",
+      "presentation_risk": "Only the existing crown/systemic explainer route; manufacturer attribution, no endorsement implication, handwriting not application instructions; image pixels unchanged and all private metadata removed except orientation."
     }
   },
   "approved_derivative_sources": {

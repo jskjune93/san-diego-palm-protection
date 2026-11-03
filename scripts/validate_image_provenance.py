@@ -95,7 +95,17 @@ def main() -> int:
         decision = record.get("publication_decision")
         if classification not in manifest["classification_definitions"]:
             errors.append(f"invalid provenance classification: {relative}")
-        if classification in {"third_party_copied_or_externally_sourced", "ai_generated_or_possibly_ai_generated"}:
+        # Owner November 2 explicitly requested this supplied document beside
+        # commentary on its wording. This is a fingerprinted, attributed
+        # document reproduction on one route, never third-party field imagery.
+        document_commentary = (
+            relative == "images/reference/rainbow-palm-weevil-treatment-guide-discussion.jpg"
+            and classification == "third_party_copied_or_externally_sourced"
+            and decision == "approved_document_commentary"
+            and record.get("owner_authorization_date") == "2026-11-02"
+            and set(visible_usage.get(relative, [])) == {"palm-journal/do-i-need-to-spray-the-crown.html"}
+        )
+        if classification in {"third_party_copied_or_externally_sourced", "ai_generated_or_possibly_ai_generated"} and not document_commentary:
             errors.append(f"disallowed media classification is visible: {relative} ({classification})")
         if classification == "unverified_or_uncertain" and decision != "approved_context_only":
             errors.append(f"uncertain media lacks context-only decision: {relative}")
