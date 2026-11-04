@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "canary-palm-crown-observations-and-follow-up",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "f8a15f407df9cb07159feed7d513d37efc809b6d54c989091629b5deed9d137e",
+  "approved_fingerprint": "f8a15f407df9cb07159feed7d513d37efc809b6d54c989091629b5deed9d137e",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Anonymous derivative separately approved November3 under October20 standing owner publication authorization. September13 initial service and soil drench verified against master, original invoice and continuing timeline. Later limited basal trunk spray has no verified date; October correspondence supports follow-up only. No client identity, precise address, contact, access, payment, photos, application rates, confirmed pest diagnosis, causation or treatment outcome exported.",
+  "export_method": "Anonymous factual prose only; no private source images exported.",
+  "content": {
+    "title": "Watch the Crown, Then Keep Following the Palm",
+    "journal_slug": "canary-palm-crown-observations-and-follow-up",
+    "article_sha256": "f8a15f407df9cb07159feed7d513d37efc809b6d54c989091629b5deed9d137e",
+    "scope": "September13 treatment; subsequent reported decline and undated limited basal spray; October photo follow-up without confirmed cause or outcome."
+  },
+  "media": []
+}

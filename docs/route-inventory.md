@@ -83,3 +83,5 @@
 ## Consolidation policy
 
 Local and species pages retain search/discovery roles but point into the canonical service architecture. They do not define competing service names, navigation, credential wording, or design systems. Superseded audience pages redirect to the matching inquiry on the canonical service page.
+
+| `/palm-journal/canary-palm-crown-observations-and-follow-up.html` | new / generated | Field evidence: crown observations and photographic follow-up; assessment inquiry |
