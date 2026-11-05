@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "san-marcos-canary-preventive-annual-care",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "4d6d4b10ed27468714b093dbe433abd385c629b1b66e92cefa73ce320a0351fc",
+  "approved_fingerprint": "4d6d4b10ed27468714b093dbe433abd385c629b1b66e92cefa73ce320a0351fc",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Current anonymous derivative approved November4 under October20 standing owner publication authority. September21 original inquiry supports owner-reported appearance/prevention request; September26 completed one-CIDP service and annual plan confirmed in sole master, continuing customer PDF, original invoice and sent email1a0e51fcffc1c7cb. December26 is a due date, not booked visit. No private identity/address/contact/payment/media/product/method/diagnosis/outcome exported. No later outcome found in current mailbox query.",
+  "export_method": "Anonymous factual prose only; no private source images exported.",
+  "content": {
+    "title": "A San Marcos Canary Enters Preventive Care",
+    "journal_slug": "san-marcos-canary-preventive-annual-care",
+    "article_sha256": "4d6d4b10ed27468714b093dbe433abd385c629b1b66e92cefa73ce320a0351fc",
+    "scope": "Owner prevention inquiry and September26 initial treatment/annual arrangement; no diagnosis or outcome."
+  },
+  "media": []
+}
