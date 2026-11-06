@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "three-canary-palms-different-starting-conditions",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "c2112ae79cdc791659f692556e2dc7cfba645db238a658d3c2d8cf33b9d2ab60",
+  "approved_fingerprint": "c2112ae79cdc791659f692556e2dc7cfba645db238a658d3c2d8cf33b9d2ab60",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Anonymous derivative separately reviewed November6 under standing owner publication authorization. November2 completed visit and dead/suspect/healthy starting observations verified in current master/customer record, Visit Source and sent invoice confirmation. No identity, precise address, contact/access, payment, private media, diagnosed cause, outcome, application details or future work exported. November4 visit had no SDPP application and is not another completed-treatment story.",
+  "export_method": "Anonymous prose only; no private source image exported.",
+  "content": {
+    "title": "Three Canary Palms, Different Starting Conditions",
+    "journal_slug": "three-canary-palms-different-starting-conditions",
+    "article_sha256": "c2112ae79cdc791659f692556e2dc7cfba645db238a658d3c2d8cf33b9d2ab60",
+    "scope": "November2 completed three-palm visit and observed starting conditions; no diagnosis or outcome."
+  },
+  "media": []
+}

@@ -89,3 +89,5 @@ Local and species pages retain search/discovery roles but point into the canonic
 | `/palm-journal/san-marcos-canary-preventive-annual-care.html` | new / generated | Field evidence: preventive annual care for one Canary; assessment inquiry |
 
 | `/palm-journal/oceanside-canary-second-treatment-photo-follow-up.html` | new / generated | Field evidence: completed repeat visit and crown monitoring; assessment inquiry |
+
+| `/palm-journal/three-canary-palms-different-starting-conditions.html` | new / generated | Field evidence: individual palm observations and preventive-care inquiry |
