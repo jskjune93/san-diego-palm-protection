@@ -1,5 +1,7 @@
 # SDPP website guardrails
 
+- Owner-approved November 7, 2026: apply `docs/brand-voice.txt` to every public copy change. SDPP is the outspoken local steward: personally accountable, observant, protective of the landscape, direct and approachable. Express a relevant conviction supported by actual work; generic information-only prose is insufficient where an editorial position would help. Preserve evidence, privacy, licensing and uncertainty boundaries. The owner approved retrospective website/social voice revisions in Define SDPP brand personality. This copy authority does not create a new posting cadence or advertising budget.
+
 - Standing owner instruction (2026-10-04): preserve the consolidated SDPP ecosystem at `C:\Users\jskju\Pictures\SDPP`; read its existing `START HERE.txt`. Update authoritative existing documents, workbook and county map in place. Do not scatter new folders, duplicate master lists or create replacement maps for routine updates. The master treatment workbook is `Tracker\SDPP-Master-Treatment-Schedule.xlsx` under that SDPP root. Reuse one maintained map across both domain homepages and existing SDPP placements. Keep confirmed palm-weevil presence distinct from palms treated and preserve existing privacy/evidence boundaries.
 
 - Keep public copy in John Krause's plainspoken owner-operator voice. Prefer what John looks at, photographs, writes, compares, or helps the owner decide over abstract frameworks, symmetrical slogans, institutional filler, and repeated service-noun lists.

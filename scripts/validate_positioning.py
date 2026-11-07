@@ -23,7 +23,7 @@ CRITICAL = {
     ),
     "palm-records-monitoring-verification.html": (
         "protect valuable palms from sapw",
-        "treatment is what sdpp does",
+        "i treat the palm and keep paying attention",
         "annual mature palm protection program",
         "preventive sapw treatment",
         "coordinating removals",
@@ -52,7 +52,7 @@ def main() -> int:
     expected_pillars = ["Stewardship & Palm Health", "Protection & Treatment", "Documentation & Portfolio Management", "Response, Removal & Renewal"]
     if config.get("service_pillars") != expected_pillars:
         errors.append("canonical configuration must contain the four approved capability pillars in order")
-    if config.get("canonical_position") != "Protect valuable landscape assets. Reduce preventable palm loss. Give management one accountable point of contact and a defensible record of what was done.":
+    if config.get("canonical_position") != "Mature palms help define a property. Their care deserves someone who knows each palm, keeps its history and takes responsibility for the next conversation. I give management one accountable point of contact for the agreed work.":
         errors.append("canonical positioning statement has drifted")
 
     if not DIST.exists():

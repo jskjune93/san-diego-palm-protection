@@ -120,7 +120,7 @@ def main() -> int:
         for phrase in ("Annual Mature Palm Protection Program", "every three months", "preventive SAPW treatment", "Four visits each year", "Priority response"):
             if phrase not in recurring:
                 errors.append(f"recurring-stewardship page missing current service language: {phrase}")
-        for phrase in ("Annual Mature Palm Protection Program", "Treatment is what SDPP does", "Four scheduled visits", "Preventive SAPW treatment", "Coordinating removals", "Coordinating replacements", "Other palm goals", "homeowners, estates, HOAs, institutions, and selected managed properties", "SDPP-Commercial-Palm-Stewardship.pdf"):
+        for phrase in ("Annual Mature Palm Protection Program", "I treat the palm and keep paying attention", "Four scheduled visits", "Preventive SAPW treatment", "Coordinating removals", "Coordinating replacements", "Other palm goals", "homeowners, estates, HOAs, institutions, and selected managed properties", "SDPP-Commercial-Palm-Stewardship.pdf"):
             if phrase not in records:
                 errors.append(f"consolidated services page missing service pathway: {phrase}")
         for field in ("known_palm_species", "existing_contractor", "desired_service", "preferred_contact"):
