@@ -91,3 +91,5 @@ Local and species pages retain search/discovery roles but point into the canonic
 | `/palm-journal/oceanside-canary-second-treatment-photo-follow-up.html` | new / generated | Field evidence: completed repeat visit and crown monitoring; assessment inquiry |
 
 | `/palm-journal/three-canary-palms-different-starting-conditions.html` | new / generated | Field evidence: individual palm observations and preventive-care inquiry |
+
+| `/palm-journal/four-canary-palms-one-continuing-record.html` | new / generated | Field evidence: continuing palm care and assessment inquiry |

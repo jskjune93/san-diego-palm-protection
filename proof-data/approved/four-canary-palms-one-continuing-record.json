@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "artifact_id": "four-canary-palms-one-continuing-record",
+  "product_type": "sanitized_case_study",
+  "artifact_version": 1,
+  "artifact_fingerprint": "e1fcf21c2731a224fa2bc144870dc5a2ae062b46d28173056057e5d5a16793c2",
+  "approved_fingerprint": "e1fcf21c2731a224fa2bc144870dc5a2ae062b46d28173056057e5d5a16793c2",
+  "status": "approved",
+  "publication_approval": "approved",
+  "privacy": "sanitized",
+  "publication_target": "website",
+  "privacy_scan_passed": true,
+  "approval_basis": "Anonymous prose derivative separately reviewed November8 under standing owner publication authority. November6 four-CIDP completed second treatment verified in canonical master/customer record ACT-181 and actual SENT1a1b31ff3ca1a94a. May30 initial scope four mature plus one young remains distinct. February6 is a due target, not booked. No customer identity, precise address/contact/access, payment, private media, product/dose/method, diagnosis or outcome exported.",
+  "export_method": "Anonymous prose only; no private source media.",
+  "content": {
+    "title": "Four Canary Palms, One Continuing Record",
+    "journal_slug": "four-canary-palms-one-continuing-record",
+    "article_sha256": "e1fcf21c2731a224fa2bc144870dc5a2ae062b46d28173056057e5d5a16793c2",
+    "scope": "November6 second-treatment visit, four CIDPs; no diagnosis/outcome"
+  },
+  "media": []
+}

@@ -57,6 +57,7 @@ TOPIC_SECTIONS = [
         "title": "Palm Health, Monitoring & Stewardship",
         "description": "Field observations about condition, continuity, baselines, and the work of caring for mature palms over time.",
         "slugs": [
+            "four-canary-palms-one-continuing-record",
             "three-canary-palms-different-starting-conditions",
             "oceanside-canary-second-treatment-photo-follow-up",
             "san-marcos-canary-preventive-annual-care",
