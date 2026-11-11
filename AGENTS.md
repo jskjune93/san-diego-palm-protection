@@ -33,3 +33,5 @@
 - Render every final route at 360×800, 390×844, 768×1024, 1366×768, and 1920×1080 before release.
 - Fix source generators and shared components rather than layering page-specific overrides.
 - Do not push, merge, deploy, or change production hosting without explicit authorization.
+
+- Owner standing order November 10, 2026: qualified boutique stewardship; quality over quantity. Journal, Nextdoor Business Page and GBP Updates each at most one substantive release per rolling seven days, coordinated Tuesday10am Pacific. No daily/two-day treatment quota, filler or catch-up bursts. Consolidate repetitive accounts; preserve evidence, service/publication dates and valuable URLs through redirects. GBP photo-only repository has separate daily maintenance, broad approved authentic coverage, descriptive unique labels and per-photo receipts; no automatic Updates from photo batches. Do not promise individual Google indexing from filenames/metadata. Read current SDPP operating rules and shared publishing ledger before changes.

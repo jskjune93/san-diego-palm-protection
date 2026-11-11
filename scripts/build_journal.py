@@ -60,18 +60,14 @@ TOPIC_SECTIONS = [
             "four-canary-palms-one-continuing-record",
             "three-canary-palms-different-starting-conditions",
             "oceanside-canary-second-treatment-photo-follow-up",
-            "san-marcos-canary-preventive-annual-care",
             "canary-palm-crown-observations-and-follow-up",
-            "four-mature-canary-palms-one-young-palm",
             "escondido-canary-palm-annual-care-october-visit",
-            "one-canary-palm-october-treatment-visit",
             "five-canary-palms-treatment-and-boot-removal-planning",
             "three-canary-palms-care-after-removal",
             "mature-canary-island-date-palm-sourcing-landscape-center",
             "pygmy-date-palms-first-kentia-treatment",
             "chilean-wine-canary-sylvester-palm-treatment",
             "seven-canary-palms-two-august-visits",
-            "after-palm-treatment-follow-up-matters",
             "five-canary-island-date-palms-october-treatment",
             "del-mar-canary-island-date-palm-treatment-fertilization",
             "where-we-care-for-palms-october-2026",
@@ -331,7 +327,8 @@ def render_index(entries: list[dict]) -> None:
         )
 
     def render_entry_link(entry: dict) -> str:
-        return f'''        <li id="{escape(entry['legacy_anchor'])}">
+        aliases = ''.join(f'<span id="{escape(anchor)}"></span>' for anchor in entry.get('legacy_aliases', []))
+        return f'''        <li id="{escape(entry['legacy_anchor'])}">{aliases}
           <div class="journal-link-heading"><a href="{article_href(entry)}">{escape(entry['title'])}</a><span>{escape(display_meta(entry))}</span></div>
           <p>{escape(entry['excerpt'])}</p>
         </li>'''
@@ -755,6 +752,10 @@ def update_sitemap(entries: list[dict]) -> None:
             urls_by_loc[loc_node.text] = url
 
     for retired in (
+        f"{BASE_URL}/palm-journal/four-mature-canary-palms-one-young-palm.html",
+        f"{BASE_URL}/palm-journal/after-palm-treatment-follow-up-matters.html",
+        f"{BASE_URL}/palm-journal/one-canary-palm-october-treatment-visit.html",
+        f"{BASE_URL}/palm-journal/san-marcos-canary-preventive-annual-care.html",
         f"{BASE_URL}/managed-property-palm-services.html",
         f"{BASE_URL}/residential-palm-assessment.html",
     ):

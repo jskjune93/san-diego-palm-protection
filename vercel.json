@@ -3,6 +3,34 @@
   "outputDirectory": "dist",
   "routes": [
     {
+      "src": "^/palm-journal/four\\-mature\\-canary\\-palms\\-one\\-young\\-palm\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/palm-journal/four-canary-palms-one-continuing-record.html"
+      }
+    },
+    {
+      "src": "^/palm-journal/after\\-palm\\-treatment\\-follow\\-up\\-matters\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/palm-journal/oceanside-canary-second-treatment-photo-follow-up.html"
+      }
+    },
+    {
+      "src": "^/palm-journal/one\\-canary\\-palm\\-october\\-treatment\\-visit\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/palm-journal/escondido-canary-palm-annual-care-october-visit.html"
+      }
+    },
+    {
+      "src": "^/palm-journal/san\\-marcos\\-canary\\-preventive\\-annual\\-care\\.html$",
+      "status": 308,
+      "headers": {
+        "Location": "/palm-journal/escondido-canary-palm-annual-care-october-visit.html"
+      }
+    },
+    {
       "src": "^/palm-journal/fairbanks-ranch-bismarck-palm-removal\\.html$",
       "status": 308,
       "headers": {
